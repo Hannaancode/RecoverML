@@ -1,0 +1,87 @@
+{
+  "paired": {
+    "cost_cache": {
+      "paired_feasible_histories": 210,
+      "median_planning_speedup": 1.0482286559572764,
+      "median_restore_speedup": 0.9960987878951686,
+      "median_plan_and_restore_speedup": 0.997130586672072,
+      "v2_faster_plan_and_restore": 102
+    },
+    "full_replay": {
+      "paired_feasible_histories": 100,
+      "median_planning_speedup": 0.6245777954192957,
+      "median_restore_speedup": 28.000685846362607,
+      "median_plan_and_restore_speedup": 24.521411617328063,
+      "v2_faster_plan_and_restore": 97
+    },
+    "full_snapshot": {
+      "paired_feasible_histories": 80,
+      "median_planning_speedup": 0.9306787143911153,
+      "median_restore_speedup": 1.002265018449399,
+      "median_plan_and_restore_speedup": 1.0006707973976572,
+      "v2_faster_plan_and_restore": 40
+    },
+    "pinned_cost": {
+      "paired_feasible_histories": 200,
+      "median_planning_speedup": 0.923193416146046,
+      "median_restore_speedup": 1.0108313760288197,
+      "median_plan_and_restore_speedup": 0.9918172817970772,
+      "v2_faster_plan_and_restore": 94
+    },
+    "recoverability": {
+      "paired_feasible_histories": 235,
+      "median_planning_speedup": 19.281383584861743,
+      "median_restore_speedup": 0.9993726036634407,
+      "median_plan_and_restore_speedup": 3.421656182043608,
+      "v2_faster_plan_and_restore": 210
+    },
+    "target_snapshots": {
+      "paired_feasible_histories": 175,
+      "median_planning_speedup": 0.9301215690445414,
+      "median_restore_speedup": 1.0043054625620762,
+      "median_plan_and_restore_speedup": 0.9837362706980501,
+      "v2_faster_plan_and_restore": 73
+    }
+  },
+  "v2_strategies": {
+    "required_inputs_exceed_budget": 45,
+    "direct_target_lower_bound": 165,
+    "bounded_global_milp": 110
+  },
+  "solver_status_counts": {
+    "2": 40,
+    "0": 69,
+    "1": 1
+  },
+  "selection_counts": {
+    "cost_cache": {
+      "total": 320,
+      "all_versions_exact": 210
+    },
+    "full_replay": {
+      "total": 320,
+      "all_versions_exact": 100
+    },
+    "full_snapshot": {
+      "total": 320,
+      "all_versions_exact": 80
+    },
+    "pinned_cost": {
+      "total": 320,
+      "all_versions_exact": 200
+    },
+    "recoverability": {
+      "total": 320,
+      "all_versions_exact": 235
+    },
+    "recoverability_v2": {
+      "total": 320,
+      "all_versions_exact": 235
+    },
+    "target_snapshots": {
+      "total": 320,
+      "all_versions_exact": 175
+    }
+  },
+  "qualification": "Paired costs include one planning call plus one measured restoration of each version; excludes store copying and environment initialization. Warm OS cache. No imputation for failures."
+}
