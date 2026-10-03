@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recoverml"
+version = "0.2.0"
+description = "Recoverability-preserving retention for versioned ML pipelines"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==2.3.5", "scipy==1.17.0", "scikit-learn==1.8.0", "matplotlib==3.10.8", "threadpoolctl==3.6.0"]
+
+[project.scripts]
+recoverml = "recoverml.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

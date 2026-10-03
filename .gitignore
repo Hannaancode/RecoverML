@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+work/
+results/**/capture_archives/
+results/**/policy_stores/
+results/**/repair_stores/
+results/smoke*/
+results/development_run/
+results/final/
+results/iteration2_pilot/
