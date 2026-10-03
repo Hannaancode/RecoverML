@@ -1,0 +1,4 @@
+CLI default v2 selection: examples/captured_history, budget 2,000,000 bytes.
+Selected 396,555 bytes; status ok.
+Version 0 restored from selected disk store: all target artifact hashes matched.
+CI smoke: {"declared_request_matrix_complete": true, "histories": 2, "requests": 140, "restoration_trace_counts_match": true, "selections": 28, "trace_events": 325, "unique_requests": true}
