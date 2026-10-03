@@ -230,6 +230,6 @@ Full benchmark capture archives are excluded from the compact package and can
 be regenerated locally. Opaque responses regenerated on a fresh run have new
 hashes, but are shared identically across its policies.
 
-The source, harness, raw traces, plots, reports and tests are ready for GitHub
-publication. **The instructor-accessible GitHub URL is still pending.** See
-`docs/SUBMISSION.md` for the publication and access checks.
+The source, harness, raw traces, plots, reports and tests are published in the
+instructor-accessible repository listed in `docs/SUBMISSION.md`. See that guide
+for the publication and reproduction checks.
