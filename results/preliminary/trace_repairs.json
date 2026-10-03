@@ -1,0 +1,47 @@
+{
+  "histories": [
+    "case08-rep2",
+    "case08-rep3"
+  ],
+  "requests_reexecuted": 275,
+  "reason": "Per-operation export completeness audit",
+  "original_csv": "before_trace_repair_requests.csv",
+  "original_capture_artifacts_reused": true,
+  "additional_selections": [
+    [
+      "case09-rep1",
+      "cost_cache",
+      "0.25"
+    ],
+    [
+      "case09-rep1",
+      "pinned_cost",
+      "0.5"
+    ],
+    [
+      "case09-rep4",
+      "cost_cache",
+      "0.25"
+    ],
+    [
+      "case09-rep4",
+      "cost_cache",
+      "1.0"
+    ],
+    [
+      "case09-rep4",
+      "pinned_cost",
+      "0.5"
+    ],
+    [
+      "case09-rep4",
+      "recoverability",
+      "1.0"
+    ],
+    [
+      "case10-rep0",
+      "pinned_cost",
+      "1.0"
+    ]
+  ]
+}
