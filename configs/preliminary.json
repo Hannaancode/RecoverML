@@ -1,0 +1,19 @@
+{
+  "repeats": 5,
+  "versions": 5,
+  "budget_fractions": [0.10, 0.25, 0.50, 1.0],
+  "policies": ["full_snapshot", "full_replay", "cost_cache", "pinned_cost", "target_snapshots", "recoverability"],
+  "cases": [
+    {"dataset":"synthetic", "rows":2000, "model":"logistic", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"synthetic", "rows":2000, "model":"logistic", "change":"parameters", "boundary":"opaque"},
+    {"dataset":"synthetic", "rows":10000, "model":"logistic", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"synthetic", "rows":10000, "model":"logistic", "change":"parameters", "boundary":"opaque"},
+    {"dataset":"synthetic", "rows":10000, "model":"logistic", "change":"data", "boundary":"deterministic"},
+    {"dataset":"synthetic", "rows":10000, "model":"logistic", "change":"data", "boundary":"opaque"},
+    {"dataset":"breast_cancer", "rows":569, "model":"logistic", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"breast_cancer", "rows":569, "model":"logistic", "change":"parameters", "boundary":"opaque"},
+    {"dataset":"breast_cancer", "rows":569, "model":"forest", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"breast_cancer", "rows":569, "model":"forest", "change":"parameters", "boundary":"opaque"},
+    {"dataset":"synthetic", "rows":2000, "model":"logistic", "change":"parameters", "boundary":"opaque", "protect_intermediate":true}
+  ]
+}
