@@ -10,6 +10,7 @@
   "docs/ITERATION2_REPORT.md": "3a388c81994eb9dbce793bb111edfc66cc25ddd485347ef759dc70e094014da0",
   "docs/PLANNER_V2.md": "a7e103f0bbe805bd677fc02b0fc0dcefc12497b9ac8d0b73a0f9e0d5e561867e",
   "docs/PRELIMINARY_REPORT.md": "7dfb697916b0d239411b9bd3ff88e283b995641cb47055e98db2a2a4c14a65f1",
+  "docs/RUBRIC_AUDIT.md": "460092ea243dbbddc933b9c46031e9c9ee0cf391990b626168f35f4b67d84dad",
   "docs/SUBMISSION.md": "19943ed11905cb72266b33668aedb3f8c0802350ce1e5563f93b39ee8b084046",
   "examples/captured_history/blobs/0b63ad38f02576387fed7798483d726669c6cc6aff07858567297ae850962416.pkl": "0b63ad38f02576387fed7798483d726669c6cc6aff07858567297ae850962416",
   "examples/captured_history/blobs/0eb9a22653a95858d0a37ccfc0d933b6711c3d25fdfcfd04990b00fedac8facb.pkl": "0eb9a22653a95858d0a37ccfc0d933b6711c3d25fdfcfd04990b00fedac8facb",
@@ -85,6 +86,7 @@
   "results/preliminary/trace_repairs.json": "5c3eb069581a56a77a166faea3b11d12ce94ad702e679656930591e15c188d1e",
   "results/test_results.txt": "64cea815b92303adf8b01982065c1619a702bb20d86091be66a08c0aef242b80",
   "scripts/package.py": "0ee2f154ffbc892e83a364a6584e83020a156146eedaaabcf1185fb11e8e1a1f",
+  "scripts/tail_latency.py": "f12bdbc27df75c401bc97aeb14ad197159d5d4e45decc2d2e305e9b195a7f142",
   "src/recoverml/__init__.py": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d",
   "src/recoverml/__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
   "src/recoverml/analysis.py": "b128111d1910e532f09c1952128183c39b10e7bf88aea648b3729bef24b2e073",
@@ -102,3 +104,4 @@
   "tests/test_core.py": "7413566f9edea8362cc6f448b82ab5abc78c96157595e4f54f636c11010a2150",
   "tests/test_optimizer.py": "2be6ed9e0d4b6c637bad40e7d20a942ee73273c226143eb099b673b9ed928c14"
 }
+
