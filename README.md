@@ -17,8 +17,9 @@ We built a working prototype with a complete benchmark harness and a version 2 p
 The second experiment tested **11,200 requests** across **80 captured histories** and four storage budgets.
 The planner restored **1,175 out of 1,175** admitted version requests with exact artifact matches.
 On matched feasible histories version 2 gave a **19.3× median planning speedup** over version 1 and a **3.4× improvement** for planning plus five restores.
-All **22 correctness tests** passed and the audit checked the request and restoration traces.
+All **23 correctness tests** passed and the audit checked the request and restoration traces.
 The repository also contains the source code the raw CSV and JSONL logs the plots the reports and a captured replay example.
+The fresh worker experiment restored **5400 out of 5400 requests** and saved real times and CPU and memory readings and latency plots
 
 ## Next plan
 
@@ -76,6 +77,24 @@ The planner uses a read-cost model of 500 MB/s and 20 microseconds per blob toge
 
 Use Python 3.12 and the dependencies in `requirements.txt`.
 
+For one command that runs the tests and the storage check and the full worker experiment use
+
+```bash
+bash run_benchmarks.sh
+```
+
+This checks three policies at 1 and 2 and 4 workers and at two data sizes and repeats every setting three times
+It saves real request times and CPU and memory samples and P50 P90 P99 values and plots
+The worker experiment uses Linux and each worker uses one BLAS thread
+An ordinary CPU computer or a Linux VM is enough
+
+See the [rubric evidence](docs/RUBRIC_AUDIT.md) and the [fresh experiment report](docs/PERFORMANCE_REPORT.md)
+The [new results](results/rubric_oct7_final/performance) contain raw logs and a checked audit
+
+![Exact restore throughput across worker counts](results/rubric_oct7_final/performance/throughput_vs_concurrency.png)
+
+![Measured service latency CDFs](results/rubric_oct7_final/performance/latency_cdf.png)
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -92,7 +111,7 @@ make iteration2
 ```
 
 If the package is already installed use `PYTHONPATH=src` and run `python -m recoverml`.
-The benchmark uses one thread for stable measurements.
+The storage benchmark uses one BLAS thread and the new worker experiment tests 1 and 2 and 4 workers.
 Each output directory is created as a new directory and `--resume` continues a completed checkpoint.
 
 ## Replay a captured history

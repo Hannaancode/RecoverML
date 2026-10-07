@@ -1,0 +1,966 @@
+[
+  {
+    "rows": 2000,
+    "settings": {
+      "dataset": "synthetic",
+      "rows": 2000,
+      "versions": 5,
+      "model": "logistic",
+      "change": "parameters",
+      "boundary": "deterministic"
+    },
+    "metrics": {
+      "capture_total_s": 0.04880650899997363,
+      "lineage_serialization_s": 0.008910574999958953,
+      "operator_total_s": 0.03591389899997921,
+      "metadata_and_serialization_s": 0.01289260999999442,
+      "rows": 2000,
+      "version_accuracy": [
+        {
+          "version": 0,
+          "accuracy": 0.8,
+          "branch_accuracy": [
+            0.8
+          ]
+        },
+        {
+          "version": 1,
+          "accuracy": 0.798,
+          "branch_accuracy": [
+            0.798
+          ]
+        },
+        {
+          "version": 2,
+          "accuracy": 0.798,
+          "branch_accuracy": [
+            0.798
+          ]
+        },
+        {
+          "version": 3,
+          "accuracy": 0.798,
+          "branch_accuracy": [
+            0.798
+          ]
+        },
+        {
+          "version": 4,
+          "accuracy": 0.8,
+          "branch_accuracy": [
+            0.8
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "schema": 1,
+      "environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "sklearn": "1.8.0",
+        "machine": "x86_64",
+        "system": "Linux",
+        "threads": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+            "version": null
+          }
+        ],
+        "serialization": "pickle-protocol-5-arrays-and-canonical-model-v1",
+        "model_codec_sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6",
+        "codec_code_sha256": "0ecd7a8efbff2347be785e4d3bef81c2f86d02ae1a0959ab095cac843eba1a61",
+        "operator_code_sha256": "089707f5bd20e4e55726e0b79cd1b605f21b28066dc4f700e4db07f4eec08c61"
+      },
+      "nodes": [
+        {
+          "id": "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "labels"
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "c57a09fcc4d1ce1d1ebcebe4ff32efc7512aa69fe926aba9398ce0d6e1bcec4f",
+          "size": 16128,
+          "compute_s": 2.219999259978067e-07,
+          "version": 0
+        },
+        {
+          "id": "3fd57d7c709bdefbdd0788230e4e10f4aee20e40fee6df7a9c24aba5041954b9",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 0
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "0eb9a22653a95858d0a37ccfc0d933b6711c3d25fdfcfd04990b00fedac8facb",
+          "size": 320139,
+          "compute_s": 1.939999947353499e-07,
+          "version": 0
+        },
+        {
+          "id": "420b40d63e8ebfb3d92d6c3aed5801fe9a9d8f017f3bdfc666eaf9508f5d1eff",
+          "op": "clean_block",
+          "deps": [
+            "3fd57d7c709bdefbdd0788230e4e10f4aee20e40fee6df7a9c24aba5041954b9"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "8549ca62780409cda84600a3dff19b20ec116caad3ccfe7c27600cd4c584a289",
+          "size": 320139,
+          "compute_s": 0.0006167290000576031,
+          "version": 0
+        },
+        {
+          "id": "49620bdc13d3c2fb3ef09ca256a5ab7d179e6be7c8c365720fec0230bffba93c",
+          "op": "concat",
+          "deps": [
+            "420b40d63e8ebfb3d92d6c3aed5801fe9a9d8f017f3bdfc666eaf9508f5d1eff"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "global-assembly",
+          "blob": "8549ca62780409cda84600a3dff19b20ec116caad3ccfe7c27600cd4c584a289",
+          "size": 320139,
+          "compute_s": 5.3769000032843906e-05,
+          "version": 0
+        },
+        {
+          "id": "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849",
+          "op": "split",
+          "deps": [],
+          "params": {
+            "rows": 2000,
+            "seed": 100
+          },
+          "replayable": true,
+          "scope": "membership",
+          "blob": "e4d6e1127a526b1f9056385bbea73ff3941ccd2dec132732fce6395fd3593d93",
+          "size": 16156,
+          "compute_s": 0.0005016490000571139,
+          "version": 0
+        },
+        {
+          "id": "97d92e1af8ed5a8f0d6fe17f866cacc3bd881af576a95b5f4a712aa7e440efa6",
+          "op": "fit_scaler",
+          "deps": [
+            "49620bdc13d3c2fb3ef09ca256a5ab7d179e6be7c8c365720fec0230bffba93c",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "71de48c2e185229a3ba339f8800d8fd0fa4855bfbfe1be5e84d8e410c7e108ef",
+          "size": 474,
+          "compute_s": 0.0012451140000848682,
+          "version": 0
+        },
+        {
+          "id": "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+          "op": "scale",
+          "deps": [
+            "49620bdc13d3c2fb3ef09ca256a5ab7d179e6be7c8c365720fec0230bffba93c",
+            "97d92e1af8ed5a8f0d6fe17f866cacc3bd881af576a95b5f4a712aa7e440efa6"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-fitted-state",
+          "blob": "be5127d75a22e799e783ac6edf0741ea458d7bf8c98027a2083d6cf937ae235e",
+          "size": 320139,
+          "compute_s": 0.00013176100003420288,
+          "version": 0
+        },
+        {
+          "id": "03d17b7fc9e7d614b6e39a7ddd304032a1c0e9f0bcebd7586a4786d4cddb122f",
+          "op": "train",
+          "deps": [
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 0.5,
+            "seed": 100,
+            "trees": 12,
+            "depth": 5
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "d73e25beb8640076aeee0fef652e359d6ddcc2b09a6ae31b4e39f3e220670d3e",
+          "size": 895,
+          "compute_s": 0.005386724000004506,
+          "version": 0
+        },
+        {
+          "id": "0f0b1c63d30974ac845e77f5c934e8f8e32b36f0ec6740be91a8beeebb389ad0",
+          "op": "predict",
+          "deps": [
+            "03d17b7fc9e7d614b6e39a7ddd304032a1c0e9f0bcebd7586a4786d4cddb122f",
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "bfe6c2c6fb845c2b1b360655e09edcaa64ebe55b1505f60c86de22b0955419e7",
+          "size": 8130,
+          "compute_s": 0.00021345100003600237,
+          "version": 0
+        },
+        {
+          "id": "ba6790152ba86350e4c41b5998aafff6edb8e98f51a601848165e4f07bf497ec",
+          "op": "train",
+          "deps": [
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 0.75,
+            "seed": 100,
+            "trees": 12,
+            "depth": 6
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "4e70500b08370aea8e42e63c3c4beec1d12af404242f29cd11901572a0db2e49",
+          "size": 896,
+          "compute_s": 0.004728422999960458,
+          "version": 1
+        },
+        {
+          "id": "de1c36233c6777b90e1094626f4f9a405db2bbfbe8f6c6e76f7433f6da2a2dbd",
+          "op": "predict",
+          "deps": [
+            "ba6790152ba86350e4c41b5998aafff6edb8e98f51a601848165e4f07bf497ec",
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "25ab15e62c0102edf4d6ad63eb0b3465cccf1bfc3ccd6ce35691af49edc05807",
+          "size": 8130,
+          "compute_s": 0.00017962100002932857,
+          "version": 1
+        },
+        {
+          "id": "10c906c598d08694908372e7506a8a255f8f416ca2e92e75769f88b213dcff13",
+          "op": "train",
+          "deps": [
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.0,
+            "seed": 100,
+            "trees": 12,
+            "depth": 7
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "8676e2c3d03cb16e68e3aaacc2f493331c83a9ba6ec8b0f8bbaebfa8dd980536",
+          "size": 895,
+          "compute_s": 0.005344331000060265,
+          "version": 2
+        },
+        {
+          "id": "88a17ad331f0878f6f204947c67f51a926ac7ff38b5cf08ad38f27bf07ec65d0",
+          "op": "predict",
+          "deps": [
+            "10c906c598d08694908372e7506a8a255f8f416ca2e92e75769f88b213dcff13",
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "dedc59c59e1c3feb7aedbe6adc83bd2d07d680f3c0f9c9152c4df6f1afbf209c",
+          "size": 8130,
+          "compute_s": 0.00016782500006229384,
+          "version": 2
+        },
+        {
+          "id": "361082f2e95f11779f45c607c0f47e71a8925238fe12ea3702b56071a23c9490",
+          "op": "train",
+          "deps": [
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.25,
+            "seed": 100,
+            "trees": 12,
+            "depth": 8
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "45834e753d213ea9ae68c3f9cc140cffd01da9eb0a815bc16a91eb6691c239b6",
+          "size": 896,
+          "compute_s": 0.0047655119999490125,
+          "version": 3
+        },
+        {
+          "id": "2f8bb31f4a49a92a95fba8011a5a356356a61c8a74e8a3038f8e9bc7f160c59f",
+          "op": "predict",
+          "deps": [
+            "361082f2e95f11779f45c607c0f47e71a8925238fe12ea3702b56071a23c9490",
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "f0f6b5b5ed84949bfaad352c923a5490fd6c5317b7aecb0deebea0f265dace64",
+          "size": 8130,
+          "compute_s": 0.0001647230000116906,
+          "version": 3
+        },
+        {
+          "id": "53dca80331bcbe6355c853e2035c8bcd5d91ccfcf6d5ed250ee45ae4b5dce177",
+          "op": "train",
+          "deps": [
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "7b64e8c5a70811cb7fee9c277c6e4106f4caf9d1d6d426b1105dd821675af4b6",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.5,
+            "seed": 100,
+            "trees": 12,
+            "depth": 9
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "6317bce6278829b5287c0f517a09c7c9c0cdc50755bed27433fe6daf9fcd6a41",
+          "size": 895,
+          "compute_s": 0.005358302999979969,
+          "version": 4
+        },
+        {
+          "id": "b1782fceb0e2b5ee18dd589fe98fa3fb1a70cfb282894d58469a64ca4e6195f1",
+          "op": "predict",
+          "deps": [
+            "53dca80331bcbe6355c853e2035c8bcd5d91ccfcf6d5ed250ee45ae4b5dce177",
+            "4d9691c82235b2b35f233816114bc7242ec6b248085bf9fc66db229ab3b6a902",
+            "256899bd0ea67f51ecde23bea3142b98fe0b5e4f9bcca89d5206d484b8ed8849"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "0474ae16976fd648e50afead04e6a10b16cd8651f26c4a6f671af17dadd37117",
+          "size": 8130,
+          "compute_s": 0.00017915999990236742,
+          "version": 4
+        }
+      ],
+      "targets": {
+        "0": [
+          "03d17b7fc9e7d614b6e39a7ddd304032a1c0e9f0bcebd7586a4786d4cddb122f",
+          "0f0b1c63d30974ac845e77f5c934e8f8e32b36f0ec6740be91a8beeebb389ad0"
+        ],
+        "1": [
+          "ba6790152ba86350e4c41b5998aafff6edb8e98f51a601848165e4f07bf497ec",
+          "de1c36233c6777b90e1094626f4f9a405db2bbfbe8f6c6e76f7433f6da2a2dbd"
+        ],
+        "2": [
+          "10c906c598d08694908372e7506a8a255f8f416ca2e92e75769f88b213dcff13",
+          "88a17ad331f0878f6f204947c67f51a926ac7ff38b5cf08ad38f27bf07ec65d0"
+        ],
+        "3": [
+          "361082f2e95f11779f45c607c0f47e71a8925238fe12ea3702b56071a23c9490",
+          "2f8bb31f4a49a92a95fba8011a5a356356a61c8a74e8a3038f8e9bc7f160c59f"
+        ],
+        "4": [
+          "53dca80331bcbe6355c853e2035c8bcd5d91ccfcf6d5ed250ee45ae4b5dce177",
+          "b1782fceb0e2b5ee18dd589fe98fa3fb1a70cfb282894d58469a64ca4e6195f1"
+        ]
+      },
+      "mandatory_blobs": [
+        "0eb9a22653a95858d0a37ccfc0d933b6711c3d25fdfcfd04990b00fedac8facb",
+        "c57a09fcc4d1ce1d1ebcebe4ff32efc7512aa69fe926aba9398ce0d6e1bcec4f"
+      ]
+    }
+  },
+  {
+    "rows": 10000,
+    "settings": {
+      "dataset": "synthetic",
+      "rows": 10000,
+      "versions": 5,
+      "model": "logistic",
+      "change": "parameters",
+      "boundary": "deterministic"
+    },
+    "metrics": {
+      "capture_total_s": 0.15504216099998303,
+      "lineage_serialization_s": 0.034992289999649984,
+      "operator_total_s": 0.10870363699950758,
+      "metadata_and_serialization_s": 0.046338524000475445,
+      "rows": 10000,
+      "version_accuracy": [
+        {
+          "version": 0,
+          "accuracy": 0.7968,
+          "branch_accuracy": [
+            0.7968
+          ]
+        },
+        {
+          "version": 1,
+          "accuracy": 0.7968,
+          "branch_accuracy": [
+            0.7968
+          ]
+        },
+        {
+          "version": 2,
+          "accuracy": 0.7972,
+          "branch_accuracy": [
+            0.7972
+          ]
+        },
+        {
+          "version": 3,
+          "accuracy": 0.7972,
+          "branch_accuracy": [
+            0.7972
+          ]
+        },
+        {
+          "version": 4,
+          "accuracy": 0.7972,
+          "branch_accuracy": [
+            0.7972
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "schema": 1,
+      "environment": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "sklearn": "1.8.0",
+        "machine": "x86_64",
+        "system": "Linux",
+        "threads": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "version": "0.3.30",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+            "version": null
+          }
+        ],
+        "serialization": "pickle-protocol-5-arrays-and-canonical-model-v1",
+        "model_codec_sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6",
+        "codec_code_sha256": "0ecd7a8efbff2347be785e4d3bef81c2f86d02ae1a0959ab095cac843eba1a61",
+        "operator_code_sha256": "089707f5bd20e4e55726e0b79cd1b605f21b28066dc4f700e4db07f4eec08c61"
+      },
+      "nodes": [
+        {
+          "id": "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "labels"
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "bf57c00fa020c3b0ad15982e662039527397fd40acb3a538119782f34e966c2f",
+          "size": 80137,
+          "compute_s": 1.5999989955162164e-07,
+          "version": 0
+        },
+        {
+          "id": "95c079cfcaa4879d9b961b8f9699b186bd74298b9badb0a7ed0ee90f5a6bd97c",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 0
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "ba112ef586bf34fb9e6ec214c0a4f488a0bea763a6ec2ffefebddf303566f186",
+          "size": 327819,
+          "compute_s": 1.1300005553493975e-07,
+          "version": 0
+        },
+        {
+          "id": "19df3e5df1611259e299fb49889a6b85dd5fd160c27eeba3757c14ec966a3120",
+          "op": "clean_block",
+          "deps": [
+            "95c079cfcaa4879d9b961b8f9699b186bd74298b9badb0a7ed0ee90f5a6bd97c"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "5eea1f4d2669a2919f8c1f60223106a8b679eceb81068672687089934675db30",
+          "size": 327819,
+          "compute_s": 0.00044830599995293596,
+          "version": 0
+        },
+        {
+          "id": "ebb9552aabb1b6ce0f58b52d814f45e5eea7d78bb18b3052c93a24b84a4e4cd9",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 2048
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "aa7a8dcaa0517364e94e21c47b670939893514ba468fa6cc4185900aad70e220",
+          "size": 327819,
+          "compute_s": 1.0299993391527096e-07,
+          "version": 0
+        },
+        {
+          "id": "f3e7de00473b33ea8bb66c0cf6b4077b0843b396c9a2946effd75e6329b7da64",
+          "op": "clean_block",
+          "deps": [
+            "ebb9552aabb1b6ce0f58b52d814f45e5eea7d78bb18b3052c93a24b84a4e4cd9"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "2101655c8a1713095488b0d163ad48b44e9e7ed7449c76f9a43de65293fd4034",
+          "size": 327819,
+          "compute_s": 0.00043585899993558996,
+          "version": 0
+        },
+        {
+          "id": "ae674cd3cb535d638502f3e0c4f4e4d9788e98ab48a85d4166ec5c6d59b9021f",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 4096
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "5d6e8d6cd80fee0321a6b7443f26ac96fab70f453887a9e83812c28abd603a3f",
+          "size": 327819,
+          "compute_s": 1.229999497809331e-07,
+          "version": 0
+        },
+        {
+          "id": "d06c047829960b95c8578dd479824404933e5c289340f0bf8272222de44e60d0",
+          "op": "clean_block",
+          "deps": [
+            "ae674cd3cb535d638502f3e0c4f4e4d9788e98ab48a85d4166ec5c6d59b9021f"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "51b824fbfb4647d30900568864b5a8487ad217158bcf11dc5138029d9c2c5bb9",
+          "size": 327819,
+          "compute_s": 0.0004448720000027606,
+          "version": 0
+        },
+        {
+          "id": "4ed971660cf5a9583e6c8a860746bc86a8c6900fd5295520a0f224e01567132c",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 6144
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "5368944cc1bf38e9e4a6c98f7fdd2ee8b595c8f1077d6b259cae35f78b721e28",
+          "size": 327819,
+          "compute_s": 9.300003966927761e-08,
+          "version": 0
+        },
+        {
+          "id": "87c9e566982310cfa3ef535bc5ad6129d340d1933e6f1832f7a54d29a0104288",
+          "op": "clean_block",
+          "deps": [
+            "4ed971660cf5a9583e6c8a860746bc86a8c6900fd5295520a0f224e01567132c"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "f6f60afc1782db8d1234cfc68b7d89ba3e71c9bd27214ae001bd2820ea03df29",
+          "size": 327819,
+          "compute_s": 0.00048037299995939975,
+          "version": 0
+        },
+        {
+          "id": "6560b5a9648ee97e0566035352eb1aa05fc126765e9b81f082d56ffebf622826",
+          "op": "input",
+          "deps": [],
+          "params": {
+            "kind": "features",
+            "start": 8192
+          },
+          "replayable": false,
+          "scope": "source",
+          "blob": "a2e804408b54a87c22170e0c2b95e8c08937abb133ce5303aa18e96e97a4ceb4",
+          "size": 289419,
+          "compute_s": 9.200005024467828e-08,
+          "version": 0
+        },
+        {
+          "id": "036d8a8cbc7f084659c459c8b0caa6ac42fb89716e9792859b17146681513ce3",
+          "op": "clean_block",
+          "deps": [
+            "6560b5a9648ee97e0566035352eb1aa05fc126765e9b81f082d56ffebf622826"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local",
+          "blob": "500983b2789994331e19e9442b972f68d9ef2cafebb6dedd3929c8bd56b748ce",
+          "size": 289419,
+          "compute_s": 0.0002543319999404048,
+          "version": 0
+        },
+        {
+          "id": "4b3bf02de5f648881629c7bb4a5c8fa109cbe60da6b7d4710e9c01866152260d",
+          "op": "concat",
+          "deps": [
+            "19df3e5df1611259e299fb49889a6b85dd5fd160c27eeba3757c14ec966a3120",
+            "f3e7de00473b33ea8bb66c0cf6b4077b0843b396c9a2946effd75e6329b7da64",
+            "d06c047829960b95c8578dd479824404933e5c289340f0bf8272222de44e60d0",
+            "87c9e566982310cfa3ef535bc5ad6129d340d1933e6f1832f7a54d29a0104288",
+            "036d8a8cbc7f084659c459c8b0caa6ac42fb89716e9792859b17146681513ce3"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "global-assembly",
+          "blob": "c21ae9580385acf1e4e72c8027b6902f618ebabe4f703d74d4c8bb9387421581",
+          "size": 1600139,
+          "compute_s": 0.0008637299999918469,
+          "version": 0
+        },
+        {
+          "id": "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300",
+          "op": "split",
+          "deps": [],
+          "params": {
+            "rows": 10000,
+            "seed": 100
+          },
+          "replayable": true,
+          "scope": "membership",
+          "blob": "5780ece8bcd86dc55c9ad7cddf91e7ac452153f38283206ffb03a992a5f64d1f",
+          "size": 80165,
+          "compute_s": 0.0006845200000498153,
+          "version": 0
+        },
+        {
+          "id": "55d072d1ebcf1cf18741f1414c48d0cb386674e3480944f80e06a23f3cd3e713",
+          "op": "fit_scaler",
+          "deps": [
+            "4b3bf02de5f648881629c7bb4a5c8fa109cbe60da6b7d4710e9c01866152260d",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "e180e46513bc0f7c5c4b8bb5827cba68a4dab420489d68892222cde6e0754380",
+          "size": 474,
+          "compute_s": 0.002997975999960545,
+          "version": 0
+        },
+        {
+          "id": "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+          "op": "scale",
+          "deps": [
+            "4b3bf02de5f648881629c7bb4a5c8fa109cbe60da6b7d4710e9c01866152260d",
+            "55d072d1ebcf1cf18741f1414c48d0cb386674e3480944f80e06a23f3cd3e713"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-fitted-state",
+          "blob": "9b7a0b2b64f1480b93f21eed80bc85fbea55257cd88292e6e1735df30133a1ee",
+          "size": 1600139,
+          "compute_s": 0.0008179249999784588,
+          "version": 0
+        },
+        {
+          "id": "5cfa11adcd2de3c072a0d4d8657b6b69e513c6f9a669e68a8bf1a65eec5951cc",
+          "op": "train",
+          "deps": [
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 0.5,
+            "seed": 100,
+            "trees": 12,
+            "depth": 5
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "fbe58697f2eda7084dfd3ccd65178b8b5607e81dae245e0054b3a605271a9655",
+          "size": 895,
+          "compute_s": 0.016931730999999672,
+          "version": 0
+        },
+        {
+          "id": "95601342456f486d21a9f74c2e84ac342d6e19f47052e4a4fa540e85af13d105",
+          "op": "predict",
+          "deps": [
+            "5cfa11adcd2de3c072a0d4d8657b6b69e513c6f9a669e68a8bf1a65eec5951cc",
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "0321263e5693f6f521490ca5be2e0aa69b2328efa8844d98c01a729c9993f244",
+          "size": 40130,
+          "compute_s": 0.0003297649999467467,
+          "version": 0
+        },
+        {
+          "id": "9be4bb6e78fa9f6c6918e1901e05a5eb54508bba1e9d047e7f74db1fa0ad204a",
+          "op": "train",
+          "deps": [
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 0.75,
+            "seed": 100,
+            "trees": 12,
+            "depth": 6
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "b5e262b47c4504bdc549a730c14195be9e11960ba2fcecc1b0aacdfd6321cf17",
+          "size": 896,
+          "compute_s": 0.01789611200001673,
+          "version": 1
+        },
+        {
+          "id": "c33e30e14e6b1b6b39833b031e89f796d393ea5e9506b34b82873be6e05339bb",
+          "op": "predict",
+          "deps": [
+            "9be4bb6e78fa9f6c6918e1901e05a5eb54508bba1e9d047e7f74db1fa0ad204a",
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "dc652d66dd88a284ecbb00bd7921f32b1f12503b8f650bb8e58cca8d1e868ace",
+          "size": 40130,
+          "compute_s": 0.0002687830000240865,
+          "version": 1
+        },
+        {
+          "id": "4e4eb0ed0d365dea23b8a73ef3847f75fb43945190ad6820f7e7423514fb4c74",
+          "op": "train",
+          "deps": [
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.0,
+            "seed": 100,
+            "trees": 12,
+            "depth": 7
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "763b1f2aba30892fa59e93329b891cb76816090d6e3abd1701d5a09cc465b3d7",
+          "size": 895,
+          "compute_s": 0.01701139699991927,
+          "version": 2
+        },
+        {
+          "id": "57fb4ce40d45a882a5f34e3d0456f11bc5988d617edbb16b060a0a008478fb54",
+          "op": "predict",
+          "deps": [
+            "4e4eb0ed0d365dea23b8a73ef3847f75fb43945190ad6820f7e7423514fb4c74",
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "4ddfbc9468e2c792eb641d0bbcb24d8094b88042901bb835511b79555495a8e2",
+          "size": 40130,
+          "compute_s": 0.0003294120000418843,
+          "version": 2
+        },
+        {
+          "id": "9e1653d394e7f7456a9fce780cf272f3533b7b60782d51e4bf6472fc20a2123e",
+          "op": "train",
+          "deps": [
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.25,
+            "seed": 100,
+            "trees": 12,
+            "depth": 8
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "df52cf2c98281b2dc590727d6711ad46f265e5cf849900452cbe107ed9fde7f6",
+          "size": 896,
+          "compute_s": 0.015288622000070973,
+          "version": 3
+        },
+        {
+          "id": "856fa9b9c282850a392ab6d78f80f15e0cbd47c0ecb8248c9d1020d35248e4a2",
+          "op": "predict",
+          "deps": [
+            "9e1653d394e7f7456a9fce780cf272f3533b7b60782d51e4bf6472fc20a2123e",
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "612fdb7b38c709f4df6db6d904a755a2098f7bd420f6008f089f91a25a9d6fa8",
+          "size": 40130,
+          "compute_s": 0.00027628899999854184,
+          "version": 3
+        },
+        {
+          "id": "a48c7a78657eee719b3d15a64ab305d79131bc7fc96b7081a7b311bf5a7c67c7",
+          "op": "train",
+          "deps": [
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "6d44115729b6001d0ab671c0813b579611b59b7d98d0608d97c7466d49d11eb7",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {
+            "model": "logistic",
+            "C": 1.5,
+            "seed": 100,
+            "trees": 12,
+            "depth": 9
+          },
+          "replayable": true,
+          "scope": "fitted-global",
+          "blob": "24fbebeb141731aba1aa0bb90e8fce50fed3db8b1cfacef56c6088d6529edb35",
+          "size": 895,
+          "compute_s": 0.015669390999960342,
+          "version": 4
+        },
+        {
+          "id": "4250d4186100ddc42d89247980ded03fa33f2a2b7576f29b5d00f4d20cc0550f",
+          "op": "predict",
+          "deps": [
+            "a48c7a78657eee719b3d15a64ab305d79131bc7fc96b7081a7b311bf5a7c67c7",
+            "1f6c18ed0bdb96a3332c3ca4d89bee85adfea5189a74b052d4d3e7dac0c8d6ab",
+            "e8ff37653f2a47c6a4437e66ac2a529db45185d2c4e8361ea8792ef11dc8f300"
+          ],
+          "params": {},
+          "replayable": true,
+          "scope": "row-local-given-model",
+          "blob": "5d2bc6fdbdfbe4d5296910b1374f0cd929386b14fad37e043ed2fd0c1d9f2738",
+          "size": 40130,
+          "compute_s": 0.00031854399992425897,
+          "version": 4
+        }
+      ],
+      "targets": {
+        "0": [
+          "5cfa11adcd2de3c072a0d4d8657b6b69e513c6f9a669e68a8bf1a65eec5951cc",
+          "95601342456f486d21a9f74c2e84ac342d6e19f47052e4a4fa540e85af13d105"
+        ],
+        "1": [
+          "9be4bb6e78fa9f6c6918e1901e05a5eb54508bba1e9d047e7f74db1fa0ad204a",
+          "c33e30e14e6b1b6b39833b031e89f796d393ea5e9506b34b82873be6e05339bb"
+        ],
+        "2": [
+          "4e4eb0ed0d365dea23b8a73ef3847f75fb43945190ad6820f7e7423514fb4c74",
+          "57fb4ce40d45a882a5f34e3d0456f11bc5988d617edbb16b060a0a008478fb54"
+        ],
+        "3": [
+          "9e1653d394e7f7456a9fce780cf272f3533b7b60782d51e4bf6472fc20a2123e",
+          "856fa9b9c282850a392ab6d78f80f15e0cbd47c0ecb8248c9d1020d35248e4a2"
+        ],
+        "4": [
+          "a48c7a78657eee719b3d15a64ab305d79131bc7fc96b7081a7b311bf5a7c67c7",
+          "4250d4186100ddc42d89247980ded03fa33f2a2b7576f29b5d00f4d20cc0550f"
+        ]
+      },
+      "mandatory_blobs": [
+        "5368944cc1bf38e9e4a6c98f7fdd2ee8b595c8f1077d6b259cae35f78b721e28",
+        "5d6e8d6cd80fee0321a6b7443f26ac96fab70f453887a9e83812c28abd603a3f",
+        "a2e804408b54a87c22170e0c2b95e8c08937abb133ce5303aa18e96e97a4ceb4",
+        "aa7a8dcaa0517364e94e21c47b670939893514ba468fa6cc4185900aad70e220",
+        "ba112ef586bf34fb9e6ec214c0a4f488a0bea763a6ec2ffefebddf303566f186",
+        "bf57c00fa020c3b0ad15982e662039527397fd40acb3a538119782f34e966c2f"
+      ]
+    }
+  }
+]

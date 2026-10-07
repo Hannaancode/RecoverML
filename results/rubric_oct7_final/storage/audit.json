@@ -1,0 +1,9 @@
+{
+  "requests": 140,
+  "selections": 28,
+  "histories": 2,
+  "trace_events": 325,
+  "unique_requests": true,
+  "restoration_trace_counts_match": true,
+  "declared_request_matrix_complete": true
+}

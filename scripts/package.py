@@ -13,7 +13,7 @@ trees = ['src','tests','configs','docs','scripts','.github','examples/captured_h
 files = [root / name for name in single]
 for tree in trees:
     for path in (root/tree).rglob('*'):
-        if path.is_file() and not any(part in ('__pycache__','capture_archives','policy_stores','repair_stores')
+        if path.is_file() and not any(part in ('__pycache__','capture_archives','policy_stores','repair_stores','work')
                                       for part in path.relative_to(root).parts) and path.suffix not in ('.pyc','.tmp'):
             files.append(path)
 files.extend(root/name for name in ['results/test_results.txt','results/cli_validation.txt'])

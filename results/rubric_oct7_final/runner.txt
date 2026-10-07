@@ -1,0 +1,74 @@
+case00-rep0: synthetic logistic deterministic 17 nodes
+case01-rep0: breast_cancer forest opaque 30 nodes
+{
+  "requests": 140,
+  "selections": 28,
+  "histories": 2,
+  "trace_events": 325,
+  "unique_requests": true,
+  "restoration_trace_counts_match": true,
+  "declared_request_matrix_complete": true
+}
+rows2000-target_snapshots-w1-rep1: 100/100 exact · 838.8 req/s
+rows2000-full_replay-w4-rep2: 100/100 exact · 61.4 req/s
+rows2000-full_replay-w4-rep1: 100/100 exact · 66.0 req/s
+rows2000-recoverability_v2-w1-rep0: 100/100 exact · 851.2 req/s
+rows2000-target_snapshots-w4-rep1: 100/100 exact · 416.0 req/s
+rows2000-recoverability_v2-w4-rep1: 100/100 exact · 393.4 req/s
+rows2000-full_replay-w2-rep0: 100/100 exact · 72.7 req/s
+rows2000-target_snapshots-w2-rep0: 100/100 exact · 416.4 req/s
+rows2000-full_replay-w1-rep0: 100/100 exact · 100.1 req/s
+rows2000-full_replay-w2-rep2: 100/100 exact · 90.1 req/s
+rows2000-recoverability_v2-w2-rep1: 100/100 exact · 431.9 req/s
+rows2000-full_replay-w2-rep1: 100/100 exact · 94.0 req/s
+rows2000-recoverability_v2-w1-rep1: 100/100 exact · 829.7 req/s
+rows2000-recoverability_v2-w4-rep2: 100/100 exact · 440.6 req/s
+rows2000-recoverability_v2-w1-rep2: 100/100 exact · 897.6 req/s
+rows2000-full_replay-w4-rep0: 100/100 exact · 64.8 req/s
+rows2000-recoverability_v2-w2-rep0: 100/100 exact · 511.8 req/s
+rows2000-full_replay-w1-rep1: 100/100 exact · 105.9 req/s
+rows2000-target_snapshots-w1-rep2: 100/100 exact · 896.6 req/s
+rows2000-target_snapshots-w2-rep1: 100/100 exact · 519.3 req/s
+rows2000-target_snapshots-w4-rep2: 100/100 exact · 398.4 req/s
+rows2000-recoverability_v2-w2-rep2: 100/100 exact · 508.5 req/s
+rows2000-target_snapshots-w2-rep2: 100/100 exact · 396.2 req/s
+rows2000-full_replay-w1-rep2: 100/100 exact · 107.9 req/s
+rows2000-target_snapshots-w4-rep0: 100/100 exact · 415.0 req/s
+rows2000-target_snapshots-w1-rep0: 100/100 exact · 935.0 req/s
+rows2000-recoverability_v2-w4-rep0: 100/100 exact · 358.3 req/s
+rows10000-full_replay-w2-rep0: 100/100 exact · 31.6 req/s
+rows10000-full_replay-w1-rep0: 100/100 exact · 32.5 req/s
+rows10000-target_snapshots-w4-rep0: 100/100 exact · 420.9 req/s
+rows10000-full_replay-w4-rep0: 100/100 exact · 37.7 req/s
+rows10000-recoverability_v2-w2-rep1: 100/100 exact · 466.1 req/s
+rows10000-recoverability_v2-w1-rep1: 100/100 exact · 688.5 req/s
+rows10000-target_snapshots-w1-rep0: 100/100 exact · 897.6 req/s
+rows10000-target_snapshots-w4-rep1: 100/100 exact · 463.6 req/s
+rows10000-recoverability_v2-w1-rep0: 100/100 exact · 817.5 req/s
+rows10000-recoverability_v2-w4-rep0: 100/100 exact · 323.2 req/s
+rows10000-recoverability_v2-w4-rep2: 100/100 exact · 412.2 req/s
+rows10000-recoverability_v2-w4-rep1: 100/100 exact · 466.7 req/s
+rows10000-target_snapshots-w2-rep2: 100/100 exact · 506.1 req/s
+rows10000-full_replay-w4-rep1: 100/100 exact · 45.0 req/s
+rows10000-recoverability_v2-w2-rep2: 100/100 exact · 473.9 req/s
+rows10000-target_snapshots-w2-rep1: 100/100 exact · 434.3 req/s
+rows10000-target_snapshots-w1-rep1: 100/100 exact · 833.5 req/s
+rows10000-full_replay-w2-rep2: 100/100 exact · 34.7 req/s
+rows10000-full_replay-w1-rep2: 100/100 exact · 32.9 req/s
+rows10000-recoverability_v2-w1-rep2: 100/100 exact · 818.6 req/s
+rows10000-target_snapshots-w4-rep2: 100/100 exact · 445.3 req/s
+rows10000-target_snapshots-w1-rep2: 100/100 exact · 832.7 req/s
+rows10000-full_replay-w1-rep1: 100/100 exact · 29.7 req/s
+rows10000-target_snapshots-w2-rep0: 100/100 exact · 468.7 req/s
+rows10000-full_replay-w2-rep1: 100/100 exact · 47.1 req/s
+rows10000-full_replay-w4-rep2: 100/100 exact · 40.1 req/s
+rows10000-recoverability_v2-w2-rep0: 100/100 exact · 497.8 req/s
+{
+  "passed": true,
+  "requests": 5400,
+  "trials": 54,
+  "exact_requests": 5400,
+  "resource_samples": 2129,
+  "operation_records": 39600
+}
+Complete results in results/rubric_oct7_final

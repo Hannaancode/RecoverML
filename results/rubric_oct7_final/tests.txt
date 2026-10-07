@@ -1,0 +1,32 @@
+test_branched_pipeline_restores_all_models_and_predictions (test_core.CoreTests.test_branched_pipeline_restores_all_models_and_predictions) ... ok
+test_budget_failure_reported (test_core.CoreTests.test_budget_failure_reported) ... ok
+test_corruption_detected_before_unpickle (test_core.CoreTests.test_corruption_detected_before_unpickle) ... ok
+test_cycles_rejected (test_core.CoreTests.test_cycles_rejected) ... ok
+test_environment_mismatch_rejected (test_core.CoreTests.test_environment_mismatch_rejected) ... ok
+test_exact_oracle_threshold_and_heuristic (test_core.CoreTests.test_exact_oracle_threshold_and_heuristic) ... ok
+test_exact_replay_logistic_and_forest (test_core.CoreTests.test_exact_replay_logistic_and_forest) ... ok
+test_global_fit_invalidates_and_local_blocks_share (test_core.CoreTests.test_global_fit_invalidates_and_local_blocks_share) ... ok
+test_journal_final_export_recovers_a_truncated_checkpoint (test_core.CoreTests.test_journal_final_export_recovers_a_truncated_checkpoint) ... ok
+test_loaded_model_inference_and_codec_roundtrip (test_core.CoreTests.test_loaded_model_inference_and_codec_roundtrip) ... ok
+test_opaque_replay_fails_closed (test_core.CoreTests.test_opaque_replay_fails_closed) ... ok
+test_recoverability_retains_outputs_without_external_arrays (test_core.CoreTests.test_recoverability_retains_outputs_without_external_arrays) ... ok
+test_simple_target_baseline_is_safe (test_core.CoreTests.test_simple_target_baseline_is_safe) ... ok
+test_unsafe_eviction_is_refused (test_core.CoreTests.test_unsafe_eviction_is_refused) ... ok
+test_wrong_replay_config_rejected_by_hash (test_core.CoreTests.test_wrong_replay_config_rejected_by_hash) ... ok
+test_bounded_incumbent_is_not_called_optimal (test_optimizer.OptimizerTests.test_bounded_incumbent_is_not_called_optimal) ... ok
+test_cheap_target_replay_does_not_get_false_lower_bound (test_optimizer.OptimizerTests.test_cheap_target_replay_does_not_get_false_lower_bound) ... ok
+test_direct_target_lower_bound_avoids_solver (test_optimizer.OptimizerTests.test_direct_target_lower_bound_avoids_solver) ... ok
+test_milp_matches_exhaustive_on_shared_opaque_graphs (test_optimizer.OptimizerTests.test_milp_matches_exhaustive_on_shared_opaque_graphs) ... ok
+test_mismatched_solver_objective_is_rejected (test_optimizer.OptimizerTests.test_mismatched_solver_objective_is_rejected) ... ok
+test_shared_blob_and_overlapping_targets_match_oracle (test_optimizer.OptimizerTests.test_shared_blob_and_overlapping_targets_match_oracle) ... ok
+test_solver_failure_uses_validated_heuristic (test_optimizer.OptimizerTests.test_solver_failure_uses_validated_heuristic) ... ok
+test_parallel_restore_and_corrupt_trace (test_performance.PerformanceTest.test_parallel_restore_and_corrupt_trace) ... rows80-recoverability_v2-w2-rep0: 4/4 exact · 524.3 req/s
+rows80-recoverability_v2-w1-rep0: 4/4 exact · 849.5 req/s
+rows80-full_replay-w1-rep0: 4/4 exact · 191.3 req/s
+rows80-full_replay-w2-rep0: 4/4 exact · 160.8 req/s
+ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.584s
+
+OK

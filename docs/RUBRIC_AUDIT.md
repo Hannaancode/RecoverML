@@ -1,77 +1,62 @@
-# Milestone 2 rubric audit — 6 October 2026
+# Milestone 2 rubric evidence — 7 October 2026
 
-This checklist uses the four supplied rubric screenshots and the current
-RecoverML implementation. It records evidence and remaining work rather than
-claiming a grade.
+We have all four rubric screenshots and this table links each requirement to evidence
+This is a submission checklist and the instructor decides the grade
 
-| Rubric | Weight | Current evidence | Remaining work |
-|---|---:|---|---|
-| Implementation and authenticity | 35% | Modular Python prototype with real capture, selection and restoration code and 22 recorded correctness tests | Genuine progress commits through the remaining project period and a code explanation or demonstration |
-| Benchmark harness | 25% | Makefile, configurable automated benchmark, CI smoke workflow and experiments at 2,000 and 10,000 synthetic rows | Verify a fresh one-command run on the submission machine and retain its output |
-| Trace data authenticity | 25% | Per-request CSV, operation JSONL, environment records, hashes and audit | New measurements with UTC start/end times, monotonic durations, CPU and memory samples, request counters and measured throughput |
-| Preliminary plots and analysis | 15% | Prototype and baseline plots for recovery, storage and planning cost | Render latency CDFs, run concurrency-throughput trials and explain measured tail spikes and performance dips |
+| Rubric | Weight | Evidence |
+|---|---:|---|
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 23 passing tests in results/rubric_oct7_final/tests.txt |
+| Benchmark harness | 25% | bash run_benchmarks.sh runs tests and storage checks and the worker experiment with no manual policy switching and configs/performance.json varies workers and data sizes |
+| Trace data authenticity | 25% | requests.csv has raw UTC and monotonic times and exact outcomes and summary.csv has submitted and completed counters and measured throughput and P50 P90 P99 and resources.csv has process CPU and resident memory samples |
+| Preliminary plots and analysis | 15% | throughput_vs_concurrency.png and latency_cdf.png compare version 2 with full replay and direct target snapshots and docs/PERFORMANCE_REPORT.md explains dips and queue tails and the measured outlier |
 
-## Work completed today
+All new experiment files are in results/rubric_oct7_final
+The performance audit passed for 5400 requests and 54 trials and 2129 resource samples and 39600 operation records
+All 5400 requests restored exact artifacts
+The separate storage smoke audit checked 140 requests and 28 policy selections
+The earlier large storage studies are retained in results/preliminary and results/iteration2
 
-Added scripts/tail_latency.py to calculate P50, P90 and P99 and export empirical
-CDF points from recorded restore_s measurements. It groups by workload, policy
-and storage budget. Exact successful requests contribute latency samples while
-all requests remain visible in coverage counts.
+## Review commands
 
-Run from the repository root:
+Install the pinned Python 3.12 package with python -m pip install -e . and then run
 
 ```bash
-python scripts/tail_latency.py results/iteration2 --out results/tail_iteration2
+bash run_benchmarks.sh
+python -m recoverml.performance --audit-only --out results/rubric_oct7_final/performance
+python -m recoverml.audit results/rubric_oct7_final/storage
 ```
 
-Outputs:
-- latency_percentiles.csv
-- latency_cdf.csv
-- provenance.json with the input SHA-256 and measurement scope
+Each fresh run uses a new directory and records its own machine and environment and source hashes
+Operation logs are raw JSONL compressed as operations.jsonl.gz and can be opened with Python gzip or gzip -dc
+HASHES.json checks the performance input files and logs and plots
+CHECKSUMS.json checks the submitted project files
+Run source hashes match the code used for the experiment and operator hashes also guard restoration
+The source implementation commit is f9c8d12fbdeb84c629b52a70477c382a5df97c6b
 
-Validation on the existing iteration2 data:
-- 11,200 requests accounted for
-- 448 workload/policy/budget summary groups
-- 6,223 distinct empirical CDF points
-- Empty and singleton percentile cases checked
-- Linear interpolation checked
-- P50 <= P90 <= P99 <= maximum checked
-- All nonempty CDFs reach 1 and are nondecreasing
+## Git history requirement
 
-This is analysis of the original measurements. It does not add missing historical
-timestamps or CPU traces and is not a fresh performance run. Small groups have
-limited tail estimates so future runs should collect more repeated samples.
+The excellent implementation level also asks for continuous development across Weeks 4–7
+Today's commits and earlier published commits show their real dates
+These technical changes cannot create evidence of development in earlier weeks
+Keep making meaningful changes during the remaining course weeks and include validation with each change
+Existing local files or genuine earlier work can be explained separately using their original evidence
+The course calendar was not supplied so the instructor must confirm the week mapping
 
-## Next genuine commits
+## Hardware and explanation
 
-1. Instrument request start/end UTC and monotonic times and resource sampling
-2. Run the instrumented benchmark and publish raw logs with run identity
-3. Add CDF plots and a concurrency sweep with fixed workload and budget
-4. Write anomaly analysis linked to the corresponding raw request records
-5. Run the full reproduction command and record the final verification
+No special hardware or GPU is required for this prototype
+A Linux CPU computer or VM provides the CPU and memory readings used here
+The machine model and CPU quota are recorded in provenance.json
+CPU utilization is explicitly an example in the supplied rubric so perf hardware counters are optional for this reading of the rubric
 
-Use real dated changes and their validation evidence. Do not backdate commits or
-split unchanged content into artificial activity. The history published on
-3 October does not establish continuous development in earlier weeks.
+Before submission run the command on the submission machine and explain the graph and planner and exact restore checks in a short demonstration
+The repository tests and traces help review the code and the student should understand the implementation and follow the course policy for AI assistance
 
-## Hardware
+## Useful next commits
 
-The rubric does not require buying equipment or using a GPU. A CPU computer
-or VM can run this software project and collect CPU and memory measurements.
-Record the machine details and available CPU limits so performance claims have
-a clear context. Linux perf is one possible resource source; CPU utilization
-is also listed as an example by the rubric.
+1. Repeat the same experiment on the submission machine and compare the results
+2. Add a larger opaque workload and publish exact coverage alongside latency
+3. Profile the environment check and file reads before changing concurrency code
+4. Add a demonstrated improvement and rerun the matching baseline
 
-## Result interpretation
-
-Existing timing uses successful restore durations and warm-cache measurements.
-Compare policies within the same workload and budget and report coverage
-alongside latency. A throughput plot must use completed requests divided by
-actual elapsed wall time; inverse per-request latency is not a measured
-concurrent throughput result. New instrumentation cannot recover measurements
-that were not recorded in earlier runs.
-
-The benchmark rubric allows variation in thread counts, data scales OR batch
-sizes. Existing data scales address that part. The excellent plots example
-also names throughput versus concurrency, so a controlled concurrency study
-is the clearest way to match that evidence.
+Use real work and real dates and keep the raw measurements even when a baseline is faster

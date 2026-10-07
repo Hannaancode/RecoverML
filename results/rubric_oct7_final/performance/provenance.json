@@ -1,0 +1,71 @@
+{
+  "started_utc": "2026-10-07T03:00:29.464879+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu_count": 9,
+  "cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 207\nmodel name\t: INTEL(R) XEON(R) PLATINUM 8573C\nstepping\t: 2\nmicrocode\t: 0x1\ncpu MHz\t\t: 2300.000\ncache size\t: 266240 KB\nphysical id\t: 0\nsiblings\t: 9\ncore id\t\t: 0\ncpu cores\t: 9\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed bhi spectre_v2_user its\nbogomips\t: 4600.00\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 46 bits physical, 57 bits virtual\npower management:",
+  "cgroup_cpu_max": "800000 100000",
+  "source_sha256": {
+    "__init__.py": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d",
+    "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "analysis.py": "b128111d1910e532f09c1952128183c39b10e7bf88aea648b3729bef24b2e073",
+    "audit.py": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e",
+    "benchmark.py": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92",
+    "cli.py": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806",
+    "comparison.py": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a",
+    "core.py": "0ecd7a8efbff2347be785e4d3bef81c2f86d02ae1a0959ab095cac843eba1a61",
+    "model_codec.py": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6",
+    "operators.py": "089707f5bd20e4e55726e0b79cd1b605f21b28066dc4f700e4db07f4eec08c61",
+    "optimizer.py": "06d321ff4d398b11b7b3c96344152ff6b698c8d363b4bb075386163599c55c74",
+    "oracle_experiment.py": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7",
+    "performance.py": "7a2bf055d1c04f07c9c22bd41da235ff002bb5dcc7c4e6b289564a065bb6ace0",
+    "policies.py": "563ab23c293b39e98513f2b58c861d23fe25446fed1853443e7790884e84b84b",
+    "workloads.py": "054cb484e101369d59e96d45cc3d24f6ec9f73f2186ede02b9b5f7ab708eca37"
+  },
+  "latency_scope": "Service includes environment check and disk restore with hash checks; response also includes executor queue wait",
+  "cache": "Warm OS page cache; fresh request memo; one BLAS thread per worker",
+  "resource_scope": "Whole benchmark process including sampler and executor; CPU percent is relative to one core",
+  "throughput_scope": "Exact requests divided by submission-to-completion wall time; capture and planning excluded",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "machine": "x86_64",
+    "system": "Linux",
+    "threads": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "serialization": "pickle-protocol-5-arrays-and-canonical-model-v1",
+    "model_codec_sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6",
+    "codec_code_sha256": "0ecd7a8efbff2347be785e4d3bef81c2f86d02ae1a0959ab095cac843eba1a61",
+    "operator_code_sha256": "089707f5bd20e4e55726e0b79cd1b605f21b28066dc4f700e4db07f4eec08c61"
+  },
+  "ended_utc": "2026-10-07T03:01:15.067440+00:00"
+}

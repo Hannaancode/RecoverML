@@ -1,0 +1,1 @@
+{"policies":["full_replay","target_snapshots","recoverability_v2"],"repeats":3,"requests":100,"rows":[2000,10000],"versions":5,"workers":[1,2,4]}

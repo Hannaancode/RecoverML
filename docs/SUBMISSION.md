@@ -1,15 +1,17 @@
 # Milestone 2 submission checklist
 
 The package contains the working Python prototype, automated benchmark and
-analysis commands, complete raw CSV/JSONL records, audited retention plans,
-preliminary plots and the two experiment reports. It is ready to place in a
-GitHub repository. No remote repository or instructor-accessible URL has been
-created by this local development step.
+analysis commands, raw CSV/JSONL records, audited retention plans,
+plots and experiment reports and CPU and memory measurements.
+The public instructor-accessible repository is https://github.com/Hannaancode/RecoverML
+Read docs/RUBRIC_AUDIT.md for the four rubric categories and the Git history requirement.
 
 ## Instructor review
 
 Start with `README.md` and `docs/ITERATION2_REPORT.md`. Install with Python 3.12
 and `python -m pip install -e .`, then run `make test` and `make smoke`.
+For the full new one-command rubric experiment run `bash run_benchmarks.sh` on Linux.
+The supplied fresh results are in `results/rubric_oct7_final` and their analysis is in `docs/PERFORMANCE_REPORT.md`.
 Run `python -m recoverml.audit results/new_smoke` to check the smoke logs.
 For the full repeated experiment, use `make iteration2`; it can take several
 minutes on a single CPU thread and writes a new result directory.

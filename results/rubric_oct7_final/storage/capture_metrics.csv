@@ -1,0 +1,3 @@
+case_id,dataset,rows,model,change,boundary,versions,repeat,capture_total_s,operator_total_s,lineage_serialization_s,instrumentation_upper_bound_s,nodes,unique_blobs,metadata_bytes,full_bytes,required_input_bytes
+case00-rep0,synthetic,2000,logistic,parameters,deterministic,5,0,0.045233756000016,0.0333275689997663,0.008594172999210059,0.011906187000249702,17,16,9850,1048152,346117
+case01-rep0,breast_cancer,569,forest,parameters,opaque,5,0,0.175761241000032,0.14946863700015456,0.012220009999737158,0.02629260399987743,30,29,15153,1979596,156532
