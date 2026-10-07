@@ -1,7 +1,10 @@
-.PHONY: test smoke benchmark analyze oracle iteration2
+.PHONY: test smoke benchmark analyze oracle iteration2 rubric
 export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
+
+rubric:
+	bash run_benchmarks.sh
 
 test:
 	python -m unittest discover -s tests -v

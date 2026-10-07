@@ -15,3 +15,8 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: recoverml benchmark --config configs/smoke.json --out work/ci_smoke
       - run: python -m recoverml.audit work/ci_smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-execution-evidence
+          path: work/ci_smoke

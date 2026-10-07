@@ -1,0 +1,8 @@
+{
+  "rows": [2000, 10000],
+  "workers": [1, 2, 4],
+  "policies": ["full_replay", "target_snapshots", "recoverability_v2"],
+  "versions": 5,
+  "requests": 100,
+  "repeats": 3
+}
