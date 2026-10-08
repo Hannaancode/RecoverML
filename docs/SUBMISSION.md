@@ -8,16 +8,16 @@ Read docs/RUBRIC_AUDIT.md for the four rubric categories and the Git history req
 
 ## Instructor review
 
-Start with `README.md` and `docs/ITERATION2_REPORT.md`. Install with Python 3.12
+Start with `README.md` and `docs/reports/ITERATION2_REPORT.md`. Install with Python 3.12
 and `python -m pip install -e .`, then run `make test` and `make smoke`.
 For the full new one-command rubric experiment run `bash run_benchmarks.sh` on Linux.
-The supplied fresh results are in `results/rubric_oct7_final` and their analysis is in `docs/PERFORMANCE_REPORT.md`.
-Run `python -m recoverml.audit results/new_smoke` to check the smoke logs.
+The supplied fresh results are in `results/milestone2` and their analysis is in `docs/reports/PERFORMANCE_REPORT.md`.
+Run `python -m recoverml.audit results/runs/new_smoke` to check the smoke logs.
 For the full repeated experiment, use `make iteration2`; it can take several
 minutes on a single CPU thread and writes a new result directory.
 
-Published raw measurements are in `results/preliminary` and
-`results/iteration2`. The original experiment is preserved rather than
+Published raw measurements are in `results/archive/preliminary` and
+`results/archive/iteration2`. The original experiment is preserved rather than
 overwritten by the second iteration. Full experimental capture archives are
 excluded from the compact submission; a complete small example is supplied,
 and the harness can generate fresh complete histories locally.

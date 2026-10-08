@@ -40,8 +40,8 @@ The real end to end Python fixture still captures and restores a small history w
 
 ## Validation evidence
 
-- results/development_oct8/tests.txt records 31 passing automated tests
-- results/development_oct8/audit_existing_run.txt records the stronger audit of the original experiment
+- results/validation/2026-10-08/tests.txt records 31 passing automated tests
+- results/validation/2026-10-08/audit_existing_run.txt records the stronger audit of the original experiment
 - The audit confirms 5400 exact requests and 54 trials and 2129 resource samples and 39600 operation records
 - bash -n run_benchmarks.sh passed
 - The package checksums are updated with these changes

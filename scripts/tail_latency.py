@@ -1,6 +1,6 @@
 """Export measured latency percentiles and empirical CDF data.
 
-Usage: python scripts/tail_latency.py results/iteration2 --out results/tail_iteration2
+Usage: python scripts/tail_latency.py results/archive/iteration2 --out results/tail_iteration2
 
 Groups by workload and budget so unlike workloads are not silently pooled.
 Only exact successful restorations contribute latency samples; all requests

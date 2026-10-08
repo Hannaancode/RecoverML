@@ -7,7 +7,7 @@ All 23 correctness tests passed before the benchmark started and the storage smo
 ## Method
 
 Run bash run_benchmarks.sh to create tests and storage checks and performance results
-The published run is results/rubric_oct7_final and started on 7 October 2026 at 03:00:29 UTC and finished at 03:01:15 UTC
+The published run is results/milestone2 and started on 7 October 2026 at 03:00:29 UTC and finished at 03:01:15 UTC
 Each history has five logistic regression versions on seeded synthetic data
 The data sizes are 2000 and 10000 rows and worker counts are 1 and 2 and 4
 Each trial submits a burst of 100 requests and cycles through the five versions
@@ -52,11 +52,11 @@ Direct target snapshots remain a strong baseline and are slightly faster in thes
 Version 2 can use the same direct target shortcut so similar restore latency is expected
 The difference includes measurement variation and does not prove a planner advantage
 
-![Throughput against concurrency](../results/rubric_oct7_final/performance/throughput_vs_concurrency.png)
+![Throughput against concurrency](../../results/milestone2/performance/throughput_vs_concurrency.png)
 
 Error bars show one population standard deviation across three trials and are not confidence intervals
 
-![Service latency CDF](../results/rubric_oct7_final/performance/latency_cdf.png)
+![Service latency CDF](../../results/milestone2/performance/latency_cdf.png)
 
 The CDF pools 300 successful service times per policy and data size at one worker
 The horizontal axis is logarithmic and each curve reaches one

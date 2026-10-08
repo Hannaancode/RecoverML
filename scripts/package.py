@@ -9,15 +9,14 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 single = ['.gitignore','Makefile','README.md','pyproject.toml','requirements.txt','run_benchmarks.sh']
 trees = ['src','tests','configs','docs','scripts','.github','examples/captured_history',
-         'results/preliminary','results/iteration2','results/rubric_oct7_final',
-         'results/development_oct8']
+         'results/archive','results/milestone2','results/validation']
 files = [root / name for name in single]
 for tree in trees:
     for path in (root/tree).rglob('*'):
         if path.is_file() and not any(part in ('__pycache__','capture_archives','policy_stores','repair_stores','work')
                                       for part in path.relative_to(root).parts) and path.suffix not in ('.pyc','.tmp'):
             files.append(path)
-files.extend(root/name for name in ['results/test_results.txt','results/cli_validation.txt'])
+files.append(root/'results/README.md')
 files = sorted(set(files))
 checksums = {str(path.relative_to(root)):hashlib.sha256(path.read_bytes()).hexdigest() for path in files}
 (root/'CHECKSUMS.json').write_text(json.dumps(checksums,indent=2)+'\n')
@@ -30,6 +29,6 @@ with zipfile.ZipFile(archive) as output:
     assert output.testzip() is None
     for name,expected in checksums.items():
         assert hashlib.sha256(output.read('recoverml/'+name)).hexdigest()==expected
-shutil.copyfile(root/'docs/ITERATION2_REPORT.md',root.parent/'Milestone2_Preliminary_Report.md')
+shutil.copyfile(root/'docs/reports/ITERATION2_REPORT.md',root.parent/'Milestone2_Preliminary_Report.md')
 print(json.dumps(dict(archive=str(archive),files=len(files),bytes=archive.stat().st_size,
                      checksums_verified=True)))

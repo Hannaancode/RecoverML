@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 export PYTHONPATH=src
 export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
-out="${1:-results/run_$(date -u +%Y%m%dT%H%M%SZ)}"
+out="${1:-results/runs/run_$(date -u +%Y%m%dT%H%M%SZ)}"
 mkdir -p -- "$(dirname "$out")"
 if ! mkdir -- "$out"; then
     printf 'Use a new output folder so existing results stay unchanged: %s\n' "$out" >&2

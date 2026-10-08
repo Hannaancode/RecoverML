@@ -9,4 +9,5 @@ results/**/repair_stores/
 results/smoke*/
 results/development_run/
 results/final/
-results/iteration2_pilot/
+results/archive/iteration2_pilot/
+results/runs/

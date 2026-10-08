@@ -223,7 +223,7 @@ Use Python 3.12 and the pinned dependencies. `make test` runs correctness checks
 audit, plots, paired comparisons and both exact-reference comparisons. Existing
 output directories must be renamed or a new output path selected.
 
-Raw measurements and four plots are under `results/iteration2`; the paired
+Raw measurements and four plots are under `results/archive/iteration2`; the paired
 CSV and solver decision logs provide the evidence behind this report. The
 complete small captured example can be selected and restored through the CLI.
 Full benchmark capture archives are excluded from the compact package and can

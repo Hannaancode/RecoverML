@@ -10,20 +10,20 @@ test:
 	python -m unittest discover -s tests -v
 
 smoke:
-	python -m recoverml benchmark --config configs/smoke.json --out results/new_smoke
+	python -m recoverml benchmark --config configs/smoke.json --out results/runs/new_smoke
 
 benchmark:
-	python -m recoverml benchmark --config configs/preliminary.json --out results/new_preliminary
+	python -m recoverml benchmark --config configs/preliminary.json --out results/runs/new_preliminary
 
 analyze:
-	python -m recoverml analyze results/new_preliminary
+	python -m recoverml analyze results/runs/new_preliminary
 
 oracle:
-	python -c "from pathlib import Path; from recoverml.oracle_experiment import run_oracle; run_oracle(Path('results/new_preliminary'))"
+	python -c "from pathlib import Path; from recoverml.oracle_experiment import run_oracle; run_oracle(Path('results/runs/new_preliminary'))"
 
 iteration2:
-	python -m recoverml benchmark --config configs/iteration2.json --out results/new_iteration2
-	python -m recoverml.audit results/new_iteration2
-	python -m recoverml analyze results/new_iteration2
-	python -m recoverml.comparison results/new_iteration2
-	python -c "from pathlib import Path; from recoverml.oracle_experiment import run_oracle; run_oracle(Path('results/new_iteration2'),('recoverability','recoverability_v2'))"
+	python -m recoverml benchmark --config configs/iteration2.json --out results/runs/new_iteration2
+	python -m recoverml.audit results/runs/new_iteration2
+	python -m recoverml analyze results/runs/new_iteration2
+	python -m recoverml.comparison results/runs/new_iteration2
+	python -c "from pathlib import Path; from recoverml.oracle_experiment import run_oracle; run_oracle(Path('results/runs/new_iteration2'),('recoverability','recoverability_v2'))"

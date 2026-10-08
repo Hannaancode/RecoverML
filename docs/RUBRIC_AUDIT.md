@@ -5,19 +5,19 @@ This is a submission checklist and the instructor decides the grade
 
 | Rubric | Weight | Evidence |
 |---|---:|---|
-| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 31 passing tests in results/development_oct8/tests.txt |
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 31 passing tests in results/validation/2026-10-08/tests.txt |
 | Benchmark harness | 25% | bash run_benchmarks.sh runs tests and storage checks and the worker experiment with no manual policy switching and configs/performance.json varies workers and data sizes |
 | Trace data authenticity | 25% | requests.csv has raw UTC and monotonic times and exact outcomes and summary.csv has submitted and completed counters and measured throughput and P50 P90 P99 and resources.csv has process CPU and resident memory samples |
-| Preliminary plots and analysis | 15% | throughput_vs_concurrency.png and latency_cdf.png compare version 2 with full replay and direct target snapshots and docs/PERFORMANCE_REPORT.md explains dips and queue tails and the measured outlier |
+| Preliminary plots and analysis | 15% | throughput_vs_concurrency.png and latency_cdf.png compare version 2 with full replay and direct target snapshots and docs/reports/PERFORMANCE_REPORT.md explains dips and queue tails and the measured outlier |
 
-All new experiment files are in results/rubric_oct7_final
+All new experiment files are in results/milestone2
 The performance audit passed for 5400 requests and 54 trials and 2129 resource samples and 39600 operation records
 All 5400 requests restored exact artifacts
 The separate storage smoke audit checked 140 requests and 28 policy selections
-The earlier large storage studies are retained in results/preliminary and results/iteration2
+The earlier large storage studies are retained in results/archive/preliminary and results/archive/iteration2
 The 8 October changes add complete target operation checks and protect existing result folders
 Today's stronger audit passed on the original 5400 request run without changing its measurements
-See docs/PROGRESS_OCT8.md and results/development_oct8 for today's validation
+See docs/history/PROGRESS_OCT8.md and results/validation/2026-10-08 for today's validation
 
 ## Review commands
 
@@ -25,8 +25,8 @@ Install the pinned Python 3.12 package with python -m pip install -e . and then 
 
 ```bash
 bash run_benchmarks.sh
-python -m recoverml.performance --audit-only --out results/rubric_oct7_final/performance
-python -m recoverml.audit results/rubric_oct7_final/storage
+python -m recoverml.performance --audit-only --out results/milestone2/performance
+python -m recoverml.audit results/milestone2/storage
 ```
 
 Each fresh run uses a new directory and records its own machine and environment and source hashes
