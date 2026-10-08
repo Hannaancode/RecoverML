@@ -1,11 +1,11 @@
-# Milestone 2 rubric evidence — 7 October 2026
+# Milestone 2 rubric evidence — updated 8 October 2026
 
 We have all four rubric screenshots and this table links each requirement to evidence
 This is a submission checklist and the instructor decides the grade
 
 | Rubric | Weight | Evidence |
 |---|---:|---|
-| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 23 passing tests in results/rubric_oct7_final/tests.txt |
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 31 passing tests in results/development_oct8/tests.txt |
 | Benchmark harness | 25% | bash run_benchmarks.sh runs tests and storage checks and the worker experiment with no manual policy switching and configs/performance.json varies workers and data sizes |
 | Trace data authenticity | 25% | requests.csv has raw UTC and monotonic times and exact outcomes and summary.csv has submitted and completed counters and measured throughput and P50 P90 P99 and resources.csv has process CPU and resident memory samples |
 | Preliminary plots and analysis | 15% | throughput_vs_concurrency.png and latency_cdf.png compare version 2 with full replay and direct target snapshots and docs/PERFORMANCE_REPORT.md explains dips and queue tails and the measured outlier |
@@ -15,6 +15,9 @@ The performance audit passed for 5400 requests and 54 trials and 2129 resource s
 All 5400 requests restored exact artifacts
 The separate storage smoke audit checked 140 requests and 28 policy selections
 The earlier large storage studies are retained in results/preliminary and results/iteration2
+The 8 October changes add complete target operation checks and protect existing result folders
+Today's stronger audit passed on the original 5400 request run without changing its measurements
+See docs/PROGRESS_OCT8.md and results/development_oct8 for today's validation
 
 ## Review commands
 

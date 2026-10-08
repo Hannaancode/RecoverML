@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "requests": 5400,
+  "trials": 54,
+  "exact_requests": 5400,
+  "resource_samples": 2129,
+  "operation_records": 39600
+}

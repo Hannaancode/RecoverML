@@ -5,7 +5,11 @@ export PYTHONPATH=src
 export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
 out="${1:-results/run_$(date -u +%Y%m%dT%H%M%SZ)}"
-mkdir -p "$out"
+mkdir -p -- "$(dirname "$out")"
+if ! mkdir -- "$out"; then
+    printf 'Use a new output folder so existing results stay unchanged: %s\n' "$out" >&2
+    exit 1
+fi
 python -m unittest discover -s tests -v > "$out/tests.txt" 2>&1
 python -m recoverml benchmark --config configs/smoke.json --out "$out/storage"
 python -m recoverml.audit "$out/storage"
