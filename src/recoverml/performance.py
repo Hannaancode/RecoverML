@@ -83,38 +83,120 @@ def restore_request(graph, store, trial, index, version, submitted_ns, submitted
 
 
 def audit(out):
+    """Check file identity and the declared experiment and each restore path.
+
+    Explicit exceptions keep validation active under python -O. Hashes detect
+    changed bytes; graph checks also catch incomplete logs with refreshed hashes.
+    Neither mechanism is an external attestation of execution.
+    """
+    out = Path(out)
+    def require(condition, message):
+        if not condition:
+            raise ValueError(message)
+    required = {'config.json', 'captures.json', 'plans.json', 'provenance.json',
+                'requests.csv', 'summary.csv', 'resources.csv', 'operations.jsonl.gz',
+                'throughput_vs_concurrency.png', 'latency_cdf.png'}
+    hashes = json.loads((out/'HASHES.json').read_text())
+    require(required <= hashes.keys(), 'Hash manifest is missing required evidence')
+    for path, expected in hashes.items():
+        require(Path(path).name == path, 'Evidence paths must be local filenames')
+        require(hashlib.sha256((out/path).read_bytes()).hexdigest() == expected,
+                f'File hash mismatch: {path}')
     def read(name):
         with (out/name).open() as stream:
             return list(csv.DictReader(stream))
     requests = read('requests.csv')
     summaries = read('summary.csv')
     resources = read('resources.csv')
-    assert requests and summaries and resources
-    for s in summaries:
-        rows = [r for r in requests if r['trial'] == s['trial']]
-        assert len(rows) == int(s['completed_requests']) == int(s['submitted_requests'])
-        assert sum(r['exact']=='True' for r in rows) == int(s['exact_requests'])
-        assert all(int(r['submitted_ns']) <= int(r['started_ns']) <= int(r['ended_ns']) for r in rows)
-        assert all(int(s['started_ns']) <= int(r['submitted_ns']) <= int(r['ended_ns']) <= int(s['ended_ns']) for r in rows)
+    cfg = json.loads((out/'config.json').read_text())
+    expected = {
+        f'rows{scale}-{policy}-w{workers}-rep{repeat}': (scale,policy,workers,repeat)
+        for scale in cfg['rows'] for policy in cfg['policies']
+        for workers in cfg['workers'] for repeat in range(cfg['repeats'])
+    }
+    trials = {s['trial']: s for s in summaries}
+    require(bool(expected) and len(trials) == len(summaries) and trials.keys() == expected.keys(),
+            'Summary does not match the declared trial matrix')
+    require(len(requests) == len(expected)*cfg['requests'], 'Request matrix is incomplete')
+    keys = {(r['trial'],int(r['request_id'])): r for r in requests}
+    require(len(keys) == len(requests), 'Duplicate request identity')
+    require(all(r['trial'] in trials for r in requests+resources), 'Unknown trial in raw logs')
+    captures = {c['rows']: c['manifest'] for c in json.loads((out/'captures.json').read_text())}
+    require(captures.keys() == set(cfg['rows']), 'Captured histories do not match data scales')
+    plans_list = json.loads((out/'plans.json').read_text())
+    plans = {p['trial']: p for p in plans_list}
+    require(len(plans) == len(plans_list) and plans.keys() == trials.keys(), 'Plan matrix is incomplete')
+    for trial, s in trials.items():
+        scale, policy, workers, repeat = expected[trial]
+        require((int(s['rows']),s['policy'],int(s['workers']),int(s['repeat'])) ==
+                (scale,policy,workers,repeat), f'Trial settings mismatch: {trial}')
+        rows = [r for r in requests if r['trial'] == trial]
+        require(len(rows) == int(s['completed_requests']) == int(s['submitted_requests']) == cfg['requests'],
+                f'Request counters mismatch: {trial}')
+        require({int(r['request_id']) for r in rows} == set(range(cfg['requests'])),
+                f'Request IDs mismatch: {trial}')
+        require(sum(r['exact']=='True' for r in rows) == int(s['exact_requests']),
+                f'Exact counters mismatch: {trial}')
+        start, end = int(s['started_ns']), int(s['ended_ns'])
+        require(start < end, f'Invalid trial duration: {trial}')
         for r in rows:
-            assert abs(float(r['response_ms'])-float(r['queue_ms'])-float(r['service_ms'])) < 1e-6
-        assert len({r['request_id'] for r in rows}) == len(rows)
-        samples = [r for r in resources if r['trial'] == s['trial']]
-        assert len(samples) >= 2 and all(int(r['rss_bytes']) > 0 for r in samples)
-        assert all(int(a['monotonic_ns']) < int(b['monotonic_ns']) for a,b in zip(samples,samples[1:]))
-        elapsed = (int(s['ended_ns'])-int(s['started_ns']))/1e9
-        assert abs(float(s['throughput_rps'])-int(s['exact_requests'])/elapsed) < 1e-6
+            require(r['version'] == str(int(r['request_id']) % cfg['versions']),
+                    f'Version schedule mismatch: {trial}')
+            submitted, started, ended = (int(r[k]) for k in ('submitted_ns','started_ns','ended_ns'))
+            require(start <= submitted <= started <= ended <= end, f'Timestamp order mismatch: {trial}')
+            for field in ('submitted_utc','started_utc','ended_utc'):
+                require(datetime.fromisoformat(r[field]).utcoffset() is not None, 'UTC timestamp lacks timezone')
+            for field, actual in (('queue_ms',(started-submitted)/1e6),
+                                  ('service_ms',(ended-started)/1e6),
+                                  ('response_ms',(ended-submitted)/1e6)):
+                require(abs(float(r[field])-actual) < 1e-6, f'Latency mismatch: {trial} {field}')
+            require(r['exact'] in ('True','False'), 'Invalid exact flag')
+            require(r['exact'] != 'True' or not r['error'], 'Exact request has an error')
+        samples = [r for r in resources if r['trial'] == trial]
+        require(len(samples) >= 2 and all(int(r['rss_bytes']) > 0 for r in samples),
+                f'Missing resource samples: {trial}')
+        require(int(samples[0]['monotonic_ns']) <= start and int(samples[-1]['monotonic_ns']) >= end,
+                f'Resource samples do not bracket trial: {trial}')
+        require(all(int(a['monotonic_ns']) < int(b['monotonic_ns']) and int(a['cpu_ns']) <= int(b['cpu_ns'])
+                    for a,b in zip(samples,samples[1:])), f'Resource clock order mismatch: {trial}')
+        elapsed = (end-start)/1e9
+        require(abs(float(s['elapsed_s'])-elapsed) < 1e-6 and
+                abs(float(s['throughput_rps'])-int(s['exact_requests'])/elapsed) < 1e-6,
+                f'Throughput mismatch: {trial}')
         for metric in ('service','response'):
             vals = [float(r[metric+'_ms']) for r in rows if r['exact']=='True']
             for q in (50,90,99):
-                assert abs(float(s[f'{metric}_p{q}_ms'])-float(np.percentile(vals,q))) < 1e-6
-    operation_path=out/'operations.jsonl.gz'
-    with gzip.open(operation_path,'rt') as stream:
+                recorded = s[f'{metric}_p{q}_ms']
+                require(abs(float(recorded)-float(np.percentile(vals,q))) < 1e-6
+                        if vals else recorded == '', f'Percentile mismatch: {trial}')
+    with gzip.open(out/'operations.jsonl.gz','rt') as stream:
         operations = [json.loads(line) for line in stream]
-    keys = {(r['trial'],int(r['request_id'])) for r in requests}
-    assert operations and all((r['trial'],r['request_id']) in keys and r['exact'] for r in operations)
-    for path, expected in json.loads((out/'HASHES.json').read_text()).items():
-        assert hashlib.sha256((out/path).read_bytes()).hexdigest() == expected, path
+    produced = {key: set() for key in keys}
+    nodes = {scale: {n['id']:n for n in manifest['nodes']} for scale,manifest in captures.items()}
+    for op in operations:
+        key = (op['trial'],op['request_id'])
+        require(key in keys and op['exact'] is True, 'Unknown or non-exact operation')
+        scale = expected[op['trial']][0]
+        require(op['node'] in nodes[scale], 'Unknown operation node')
+        node = nodes[scale][op['node']]
+        retained = set(plans[op['trial']]['retained'])
+        action = op['action']
+        require(action in ('load','replay','memory_reuse'), 'Unknown operation action')
+        require(float(op['elapsed_s']) >= 0 and float(op['verify_s']) >= 0, 'Invalid operation duration')
+        if action == 'memory_reuse':
+            require(op['node'] in produced[key], 'Reuse precedes production')
+        elif action == 'load':
+            require(node['blob'] in retained and op['bytes'] == node['size'], 'Load not supported by retained plan')
+        else:
+            require(node['blob'] not in retained and node['replayable'] and
+                    set(node['deps']) <= produced[key] and op['bytes'] == node['size'],
+                    'Replay lacks its recorded dependencies')
+        produced[key].add(op['node'])
+    for key, request in keys.items():
+        if request['exact'] == 'True':
+            manifest = captures[expected[request['trial']][0]]
+            require(set(manifest['targets'][request['version']]) <= produced[key],
+                    f'Successful request is missing target operations: {key}')
     report = dict(passed=True, requests=len(requests), trials=len(summaries),
                   exact_requests=sum(r['exact']=='True' for r in requests),
                   resource_samples=len(resources), operation_records=len(operations))

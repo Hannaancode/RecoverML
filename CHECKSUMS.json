@@ -126,10 +126,10 @@
   "src/recoverml/operators.py": "089707f5bd20e4e55726e0b79cd1b605f21b28066dc4f700e4db07f4eec08c61",
   "src/recoverml/optimizer.py": "06d321ff4d398b11b7b3c96344152ff6b698c8d363b4bb075386163599c55c74",
   "src/recoverml/oracle_experiment.py": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7",
-  "src/recoverml/performance.py": "7a2bf055d1c04f07c9c22bd41da235ff002bb5dcc7c4e6b289564a065bb6ace0",
+  "src/recoverml/performance.py": "6bcc870542033c5f647a51a073f6425926e6f5185b91b4f433c971479488d359",
   "src/recoverml/policies.py": "563ab23c293b39e98513f2b58c861d23fe25446fed1853443e7790884e84b84b",
   "src/recoverml/workloads.py": "054cb484e101369d59e96d45cc3d24f6ec9f73f2186ede02b9b5f7ab708eca37",
   "tests/test_core.py": "7413566f9edea8362cc6f448b82ab5abc78c96157595e4f54f636c11010a2150",
   "tests/test_optimizer.py": "2be6ed9e0d4b6c637bad40e7d20a942ee73273c226143eb099b673b9ed928c14",
-  "tests/test_performance.py": "40837bf0c98dd3cf1eba8e0ff4395bf6bca9bdb0992ba38fd19485b446e58142"
+  "tests/test_performance.py": "ac1306782d35cf2c093bf34836f09236a0c643ec94cf9b46255bbc52a1a88cf5"
 }
