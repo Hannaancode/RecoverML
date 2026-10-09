@@ -2,7 +2,7 @@
 import os
 import time
 import numpy as np
-from sklearn.datasets import load_breast_cancer, make_classification
+from sklearn.datasets import load_breast_cancer, load_digits, load_wine, make_classification
 from .core import Graph, pack
 from .operators import execute
 
@@ -12,12 +12,15 @@ def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
     values = {}
     tracking_times=[]
     capture_start = time.perf_counter()
-    if config['dataset'] == 'breast_cancer':
-        data = load_breast_cancer()
+    loaders = {'breast_cancer':load_breast_cancer, 'digits':load_digits, 'wine':load_wine}
+    if config['dataset'] in loaders:
+        data = loaders[config['dataset']]()
         base, y = np.asarray(data.data, dtype=np.float64), data.target
-    else:
+    elif config['dataset'] == 'synthetic':
         base, y = make_classification(n_samples=config['rows'], n_features=20,
                                      n_informative=12, n_redundant=4, random_state=seed)
+    else:
+        raise ValueError('Unknown dataset: '+str(config['dataset']))
     base = np.ascontiguousarray(base, dtype=np.float64)
     y = np.ascontiguousarray(y, dtype=np.int64)
     def add(op, deps, params, version, scope, value=None, replayable=True, mandatory=False):

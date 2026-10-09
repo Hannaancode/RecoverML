@@ -48,6 +48,35 @@ class OptimizerTests(unittest.TestCase):
         self.assertEqual(history[0]['strategy'],'direct_target_lower_bound')
         self.assertAlmostEqual(g.estimate(s),history[0]['estimated_cost_s'])
 
+    def test_opaque_ancestry_pruning_preserves_tight_budget_decision(self):
+        g = small_graph(21)
+        # Force the global formulation at a tight budget and compare the
+        # original candidate set with the boundary-aware reduced formulation.
+        budget = int(g.size(g.candidates) * .10)
+        full, full_status, full_history = optimize(g,budget,time_limit_s=5.)
+        pruned, pruned_status, pruned_history = optimize(
+            g,budget,time_limit_s=5.,prune_opaque=True)
+        self.assertEqual(full_status,pruned_status)
+        self.assertEqual(full_status,'proven_infeasible')
+        self.assertLessEqual(pruned_history[0]['physical_candidates'],
+                             full_history[0]['physical_candidates'])
+
+    def test_v3_pruning_matches_v2_on_public_opaque_workloads(self):
+        from recoverml.workloads import build_history
+        for dataset,model in (('digits','logistic'),('wine','forest')):
+            g,_ = build_history(dict(dataset=dataset,rows=1,versions=3,
+                model=model,change='parameters',boundary='opaque',trees=12,depth=5),100)
+            full = g.size(g.candidates)
+            for fraction in (.1,.2,.4,1.0):
+                v2 = select(g,'recoverability_v2',int(full*fraction))
+                v3 = select(g,'recoverability_v3',int(full*fraction))
+                with self.subTest(dataset=dataset,model=model,budget=fraction):
+                    self.assertEqual(v3.status,v2.status)
+                    self.assertEqual(g.coverage(v3.retained)[0],g.coverage(v2.retained)[0])
+                    if v3.status == 'ok':
+                        self.assertAlmostEqual(g.estimate(v3.retained),
+                                               g.estimate(v2.retained),places=9)
+
     def test_solver_failure_uses_validated_heuristic(self):
         g = small_graph(9)
         with patch('recoverml.optimizer.optimize',return_value=(set(g.roots),'solver_no_incumbent',[])):

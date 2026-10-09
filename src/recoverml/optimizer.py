@@ -15,7 +15,7 @@ def read_cost(node):
     return READ_LATENCY_S + node.size / READ_BANDWIDTH
 
 
-def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None):
+def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None, prune_opaque=False):
     sizes = g.sizes() if sizes is None else sizes
     metadata = g.metadata_bytes() if metadata is None else metadata
     targets = g.roots | {g.nodes[t].blob for ts in g.targets.values() for t in ts}
@@ -38,7 +38,27 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None):
     from scipy.optimize import milp, Bounds, LinearConstraint
     from scipy.sparse import coo_matrix
 
-    blobs = sorted(g.candidates)
+    # Non replayable nodes can only be loaded. Their parents never need to be
+    # produced solely for that load, while parents used elsewhere remain reachable.
+    ancestry = {}
+    for version, ts in g.targets.items():
+        ancestors, visiting = set(), set()
+        def walk(nid):
+            if nid in visiting:
+                raise ValueError('Cyclic graph')
+            if nid in ancestors:
+                return
+            visiting.add(nid)
+            if not prune_opaque or g.nodes[nid].replayable:
+                for parent in g.nodes[nid].deps:
+                    walk(parent)
+            visiting.remove(nid)
+            ancestors.add(nid)
+        for target in ts:
+            walk(target)
+        ancestry[version] = ancestors
+    eligible = g.roots | {g.nodes[n].blob for ancestors in ancestry.values() for n in ancestors}
+    blobs = sorted(eligible if prune_opaque else g.candidates)
     index = {b:i for i,b in enumerate(blobs)}
     c = [0.0] * len(blobs)
     lo = [1.0 if b in g.roots else 0.0 for b in blobs]
@@ -54,19 +74,7 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None):
     constraint({index[b]:sizes[b]/1024 for b in blobs}, high=(budget-metadata)/1024)
     load_vars = {}
     for version, ts in g.targets.items():
-        ancestors = set()
-        visiting = set()
-        def walk(nid):
-            if nid in visiting:
-                raise ValueError('Cyclic graph')
-            if nid in ancestors:
-                return
-            visiting.add(nid)
-            for parent in g.nodes[nid].deps:
-                walk(parent)
-            visiting.remove(nid); ancestors.add(nid)
-        for target in ts:
-            walk(target)
+        ancestors = ancestry[version]
         pairs = {}
         for nid in sorted(ancestors):
             n = g.nodes[nid]
@@ -85,6 +93,8 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None):
             # retained node is prohibited in this optimization model too.
             constraint({r:1.,index[n.blob]:1.}, high=1.)
         for nid,(l,r) in pairs.items():
+            if prune_opaque and not g.nodes[nid].replayable:
+                continue
             for parent in g.nodes[nid].deps:
                 pl,pr = pairs[parent]
                 constraint({r:1.,pl:-1.,pr:-1.}, high=0.)
@@ -93,9 +103,10 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None):
     result = milp(np.asarray(c), integrality=np.ones(len(c)),
         bounds=Bounds(lo,hi), constraints=LinearConstraint(matrix,lows,highs),
         options={'time_limit':time_limit_s,'mip_rel_gap':0.0})
-    diag = dict(strategy='bounded_global_milp', solver_status=int(result.status),
+    diag = dict(strategy='bounded_global_milp_pruned' if prune_opaque else 'bounded_global_milp', solver_status=int(result.status),
         solver_message=result.message, solver_s=time.perf_counter()-start,
         variables=len(c), constraints=len(lows), time_limit_s=time_limit_s,
+        opaque_pruning=prune_opaque, physical_candidates=len(blobs),
         estimated_optimal=result.status==0,
         mip_gap=float(result.mip_gap) if getattr(result,'mip_gap',None) is not None else None)
     if result.x is None:

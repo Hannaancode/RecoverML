@@ -38,9 +38,10 @@ def select(g: Graph, policy: str, budget: int) -> Selection:
         # Strong trivial baseline: protect requested outputs directly, not intermediates.
         s = g.roots | {g.nodes[t].blob for ts in g.targets.values() for t in ts}
         return result(s)
-    if policy == 'recoverability_v2':
+    if policy in ('recoverability_v2','recoverability_v3'):
         from .optimizer import optimize
-        s,status,history = optimize(g,budget,sizes=sizes,metadata=metadata)
+        s,status,history = optimize(g,budget,sizes=sizes,metadata=metadata,
+                                    prune_opaque=policy=='recoverability_v3')
         if status in ('solver_no_incumbent','solver_incumbent_rejected'):
             fallback = select(g,'recoverability',budget)
             history.append(dict(strategy='heuristic_fallback',status=fallback.status,

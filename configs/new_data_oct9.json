@@ -1,0 +1,12 @@
+{
+  "repeats": 1,
+  "versions": 5,
+  "budget_fractions": [0.25, 0.5, 1.0],
+  "policies": ["full_snapshot", "full_replay", "target_snapshots", "recoverability_v2"],
+  "cases": [
+    {"dataset":"digits", "rows":1797, "model":"logistic", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"digits", "rows":1797, "model":"forest", "change":"parameters", "boundary":"deterministic", "trees":24, "depth":8},
+    {"dataset":"wine", "rows":178, "model":"logistic", "change":"parameters", "boundary":"deterministic"},
+    {"dataset":"wine", "rows":178, "model":"forest", "change":"parameters", "boundary":"deterministic", "trees":24, "depth":8}
+  ]
+}

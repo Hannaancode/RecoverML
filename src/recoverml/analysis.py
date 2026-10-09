@@ -9,9 +9,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from .benchmark import write_csv
 
-POLICIES=['full_snapshot','full_replay','cost_cache','pinned_cost','target_snapshots','recoverability','recoverability_v2']
-LABELS=['Full snapshots','Full replay','Cost cache','Pinned boundaries','Target snapshots','Planner v1','Planner v2']
-COLORS=['#737373','#ba4a00','#a569bd','#2471a3','#17a589','#8299b5','#172e57']
+POLICIES=['full_snapshot','full_replay','cost_cache','pinned_cost','target_snapshots','recoverability','recoverability_v2','recoverability_v3']
+LABELS=['Full snapshots','Full replay','Cost cache','Pinned boundaries','Target snapshots','Planner v1','Planner v2','Planner v3']
+COLORS=['#737373','#ba4a00','#a569bd','#2471a3','#17a589','#8299b5','#496a9a','#172e57']
 
 
 def boolean(v):
@@ -59,26 +59,40 @@ def analyze(directory: Path):
     example=[r for r in rows if r['dataset']=='synthetic' and int(r['rows'])==10000
              and r['boundary']=='opaque' and r['change']=='parameters' and not r['protect_intermediate']
              and int(r.get('branches',1))==1]
+    example_budget=.25
+    example_title='10,000-row opaque-feature history, 5 versions, 5 independent repeats'
+    if not example:
+        # Public-data transfer studies do not contain the historical synthetic
+        # case. Use all declared opaque histories instead of producing a blank plot.
+        example=[r for r in rows if r['boundary']=='opaque'
+                 and r['change']=='parameters' and not r['protect_intermediate']
+                 and int(r.get('branches',1))==1]
+        example_budget=.4 if .4 in budgets else budgets[len(budgets)//2]
+        histories=len({r['case_id'] for r in example})
+        datasets=', '.join(sorted({r['dataset'].title() for r in example}))
+        example_title=f'{datasets} opaque-feature study, {histories} captured histories'
     fig,axs=plt.subplots(1,2,figsize=(12,5),constrained_layout=True)
     xs=np.arange(len(policies))
-    for j,metric in enumerate(('retained_bytes','restore_s')):
-        vals=[];errs=[];annotations=[]
-        for p in policies:
-            budget=1.0 if p=='full_snapshot' else .25
-            records=[r for r in example if r['policy']==p and r['budget_fraction']==budget]
-            good=[r for r in records if r['exact']]
-            annotations.append(f'{len(good)}/{len(records)} exact')
-            raw=[r[metric] for r in good]
-            scale=1e-6 if metric=='retained_bytes' else 1000
-            vals.append(np.median(raw)*scale if raw else np.nan)
-            errs.append(np.std(raw)*scale if raw else 0.0)
-        ax=axs[j];ax.bar(xs,vals,color=colors,yerr=errs,capsize=3)
-        ax.set(xticks=xs,xticklabels=labels,ylabel='Retained MB' if j==0 else 'Successful restore latency (ms)')
+    panel_values=[]
+    annotations=[]
+    retained=[]
+    for p in policies:
+        budget=1.0 if p=='full_snapshot' else example_budget
+        records=[r for r in example if r['policy']==p and r['budget_fraction']==budget]
+        good=[r for r in records if r['exact']]
+        panel_values.append(100*len(good)/len(records) if records else 0.)
+        annotations.append(f'{len(good)}/{len(records)} exact')
+        retained.append(100*np.median([r['retained_bytes']/r['full_bytes'] for r in good]) if good else 0.)
+    for j,vals in enumerate((panel_values,retained)):
+        ax=axs[j];ax.bar(xs,vals,color=colors)
+        ax.set(xticks=xs,xticklabels=labels,
+               ylabel='Exactly restored requests (%)' if j==0 else 'Median retained fraction (%)')
+        ax.set_ylim(0,108)
         ax.tick_params(axis='x',rotation=35,labelsize=8)
         for x,y,annotation in zip(xs,vals,annotations):
-            ax.annotate(annotation,(x,0 if np.isnan(y) else y),xytext=(0,5),textcoords='offset points',ha='center',fontsize=8)
+            ax.annotate(annotation,(x,y),xytext=(0,5),textcoords='offset points',ha='center',fontsize=8)
         ax.grid(axis='y',alpha=.2)
-    fig.suptitle('10,000-row opaque-feature history, 5 versions, 5 independent repeats\nFull snapshots: 100% budget; other policies: 25%. Bars: medians; error bars: standard deviation.')
+    fig.suptitle(f'{example_title}\nFull snapshots use 100% budget and other policies use {example_budget:.0%}')
     fig.savefig(directory/'opaque_workload.png',dpi=180);plt.close(fig)
     fig,ax=plt.subplots(figsize=(10,4.6),constrained_layout=True)
     values=[]
@@ -91,7 +105,9 @@ def analyze(directory: Path):
     for i,v in enumerate(values):ax.text(i,v,f'{v:.1f}',ha='center',va='bottom')
     fig.savefig(directory/'planning_overhead.png',dpi=180);plt.close(fig)
     unexpected=[r for r in rows if r['status']=='restore_failed' and 'non-replayable' not in r['error']]
-    proposed=[r for r in rows if r['policy']==('recoverability_v2' if 'recoverability_v2' in policies else 'recoverability')]
+    proposed_name=('recoverability_v3' if 'recoverability_v3' in policies else
+                   'recoverability_v2' if 'recoverability_v2' in policies else 'recoverability')
+    proposed=[r for r in rows if r['policy']==proposed_name]
     proposed_admitted=[r for r in proposed if r['within_budget']]
     report=dict(total_requests=len(rows),status_counts=dict(Counter(r['status'] for r in rows)),
         unexpected_failures=len(unexpected),proposed_admitted=len(proposed_admitted),
