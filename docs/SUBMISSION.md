@@ -8,13 +8,15 @@ Read docs/RUBRIC_AUDIT.md for the four rubric categories and the Git history req
 
 ## Instructor review
 
-Start with `README.md` and `docs/reports/ITERATION2_REPORT.md`. Install with Python 3.12
+Start with `README.md` and `docs/reserach_progress.txt`. Install with Python 3.12
 and `python -m pip install -e .`, then run `make test` and `make smoke`.
 For the full new one-command rubric experiment run `bash run_benchmarks.sh` on Linux.
 The supplied fresh results are in `results/milestone2` and their analysis is in `docs/reports/PERFORMANCE_REPORT.md`.
 Run `python -m recoverml.audit results/runs/new_smoke` to check the smoke logs.
 For the full repeated experiment, use `make iteration2`; it can take several
 minutes on a single CPU thread and writes a new result directory.
+Use `make new-data-repeated` for the Digits and Wine experiment and use
+`make planner-ablation` for the paired Planner V2 and Planner V3 timing study.
 
 Published raw measurements are in `results/archive/preliminary` and
 `results/archive/iteration2`. The original experiment is preserved rather than

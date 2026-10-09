@@ -1,0 +1,194 @@
+RESEARCH PROGRESS — RecoverML
+Started 9 October 2026 at 18:07 Qatar time
+This is a research notebook and records successful and unsuccessful attempts
+
+CURRENT IDEA AND SETUP
+RecoverML captures an offline dependency graph for historical ML pipelines
+It shares identical serialized artifacts and chooses retained files under a byte budget
+It restores requested models and prediction arrays by loading or replaying supported steps
+Loaded and rebuilt artifacts must match their original canonical SHA-256 identities
+Original source inputs are mandatory and metadata counts toward the budget
+Planning starts from a complete capture archive and restoration cannot read that archive
+The prototype does not yet provide online admission or crash safe store replacement
+Supported models are scikit-learn logistic regression and random forests
+Python 3.12 and pinned numpy 2.3.5 scipy 1.17.0 sklearn 1.8.0 matplotlib 3.10.8
+The environment and operator code identities are checked during restoration
+Capture and planning and restore measurements have separately described scopes
+The page cache is warm and each request gets fresh restore state
+
+DATA USED BEFORE TODAY
+Seeded synthetic binary classification with 2000 or 10000 records and 20 features
+Wisconsin diagnostic breast cancer with its native 569 records
+Five historical versions with parameter edits or contiguous one percent data edits
+Repeatable steps and a simulated external enrichment response with unavailable random state
+The opaque proxy is not an assertion that seeded sklearn training cannot be repeated
+Four branch cases share preprocessing and some cases also request an intermediate matrix
+
+ACHIEVEMENTS BEFORE TODAY
+Preliminary experiment: 6600 requests across 55 histories and six policies
+Original planner: 775 exact restorations of 775 admitted requests
+Iteration 2: 11200 requests across 80 histories and seven policies
+Both planners complete 235 of 320 history and budget selections
+Version 2: 1175 exact restorations of 1175 admitted requests and 425 blocked requests
+Direct target snapshots complete 175 of 320 selections
+Version 2 has a 19.3 times median paired planning speedup over version 1
+Planning plus five restores has a 3.4 times median paired speedup
+Restore time alone is essentially unchanged between the two planners
+A selected opaque workload retains about 8.99 percent of full artifact bytes
+Direct target snapshots achieve the same saving so this is not a unique benefit
+Worker experiment: 5400 exact requests across 54 trials with three policies
+Two data sizes and one or two or four workers and three repeats per setting
+Real timestamps and CPU and memory samples and P50 P90 P99 are published
+More workers slow small restore tasks and larger full replay tasks have limited scaling
+31 tests passed on 8 October and the strengthened audit checked full target traces
+All code and evidence are public at https://github.com/Hannaancode/RecoverML
+Baseline repository commit: 9a653bd495d435ee8f0e9fd8521317b8bb070b47
+
+HOW GOOD IS THE CURRENT EVIDENCE
+The prototype is working and audited within its supported operators and recorded environment
+Coverage improvements over direct targets appear in the declared storage matrix
+Planning improvements are against our own older implementation
+Simple snapshots and caches remain competitive where they fit
+There are no measured comparisons against installed published systems
+Small exhaustive fixtures support optimizer correctness but not arbitrary graph optimality
+An admitted request success rate is different from success on every requested budget
+The current evidence supports a course prototype and preliminary research evaluation
+It does not yet establish a strong general research novelty claim
+
+LITERATURE REVIEW — primary sources consulted 9 October
+HELIX: Holistic Optimization for Accelerating Iterative Machine Learning
+https://www.vldb.org/pvldb/vol12/p446-xin.pdf
+HELIX already models workflows and selects reuse or recomputation and materialization
+It separates an efficient reuse problem from a hard materialization problem
+Therefore graph reuse and budgeted checkpoint selection are not new by themselves
+
+LIMA: Fine-grained Lineage Tracing and Reuse in Machine Learning Systems
+https://phaniarnab.github.io/assets/papers/LIMA_sigmod2021.pdf
+LIMA already targets fine grained lineage and reuse in ML systems
+Therefore lineage tracking and caching cannot be presented as our novel contribution
+
+Kishu: Time-Traveling for Computational Notebooks
+https://arxiv.org/abs/2406.13856
+https://www.vldb.org/pvldb/vol18/p970-li.pdf
+Kishu provides incremental checkpoint and checkout for notebook states
+The paper abstract and primary author repository were retrieved
+The VLDB PDF endpoint failed during this session so detailed claims require another access path
+Therefore restoring historical computation states is established related work
+
+POSSIBLE NARROWER RESEARCH QUESTION
+Can explicit non replayable boundaries and complete protected target recovery help choose
+smaller validated search problems without losing feasible recovery plans
+The contribution must be demonstrated against strong baselines and varied new workloads
+Boundary based pruning is an engineering hypothesis and novelty is not established
+The next implementation will compare the original full model against a reduced model
+under identical captures and budgets and keep exact correctness checks
+
+PLAN FOR THIS SESSION
+Add native public Digits and Wine data that were not used in earlier experiments
+Test multiclass replay and avoid replacing these datasets with generated lookalikes
+Measure whether stopping optimizer ancestry at non replayable nodes reduces solver work
+Keep all mandatory inputs and preserve the load first execution contract
+Compare both formulations on the same capture and validate against exhaustive tiny graphs
+Record raw trials and failed budgets and report both gains and regressions
+Stop or checkpoint the work toward 18:30 Qatar time
+
+NEW DATA EXPERIMENT — planned 9 October
+The Digits dataset has 1797 hand written digit images represented as numerical pixels
+The Wine dataset has 178 samples and 13 chemical measurements and three classes
+Neither dataset was used in the earlier published RecoverML storage matrix
+Each dataset is tested with logistic regression and a 24 tree random forest
+Each case has five parameter versions and one captured history
+Budgets are 25 percent and 50 percent and 100 percent and four policies are compared
+The run is kept under results/runs/new_data_oct9 and is separate from milestone2 evidence
+The main question is whether exact restore and coverage behavior transfers beyond binary synthetic and breast cancer data
+
+NEW DATA EXPERIMENT — completed 9 October
+The run used four new cases and one history per case and five versions per history
+It produced 240 request rows and 48 policy and budget selections and 1170 trace events
+It compared full snapshots and full replay and direct target snapshots and RecoverML version 2
+There were no unexpected restoration failures and every admitted request restored exactly
+RecoverML version 2 admitted 50 of 60 requests and restored all 50 exactly
+Full replay also admitted 50 of 60 and restored all 50 exactly
+Direct targets admitted 25 of 60 because the selected target files exceeded smaller budgets
+Full snapshots admitted 20 of 60 because the complete store exceeded smaller budgets
+The result is a transfer check and not a claim of superiority because this run has one history per case
+The new data therefore supports correctness across more dataset shapes while the storage comparison remains preliminary
+After adding the boundary-aware optimizer regression check the full suite has 32 passing tests
+The new check confirms the reduced formulation does not change a tight-budget infeasibility decision on the fixture graph
+On opaque synthetic and new-data shaped histories the reduced formulation used fewer MILP physical candidates at a ten percent budget in the direct experiment
+The reduction was 19 to 18 physical candidates and 79 to 60 variables on the tested opaque history
+At larger budgets the guarded direct-target shortcut bypassed MILP so no solver reduction was claimed
+
+NEW DATA INTERPRETATION
+Digits contains many more rows and pixel features than Wine and creates larger serialized artifacts
+Wine is small so mandatory inputs and metadata occupy a larger share of its budget
+The same admission pattern for version 2 and full replay suggests the new deterministic pipelines can be recovered
+The lack of unexpected failures is useful evidence but the sample is too small for a statistical claim
+The next run should use repeated seeds and include opaque enrichment and data edits on these datasets
+
+LITERATURE UPDATE
+The primary HELIX paper says iterative ML can be represented as a DAG and that reuse planning and materialization are different optimization problems
+It reports that materialization is NP hard and uses heuristics and selective caching
+This directly overlaps with our graph and cost based retention design
+The LIMA paper studies fine grained lineage and reuse in ML systems and includes exact and approximate reuse and cache eviction
+This overlaps with our content addressed artifacts and dependency recording
+Kishu provides incremental checkpoint and checkout for time travel across notebook states
+This overlaps with our time travel goal but Kishu focuses on notebook state and our prototype focuses on explicit ML artifacts and replay contracts
+These papers mean our current implementation is best described as an auditable course prototype and engineering combination
+The narrower possible contribution is a tested policy for mixed replayable and non replayable ML boundaries with all protected targets and exact artifact certificates
+That claim still needs a stronger baseline study and varied workloads before it can be called novel
+
+Sources
+HELIX PVLDB 2018 https://www.vldb.org/pvldb/vol12/p446-xin.pdf
+LIMA SIGMOD 2021 https://phaniarnab.github.io/assets/papers/LIMA_sigmod2021.pdf
+Kishu PVLDB 2025 https://www.vldb.org/pvldb/vol18/p970-li.pdf
+Kishu arXiv https://arxiv.org/abs/2406.13856
+Digits documentation https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
+Wine documentation https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html
+
+CURRENT RESEARCH DECISION
+Do not claim that RecoverML invented lineage or checkpoint optimization
+Continue with the narrower mixed boundary and exact recovery question
+Use the new data run as a genuine generalization check and add repeated seeds before drawing performance conclusions
+
+EXPERIMENT 2 PLAN — 9 October
+The first new data experiment used only one history per case and therefore cannot support a stable timing claim
+The repeated experiment adds three seeds and both deterministic and opaque boundaries
+It tests six budgets from ten percent to full storage and keeps full replay and target and full snapshot baselines
+Planner version 3 applies safe ancestry pruning because the parents of a retained non replayable artifact are not needed only to load that artifact
+The executor remains load first and exact hashes and full target coverage are checked after every selection
+Version 2 and version 3 will be run on the same captured histories so their decisions and planning cost can be compared directly
+The experiment has 24 independent captured histories and 3600 declared recovery requests
+No improvement will be claimed unless the complete matrix and trace audit pass and all admitted requests restore exactly
+
+EXPERIMENT 2 RESULT — completed 9 October
+The complete run contains 24 captured histories and 720 policy and budget selections and 3600 recovery requests
+It records 10030 raw capture and restore trace events
+The audit confirms that every declared request is present once and every trace count agrees with its request row
+Planner version 3 admitted 535 requests and restored all 535 exactly and it blocked 185 requests before execution because their budgets were not feasible
+There were no unexpected version 3 restoration failures
+Across all data and boundaries at the 40 percent budget version 3 restored 120 of 120 requests
+At the same budget target snapshots restored 45 of 120 and full replay restored 60 of 120 and full snapshots restored 0 of 120
+On only the 12 opaque histories at the 40 percent budget version 3 restored 60 of 60 and target snapshots restored 30 of 60
+Full replay restored 0 of 60 opaque requests because the external response was deliberately unavailable and this is an expected failure
+Version 2 and version 3 produced the same status and the same retained artifacts for all 144 paired selections
+Therefore version 3 improves the formulation and planning work while preserving version 2 recovery coverage
+
+PLANNER VERSION 3 ABLATION — completed 9 October
+The ablation selected the 30 opaque cases that invoked the global solver and repeated every version 2 and version 3 pair 30 times
+It contains 900 raw paired timing trials across nine opaque captured histories
+The execution order alternated so one planner was not always measured first
+All 900 pairs produced the same status and exactly the same retained artifacts
+Version 3 reduced the solver formulation from 129 variables to 98 which is a 24.0 percent reduction
+The median raw planning time was 3.500 milliseconds for version 2 and 2.865 milliseconds for version 3
+The median history level speedup was 1.18 times and the bootstrap 95 percent interval was 1.07 to 1.20 times
+Version 3 was faster on all nine history level comparisons
+The one sided paired Wilcoxon result was p equals 0.001953125 at the history level
+This is a statistically clear local machine result and it should still be repeated on another machine before making a broad systems claim
+
+CURRENT RESULT AFTER EXPERIMENT 2
+The strongest new result is not a new recovery coverage result because version 2 and version 3 have equal coverage
+The improvement is a smaller boundary aware global optimization model with identical checked decisions and lower measured planning time
+The new public datasets also strengthen the evidence because the exact recovery behavior now covers binary and multiclass data and deterministic and unavailable external steps
+The current evidence supports a concrete engineering contribution for mixed replayable and non replayable pipeline graphs
+It does not prove that the full research direction is unique across all lineage and checkpoint systems

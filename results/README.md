@@ -9,6 +9,8 @@ The separate reports and source and configs remain available for future work
 | Latest throughput and latency experiment | [milestone2/performance](milestone2/performance) |
 | Storage smoke check | [milestone2/storage](milestone2/storage) |
 | Tests and runner output from that experiment | [milestone2](milestone2) |
+| Repeated Digits and Wine study | [milestone2/new_data_oct9](milestone2/new_data_oct9) |
+| Planner V3 paired ablation | [milestone2/planner_ablation_oct9](milestone2/planner_ablation_oct9) |
 | Latest 31 test log and stronger audit check | [validation/2026-10-08](validation/2026-10-08) |
 | Original 6600 request storage experiment | [archive/preliminary](archive/preliminary) |
 | Expanded 11200 request storage experiment | [archive/iteration2](archive/iteration2) |
@@ -40,6 +42,16 @@ The iteration2 folder contains the paired planner comparison and storage coverag
 - [Storage and restore time plot](archive/iteration2/opaque_workload.png)
 - [Iteration 2 report](../docs/reports/ITERATION2_REPORT.md)
 - [Original report](../docs/reports/PRELIMINARY_REPORT.md)
+
+## New data study
+
+Run `make new-data-repeated` to evaluate the real Digits and Wine datasets which were not used in the earlier matrix
+The reviewable output is published in [milestone2/new_data_oct9](milestone2/new_data_oct9)
+The run uses logistic regression and random forests with deterministic and opaque boundaries and three independent seeds
+It contains 24 histories and 3600 requests and 10030 trace events and its complete matrix audit passes
+Planner V3 restored all 535 admitted requests exactly and at a 40 percent budget it restored all 120 requests while target snapshots restored 45 and full replay restored 60
+Run `make planner-ablation` after the repeated study to reproduce the paired planner timing evidence
+The ablation records 900 raw paired trials and shows that version 3 used 98 variables instead of 129 and made the same decision in every trial
 
 ## New runs
 

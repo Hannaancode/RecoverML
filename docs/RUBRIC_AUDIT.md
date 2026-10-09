@@ -1,14 +1,14 @@
-# Milestone 2 rubric evidence — updated 8 October 2026
+# Milestone 2 rubric evidence — updated 9 October 2026
 
 We have all four rubric screenshots and this table links each requirement to evidence
 This is a submission checklist and the instructor decides the grade
 
 | Rubric | Weight | Evidence |
 |---|---:|---|
-| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 31 passing tests in results/validation/2026-10-08/tests.txt |
-| Benchmark harness | 25% | bash run_benchmarks.sh runs tests and storage checks and the worker experiment with no manual policy switching and configs/performance.json varies workers and data sizes |
-| Trace data authenticity | 25% | requests.csv has raw UTC and monotonic times and exact outcomes and summary.csv has submitted and completed counters and measured throughput and P50 P90 P99 and resources.csv has process CPU and resident memory samples |
-| Preliminary plots and analysis | 15% | throughput_vs_concurrency.png and latency_cdf.png compare version 2 with full replay and direct target snapshots and docs/reports/PERFORMANCE_REPORT.md explains dips and queue tails and the measured outlier |
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 33 passing tests in results/validation/2026-10-09/tests.txt |
+| Benchmark harness | 25% | bash run_benchmarks.sh runs the main rubric matrix and make new-data-repeated runs 24 public-data histories with six budgets and five policies and no manual policy switching |
+| Trace data authenticity | 25% | The main performance files include timestamps and latency percentiles and CPU and memory data and the new study adds 3600 request rows and 10030 audited trace events |
+| Preliminary plots and analysis | 15% | The throughput and latency plots compare baselines and the new success and opaque coverage plots compare five policies and the V3 ablation plot shows paired planner timing |
 
 All new experiment files are in results/milestone2
 The performance audit passed for 5400 requests and 54 trials and 2129 resource samples and 39600 operation records
@@ -17,7 +17,10 @@ The separate storage smoke audit checked 140 requests and 28 policy selections
 The earlier large storage studies are retained in results/archive/preliminary and results/archive/iteration2
 The 8 October changes add complete target operation checks and protect existing result folders
 Today's stronger audit passed on the original 5400 request run without changing its measurements
-See docs/history/PROGRESS_OCT8.md and results/validation/2026-10-08 for today's validation
+See docs/history/PROGRESS_OCT8.md and results/validation/2026-10-08 for the earlier validation
+The 9 October public-data audit covers 3600 requests and 720 selections across 24 histories
+Planner V3 restored all 535 admitted requests and its 900 trial ablation preserved every V2 decision
+The current research record is in docs/reserach_progress.txt and the latest test log is in results/validation/2026-10-09
 
 ## Review commands
 
@@ -27,6 +30,7 @@ Install the pinned Python 3.12 package with python -m pip install -e . and then 
 bash run_benchmarks.sh
 python -m recoverml.performance --audit-only --out results/milestone2/performance
 python -m recoverml.audit results/milestone2/storage
+python -m recoverml.audit results/milestone2/new_data_oct9
 ```
 
 Each fresh run uses a new directory and records its own machine and environment and source hashes
@@ -58,8 +62,8 @@ The repository tests and traces help review the code and the student should unde
 ## Useful next commits
 
 1. Repeat the same experiment on the submission machine and compare the results
-2. Add a larger opaque workload and publish exact coverage alongside latency
-3. Profile the environment check and file reads before changing concurrency code
-4. Add a demonstrated improvement and rerun the matching baseline
+2. Repeat Planner V3 on another machine and compare the paired timings
+3. Add larger public-data graphs and more non replayable boundaries
+4. Profile the environment check and file reads before changing concurrency code
 
 Use real work and real dates and keep the raw measurements even when a baseline is faster

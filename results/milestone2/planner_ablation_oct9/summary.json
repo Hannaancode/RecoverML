@@ -1,0 +1,22 @@
+{
+  "source": "results/runs/new_data_repeated_oct9",
+  "timing_trials": 900,
+  "trials_per_selection": 30,
+  "opaque_solver_selections": 30,
+  "opaque_histories": 9,
+  "identical_decisions": 900,
+  "v2_median_planning_ms": 3.4998060000361875,
+  "v3_median_planning_ms": 2.8649620001033327,
+  "median_history_speedup": 1.1775608551735348,
+  "median_history_speedup_bootstrap_95pct": [
+    1.0706534106868424,
+    1.204240252770647
+  ],
+  "v3_faster_histories": 9,
+  "wilcoxon_history_level_one_sided_p": 0.001953125,
+  "v2_variables": 129.0,
+  "v3_variables": 98.0,
+  "variable_reduction_fraction": 0.24031007751937986,
+  "v2_physical_candidates": 29.0,
+  "v3_physical_candidates": 28.0
+}
