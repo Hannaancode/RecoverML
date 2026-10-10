@@ -1,0 +1,12 @@
+{
+  "dataset": "iris",
+  "model": "forest",
+  "rows": 150,
+  "versions": 4,
+  "trees": 32,
+  "model_depth": 8,
+  "frontier_depths": [0, 8, 32, 64, 128],
+  "repeats": 3,
+  "timing_trials": 15,
+  "budget_positions": [0.5, 0.75]
+}
