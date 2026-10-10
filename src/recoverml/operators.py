@@ -11,6 +11,8 @@ def execute(op, values, p):
         return np.ascontiguousarray(np.sign(values[0]) * np.log1p(np.abs(values[0])))
     if op == 'concat':
         return np.ascontiguousarray(np.concatenate(values, axis=0))
+    if op == 'affine_features':
+        return np.ascontiguousarray(values[0] * p['scale'] + p['offset'])
     if op == 'split':
         train, test = train_test_split(np.arange(p['rows']), test_size=0.25,
                                        random_state=p['seed'])

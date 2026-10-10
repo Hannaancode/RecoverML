@@ -66,8 +66,12 @@ def restore_request(graph, store, trial, index, version, submitted_ns, submitted
     restorer = None
     error = ''
     try:
-        restorer = DiskRestorer(graph, store)
-        restorer.version(version)
+        # threadpoolctl limits are thread-local for OpenMP on some runtimes.
+        # Reapply the recorded one-thread benchmark contract inside each worker
+        # before environment validation and replay.
+        with threadpool_limits(limits=1):
+            restorer = DiskRestorer(graph, store)
+            restorer.version(version)
         exact = True
     except Exception as exc:
         exact, error = False, f'{type(exc).__name__}: {exc}'

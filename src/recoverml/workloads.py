@@ -2,7 +2,7 @@
 import os
 import time
 import numpy as np
-from sklearn.datasets import load_breast_cancer, load_digits, load_wine, make_classification
+from sklearn.datasets import load_breast_cancer, load_digits, load_iris, load_wine, make_classification
 from .core import Graph, pack
 from .operators import execute
 
@@ -12,7 +12,8 @@ def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
     values = {}
     tracking_times=[]
     capture_start = time.perf_counter()
-    loaders = {'breast_cancer':load_breast_cancer, 'digits':load_digits, 'wine':load_wine}
+    loaders = {'breast_cancer':load_breast_cancer, 'digits':load_digits,
+               'iris':load_iris, 'wine':load_wine}
     if config['dataset'] in loaders:
         data = loaders[config['dataset']]()
         base, y = np.asarray(data.data, dtype=np.float64), data.target
@@ -51,6 +52,14 @@ def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
                        value=raw, replayable=False, mandatory=True)
             blocks.append(add('clean_block', [root], {}, v, 'row-local'))
         x = add('concat', blocks, {}, v, 'global-assembly')
+        depth = config.get('pre_boundary_depth',0)
+        if not isinstance(depth,int) or depth < 0:
+            raise ValueError('pre_boundary_depth must be a nonnegative integer')
+        for layer in range(depth):
+            x = add('affine_features',[x],
+                    {'scale':1.0 + (layer+1)*1e-5,
+                     'offset':(layer+1)*1e-6},
+                    v,'row-local')
         if config['boundary'] == 'opaque':
             # Emulates an unavailable external enrichment response, not an ordinary
             # random-seeded sklearn operator. Entropy is intentionally NOT retained.

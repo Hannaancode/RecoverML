@@ -15,7 +15,8 @@ def read_cost(node):
     return READ_LATENCY_S + node.size / READ_BANDWIDTH
 
 
-def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None, prune_opaque=False):
+def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None,
+             prune_opaque=False, compact=False):
     sizes = g.sizes() if sizes is None else sizes
     metadata = g.metadata_bytes() if metadata is None else metadata
     targets = g.roots | {g.nodes[t].blob for ts in g.targets.values() for t in ts}
@@ -59,10 +60,14 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None, prune_op
         ancestry[version] = ancestors
     eligible = g.roots | {g.nodes[n].blob for ancestors in ancestry.values() for n in ancestors}
     blobs = sorted(eligible if prune_opaque else g.candidates)
-    index = {b:i for i,b in enumerate(blobs)}
-    c = [0.0] * len(blobs)
-    lo = [1.0 if b in g.roots else 0.0 for b in blobs]
-    hi = [1.0] * len(blobs)
+    # Roots are mandatory and therefore do not need binary storage variables in
+    # the compact formulation. Their exact byte cost is moved to the right hand
+    # side of the budget constraint.
+    physical = [b for b in blobs if not compact or b not in g.roots]
+    index = {b:i for i,b in enumerate(physical)}
+    c = [0.0] * len(physical)
+    lo = [1.0 if b in g.roots else 0.0 for b in physical]
+    hi = [1.0] * len(physical)
     columns, rows, coefficients, lows, highs = [], [], [], [], []
     def constraint(terms, low=-np.inf, high=np.inf):
         row = len(lows)
@@ -71,8 +76,11 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None, prune_op
         lows.append(low); highs.append(high)
     # KiB coefficients keep the storage row reasonably scaled. Actual integer
     # bytes, coverage and estimated execution are checked after optimization.
-    constraint({index[b]:sizes[b]/1024 for b in blobs}, high=(budget-metadata)/1024)
+    fixed_bytes = sum(sizes[b] for b in g.roots) if compact else 0
+    constraint({index[b]:sizes[b]/1024 for b in physical},
+               high=(budget-metadata-fixed_bytes)/1024)
     load_vars = {}
+    replay_variable_count = 0
     for version, ts in g.targets.items():
         ancestors = ancestry[version]
         pairs = {}
@@ -80,33 +88,57 @@ def optimize(g, budget, time_limit_s=0.5, *, sizes=None, metadata=None, prune_op
             n = g.nodes[nid]
             if not math.isfinite(n.compute_s) or n.compute_s < 0:
                 raise ValueError('Replay cost must be finite and nonnegative')
-            l = len(c); r = l+1
+            l = len(c)
+            # A non-replayable node and a node whose blob is mandatory can
+            # never use the replay branch. Omitting that fixed-zero binary is
+            # an exact substitution rather than a heuristic.
+            replay_disabled = compact and (not n.replayable or n.blob in g.roots)
+            r = None if replay_disabled else l+1
             pairs[nid] = (l,r)
             load_vars[(version,nid)] = l
             # Objective in microseconds, matching Graph.estimate's summed
             # request costs with fresh memoization for each protected version.
-            c.extend([read_cost(n)*1e6, n.compute_s*1e6])
-            lo.extend([0.,0.]); hi.extend([1.,1. if n.replayable else 0.])
-            constraint({l:1.,r:1.}, low=1. if nid in ts else 0., high=1.)
-            constraint({l:1.,index[n.blob]:-1.}, high=0.)
+            c.append(read_cost(n)*1e6)
+            lo.append(0.); hi.append(1.)
+            if r is not None:
+                replay_variable_count += 1
+                c.append(n.compute_s*1e6)
+                lo.append(0.); hi.append(1. if n.replayable else 0.)
+            active = {l:1.}
+            if r is not None:
+                active[r] = 1.
+            constraint(active, low=1. if nid in ts else 0., high=1.)
+            if n.blob not in g.roots:
+                constraint({l:1.,index[n.blob]:-1.}, high=0.)
             # The runtime ALWAYS loads an available blob, so replay of a
             # retained node is prohibited in this optimization model too.
-            constraint({r:1.,index[n.blob]:1.}, high=1.)
+            if r is not None:
+                if n.blob in g.roots:
+                    hi[r] = 0.
+                else:
+                    constraint({r:1.,index[n.blob]:1.}, high=1.)
         for nid,(l,r) in pairs.items():
-            if prune_opaque and not g.nodes[nid].replayable:
+            if r is None or (prune_opaque and not g.nodes[nid].replayable):
                 continue
             for parent in g.nodes[nid].deps:
                 pl,pr = pairs[parent]
-                constraint({r:1.,pl:-1.,pr:-1.}, high=0.)
+                terms = {r:1.,pl:-1.}
+                if pr is not None:
+                    terms[pr] = -1.
+                constraint(terms, high=0.)
     matrix = coo_matrix((coefficients,(rows,columns)),shape=(len(lows),len(c))).tocsc()
     start = time.perf_counter()
     result = milp(np.asarray(c), integrality=np.ones(len(c)),
         bounds=Bounds(lo,hi), constraints=LinearConstraint(matrix,lows,highs),
         options={'time_limit':time_limit_s,'mip_rel_gap':0.0})
-    diag = dict(strategy='bounded_global_milp_pruned' if prune_opaque else 'bounded_global_milp', solver_status=int(result.status),
+    strategy = ('bounded_global_milp_frontier_compact' if compact else
+                'bounded_global_milp_pruned' if prune_opaque else 'bounded_global_milp')
+    diag = dict(strategy=strategy, solver_status=int(result.status),
         solver_message=result.message, solver_s=time.perf_counter()-start,
         variables=len(c), constraints=len(lows), time_limit_s=time_limit_s,
-        opaque_pruning=prune_opaque, physical_candidates=len(blobs),
+        opaque_pruning=prune_opaque, compact_formulation=compact,
+        physical_candidates=len(physical), fixed_physical_candidates=len(blobs)-len(physical),
+        replay_variables=replay_variable_count,
         estimated_optimal=result.status==0,
         mip_gap=float(result.mip_gap) if getattr(result,'mip_gap',None) is not None else None)
     if result.x is None:
