@@ -61,6 +61,33 @@ class OptimizerTests(unittest.TestCase):
         self.assertLessEqual(pruned_history[0]['physical_candidates'],
                              full_history[0]['physical_candidates'])
 
+    def test_frontier_compaction_matches_exhaustive_oracle(self):
+        for seed in range(12):
+            g = small_graph(200 + seed)
+            # Cheap target replay disables the direct-target shortcut so this
+            # test exercises the reduced MILP formulation.
+            for targets in g.targets.values():
+                for nid in targets:
+                    g.nodes[nid].compute_s = 0.
+            minimum = exact(g)['objective']
+            budgets = (minimum-1, minimum,
+                       int((minimum+g.size(g.candidates))/2),
+                       g.size(g.candidates))
+            for budget in budgets:
+                oracle = exact(g,budget)
+                retained,status,history = optimize(
+                    g,budget,time_limit_s=5.,prune_opaque=True,compact=True)
+                with self.subTest(seed=seed,budget=budget):
+                    self.assertEqual(status == 'ok',oracle['feasible'])
+                    self.assertEqual(history[0]['compact_formulation'],True)
+                    if oracle['feasible']:
+                        self.assertTrue(g.coverage(retained)[0])
+                        self.assertLessEqual(g.size(retained),budget)
+                        self.assertAlmostEqual(g.estimate(retained),
+                                               oracle['objective'],places=9)
+                    else:
+                        self.assertEqual(status,'proven_infeasible')
+
     def test_v3_pruning_matches_v2_on_public_opaque_workloads(self):
         from recoverml.workloads import build_history
         for dataset,model in (('digits','logistic'),('wine','forest')):
@@ -70,12 +97,29 @@ class OptimizerTests(unittest.TestCase):
             for fraction in (.1,.2,.4,1.0):
                 v2 = select(g,'recoverability_v2',int(full*fraction))
                 v3 = select(g,'recoverability_v3',int(full*fraction))
+                v4 = select(g,'recoverability_v4',int(full*fraction))
                 with self.subTest(dataset=dataset,model=model,budget=fraction):
                     self.assertEqual(v3.status,v2.status)
+                    self.assertEqual(v4.status,v2.status)
                     self.assertEqual(g.coverage(v3.retained)[0],g.coverage(v2.retained)[0])
+                    self.assertEqual(g.coverage(v4.retained)[0],g.coverage(v2.retained)[0])
                     if v3.status == 'ok':
                         self.assertAlmostEqual(g.estimate(v3.retained),
                                                g.estimate(v2.retained),places=9)
+                        self.assertAlmostEqual(g.estimate(v4.retained),
+                                               g.estimate(v2.retained),places=9)
+
+    def test_frontier_compaction_removes_fixed_binary_variables(self):
+        from recoverml.workloads import build_history
+        g,_ = build_history(dict(dataset='wine',rows=1,versions=4,
+            model='logistic',change='parameters',boundary='opaque',
+            pre_boundary_depth=6),301)
+        budget = int(g.size(g.candidates)*.1)
+        _,s3,h3 = optimize(g,budget,time_limit_s=5.,prune_opaque=True)
+        _,s4,h4 = optimize(g,budget,time_limit_s=5.,prune_opaque=True,compact=True)
+        self.assertEqual(s4,s3)
+        self.assertLess(h4[0]['variables'],h3[0]['variables'])
+        self.assertLess(h4[0]['constraints'],h3[0]['constraints'])
 
     def test_solver_failure_uses_validated_heuristic(self):
         g = small_graph(9)

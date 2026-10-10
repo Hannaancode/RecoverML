@@ -37,6 +37,19 @@ class CoreTests(unittest.TestCase):
                 for tid,value in zip(g.targets[version],restored):
                     self.assertEqual(pack(value),g.archive[g.nodes[tid].blob])
 
+    def test_deep_affine_pipeline_replays_exactly(self):
+        g,_ = build_history(dict(dataset='iris',rows=150,versions=2,
+            model='logistic',change='parameters',boundary='deterministic',
+            pre_boundary_depth=5),321)
+        self.assertEqual(sum(n.op=='affine_features' for n in g.nodes.values()),5)
+        store=self.base/'deep-affine'
+        write_store(g,g.roots,store)
+        replay_graph=Graph.read(store/'manifest.json')
+        for version in g.targets:
+            restored=DiskRestorer(replay_graph,store).version(version)
+            for nid,value in zip(g.targets[version],restored):
+                self.assertEqual(pack(value),g.archive[g.nodes[nid].blob])
+
     def test_loaded_model_inference_and_codec_roundtrip(self):
         from recoverml.core import unpack
         for model in ('logistic','forest'):
