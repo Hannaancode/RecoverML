@@ -1,0 +1,15 @@
+{
+  "README.md": "78536e6b2addc332cf15d01dd103f9d3e6613a801b1b530200ea7e16f1923740",
+  "capture_manifests.jsonl.gz": "ae8c2bc8c976d735edc3c4d3a4ced32e3020eebe903063b365bb5057c1f3b5d5",
+  "capture_metrics.csv": "2ea948cb6d15fe6a95a2a52f86d9d7b3dd75b216d858fe2caddb911e22f97239",
+  "config.json": "a1d6ba5c0068c128824178d6fd1b96cd3ebac301625fce782b391fa1164b0c84",
+  "environment.json": "4b169fd6b03a2d816b0ec7bf04c8b4f912cb3458c22e92f0fdf6689f046d0c7e",
+  "execution_traces.jsonl": "0274feed3745ae0e92d4a06faca569463720a5b35b51a4df870651d1ccf9f750",
+  "frontier_planning_scaling.png": "d625314ea5ddabb4da2ea0204007141cdf659f90c14b39e00baac16786c58476",
+  "frontier_variable_scaling.png": "8fcf1cfacb62627a009430e17b9af16720d4fc7855463299396fce9e5d0afbd5",
+  "history_medians.csv": "e6d8fff45f621372d4bee79201ae18520feb9804d032d081eb029770c8290825",
+  "raw_planner_trials.csv": "0f04266e79349ffa39f4c8d0aabe181437db58e9c9b544990eda242879e95d75",
+  "restore_verification.csv": "b19d67aae5ccba638bb1e5a1a52061c96eb51c882cd705108a7e55f1cb66e865",
+  "setting_medians.csv": "a5810936ad604eaaa136d790deab12d05f2c39564327c685604a1b23d0cb63be",
+  "summary.json": "fafa88b910a9e0804cd6b3713883fe68e0ad8a9c34cb06a425b0d8ffefe163ae"
+}

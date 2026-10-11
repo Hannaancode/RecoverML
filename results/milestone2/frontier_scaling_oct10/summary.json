@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-10-10T16:38:49.923326+00:00",
+  "ended_utc": "2026-10-10T16:40:45.837627+00:00",
+  "dataset": "iris",
+  "captured_histories": 15,
+  "timing_rows": 1350,
+  "independent_history_summaries": 15,
+  "exact_verified_restores": 120,
+  "timed_planner_sets": 450,
+  "timed_objective_equivalent_sets": 450,
+  "all_proven_optimal_sets": 450,
+  "all_proven_optimal_sets_equivalent": true,
+  "v2_proven_optimal_runs": 450,
+  "v3_proven_optimal_runs": 450,
+  "v4_proven_optimal_runs": 450,
+  "v4_strictly_better_objective_sets": 0,
+  "median_v2_to_v4_speedup": 3.3769918137048016,
+  "median_v2_to_v4_speedup_bootstrap_95pct": [
+    1.2426032632620918,
+    5.317217631691923
+  ],
+  "v4_faster_than_v2_histories": 14,
+  "v2_vs_v4_wilcoxon_one_sided_p": 0.000213623046875,
+  "median_v3_to_v4_speedup": 1.0279275144354514,
+  "deepest_frontier_depth": 128,
+  "deepest_variables": {
+    "recoverability_v2": 1256,
+    "recoverability_v3": 79,
+    "recoverability_v4": 69
+  },
+  "deepest_v2_to_v4_variable_reduction": 0.9450636942675159,
+  "qualification": "Local warm-cache study with a 0.5 second solver limit; proven optima and exact restores are checked"
+}

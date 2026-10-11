@@ -1,0 +1,1 @@
+{"budget_positions":[0.5,0.75],"dataset":"iris","frontier_depths":[0,8,32,64,128],"model":"forest","model_depth":8,"repeats":3,"rows":150,"timing_trials":15,"trees":32,"versions":4}
