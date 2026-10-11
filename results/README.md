@@ -11,6 +11,7 @@ The separate reports and source and configs remain available for future work
 | Tests and runner output from that experiment | [milestone2](milestone2) |
 | Repeated Digits and Wine study | [milestone2/new_data_oct9](milestone2/new_data_oct9) |
 | Planner V3 paired ablation | [milestone2/planner_ablation_oct9](milestone2/planner_ablation_oct9) |
+| Planner V4 frontier scaling study | [milestone2/frontier_scaling_oct10](milestone2/frontier_scaling_oct10) |
 | Latest 31 test log and stronger audit check | [validation/2026-10-08](validation/2026-10-08) |
 | Original 6600 request storage experiment | [archive/preliminary](archive/preliminary) |
 | Expanded 11200 request storage experiment | [archive/iteration2](archive/iteration2) |
@@ -52,6 +53,14 @@ It contains 24 histories and 3600 requests and 10030 trace events and its comple
 Planner V3 restored all 535 admitted requests exactly and at a 40 percent budget it restored all 120 requests while target snapshots restored 45 and full replay restored 60
 Run `make planner-ablation` after the repeated study to reproduce the paired planner timing evidence
 The ablation records 900 raw paired trials and shows that version 3 used 98 variables instead of 129 and made the same decision in every trial
+
+## Replayability frontier scaling study
+
+Run `make frontier-scaling` to reproduce the Planner V2 and V3 and V4 scaling comparison on the public Iris dataset
+The published output is in [milestone2/frontier_scaling_oct10](milestone2/frontier_scaling_oct10)
+It contains 15 captured histories and 1350 timed planner executions and 120 exact restores
+All 450 paired planner sets reached proven optima and returned the same objective
+At a frontier depth of 128 V4 reduced the formulation from 1256 variables to 69 and the median history level planning speedup over V2 was 3.38 times
 
 ## New runs
 
