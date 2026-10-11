@@ -1,4 +1,4 @@
-.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation
+.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling
 export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
@@ -18,6 +18,9 @@ new-data-repeated:
 
 planner-ablation:
 	python -m recoverml.planner_ablation results/runs/new_data_repeated_oct9 results/runs/planner_ablation_oct9 --trials 30
+
+frontier-scaling:
+	python -m recoverml.frontier_scaling --config configs/frontier_scaling_oct10.json --out results/runs/frontier_scaling_oct10
 
 test:
 	python -m unittest discover -s tests -v

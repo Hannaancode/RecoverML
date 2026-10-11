@@ -8,13 +8,15 @@ Every loaded or rebuilt artifact is checked against its original SHA-256 fingerp
 
 ## What we have achieved
 
-We built a working Python prototype and an automated benchmark and faster version 2 and version 3 planners
+We built a working Python prototype and an automated benchmark and faster version 2 and version 3 and version 4 planners
 The storage study tested 11200 requests across 80 histories and version 2 restored all 1175 admitted requests exactly
 On matched feasible histories planning was 19.3 times faster than version 1 and planning plus five restores was 3.4 times faster
 The worker experiment restored all 5400 requests exactly and recorded real times and CPU and memory use
 The new public data study tested 3600 requests across 24 Digits and Wine histories and version 3 restored all 535 admitted requests exactly
 Version 3 reduced the opaque solver model from 129 variables to 98 and its repeated planner study measured a 1.18 times median history speedup over version 2
-The latest suite has 33 passing automated tests and the raw measurements and plots are included
+The new Iris scaling study used 15 histories and version 4 reduced a depth 128 model from 1256 variables to 69 while keeping every proven optimal objective unchanged
+The same study measured a 3.38 times median history speedup over version 2 and completed 120 exact restores
+The latest suite has 36 passing automated tests and the raw measurements and plots are included
 
 ## Start here
 
@@ -26,9 +28,11 @@ The latest suite has 33 passing automated tests and the raw measurements and plo
 | Latest throughput and latency analysis | [Performance report](docs/reports/PERFORMANCE_REPORT.md) |
 | Storage coverage and planner comparison | [Iteration 2 report](docs/reports/ITERATION2_REPORT.md) |
 | How the planner works | [Planner design](docs/PLANNER_V2.md) |
+| Exact frontier rule and proof | [Frontier reduction](docs/FRONTIER_REDUCTION.md) |
 | Research sources for the next stage | [References](docs/REFERENCES.md) |
 | Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
 | Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
+| Full paper readiness and remaining work | [Paper status](docs/PAPER_STATUS.md) |
 
 ## Project layout
 
