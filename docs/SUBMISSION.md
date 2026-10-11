@@ -17,6 +17,8 @@ For the full repeated experiment, use `make iteration2`; it can take several
 minutes on a single CPU thread and writes a new result directory.
 Use `make new-data-repeated` for the Digits and Wine experiment and use
 `make planner-ablation` for the paired Planner V2 and Planner V3 timing study.
+Use `make frontier-scaling` for the Iris Planner V2 and V3 and V4 scaling study
+and read `docs/FRONTIER_REDUCTION.md` for its exactness argument and conditions.
 
 Published raw measurements are in `results/archive/preliminary` and
 `results/archive/iteration2`. The original experiment is preserved rather than
@@ -36,6 +38,5 @@ and the harness can generate fresh complete histories locally.
 4. Confirm the correctness/smoke workflow passes and the main README renders.
 5. Submit the repository URL together with the commit SHA for this milestone.
 
-Do not claim novel checkpoint optimization or superiority over published
-systems from these measurements. The report distinguishes the improvement
-over our original planner from comparisons with strong simple baselines.
+The focused contribution is the exact replayability frontier reduction under the stated load first contracts
+The broader novelty claim still needs comparison with equivalent techniques in published workflow systems

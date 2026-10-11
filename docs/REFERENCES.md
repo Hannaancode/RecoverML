@@ -6,9 +6,13 @@ The current benchmark compares local baseline implementations and does not execu
 - [LIMA — SIGMOD 2021](https://mboehm7.github.io/resources/sigmod2021a_lima.pdf)
 - [HELIX — PVLDB 2019](https://www.vldb.org/pvldb/vol12/p446-xin.pdf)
 - [Kishu — PVLDB 18](https://www.vldb.org/pvldb/vol18/p970-li.pdf)
+- [CAPS — PVLDB 19](https://www.vldb.org/pvldb/vol19/p1427-kontaxakis.pdf)
 - [ElasticNotebook](https://arxiv.org/abs/2309.11083)
 - [ExoFlow — OSDI 2023](https://www.usenix.org/system/files/osdi23-zhuang.pdf)
 - [Wisconsin dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)
+- [Digits dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html)
+- [Iris dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html)
+- [Wine dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html)
 - [Controlling randomness in scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html#controlling-randomness)
 - [SciPy mixed integer optimization API](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html)
 

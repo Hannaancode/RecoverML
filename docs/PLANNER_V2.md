@@ -1,4 +1,4 @@
-# Planner v2: formulation and limits
+# Planner formulations and limits
 
 The new policy keeps the original executor and correctness contract. Each
 restoration reads only its selected disk store, resets its in-memory memo,
@@ -58,6 +58,16 @@ boundaries and below-minimum budgets are covered by exhaustive reference tests.
 These tests do not establish cross-environment numerical reproducibility or
 dependency completeness for arbitrary Python code.
 
+## Planner V3 and V4
+
+Planner V3 computes the replayability frontier before building the MILP
+Its backward target walk stops at a non replayable node because the load first executor must load that node and never evaluates its parents for that recovery path
+Artifacts that occur only behind the stopped frontier are removed from the formulation while shared artifacts used by a live node remain eligible
+
+Planner V4 keeps the same frontier and also removes fixed binary variables
+Mandatory source storage decisions are replaced by fixed byte cost and replay variables fixed to zero are removed for non replayable nodes and mandatory blobs
+The [frontier reduction note](FRONTIER_REDUCTION.md) gives the exactness argument and conditions
+
 ## Research interpretation
 
 Budgeted artifact retention and global load/recompute planning already have
@@ -66,11 +76,8 @@ NP-hard materialization problem. Our bounded MILP is an implementation choice,
 not a new optimization primitive. The fast shortcut removes avoidable work
 when a strong simple baseline already attains our estimated lower bound.
 
-The narrower research question remains whether explicit replay contracts,
-all-target recoverability and execution certificates offer useful behavior for
-mixed replayable/non-replayable ML histories under constrained storage. Current
-experiments demonstrate this prototype's behavior; they do not establish a
-substantially novel method or superiority over published systems.
+The narrower research question is whether an exact replayability frontier can reduce budgeted recovery planning work while preserving the same protected recoveries and objective
+The 10 October experiment provides scaling evidence for this question while the broader novelty comparison with published systems remains part of the paper work
 
 Primary references:
 

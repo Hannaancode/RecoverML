@@ -192,3 +192,55 @@ The improvement is a smaller boundary aware global optimization model with ident
 The new public datasets also strengthen the evidence because the exact recovery behavior now covers binary and multiclass data and deterministic and unavailable external steps
 The current evidence supports a concrete engineering contribution for mixed replayable and non replayable pipeline graphs
 It does not prove that the full research direction is unique across all lineage and checkpoint systems
+
+PROGRESS ON 10 OCTOBER — PLANNER VERSION 4
+Planner version 4 keeps the version 3 replayability frontier and compacts variables fixed by the execution contract
+Mandatory source storage decisions are removed from the binary model and their bytes remain fixed in the budget
+Replay variables are removed when a node is non replayable or its blob is mandatory and therefore loaded by the load first executor
+The exact reduction rule and its assumptions and proof argument are recorded in docs/FRONTIER_REDUCTION.md
+
+CORRECTNESS VALIDATION ON 10 OCTOBER
+The compact formulation was compared with exhaustive enumeration on 12 generated graphs and four budgets per graph
+The test covers feasible and infeasible budgets and shared ancestors and opaque nodes
+The public workload checks compare Planner V2 and V3 and V4 on Digits and Wine histories
+A new deterministic deep pipeline test replays five affine feature operations and checks exact target bytes
+The complete repository suite now has 36 passing tests
+
+CONCURRENT RESTORE FIX ON 10 OCTOBER
+Full validation found that an OpenMP thread limit can be local to the calling thread on this Linux runtime
+Worker threads could therefore observe a different thread count and reject an otherwise matching recorded environment
+The measured restore worker now applies the one thread contract inside each worker before checking the environment
+The original failing test case then completed all exact restores and the full performance audit tests passed
+
+EXPERIMENT 3 PLAN — REPLAYABILITY FRONTIER SCALING
+Use the public Iris dataset which was not used in the earlier RecoverML experiments
+Capture random forest histories with four versions and an unavailable external feature step
+Insert zero and eight and 32 and 64 and 128 replayable feature operations before that opaque frontier
+Use three independent captures at every depth and two feasible budgets below direct target storage
+Compare Planner V2 and V3 and V4 with 15 repeated timings for every history and budget
+Rotate planner order and require proven optimal objectives to agree
+Restore every protected version once from every version 4 plan and retain raw traces and manifests and hashes
+
+EXPERIMENT 3 RESULT — COMPLETED 10 OCTOBER
+The study contains 15 captured histories and 450 paired planner sets or 1350 individual planner executions
+All 450 paired sets reached solver proven optima and all 450 returned the same estimated objective
+The study separately completed 120 exact hash checked restores and recorded 465 operation trace events
+At frontier depth 128 Planner V2 used 1256 variables and Planner V3 used 79 and Planner V4 used 69
+The Planner V2 to V4 variable reduction at that depth is 94.5 percent
+The median history level Planner V2 to V4 planning speedup is 3.38 times
+The bootstrap 95 percent interval for the median speedup is 1.24 to 5.32 times
+Planner V4 was faster than Planner V2 in 14 of 15 independent history comparisons
+The one sided paired Wilcoxon result is p equals 0.000213623046875
+Planner V4 is only 1.03 times faster than Planner V3 at the median so the main gain comes from the exact frontier and the extra compaction mainly reduces model size
+
+INTERPRETATION AFTER EXPERIMENT 3
+The earlier version 3 study showed a small fixed graph result and the new study shows how the reduction behaves as irrelevant ancestry grows
+The strongest contribution is now an exact replayability frontier reduction with an explicit argument and exhaustive small graph checks and a public data scaling experiment
+The implementation evidence is strong for the course milestone and the algorithmic claim is more defensible than the earlier broad lineage claim
+Publication novelty still requires a direct check for equivalent frontier reductions in related systems and a comparison on larger real workflow graphs and another machine
+
+EXPERIMENT 3 FILES
+Configuration configs/frontier_scaling_oct10.json
+Harness src/recoverml/frontier_scaling.py
+Published evidence results/milestone2/frontier_scaling_oct10
+Formal argument docs/FRONTIER_REDUCTION.md
