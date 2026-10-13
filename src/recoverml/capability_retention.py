@@ -51,9 +51,10 @@ def restricted(graph,capabilities,disabled):
 
 class CapabilityRestorer(WitnessRestorer):
     def __init__(self,graph,store,capabilities,disabled,verify_environment=True):
+        from .capability_ops import execute
         self.disabled=sorted(disabled)
         super().__init__(restricted(graph,capabilities,disabled),store,
-                         verify_environment=verify_environment)
+                         verify_environment=verify_environment,replay_execute=execute)
 
 
 def solve(cost,lo,hi,constraints,time_limit_s):

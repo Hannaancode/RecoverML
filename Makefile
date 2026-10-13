@@ -1,10 +1,19 @@
-.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling pytorch-study boundary-controls oracle-audit
+.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling pytorch-study boundary-controls oracle-audit capability-study capability-banknote capability-scaling
 export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
 
 rubric:
 	bash run_benchmarks.sh
+
+capability-study:
+	python -m recoverml.capability_experiment --output results/runs/new_capability_study --seeds 2 --versions 12
+
+capability-banknote:
+	python -m recoverml.capability_experiment --output results/runs/new_capability_banknote --seeds 3 --versions 12 --datasets banknote
+
+capability-scaling:
+	python -m recoverml.capability_scaling --output results/runs/new_capability_scaling
 
 new-data:
 	python -m recoverml benchmark --config configs/new_data_oct9.json --out results/runs/new_data_oct9

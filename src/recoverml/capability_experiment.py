@@ -19,16 +19,20 @@ from .capability_retention import optimize,contract,retained_bytes,CapabilityRes
 from .witness import certificate
 
 
-def run(destination,seeds=2,versions=12):
+def run(destination,seeds=2,versions=12,datasets=('breast_cancer','iris','wine'),dual_scalers=False):
     destination.mkdir(parents=True,exist_ok=False)
     rows,traces,plans,provenance=[],[],[],[]
     with threadpool_limits(limits=1):
-        for name in ('breast_cancer','iris','wine'):
+        for name in datasets:
             for seed in range(seeds):
                 for transport in ('npy','csv6'):
-                    graph,info=capture(name,seed,transport,versions)
-                    caps={nid:n.op for nid,n in graph.nodes.items() if n.replayable and
-                          n.op in ('split','fit_scaler','scale')}
+                    graph,info=capture(name,seed,transport,versions,dual_scalers=dual_scalers)
+                    if dual_scalers:
+                        families={'split':'membership','fit_scaler':'sklearn_preprocessing',
+                                  'scale_sklearn':'sklearn_preprocessing','scale':'numpy_scaling'}
+                    else: families={'split':'split','fit_scaler':'fit_scaler','scale':'scale'}
+                    caps={nid:families[n.op] for nid,n in graph.nodes.items()
+                          if n.replayable and n.op in families}
                     groups=sorted(set(caps.values()))
                     protected=graph.roots|{graph.nodes[t].blob for ts in graph.targets.values() for t in ts}
                     selected,status,diag=nominal(graph)
@@ -40,6 +44,11 @@ def run(destination,seeds=2,versions=12):
                             raise RuntimeError(f'Unproved robust plan {case} {robust_status}')
                         faults=[tuple(f) for count in range(k+1) for f in itertools.combinations(groups,count)]
                         strategies={'nominal':selected,'robust':robust,'snapshots':protected}
+                        if dual_scalers:
+                            conservative,conservative_status,conservative_diag=nominal(restricted(graph,caps,groups))
+                            if conservative_status!='ok' or not conservative_diag['storage_optimal']:
+                                raise RuntimeError('Unproved conservative store')
+                            strategies['all_capabilities_off']=conservative
                         outcome={p:dict(attempts=0,exact=0,blocked=0) for p in strategies}
                         for policy,retained in strategies.items():
                             store=destination/'stores'/case/policy
@@ -81,6 +90,9 @@ def run(destination,seeds=2,versions=12):
                             robust_attempts=outcome['robust']['attempts'],robust_exact=outcome['robust']['exact'],
                             snapshot_exact=outcome['snapshots']['exact'],storage_cuts=robust_diag['cuts'],
                             robust_optimal=robust_diag['storage_optimal']))
+                        if dual_scalers:
+                            rows[-1].update(all_off_bytes=sizes['all_capabilities_off'],
+                                all_off_exact=outcome['all_capabilities_off']['exact'],dual_scalers=True)
                         plans.append(dict(case=case,capabilities=caps,robust_plan=robust_diag,
                                           retained={p:sorted(s) for p,s in strategies.items()}))
                         provenance.append(dict(case=case,**info,manifest_sha256=digest((destination/'stores'/case/'robust'/'manifest.json').read_bytes())))
@@ -91,14 +103,17 @@ def run(destination,seeds=2,versions=12):
     (destination/'provenance.json').write_text(json.dumps(dict(cases=provenance,
         source_sha256=digest(Path(__file__).read_bytes()),
         planner_sha256=digest(Path(__file__).with_name('capability_retention.py').read_bytes()),
+        pipeline_sha256=digest(Path(__file__).with_name('witness_pipeline.py').read_bytes()),
+        capability_ops_sha256=digest(Path(__file__).with_name('capability_ops.py').read_bytes()),
+        dual_scalers=dual_scalers,
         qualification='Injected replay capability outages in constructed real-data histories; intact files and matching numerical environment required'),indent=2)+'\n')
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     fig,ax=plt.subplots(figsize=(7,4))
-    policies=['nominal','robust','snapshots']
+    policies=['nominal','robust','snapshots']+(['all_capabilities_off'] if dual_scalers else [])
     attempts=sum(r['nominal_attempts'] for r in rows)
-    coverage=[100*sum(r[p+'_exact' if p!='snapshots' else 'snapshot_exact'] for r in rows)/attempts for p in policies]
+    coverage=[100*sum(r[{'snapshots':'snapshot_exact','all_capabilities_off':'all_off_exact'}.get(p,p+'_exact')] for r in rows)/attempts for p in policies]
     ax.bar(policies,coverage);ax.set_ylim(0,105);ax.set_ylabel('Exact recovery across allowed outages (%)')
     ax.set_title('Declared preprocessing capability-loss scenarios')
     fig.tight_layout();fig.savefig(destination/'outage_coverage.png',dpi=180);plt.close(fig)
@@ -107,6 +122,8 @@ def run(destination,seeds=2,versions=12):
         robust_attempts=sum(r['robust_attempts'] for r in rows),robust_exact=sum(r['robust_exact'] for r in rows),
         snapshot_attempts=sum(r['nominal_attempts'] for r in rows),snapshot_exact=sum(r['snapshot_exact'] for r in rows),
         nominal_attempts=attempts,nominal_exact=sum(r['nominal_exact'] for r in rows))
+    if dual_scalers:
+        report.update(all_off_attempts=attempts,all_off_exact=sum(r['all_off_exact'] for r in rows))
     (destination/'report.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
 
@@ -114,6 +131,8 @@ def run(destination,seeds=2,versions=12):
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--seeds',type=int,default=2);parser.add_argument('--versions',type=int,default=12)
+    parser.add_argument('--datasets',nargs='+',choices=['breast_cancer','iris','wine','banknote'],default=['breast_cancer','iris','wine'])
+    parser.add_argument('--dual-scalers',action='store_true')
     args=parser.parse_args()
     if args.seeds<1 or args.versions<1: parser.error('Positive seeds and versions required')
-    print(json.dumps(run(args.output,args.seeds,args.versions),indent=2))
+    print(json.dumps(run(args.output,args.seeds,args.versions,tuple(args.datasets),args.dual_scalers),indent=2))

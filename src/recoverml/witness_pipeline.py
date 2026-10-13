@@ -22,14 +22,26 @@ from .witness import WitnessRestorer
 from .witness_optimizer import optimize
 
 
-def capture(name, seed, transport, versions):
-    data={'breast_cancer':load_breast_cancer,'iris':load_iris,'wine':load_wine}[name]()
+def capture(name, seed, transport, versions, dual_scalers=False):
+    if name=='banknote':
+        from sklearn.utils import Bunch
+        source=Path(__file__).resolve().parents[2]/'data/uci_banknote/data_banknote_authentication.txt'
+        matrix=np.loadtxt(source,delimiter=',')
+        if matrix.shape!=(1372,5) or not np.isfinite(matrix).all() or set(matrix[:,-1])!={0.,1.}:
+            raise ValueError('Unexpected UCI Banknote data')
+        data=Bunch(data=matrix[:,:4],target=matrix[:,4].astype(np.int64))
+    else:
+        data={'breast_cancer':load_breast_cancer,'iris':load_iris,'wine':load_wine}[name]()
     x=np.ascontiguousarray(data.data,dtype=np.float64)
     y=np.ascontiguousarray(data.target,dtype=np.int64)
     graph=Graph(); values={}; export_hashes=[]
     def add(op,deps,params,scope,value=None,replayable=True,mandatory=False,version=0):
         started=time.perf_counter()
-        if value is None: value=execute(op,[values[d] for d in deps],params)
+        if value is None:
+            if op=='scale_sklearn':
+                from .capability_ops import execute as replay
+            else: replay=execute
+            value=replay(op,[values[d] for d in deps],params)
         nid=graph.add(op,deps,params,value,replayable,scope,time.perf_counter()-started,
                       version,mandatory=mandatory)
         values[nid]=value
@@ -54,6 +66,11 @@ def capture(name, seed, transport, versions):
     # A separate local analysis branch computes the standardization recipe.
     scaler=add('fit_scaler',[rx,split],{},'local_analysis')
     local=add('scale',[rx,scaler],{},'local_analysis')
+    if dual_scalers:
+        params=dict(implementation_sha256=digest(Path(__file__).with_name('capability_ops.py').read_bytes()))
+        second=add('scale_sklearn',[rx,scaler],params,'local_sklearn_analysis')
+        if graph.nodes[second].blob!=graph.nodes[local].blob:
+            raise RuntimeError('Different scaler implementations did not produce identical bytes')
     equal=graph.nodes[legacy].blob==graph.nodes[local].blob
     qualities=[]
     for version in range(versions):

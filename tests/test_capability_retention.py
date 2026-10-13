@@ -29,9 +29,9 @@ class CapabilityTests(unittest.TestCase):
                 deps=rng.sample(ids,min(len(ids),rng.randrange(3)))
                 nid=g.add('test',deps,{'i':i},rng.randrange(4),rng.choice([True,False]),str(i),.01,case,mandatory=i==0)
                 ids.append(nid)
-                if g.nodes[nid].replayable and i%3: caps[nid]='provider'+str(i%3)
+                if g.nodes[nid].replayable and i%4: caps[nid]='provider'+str(i%3)
             g.targets={'0':ids[-2:]}
-            groups=sorted(set(caps.values()));k=min(1,len(groups))
+            groups=sorted(set(caps.values()));k=min(2,len(groups))
             faults=[set(f) for count in range(k+1) for f in itertools.combinations(groups,count)]
             optional=sorted(g.candidates-g.roots);best=float('inf');valid_sets=[]
             for flags in itertools.product([False,True],repeat=len(optional)):
@@ -95,3 +95,24 @@ class CapabilityTests(unittest.TestCase):
         g.targets={'0':[target]}
         _,status,diag=optimize(g,{},0,max_iterations=1)
         self.assertEqual(status,'iteration_limit');self.assertFalse(diag['robust_certified'])
+
+    def test_sklearn_backend_survives_numpy_capability_loss(self):
+        from recoverml.witness_pipeline import capture
+        from threadpoolctl import threadpool_limits
+        with threadpool_limits(limits=1):
+            graph,_=capture('iris',17,'npy',1,dual_scalers=True)
+            legacy=next(n.id for n in graph.nodes.values() if n.op=='external_features')
+            graph.targets={'0':[legacy]}
+            caps={n.id:'numpy' for n in graph.nodes.values() if n.op=='scale'}
+            with tempfile.TemporaryDirectory() as temp:
+                store=Path(temp)/'store';write_store(graph,graph.roots,store)
+                disk=Graph.read(store/'manifest.json')
+                restorer=CapabilityRestorer(disk,store,caps,['numpy'])
+                self.assertEqual(pack(restorer.get(legacy)),graph.archive[graph.nodes[legacy].blob])
+                self.assertEqual(disk.nodes[restorer.trace[-1]['producer']].op,'scale_sklearn')
+
+    def test_extension_implementation_hash_is_enforced(self):
+        from recoverml.capability_ops import execute
+        from recoverml.core import RestoreError
+        with self.assertRaisesRegex(RestoreError,'implementation contract'):
+            execute('scale_sklearn',[],{'implementation_sha256':'wrong'})

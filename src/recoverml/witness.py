@@ -53,10 +53,11 @@ class WitnessRestorer:
     A corrupt retained file fails closed rather than being silently bypassed.
     The archive is never read. Separate instances isolate recovery requests.
     """
-    def __init__(self, graph, store: Path, verify_environment=True):
+    def __init__(self, graph, store: Path, verify_environment=True, *, replay_execute=None):
         # Reuse existing environment contract without using logical restoration.
         DiskRestorer(graph, store, verify_environment=verify_environment)
         self.graph, self.store = graph, store
+        self.replay_execute = replay_execute
         retained = {b for b in graph.candidates if
                     (store / 'blobs' / (b + '.pkl')).is_file()}
         self.plan = {s['blob']: s for s in certificate(graph, retained)['steps']}
@@ -83,7 +84,8 @@ class WitnessRestorer:
         else:
             producer = self.graph.nodes[step['producer']]
             inputs = [self._blob(self.graph.nodes[d].blob, d) for d in producer.deps]
-            value = execute(producer.op, inputs, producer.params)
+            replay_execute = self.replay_execute or execute
+            value = replay_execute(producer.op, inputs, producer.params)
             raw = pack(value)
             if len(raw) != producer.size or digest(raw) != blob:
                 raise RestoreError('Alternative producer hash mismatch: ' + producer.id)

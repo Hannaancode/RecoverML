@@ -1,5 +1,6 @@
 """Build the compact milestone distribution, excluding experiment payload archives."""
 import hashlib
+import argparse
 import json
 import shutil
 import zipfile
@@ -9,7 +10,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 single = ['.gitignore','Makefile','README.md','pyproject.toml','requirements.txt','run_benchmarks.sh']
 trees = ['src','tests','configs','docs','paper','output/pdf','scripts','.github','examples/captured_history',
-         'results/archive','results/milestone2','results/validation']
+         'results/archive','results/milestone2','results/validation','results/research','data']
 files = [root / name for name in single]
 for tree in trees:
     for path in (root/tree).rglob('*'):
@@ -22,7 +23,10 @@ files = sorted(set(files))
 checksums = {str(path.relative_to(root)):hashlib.sha256(path.read_bytes()).hexdigest() for path in files}
 (root/'CHECKSUMS.json').write_text(json.dumps(checksums,indent=2)+'\n')
 files.append(root/'CHECKSUMS.json')
-archive = root.parent/'RecoverML_Milestone2.zip'
+parser=argparse.ArgumentParser()
+parser.add_argument('--output',type=Path,default=root.parent/'RecoverML_Milestone2.zip')
+args=parser.parse_args()
+archive=args.output
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as output:
     for path in files:
         output.write(path, 'recoverml/'+str(path.relative_to(root)))
