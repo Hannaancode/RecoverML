@@ -1,0 +1,1 @@
+{"all_match":true,"completed_utc":"2026-10-13T06:32:22.445337+00:00","elapsed_s":7.34737291600004,"graphs":128,"planner_comparisons":1890,"projection_checks":2048,"qualification":"Independent exhaustive cost recursion; generated small logical DAGs and physical aliases","subsets_enumerated":2048}

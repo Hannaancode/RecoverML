@@ -1,0 +1,1 @@
+{"all_predictions_exact":true,"all_weights_exact":true,"checkpoints":24,"device":"cpu","scope":"Trained weight state and inference; excludes optimizer state and training-resume semantics","torch_version":"2.9.1+cpu","weights_only":true}
