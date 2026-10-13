@@ -32,10 +32,12 @@ def write_csv(path, rows):
         writer.writeheader(); writer.writerows(rows)
 
 
-def build_wide_history(width, depth, versions, seed):
+def build_wide_history(width, depth, versions, seed, boundary_mode='all'):
     """Build a real executable DAG whose wide ancestry stops at opaque outputs."""
     if width < 1 or depth < 1 or versions < 1:
         raise ValueError('width depth and versions must be positive')
+    if boundary_mode not in ('all','mixed','none'):
+        raise ValueError('Unknown boundary mode')
     g=Graph(); values={}; rng=np.random.default_rng(seed)
     def add(op,deps,params,value=None,replayable=True,mandatory=False,version=0):
         if value is None:
@@ -53,11 +55,17 @@ def build_wide_history(width, depth, versions, seed):
             node=add('affine_features',[node],
                      {'scale':1.0+(branch+1)*1e-6,
                       'offset':(layer+1)*(branch+1)*1e-7})
+        if boundary_mode=='mixed' and branch%2==0:
+            opaque=np.ascontiguousarray(values[node]+rng.normal(0,.001,values[node].shape))
+            node=add('external_features',[node],{'branch':branch},opaque,False)
         ends.append(node)
     merged=add('mean_features',ends,{})
     for version in range(versions):
-        captured=np.ascontiguousarray(values[merged]+rng.normal(0,.001,values[merged].shape))
-        node=add('external_features',[merged],{'version':version},captured,False,False,version)
+        if boundary_mode=='all':
+            captured=np.ascontiguousarray(values[merged]+rng.normal(0,.001,values[merged].shape))
+            node=add('external_features',[merged],{'version':version},captured,False,False,version)
+        else:
+            node=merged
         for layer in range(3):
             node=add('affine_features',[node],
                      {'scale':1.0+(version+1)*1e-5,

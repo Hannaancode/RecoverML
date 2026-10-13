@@ -1,4 +1,4 @@
-.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling
+.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling pytorch-study boundary-controls oracle-audit
 export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
@@ -29,6 +29,18 @@ neural-study:
 
 topology-scaling:
 	python -m recoverml.topology_scaling --config configs/topology_scaling_oct11.json --out results/runs/topology_scaling_oct11
+
+pytorch-study:
+	python -m recoverml benchmark --config configs/pytorch_oct13.json --out results/runs/pytorch_oct13
+	python -m recoverml.audit results/runs/pytorch_oct13
+	python -m recoverml analyze results/runs/pytorch_oct13
+	python -m recoverml.torch_checkpoint_audit --benchmark results/runs/pytorch_oct13 --out results/runs/pytorch_checkpoints_oct13
+
+boundary-controls:
+	python -m recoverml.boundary_controls --config configs/boundary_controls_oct13.json --out results/runs/boundary_controls_oct13
+
+oracle-audit:
+	python -m recoverml.oracle_audit --graphs 128 --out results/runs/oracle_oct13
 
 test:
 	python -m unittest discover -s tests -v
