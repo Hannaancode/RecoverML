@@ -396,3 +396,54 @@ The current environment full suite reports 54 tests with 49 passing and five opt
 This does not replace the earlier recorded PyTorch validation
 Raw timestamped traces and summaries and source hashes and a plot and the unchanged neural manifest audit are stored in results/research/artifact_witness_oct13
 The detailed design and proof sketch and literature boundaries are in docs/ARTIFACT_WITNESS_RESEARCH.md
+
+13 OCTOBER 2026 CONTINUATION JOINT WITNESS PLANNER AND FULL PIPELINES
+The original paper and all original results remain unchanged
+A joint mixed integer planner now finds minimum physical storage across protected histories using alternative producers
+The matching logical baseline uses the same minimum storage objective and metadata and mandatory inputs
+This is different from the earlier V2 to V4 latency objective and is reported separately
+Rank constraints prevent cycles in the physical alias graph from supplying their own missing starting data
+The runtime independently builds a grounded certificate and verifies recovered bytes rather than trusting solver ranks
+32 generated graphs and exhaustive storage subsets and independent recursive path oracles validate both policy optima
+The alternative policy rejects budgets one byte below each exact optimum
+
+FULL MODEL AND PREDICTION EXPERIMENT
+45 constructed histories use Breast Cancer and Iris and Wine with five split seeds and three model versions
+A legacy StandardScaler branch exports and imports features through actual NumPy and CSV format readers and writers using in memory serialized files
+The original legacy producer is unavailable after capture and a separate local branch has a recorded scaler recipe
+This is an explicit capability loss scenario and not a collected production trace
+Feature equality is discovered by captured output hashes and is not forced by copying local output bytes
+Requests protect the trained logistic model and its predictions and do not protect feature intermediates merely to force savings
+Both minimum storage policies may choose model and prediction checkpoints instead of storing feature files
+There are 270 exact version recoveries across both policies
+Thirty NumPy and 17 digit CSV histories have a lossless alternative and fifteen 6 digit CSV histories do not
+Mean lossless total storage savings are 17.8626 percent for NumPy and 17.8622 percent for 17 digit CSV
+Mean savings by dataset across lossless formats are 6.4484 percent for Breast Cancer and 26.8098 percent for Iris and 20.3297 percent for Wine
+At the smaller witness selected storage the new method recovers 90 of 90 versions and the logical method recovers zero of 90
+The rounded CSV control saves zero bytes and both methods recover all 45 versions at their shared minimum
+These are storage and exact recovery gains and not classification accuracy or neural training speedups
+
+SCALING AND SAFETY CONTROLS
+27 generated histories include identity producer alias cycles and zero or half or all grounded alternatives
+Each history has an independently derived analytic minimum from required source and unwitnessed opaque target bytes
+Both planners match the analytic lower bounds in all 27 histories
+81 exact version recoveries and 1512 exact target recoveries cover up to 385 logical nodes
+An additional three history run covers up to 3073 logical nodes and nine version recoveries and 3072 exact target recoveries
+Both planners also match all large history analytic lower bounds
+Generated scaling graphs are not evidence about natural duplication frequency
+
+BROADER PRIOR WORK CHANGES THE NOVELTY ASSESSMENT
+Nix content addressed builds and the 2006 Dolstra thesis already discuss equal output content from different derivations
+Therefore cross lineage output identity is not itself a new invention
+Adams and colleagues HotCloud 2009 already discuss provenance based storage versus recomputation and output hash verification
+Knockoff 2017 already studies retaining nondeterministic inputs and recomputing historical file versions
+These primary sources must be included in any next paper revision and they narrow the possible novelty claim
+The implemented candidate remains shared storage selection for exact ML artifact recovery through captured alternate producers when original producers are unavailable and with independent grounded certificates
+Publication level novelty is still not established and requires prior implementation comparisons and independently collected real workflow evidence
+
+VALIDATION
+The current full suite reports 57 tests with 52 passing and five optional PyTorch tests skipped because that dependency is absent in this environment
+The earlier recorded PyTorch runs are preserved and are not replaced by the current suite log
+Raw execution traces and summaries and source hashes and plots are kept in results/research/witness_pipeline_oct13 and witness_scaling_oct13 and witness_scaling_large_oct13
+Scaling traces are compressed JSON with their uncompressed content hashes recorded
+The detailed formulation and proof sketch and limitations and commands are in docs/WITNESS_PLANNER_AND_PIPELINES.md

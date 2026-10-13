@@ -23,7 +23,15 @@ Version 4 used 98.21 percent fewer variables at the median and was 10.47 times f
 The PyTorch study adds a CNN for Digits images and a Transformer for real 20 Newsgroups text and restores all 48 admitted version 4 requests exactly
 The same study checks 24 native model checkpoints and the 50 percent budget restores 18 of 24 requests while target snapshots restore 6
 The new placement study uses 45 histories and 1215 planner runs and 135 exact restores and explains where the frontier improves planning
-The latest suite has 49 passing automated tests and the raw measurements and plots are included
+The earlier milestone suite has 49 passing automated tests and the raw measurements and plots are included
+
+## New recovery experiments
+
+The separate research branch adds a minimum storage planner and tests full model and prediction recovery when a legacy import step is unavailable
+It can use another recorded step that produced the same bytes and checks every rebuilt file
+The lossless feature import study saves about 17.86 percent of total storage across three public datasets and the rounded CSV control keeps the original recovery rule
+The new planner also passes generated cycle checks with up to 3073 nodes and the research suite includes 57 test cases with optional PyTorch checks
+Read the [new research note](docs/WITNESS_PLANNER_AND_PIPELINES.md) for the experiments and the proof and the next steps
 
 ## Start here
 
@@ -42,6 +50,7 @@ The latest suite has 49 passing automated tests and the raw measurements and plo
 | Research sources for the next stage | [References](docs/REFERENCES.md) |
 | Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
 | Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
+| Alternative artifact recovery and storage planning | [New recovery experiments](docs/WITNESS_PLANNER_AND_PIPELINES.md) |
 | Full paper readiness and remaining work | [Paper status](docs/PAPER_STATUS.md) |
 
 ## Project layout
@@ -57,6 +66,7 @@ The latest suite has 49 passing automated tests and the raw measurements and plo
 | results/milestone2 | Current performance and storage evidence and plots |
 | results/archive | Earlier experiments and their complete submitted logs |
 | results/validation | Dated test logs and later audit checks |
+| results/research | Separate new recovery experiments and their raw evidence |
 | results/runs | New local runs created by the runner and excluded from Git |
 
 CHECKSUMS.json records the SHA-256 values for submitted files

@@ -1,0 +1,9 @@
+{
+  "cases": 27,
+  "exact_version_restores": 81,
+  "exact_target_restores": 1512,
+  "maximum_nodes": 385,
+  "source_sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf",
+  "optimizer_sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea",
+  "qualification": "Generated scaling and alias-cycle controls with an analytic storage lower bound"
+}
