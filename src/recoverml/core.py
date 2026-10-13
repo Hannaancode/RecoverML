@@ -18,7 +18,8 @@ from typing import Any
 def pack(value: Any) -> bytes:
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.linear_model import LogisticRegression
-    if isinstance(value,(RandomForestClassifier,LogisticRegression)):
+    if isinstance(value,(RandomForestClassifier,LogisticRegression)) or (
+        isinstance(value,dict) and value.get('recoverml_checkpoint')==1):
         from .model_codec import dumps
         return dumps(value)
     return pickle.dumps(value,protocol=5)
@@ -39,7 +40,15 @@ def canonical(value: Any) -> bytes:
 
 def environment() -> dict:
     import numpy, scipy, sklearn, threadpoolctl
-    return dict(python=platform.python_version(), numpy=numpy.__version__,
+    import importlib.util
+    torch_environment = {}
+    if importlib.util.find_spec('torch') is not None:
+        import torch
+        torch_environment = dict(torch_version=torch.__version__,
+            torch_threads=torch.get_num_threads(),
+            torch_deterministic=torch.are_deterministic_algorithms_enabled(),
+            torch_operator_sha256=digest(Path(__file__).with_name('torch_ops.py').read_bytes()))
+    return dict(**torch_environment,python=platform.python_version(), numpy=numpy.__version__,
                 scipy=scipy.__version__, sklearn=sklearn.__version__,
                 machine=platform.machine(), system=platform.system(),
                 threads=threadpoolctl.threadpool_info(), serialization='pickle-protocol-5-arrays-and-canonical-model-v1',

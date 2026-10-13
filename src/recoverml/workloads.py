@@ -8,6 +8,9 @@ from .operators import execute
 
 
 def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
+    if config['model'] in ('torch_cnn','torch_transformer'):
+        from .torch_workloads import build_history as build_torch_history
+        return build_torch_history(config,seed)
     g = Graph()
     values = {}
     tracking_times=[]

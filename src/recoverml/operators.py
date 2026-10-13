@@ -8,6 +8,9 @@ from sklearn.preprocessing import StandardScaler
 
 
 def execute(op, values, p):
+    if op in ('torch_train','torch_predict'):
+        from .torch_ops import execute as torch_execute
+        return torch_execute(op,values,p)
     if op == 'clean_block':
         return np.ascontiguousarray(np.sign(values[0]) * np.log1p(np.abs(values[0])))
     if op == 'concat':
