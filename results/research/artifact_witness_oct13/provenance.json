@@ -1,0 +1,26 @@
+{
+  "cases": 60,
+  "exact_restores": 360,
+  "controlled_duplicate_cases": 20,
+  "controls": [
+    "changed bytes",
+    "no alternative producer"
+  ],
+  "datasets": [
+    {
+      "name": "breast_cancer",
+      "rows": 569,
+      "columns": 30,
+      "packed_sha256": "e60318e106d8cc1d2cb8ecb6d59a0fcf8a93a39ec42be44cb57216366a5e0e17"
+    },
+    {
+      "name": "diabetes",
+      "rows": 442,
+      "columns": 10,
+      "packed_sha256": "40bcf47b48ab5d45421be223bca82af9b03a4067bc9dac9ce2db43e9e892d144"
+    }
+  ],
+  "source_sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f",
+  "witness_source_sha256": "b88c464eddd13ff64ca23996f9eaf372aa7803b341ab06d5259114f701a24d1e",
+  "qualification": "Controlled feature-level exact duplicates; not neural training gains or natural frequency evidence"
+}

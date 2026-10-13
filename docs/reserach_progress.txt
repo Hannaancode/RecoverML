@@ -358,3 +358,41 @@ The internal work-completion estimate is now approximately 85 percent and this i
 A second-machine GitHub test and control job is configured but cannot be claimed as run until its published artifact is observed and audited
 Remaining submission gates are second-machine reproduction and independent novelty review and a compatible prior algorithm comparison and larger real payload workflow and load cost sensitivity and venue-specific editing
 The final added statistics regression checks that duplicating width observations does not create extra independent seed subjects and brings the complete suite to 49 tests
+
+13 OCTOBER 2026 VERIFIED ALTERNATIVE ARTIFACT RECOVERY CANDIDATE
+The earlier paper and all earlier results remain unchanged
+New work is isolated on research/verified-alternative-recovery
+The experiment recovers an artifact through a different captured deterministic producer with the same byte hash
+It does not replay or replace the original external event and it keeps original provenance
+A grounded round based certificate prevents physical alias cycles from creating false recovery paths
+The disk executor reads only retained files and executes declared producers and verifies every materialized hash
+Corrupt retained files fail closed and incorrect replay outputs fail their hash check
+
+NEW DATA AND CONTROLLED RESULTS
+Breast Cancer has 569 rows and 30 columns and Diabetes has 442 rows and 10 columns
+Ten shuffled histories per dataset and three versions and three alternative conditions produce 60 cases
+Exact duplicate alternatives are deliberately constructed and are not evidence of their natural frequency
+Changed byte and absent alternative controls are included
+Exhaustive optional physical storage subsets determine each policy minimum for these small graphs
+Both policies share the same metadata and mandatory input costs
+There are 360 verified exact disk recoveries across the two policies
+In 20 exact alternative cases total stored bytes including metadata fall by a mean 73.6325 percent
+At this smaller storage budget the new rule restores 60 of 60 versions and the old logical rule restores zero of 60
+The changed and absent controls each save zero bytes
+These results concern feature artifact storage and are not improvements in neural model quality or training speed
+
+NOVELTY CHALLENGE AND CONTRARY EVIDENCE
+LIMA already provides fine grained lineage reuse and reconstruction and e graph extraction already addresses alternative computations and cycles
+Therefore those general techniques are not claimed as new
+The narrower candidate is recovery of byte identical artifacts through different captured lineages behind a non replayable original event
+This is provisional and requires a wider prior work and implementation comparison
+An audit of the 12 earlier validated neural manifests found no non replayable outputs derivable from roots by an alternative producer
+Therefore this candidate gives no demonstrated improvement on the earlier neural workloads
+The next gate is a real pipeline workload with naturally occurring useful alternative witnesses
+
+VALIDATION AND EVIDENCE
+Five new regression tests pass including an independent finite path oracle across 64 generated graphs and all storage subsets
+The current environment full suite reports 54 tests with 49 passing and five optional PyTorch tests skipped because PyTorch is not installed here
+This does not replace the earlier recorded PyTorch validation
+Raw timestamped traces and summaries and source hashes and a plot and the unchanged neural manifest audit are stored in results/research/artifact_witness_oct13
+The detailed design and proof sketch and literature boundaries are in docs/ARTIFACT_WITNESS_RESEARCH.md
