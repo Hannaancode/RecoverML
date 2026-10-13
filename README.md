@@ -30,6 +30,7 @@ The earlier milestone suite has 49 passing automated tests and the raw measureme
 The separate research branch adds a minimum storage planner and tests full model and prediction recovery when a legacy import step is unavailable
 It can use another recorded step that produced the same bytes and checks every rebuilt file
 The lossless feature import study saves about 17.86 percent of total storage across three public datasets and the rounded CSV control keeps the original recovery rule
+The twelve version study saves about 23.64 percent in the lossless cases and a separate disk only audit reproduces every equal budget outcome across 702 attempts
 The new planner also passes generated cycle checks with up to 3073 nodes and the research suite includes 57 test cases with optional PyTorch checks
 Read the [new research note](docs/WITNESS_PLANNER_AND_PIPELINES.md) for the experiments and the proof and the next steps
 

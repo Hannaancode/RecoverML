@@ -1,0 +1,569 @@
+[
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-00-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-01-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-02-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-02-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-02-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-03-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-03-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-03-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-04-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-04-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "breast_cancer-04-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-00-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-01-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-02-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-02-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-02-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-03-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-03-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-03-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-04-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-04-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "iris-04-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-00-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-01-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-02-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-02-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-02-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-03-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-03-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-03-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-04-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-04-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_oct13",
+    "case": "wine-04-csv6",
+    "observed": {
+      "logical": 3,
+      "witness": 3
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-00-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "breast_cancer-01-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-00-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "iris-01-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-00-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-00-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-00-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-01-npy",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-01-csv17",
+    "observed": {
+      "logical": 0,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  },
+  {
+    "experiment": "witness_pipeline_long_history_oct13",
+    "case": "wine-01-csv6",
+    "observed": {
+      "logical": 12,
+      "witness": 12
+    },
+    "prior_counts_match": true
+  }
+]

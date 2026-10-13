@@ -1,0 +1,13 @@
+{
+  "cases": 63,
+  "attempts": 702,
+  "exact_requests": 468,
+  "expected_blocked": 234,
+  "prior_case_counts_all_reproduced": true,
+  "archive_payload_reads": 0,
+  "source_sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065",
+  "source_summaries": {
+    "results/runs/witness_pipeline_oct13": "14e7e759e16aa68471371d31549f998eeea203f5d5628a169c00dcb86f970805",
+    "results/runs/witness_pipeline_long_history_oct13": "59feb9e22a532d2b2f01cb8bb39f52a1ceb2f198c2b4e58e433287ce9909418b"
+  }
+}

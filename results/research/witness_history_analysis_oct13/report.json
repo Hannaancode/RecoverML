@@ -1,0 +1,116 @@
+{
+  "storage_comparison": [
+    {
+      "dataset": "breast_cancer",
+      "matched_cases": 4,
+      "short_mean_saving_percent": 6.448465165003645,
+      "long_mean_saving_percent": 20.511588276040058
+    },
+    {
+      "dataset": "iris",
+      "matched_cases": 4,
+      "short_mean_saving_percent": 26.80880610444079,
+      "long_mean_saving_percent": 17.25145702455825
+    },
+    {
+      "dataset": "wine",
+      "matched_cases": 4,
+      "short_mean_saving_percent": 20.32873169191339,
+      "long_mean_saving_percent": 33.147068924578754
+    }
+  ],
+  "descriptive_cpu": [
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "breast_cancer",
+      "policy": "logical",
+      "requests": 30,
+      "median_recorded_cpu_ms": 0.3184329999998958
+    },
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "breast_cancer",
+      "policy": "witness",
+      "requests": 30,
+      "median_recorded_cpu_ms": 6.198126499999734
+    },
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "iris",
+      "policy": "logical",
+      "requests": 30,
+      "median_recorded_cpu_ms": 4.5858335000001915
+    },
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "iris",
+      "policy": "witness",
+      "requests": 30,
+      "median_recorded_cpu_ms": 5.078029999999956
+    },
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "wine",
+      "policy": "logical",
+      "requests": 30,
+      "median_recorded_cpu_ms": 0.3444875000004899
+    },
+    {
+      "experiment": "witness_pipeline_oct13",
+      "dataset": "wine",
+      "policy": "witness",
+      "requests": 30,
+      "median_recorded_cpu_ms": 5.413274499999954
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "breast_cancer",
+      "policy": "logical",
+      "requests": 48,
+      "median_recorded_cpu_ms": 0.32981799999998174
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "breast_cancer",
+      "policy": "witness",
+      "requests": 48,
+      "median_recorded_cpu_ms": 7.466536999999773
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "iris",
+      "policy": "logical",
+      "requests": 48,
+      "median_recorded_cpu_ms": 5.7378115000004115
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "iris",
+      "policy": "witness",
+      "requests": 48,
+      "median_recorded_cpu_ms": 5.863368999999619
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "wine",
+      "policy": "logical",
+      "requests": 48,
+      "median_recorded_cpu_ms": 6.324889500000097
+    },
+    {
+      "experiment": "witness_pipeline_long_history_oct13",
+      "dataset": "wine",
+      "policy": "witness",
+      "requests": 48,
+      "median_recorded_cpu_ms": 6.667044499999442
+    }
+  ],
+  "input_sha256": {
+    "results/runs/witness_pipeline_oct13/summary.csv": "14e7e759e16aa68471371d31549f998eeea203f5d5628a169c00dcb86f970805",
+    "results/runs/witness_pipeline_oct13/execution_traces.json": "b0a559b8df1a900fbf689750b95afad883f4de1a8c761d148320245bd33e5ea9",
+    "results/runs/witness_pipeline_long_history_oct13/summary.csv": "59feb9e22a532d2b2f01cb8bb39f52a1ceb2f198c2b4e58e433287ce9909418b",
+    "results/runs/witness_pipeline_long_history_oct13/execution_traces.json": "370bdd8d52310937eec9a9e86063919fd49cae1f03015eb107f946cb64ec7f8a"
+  },
+  "qualification": "Matched split seeds and lossless formats within three datasets; no latency speedup or population confidence claim",
+  "source_sha256": "0e6908eb4847e45077bc3f435593bfba0d6e934fb7adc88bf77223d5eb85a175"
+}

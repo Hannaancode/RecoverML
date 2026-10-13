@@ -447,3 +447,35 @@ The earlier recorded PyTorch runs are preserved and are not replaced by the curr
 Raw execution traces and summaries and source hashes and plots are kept in results/research/witness_pipeline_oct13 and witness_scaling_oct13 and witness_scaling_large_oct13
 Scaling traces are compressed JSON with their uncompressed content hashes recorded
 The detailed formulation and proof sketch and limitations and commands are in docs/WITNESS_PLANNER_AND_PIPELINES.md
+
+13 OCTOBER 2026 LONGER HISTORIES AND COMPLETE EQUAL BUDGET AUDIT
+18 additional constructed histories have twelve model versions and two split seeds per dataset and format
+432 exact version recoveries are recorded across both minimum storage policies
+The twelve lossless histories average 23.6367 percent total storage savings
+At the smaller selected storage the witness executor restores 144 of 144 lossless versions and the logical executor restores zero of 144
+The rounded CSV control saves zero bytes and both policies recover 72 of 72 rounded CSV versions at their shared minimum
+The matched seed mean at three versions is 17.8620 percent
+Long history gains are 20.5116 percent for Breast Cancer and 17.2515 percent for Iris and 33.1471 percent for Wine
+Iris percentage savings fall because its manifest grows and the logical baseline already keeps one shared feature checkpoint
+Wine changes its logical optimum from model and prediction checkpoints to one shared feature checkpoint
+Therefore increasing history length does not always increase the percentage saving
+
+COMPUTE TRADEOFF
+For the three version lossless histories median measured request CPU work is 0.3184 ms for logical Breast Cancer recovery and 6.1981 ms for witness recovery
+Wine values are 0.3445 ms and 5.4133 ms and Iris values are 4.5858 ms and 5.0780 ms
+These are descriptive measurements at each policy own storage minimum and not same budget timing comparisons
+This storage objective saves files by doing more work and no latency speedup is claimed
+
+DISK ONLY REPRODUCTION
+A separate audit reads the existing selected witness stores without capture archives and checks manifest target hashes
+It records all equal budget attempts including the expected blocked logical requests
+There are 63 cases and 702 attempts and 468 exact successful requests and 234 expected blocked requests
+All per case success counts match the earlier summaries and no archive payload is read
+The initial fresh audit correctly refused an environment mismatch caused by numerical libraries being imported after thread limits
+Loading the pinned libraries before applying the original single thread contract fixed audit initialization
+No recorded environments were changed and verification remains enabled
+A fresh complete suite log confirms 57 tests with 52 passing and five optional PyTorch tests skipped
+One intermediate test log lacked a completion marker and was not used as completion evidence
+
+The long history and audit and matched plot evidence is in the corresponding results/research folders
+The earlier paper and milestone results remain unchanged and the novelty claim remains a scoped research candidate

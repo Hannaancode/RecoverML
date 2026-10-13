@@ -84,6 +84,47 @@ Five split seeds are variations within each dataset and not five independent dat
 Recorded recovery times are descriptive and no latency speedup is claimed
 Extra computation may be needed to achieve the storage saving
 
+## Longer histories and the storage compute tradeoff
+
+An additional matrix uses 12 model versions and two split seeds per dataset and format
+There are 18 histories and 432 exact version recoveries across the two policies
+The twelve lossless histories average 23.64 percent total storage savings
+At the smaller storage the new executor restores 144 of 144 lossless requests and the logical executor restores zero of 144
+Rounded CSV remains a zero saving control and both methods restore all 72 rounded CSV versions at the shared minimum
+
+For a matched comparison the three version matrix is restricted to the same two seeds
+
+| Dataset | Mean saving with 3 versions | Mean saving with 12 versions |
+|---|---:|---:|
+| Breast Cancer | 6.45 percent | 20.51 percent |
+| Iris | 26.81 percent | 17.25 percent |
+| Wine | 20.33 percent | 33.15 percent |
+
+Iris already uses one shared feature checkpoint in the logical optimum and its larger manifest reduces the percentage saving for longer histories
+Wine changes from retaining model and prediction files at three versions to retaining one shared feature checkpoint at twelve versions
+Therefore history length and metadata and the baseline checkpoint choice all affect the saving
+
+The three version Breast Cancer runs record median request CPU work of 0.32 ms for the larger logical store and 6.20 ms for witness recovery
+The three version Wine runs record 0.34 ms and 5.41 ms respectively
+The Iris runs record 4.59 ms and 5.08 ms respectively because both policies already replay model training
+These are descriptive timings at each policy own minimum storage and are not a same budget latency comparison or a latency speedup claim
+The new objective trades more computation for fewer retained files
+
+## Disk only audit of every equal budget attempt
+
+A separate process reopens the already selected witness stores and does not access capture archives
+It tests both recovery rules at exactly those stored files and verifies every returned target against its manifest hash
+Every attempt has timestamps and CPU work and either verified success or an expected blocked error
+There are 63 cases and 702 attempts and 468 exact successes and 234 expected blocked requests
+All per case counts reproduce the earlier short and long history summaries
+
+The first fresh audit correctly refused an execution environment mismatch when numerical libraries were loaded after thread limits were applied
+The audit now loads the pinned libraries before applying the original single thread contract
+Environment checking remains enabled and the recorded manifests are unchanged
+
+The long history and disk only audit evidence is in results/research/witness_pipeline_long_history_oct13 and results/research/witness_equal_budget_audit_oct13
+The matched history plot and descriptive CPU report are in results/research/witness_history_analysis_oct13
+
 ## Scaling with physical alias cycles
 
 The generated family includes an opaque target and an identity producer for each target
@@ -128,6 +169,9 @@ PYTHONPATH=src python -m unittest discover -s tests -p test_witness_optimizer.py
 PYTHONPATH=src python -m recoverml.witness_pipeline --output results/runs/new_witness_pipeline --seeds 5 --versions 3
 PYTHONPATH=src python -m recoverml.witness_scaling --output results/runs/new_witness_scaling --widths 8 32 128 --seeds 3
 PYTHONPATH=src python -m recoverml.witness_scaling --output results/runs/new_witness_scaling_large --widths 1024 --seeds 1
+PYTHONPATH=src python -m recoverml.witness_pipeline --output results/runs/new_witness_long_history --seeds 2 --versions 12
+PYTHONPATH=src python -m recoverml.witness_budget_audit --source results/runs/new_witness_pipeline results/runs/new_witness_long_history --output results/runs/new_equal_budget_audit
+python scripts/witness_history_analysis.py --short results/runs/new_witness_pipeline --long results/runs/new_witness_long_history --output results/runs/new_history_analysis
 ```
 
 Evidence is stored in results/research/witness_pipeline_oct13 and results/research/witness_scaling_oct13 and results/research/witness_scaling_large_oct13
