@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-10-11T15:42:30.486828+00:00",
+  "ended_utc": "2026-10-11T15:42:46.021233+00:00",
+  "histories": 15,
+  "planner_executions": 315,
+  "exact_restores": 45,
+  "max_nodes": 1038,
+  "max_edges": 1068,
+  "all_objectives_equivalent": true,
+  "all_solver_runs_proven_optimal": true,
+  "median_v2_to_v4_speedup": 10.471142909916406,
+  "median_variable_reduction": 0.9820846905537459,
+  "largest_case_variable_reduction": 0.9954280964256027,
+  "qualification": "Executable synthetic topology study; values are small arrays and results measure planner scaling not neural training"
+}
