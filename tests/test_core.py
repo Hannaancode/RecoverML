@@ -37,6 +37,29 @@ class CoreTests(unittest.TestCase):
                 for tid,value in zip(g.targets[version],restored):
                     self.assertEqual(pack(value),g.archive[g.nodes[tid].blob])
 
+    def test_exact_replay_cpu_neural_network(self):
+        g,_ = build_history(dict(dataset='digits',rows=1797,versions=2,
+            model='mlp',change='parameters',boundary='deterministic',
+            hidden_units=[16],mlp_max_iter=60),707)
+        store=self.base/'mlp'
+        write_store(g,g.roots,store)
+        replay_graph=Graph.read(store/'manifest.json')
+        for version in g.targets:
+            restored=DiskRestorer(replay_graph,store).version(version)
+            for nid,value in zip(g.targets[version],restored):
+                self.assertEqual(pack(value),g.archive[g.nodes[nid].blob])
+
+    def test_nondeterministic_augmentation_is_fail_closed(self):
+        g,_ = build_history(dict(dataset='wine',rows=178,versions=2,
+            model='logistic',change='parameters',boundary='nondeterministic'),708)
+        boundary=[n for n in g.nodes.values() if n.op=='nondeterministic_augment']
+        self.assertEqual(len(boundary),2)
+        self.assertTrue(all(not n.replayable for n in boundary))
+        store=self.base/'nondeterministic'
+        write_store(g,g.roots,store)
+        with self.assertRaisesRegex(RestoreError,'non-replayable'):
+            DiskRestorer(Graph.read(store/'manifest.json'),store).version('0')
+
     def test_deep_affine_pipeline_replays_exactly(self):
         g,_ = build_history(dict(dataset='iris',rows=150,versions=2,
             model='logistic',change='parameters',boundary='deterministic',

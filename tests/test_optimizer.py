@@ -186,6 +186,17 @@ class OptimizerTests(unittest.TestCase):
         self.assertEqual(status,'ok')
         self.assertAlmostEqual(g.estimate(s),exact(g,budget)['objective'],places=9)
 
+    def test_wide_topology_frontier_preserves_optimum(self):
+        from recoverml.topology_scaling import build_wide_history
+        g=build_wide_history(width=4,depth=5,versions=2,seed=901)
+        targets=g.roots|{g.nodes[t].blob for ts in g.targets.values() for t in ts}
+        budget=g.metadata_bytes()+sum(g.sizes()[b] for b in targets)
+        v2=select(g,'recoverability_v2',budget)
+        v4=select(g,'recoverability_v4',budget)
+        self.assertEqual(v2.status,'ok'); self.assertEqual(v4.status,'ok')
+        self.assertAlmostEqual(g.estimate(v2.retained),g.estimate(v4.retained),places=9)
+        self.assertLess(v4.history[0]['variables'],v2.history[0]['variables'])
+
 
 if __name__=='__main__':
     unittest.main()

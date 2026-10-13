@@ -1,0 +1,35 @@
+{
+  "repeats": 3,
+  "versions": 3,
+  "budget_fractions": [0.15, 0.3, 0.5, 0.75, 1.0],
+  "policies": [
+    "full_snapshot",
+    "full_replay",
+    "target_snapshots",
+    "cost_cache",
+    "recoverability_v2",
+    "recoverability_v3",
+    "recoverability_v4"
+  ],
+  "cases": [
+    {
+      "dataset": "digits",
+      "rows": 1797,
+      "model": "mlp",
+      "change": "parameters",
+      "boundary": "deterministic",
+      "hidden_units": [32],
+      "mlp_max_iter": 100
+    },
+    {
+      "dataset": "digits",
+      "rows": 1797,
+      "model": "mlp",
+      "change": "parameters",
+      "boundary": "nondeterministic",
+      "dropout_fraction": 0.03,
+      "hidden_units": [32],
+      "mlp_max_iter": 100
+    }
+  ]
+}

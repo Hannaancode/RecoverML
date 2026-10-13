@@ -67,6 +67,16 @@ def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
             enriched = np.ascontiguousarray(values[x] + secret_rng.normal(0, 0.01, values[x].shape))
             x = add('external_features', [x], {'request_version':v}, v, 'row-local',
                     value=enriched, replayable=False)
+        elif config['boundary'] == 'nondeterministic':
+            # A genuine entropy-backed augmentation boundary.  RecoverML does
+            # not pretend that the unrecorded random draws can be replayed.
+            entropy_rng = np.random.default_rng()
+            mask = entropy_rng.random(values[x].shape) >= config.get('dropout_fraction', 0.03)
+            augmented = np.ascontiguousarray(values[x] * mask)
+            x = add('nondeterministic_augment', [x],
+                    {'dropout_fraction':config.get('dropout_fraction', 0.03),
+                     'request_version':v}, v, 'random-augmentation',
+                    value=augmented, replayable=False)
         split = add('split', [], {'rows':len(base), 'seed':seed}, v, 'membership')
         scaler = add('fit_scaler', [x,split], {}, v, 'fitted-global')
         scaled = add('scale', [x,scaler], {}, v, 'row-local-given-fitted-state')
@@ -83,7 +93,11 @@ def build_history(config: dict, seed: int) -> tuple[Graph, dict]:
             model = add('train', [scaled,root_y,split],
                         {'model':config['model'], 'C':c*(1+branch*.5), 'seed':seed+branch,
                          'trees':config.get('trees',12),
-                         'depth':config.get('depth',5)+v if config['change']=='parameters' else config.get('depth',6)},
+                         'depth':config.get('depth',5)+v if config['change']=='parameters' else config.get('depth',6),
+                         'hidden_units':config.get('hidden_units',[32]),
+                         'alpha':config.get('alpha',1e-4)*(1+v if config['change']=='parameters' else 1),
+                         'max_iter':config.get('mlp_max_iter',120),
+                         'tol':config.get('mlp_tol',1e-5)},
                         v, 'fitted-global')
             pred = add('predict', [model,scaled,split], {}, v, 'row-local-given-model')
             targets.extend([model,pred] if scope=='model_and_predictions' else [pred])

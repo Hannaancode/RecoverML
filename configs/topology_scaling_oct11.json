@@ -1,0 +1,12 @@
+{
+  "versions": 3,
+  "repeats": 3,
+  "timing_trials": 7,
+  "topologies": [
+    {"width": 1, "depth": 16},
+    {"width": 4, "depth": 16},
+    {"width": 16, "depth": 16},
+    {"width": 32, "depth": 16},
+    {"width": 32, "depth": 32}
+  ]
+}

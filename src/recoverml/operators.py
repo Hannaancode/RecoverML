@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 
 
@@ -11,6 +12,8 @@ def execute(op, values, p):
         return np.ascontiguousarray(np.sign(values[0]) * np.log1p(np.abs(values[0])))
     if op == 'concat':
         return np.ascontiguousarray(np.concatenate(values, axis=0))
+    if op == 'mean_features':
+        return np.ascontiguousarray(np.mean(np.stack(values, axis=0), axis=0))
     if op == 'affine_features':
         return np.ascontiguousarray(values[0] * p['scale'] + p['offset'])
     if op == 'split':
@@ -30,6 +33,14 @@ def execute(op, values, p):
         if p['model'] == 'logistic':
             model = LogisticRegression(C=p['C'], solver='lbfgs', max_iter=400,
                                         tol=1e-9, random_state=p['seed'])
+        elif p['model'] == 'mlp':
+            # A deterministic CPU neural network.  The fixed seed and the
+            # single-thread experiment contract make an exact replay testable.
+            model = MLPClassifier(
+                hidden_layer_sizes=tuple(p.get('hidden_units', (32,))),
+                activation='relu', solver='lbfgs', alpha=p.get('alpha', 1e-4),
+                max_iter=p.get('max_iter', 120), tol=p.get('tol', 1e-5),
+                random_state=p['seed'])
         else:
             model = RandomForestClassifier(n_estimators=p['trees'], max_depth=p['depth'],
                                            random_state=p['seed'], n_jobs=1)
