@@ -77,7 +77,7 @@ https://mboehm7.github.io/resources/sigmod2021a_lima.pdf
 E graph extraction already selects equivalent computation paths and explicitly handles cyclic alternatives
 Therefore alternative path selection and acyclic extraction cannot be presented as new ideas
 
-Source: He and Huang and Wang 2023 Improving Term Extraction with Acyclic Constraints
+Source: He and Dong and Malik and Gupta 2023 Improving Term Extraction with Acyclic Constraints
 https://pldi23.sigplan.org/details/egraphs-2023-papers/3/Improving-Term-Extraction-with-Acyclic-Constraints
 
 ## Next gate for a publishable contribution
@@ -93,6 +93,7 @@ Ask an independent reviewer to challenge the novelty and the artifact versus eve
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -p test_witness.py -v
 PYTHONPATH=src python -m recoverml.witness_experiment --output results/runs/witness_candidate_new_run
+PYTHONPATH=src python -m recoverml.witness_audit --source results/milestone2/pytorch_validated_oct13/capture_archives --output results/runs/new_neural_witness_audit.json
 ```
 
 Published summaries and raw execution traces are in results/research/artifact_witness_oct13
