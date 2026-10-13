@@ -9,9 +9,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from .benchmark import write_csv
 
-POLICIES=['full_snapshot','full_replay','cost_cache','pinned_cost','target_snapshots','recoverability','recoverability_v2','recoverability_v3']
-LABELS=['Full snapshots','Full replay','Cost cache','Pinned boundaries','Target snapshots','Planner v1','Planner v2','Planner v3']
-COLORS=['#737373','#ba4a00','#a569bd','#2471a3','#17a589','#8299b5','#496a9a','#172e57']
+POLICIES=['full_snapshot','full_replay','cost_cache','pinned_cost','target_snapshots','recoverability','recoverability_v2','recoverability_v3','recoverability_v4']
+LABELS=['Full snapshots','Full replay','Cost cache','Pinned boundaries','Target snapshots','Planner v1','Planner v2','Planner v3','Planner v4']
+COLORS=['#737373','#ba4a00','#a569bd','#2471a3','#17a589','#8299b5','#496a9a','#172e57','#c0392b']
 
 
 def boolean(v):
@@ -19,7 +19,8 @@ def boolean(v):
 
 
 def analyze(directory: Path):
-    rows=list(csv.DictReader((directory/'raw_requests.csv').open()))
+    with (directory/'raw_requests.csv').open() as handle:
+        rows=list(csv.DictReader(handle))
     groups=defaultdict(list)
     for r in rows:
         r['exact']=boolean(r['exact'])
@@ -64,7 +65,7 @@ def analyze(directory: Path):
     if not example:
         # Public-data transfer studies do not contain the historical synthetic
         # case. Use all declared opaque histories instead of producing a blank plot.
-        example=[r for r in rows if r['boundary']=='opaque'
+        example=[r for r in rows if r['boundary'] in ('opaque','nondeterministic')
                  and r['change']=='parameters' and not r['protect_intermediate']
                  and int(r.get('branches',1))==1]
         example_budget=.4 if .4 in budgets else budgets[len(budgets)//2]
@@ -105,11 +106,13 @@ def analyze(directory: Path):
     for i,v in enumerate(values):ax.text(i,v,f'{v:.1f}',ha='center',va='bottom')
     fig.savefig(directory/'planning_overhead.png',dpi=180);plt.close(fig)
     unexpected=[r for r in rows if r['status']=='restore_failed' and 'non-replayable' not in r['error']]
-    proposed_name=('recoverability_v3' if 'recoverability_v3' in policies else
+    proposed_name=('recoverability_v4' if 'recoverability_v4' in policies else
+                   'recoverability_v3' if 'recoverability_v3' in policies else
                    'recoverability_v2' if 'recoverability_v2' in policies else 'recoverability')
     proposed=[r for r in rows if r['policy']==proposed_name]
     proposed_admitted=[r for r in proposed if r['within_budget']]
-    report=dict(total_requests=len(rows),status_counts=dict(Counter(r['status'] for r in rows)),
+    report=dict(total_requests=len(rows),proposed_policy=proposed_name,
+        plotted_policies=list(policies),status_counts=dict(Counter(r['status'] for r in rows)),
         unexpected_failures=len(unexpected),proposed_admitted=len(proposed_admitted),
         proposed_exact=sum(r['exact'] for r in proposed_admitted),
         proposed_budget_blocked=sum(not r['within_budget'] for r in proposed),summary=table)
