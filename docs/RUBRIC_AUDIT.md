@@ -1,11 +1,11 @@
-# Milestone 2 rubric evidence — updated 11 October 2026
+# Milestone 2 rubric evidence — updated 13 October 2026
 
 We have all four rubric screenshots and this table links each requirement to evidence
 This is a submission checklist and the instructor decides the grade
 
 | Rubric | Weight | Evidence |
 |---|---:|---|
-| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 39 passing tests including neural replay and exhaustive frontier checks |
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 49 passing tests including PyTorch replay and empty-sequence inference and exhaustive frontier checks |
 | Benchmark harness | 25% | bash run_benchmarks.sh runs the main rubric matrix and Make targets run public-data and neural and frontier and topology studies without manual policy switching |
 | Trace data authenticity | 25% | The main performance files include timestamps and latency percentiles and CPU and memory data and the public-data and frontier studies add raw planner and restore traces |
 | Preliminary plots and analysis | 15% | Throughput and latency and storage plots compare baselines and the V3 ablation and V4 scaling plots show paired planning behavior and model size |
@@ -24,7 +24,10 @@ The 10 October Iris study adds 15 histories and 1350 planner executions and 120 
 All 450 paired sets reached proven optima and returned the same objective and V4 reduced the depth 128 formulation from 1256 variables to 69
 The 11 October neural study adds 6 real Digits MLP histories and 630 requests with no unexpected failures
 The 11 October topology study adds 15 histories with up to 1038 nodes and 315 proven optimal planner executions and 45 exact restores
-The current research record is in docs/reserach_progress.txt and the 39 test suite passed locally on 11 October and is rerun by GitHub Actions
+The 13 October final PyTorch study adds 12 CNN and text Transformer histories and 432 requests with all 48 admitted V4 requests exact
+It separately verifies 24 native .pt checkpoints and finite predictions and the placement control adds 1215 optimal planner runs and 135 exact restores
+The current research record is in docs/reserach_progress.txt and the 49 test suite passed locally on 13 October
+The configured optional PyTorch CI job will rerun the neural tests after publication and has not yet been observed
 
 ## Review commands
 

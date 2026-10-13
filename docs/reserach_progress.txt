@@ -292,3 +292,69 @@ The complete automated suite has 39 tests including exact MLP replay and fail cl
 The new evidence adds a real neural workload and a thousand node graph study and a focused primary source novelty table and an integrated manuscript
 The complete paper is now estimated at about 70 percent ready
 The remaining high value work is a PyTorch vision workload and a Transformer workload and a second machine repetition and an independent novelty and reproduction review and final venue formatting
+
+PROGRESS ON 13 OCTOBER — 85 PERCENT INTERNAL DEVELOPMENT CHECKPOINT
+Installed the pinned PyTorch 2.9.1 CPU build and obtained the real 20 Newsgroups dataset
+Added a CNN with 9930 parameters trained on Digits images and a two layer four head text Transformer with 83780 parameters trained from scratch on four newsgroup categories
+The vocabulary is fit on the training split only and dataset hashes and sample indexes and the vocabulary are saved with the evidence
+Added replay operators and canonical numerical state identity and optional package dependencies and five PyTorch correctness tests
+The scope is trained weights and inference and does not include optimizer state or training resume
+
+REPORTING FIX FOUND DURING AUDIT
+The earlier analysis generator did not plot Planner V4 and selected V3 for proposed-policy findings
+Added V4 to the legend and plots and summary selection and allowed nondeterministic cases in the boundary panel
+An automated regression fixture verifies that V4 appears in the report and figure selection
+Earlier measured raw files are retained and the final study uses the corrected generator
+
+NUMERICAL FAILURE AND CORRECTION
+The first torch replay test found pickle identity differences after parameters round-tripped through JSON
+Canonical state dictionary encoding now separates artifact identity from pickle reference aliasing
+The first full text run passed hash equality but a numerical check found nonfinite predictions for all-padding stripped posts
+That diagnostic run and its exact checkpoints and matching operator source are preserved and excluded from final neural quality claims
+The final Transformer enables one attention key for an empty sequence and rejects nonfinite loss and weight state and inference output
+Added an empty-sequence regression and reran the full experiment in a fresh folder
+
+FINAL PYTORCH RESULT
+12 histories and 216 policy selections and 432 recovery requests and 834 trace events
+The complete matrix and unique request and matching trace audit passed
+V4 admits 48 requests and restores all 48 exact weights and predictions and blocks 24 infeasible requests before execution
+At the 50 percent budget V4 and V2 restore 18 of 24 requests and target snapshots restore 6 and pinned cost restores 12 and full replay restores 6 and full snapshots restore none
+No unexpected restoration failure occurs and expected missing non replayable paths remain in the denominator
+24 native .pt state dictionaries were loaded in a separate process with weights_only mode and all weights and predictions match captured identities
+All final outputs are finite
+CNN median test accuracy is 95.56 percent and text Transformer median is 45.25 percent on the small balanced four class workload
+The classifier scores demonstrate learned workloads and are not an accuracy contribution for RecoverML
+
+BOUNDARY PLACEMENT CONTROL RESULT
+45 histories and 1215 proven optimal planner executions and 135 exact restores
+The experiment includes no boundaries and boundaries on half the branches and boundaries after the full merge
+The median V2 to V4 speedups are 1.0017 and 1.9061 and 10.1272 respectively
+Median variable reductions are 0.2182 percent and 48.9148 percent and 98.2085 percent respectively
+The no boundary result shows that the frontier does not provide a universal speedup
+Repeated seeds across widths are treated as seed blocks in the manuscript bootstrap and timing repeats are not independent statistical subjects
+The clustered 95 percent intervals are 0.9904 to 1.0221 and 1.7437 to 1.9681 and 9.5182 to 10.5157
+The initial unclustered summary is retained for analysis history and not used for the paper claim
+
+INDEPENDENT ORACLE RESULT
+128 generated logical DAGs with aliases and shared ancestors and overlapping and duplicate protected targets
+2048 physical subsets were enumerated and the exact feasibility and objective projection rule passed every check
+1890 V2 and V3 and V4 planner comparisons matched an independently implemented cost recursion and exhaustive optimum
+The graphs deliberately contain four optional physical values to keep exhaustive testing bounded
+This is separate verification code and not a human independent reproduction
+
+LITERATURE RECHECK AND CLAIM CORRECTION
+HELIX already describes output slicing and pruning ancestry behind loads
+ExoFlow already describes nondeterministic committed task frontiers and checkpoint cuts
+Kishu already describes exact bytestring restoration and Checkmate already formulates and simplifies constrained rematerialization MILPs
+Therefore slicing and frontiers and exact byte identity and budget optimization are not individually new
+The candidate contribution is narrower physical-blob-aware presolve for jointly protected historical requests under load first recovery and a tested account of where it helps
+The novelty is modest and provisional and still needs expert challenge and citation chaining
+
+MANUSCRIPT AND VALIDATION
+The manuscript now includes the full mathematical model and projection proof and limitations and actual vision and language workloads and raw-derived tables and cluster confidence intervals and figures and primary references
+A readable PDF is produced from the same source and checked visually
+The complete local suite has 48 passing tests
+The internal work-completion estimate is now approximately 85 percent and this is not an acceptance probability
+A second-machine GitHub test and control job is configured but cannot be claimed as run until its published artifact is observed and audited
+Remaining submission gates are second-machine reproduction and independent novelty review and a compatible prior algorithm comparison and larger real payload workflow and load cost sensitivity and venue-specific editing
+The final added statistics regression checks that duplicating width observations does not create extra independent seed subjects and brings the complete suite to 49 tests

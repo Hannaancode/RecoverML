@@ -20,7 +20,10 @@ The CPU neural study used the real Digits data and a multilayer neural network a
 At a 50 percent storage budget version 4 restored all 18 requested outputs while full snapshots restored none and full replay restored 9
 The wide graph study reached 1038 nodes and 1068 edges and all 315 planner runs kept the same proven optimal result
 Version 4 used 98.21 percent fewer variables at the median and was 10.47 times faster than version 2 at the median
-The latest suite has 39 passing automated tests and the raw measurements and plots are included
+The PyTorch study adds a CNN for Digits images and a Transformer for real 20 Newsgroups text and restores all 48 admitted version 4 requests exactly
+The same study checks 24 native model checkpoints and the 50 percent budget restores 18 of 24 requests while target snapshots restore 6
+The new placement study uses 45 histories and 1215 planner runs and 135 exact restores and explains where the frontier improves planning
+The latest suite has 49 passing automated tests and the raw measurements and plots are included
 
 ## Start here
 
@@ -35,6 +38,7 @@ The latest suite has 39 passing automated tests and the raw measurements and plo
 | Exact frontier rule and proof | [Frontier reduction](docs/FRONTIER_REDUCTION.md) |
 | Focused novelty comparison | [Novelty audit](docs/NOVELTY_AUDIT.md) |
 | Current integrated paper | [Paper draft](paper/RecoverML_draft.md) |
+| Readable paper with tables and plots | [Paper PDF](output/pdf/RecoverML_paper.pdf) |
 | Research sources for the next stage | [References](docs/REFERENCES.md) |
 | Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
 | Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
@@ -107,9 +111,24 @@ A fresh local benchmark captures histories using the installed environment
 ## Next plan
 
 Repeat the main timing study on another machine and compare the measured results
-Add a PyTorch vision model and a Transformer workload and keep the same exact checks
+Add larger real workflow graphs and measure how load costs affect planning
 Ask an independent reviewer to challenge the novelty table and reproduce the main experiment
 Turn the current paper draft into the selected venue format and connect every claim to its evidence
 The earlier configurations and reports and raw measurements remain available for this work
 
 [Public repository](https://github.com/Hannaancode/RecoverML)
+
+## Run the PyTorch studies
+
+Install the pinned CPU package and prepare the text dataset once and then run the automated study
+
+```bash
+python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+python -c "from sklearn.datasets import fetch_20newsgroups; fetch_20newsgroups(subset='all', remove=('headers','footers','quotes'))"
+make pytorch-study
+make boundary-controls
+make oracle-audit
+```
+
+The checkpoints contain trained weights and model settings and the loader checks exact predictions
+The research progress file records the experiments and the completed checks

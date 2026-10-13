@@ -14,6 +14,11 @@ The separate reports and source and configs remain available for future work
 | Planner V4 frontier scaling study | [milestone2/frontier_scaling_oct10](milestone2/frontier_scaling_oct10) |
 | CPU neural replay study | [milestone2/neural_oct11](milestone2/neural_oct11) |
 | Wide graph topology study | [milestone2/topology_scaling_oct11](milestone2/topology_scaling_oct11) |
+| Final finite-output PyTorch CNN and text study | [milestone2/pytorch_validated_oct13](milestone2/pytorch_validated_oct13) |
+| Native PyTorch checkpoints and data provenance | [milestone2/pytorch_validated_checkpoints_oct13](milestone2/pytorch_validated_checkpoints_oct13) |
+| No-boundary and partial-boundary controls | [milestone2/boundary_controls_oct13](milestone2/boundary_controls_oct13) |
+| Independent exhaustive presolve audit | [milestone2/oracle_oct13](milestone2/oracle_oct13) |
+| Raw-derived manuscript claims and cluster statistics | [milestone2/paper_evidence_oct13](milestone2/paper_evidence_oct13) |
 | Latest 31 test log and stronger audit check | [validation/2026-10-08](validation/2026-10-08) |
 | Original 6600 request storage experiment | [archive/preliminary](archive/preliminary) |
 | Expanded 11200 request storage experiment | [archive/iteration2](archive/iteration2) |
@@ -81,6 +86,21 @@ The largest graph has 1038 nodes and 1068 edges and every solver run reached a p
 All planner objectives agree and version 4 gave a 10.47 times median speedup over version 2 with a 98.21 percent median variable reduction
 
 ## New runs
+
+The initial PyTorch run and its native checkpoint export are retained as diagnostic evidence
+They contain exact reproduction of some nonfinite text outputs and are excluded from final neural quality claims
+The final finite-output study uses a fresh folder and an empty-sequence regression fix
+Native checkpoint container hashes record file integrity and the canonical numerical artifact hashes record restoration identity
+
+The final PyTorch matrix contains 432 requests and 216 selections and 12 histories and 834 trace events
+V4 restores all 48 admitted requests and blocks 24 requests before execution
+At a 50 percent budget V4 restores 18 of 24 outputs and direct target snapshots restore 6 and full snapshots restore none
+The final model audit round-trips 24 native checkpoints and their predictions and all outputs are finite
+
+The boundary study contains 45 histories and 1215 optimal planner runs and 135 exact restores
+The manuscript uses seed-block confidence intervals recomputed from raw history medians by paper_evidence
+The original boundary summary also keeps its earlier unclustered bootstrap for transparent analysis history and that interval is not used in the manuscript
+The exhaustive audit covers 128 logical graphs and 2048 physical subsets and 1890 planner comparisons
 
 The runner creates fresh output under results/runs and refuses an existing output folder
 Those local runs are excluded from Git until selected evidence is reviewed for publication

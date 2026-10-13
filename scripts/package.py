@@ -8,12 +8,13 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 single = ['.gitignore','Makefile','README.md','pyproject.toml','requirements.txt','run_benchmarks.sh']
-trees = ['src','tests','configs','docs','paper','scripts','.github','examples/captured_history',
+trees = ['src','tests','configs','docs','paper','output/pdf','scripts','.github','examples/captured_history',
          'results/archive','results/milestone2','results/validation']
 files = [root / name for name in single]
 for tree in trees:
     for path in (root/tree).rglob('*'):
-        if path.is_file() and not any(part in ('__pycache__','capture_archives','policy_stores','repair_stores','work')
+        if path.is_file() and not any(part in ('__pycache__','capture_archives','policy_stores','repair_stores','work',
+                                             'pytorch_oct13','pytorch_checkpoints_oct13')
                                       for part in path.relative_to(root).parts) and path.suffix not in ('.pyc','.tmp'):
             files.append(path)
 files.append(root/'results/README.md')
