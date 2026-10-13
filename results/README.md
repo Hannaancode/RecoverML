@@ -12,6 +12,8 @@ The separate reports and source and configs remain available for future work
 | Repeated Digits and Wine study | [milestone2/new_data_oct9](milestone2/new_data_oct9) |
 | Planner V3 paired ablation | [milestone2/planner_ablation_oct9](milestone2/planner_ablation_oct9) |
 | Planner V4 frontier scaling study | [milestone2/frontier_scaling_oct10](milestone2/frontier_scaling_oct10) |
+| CPU neural replay study | [milestone2/neural_oct11](milestone2/neural_oct11) |
+| Wide graph topology study | [milestone2/topology_scaling_oct11](milestone2/topology_scaling_oct11) |
 | Latest 31 test log and stronger audit check | [validation/2026-10-08](validation/2026-10-08) |
 | Original 6600 request storage experiment | [archive/preliminary](archive/preliminary) |
 | Expanded 11200 request storage experiment | [archive/iteration2](archive/iteration2) |
@@ -61,6 +63,22 @@ The published output is in [milestone2/frontier_scaling_oct10](milestone2/fronti
 It contains 15 captured histories and 1350 timed planner executions and 120 exact restores
 All 450 paired planner sets reached proven optima and returned the same objective
 At a frontier depth of 128 V4 reduced the formulation from 1256 variables to 69 and the median history level planning speedup over V2 was 3.38 times
+
+## CPU neural replay study
+
+Run `make neural-study` to reproduce the Digits multilayer neural network experiment
+The published output is in [milestone2/neural_oct11](milestone2/neural_oct11)
+It contains 6 captured histories and 210 policy selections and 630 recovery requests and 1233 raw trace events
+Every admitted version 4 request restored exact bytes and the complete matrix audit found no unexpected failures
+At a 50 percent budget version 4 restored 18 of 18 requests while full snapshots restored 0 and full replay restored 9
+
+## Wide graph topology study
+
+Run `make topology-scaling` to reproduce the wide and deep graph planner comparison
+The published output is in [milestone2/topology_scaling_oct11](milestone2/topology_scaling_oct11)
+It contains 15 executable histories and 315 planner executions and 45 exact restores
+The largest graph has 1038 nodes and 1068 edges and every solver run reached a proven optimum
+All planner objectives agree and version 4 gave a 10.47 times median speedup over version 2 with a 98.21 percent median variable reduction
 
 ## New runs
 

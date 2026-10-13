@@ -16,7 +16,11 @@ The new public data study tested 3600 requests across 24 Digits and Wine histori
 Version 3 reduced the opaque solver model from 129 variables to 98 and its repeated planner study measured a 1.18 times median history speedup over version 2
 The new Iris scaling study used 15 histories and version 4 reduced a depth 128 model from 1256 variables to 69 while keeping every proven optimal objective unchanged
 The same study measured a 3.38 times median history speedup over version 2 and completed 120 exact restores
-The latest suite has 36 passing automated tests and the raw measurements and plots are included
+The CPU neural study used the real Digits data and a multilayer neural network and completed 630 recovery requests with no unexpected failures
+At a 50 percent storage budget version 4 restored all 18 requested outputs while full snapshots restored none and full replay restored 9
+The wide graph study reached 1038 nodes and 1068 edges and all 315 planner runs kept the same proven optimal result
+Version 4 used 98.21 percent fewer variables at the median and was 10.47 times faster than version 2 at the median
+The latest suite has 39 passing automated tests and the raw measurements and plots are included
 
 ## Start here
 
@@ -29,6 +33,8 @@ The latest suite has 36 passing automated tests and the raw measurements and plo
 | Storage coverage and planner comparison | [Iteration 2 report](docs/reports/ITERATION2_REPORT.md) |
 | How the planner works | [Planner design](docs/PLANNER_V2.md) |
 | Exact frontier rule and proof | [Frontier reduction](docs/FRONTIER_REDUCTION.md) |
+| Focused novelty comparison | [Novelty audit](docs/NOVELTY_AUDIT.md) |
+| Current integrated paper | [Paper draft](paper/RecoverML_draft.md) |
 | Research sources for the next stage | [References](docs/REFERENCES.md) |
 | Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
 | Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
@@ -100,10 +106,10 @@ A fresh local benchmark captures histories using the installed environment
 
 ## Next plan
 
-Repeat the benchmark on the submission machine and compare the measured results
-Profile environment validation and trace logging and then test useful performance changes
-Add wider branching and opaque workloads and more data and keep real progress commits with their validation
-Repeat the version 3 study on another machine and add larger graphs and more public datasets
-The earlier configurations and reports and raw measurements remain available for that work
+Repeat the main timing study on another machine and compare the measured results
+Add a PyTorch vision model and a Transformer workload and keep the same exact checks
+Ask an independent reviewer to challenge the novelty table and reproduce the main experiment
+Turn the current paper draft into the selected venue format and connect every claim to its evidence
+The earlier configurations and reports and raw measurements remain available for this work
 
 [Public repository](https://github.com/Hannaancode/RecoverML)

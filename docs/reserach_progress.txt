@@ -244,3 +244,51 @@ Configuration configs/frontier_scaling_oct10.json
 Harness src/recoverml/frontier_scaling.py
 Published evidence results/milestone2/frontier_scaling_oct10
 Formal argument docs/FRONTIER_REDUCTION.md
+
+PROGRESS ON 11 OCTOBER — REAL CPU NEURAL WORKLOAD
+The operator layer now supports a deterministic multilayer perceptron trained with scikit learn
+The experiment uses the real Digits dataset and mean feature processing and three versions and three independent repeats
+It tests both a deterministic path and a true entropy backed nondeterministic augmentation boundary
+That boundary is recorded as non replayable so RecoverML must retain its output or reject a plan before execution
+The configuration compares seven policies at five budgets and does not require a GPU
+
+NEURAL EXPERIMENT RESULT — COMPLETED 11 OCTOBER
+The experiment contains 6 captured histories and 210 policy selections and 630 recovery requests
+It records 1233 raw execution trace events and the audit confirms the full request matrix and matching trace counts
+There were no unexpected failures
+Planner V4 admitted 63 of 90 requests and restored exact bytes for all 63 and it rejected 27 infeasible requests before execution
+At the 50 percent budget V4 restored 18 of 18 requested outputs while full snapshots restored 0 and full replay restored 9
+At feasible budgets V4 retained 27.28 percent of complete capture bytes at the median
+Direct target snapshots reached the same coverage as V4 on this compact neural graph and this comparison is retained because it defines where the planner benefit is not yet visible
+The capture archives are about 3.04 megabytes for deterministic histories and 7.65 megabytes for nondeterministic histories
+This is a real neural network workload on CPU and it is not presented as a large CNN or GPU study
+
+PROGRESS ON 11 OCTOBER — WIDE GRAPH SCALING
+A new harness builds executable numerical workflow graphs with shared sources and non replayable boundaries and many parallel branches
+The five topologies range from width 1 and depth 16 through width 32 and depth 32
+Every retained V4 plan is executed and its restored target bytes are compared with the captured SHA 256 value
+The harness rotates planner order and keeps raw wall and CPU times and solver sizes and restore traces
+
+WIDE GRAPH RESULT — COMPLETED 11 OCTOBER
+The study contains 15 independently captured histories and 315 planner executions and 45 exact restores
+The largest graph has 1038 nodes and 1068 edges
+Every solver execution reached a proven optimum and V2 and V3 and V4 returned equal objective values in every comparison
+The median V2 to V4 planning speedup is 10.47 times
+The median variable reduction is 98.21 percent and the largest variable reduction is 99.54 percent
+On the largest case V2 used 7218 variables while V4 used 33
+For one representative largest history the V2 planning median was 269.466 milliseconds and the V4 median was 14.770 milliseconds
+The graph operations are real and executable but their values are small arrays so this study measures planner scaling and not neural training throughput
+
+NOVELTY AND PAPER UPDATE — 11 OCTOBER
+The focused novelty audit now compares RecoverML with HELIX and LIMA and Kishu and ElasticNotebook and ExoFlow and FlorDB and Disdat and production pipeline materialization and CAPS
+The reviewed sources overlap in lineage and reuse and notebook checkpointing and exactly once workflow recovery
+The focused RecoverML claim is the exact protected target replayability frontier reduction under a load first multi version recovery contract
+No reviewed primary source states that same reduction and this remains a provisional novelty result until citation chaining and independent challenge are complete
+The formal document now states the theorem and construction and proof and the counterexample outside its assumptions
+An integrated paper draft now includes the abstract and introduction and related work and system model and proof and implementation and method and preliminary results and limitations and conclusion
+
+CURRENT READINESS AFTER 11 OCTOBER
+The complete automated suite has 39 tests including exact MLP replay and fail closed nondeterministic behavior and wide topology optimum preservation
+The new evidence adds a real neural workload and a thousand node graph study and a focused primary source novelty table and an integrated manuscript
+The complete paper is now estimated at about 70 percent ready
+The remaining high value work is a PyTorch vision workload and a Transformer workload and a second machine repetition and an independent novelty and reproduction review and final venue formatting

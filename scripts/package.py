@@ -8,7 +8,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 single = ['.gitignore','Makefile','README.md','pyproject.toml','requirements.txt','run_benchmarks.sh']
-trees = ['src','tests','configs','docs','scripts','.github','examples/captured_history',
+trees = ['src','tests','configs','docs','paper','scripts','.github','examples/captured_history',
          'results/archive','results/milestone2','results/validation']
 files = [root / name for name in single]
 for tree in trees:

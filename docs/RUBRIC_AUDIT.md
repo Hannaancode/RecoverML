@@ -1,12 +1,12 @@
-# Milestone 2 rubric evidence — updated 10 October 2026
+# Milestone 2 rubric evidence — updated 11 October 2026
 
 We have all four rubric screenshots and this table links each requirement to evidence
 This is a submission checklist and the instructor decides the grade
 
 | Rubric | Weight | Evidence |
 |---|---:|---|
-| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 36 passing tests including exhaustive frontier checks |
-| Benchmark harness | 25% | bash run_benchmarks.sh runs the main rubric matrix and make new-data-repeated and make frontier-scaling run the public-data and scaling studies without manual policy switching |
+| Implementation and authenticity | 35% | Modular Python capture and graph and retention and exact disk restore code in src/recoverml and 39 passing tests including neural replay and exhaustive frontier checks |
+| Benchmark harness | 25% | bash run_benchmarks.sh runs the main rubric matrix and Make targets run public-data and neural and frontier and topology studies without manual policy switching |
 | Trace data authenticity | 25% | The main performance files include timestamps and latency percentiles and CPU and memory data and the public-data and frontier studies add raw planner and restore traces |
 | Preliminary plots and analysis | 15% | Throughput and latency and storage plots compare baselines and the V3 ablation and V4 scaling plots show paired planning behavior and model size |
 
@@ -22,7 +22,9 @@ The 9 October public-data audit covers 3600 requests and 720 selections across 2
 Planner V3 restored all 535 admitted requests and its 900 trial ablation preserved every V2 decision
 The 10 October Iris study adds 15 histories and 1350 planner executions and 120 exact restores
 All 450 paired sets reached proven optima and returned the same objective and V4 reduced the depth 128 formulation from 1256 variables to 69
-The current research record is in docs/reserach_progress.txt and the 36 test suite passed locally on 10 October and is rerun by GitHub Actions
+The 11 October neural study adds 6 real Digits MLP histories and 630 requests with no unexpected failures
+The 11 October topology study adds 15 histories with up to 1038 nodes and 315 proven optimal planner executions and 45 exact restores
+The current research record is in docs/reserach_progress.txt and the 39 test suite passed locally on 11 October and is rerun by GitHub Actions
 
 ## Review commands
 
@@ -34,6 +36,8 @@ python -m recoverml.performance --audit-only --out results/milestone2/performanc
 python -m recoverml.audit results/milestone2/storage
 python -m recoverml.audit results/milestone2/new_data_oct9
 make frontier-scaling
+make neural-study
+make topology-scaling
 ```
 
 Each fresh run uses a new directory and records its own machine and environment and source hashes

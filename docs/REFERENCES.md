@@ -9,6 +9,9 @@ The current benchmark compares local baseline implementations and does not execu
 - [CAPS — PVLDB 19](https://www.vldb.org/pvldb/vol19/p1427-kontaxakis.pdf)
 - [ElasticNotebook](https://arxiv.org/abs/2309.11083)
 - [ExoFlow — OSDI 2023](https://www.usenix.org/system/files/osdi23-zhuang.pdf)
+- [FlorDB — CIDR 2025](https://vldb.org/cidrdb/papers/2025/p33-garcia.pdf)
+- [Disdat — USENIX OpML 2019](https://www.usenix.org/conference/opml19/presentation/bhartiya)
+- [Materialization and reuse in production data pipelines — VLDB 2018](https://www.vldb.org/pvldb/vol11/p1910-giannikis.pdf)
 - [Wisconsin dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)
 - [Digits dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html)
 - [Iris dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html)
@@ -17,4 +20,5 @@ The current benchmark compares local baseline implementations and does not execu
 - [SciPy mixed integer optimization API](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html)
 
 The [planner design](PLANNER_V2.md) explains the implemented cost model and its scope
+The [novelty audit](NOVELTY_AUDIT.md) compares the focused claim with the primary literature and records the exact distinction used in the paper
 The [experiment reports](reports) preserve the measured comparisons and research interpretation

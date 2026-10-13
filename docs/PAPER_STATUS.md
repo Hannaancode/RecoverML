@@ -1,44 +1,46 @@
 # Paper completion status
 
-Updated 10 October 2026
+Updated 11 October 2026
 
 ## Current position
 
-The implementation and reproducibility package are close to complete for a course paper
-The measured evidence is now strong enough to support a focused paper about exact replayability frontier reduction
-The full manuscript has not yet been assembled in this repository
+The implementation and reproducibility package are complete for the current course milestone
+The measured evidence supports a focused paper about exact replayability frontier reduction
+An integrated paper draft is now stored in paper/RecoverML_draft.md
 
 | Paper part | Readiness | Available material |
 |---|---:|---|
-| Problem and motivation | 70% | Recovering historical ML outputs under storage limits and opaque boundaries is defined |
-| Related work | 60% | HELIX and LIMA and Kishu and ElasticNotebook and ExoFlow and CAPS are collected but the exact frontier claim needs a final novelty search |
-| System design | 85% | Capture and content addressing and budget planning and exact restoration are implemented and documented |
-| Algorithm and correctness | 80% | The frontier rule and conditions and proof argument are written and exhaustive oracle tests pass |
-| Experimental method | 80% | Automated configurations and raw logs and hashes and statistical methods are available |
-| Results | 80% | Storage and throughput and latency and public data and frontier scaling results are complete on one machine |
-| Discussion and limitations | 50% | Main scope limits are known but need to be organized into paper form |
-| Abstract and conclusion | 20% | Final text should be written only after the paper claim and evaluation table are fixed |
-| Reproducibility appendix | 90% | Commands and pinned environment and checksums and raw traces and CI are available |
-| Integrated manuscript | 25% | No complete paper source is stored in the repository yet |
+| Problem and motivation | 85% | Recovering historical ML outputs under storage limits and non replayable boundaries is defined with concrete examples |
+| Related work | 75% | Nine primary systems are compared in a focused novelty matrix and final citation chaining remains |
+| System design | 90% | Capture and content addressing and budget planning and exact restoration are implemented and documented |
+| Algorithm and correctness | 90% | The exact frontier theorem and proof and assumption boundary are written and exhaustive oracle tests pass |
+| Experimental method | 88% | Automated configurations and raw logs and hashes and statistical methods are available |
+| Results | 88% | CPU neural and public data and throughput and latency and 1038 node scaling evidence are complete on one machine |
+| Discussion and limitations | 72% | The draft separates supported findings from machine and workload limits |
+| Abstract and conclusion | 72% | Both are present in the integrated draft and will be refined after external experiments |
+| Reproducibility appendix | 92% | Commands and pinned environment and checksums and raw traces and CI are available |
+| Integrated manuscript | 60% | A complete section level draft exists and needs venue formatting and final editing |
 
-The research and evidence are about 70 percent ready for a strong course paper
-The actual written manuscript is about 25 percent ready because the material exists in separate reports but has not been combined
-The overall complete paper is therefore about 55 to 60 percent ready
+The research package and current manuscript are now about 70 percent ready for a serious paper submission
+This is a readiness estimate and not an acceptance probability because reviewers and venues make the final decision
 
 ## Current defensible contribution
 
 RecoverML combines content addressed ML artifacts and explicit replayability contracts and budgeted recovery planning and exact hash checked restoration
 Its focused algorithmic contribution is an exact replayability frontier reduction for the load first planner
-On 15 Iris histories the V4 formulation reduced a depth 128 model from 1256 variables to 69 and produced a 3.38 times median history level speedup over V2 while all 450 paired planner sets kept the same proven optimal objective
+The larger topology study extends this evidence to 15 executable histories and graphs with up to 1038 nodes and 1068 edges
+Across 315 solver runs every plan reached a proven optimum and all planner objectives agreed
+V4 reduced the number of variables by 98.21 percent at the median and produced a 10.47 times median planning speedup over V2 and all 45 checked restores were exact
+The separate real Digits neural study completed 630 requests with no unexpected failures and all 63 admitted V4 requests restored exact bytes
 
 ## Work required before the full paper
 
-1. Search specifically for prior work that removes ancestry behind non replayable or materialized workflow boundaries
-2. Add at least one real external or nondeterministic boundary instead of only the controlled external feature proxy
-3. Test branching graphs with several opaque boundaries and hundreds or thousands of nodes
-4. Repeat the main timing study on another machine
-5. Build one final comparison table across full snapshots and target snapshots and full replay and V2 and V4
-6. Assemble the introduction and related work and method and evaluation and discussion into the required paper format
-7. Check every claim against a raw file and cite the primary sources
+1. Add a PyTorch vision workload with a standard convolutional network and real checkpoint files
+2. Add a Transformer based language workload with controlled seeds and an explicitly captured model version
+3. Repeat the main timing study on a second machine and report machine level variation
+4. Ask an independent researcher to challenge the novelty matrix and reproduce the main result
+5. Run backward and forward citation chaining for the exact frontier claim
+6. Select the target venue and convert the draft into its page and reference format
+7. Check every final claim against a raw file and complete artifact instructions from a clean environment
 
-The first five items strengthen the research claim and the last two convert the research package into the final manuscript
+These items move the work beyond the current 70 percent state toward a submission ready paper
