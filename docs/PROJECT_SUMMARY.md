@@ -2,7 +2,7 @@
 
 This summary describes the original course prototype and the later research work and the final saved paper experiments
 The project has working code and automated benchmarks and raw logs and plots and a complete current paper draft
-The latest full research artifact is committed locally and full GitHub publication is still pending
+The latest full research artifact is on GitHub and all source and paper and plots and raw evidence files were verified
 Paper acceptance and an independent novelty review are separate steps
 
 ## 1 The original problem
@@ -297,7 +297,7 @@ The original milestone paper and its evidence are preserved
 
 The final interruption affected an upload and the final additions were restored and the experiments were saved again
 The counts in this summary use the final recovered saved run rather than an unsaved earlier capture
-The full latest research artifact is committed locally and its complete GitHub publication remains pending
+The full latest research artifact is on GitHub and the publication receipt records the verified data release
 
 Before paper submission we need a target venue and its required format and an independent novelty review and independent reproduction on another machine
 A full native deployment comparison with HELIX or HYPPO would strengthen broader system claims if those are required by the chosen venue

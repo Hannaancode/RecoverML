@@ -4,7 +4,7 @@ RecoverML helps a machine learning pipeline save space and restore earlier versi
 
 For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
 It explains Linux and Windows with WSL2 and installation and every run from start to finish
-Fresh experiments create their own evidence and the [publication record](docs/PUBLICATION_PENDING_OCT14.json) lists saved compressed files awaiting public upload
+The complete saved evidence is on GitHub and the [publication record](docs/PUBLICATION_OCT14.json) records the verified upload
 
 It records the data and model files and the links between them and stores identical parts once
 The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
@@ -55,7 +55,7 @@ The final suite has 77 tests with 72 passing and five optional PyTorch checks sk
 Our three contributions are a clear minimum storage recovery contract and an exact physical optimizer and a reproducible study of the price of stronger recovery
 Read the [full project summary in simple words](docs/PROJECT_SUMMARY.md) and [current paper](paper/RecoverML_capability_loss.md) and [paper PDF](output/pdf/RecoverML_capability_loss.pdf)
 The [saved paper evidence](results/research/paper_oct14/README.md) contains the logs and source versions and selected stores and figures
-The next plan is independent reproduction and expert novelty review and a selected venue format and completing the full research artifact publication
+The next plan is independent reproduction and expert novelty review and a selected venue format after the author reads the paper
 
 ## Earlier capability loss checkpoint
 

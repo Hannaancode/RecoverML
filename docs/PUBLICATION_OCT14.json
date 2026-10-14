@@ -4,5 +4,29 @@
   "summary_commit": "26792800f2e5b6ca78e2876016737e870396c745",
   "summary_blob": "135f1fec804acff707d9f0b0fdb9a0dfde00c6b5",
   "summary_verified": true,
-  "full_artifact_published": false
+  "full_artifact_published": true,
+  "branches": [
+    "main",
+    "research/capability-loss-recovery"
+  ],
+  "verified_data_commit": "127bbd6b5aa9471502af58e88ac0336656be2327",
+  "verified_data_tree": "95fbb2ebc9622515eea54132209c503026b07e1b",
+  "verified_at": "2026-10-14T13:36:54.586961+00:00",
+  "tracked_files_verified": 626,
+  "missing_files": 0,
+  "changed_git_blob_hashes": 0,
+  "verification": "Complete recursive remote Git tree compared against all 626 local tracked Git blob hashes and file modes before this receipt update",
+  "user_approval_received": "2026-10-14T15:57:08+03:00",
+  "requirements": "requirements.txt",
+  "reproduction_guide": "reproducibility.txt",
+  "validation": {
+    "same_host_isolated_install": true,
+    "pip_check": "passed",
+    "tests_passed": 72,
+    "optional_torch_skipped": 5,
+    "saved_plots_regenerated": 9,
+    "fresh_smoke_and_audit": "passed",
+    "second_physical_machine": false
+  },
+  "paper_formatting": "Deferred until author review as requested"
 }

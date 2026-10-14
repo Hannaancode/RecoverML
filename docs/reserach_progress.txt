@@ -674,3 +674,11 @@ Public input hashes from the blocked Breast Cancer pilot store matched the publi
 Automatic approval review still rejected the saved store archive and a final planner log because it required exact payload disclosure permission beyond the general publication instruction
 The remaining compressed evidence files are listed with exact hashes in docs/PUBLICATION_PENDING_OCT14.json and remain unchanged locally
 The source and instructions and paper and plots and accepted evidence are being published while that data gate remains pending and the README and guide distinguish available fresh reproduction from checks requiring the full saved evidence
+
+14 October 2026 complete GitHub publication
+The author approved the upload and further decoded checks confirmed the public dataset inputs in the selected stores with no hash mismatches
+All remaining raw logs and planner records and selected stores were uploaded without changing any experiment measurements
+The complete data release is 127bbd6b5aa9471502af58e88ac0336656be2327 on both main and research/capability-loss-recovery
+The recursive remote tree contains all 626 tracked files and every Git blob hash and file mode matches the local committed artifact
+The publication receipt and completed upload record are updated and both checksum manifests now cover the complete published evidence
+The paper and PDF bytes remain unchanged and venue formatting waits for the author review

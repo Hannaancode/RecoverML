@@ -18,7 +18,7 @@ The earlier status is preserved in docs/history/PAPER_STATUS_OCT13.md and the ea
 | Broader outage scope | Thirty six cases and 3920 exact requests including fitting and prediction losses |
 | Validation | Seventy seven tests with 72 passing and five optional PyTorch skips |
 | Artifact | Raw logs and selected stores and exact source versions and nine verified plots |
-| Publication | Latest full research artifact committed locally and complete GitHub upload pending |
+| Publication | Complete source and paper and plots and raw evidence verified on GitHub main and research branches |
 
 The measured benefit is exact historical recovery under the declared tool loss contract at the minimum bytes
 Native full system HELIX and HYPPO runtime comparisons are not claimed

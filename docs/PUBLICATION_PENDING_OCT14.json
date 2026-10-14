@@ -1,10 +1,18 @@
 {
   "repository": "Hannaancode/RecoverML",
   "date": "2026-10-14",
-  "status": "Compressed research evidence release held pending exact-payload public upload approval",
-  "reason": "Automatic approval review rejected specific compressed archive uploads and a broad repository tree update for insufficient exact payload disclosure permission; unpublished compressed research files are held while source-only and paper/plot publication proceeds",
+  "status": "Resolved and complete publication verified",
+  "reason": "Author approval and decoded content checks completed and every tracked file matched the published data release",
   "scope": "Saved public scikit-learn and UCI Banknote experiment records and generated graph controls and selected numerical model/data stores; all local files are preserved",
-  "files": [
+  "files_count": 0,
+  "bytes": 0,
+  "inspection_report": "results/validation/2026-10-14/reproduction_guide/publication_content_audit.json",
+  "sensitivity_check_findings": 0,
+  "fresh_cpu_runner_needs_these_saved_archives": false,
+  "saved_figure_and_archived_store_checks_need_complete_evidence": true,
+  "user_approval_received": "2026-10-14T15:57:08+03:00",
+  "user_approval_scope": "Remaining RecoverML benchmark reports and source/machine metadata and raw execution/planner logs and selected public-data model/data stores approved for public GitHub upload",
+  "previously_pending_files": [
     {
       "path": "results/research/capability_loss_oct13/banknote/execution_traces.json.gz",
       "mode": "100644",
@@ -366,10 +374,8 @@
       "sha256": "215ac4860cb521a12a8415acd302dc5e9e8e67e2f6da9902e23a19172b3f85a6"
     }
   ],
-  "files_count": 45,
-  "bytes": 38549916,
-  "inspection_report": "results/validation/2026-10-14/reproduction_guide/publication_content_audit.json",
-  "sensitivity_check_findings": 0,
-  "fresh_cpu_runner_needs_these_saved_archives": false,
-  "saved_figure_and_archived_store_checks_need_complete_evidence": true
+  "files": [],
+  "resolved_at": "2026-10-14T13:36:54.586961+00:00",
+  "verified_data_commit": "127bbd6b5aa9471502af58e88ac0336656be2327",
+  "verified_data_tree": "95fbb2ebc9622515eea54132209c503026b07e1b"
 }

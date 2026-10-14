@@ -7,13 +7,13 @@ Run the Ubuntu commands from the repository root unless stated otherwise
 The paper formatting will be revised after the author has reviewed the draft
 
 Current publication availability
-The source and guide and summaries and figures can be published separately
-Some compressed raw logs and selected model/data store archives are still awaiting
-public upload approval and are preserved in the author's complete local package
-The exact filenames and hashes are in docs/PUBLICATION_PENDING_OCT14.json
+The source and guide and paper and plots and complete saved evidence are on GitHub
+The raw execution logs and planner records and selected model/data stores are included
+The verified data release is 127bbd6b5aa9471502af58e88ac0336656be2327
+The publication receipt is docs/PUBLICATION_OCT14.json
 Fresh experiments create their own logs and stores and do not require these saved archives
-Saved-data figure audits and archived store replay need the complete saved evidence
-Do not report those checks as completed from a clone that lacks the listed inputs
+Saved-data figure audits use the included evidence and archived store replay also
+requires the matching environment described below
 
 1 WHAT THIS GUIDE REPRODUCES
 
@@ -199,8 +199,8 @@ Use the actual measured hardware details rather than copying our server details
 Run this before making changes to tracked files
 For a GitHub clone use CHECKSUMS_GITHUB.json in the command below
 For the complete local package replace that name with CHECKSUMS.json
-The GitHub manifest covers the published subset while the complete manifest
-also covers the local evidence files whose public upload is awaiting approval
+Both manifests cover the complete supplied evidence
+They exclude their own checksum entries as explained below
 
     python - <<'PY'
 import hashlib
@@ -246,9 +246,9 @@ samples and 39600 operation records and all requests restore exact artifacts
 10 REGENERATE ALL NINE CURRENT PAPER FIGURES FROM SAVED DATA
 
 This step requires the complete saved raw evidence
-Check docs/PUBLICATION_PENDING_OCT14.json before using a GitHub-only clone
-If a required file is absent use the author's complete package or run the fresh
-paper matrix in section 13 and use the figures generated from that new run
+The complete evidence is included in the GitHub repository
+If a required file is absent check your checkout and the checksum results
+For new measurements run the fresh paper matrix in section 13 and use its new figures
 
     python scripts/analyze_paper_benchmarks.py --input results/research/paper_oct14 --output "$review_out/main_figures"
     python scripts/analyze_retention_extensions.py --input results/research/paper_oct14 --output "$review_out/extension_figures"
@@ -400,7 +400,7 @@ installing it and do not expect a non-Torch archived manifest to match
 16 ARCHIVED STORE REPLAY IN A MATCHING ENVIRONMENT
 
 This section is optional on a new laptop and does not replace the fresh-run checks
-It also requires the selected store archives listed in the pending publication record
+It also requires the selected store archives included in results/research
 The recorded environment must match the complete manifest including code hashes
 and Python patch version and numerical library paths and BLAS identities
 
