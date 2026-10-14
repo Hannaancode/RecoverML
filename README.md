@@ -2,6 +2,9 @@
 
 RecoverML helps a machine learning pipeline save space and restore earlier versions of its work
 
+For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
+It explains Linux and Windows with WSL2 and installation and every run from start to finish
+
 It records the data and model files and the links between them and stores identical parts once
 The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
 Every loaded or rebuilt artifact is checked against its original SHA-256 fingerprint
@@ -34,11 +37,45 @@ The twelve version study saves about 23.64 percent in the lossless cases and a s
 The new planner also passes generated cycle checks with up to 3073 nodes and the research suite includes 57 test cases with optional PyTorch checks
 Read the [new research note](docs/WITNESS_PLANNER_AND_PIPELINES.md) for the experiments and the proof and the next steps
 
+## Latest paper work
+
+Our idea is to keep the smallest shared set of files that protects every required old model and prediction after any allowed tool loss
+The new planner uses exact physical graph reduction and certified solving and checks every recovered result against its captured bytes
+
+The final published method study has 28 histories and 56 cases and 33440 real requests
+RecoverML restores all 3344 requests and HYPPO rank restores 2240 and HYPPO frequency restores 2291 at the same limits
+The best tested common budget HELIX rule setting restores 1940 and all tested main methods recover every no outage request in the lossless subset
+HYPPO uses unchanged released components and HELIX uses our documented published rule implementation and both use the common recovery executor
+
+One shared graph protects 112 old versions and saves 93.50 percent of target snapshot bytes with one declared preprocessing loss and 83.94 percent with two
+The layered study completes 9288 exact recoveries and the broader fitting and prediction outage study completes all 3920 requests exactly
+The final suite has 77 tests with 72 passing and five optional PyTorch checks skipped
+
+Our three contributions are a clear minimum storage recovery contract and an exact physical optimizer and a reproducible study of the price of stronger recovery
+Read the [full project summary in simple words](docs/PROJECT_SUMMARY.md) and [current paper](paper/RecoverML_capability_loss.md) and [paper PDF](output/pdf/RecoverML_capability_loss.pdf)
+The [saved paper evidence](results/research/paper_oct14/README.md) contains the logs and source versions and selected stores and figures
+The next plan is independent reproduction and expert novelty review and a selected venue format and completing the full research artifact publication
+
+## Earlier capability loss checkpoint
+
+The new planner saves enough files before replay tools become unavailable and protects every old model and prediction after any allowed combination of tool outages
+It tries to break a small store with an allowed outage and learns which extra files must be saved and repeats until recovery is certified
+Two recorded tools can rebuild the same feature bytes so the planner can keep small shared files and still recover every protected version
+
+Our three contributions are a clear recovery contract for tool outages and a minimum storage planner that learns from failing cases and a reproducible study of storage savings with exact recovery
+The complete new Banknote study restored all 792 requests with the new method
+With lossless features and at most one tool group outage the store saved 43.24 percent compared with full target snapshots and 34.04 percent compared with the minimum store for losing all declared tools
+The three seed one outage condition completed 144 exact recoveries and the two outage and rounded CSV controls show when a larger store is needed
+The complete test suite has 63 tests with 58 passing and five optional PyTorch checks skipped in this environment
+Read the [idea and three contributions and literature comparison](docs/CAPABILITY_LOSS_NOVELTY.md) and the [saved raw evidence](results/research/capability_loss_oct13/README.md)
+The literature comparison defines the specific proposed novelty and the next paper checks
+
 ## Start here
 
 | What you need | Where to look |
 |---|---|
 | Instructor review and reproduction | [Submission guide](docs/SUBMISSION.md) |
+| Complete setup and reproduction steps | [Reproduction guide](reproducibility.txt) |
 | Evidence for each rubric requirement | [Rubric checklist](docs/RUBRIC_AUDIT.md) |
 | All experiments and their files | [Results guide](results/README.md) |
 | Latest throughput and latency analysis | [Performance report](docs/reports/PERFORMANCE_REPORT.md) |
@@ -46,12 +83,14 @@ Read the [new research note](docs/WITNESS_PLANNER_AND_PIPELINES.md) for the expe
 | How the planner works | [Planner design](docs/PLANNER_V2.md) |
 | Exact frontier rule and proof | [Frontier reduction](docs/FRONTIER_REDUCTION.md) |
 | Focused novelty comparison | [Novelty audit](docs/NOVELTY_AUDIT.md) |
-| Current integrated paper | [Paper draft](paper/RecoverML_draft.md) |
-| Readable paper with tables and plots | [Paper PDF](output/pdf/RecoverML_paper.pdf) |
+| Current research paper | [Paper draft](paper/RecoverML_capability_loss.md) and [Paper PDF](output/pdf/RecoverML_capability_loss.pdf) |
+| Full project explanation | [Simple project summary](docs/PROJECT_SUMMARY.md) |
+| Earlier milestone paper | [Milestone draft](paper/RecoverML_draft.md) and [Milestone PDF](output/pdf/RecoverML_paper.pdf) |
 | Research sources for the next stage | [References](docs/REFERENCES.md) |
 | Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
 | Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
 | Alternative artifact recovery and storage planning | [New recovery experiments](docs/WITNESS_PLANNER_AND_PIPELINES.md) |
+| Recovery after replay tool outages and three contributions | [New paper direction](docs/CAPABILITY_LOSS_NOVELTY.md) |
 | Full paper readiness and remaining work | [Paper status](docs/PAPER_STATUS.md) |
 
 ## Project layout
@@ -80,7 +119,8 @@ Use Python 3.12 and Linux or WSL for CPU and memory tracing
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -r requirements.txt
+python -m pip install -e '.[paper]'
 bash run_benchmarks.sh
 ```
 
@@ -94,6 +134,15 @@ bash run_benchmarks.sh results/runs/my_experiment
 
 An existing folder is refused before any tests start so earlier evidence stays unchanged
 An ordinary CPU computer or Linux VM is enough
+
+For the current paper matrix run the following with a new output folder
+
+```bash
+bash scripts/run_paper_benchmarks.sh results/runs/my_paper_reproduction
+```
+
+The [reproduction guide](reproducibility.txt) includes package checks and saved figure regeneration and a small first run and the full matrix and what to compare
+Fresh runs capture their own environment and strict replay of archived stores also needs their full recorded environment
 
 ## Review the supplied evidence
 
