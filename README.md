@@ -4,6 +4,7 @@ RecoverML helps a machine learning pipeline save space and restore earlier versi
 
 For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
 It explains Linux and Windows with WSL2 and installation and every run from start to finish
+Fresh experiments create their own evidence and the [publication record](docs/PUBLICATION_PENDING_OCT14.json) lists saved compressed files awaiting public upload
 
 It records the data and model files and the links between them and stores identical parts once
 The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
@@ -110,6 +111,7 @@ The literature comparison defines the specific proposed novelty and the next pap
 | results/runs | New local runs created by the runner and excluded from Git |
 
 CHECKSUMS.json records the SHA-256 values for submitted files
+CHECKSUMS_GITHUB.json checks the currently published files and the complete local package also keeps every saved evidence archive
 The GitHub Actions workflow runs correctness checks and a smoke experiment on every push
 
 ## Run the project

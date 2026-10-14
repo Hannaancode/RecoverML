@@ -1,0 +1,116 @@
+{
+  "suite": "neural",
+  "planning_cases": 8,
+  "captured_histories": 4,
+  "requests": 1584,
+  "exact": 1452,
+  "expected_blocked": 132,
+  "quality": [
+    {
+      "dataset": "digits",
+      "estimator": "forest",
+      "seed": 0,
+      "format": "npy",
+      "accuracy": [
+        0.9555555555555556,
+        0.9577777777777777,
+        0.9688888888888889,
+        0.9644444444444444
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "forest",
+      "seed": 1,
+      "format": "npy",
+      "accuracy": [
+        0.9644444444444444,
+        0.9666666666666667,
+        0.9688888888888889,
+        0.9733333333333334
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "mlp",
+      "seed": 0,
+      "format": "npy",
+      "accuracy": [
+        0.9688888888888889,
+        0.9688888888888889,
+        0.9688888888888889,
+        0.9688888888888889
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "mlp",
+      "seed": 1,
+      "format": "npy",
+      "accuracy": [
+        0.9711111111111111,
+        0.9711111111111111,
+        0.9711111111111111,
+        0.9711111111111111
+      ]
+    }
+  ],
+  "hyppo_revision": "405e42de863272fcb71a625cf6b2ae0696c7a8c5",
+  "hyppo_source_sha256": "b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a",
+  "hyppo_url": "https://raw.githubusercontent.com/akontaxakis/HYPPO/405e42de863272fcb71a625cf6b2ae0696c7a8c5/Components/history_manager.py",
+  "comparison_scope": "Original HYPPO materialization component with our physical-blob and ancestry-cost adapter and common exact executor; not a full-system HYPPO comparison",
+  "fault_scope": "Injected replay call restrictions; intact files and numerical environment and training/prediction remain available",
+  "trace_sha256": "c7c34b13378c04ba38de40c4827ba0494bc218197420fe2fb5d5f7931899fa12",
+  "source_sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45",
+  "source_dependencies": {
+    "witness.py": "da7e752db392d96ef1e0b9c90f2ae7545b806e122f684ef58e3d515ea89af5a5",
+    "witness_pipeline.py": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7",
+    "capability_retention.py": "6a47c2d1e6695f8d3dd713f6e1439e83e8cfe5239dc0cbc3b4587aff2e2c8ce3",
+    "scenario_retention.py": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02",
+    "published_materializers.py": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0",
+    "capability_ops.py": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  "process_peak_rss_kib": 195752,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "machine": "x86_64",
+    "system": "Linux",
+    "threads": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 9,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 9,
+        "prefix": "libscipy_openblas",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 9,
+        "prefix": "libgomp",
+        "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "serialization": "pickle-protocol-5-arrays-and-canonical-model-v1",
+    "model_codec_sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6",
+    "codec_code_sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f",
+    "operator_code_sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  }
+}

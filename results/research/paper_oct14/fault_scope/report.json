@@ -1,0 +1,17 @@
+{
+  "histories": 6,
+  "scope_cases": 36,
+  "exact_requests": 3920,
+  "all_byte_optima_match": true,
+  "source_sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655",
+  "source_dependencies": {
+    "witness_pipeline.py": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7",
+    "capability_ops.py": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd",
+    "component_retention.py": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72",
+    "robust_retention.py": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1",
+    "scenario_retention.py": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02",
+    "capability_retention.py": "6a47c2d1e6695f8d3dd713f6e1439e83e8cfe5239dc0cbc3b4587aff2e2c8ce3",
+    "witness.py": "da7e752db392d96ef1e0b9c90f2ae7545b806e122f684ef58e3d515ea89af5a5"
+  },
+  "qualification": "Injected replay call restrictions including fitting and prediction with intact files and matching numerical environment"
+}

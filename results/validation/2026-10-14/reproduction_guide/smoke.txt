@@ -1,0 +1,15 @@
+case00-rep0: synthetic logistic deterministic 17 nodes
+case01-rep0: breast_cancer forest opaque 30 nodes
+{
+  "requests": 140,
+  "selections": 28,
+  "histories": 2,
+  "trace_events": 325,
+  "unique_requests": true,
+  "restoration_trace_counts_match": true,
+  "declared_request_matrix_complete": true
+}
+/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)

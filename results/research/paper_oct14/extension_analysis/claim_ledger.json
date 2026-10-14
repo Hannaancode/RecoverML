@@ -1,0 +1,213 @@
+{
+  "published": [
+    {
+      "policy": "HELIX_200MiB_capture",
+      "exact": 1681,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_200MiB_reverse",
+      "exact": 1681,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_50MiB_capture",
+      "exact": 1940,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_50MiB_reverse",
+      "exact": 1940,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_800MiB_capture",
+      "exact": 1673,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_800MiB_reverse",
+      "exact": 1673,
+      "requests": 3344
+    },
+    {
+      "policy": "HELIX_snapshot_budget",
+      "exact": 2437,
+      "requests": 3344
+    },
+    {
+      "policy": "HYPPO_frequency",
+      "exact": 2291,
+      "requests": 3344
+    },
+    {
+      "policy": "HYPPO_rank",
+      "exact": 2240,
+      "requests": 3344
+    },
+    {
+      "policy": "RecoverML_decomposed",
+      "exact": 3344,
+      "requests": 3344
+    }
+  ],
+  "lossless": [
+    {
+      "policy": "RecoverML_decomposed",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 960,
+      "requests_1": 960,
+      "exact_2": 480,
+      "requests_2": 480
+    },
+    {
+      "policy": "HYPPO_rank",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 729,
+      "requests_1": 960,
+      "exact_2": 278,
+      "requests_2": 480
+    },
+    {
+      "policy": "HYPPO_frequency",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 818,
+      "requests_1": 960,
+      "exact_2": 350,
+      "requests_2": 480
+    },
+    {
+      "policy": "HELIX_50MiB_capture",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 722,
+      "requests_1": 960,
+      "exact_2": 271,
+      "requests_2": 480
+    },
+    {
+      "policy": "HELIX_200MiB_capture",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 714,
+      "requests_1": 960,
+      "exact_2": 251,
+      "requests_2": 480
+    },
+    {
+      "policy": "HELIX_800MiB_capture",
+      "exact_0": 320,
+      "requests_0": 320,
+      "exact_1": 710,
+      "requests_1": 960,
+      "exact_2": 247,
+      "requests_2": 480
+    }
+  ],
+  "mixed": [
+    {
+      "k": 1,
+      "snapshot_bytes": 21376829,
+      "retained_bytes": 1390318,
+      "saving_vs_snapshots": 93.49614482110513,
+      "counterexample": 1.4082358350001414,
+      "expanded": 0.15243911900006424,
+      "decomposed": 0.09830649399998492
+    },
+    {
+      "k": 2,
+      "snapshot_bytes": 21376829,
+      "retained_bytes": 3433246,
+      "saving_vs_snapshots": 83.93940467035593,
+      "counterexample": 6.896568911000031,
+      "expanded": 0.21472117399980561,
+      "decomposed": 0.1279441519999409
+    }
+  ],
+  "fault_scope": [
+    {
+      "model": "logistic",
+      "k": 1,
+      "feature_only": 43.24215943505992,
+      "with_training": 37.23868131033342,
+      "with_training_prediction": 0.0
+    },
+    {
+      "model": "logistic",
+      "k": 2,
+      "feature_only": 13.957793781171425,
+      "with_training": 8.136372240780233,
+      "with_training_prediction": 0.0
+    },
+    {
+      "model": "forest",
+      "k": 1,
+      "feature_only": 90.62786756145454,
+      "with_training": 1.2576914644142956,
+      "with_training_prediction": 0.0
+    },
+    {
+      "model": "forest",
+      "k": 2,
+      "feature_only": 81.6543009863892,
+      "with_training": 0.0,
+      "with_training_prediction": 0.0
+    },
+    {
+      "model": "mlp",
+      "k": 1,
+      "feature_only": 36.3567321182463,
+      "with_training": 8.534617843788634,
+      "with_training_prediction": 0.0
+    },
+    {
+      "model": "mlp",
+      "k": 2,
+      "feature_only": 0.0,
+      "with_training": 0.0,
+      "with_training_prediction": 0.0
+    }
+  ],
+  "component_report": {
+    "planner_runs": 118,
+    "real_planner_runs": 10,
+    "layered_cases": 12,
+    "exact_disk_requests": 9288,
+    "all_byte_optima_match": true,
+    "source_sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064",
+    "component_source_sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72",
+    "selector_sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1",
+    "qualification": "New layered AND graphs with shared failure labels and independent analytic minimum; mixed real validation uses existing manifests"
+  },
+  "inputs": {
+    "published/report.json": "49ebc4b40debc2d6f6751ce991e5fe86b4333cf2c90e2b292a2f62a1cf763499",
+    "published/execution_traces.json.gz": "4fbe765ca259237c19a8a5ec4de26fb8a60dc0d4285c2a77460e61b680ad9cf0",
+    "published/summary.csv": "a9e880b755dd667eee613b777b04d19c0c2a7bc987754ac8a389ed0b5b92a5eb",
+    "published/stores.tar.gz": "2bbd6fc7b04f3c14ba35cffe9946a5c95aca76539044b04980aac34f70d858f4",
+    "published/planner_certificates.json.gz": "2a3c0a274980f320494057df8c43245e8540f05b373e1cd4be307a6520e8e426",
+    "fault_scope/report.json": "d7c5c20eb92d63fae3677f349c90f459b56072d8c452cc677ba850fd9390631e",
+    "fault_scope/execution_traces.json.gz": "22442116e5015d560bee8929d02a051b04ca7a0d442300cf7cb3a7df3f24a7c6",
+    "fault_scope/summary.csv": "fde26d984f0e15b213ef2946f1f1e750268cd6048b610704361e9826849eee79",
+    "fault_scope/stores.tar.gz": "fca9f7e7277e0f6cb64364474730a8f416f9683cf1ce245463e555c193313960",
+    "fault_scope/planner_certificates.json.gz": "a5fa7ff44c4ea3f26fd1f2a80d7ede63393b8c1fd28cc7b7638e4de3bc7a57d3",
+    "merged/report.json": "f8941caa1e17beee24f2580b0bc830e60e21fdc7c045eb966e04be4cc904446e",
+    "merged/execution_traces.json.gz": "505385801e030daa68dbccd0c979b5d2ab120c6cf98f5be6b795be07e3cac976",
+    "merged/stores.tar.gz": "4891a08d7468f22b772f61e9e282b42d0d89fe1b3f3d908f0f643ac20ebc47ee",
+    "merged/planner_certificates.json.gz": "e49fb0fae73e72b1df3daf8f6e205ce04adb051262556164051265ecf042b2a2",
+    "merged/planning_trials.json.gz": "c8d7a661bca98896e4ad3657fafd662879759c72becd838800ca57f6c4c315c5",
+    "components/report.json": "7e8d62e32831be0d58bdfef9b12446b542cc1e5914df6820f155e983fe9aaaa8",
+    "components/execution_traces.json.gz": "06f913f61cb45a764cf466d91b70295e90c631d9a827543c2a55f5203caea1b2",
+    "components/summary.csv": "26ead086273ce5cbdfcc6d407a8be4c520f58f854edc83a38a6ad4a8f894a309",
+    "components/stores.tar.gz": "ad2c2e35621c88ca209164500950930a2cb5c46acf5a2792af6790ef29b85fde",
+    "components/planning_trials.json.gz": "2c4abc16109b13476409b105c4e4bd8e42da87154681391aa4b3d203bb2ad35e",
+    "holdout/report.json": "d3a8ae43c27f14c834f14226c798a056558ba6b40cf3d711c881cd67886a352a",
+    "holdout/execution_traces.json.gz": "3bff35a1cb1e92b3b9888d35513a90336be8473db026f770f45114b9b085fcb2",
+    "holdout/summary.csv": "b93ddb5a147f76584fc6110293214e2d8831b578a26b06d7c171c602b4c8d1c0",
+    "auto_real/report.json": "1a1ad713295b87e6f8e243981e015104049d7fcbdd5997f4de5ffb02256c51c8",
+    "auto_real/execution_traces.json.gz": "90156bc86488b6f1a7074b24797602222f070d4acaf313b1fe85e67bec975b2e"
+  },
+  "source_sha256": "8337626ce216a8a2fc294295f7f6d86edc8878996307f5fc6e51021d0c710310"
+}

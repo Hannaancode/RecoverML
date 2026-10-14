@@ -479,3 +479,198 @@ One intermediate test log lacked a completion marker and was not used as complet
 
 The long history and audit and matched plot evidence is in the corresponding results/research folders
 The earlier paper and milestone results remain unchanged and the novelty claim remains a scoped research candidate
+
+13 OCTOBER 2026 CAPABILITY LOSS RECOVERY AND SAVED CHECKPOINT
+
+CURRENT SETUP AND NEW IDEA
+RecoverML now chooses one minimum byte physical store for several protected historical ML models and predictions before replay tools become unavailable
+The contract requires exact artifact recovery after any loss of at most k declared capability groups and several replay steps may share one group
+Retained source data and the original manifest and the capability contract are included in storage accounting
+An adversary searches for a bounded loss and a closed artifact set that contains the saved files but misses a protected target
+Its complement becomes a necessary storage rule and the byte minimizing master repeats until no breaking bounded loss exists
+Closed sets handle cycles without requiring rank variables or creating data from cycles
+The master uses storage variables only rather than replay variables expanded over all possible loss combinations
+Only proven master optima and a proven final adversary infeasibility permit a robustness and optimality label
+Timeouts and iteration limits remain unknown
+
+LITERATURE REVIEW AND NOVELTY DECISION
+The full HYPPO ICDE 2024 paper already contains equivalent tasks and artifacts and alternate hypergraph plans and storage materialization for cheaper pipeline execution
+The full Shayan and colleagues TCAD 2020 paper already contains a counterexample guided secure checkpoint scheme
+Gallo and colleagues 1998 connect Horn satisfiability with directed hypergraph cuts and Zhang and Tang 2019 study correlated label removal
+FTOpt 2011 optimizes expected parallel query processing time using fault tolerance strategies
+Therefore neither equivalent outputs nor counterexample guided checkpointing nor generic robust optimization is claimed as invented here
+The specific implemented contribution candidate is shared minimum byte retention for exact historical ML recovery under bounded correlated replay capability loss using closed set counterexample storage cuts
+An independent comparison and novelty challenge are still required before a publication originality claim
+Primary source links and the formal contract and proof are in docs/CAPABILITY_LOSS_NOVELTY.md
+
+THREE CONTRIBUTIONS
+One is a formal shared storage contract protecting exact old ML outputs under bounded correlated replay tool loss
+Two is a counterexample guided byte optimizer with valid closed set cuts and solver certified termination and independent recovery checks
+Three is a reproducible empirical price of resilience study using public data and executed scaler backends and strong baselines and independent small graph oracles and analytic scaling controls
+
+PILOT AND STANDARD REAL DATA EXPERIMENTS
+The three version pilot has six captured histories and twelve planning cases on Breast Cancer and Iris and Wine
+It records 594 requests and 198 of 198 robust recoveries and zero storage saving against full target snapshots
+This short history result is preserved rather than removed
+The twelve version standard study has twelve histories and twenty four planning cases from two seeds and two formats and two outage bounds
+It records 4752 requests and 1584 of 1584 robust recoveries and 744 of 1584 nominal recoveries
+Mean robust savings against full target snapshots are 15.5182 percent and dataset means are zero for Breast Cancer and 34.8076 percent for Iris and 11.7471 percent for Wine
+
+NEW INDEPENDENT DATA
+The Banknote Authentication data was downloaded from the official UCI source and its original raw file is committed with creator and DOI and CC BY 4.0 attribution
+It has 1372 rows and four input features and a binary label
+Its unchanged raw SHA256 is d0539aaed2139ba7a587b3e34fb345ce503ff7d5d33dbf9912d8e195ce425cb9
+Three split seeds and two formats and twelve model versions and two outage bounds give six captured histories and twelve planning cases
+The single local scaler study records 2376 requests and 792 of 792 robust recoveries and 324 of 792 nominal recoveries
+Mean storage savings against full target snapshots are 14.0180 percent
+The standard and single backend Banknote studies together have eighteen histories and thirty six planning cases
+Each robust and snapshot policy recovers 2376 of 2376 requests and the nominal policy recovers 1068 of 2376
+The combined descriptive mean saving is 15.0182 percent and the repeated versions and outage cases are not independent dataset samples
+
+DUAL SCALER IMPLEMENTATIONS AND A STRONGER BASELINE
+A second replay operation uses a reconstructed fitted scikit learn StandardScaler and calls its transform independently of the existing NumPy arithmetic scaler
+The two outputs are checked for exact packed byte equality and the implementation source hash is included in the recorded recipe and checked at replay
+The original global operator code and environment fingerprint logic are unchanged and the replay extension is optional
+The correlated groups are membership generation and scikit learn preprocessing and NumPy scaling
+Scikit learn preprocessing includes both scaler fitting and the second transform so one loss disables both calls
+Training and prediction and file decoding remain available
+The additional conservative baseline is the proven minimum store when all declared capability groups are unavailable
+All policies use the original manifest and the same roots and capability contract and actual disk byte totals are checked
+
+The one seed pilot records 1056 requests and the complete three seed run records 3168 requests across four policies
+The complete run has 2772 exact requests and 396 expected blocked nominal requests and no unexpected failures
+Robust and full target snapshots and the all groups unavailable minimum store each recover 792 of 792 requests while the nominal minimum store recovers 396 of 792
+With lossless NumPy features and at most one group loss mean storage savings are 43.2429 percent versus full target snapshots and 34.0355 percent versus the all groups unavailable minimum store
+This condition has 144 of 144 exact robust requests across three split seeds
+Seed zero uses 84917 robust bytes versus 149617 snapshot bytes and 128733 conservative bytes
+Keeping fitted scaler state and membership lets either surviving scaler rebuild the features after a single group loss
+With at most two losses the lossless feature condition saves 13.9580 percent against snapshots and zero against the conservative minimum and restores 252 of 252 requests
+Rounded six digit CSV does not have the matching local feature identity and saves 13.9579 percent against snapshots and zero against the conservative minimum
+Rounded one loss requests are 144 of 144 exact and rounded two loss requests are 252 of 252 exact
+These condition dependent results establish the benefit of using the loss bound and the cost of stronger protection
+
+SCALING AND INDEPENDENT CORRECTNESS
+Six generated control graphs use sixteen or forty eight or ninety six capability labels and loss bounds two or three
+Every label occurs in protected derivations and is not irrelevant padding
+Weak targets have at most k independent providers and must be retained while stronger targets have at least k plus one providers and can be rebuilt from mandatory roots
+All byte optima match the independently derived analytic minima
+The largest case has 147537 potential allowed loss combinations and the solver uses five oracle calls and four cuts and seventeen master storage variables
+There are 99 executed exact version probes and 528 exact target probes and the full failure universe is certified symbolically rather than executed exhaustively
+These generated provider labels are local simulated availability groups rather than real remote services
+The updated independent small graph test covers twenty four generated seven node logical graphs and all physical storage subsets and all bounded group loss subsets
+It checks adversary answers and necessary cuts and global byte optima and budgets one byte below each optimum
+
+VALIDATION AND SAVING
+The completed full suite reports 63 tests with 58 passing and five optional PyTorch checks skipped because the dependency is absent in this environment
+The earlier real PyTorch evidence remains preserved
+The initial capability planner is committed as f625a6f and the dual backend code and new data are committed as d19595c
+All six experiment groups and raw compressed traces and planner certificates and exact source snapshots and complete selected stores are saved under results/research/capability_loss_oct13
+Compressed JSON uncompressed hashes and archive hashes are recorded in evidence_inventory.json
+Tar hard links deduplicate identical artifact bytes while preserving every original selected store path and every archived file was checked against its source bytes
+The complete source snapshots for the intermediate Banknote run and the dual pilot match their recorded provenance hashes exactly
+CHECKSUMS.json will identify the final saved release files
+The original paper and original milestone evidence remain unchanged
+
+SCOPE AND NEXT ACTIONS
+The availability injections restrict declared replay calls and do not uninstall libraries and require intact retained files and the matching numerical environment
+These are constructed real data histories and not observed production outages
+Results measure stored bytes and exact artifact recovery and not new classification accuracy or latency speedup
+Next compare the closest baseline implementations and collect independent retired interface workflows and extend the new contract to larger neural artifacts and reproduce on another machine
+The detailed method and three contributions and literature boundaries and reproduction commands are now in docs/CAPABILITY_LOSS_NOVELTY.md
+
+INDEPENDENT ARCHIVED STORE REPLAY CHECK
+The new scripts/capability_disk_audit.py extracts the saved dual backend store archive and reproduces all 3168 original request outcomes without a capture archive
+It records 2772 exact recoveries and 396 expected blocked nominal requests and all original success and failure outcomes match
+Environment and extension implementation hash checks stay enabled
+The first initialization correctly rejected a thread library environment mismatch and did not produce a completed audit
+Loading the pinned numerical operator libraries before applying the recorded thread limit fixed initialization and no captured environment was changed
+The completed audit and its genuine timestamps and CPU work and operation events are saved under disk_audit_verified
+The final storage comparison figure shows the three split seed mean byte totals and savings for all four dual backend conditions
+
+GITHUB PUBLICATION CHECKPOINT
+The new research branch is research/capability-loss-recovery
+The initial capability planner is published as remote commit 36c722697a39e0cab22923ac26ceb87e988c1dd6
+The dual backend code and Banknote data are published as remote commit 73f565f61e0b217d551ef37adc39c26c94d816ce
+The code trees were checked against their corresponding local Git trees and the branch source file was read back after publication
+The full evidence checkpoint is committed locally as 66aab51153e116148d037d94f306a24b015e7cae
+Uploading results/research/capability_loss_oct13/banknote/stores.tar.gz was rejected with the tool response user rejected MCP tool call and no further reason was provided
+The same archive upload was not retried and the full evidence commit is not yet on GitHub
+The complete raw evidence and documentation remain saved in the local committed checkpoint
+
+HOW PERFORMANCE IS IMPROVED
+Physical artifacts are identified by SHA256 hashes and identical captured bytes share one stored blob
+Hash maps hold logical nodes and selected recovery steps and memory reuse entries
+The current witness certificate still scans recorded producers while constructing grounded recovery rounds and no new producer search index has been benchmarked
+The earlier frontier planners improve planning speed by reducing optimization variables while preserving their proven objective
+The new bounded capability loss planner improves storage efficiency and recovery coverage and does not establish a restoration latency speedup
+Rebuilding outputs can require more CPU work than loading a saved model so storage efficiency and execution speed must be reported separately
+
+14 OCTOBER 2026 PAPER COMPLETION EXPERIMENTS STARTED
+The new paper focus is minimum storage for exact historical ML outputs under bounded loss of declared replay capability groups
+An independent scenario expanded MILP now models the same fault universe and byte objective using per scenario availability and replay decisions and continuous topological ranks
+Twenty independent generated small graph cases and all storage subsets validate both formulations against a recursive path oracle
+The indexed certificate follows only consumers of newly available physical blobs and preserves the original sorted producer order and recovery rounds
+Forty eight generated alias graphs and all retained subsets confirm that the complete certificate equals the old scanning implementation
+The current full suite has 68 tests with 63 passing and five optional PyTorch checks skipped
+
+PUBLISHED CODE AND NATIVE SYSTEM COMPARISONS
+The original HYPPO history_manager.py component is pinned to commit 405e42de863272fcb71a625cf6b2ae0696c7a8c5 and hash b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a
+The component is executed unchanged and source hashes are verified and third party code is not redistributed
+The adapter gives it every optional physical artifact including alternative identities and membership checkpoints and uses recorded logical ancestry compute estimates and per version physical dependency frequency
+This is a published component comparison with our common executor and not a full system HYPPO experiment
+A completed thirty two case protocol pilot records 19008 genuine recovery attempts and is preserved separately
+The original source uses a strict Budget greater than used plus size test and the final adapter passes budget plus one so integer byte accounting uses the inclusive limit shared by every policy
+No extra usable byte is granted and the final adapter independently checks the selected optional payload sum against the actual budget
+The corrected final tabular study uses three split seeds on four datasets and two formats and two outage bounds and nine policies
+The larger estimator extension adds forest and CPU multilayer neural network training to the Digits workload
+An initial neural validation recovers eight requests exactly and both captured model versions have 96.8889 percent held out accuracy and these values only check workload quality
+Native DVC 3.67.1 is installed for actual cache based snapshot checkout and its payload accounting will be normalized separately from DVC directory and pointer metadata
+The reference formulation and kernel timings will be executed serially after the recovery matrix to reduce benchmark contention
+The older paper and all older evidence remain preserved and a separate capability loss manuscript will be created
+
+14 OCTOBER 2026 FINAL SAVED PAPER CHECKPOINT
+The initial corrected tabular study has 48 cases and 28512 genuine requests and both exact methods restore all 3168 requests with matching minima
+The larger Digits forest and neural matrix has eight cases and 1584 requests and both exact methods restore all 176 requests
+Native DVC completes 40 real per version checkouts and verifies every target file hash
+The first failed neural pickle trial is preserved and canonical inference state corrects the round trip while exact native predictions are checked at capture
+The inference checkpoint does not claim training optimizer state for resume
+
+The physical decomposition remains exact under shared loss labels because every local allowed loss extends to a global allowed loss and optional costs add after fixing roots
+Shared optional artifacts remain in the same component and self alias cycles are not independent rooted providers
+The old global CE is slower than expansion on the mixed 112 version graph and this adverse result is reported
+The mixed proven stores save 93.496 and 83.939 percent of target snapshot bytes under the declared preprocessing replay scope
+The final component validation has 118 planning runs and 9288 exact disk requests with independent reference or analytic minima
+
+The final saved fresh published matrix has 28 histories and 56 cases and 33440 real requests across ten policies
+RecoverML restores all 3344 requests and HYPPO rank restores 2240 and frequency restores 2291 and the best tested common budget HELIX setting restores 1940
+HYPPO is unchanged pinned released code with an adapter and HELIX is a documented published rule reimplementation with three read speeds and both event tie orders
+All main methods recover every no outage request in the lossless subset and the coverage gap also appears when calls are actually disabled
+The broader outage matrix has 36 cases and 3920 exact requests and both exact engines agree in every case
+Training outages make large model storage necessary and declaring both fitting and prediction vulnerable makes snapshots optimal in the captured structures
+
+The final suite has 77 tests with 72 passing and five optional PyTorch skips and the recorded hardware has eight CPU quota and eight GiB memory and one numerical thread
+All source snapshots match recorded hashes and every selected store archive path is checked against its original bytes
+Nine paper figures and their tables are regenerated from the saved summaries and raw count audits
+The full simple project summary is docs/PROJECT_SUMMARY.md and the current manuscript is paper/RecoverML_capability_loss.md
+The interrupted publication did not complete and final additions were restored and experiments saved again in fresh folders without rewriting older evidence
+The latest research artifact is committed locally and full GitHub publication remains pending
+Independent novelty challenge and second machine reproduction and venue specific submission steps remain external checks
+
+14 October 2026 publication and reproduction guide
+Added a full start to finish reproducibility.txt and README links with Windows WSL2 setup and Python 3.12 installation and saved evidence audits and nine figure regeneration and fresh smoke and full milestone and paper runners and archived strict replay requirements
+requirements.txt now includes the pinned NetworkX 3.5 and DVC 3.67.1 paper dependencies and both CI jobs install the same paper dependencies
+A new isolated Python environment on the same physical host installed the requirements and editable paper package successfully and pip check reported no broken requirements
+All 77 tests completed with 72 passing and five optional PyTorch skips and both analysis scripts regenerated all nine plots from the saved raw evidence
+The fresh smoke benchmark and raw audit passed and its stdout is retained with setup metadata and package versions under results/validation/2026-10-14/reproduction_guide
+This is an installation and guide validation on the existing host and is not a second physical machine experiment
+The archived guard compares complete environment metadata including numerical library paths so the guide keeps fresh laptop captures separate from archived replay and never advises disabling the guard
+Paper text and PDF are unchanged while the author reads the paper before the final formatting revision
+The complete latest research upload is being published after this documentation and validation commit
+
+14 October 2026 publication content checks and remaining upload gate
+Decoded all 49 compressed research archives and inspected all JSON traces and selected store metadata and canonical numeric model JSON and pickle strings without loading arbitrary code and checked member paths and artifact filename hashes
+The archive inventory covers 39376337 compressed bytes and found no credential pattern or sensitive JSON field matches and the full inspection report is preserved with the setup validation
+Public input hashes from the blocked Breast Cancer pilot store matched the public sklearn dataset exactly
+Automatic approval review still rejected the saved store archive and a final planner log because it required exact payload disclosure permission beyond the general publication instruction
+The remaining compressed evidence files are listed with exact hashes in docs/PUBLICATION_PENDING_OCT14.json and remain unchanged locally
+The source and instructions and paper and plots and accepted evidence are being published while that data gate remains pending and the README and guide distinguish available fresh reproduction from checks requiring the full saved evidence

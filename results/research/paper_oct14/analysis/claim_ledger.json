@@ -1,0 +1,185 @@
+{
+  "inputs": {
+    "tabular/execution_traces.json.gz": "7660256df56bcd1fefaccc34c9ae4c124cbe5f5a5e057039da1d69c959b8e4d3",
+    "tabular/stores.tar.gz": "215ac4860cb521a12a8415acd302dc5e9e8e67e2f6da9902e23a19172b3f85a6",
+    "tabular/summary.csv": "8db2c19a5599bbb5851ec78b0b3c061a215f6c7ef3277313c734271c80d29362",
+    "tabular/planner_certificates.json.gz": "aa96b6d8c11c3f314742818bf9f9e78418b868302e631af61157ca56708389bd",
+    "tabular/report.json": "56ce77372c63dcd8661160c430aa5b8b7668a45871b21d1e804208b8eab89f53",
+    "estimators/execution_traces.json.gz": "ec23bff10b30c0098785fe0ad1153779d5925bc55153a6ceed7629487aefd4de",
+    "estimators/stores.tar.gz": "56f4ec0c9bb0c5e9399ccf8a62d8e9efafb07a6b6dc9f88f32604763a120b453",
+    "estimators/summary.csv": "6d5642bcc44f4ef3287f7278952b0f1e496253b17d5daf85619f64ed39b56b5a",
+    "estimators/planner_certificates.json.gz": "deb630112a034a90128ce68c78c6ea0c944ea54e3fad7d9a5c6e21459fa18f8e",
+    "estimators/report.json": "29f56b6c0287712ea8a4b7963a8b9e992c2fc93799d0d899ccdfaf728f4c5ffc",
+    "scaling/execution_traces.json.gz": "e53f414e2141e648c570429d06a351d975616a9104f8a4a5f6e72a3f40b8a8d1",
+    "scaling/summary.csv": "145f2b23a9e7523b0a4ed9c6373d96fad5bf8bd2740997a8b6965450965d5126",
+    "scaling/report.json": "f4b4ed99c7431038bf391590bbf38e15e501ded26c50de75d8118e512f6cc830",
+    "index/execution_traces.json.gz": "e0ee68922aedc6abcbd985fc6fc48125f8c76b465353cf806816d481b76bc871",
+    "index/summary.csv": "3492d84d1b823f1a240e7bc6153072af0fb06b409f5819e73abbb9e2267db033",
+    "index/report.json": "04c8f823f7e8b5093e01a397800e3ddf3a22c4cadbe8709a694506247a349c65",
+    "dvc/execution_traces.json.gz": "abd4fd47dd5ae00b10064fd62954e3ee1a247671b6a42d7e78a1472a25f629e0",
+    "dvc/summary.csv": "8c359eaa315f135d870d9bbc88864179d5626022803072f47d588b8fec126dc6",
+    "dvc/report.json": "fba8b35ebf2200a2c1f0a1b18eb64585ac2d6f080819ce7ccb128a53516e2044"
+  },
+  "analysis_source_sha256": "d9e801712ecc158d12bddc26dea4aa30b58442b7c65e8e5d36e5832596f14142",
+  "coverage": {
+    "tabular": {
+      "robust": {
+        "exact": 3168,
+        "requests": 3168
+      },
+      "expanded_exact": {
+        "exact": 3168,
+        "requests": 3168
+      },
+      "nominal": {
+        "exact": 1728,
+        "requests": 3168
+      },
+      "HYPPO_rank_component": {
+        "exact": 2069,
+        "requests": 3168
+      },
+      "HYPPO_frequency_component": {
+        "exact": 2145,
+        "requests": 3168
+      }
+    },
+    "estimators": {
+      "robust": {
+        "exact": 176,
+        "requests": 176
+      },
+      "expanded_exact": {
+        "exact": 176,
+        "requests": 176
+      },
+      "nominal": {
+        "exact": 64,
+        "requests": 176
+      },
+      "HYPPO_rank_component": {
+        "exact": 168,
+        "requests": 176
+      },
+      "HYPPO_frequency_component": {
+        "exact": 166,
+        "requests": 176
+      }
+    }
+  },
+  "scaling": [
+    {
+      "groups": 6,
+      "k": 1,
+      "counterexample": 0.02558406600019225,
+      "expanded_exact": 0.01041337599963299,
+      "speedup": 0.40702584177021506
+    },
+    {
+      "groups": 6,
+      "k": 2,
+      "counterexample": 0.03402648800010866,
+      "expanded_exact": 0.030999436999991303,
+      "speedup": 0.9110383945558035
+    },
+    {
+      "groups": 12,
+      "k": 1,
+      "counterexample": 0.025935321000361,
+      "expanded_exact": 0.01783564600009413,
+      "speedup": 0.6876971370373967
+    },
+    {
+      "groups": 12,
+      "k": 2,
+      "counterexample": 0.027065897999818844,
+      "expanded_exact": 0.13228467899989482,
+      "speedup": 4.887503788005859
+    },
+    {
+      "groups": 24,
+      "k": 1,
+      "counterexample": 0.026993269999820768,
+      "expanded_exact": 0.03457205500035343,
+      "speedup": 1.2807657242187769
+    },
+    {
+      "groups": 24,
+      "k": 2,
+      "counterexample": 0.029861071000141237,
+      "expanded_exact": 0.6800987149999855,
+      "speedup": 22.775429421026754
+    }
+  ],
+  "index": [
+    {
+      "depth": 32,
+      "scan_s": 0.00043857499986188486,
+      "index_s": 0.00010975099985444103,
+      "speedup": 3.996091155830487
+    },
+    {
+      "depth": 128,
+      "scan_s": 0.007631109000158176,
+      "index_s": 0.0002937009999186557,
+      "speedup": 25.98257752704863
+    },
+    {
+      "depth": 512,
+      "scan_s": 0.14877667900009328,
+      "index_s": 0.0016383990000576887,
+      "speedup": 90.80613391173627
+    },
+    {
+      "depth": 2048,
+      "scan_s": 2.4934730530003435,
+      "index_s": 0.00573361799979466,
+      "speedup": 434.8864980348609
+    }
+  ],
+  "dvc": [
+    {
+      "model": "logistic",
+      "k": 1,
+      "saving": 43.2446161938457,
+      "snapshot_bytes": 149614,
+      "robust_bytes": 84914
+    },
+    {
+      "model": "logistic",
+      "k": 2,
+      "saving": 13.958586778860488,
+      "snapshot_bytes": 149614,
+      "robust_bytes": 128730
+    },
+    {
+      "model": "forest",
+      "k": 1,
+      "saving": 90.62788965591362,
+      "snapshot_bytes": 10241524,
+      "robust_bytes": 959841.5
+    },
+    {
+      "model": "forest",
+      "k": 2,
+      "saving": 81.65432089658904,
+      "snapshot_bytes": 10241524,
+      "robust_bytes": 1878866.5
+    },
+    {
+      "model": "mlp",
+      "k": 1,
+      "saving": 36.356828494534945,
+      "snapshot_bytes": 1508949,
+      "robust_bytes": 960343
+    },
+    {
+      "model": "mlp",
+      "k": 2,
+      "saving": 0.0,
+      "snapshot_bytes": 1508949,
+      "robust_bytes": 1508949
+    }
+  ],
+  "scope": "Every count and median is derived from saved complete runs; HYPPO component and DVC snapshot scopes remain distinct"
+}

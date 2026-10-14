@@ -1,0 +1,5 @@
+case,dataset,seed,transport,versions,k,fault_scenarios,observed_feature_witness,nominal_bytes,robust_bytes,snapshot_bytes,robust_saving_vs_snapshots,nominal_attempts,nominal_exact,robust_attempts,robust_exact,snapshot_exact,storage_cuts,robust_optimal,all_off_bytes,all_off_exact,dual_scalers
+banknote-00-npy-k1,banknote,0,npy,12,1,4,True,73567,84917,149617,43.243749039213455,48,24,48,48,48,3,True,128733,48,True
+banknote-00-npy-k2,banknote,0,npy,12,2,7,True,73567,128733,149617,13.958306876892332,84,24,84,84,84,40,True,128733,84,True
+banknote-00-csv6-k1,banknote,0,csv6,12,1,4,False,117606,128738,149622,13.9578404245365,48,36,48,48,48,20,True,128738,48,True
+banknote-00-csv6-k2,banknote,0,csv6,12,2,7,False,117606,128738,149622,13.9578404245365,84,48,84,84,84,20,True,128738,84,True

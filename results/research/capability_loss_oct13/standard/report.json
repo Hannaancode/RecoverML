@@ -1,0 +1,12 @@
+{
+  "cases": 24,
+  "attempts": 4752,
+  "exact_requests": 3912,
+  "expected_blocked": 840,
+  "robust_attempts": 1584,
+  "robust_exact": 1584,
+  "snapshot_attempts": 1584,
+  "snapshot_exact": 1584,
+  "nominal_attempts": 1584,
+  "nominal_exact": 744
+}

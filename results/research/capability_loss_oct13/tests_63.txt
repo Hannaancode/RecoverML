@@ -1,0 +1,72 @@
+test_v4_is_plotted_and_nondeterministic_panel_is_not_empty (test_analysis.AnalysisTests.test_v4_is_plotted_and_nondeterministic_panel_is_not_empty) ... ok
+test_actual_disk_recovery_uses_surviving_producer (test_capability_retention.CapabilityTests.test_actual_disk_recovery_uses_surviving_producer) ... ok
+test_correlated_group_losses_and_alias_cycles (test_capability_retention.CapabilityTests.test_correlated_group_losses_and_alias_cycles) ... ok
+test_extension_implementation_hash_is_enforced (test_capability_retention.CapabilityTests.test_extension_implementation_hash_is_enforced) ... ok
+test_iteration_limit_is_never_called_robust (test_capability_retention.CapabilityTests.test_iteration_limit_is_never_called_robust) ... ok
+test_separation_and_robust_optimum_against_exhaustive_oracle (test_capability_retention.CapabilityTests.test_separation_and_robust_optimum_against_exhaustive_oracle) ... ok
+test_sklearn_backend_survives_numpy_capability_loss (test_capability_retention.CapabilityTests.test_sklearn_backend_survives_numpy_capability_loss) ... ok
+test_branched_pipeline_restores_all_models_and_predictions (test_core.CoreTests.test_branched_pipeline_restores_all_models_and_predictions) ... ok
+test_budget_failure_reported (test_core.CoreTests.test_budget_failure_reported) ... ok
+test_corruption_detected_before_unpickle (test_core.CoreTests.test_corruption_detected_before_unpickle) ... ok
+test_cycles_rejected (test_core.CoreTests.test_cycles_rejected) ... ok
+test_deep_affine_pipeline_replays_exactly (test_core.CoreTests.test_deep_affine_pipeline_replays_exactly) ... ok
+test_environment_mismatch_rejected (test_core.CoreTests.test_environment_mismatch_rejected) ... ok
+test_exact_oracle_threshold_and_heuristic (test_core.CoreTests.test_exact_oracle_threshold_and_heuristic) ... ok
+test_exact_replay_cpu_neural_network (test_core.CoreTests.test_exact_replay_cpu_neural_network) ... ok
+test_exact_replay_logistic_and_forest (test_core.CoreTests.test_exact_replay_logistic_and_forest) ... ok
+test_global_fit_invalidates_and_local_blocks_share (test_core.CoreTests.test_global_fit_invalidates_and_local_blocks_share) ... ok
+test_journal_final_export_recovers_a_truncated_checkpoint (test_core.CoreTests.test_journal_final_export_recovers_a_truncated_checkpoint) ... ok
+test_loaded_model_inference_and_codec_roundtrip (test_core.CoreTests.test_loaded_model_inference_and_codec_roundtrip) ... ok
+test_nondeterministic_augmentation_is_fail_closed (test_core.CoreTests.test_nondeterministic_augmentation_is_fail_closed) ... ok
+test_opaque_replay_fails_closed (test_core.CoreTests.test_opaque_replay_fails_closed) ... ok
+test_recoverability_retains_outputs_without_external_arrays (test_core.CoreTests.test_recoverability_retains_outputs_without_external_arrays) ... ok
+test_simple_target_baseline_is_safe (test_core.CoreTests.test_simple_target_baseline_is_safe) ... ok
+test_unsafe_eviction_is_refused (test_core.CoreTests.test_unsafe_eviction_is_refused) ... ok
+test_wrong_replay_config_rejected_by_hash (test_core.CoreTests.test_wrong_replay_config_rejected_by_hash) ... ok
+test_bounded_incumbent_is_not_called_optimal (test_optimizer.OptimizerTests.test_bounded_incumbent_is_not_called_optimal) ... ok
+test_cheap_target_replay_does_not_get_false_lower_bound (test_optimizer.OptimizerTests.test_cheap_target_replay_does_not_get_false_lower_bound) ... ok
+test_direct_target_lower_bound_avoids_solver (test_optimizer.OptimizerTests.test_direct_target_lower_bound_avoids_solver) ... ok
+test_frontier_compaction_matches_exhaustive_oracle (test_optimizer.OptimizerTests.test_frontier_compaction_matches_exhaustive_oracle) ... ok
+test_frontier_compaction_removes_fixed_binary_variables (test_optimizer.OptimizerTests.test_frontier_compaction_removes_fixed_binary_variables) ... ok
+test_milp_matches_exhaustive_on_shared_opaque_graphs (test_optimizer.OptimizerTests.test_milp_matches_exhaustive_on_shared_opaque_graphs) ... ok
+test_mismatched_solver_objective_is_rejected (test_optimizer.OptimizerTests.test_mismatched_solver_objective_is_rejected) ... ok
+test_opaque_ancestry_pruning_preserves_tight_budget_decision (test_optimizer.OptimizerTests.test_opaque_ancestry_pruning_preserves_tight_budget_decision) ... ok
+test_shared_blob_and_overlapping_targets_match_oracle (test_optimizer.OptimizerTests.test_shared_blob_and_overlapping_targets_match_oracle) ... ok
+test_solver_failure_uses_validated_heuristic (test_optimizer.OptimizerTests.test_solver_failure_uses_validated_heuristic) ... ok
+test_v3_pruning_matches_v2_on_public_opaque_workloads (test_optimizer.OptimizerTests.test_v3_pruning_matches_v2_on_public_opaque_workloads) ... ok
+test_wide_topology_frontier_preserves_optimum (test_optimizer.OptimizerTests.test_wide_topology_frontier_preserves_optimum) ... ok
+test_independent_cost_matches_executor_model_with_aliases (test_oracle_audit.OracleAuditTests.test_independent_cost_matches_executor_model_with_aliases) ... ok
+test_mixed_frontier_preserves_live_shared_ancestry (test_oracle_audit.OracleAuditTests.test_mixed_frontier_preserves_live_shared_ancestry) ... ok
+test_no_boundary_control_keeps_all_live_ancestors (test_oracle_audit.OracleAuditTests.test_no_boundary_control_keeps_all_live_ancestors) ... ok
+test_repeated_widths_do_not_create_independent_seed_subjects (test_paper_evidence.PaperEvidenceTests.test_repeated_widths_do_not_create_independent_seed_subjects) ... ok
+rows80-recoverability_v2-w2-rep0: 4/4 exact · 105.1 req/s
+rows80-recoverability_v2-w1-rep0: 4/4 exact · 166.8 req/s
+rows80-full_replay-w1-rep0: 4/4 exact · 120.5 req/s
+rows80-full_replay-w2-rep0: 4/4 exact · 109.5 req/s
+test_changed_file_hash (test_performance.PerformanceTest.test_changed_file_hash) ... ok
+test_changed_latency_with_refreshed_hash (test_performance.PerformanceTest.test_changed_latency_with_refreshed_hash) ... ok
+test_missing_declared_trial_with_refreshed_hash (test_performance.PerformanceTest.test_missing_declared_trial_with_refreshed_hash) ... ok
+test_missing_request_operations_with_refreshed_hash (test_performance.PerformanceTest.test_missing_request_operations_with_refreshed_hash) ... ok
+test_optimized_python_still_rejects_incomplete_trace (test_performance.PerformanceTest.test_optimized_python_still_rejects_incomplete_trace) ... ok
+test_parallel_restore (test_performance.PerformanceTest.test_parallel_restore) ... ok
+test_existing_results_are_unchanged (test_runner.RunnerTest.test_existing_results_are_unchanged) ... ok
+test_failure_stops_remaining_commands (test_runner.RunnerTest.test_failure_stops_remaining_commands) ... ok
+test_new_folder_runs_all_stages_in_order (test_runner.RunnerTest.test_new_folder_runs_all_stages_in_order) ... ok
+test_cnn_weight_and_prediction_exact_replay (test_torch.TorchTests.test_cnn_weight_and_prediction_exact_replay) ... skipped 'optional PyTorch dependency'
+test_empty_text_sequences_have_finite_probabilities (test_torch.TorchTests.test_empty_text_sequences_have_finite_probabilities) ... skipped 'optional PyTorch dependency'
+test_loaded_weights_produce_exact_predictions (test_torch.TorchTests.test_loaded_weights_produce_exact_predictions) ... skipped 'optional PyTorch dependency'
+test_torch_operator_environment_change_is_rejected (test_torch.TorchTests.test_torch_operator_environment_change_is_rejected) ... skipped 'optional PyTorch dependency'
+test_transformer_weight_and_prediction_exact_replay (test_torch.TorchTests.test_transformer_weight_and_prediction_exact_replay) ... skipped 'optional PyTorch dependency'
+test_corruption_fails_closed (test_witness.WitnessTests.test_corruption_fails_closed) ... ok
+test_fixed_point_against_independent_path_oracle (test_witness.WitnessTests.test_fixed_point_against_independent_path_oracle) ... ok
+test_mismatched_contract_fails_hash_check (test_witness.WitnessTests.test_mismatched_contract_fails_hash_check) ... ok
+test_opaque_artifact_recovers_without_replaying_opaque_event (test_witness.WitnessTests.test_opaque_artifact_recovers_without_replaying_opaque_event) ... ok
+test_self_supporting_alias_cycle_is_not_recoverable (test_witness.WitnessTests.test_self_supporting_alias_cycle_is_not_recoverable) ... ok
+test_alias_cycle_requires_a_retained_start (test_witness_optimizer.WitnessOptimizerTests.test_alias_cycle_requires_a_retained_start) ... ok
+test_empty_graph_and_invalid_limit (test_witness_optimizer.WitnessOptimizerTests.test_empty_graph_and_invalid_limit) ... ok
+test_storage_optimum_matches_independent_path_oracle (test_witness_optimizer.WitnessOptimizerTests.test_storage_optimum_matches_independent_path_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 14.537s
+
+OK (skipped=5)

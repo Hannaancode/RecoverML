@@ -1,0 +1,48 @@
+{"completed_case": "breast_cancer-logistic-00-npy-k1", "robust_bytes": 165153}
+{"completed_case": "breast_cancer-logistic-00-npy-k2", "robust_bytes": 200786}
+{"completed_case": "breast_cancer-logistic-01-npy-k1", "robust_bytes": 165155}
+{"completed_case": "breast_cancer-logistic-01-npy-k2", "robust_bytes": 200788}
+{"completed_case": "breast_cancer-logistic-00-csv6-k1", "robust_bytes": 200789}
+{"completed_case": "breast_cancer-logistic-00-csv6-k2", "robust_bytes": 200789}
+{"completed_case": "breast_cancer-logistic-01-csv6-k1", "robust_bytes": 200789}
+{"completed_case": "breast_cancer-logistic-01-csv6-k2", "robust_bytes": 200789}
+{"completed_case": "iris-logistic-00-npy-k1", "robust_bytes": 26238}
+{"completed_case": "iris-logistic-00-npy-k2", "robust_bytes": 30949}
+{"completed_case": "iris-logistic-01-npy-k1", "robust_bytes": 26241}
+{"completed_case": "iris-logistic-01-npy-k2", "robust_bytes": 30952}
+{"completed_case": "iris-logistic-00-csv6-k1", "robust_bytes": 30951}
+{"completed_case": "iris-logistic-00-csv6-k2", "robust_bytes": 30951}
+{"completed_case": "iris-logistic-01-csv6-k1", "robust_bytes": 30955}
+{"completed_case": "iris-logistic-01-csv6-k2", "robust_bytes": 30955}
+{"completed_case": "wine-logistic-00-npy-k1", "robust_bytes": 40554}
+{"completed_case": "wine-logistic-00-npy-k2", "robust_bytes": 58833}
+{"completed_case": "wine-logistic-01-npy-k1", "robust_bytes": 40561}
+{"completed_case": "wine-logistic-01-npy-k2", "robust_bytes": 58840}
+{"completed_case": "wine-logistic-00-csv6-k1", "robust_bytes": 58836}
+{"completed_case": "wine-logistic-00-csv6-k2", "robust_bytes": 58836}
+{"completed_case": "wine-logistic-01-csv6-k1", "robust_bytes": 58832}
+{"completed_case": "wine-logistic-01-csv6-k2", "robust_bytes": 58832}
+{"completed_case": "banknote-logistic-00-npy-k1", "robust_bytes": 84908}
+{"completed_case": "banknote-logistic-00-npy-k2", "robust_bytes": 128724}
+{"completed_case": "banknote-logistic-01-npy-k1", "robust_bytes": 84906}
+{"completed_case": "banknote-logistic-01-npy-k2", "robust_bytes": 128722}
+{"completed_case": "banknote-logistic-00-csv6-k1", "robust_bytes": 128731}
+{"completed_case": "banknote-logistic-00-csv6-k2", "robust_bytes": 128731}
+{"completed_case": "banknote-logistic-01-csv6-k1", "robust_bytes": 128736}
+{"completed_case": "banknote-logistic-01-csv6-k2", "robust_bytes": 128736}
+{
+  "suite": "tabular",
+  "planning_cases": 32,
+  "captured_histories": 16,
+  "requests": 19008,
+  "exact": 16258,
+  "expected_blocked": 2750,
+  "hyppo_revision": "405e42de863272fcb71a625cf6b2ae0696c7a8c5",
+  "hyppo_source_sha256": "b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a",
+  "hyppo_url": "https://raw.githubusercontent.com/akontaxakis/HYPPO/405e42de863272fcb71a625cf6b2ae0696c7a8c5/Components/history_manager.py",
+  "comparison_scope": "Original HYPPO materialization component with our physical-blob and ancestry-cost adapter and common exact executor; not a full-system HYPPO comparison",
+  "fault_scope": "Injected replay call restrictions; intact files and numerical environment and training/prediction remain available",
+  "trace_sha256": "4cebf0c0ee064a0e99d540a0579c4bd0308bc117bd66ac1a6054a47732720514",
+  "source_sha256": "ed9c598048c7f1fef1c9813d4018d46344438fd7e9f839b1ee2d585cd0c0bec0",
+  "process_peak_rss_kib": 367180
+}

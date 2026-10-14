@@ -1,0 +1,1636 @@
+[
+  {
+    "case": "groups016-k2",
+    "groups": 16,
+    "k": 2,
+    "nodes": 77,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 137,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.026494771000216133,
+    "analytic_optimum_bytes": 46213,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 46213,
+      "capability_bound": 2,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider2",
+        "provider3",
+        "provider4",
+        "provider5",
+        "provider6",
+        "provider7",
+        "provider8",
+        "provider9"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.0037010639998698025,
+          "retained_bytes": 37505,
+          "lower_bound_bytes": 37505.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.002617935000671423,
+            "variables": 33,
+            "constraints": 62
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.0013318609999259934,
+          "retained_bytes": 39682,
+          "lower_bound_bytes": 39682.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider3",
+              "provider4"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0021473500000865897,
+            "variables": 33,
+            "constraints": 62
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0013897999997425359,
+          "retained_bytes": 41859,
+          "lower_bound_bytes": 41859.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0030976329999248264,
+            "variables": 33,
+            "constraints": 62
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0015547940001852112,
+          "retained_bytes": 44036,
+          "lower_bound_bytes": 44036.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider6",
+              "provider7"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0021059760001662653,
+            "variables": 33,
+            "constraints": 62
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.001937031000124989,
+          "retained_bytes": 46213,
+          "lower_bound_bytes": 46213.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.0019179760001861723,
+            "variables": 33,
+            "constraints": 62
+          }
+        }
+      ]
+    }
+  },
+  {
+    "case": "groups016-k3",
+    "groups": 16,
+    "k": 3,
+    "nodes": 93,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 697,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.023046510000312992,
+    "analytic_optimum_bytes": 53861,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 53861,
+      "capability_bound": 3,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider2",
+        "provider3",
+        "provider4",
+        "provider5",
+        "provider6",
+        "provider7",
+        "provider8",
+        "provider9"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.0011974629996984731,
+          "retained_bytes": 45153,
+          "lower_bound_bytes": 45153.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider12",
+              "provider13",
+              "provider14"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.002393634000327438,
+            "variables": 33,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.0013319600002432708,
+          "retained_bytes": 47330,
+          "lower_bound_bytes": 47330.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider4",
+              "provider5",
+              "provider6"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0023989170003915206,
+            "variables": 33,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0017611740004213061,
+          "retained_bytes": 49507,
+          "lower_bound_bytes": 49507.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1",
+              "provider2"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.001967686000170943,
+            "variables": 33,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0019264909997218638,
+          "retained_bytes": 51684,
+          "lower_bound_bytes": 51684.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider8",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0035017009995499393,
+            "variables": 33,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.0013051879996055504,
+          "retained_bytes": 53861,
+          "lower_bound_bytes": 53861.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.0016201519993046531,
+            "variables": 33,
+            "constraints": 78
+          }
+        }
+      ]
+    }
+  },
+  {
+    "case": "groups048-k2",
+    "groups": 48,
+    "k": 2,
+    "nodes": 81,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 1177,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.021136164999916218,
+    "analytic_optimum_bytes": 48189,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 48189,
+      "capability_bound": 2,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider16",
+        "provider17",
+        "provider18",
+        "provider19",
+        "provider2",
+        "provider20",
+        "provider21",
+        "provider22",
+        "provider23",
+        "provider24",
+        "provider25",
+        "provider26",
+        "provider27",
+        "provider28",
+        "provider29",
+        "provider3",
+        "provider30",
+        "provider31",
+        "provider32",
+        "provider33",
+        "provider34",
+        "provider35",
+        "provider36",
+        "provider37",
+        "provider38",
+        "provider39",
+        "provider4",
+        "provider40",
+        "provider41",
+        "provider42",
+        "provider43",
+        "provider44",
+        "provider45",
+        "provider46",
+        "provider47",
+        "provider5",
+        "provider6",
+        "provider7",
+        "provider8",
+        "provider9"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.0015143990003707586,
+          "retained_bytes": 39481,
+          "lower_bound_bytes": 39481.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.00313912099954905,
+            "variables": 65,
+            "constraints": 66
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.001349025999843434,
+          "retained_bytes": 41658,
+          "lower_bound_bytes": 41658.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider3",
+              "provider4"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.001964527000382077,
+            "variables": 65,
+            "constraints": 66
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0013994400005685748,
+          "retained_bytes": 43835,
+          "lower_bound_bytes": 43835.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0022299899992503924,
+            "variables": 65,
+            "constraints": 66
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0014328650004244992,
+          "retained_bytes": 46012,
+          "lower_bound_bytes": 46012.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider6",
+              "provider7"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0018874970000979374,
+            "variables": 65,
+            "constraints": 66
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.0012456559998099692,
+          "retained_bytes": 48189,
+          "lower_bound_bytes": 48189.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.0017120559996328666,
+            "variables": 65,
+            "constraints": 66
+          }
+        }
+      ]
+    }
+  },
+  {
+    "case": "groups048-k3",
+    "groups": 48,
+    "k": 3,
+    "nodes": 93,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 18473,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.024275409999972908,
+    "analytic_optimum_bytes": 53914,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 53914,
+      "capability_bound": 3,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider16",
+        "provider17",
+        "provider18",
+        "provider19",
+        "provider2",
+        "provider20",
+        "provider21",
+        "provider22",
+        "provider23",
+        "provider24",
+        "provider25",
+        "provider26",
+        "provider27",
+        "provider28",
+        "provider29",
+        "provider3",
+        "provider30",
+        "provider31",
+        "provider32",
+        "provider33",
+        "provider34",
+        "provider35",
+        "provider36",
+        "provider37",
+        "provider38",
+        "provider39",
+        "provider4",
+        "provider40",
+        "provider41",
+        "provider42",
+        "provider43",
+        "provider44",
+        "provider45",
+        "provider46",
+        "provider47",
+        "provider5",
+        "provider6",
+        "provider7",
+        "provider8",
+        "provider9"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.0011810380001406884,
+          "retained_bytes": 45206,
+          "lower_bound_bytes": 45206.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider12",
+              "provider13",
+              "provider14"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.003035855000234733,
+            "variables": 65,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.0013395420000961167,
+          "retained_bytes": 47383,
+          "lower_bound_bytes": 47383.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider4",
+              "provider5",
+              "provider6"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.003130361000330595,
+            "variables": 65,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0028248290000192355,
+          "retained_bytes": 49560,
+          "lower_bound_bytes": 49560.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1",
+              "provider2"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.002542824999181903,
+            "variables": 65,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0011886940001204493,
+          "retained_bytes": 51737,
+          "lower_bound_bytes": 51737.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider8",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0024540960002923384,
+            "variables": 65,
+            "constraints": 78
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.0012240850001035142,
+          "retained_bytes": 53914,
+          "lower_bound_bytes": 53914.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.0015871750001679175,
+            "variables": 65,
+            "constraints": 78
+          }
+        }
+      ]
+    }
+  },
+  {
+    "case": "groups096-k2",
+    "groups": 96,
+    "k": 2,
+    "nodes": 129,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 4657,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.03320855399942957,
+    "analytic_optimum_bytes": 71222,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 71222,
+      "capability_bound": 2,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider16",
+        "provider17",
+        "provider18",
+        "provider19",
+        "provider2",
+        "provider20",
+        "provider21",
+        "provider22",
+        "provider23",
+        "provider24",
+        "provider25",
+        "provider26",
+        "provider27",
+        "provider28",
+        "provider29",
+        "provider3",
+        "provider30",
+        "provider31",
+        "provider32",
+        "provider33",
+        "provider34",
+        "provider35",
+        "provider36",
+        "provider37",
+        "provider38",
+        "provider39",
+        "provider4",
+        "provider40",
+        "provider41",
+        "provider42",
+        "provider43",
+        "provider44",
+        "provider45",
+        "provider46",
+        "provider47",
+        "provider48",
+        "provider49",
+        "provider5",
+        "provider50",
+        "provider51",
+        "provider52",
+        "provider53",
+        "provider54",
+        "provider55",
+        "provider56",
+        "provider57",
+        "provider58",
+        "provider59",
+        "provider6",
+        "provider60",
+        "provider61",
+        "provider62",
+        "provider63",
+        "provider64",
+        "provider65",
+        "provider66",
+        "provider67",
+        "provider68",
+        "provider69",
+        "provider7",
+        "provider70",
+        "provider71",
+        "provider72",
+        "provider73",
+        "provider74",
+        "provider75",
+        "provider76",
+        "provider77",
+        "provider78",
+        "provider79",
+        "provider8",
+        "provider80",
+        "provider81",
+        "provider82",
+        "provider83",
+        "provider84",
+        "provider85",
+        "provider86",
+        "provider87",
+        "provider88",
+        "provider89",
+        "provider9",
+        "provider90",
+        "provider91",
+        "provider92",
+        "provider93",
+        "provider94",
+        "provider95"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.001131045999500202,
+          "retained_bytes": 62514,
+          "lower_bound_bytes": 62514.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0033875799999805167,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.0011915230006707134,
+          "retained_bytes": 64691,
+          "lower_bound_bytes": 64691.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider3",
+              "provider4"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.010236781999992672,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0011767650003093877,
+          "retained_bytes": 66868,
+          "lower_bound_bytes": 66868.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.002598551000119187,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0013227039999037515,
+          "retained_bytes": 69045,
+          "lower_bound_bytes": 69045.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider6",
+              "provider7"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0031159390000539133,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.0012330649997238652,
+          "retained_bytes": 71222,
+          "lower_bound_bytes": 71222.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.002446966999741562,
+            "variables": 113,
+            "constraints": 114
+          }
+        }
+      ]
+    }
+  },
+  {
+    "case": "groups096-k3",
+    "groups": 96,
+    "k": 3,
+    "nodes": 129,
+    "physical_blobs": 17,
+    "possible_fault_scenarios": 147537,
+    "oracle_calls": 5,
+    "master_variables": 17,
+    "cuts": 4,
+    "planning_s": 0.031099955999707163,
+    "analytic_optimum_bytes": 71216,
+    "analytic_match": true,
+    "certificate": {
+      "robust_certified": true,
+      "storage_optimal": true,
+      "retained_bytes": 71216,
+      "capability_bound": 3,
+      "capabilities": [
+        "provider0",
+        "provider1",
+        "provider10",
+        "provider11",
+        "provider12",
+        "provider13",
+        "provider14",
+        "provider15",
+        "provider16",
+        "provider17",
+        "provider18",
+        "provider19",
+        "provider2",
+        "provider20",
+        "provider21",
+        "provider22",
+        "provider23",
+        "provider24",
+        "provider25",
+        "provider26",
+        "provider27",
+        "provider28",
+        "provider29",
+        "provider3",
+        "provider30",
+        "provider31",
+        "provider32",
+        "provider33",
+        "provider34",
+        "provider35",
+        "provider36",
+        "provider37",
+        "provider38",
+        "provider39",
+        "provider4",
+        "provider40",
+        "provider41",
+        "provider42",
+        "provider43",
+        "provider44",
+        "provider45",
+        "provider46",
+        "provider47",
+        "provider48",
+        "provider49",
+        "provider5",
+        "provider50",
+        "provider51",
+        "provider52",
+        "provider53",
+        "provider54",
+        "provider55",
+        "provider56",
+        "provider57",
+        "provider58",
+        "provider59",
+        "provider6",
+        "provider60",
+        "provider61",
+        "provider62",
+        "provider63",
+        "provider64",
+        "provider65",
+        "provider66",
+        "provider67",
+        "provider68",
+        "provider69",
+        "provider7",
+        "provider70",
+        "provider71",
+        "provider72",
+        "provider73",
+        "provider74",
+        "provider75",
+        "provider76",
+        "provider77",
+        "provider78",
+        "provider79",
+        "provider8",
+        "provider80",
+        "provider81",
+        "provider82",
+        "provider83",
+        "provider84",
+        "provider85",
+        "provider86",
+        "provider87",
+        "provider88",
+        "provider89",
+        "provider9",
+        "provider90",
+        "provider91",
+        "provider92",
+        "provider93",
+        "provider94",
+        "provider95"
+      ],
+      "master_storage_variables": 17,
+      "cuts": 4,
+      "iterations": [
+        {
+          "iteration": 0,
+          "master_s": 0.0016143259999807924,
+          "retained_bytes": 62508,
+          "lower_bound_bytes": 62508.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider12",
+              "provider13",
+              "provider14"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "unreachable_targets": [
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.004595092999807093,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 1,
+          "master_s": 0.0016682890000083717,
+          "retained_bytes": 64685,
+          "lower_bound_bytes": 64685.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider4",
+              "provider5",
+              "provider6"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "unreachable_targets": [
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0029003600002397434,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 2,
+          "master_s": 0.0013420040004348266,
+          "retained_bytes": 66862,
+          "lower_bound_bytes": 66862.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider0",
+              "provider1",
+              "provider2"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8"
+            ],
+            "storage_cut": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "unreachable_targets": [
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.0066776759995264,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 3,
+          "master_s": 0.0014554819999830215,
+          "retained_bytes": 69039,
+          "lower_bound_bytes": 69039.0,
+          "oracle": {
+            "status": "counterexample",
+            "disabled": [
+              "provider10",
+              "provider8",
+              "provider9"
+            ],
+            "closed": [
+              "0ce7ea989daf5f55723b601d0c346ce318c277e95237bdf4f57a2f5d76eb8f07",
+              "1901f0469501de7e8bfd98712bbf4936986dde671adcb836a7bb08a72a23ef71",
+              "1cc9f2b6ffa07881845da022349e6e2e70f552ee352edebed8ac10232a6582be",
+              "26fbfadb510e989f40f8c058479792a033890c3b151e02fbe1f8af18559d5f8d",
+              "5720457b9567215314d00111091087cf43ea78b7f9dcda88af4f1ba3e76b30aa",
+              "5a551b9ec58d6a15516616c3a309c8c7109a3c17c1cd36a2b8c8669f89b5ff0f",
+              "5e96ea9445f128bbef1cd24e99daf67fec273a45d498eec203621aab71ca97a1",
+              "63f382c7e414c4b6b71754994fc9a40ab49e4c45e954524d3f4aea2aa54dfe91",
+              "680d96f21ef01e2ac38ea401329c676e141bfcac7a2148763163cc7f23a8bb0f",
+              "6ed56e40264479b62b6c45e07c7c3207b01dac95163bbbf3633a5e3b138b193b",
+              "87bce517a907b863c34fc2ef043eeb7238039d34d431c458fbb9cd7ac708f4bc",
+              "8fbfb8bc5e3a55484db3c0e84aa2d5579a9382817e7be34f9119fb6948d8c42b",
+              "9b777f03b0046a44cb226db533b9e8aef08566586ff4036d9b1f0a831fd264d6",
+              "e7835d52b3d7b89d5d8a9b1e3e3370260209020a8dca98ecdc4cf4349a80f6ae",
+              "e9fe50232b21201a2cc99a494b1b971c1f2ef7fd66c9cf51099d1033abfb44f8",
+              "f056ddea52681d8d14df7eeaba0d319ac2f2fda171954eb831165adf0a7e4d9d"
+            ],
+            "storage_cut": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "unreachable_targets": [
+              "adce7a3297e639e88446b2f3c5be64ae0e512027d434bbac68000cfaf8b3c137"
+            ],
+            "minimum_failure_proved": true,
+            "postchecked": true,
+            "solver_status": 0,
+            "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+            "solver_s": 0.002630326000144123,
+            "variables": 113,
+            "constraints": 114
+          }
+        },
+        {
+          "iteration": 4,
+          "master_s": 0.0015442519998032367,
+          "retained_bytes": 71216,
+          "lower_bound_bytes": 71216.0,
+          "oracle": {
+            "status": "certified",
+            "reason": "no bounded capability loss defeats recovery",
+            "solver_status": 2,
+            "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+            "solver_s": 0.0024150389999704203,
+            "variables": 113,
+            "constraints": 114
+          }
+        }
+      ]
+    }
+  }
+]

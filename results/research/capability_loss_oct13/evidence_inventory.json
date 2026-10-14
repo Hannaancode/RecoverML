@@ -1,0 +1,231 @@
+{
+  "pilot": {
+    "original_run": "results/runs/capability_loss_pilot_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "f591f0144c0e65c367a092f1467aa9133ca39d7b4305474e646958346d47a19d",
+        "saved_sha256": "ae06a6a314a287716f9360e24bdc6c36d6297cd0220700452e1f32843388e388"
+      },
+      "outage_coverage.png": {
+        "original_name": "outage_coverage.png",
+        "uncompressed_sha256": "c9ba32627f1ea371ba29d392527349d5feca96633eb86cd5ce060f68e7d8a8b9",
+        "saved_sha256": "c9ba32627f1ea371ba29d392527349d5feca96633eb86cd5ce060f68e7d8a8b9"
+      },
+      "planner_certificates.json.gz": {
+        "original_name": "planner_certificates.json",
+        "uncompressed_sha256": "b90794bfe6b78a4b597c7e914d079a973a0feb55ef5159ff991ea654c67099bc",
+        "saved_sha256": "bfb5dd8ccfc7023e1a94c8f56ffd060f3355f696817695116beceb904aa5f9a1"
+      },
+      "provenance.json": {
+        "original_name": "provenance.json",
+        "uncompressed_sha256": "79fd88c82efaab508962f4fec2061ba5913097a69ea03508c7435c4974c94311",
+        "saved_sha256": "79fd88c82efaab508962f4fec2061ba5913097a69ea03508c7435c4974c94311"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "d93f56d52d215bd1c0b511867e383f2456b264084fcc42b44a515b65297c817a",
+        "saved_sha256": "d93f56d52d215bd1c0b511867e383f2456b264084fcc42b44a515b65297c817a"
+      },
+      "summary.csv": {
+        "original_name": "summary.csv",
+        "uncompressed_sha256": "aad08faf164f30423c25fd89d50804c60a0e416f08b7f6c328d7059fd5b11d0d",
+        "saved_sha256": "aad08faf164f30423c25fd89d50804c60a0e416f08b7f6c328d7059fd5b11d0d"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "0b8b679c94a2adc71c973adf212c5dbddaa126c87457fe7cb1d2aaa04c017a44",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      }
+    }
+  },
+  "standard": {
+    "original_run": "results/runs/capability_loss_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "a5db1810e6624f29d9d87c4dfc46f36f10ad410c9bd34d7f6bbcc1de8dcd55d5",
+        "saved_sha256": "6c15dcab5f8d41f6457211bbc476454dbd7a70c2ee34a33dd63627c1d817c9df"
+      },
+      "outage_coverage.png": {
+        "original_name": "outage_coverage.png",
+        "uncompressed_sha256": "2d1792308da1ec41b0453f01c2599d692ccd0b7759e45e08f14bd52f538f85b8",
+        "saved_sha256": "2d1792308da1ec41b0453f01c2599d692ccd0b7759e45e08f14bd52f538f85b8"
+      },
+      "planner_certificates.json.gz": {
+        "original_name": "planner_certificates.json",
+        "uncompressed_sha256": "ccf8b44a800959f7c049e2db313adc66f2fdf0b2feab34a9a17740c52d1b0131",
+        "saved_sha256": "2572519bc4bd07923b04c9ce0d94cd821b6302b71b4019ca3ece193804e6d4a5"
+      },
+      "provenance.json": {
+        "original_name": "provenance.json",
+        "uncompressed_sha256": "a373e46da59cf258eab47e96ff9267b4170be0c519fe00f9d1441c545f670d87",
+        "saved_sha256": "a373e46da59cf258eab47e96ff9267b4170be0c519fe00f9d1441c545f670d87"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "8d4267e25902284a29afafe65ac09d1b29a23294318310ff81ec022cd6b86d05",
+        "saved_sha256": "8d4267e25902284a29afafe65ac09d1b29a23294318310ff81ec022cd6b86d05"
+      },
+      "summary.csv": {
+        "original_name": "summary.csv",
+        "uncompressed_sha256": "cb676e1524d39e8ba47621f9509b38a85471f0df5aea7992d96a387e93740244",
+        "saved_sha256": "cb676e1524d39e8ba47621f9509b38a85471f0df5aea7992d96a387e93740244"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "cbfff046c2eb393af15b574c632946816a0c04634b85837ab9138447ddd4187d",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      }
+    }
+  },
+  "banknote": {
+    "original_run": "results/runs/capability_loss_banknote_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "81018a2a5e137a28e475d109a0688f07bbdfe900f3d660ecae284fafe01ed3cd",
+        "saved_sha256": "2504a5b2bb390ee3d25d467f4ddb4afc9f83c89a4bf60a7e955912d4a7e428c2"
+      },
+      "outage_coverage.png": {
+        "original_name": "outage_coverage.png",
+        "uncompressed_sha256": "45f11daa5572534ec77237ef12f58b7feff0a25b5e3ab53d8f5033c9d906d332",
+        "saved_sha256": "45f11daa5572534ec77237ef12f58b7feff0a25b5e3ab53d8f5033c9d906d332"
+      },
+      "planner_certificates.json.gz": {
+        "original_name": "planner_certificates.json",
+        "uncompressed_sha256": "ab5269818751e8d00bc22c07c54161d245d243ea7809fd1cb855538cdfe5174f",
+        "saved_sha256": "46a4d27435d1468e4f57e33b268307646ef7973e555c62de94f2bcc1420c7c11"
+      },
+      "provenance.json": {
+        "original_name": "provenance.json",
+        "uncompressed_sha256": "db027cc8bade1c6ca4c7734872700e8be18534fd8ebb503cb68f12c8f96f1506",
+        "saved_sha256": "db027cc8bade1c6ca4c7734872700e8be18534fd8ebb503cb68f12c8f96f1506"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "86ed1739f64eee43f9db96bddcdd5a3feb5f2db079ce8893575829d453f190c8",
+        "saved_sha256": "86ed1739f64eee43f9db96bddcdd5a3feb5f2db079ce8893575829d453f190c8"
+      },
+      "summary.csv": {
+        "original_name": "summary.csv",
+        "uncompressed_sha256": "c2a2df6dbdaf807d6f0f27b3426eee489c333c9894dbdd24c5eac8c82958a8e0",
+        "saved_sha256": "c2a2df6dbdaf807d6f0f27b3426eee489c333c9894dbdd24c5eac8c82958a8e0"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "da76fec9f3f1af8412071303169ce8a64046514f36716a1ff7a9125c4b6846ae",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      }
+    }
+  },
+  "scaling": {
+    "original_run": "results/runs/capability_loss_scaling_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "e0c1e3fbe753d683a294bb45e92b6897d1fe84cb53cc9c0b8fd4ff560ab9e9bd",
+        "saved_sha256": "58b91e2eb68ef9d3d8162ff8f2fb747ccce01e88988996dcf379e9725642fefb"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "6a6aed768269b730993ee11f0aedc741b0c1841997a39dd9039ffafd0f2289f5",
+        "saved_sha256": "6a6aed768269b730993ee11f0aedc741b0c1841997a39dd9039ffafd0f2289f5"
+      },
+      "summary.json": {
+        "original_name": "summary.json",
+        "uncompressed_sha256": "935c27ff8026c1785816388a69a620e8dcb049a29393d1ea0d41680d650481ee",
+        "saved_sha256": "935c27ff8026c1785816388a69a620e8dcb049a29393d1ea0d41680d650481ee"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "1776011f14947f1ad618a5157d1585ca382a69123d678149e957a21199398acc",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      }
+    }
+  },
+  "dual_pilot": {
+    "original_run": "results/runs/capability_dual_banknote_pilot_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "6f9202bfe28a68dfdde6ec0095b1331193526680dd7fb3603397b35ccaed5a37",
+        "saved_sha256": "18dcc33e3a9d46b7369a809f05230178f27b67ebbd3566bae6ef414a4637b67d"
+      },
+      "outage_coverage.png": {
+        "original_name": "outage_coverage.png",
+        "uncompressed_sha256": "3d7c5fdd0f20c355ec4753b8067e431671a57545e37f4d9a310bcd71a6df95d5",
+        "saved_sha256": "3d7c5fdd0f20c355ec4753b8067e431671a57545e37f4d9a310bcd71a6df95d5"
+      },
+      "planner_certificates.json.gz": {
+        "original_name": "planner_certificates.json",
+        "uncompressed_sha256": "5e13668b48b55e240dad085d91606e38bbac04a8dadbabbccb678e05a9d64e01",
+        "saved_sha256": "ad1b09464b72391fd21377d4417b513f6380a95252563ee435d22e1daa93bd81"
+      },
+      "provenance.json": {
+        "original_name": "provenance.json",
+        "uncompressed_sha256": "5122adcc1f1d3687705ce4b887c4c3dd9607d39d9d18d54f1c7afe26e01f4cba",
+        "saved_sha256": "5122adcc1f1d3687705ce4b887c4c3dd9607d39d9d18d54f1c7afe26e01f4cba"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "5db34ae23b4aaa634e8a84734e5eb657f9e4eed3482cfd058e17be7b770d2f2e",
+        "saved_sha256": "5db34ae23b4aaa634e8a84734e5eb657f9e4eed3482cfd058e17be7b770d2f2e"
+      },
+      "summary.csv": {
+        "original_name": "summary.csv",
+        "uncompressed_sha256": "bc1616f3f6dd9338fe252407fbc0d3de16c33dfd1ea38ab2ec6a7f911e8b6388",
+        "saved_sha256": "bc1616f3f6dd9338fe252407fbc0d3de16c33dfd1ea38ab2ec6a7f911e8b6388"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "d3e9d3ec4f3fd4ed363b9f5e8969fad57dedd7a1b7c27363e5ef299716378100",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      }
+    }
+  },
+  "dual_scaler": {
+    "original_run": "results/runs/capability_dual_banknote_oct13",
+    "files": {
+      "execution_traces.json.gz": {
+        "original_name": "execution_traces.json",
+        "uncompressed_sha256": "654a53456a7defb422284f9eae0f26e33966aba6d8a9bb15fd364d2b39eb9f35",
+        "saved_sha256": "e8d51f434255b9f638ec762478797be1cd6438e0559b30aaa91d99c560d8059a"
+      },
+      "outage_coverage.png": {
+        "original_name": "outage_coverage.png",
+        "uncompressed_sha256": "3d7c5fdd0f20c355ec4753b8067e431671a57545e37f4d9a310bcd71a6df95d5",
+        "saved_sha256": "3d7c5fdd0f20c355ec4753b8067e431671a57545e37f4d9a310bcd71a6df95d5"
+      },
+      "planner_certificates.json.gz": {
+        "original_name": "planner_certificates.json",
+        "uncompressed_sha256": "b1ab6fb9b6fbc00b508524ea6d5f0f39099e568ccd04f0be6263d8668937bfa1",
+        "saved_sha256": "7f36322fee6ee204b13f9b295a6a2db2450b192a5489ecc1b3420117a2849057"
+      },
+      "provenance.json": {
+        "original_name": "provenance.json",
+        "uncompressed_sha256": "360ea7fb6808a4d723379923668a7358d9d1dac29984a53dd194ea7b8b06efd0",
+        "saved_sha256": "360ea7fb6808a4d723379923668a7358d9d1dac29984a53dd194ea7b8b06efd0"
+      },
+      "report.json": {
+        "original_name": "report.json",
+        "uncompressed_sha256": "5448c66ed7b493f9669162480943e7bc709407702bcc3806cc5a7b3a13d49413",
+        "saved_sha256": "5448c66ed7b493f9669162480943e7bc709407702bcc3806cc5a7b3a13d49413"
+      },
+      "summary.csv": {
+        "original_name": "summary.csv",
+        "uncompressed_sha256": "f5595cb41caf3ce1f3509f9a80bf86b329ba0f83cb65e39bd025eec07bee1bcf",
+        "saved_sha256": "f5595cb41caf3ce1f3509f9a80bf86b329ba0f83cb65e39bd025eec07bee1bcf"
+      },
+      "stores.tar.gz": {
+        "saved_sha256": "b48d6bbd3d957f9bf03e80da08ec1f7359ef37187241d99b2b6417767f5a5a3a",
+        "meaning": "Complete selected stores including original manifests and artifact payloads",
+        "archive_note": "Tar hard links deduplicate identical payload bytes while preserving every store path"
+      },
+      "storage_tradeoff.png": {
+        "saved_sha256": "677462ac053da88498459e678e151aa4f1a156f8f8e1b03f8c588993643cf4a2",
+        "meaning": "Derived figure from saved summary.csv using three split seed descriptive means"
+      }
+    }
+  }
+}

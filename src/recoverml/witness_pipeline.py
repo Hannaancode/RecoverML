@@ -13,7 +13,7 @@ import json
 import time
 from pathlib import Path
 import numpy as np
-from sklearn.datasets import load_breast_cancer, load_iris, load_wine
+from sklearn.datasets import load_breast_cancer, load_iris, load_wine, load_digits
 from sklearn.preprocessing import StandardScaler
 from threadpoolctl import threadpool_limits
 from .core import Graph, DiskRestorer, RestoreError, digest, pack, write_store
@@ -22,7 +22,7 @@ from .witness import WitnessRestorer
 from .witness_optimizer import optimize
 
 
-def capture(name, seed, transport, versions, dual_scalers=False):
+def capture(name, seed, transport, versions, dual_scalers=False, estimator='logistic'):
     if name=='banknote':
         from sklearn.utils import Bunch
         source=Path(__file__).resolve().parents[2]/'data/uci_banknote/data_banknote_authentication.txt'
@@ -31,14 +31,14 @@ def capture(name, seed, transport, versions, dual_scalers=False):
             raise ValueError('Unexpected UCI Banknote data')
         data=Bunch(data=matrix[:,:4],target=matrix[:,4].astype(np.int64))
     else:
-        data={'breast_cancer':load_breast_cancer,'iris':load_iris,'wine':load_wine}[name]()
+        data={'breast_cancer':load_breast_cancer,'iris':load_iris,'wine':load_wine,'digits':load_digits}[name]()
     x=np.ascontiguousarray(data.data,dtype=np.float64)
     y=np.ascontiguousarray(data.target,dtype=np.int64)
     graph=Graph(); values={}; export_hashes=[]
     def add(op,deps,params,scope,value=None,replayable=True,mandatory=False,version=0):
         started=time.perf_counter()
         if value is None:
-            if op=='scale_sklearn':
+            if op in ('scale_sklearn','train_mlp') or (op=='predict' and isinstance(values[deps[0]],dict)):
                 from .capability_ops import execute as replay
             else: replay=execute
             value=replay(op,[values[d] for d in deps],params)
@@ -74,13 +74,25 @@ def capture(name, seed, transport, versions, dual_scalers=False):
     equal=graph.nodes[legacy].blob==graph.nodes[local].blob
     qualities=[]
     for version in range(versions):
-        model=add('train',[legacy,ry,split],{'model':'logistic','C':.5+version*.25,
-                    'seed':seed},'model',version=version)
+        if estimator=='logistic':
+            params={'model':'logistic','C':.5+version*.25,'seed':seed}
+        elif estimator=='forest':
+            params={'model':'forest','trees':24+version*8,'depth':12,'seed':seed}
+        elif estimator=='mlp':
+            params={'model':'mlp','hidden_units':[96,32],'max_iter':60,
+                    'alpha':.0001*(version+1),'seed':seed}
+        else: raise ValueError('Unknown estimator')
+        if estimator=='mlp':params['implementation_sha256']=digest(Path(__file__).with_name('capability_ops.py').read_bytes())
+        model=add('train_mlp' if estimator=='mlp' else 'train',[legacy,ry,split],params,'model',version=version)
         pred=add('predict',[model,legacy,split],{},'prediction',version=version)
         graph.targets[str(version)]=[model,pred]
         probability=values[pred]
         if not np.isfinite(probability).all(): raise RuntimeError('Nonfinite prediction')
-        qualities.append(float(np.mean(values[model].predict(imported[values[split][1]])==y[values[split][1]])))
+        estimator_value=values[model]
+        if isinstance(estimator_value,dict):
+            from .capability_ops import restore_mlp
+            estimator_value=restore_mlp(estimator_value)
+        qualities.append(float(np.mean(estimator_value.predict(imported[values[split][1]])==y[values[split][1]])))
     return graph,dict(dataset=name,seed=seed,transport=transport,versions=versions,
         observed_exact_feature_witness=equal,source_x_sha256=digest(pack(x)),
         source_y_sha256=digest(pack(y)),export_sha256=export_hashes[0],

@@ -6,6 +6,15 @@ Commands marked PowerShell run in Windows and all other commands run in Ubuntu
 Run the Ubuntu commands from the repository root unless stated otherwise
 The paper formatting will be revised after the author has reviewed the draft
 
+Current publication availability
+The source and guide and summaries and figures can be published separately
+Some compressed raw logs and selected model/data store archives are still awaiting
+public upload approval and are preserved in the author's complete local package
+The exact filenames and hashes are in docs/PUBLICATION_PENDING_OCT14.json
+Fresh experiments create their own logs and stores and do not require these saved archives
+Saved-data figure audits and archived store replay need the complete saved evidence
+Do not report those checks as completed from a clone that lacks the listed inputs
+
 1 WHAT THIS GUIDE REPRODUCES
 
 There are three different checks
@@ -188,12 +197,16 @@ Use the actual measured hardware details rather than copying our server details
 7 VERIFY THE SUPPLIED FILES
 
 Run this before making changes to tracked files
+For a GitHub clone use CHECKSUMS_GITHUB.json in the command below
+For the complete local package replace that name with CHECKSUMS.json
+The GitHub manifest covers the published subset while the complete manifest
+also covers the local evidence files whose public upload is awaiting approval
 
     python - <<'PY'
 import hashlib
 import json
 from pathlib import Path
-manifest = json.loads(Path('CHECKSUMS.json').read_text())
+manifest = json.loads(Path('CHECKSUMS_GITHUB.json').read_text())
 errors = []
 for name, expected in manifest.items():
     path = Path(name)
@@ -207,6 +220,7 @@ print('Verified', len(manifest), 'supplied files')
 PY
 
 CHECKSUMS.json excludes itself to avoid a circular checksum
+CHECKSUMS_GITHUB.json excludes itself and the complete manifest to avoid a circular checksum
 The saved evidence inventory and claim ledgers provide additional result hashes
 A checksum verifies file identity and does not by itself prove experiment correctness
 
@@ -230,6 +244,11 @@ The saved performance study has 5400 requests and 54 trials and 2129 CPU/memory
 samples and 39600 operation records and all requests restore exact artifacts
 
 10 REGENERATE ALL NINE CURRENT PAPER FIGURES FROM SAVED DATA
+
+This step requires the complete saved raw evidence
+Check docs/PUBLICATION_PENDING_OCT14.json before using a GitHub-only clone
+If a required file is absent use the author's complete package or run the fresh
+paper matrix in section 13 and use the figures generated from that new run
 
     python scripts/analyze_paper_benchmarks.py --input results/research/paper_oct14 --output "$review_out/main_figures"
     python scripts/analyze_retention_extensions.py --input results/research/paper_oct14 --output "$review_out/extension_figures"
@@ -381,6 +400,7 @@ installing it and do not expect a non-Torch archived manifest to match
 16 ARCHIVED STORE REPLAY IN A MATCHING ENVIRONMENT
 
 This section is optional on a new laptop and does not replace the fresh-run checks
+It also requires the selected store archives listed in the pending publication record
 The recorded environment must match the complete manifest including code hashes
 and Python patch version and numerical library paths and BLAS identities
 

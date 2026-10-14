@@ -1,0 +1,11 @@
+{
+  "planner_runs": 108,
+  "graph_cases": 12,
+  "all_analytic_matches": true,
+  "cutoff": 64,
+  "calibration": "Initial groups 6/12/24 width16 study; cutoff fixed before this validation",
+  "validation": "Groups8/16/32 widths12/24 capture seed991; same analytic family, not independent production workflows",
+  "trace_sha256": "1ebfe40003084634ce6130c6fd4188e30de635c874808daa9369c0115eb8fb39",
+  "source_sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9",
+  "selector_sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+}

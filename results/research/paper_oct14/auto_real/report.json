@@ -1,0 +1,9 @@
+{
+  "planner_runs": 10,
+  "all_byte_optima_match": true,
+  "trace_sha256": "f10e604dc6b52dec91f9084cf3859d685d9b80c8c77df5c5bcebffeec2246876",
+  "source_sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e",
+  "selector_sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1",
+  "input_report_sha256": "f8941caa1e17beee24f2580b0bc830e60e21fdc7c045eb966e04be4cc904446e",
+  "input_manifest_sha256": "f35f81de00bbe3bf830561fd17d56aeebbc299ed7638c7dbe80cb6fc8638a094"
+}

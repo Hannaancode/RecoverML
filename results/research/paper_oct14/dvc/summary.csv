@@ -1,0 +1,13 @@
+common_snapshot_bytes,dataset,dvc_version,estimator,exact_disk_checkouts,k,native_object_and_pointer_bytes,robust_bytes,saving_normalized,scope,seed,versions
+149619,banknote,3.67.1,logistic,12,1,135797,84919,43.243170987641946,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,12
+149619,banknote,3.67.1,logistic,12,2,135797,128735,13.958120292208875,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,12
+149609,banknote,3.67.1,logistic,12,1,135797,84909,43.24606140004946,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,12
+149609,banknote,3.67.1,logistic,12,2,135797,128725,13.9590532655121,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,12
+10217167,digits,3.67.1,forest,4,1,10209530,959842,90.60559546496597,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,4
+10217167,digits,3.67.1,forest,4,2,10209530,1878867,81.61068523202175,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,4
+10265881,digits,3.67.1,forest,4,1,10258245,959841,90.65018384686127,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,4
+10265881,digits,3.67.1,forest,4,2,10258245,1878866,81.69795656115633,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,4
+1508949,digits,3.67.1,mlp,4,1,1500807,960343,36.356828494534945,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,4
+1508949,digits,3.67.1,mlp,4,2,1500807,1508949,0.0,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,0,4
+1508949,digits,3.67.1,mlp,4,1,1500807,960343,36.356828494534945,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,4
+1508949,digits,3.67.1,mlp,4,2,1500807,1508949,0.0,Native DVC snapshot checkout; common payload accounting separates DVC-specific directory and pointer overhead,1,4

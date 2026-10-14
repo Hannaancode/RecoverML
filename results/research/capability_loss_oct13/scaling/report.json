@@ -1,0 +1,10 @@
+{
+  "cases": 6,
+  "exact_version_probes": 99,
+  "exact_target_probes": 528,
+  "largest_fault_universe": 147537,
+  "largest_oracle_calls": 5,
+  "source_sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0",
+  "planner_sha256": "21fdcf3fe057ea4f911740d6fe57bd943f21c1b2fba7cdcbf2718eeda7906194",
+  "qualification": "Generated labeled-provider controls; exhaustive analytic bound and symbolic certification plus selected disk probes; not every large-universe scenario executed"
+}

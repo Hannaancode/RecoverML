@@ -1,0 +1,7 @@
+{
+  "processor": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "cpu_quota": "800000 100000",
+  "memory_limit_bytes": 8589934592,
+  "numerical_threads": 1,
+  "timing_scope": "one Linux container on one host; no independent second-machine claim"
+}

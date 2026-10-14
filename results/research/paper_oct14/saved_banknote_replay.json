@@ -1,0 +1,7 @@
+{
+  "store": "banknote-logistic-00-npy-k1/robust",
+  "exact_requests": 48,
+  "all_allowed_losses_checked": true,
+  "capture_archive_absent": true,
+  "recorded_replay_sha256": "1eef2649f12597882d10f10f25a5cc15a5621c8df0ec573af0325559d86c1c83"
+}

@@ -1,0 +1,16 @@
+{
+  "install": "isolated virtual environment from requirements.txt and paper extra",
+  "pip_check": "passed",
+  "dvc_version": "3.67.1",
+  "requirements_consistency": "matches pyproject core and paper extra",
+  "machine_scope": "same physical host and a new isolated Python environment; not second-machine validation",
+  "paper_text_sha256": "e4120356dfd7b0f8118c5e7eefce6d596ccddd4055e28b382f35c57d4a6a3987",
+  "paper_pdf_sha256": "b69106dd5addd3a01c62484019c89432a02ef5f1d6014f65ec48e42fb4c9b115",
+  "tests": 77,
+  "passed": 72,
+  "optional_torch_skips": 5,
+  "regenerated_figures": 9,
+  "saved_analysis_raw_audit": "passed",
+  "fresh_smoke_audit": "passed",
+  "paper_formatting": "unchanged"
+}

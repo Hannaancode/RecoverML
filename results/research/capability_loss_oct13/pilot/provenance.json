@@ -1,0 +1,235 @@
+{
+  "cases": [
+    {
+      "case": "breast_cancer-00-npy-k1",
+      "dataset": "breast_cancer",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "e60318e106d8cc1d2cb8ecb6d59a0fcf8a93a39ec42be44cb57216366a5e0e17",
+      "source_y_sha256": "d020e3587d7c44087b0772f71582f1f48dbea4245bcb28f54ed41c709f6f6d91",
+      "export_sha256": "a11a6226509a41456fd4b91e491aded9f609d2f1c8a90156b6fd9d1685bf949e",
+      "accuracy": [
+        0.9790209790209791,
+        0.972027972027972,
+        0.958041958041958
+      ],
+      "rows": 569,
+      "columns": 30,
+      "manifest_sha256": "0d4e5e5b9e10ea583c332f52c1381b0ba5f3d9821884bd72877a8fe11553b6dc"
+    },
+    {
+      "case": "breast_cancer-00-npy-k2",
+      "dataset": "breast_cancer",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "e60318e106d8cc1d2cb8ecb6d59a0fcf8a93a39ec42be44cb57216366a5e0e17",
+      "source_y_sha256": "d020e3587d7c44087b0772f71582f1f48dbea4245bcb28f54ed41c709f6f6d91",
+      "export_sha256": "a11a6226509a41456fd4b91e491aded9f609d2f1c8a90156b6fd9d1685bf949e",
+      "accuracy": [
+        0.9790209790209791,
+        0.972027972027972,
+        0.958041958041958
+      ],
+      "rows": 569,
+      "columns": 30,
+      "manifest_sha256": "0d4e5e5b9e10ea583c332f52c1381b0ba5f3d9821884bd72877a8fe11553b6dc"
+    },
+    {
+      "case": "breast_cancer-00-csv6-k1",
+      "dataset": "breast_cancer",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "e60318e106d8cc1d2cb8ecb6d59a0fcf8a93a39ec42be44cb57216366a5e0e17",
+      "source_y_sha256": "d020e3587d7c44087b0772f71582f1f48dbea4245bcb28f54ed41c709f6f6d91",
+      "export_sha256": "ebf7d94b1d5197230be784c9b2978b28c5f3a16946c139e7f9800624fe204fe4",
+      "accuracy": [
+        0.9790209790209791,
+        0.972027972027972,
+        0.958041958041958
+      ],
+      "rows": 569,
+      "columns": 30,
+      "manifest_sha256": "b5e65e69282268c56a62a85e9b0905c646b5cafc26391b1ec4fe1279db305f6e"
+    },
+    {
+      "case": "breast_cancer-00-csv6-k2",
+      "dataset": "breast_cancer",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "e60318e106d8cc1d2cb8ecb6d59a0fcf8a93a39ec42be44cb57216366a5e0e17",
+      "source_y_sha256": "d020e3587d7c44087b0772f71582f1f48dbea4245bcb28f54ed41c709f6f6d91",
+      "export_sha256": "ebf7d94b1d5197230be784c9b2978b28c5f3a16946c139e7f9800624fe204fe4",
+      "accuracy": [
+        0.9790209790209791,
+        0.972027972027972,
+        0.958041958041958
+      ],
+      "rows": 569,
+      "columns": 30,
+      "manifest_sha256": "b5e65e69282268c56a62a85e9b0905c646b5cafc26391b1ec4fe1279db305f6e"
+    },
+    {
+      "case": "iris-00-npy-k1",
+      "dataset": "iris",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+      "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+      "export_sha256": "f09979f0753dd6d8563da5f7cc332815500baad1c75e42b68ce31443c601b748",
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ],
+      "rows": 150,
+      "columns": 4,
+      "manifest_sha256": "094a35b874a01b13c897d687e1560e930da47e65060c21fa2b50a2d74c1011b3"
+    },
+    {
+      "case": "iris-00-npy-k2",
+      "dataset": "iris",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+      "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+      "export_sha256": "f09979f0753dd6d8563da5f7cc332815500baad1c75e42b68ce31443c601b748",
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ],
+      "rows": 150,
+      "columns": 4,
+      "manifest_sha256": "094a35b874a01b13c897d687e1560e930da47e65060c21fa2b50a2d74c1011b3"
+    },
+    {
+      "case": "iris-00-csv6-k1",
+      "dataset": "iris",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+      "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+      "export_sha256": "3541c72a7cd423b1bad4ea91ace3f569e3f727af839de36577c463f5a3479419",
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ],
+      "rows": 150,
+      "columns": 4,
+      "manifest_sha256": "182d14a0f49094fc56d637a8d83f03b1fd808a5bf7e6f3301b9e869349206c79"
+    },
+    {
+      "case": "iris-00-csv6-k2",
+      "dataset": "iris",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+      "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+      "export_sha256": "3541c72a7cd423b1bad4ea91ace3f569e3f727af839de36577c463f5a3479419",
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ],
+      "rows": 150,
+      "columns": 4,
+      "manifest_sha256": "182d14a0f49094fc56d637a8d83f03b1fd808a5bf7e6f3301b9e869349206c79"
+    },
+    {
+      "case": "wine-00-npy-k1",
+      "dataset": "wine",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "4adc8750d3ba483f3b3d1ce7ffa41c48fc7c03cb7d915d62a663a07909d3a046",
+      "source_y_sha256": "4116dfb566c25c540e73583a8c5ce5a914c12373ed259c63ce9cc77656a65bd0",
+      "export_sha256": "e2b83e086c8ad9bb85dd4aceb3b18e79b75b50f7d6ad815350a860bb09dc2dbf",
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rows": 178,
+      "columns": 13,
+      "manifest_sha256": "c2377d406e7f4bcc3db2a00a6b4cec27479ed4c4f510ab2b8431ec398d6e8a1b"
+    },
+    {
+      "case": "wine-00-npy-k2",
+      "dataset": "wine",
+      "seed": 0,
+      "transport": "npy",
+      "versions": 3,
+      "observed_exact_feature_witness": true,
+      "source_x_sha256": "4adc8750d3ba483f3b3d1ce7ffa41c48fc7c03cb7d915d62a663a07909d3a046",
+      "source_y_sha256": "4116dfb566c25c540e73583a8c5ce5a914c12373ed259c63ce9cc77656a65bd0",
+      "export_sha256": "e2b83e086c8ad9bb85dd4aceb3b18e79b75b50f7d6ad815350a860bb09dc2dbf",
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rows": 178,
+      "columns": 13,
+      "manifest_sha256": "c2377d406e7f4bcc3db2a00a6b4cec27479ed4c4f510ab2b8431ec398d6e8a1b"
+    },
+    {
+      "case": "wine-00-csv6-k1",
+      "dataset": "wine",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "4adc8750d3ba483f3b3d1ce7ffa41c48fc7c03cb7d915d62a663a07909d3a046",
+      "source_y_sha256": "4116dfb566c25c540e73583a8c5ce5a914c12373ed259c63ce9cc77656a65bd0",
+      "export_sha256": "99181f128f2e164c8ab79fa64c650e64ea52b4dac34ae6cf1492c2f213a11b57",
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rows": 178,
+      "columns": 13,
+      "manifest_sha256": "0aa5140765621fb86b2fea6faf0af4c958b4518743827ccf81adb1baa2e77539"
+    },
+    {
+      "case": "wine-00-csv6-k2",
+      "dataset": "wine",
+      "seed": 0,
+      "transport": "csv6",
+      "versions": 3,
+      "observed_exact_feature_witness": false,
+      "source_x_sha256": "4adc8750d3ba483f3b3d1ce7ffa41c48fc7c03cb7d915d62a663a07909d3a046",
+      "source_y_sha256": "4116dfb566c25c540e73583a8c5ce5a914c12373ed259c63ce9cc77656a65bd0",
+      "export_sha256": "99181f128f2e164c8ab79fa64c650e64ea52b4dac34ae6cf1492c2f213a11b57",
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rows": 178,
+      "columns": 13,
+      "manifest_sha256": "0aa5140765621fb86b2fea6faf0af4c958b4518743827ccf81adb1baa2e77539"
+    }
+  ],
+  "source_sha256": "6ba757e1343f20dba5c9963b9318e540a060012aeed8ffe1a3f8435a5d23f336",
+  "planner_sha256": "21fdcf3fe057ea4f911740d6fe57bd943f21c1b2fba7cdcbf2718eeda7906194",
+  "qualification": "Injected replay capability outages in constructed real-data histories; intact files and matching numerical environment required"
+}

@@ -7,6 +7,7 @@ The least fixed point prevents cycles introduced by physical hash aliasing from
 being mistaken for recovery paths. Existing logical recovery is unchanged.
 """
 from pathlib import Path
+import heapq
 import time
 from .core import DiskRestorer, RestoreError, digest, pack, unpack
 
@@ -23,22 +24,38 @@ def certificate(graph, retained):
         raise ValueError('Unknown retained blob')
     available = set(retained)
     steps = [dict(blob=b, action='load') for b in sorted(retained)]
-    producers = sorted(graph.nodes.values(), key=lambda n: (n.compute_s, n.id))
+    # Index each distinct dependency blob once per producer. Only consumers
+    # of newly grounded blobs need revisiting and rounds preserve the original
+    # producer order and certificate exactly.
+    producers = {n.id:n for n in graph.nodes.values() if n.replayable}
+    consumers = {}
+    remaining = {}
+    ready = []
+    for nid,node in producers.items():
+        missing={graph.nodes[d].blob for d in node.deps}-available
+        remaining[nid]=len(missing)
+        for blob in missing: consumers.setdefault(blob,[]).append(nid)
+        if not missing: heapq.heappush(ready,(node.compute_s,nid))
     round_number = 0
     while True:
-        previous = set(available)
         added = set()
-        for node in producers:
+        while ready:
+            _,nid=heapq.heappop(ready)
+            node=producers[nid]
             if node.blob in available or not node.replayable:
                 continue
             dependencies = [graph.nodes[d].blob for d in node.deps]
-            if all(b in previous for b in dependencies):
-                available.add(node.blob)
-                added.add(node.blob)
-                steps.append(dict(blob=node.blob, action='replay', producer=node.id,
-                                  dependencies=dependencies, round=round_number))
+            available.add(node.blob)
+            added.add(node.blob)
+            steps.append(dict(blob=node.blob, action='replay', producer=node.id,
+                              dependencies=dependencies, round=round_number))
         if not added:
             break
+        for blob in added:
+            for nid in consumers.get(blob,[]):
+                remaining[nid]-=1
+                if remaining[nid]==0:
+                    heapq.heappush(ready,(producers[nid].compute_s,nid))
         round_number += 1
     coverage = {v: all(graph.nodes[t].blob in available for t in targets)
                 for v, targets in graph.targets.items()}

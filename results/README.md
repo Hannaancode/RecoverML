@@ -1,5 +1,8 @@
 # Results guide
 
+The final paper studies are together in [research/paper_oct14](research/paper_oct14/README.md)
+They include published method comparisons and native DVC checkouts and exact physical optimization and the complete saved raw evidence
+
 Start with milestone2 for the current submission and use archive for the earlier storage studies
 Every previously submitted result file is retained and the original experiment data has unchanged bytes
 The separate reports and source and configs remain available for future work

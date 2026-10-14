@@ -1,0 +1,13 @@
+case,dataset,seed,transport,versions,k,fault_scenarios,observed_feature_witness,nominal_bytes,robust_bytes,snapshot_bytes,robust_saving_vs_snapshots,nominal_attempts,nominal_exact,robust_attempts,robust_exact,snapshot_exact,storage_cuts,robust_optimal
+breast_cancer-00-npy-k1,breast_cancer,0,npy,3,1,4,True,148988,159231,159231,0.0,12,3,12,12,12,7,True
+breast_cancer-00-npy-k2,breast_cancer,0,npy,3,2,7,True,148988,159231,159231,0.0,21,3,21,21,21,6,True
+breast_cancer-00-csv6-k1,breast_cancer,0,csv6,3,1,4,False,159235,159235,159235,0.0,12,12,12,12,12,6,True
+breast_cancer-00-csv6-k2,breast_cancer,0,csv6,3,2,7,False,159235,159235,159235,0.0,21,21,21,21,21,6,True
+iris-00-npy-k1,iris,0,npy,3,1,4,True,13846,19463,19463,0.0,12,3,12,12,12,10,True
+iris-00-npy-k2,iris,0,npy,3,2,7,True,13846,19463,19463,0.0,21,3,21,21,21,7,True
+iris-00-csv6-k1,iris,0,csv6,3,1,4,False,18776,19464,19464,0.0,12,9,12,12,12,7,True
+iris-00-csv6-k2,iris,0,csv6,3,2,7,False,18776,19464,19464,0.0,21,12,21,21,21,7,True
+wine-00-npy-k1,wine,0,npy,3,1,4,True,27786,34777,34777,0.0,12,3,12,12,12,7,True
+wine-00-npy-k2,wine,0,npy,3,2,7,True,27786,34777,34777,0.0,21,3,21,21,21,6,True
+wine-00-csv6-k1,wine,0,csv6,3,1,4,False,34780,34780,34780,0.0,12,12,12,12,12,6,True
+wine-00-csv6-k2,wine,0,csv6,3,2,7,False,34780,34780,34780,0.0,21,21,21,21,21,6,True

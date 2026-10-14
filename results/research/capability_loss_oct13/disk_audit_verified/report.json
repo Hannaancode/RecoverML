@@ -1,0 +1,10 @@
+{
+  "attempts": 3168,
+  "exact": 2772,
+  "expected_blocked": 396,
+  "all_outcomes_reproduced": true,
+  "capture_archive_used": false,
+  "source_sha256": "5099919754b230db2dd68ebe794d546a1b868862599fcea91e3ce0d5be501a97",
+  "input_archive_sha256": "b48d6bbd3d957f9bf03e80da08ec1f7359ef37187241d99b2b6417767f5a5a3a",
+  "raw_trace_sha256": "ddc150a25c230f001cce1ba931006b47a67faf2682213862cb4f5594b637e1de"
+}

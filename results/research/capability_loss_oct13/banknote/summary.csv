@@ -1,0 +1,13 @@
+case,dataset,seed,transport,versions,k,fault_scenarios,observed_feature_witness,nominal_bytes,robust_bytes,snapshot_bytes,robust_saving_vs_snapshots,nominal_attempts,nominal_exact,robust_attempts,robust_exact,snapshot_exact,storage_cuts,robust_optimal
+banknote-00-npy-k1,banknote,0,npy,12,1,4,True,72923,128089,148973,14.018647674410799,48,12,48,48,48,26,True
+banknote-00-npy-k2,banknote,0,npy,12,2,7,True,72923,128089,148973,14.018647674410799,84,12,84,84,84,19,True
+banknote-00-csv6-k1,banknote,0,csv6,12,1,4,False,116963,128095,148979,14.018083085535546,48,36,48,48,48,20,True
+banknote-00-csv6-k2,banknote,0,csv6,12,2,7,False,116963,128095,148979,14.018083085535546,84,48,84,84,84,20,True
+banknote-01-npy-k1,banknote,1,npy,12,1,4,True,72933,128099,148983,14.017706718216173,48,12,48,48,48,23,True
+banknote-01-npy-k2,banknote,1,npy,12,2,7,True,72933,128099,148983,14.017706718216173,84,12,84,84,84,17,True
+banknote-01-csv6-k1,banknote,1,csv6,12,1,4,False,116970,128102,148986,14.017424455989154,48,36,48,48,48,22,True
+banknote-01-csv6-k2,banknote,1,csv6,12,2,7,False,116970,128102,148986,14.017424455989154,84,48,84,84,84,22,True
+banknote-02-npy-k1,banknote,2,npy,12,1,4,True,72930,128096,148980,14.01798899181098,48,12,48,48,48,19,True
+banknote-02-npy-k2,banknote,2,npy,12,2,7,True,72930,128096,148980,14.01798899181098,84,12,84,84,84,18,True
+banknote-02-csv6-k1,banknote,2,csv6,12,1,4,False,116961,128093,148977,14.018271276774268,48,36,48,48,48,24,True
+banknote-02-csv6-k2,banknote,2,csv6,12,2,7,False,116961,128093,148977,14.018271276774268,84,48,84,84,84,24,True

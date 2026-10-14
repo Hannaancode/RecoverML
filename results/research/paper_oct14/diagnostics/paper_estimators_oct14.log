@@ -1,0 +1,14 @@
+{"completed_case": "digits-forest-00-npy-k1", "robust_bytes": 959836}
+{"completed_case": "digits-forest-00-npy-k2", "robust_bytes": 1878861}
+{"completed_case": "digits-forest-01-npy-k1", "robust_bytes": 959845}
+{"completed_case": "digits-forest-01-npy-k2", "robust_bytes": 1878870}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/scratch/03a1fa6b3213/recoverml_git/src/recoverml/paper_benchmarks.py", line 221, in <module>
+    if args.suite in ('tabular','neural'):report=recovery_matrix(args.output,args.suite,args.seeds,args.versions,args.hyppo_cache)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/03a1fa6b3213/recoverml_git/src/recoverml/paper_benchmarks.py", line 95, in recovery_matrix
+    if not ok:raise RuntimeError('Target mismatch')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Target mismatch

@@ -1,0 +1,11 @@
+{
+  "planner_runs": 118,
+  "real_planner_runs": 10,
+  "layered_cases": 12,
+  "exact_disk_requests": 9288,
+  "all_byte_optima_match": true,
+  "source_sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064",
+  "component_source_sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72",
+  "selector_sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1",
+  "qualification": "New layered AND graphs with shared failure labels and independent analytic minimum; mixed real validation uses existing manifests"
+}

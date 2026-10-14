@@ -1,0 +1,267 @@
+{
+  "branches": [
+    {
+      "dataset": "breast_cancer",
+      "estimator": "logistic",
+      "seed": 0,
+      "versions": 12,
+      "accuracy": [
+        0.9790209790209791,
+        0.972027972027972,
+        0.958041958041958,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951,
+        0.951048951048951
+      ]
+    },
+    {
+      "dataset": "breast_cancer",
+      "estimator": "logistic",
+      "seed": 1,
+      "versions": 12,
+      "accuracy": [
+        0.965034965034965,
+        0.9790209790209791,
+        0.9790209790209791,
+        0.9790209790209791,
+        0.9790209790209791,
+        0.9790209790209791,
+        0.972027972027972,
+        0.972027972027972,
+        0.972027972027972,
+        0.965034965034965,
+        0.965034965034965,
+        0.965034965034965
+      ]
+    },
+    {
+      "dataset": "iris",
+      "estimator": "logistic",
+      "seed": 0,
+      "versions": 12,
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ]
+    },
+    {
+      "dataset": "iris",
+      "estimator": "logistic",
+      "seed": 1,
+      "versions": 12,
+      "accuracy": [
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158,
+        0.9736842105263158
+      ]
+    },
+    {
+      "dataset": "wine",
+      "estimator": "logistic",
+      "seed": 0,
+      "versions": 12,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "dataset": "wine",
+      "estimator": "logistic",
+      "seed": 1,
+      "versions": 12,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "dataset": "banknote",
+      "estimator": "logistic",
+      "seed": 0,
+      "versions": 12,
+      "accuracy": [
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939
+      ]
+    },
+    {
+      "dataset": "banknote",
+      "estimator": "logistic",
+      "seed": 1,
+      "versions": 12,
+      "accuracy": [
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9766763848396501,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939,
+        0.9795918367346939
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "forest",
+      "seed": 0,
+      "versions": 4,
+      "accuracy": [
+        0.9555555555555556,
+        0.9577777777777777,
+        0.9688888888888889,
+        0.9644444444444444
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "forest",
+      "seed": 1,
+      "versions": 4,
+      "accuracy": [
+        0.9644444444444444,
+        0.9666666666666667,
+        0.9688888888888889,
+        0.9733333333333334
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "mlp",
+      "seed": 0,
+      "versions": 4,
+      "accuracy": [
+        0.9688888888888889,
+        0.9688888888888889,
+        0.9688888888888889,
+        0.9688888888888889
+      ]
+    },
+    {
+      "dataset": "digits",
+      "estimator": "mlp",
+      "seed": 1,
+      "versions": 4,
+      "accuracy": [
+        0.9711111111111111,
+        0.9711111111111111,
+        0.9711111111111111,
+        0.9711111111111111
+      ]
+    }
+  ],
+  "histories": 12,
+  "protected_versions": 112,
+  "logical_nodes": 284,
+  "physical_blobs": 264,
+  "mandatory_physical_blobs": 10,
+  "shared_capability_groups": [
+    "membership",
+    "numpy_scaling",
+    "sklearn_preprocessing"
+  ],
+  "rows": [
+    {
+      "k": 1,
+      "policy": "robust",
+      "retained_bytes": 1390318,
+      "snapshot_bytes": 21376829,
+      "saving_vs_snapshots": 93.49614482110513,
+      "exact": 448
+    },
+    {
+      "k": 1,
+      "policy": "expanded_exact",
+      "retained_bytes": 1390318,
+      "snapshot_bytes": 21376829,
+      "saving_vs_snapshots": 93.49614482110513,
+      "exact": 448
+    },
+    {
+      "k": 2,
+      "policy": "robust",
+      "retained_bytes": 3433246,
+      "snapshot_bytes": 21376829,
+      "saving_vs_snapshots": 83.93940467035593,
+      "exact": 784
+    },
+    {
+      "k": 2,
+      "policy": "expanded_exact",
+      "retained_bytes": 3433246,
+      "snapshot_bytes": 21376829,
+      "saving_vs_snapshots": 83.93940467035593,
+      "exact": 784
+    }
+  ],
+  "exact_requests": 2464,
+  "planner_runs": 12,
+  "source_sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d",
+  "source_dependencies": {
+    "witness_pipeline.py": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7",
+    "capability_ops.py": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd",
+    "capability_retention.py": "6a47c2d1e6695f8d3dd713f6e1439e83e8cfe5239dc0cbc3b4587aff2e2c8ce3",
+    "scenario_retention.py": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02",
+    "witness.py": "da7e752db392d96ef1e0b9c90f2ae7545b806e122f684ef58e3d515ea89af5a5"
+  },
+  "qualification": "One merged graph of independently captured real-data branches; shared global replay loss groups; not 112 independent datasets"
+}
