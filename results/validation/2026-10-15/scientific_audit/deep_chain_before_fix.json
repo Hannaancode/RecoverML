@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-10-15T06:54:13Z",
+  "status": "confirmed defect before fix",
+  "reason": "recursive witness execution can overflow on a valid deep DAG although the indexed certificate is complete",
+  "results": [
+    {
+      "depth": 50,
+      "recursion_limit": 1000,
+      "grounded": true,
+      "recovered": true,
+      "exact": true
+    },
+    {
+      "depth": 600,
+      "recursion_limit": 1000,
+      "grounded": true,
+      "recovered": true,
+      "exact": true
+    },
+    {
+      "depth": 2048,
+      "recursion_limit": 1000,
+      "grounded": true,
+      "recovered": false,
+      "error_type": "RecursionError",
+      "error": "maximum recursion depth exceeded"
+    }
+  ]
+}

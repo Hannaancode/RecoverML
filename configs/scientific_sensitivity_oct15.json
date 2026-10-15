@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "purpose": "Prospectively declared annotation sensitivity using all frozen October 15 captured histories",
+  "workflows": ["iris_union", "digits_pca", "diabetes_poly", "digits_forest"],
+  "seeds": [101, 211],
+  "versions": 3,
+  "capability_scopes": ["preprocessing", "broad"],
+  "loss_bound": 1,
+  "optional_snapshot_budget_fractions": [0.1, 0.5, 1.0],
+  "cost_profiles": {
+    "nominal": {},
+    "training_quarter": {"scientific_train": 0.25},
+    "training_four": {"scientific_train": 4.0},
+    "preprocessing_quarter": {"scientific_fit_transformer": 0.25, "scientific_transform": 0.25, "scientific_union": 0.25},
+    "preprocessing_four": {"scientific_fit_transformer": 4.0, "scientific_transform": 4.0, "scientific_union": 4.0}
+  },
+  "frequency_profiles": {
+    "uniform": [1, 1, 1],
+    "recent_heavy": [1, 2, 4],
+    "early_heavy": [4, 2, 1]
+  },
+  "frequency_definition": "For each version add its declared weight once to every physical artifact in the union of captured alternative-producer dependency ancestry; use max(1, total) as the original adapter does",
+  "eligibility_profiles": {
+    "all": {"description": "All optional captured physical artifacts"},
+    "targets_only": {"description": "Only requested model and prediction physical identities"},
+    "preprocessing_only": {"description": "Only transformer fit and transform and feature union physical identities; split membership is excluded", "operations": ["scientific_fit_transformer", "scientific_transform", "scientific_union"]}
+  },
+  "hyppo_methods": ["HYPPO_rank", "HYPPO_frequency"],
+  "hyppo_eligibility_adapter": "Set ineligible physical nodes to native raw type without altering the pinned ranking functions; mandatory roots remain retained and paid",
+  "helix_read_MiB_s": [50, 200, 800],
+  "helix_tie_orders": ["capture", "reverse"],
+  "helix_scope": "All eligibility only and no frequency weighting because those are not parameters of the tested published decision rule; sweep nonuniform cost profiles and read speed and event tie order",
+  "scoring": "Unweighted exact version/scenario structural coverage under the identical declared fault sets; report declared weighted workload coverage separately",
+  "physical_accounting": "Account selected bytes and budgets from each original immutable captured graph rather than the cost annotation proxy",
+  "excluded_claims": ["Native HYPPO or HELIX execution", "Measured recovery latency", "Actual outage frequencies", "New model training", "Second-machine reproduction", "Production history sampling"],
+  "exclusions": "No exclusions based on outcome; missing declared captures cause an explicit failure rather than a smaller successful matrix"
+}

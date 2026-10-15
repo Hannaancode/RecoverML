@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "purpose": "Prospective supplementary validation rather than selection of favourable outcomes",
+  "workflows": ["iris_union", "digits_pca", "diabetes_poly", "digits_forest"],
+  "seeds": [101, 211],
+  "versions": 3,
+  "loss_bounds": [0, 1, 2],
+  "capability_scopes": ["preprocessing", "broad"],
+  "optional_snapshot_budget_fractions": [0.0, 0.1, 0.25, 0.5, 1.0],
+  "methods": ["RecoverML_exact", "scenario_exact", "robust_greedy", "robust_local", "HYPPO_rank", "HYPPO_frequency", "HELIX_rule", "target_snapshots"],
+  "helix_read_MiB_s": 200,
+  "sensitivity": {"capture_cost_multipliers": [0.25, 1.0, 4.0], "tie_orders": ["hash", "reverse_hash"], "HELIX_read_MiB_s": [50, 200, 800]},
+  "solver_time_limit_s": 30.0,
+  "recovery_repetitions": 1,
+  "analysis": "Descriptive paired history-level summaries only; no population-level significance claim from eight constructed captures",
+  "qualification": "New constructed public-recipe histories and seeds not used in prior planner calibration; not independently collected production workflow histories",
+  "exclusions": "None based on performance; all capture errors, solver unknowns and byte mismatches remain recorded"
+}

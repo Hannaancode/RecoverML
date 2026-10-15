@@ -86,33 +86,55 @@ class WitnessRestorer:
 
     def _blob(self, blob, requested_id):
         from .operators import execute
-        if blob in self.memo:
-            return self.memo[blob]
-        if blob not in self.plan:
-            raise RestoreError('No grounded alternative producer for ' + blob)
-        step = self.plan[blob]
-        started = time.perf_counter()
-        if step['action'] == 'load':
-            raw = (self.store / 'blobs' / (blob + '.pkl')).read_bytes()
-            if digest(raw) != blob:
-                raise RestoreError('Corrupt retained artifact: ' + blob)
-            value = unpack(raw)
-            producer = None
-        else:
-            producer = self.graph.nodes[step['producer']]
-            inputs = [self._blob(self.graph.nodes[d].blob, d) for d in producer.deps]
-            replay_execute = self.replay_execute or execute
-            value = replay_execute(producer.op, inputs, producer.params)
-            raw = pack(value)
-            if len(raw) != producer.size or digest(raw) != blob:
-                raise RestoreError('Alternative producer hash mismatch: ' + producer.id)
-        self.memo[blob] = value
-        self.trace.append(dict(requested_node=requested_id, blob=blob,
-            producer=None if producer is None else producer.id,
-            action=step['action'], alternative=producer is not None and producer.id != requested_id,
-            elapsed_s=time.perf_counter()-started, bytes=len(raw), exact=True,
-            end_timestamp_ns=time.time_ns()))
-        return value
+        # Execute the grounded witness in dependency order without consuming
+        # Python's call stack. Only dependencies of this request are visited.
+        # A postorder frame preserves the recursive executor's event order and
+        # inclusive elapsed time while allowing arbitrarily deep captured DAGs.
+        pending = [(blob, requested_id, False, None)]
+        visiting = set()
+        while pending:
+            current, requested, expanded, started = pending.pop()
+            if current in self.memo:
+                continue
+            if current not in self.plan:
+                raise RestoreError('No grounded alternative producer for ' + current)
+            step = self.plan[current]
+            if not expanded:
+                if current in visiting:
+                    raise RestoreError('Cyclic alternative-producer witness: ' + current)
+                started = time.perf_counter()
+                if step['action'] != 'load':
+                    visiting.add(current)
+                    producer = self.graph.nodes[step['producer']]
+                    pending.append((current, requested, True, started))
+                    pending.extend((self.graph.nodes[d].blob, d, False, None)
+                                   for d in reversed(producer.deps))
+                    continue
+            if step['action'] == 'load':
+                try:
+                    raw = (self.store / 'blobs' / (current + '.pkl')).read_bytes()
+                except OSError as exc:
+                    raise RestoreError('Cannot read retained artifact: ' + current) from exc
+                if digest(raw) != current:
+                    raise RestoreError('Corrupt retained artifact: ' + current)
+                value = unpack(raw)
+                producer = None
+            else:
+                producer = self.graph.nodes[step['producer']]
+                inputs = [self.memo[self.graph.nodes[d].blob] for d in producer.deps]
+                replay_execute = self.replay_execute or execute
+                value = replay_execute(producer.op, inputs, producer.params)
+                raw = pack(value)
+                if len(raw) != producer.size or digest(raw) != current:
+                    raise RestoreError('Alternative producer hash mismatch: ' + producer.id)
+                visiting.remove(current)
+            self.memo[current] = value
+            self.trace.append(dict(requested_node=requested, blob=current,
+                producer=None if producer is None else producer.id,
+                action=step['action'], alternative=producer is not None and producer.id != requested,
+                elapsed_s=time.perf_counter()-started, bytes=len(raw), exact=True,
+                end_timestamp_ns=time.time_ns()))
+        return self.memo[blob]
 
     def version(self, version):
         return [self.get(t) for t in self.graph.targets[version]]

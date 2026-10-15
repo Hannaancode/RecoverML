@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "recorded_utc": "2026-10-15T07:00:40.909472+00:00",
+  "diagnostic": "Canonical numeric codec normalizes arrays to C order; sklearn PCA native transform can change low-order bits when components memory order changes",
+  "scope": "Standalone diagnostic fitted on all 150 public Iris rows only; benchmark workflows use training partition only",
+  "dataset": "sklearn Iris",
+  "shape": [
+    150,
+    4
+  ],
+  "pca_parameters": {
+    "n_components": 2,
+    "svd_solver": "full"
+  },
+  "original_components_strides": [
+    8,
+    16
+  ],
+  "normalized_components_strides": [
+    32,
+    8
+  ],
+  "preserved_components_strides": [
+    8,
+    16
+  ],
+  "component_numeric_state_equal": true,
+  "original_vs_layout_normalized": {
+    "exact": false,
+    "mismatched_elements": 150,
+    "max_absolute_error": 8.881784197001252e-16
+  },
+  "original_vs_layout_preserved": {
+    "exact": true,
+    "mismatched_elements": 0,
+    "max_absolute_error": 0.0
+  },
+  "fix": "Record fortran_arrays fitted-state metadata and recreate those arrays with np.asfortranarray before native sklearn inference",
+  "core_codec_changed": false,
+  "hash_verification_relaxed": false,
+  "workflow_implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+  "tests": {
+    "command": "PYTHONPATH=src /workspace/scratch/03a1fa6b3213/repro_install_check/bin/python -m unittest discover -s tests -p test_scientific_workflows.py -v",
+    "passed": 4,
+    "elapsed_s": 7.722
+  },
+  "qualification": "This is an exactness and representation diagnostic and is not a performance advantage measurement"
+}

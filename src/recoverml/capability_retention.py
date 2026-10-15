@@ -139,6 +139,8 @@ def optimize(graph,capabilities,k,budget=None,time_limit_s=10.,max_iterations=10
     if not math.isfinite(time_limit_s) or time_limit_s<=0 or max_iterations<1:
         raise ValueError('Positive time limit and iteration count required')
     blobs=sorted(graph.candidates);sizes=graph.sizes();index={b:i for i,b in enumerate(blobs)}
+    if any(not isinstance(size,int) or size<0 for size in sizes.values()):
+        raise ValueError('Artifact sizes must be nonnegative integers')
     metadata=graph.metadata_bytes()+len(contract(capabilities,k));cuts=[];history=[]
     if not blobs:
         valid=not any(graph.targets.values()) and (budget is None or metadata<=budget)
@@ -156,13 +158,32 @@ def optimize(graph,capabilities,k,budget=None,time_limit_s=10.,max_iterations=10
             return retained,'proven_infeasible',dict(robust_certified=False,storage_optimal=False,iterations=history)
         if master.status!=0 or master.x is None:
             return retained,'master_unknown',dict(robust_certified=False,storage_optimal=False,iterations=history)
-        retained={b for b in blobs if master.x[index[b]]>.5}
+        import numpy as np
+        values=np.asarray(master.x,dtype=float)
+        numeric=dict(solver_status=int(master.status),solver_message=master.message,
+            mip_gap=(float(master.mip_gap) if getattr(master,'mip_gap',None) is not None else None),
+            mip_dual_bound=(float(master.mip_dual_bound) if getattr(master,'mip_dual_bound',None) is not None else None),
+            binary_tolerance=1e-5,objective_absolute_tolerance_bytes=1e-5,
+            objective_relative_tolerance=1e-9)
+        valid_vector=(values.shape==(len(blobs),) and np.isfinite(values).all()
+            and (values>=-1e-5).all() and (values<=1.+1e-5).all()
+            and (np.abs(values-np.rint(values))<=1e-5).all())
+        if not valid_vector:
+            return retained,'master_rejected',dict(robust_certified=False,storage_optimal=False,
+                rejection='nonfinite or nonbinary master incumbent',master=numeric,iterations=history)
+        retained={b for b in blobs if values[index[b]]>.5}
         size=metadata+sum(sizes[b] for b in retained)
-        if not graph.roots<=retained or (budget is not None and size>budget):
-            return retained,'master_rejected',dict(robust_certified=False,storage_optimal=False,iterations=history)
+        modeled_bytes=(float(master.fun)*1024.+metadata if master.fun is not None else math.nan)
+        valid=(graph.roots<=retained and all(cut&retained for cut in cuts)
+            and (budget is None or size<=budget) and math.isfinite(modeled_bytes)
+            and math.isclose(size,modeled_bytes,rel_tol=1e-9,abs_tol=1e-5))
+        if not valid:
+            return retained,'master_rejected',dict(robust_certified=False,storage_optimal=False,
+                rejection='master incumbent violates roots, cuts, byte budget or objective consistency',
+                retained_bytes=size,modeled_bytes=modeled_bytes,master=numeric,iterations=history)
         adversary=counterexample(graph,retained,capabilities,k,time_limit_s)
         history.append(dict(iteration=iteration,master_s=master_s,retained_bytes=size,
-                            lower_bound_bytes=float(master.fun)*1024.+metadata,oracle=adversary))
+                            lower_bound_bytes=modeled_bytes,master=numeric,oracle=adversary))
         if adversary['status']=='certified':
             return retained,'ok',dict(robust_certified=True,storage_optimal=True,
                 retained_bytes=size,capability_bound=k,capabilities=sorted(set(capabilities.values())),
