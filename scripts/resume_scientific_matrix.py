@@ -4,12 +4,14 @@ Use --prepare first, then twelve --case invocations against the frozen captures.
 Worker command logs and exit codes belong to the orchestrator, not this module.
 """
 import argparse
+from concurrent.futures import ThreadPoolExecutor,as_completed
 from collections import Counter
 import csv
 import gzip
 import hashlib
 import itertools
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -87,6 +89,7 @@ def select_complete_original(protocol,original,rows,traces,allowed_workflows):
 
 
 def prepare(destination,resume_path):
+    destination=destination.resolve()
     destination.mkdir(parents=True,exist_ok=False)
     resume=json.loads(resume_path.read_text());original=ROOT/resume['original_directory']
     protocol=json.loads((ROOT/resume['original_protocol']).read_text())
@@ -115,6 +118,21 @@ def prepare(destination,resume_path):
             captures.append(dict(history=history,capture_s=seconds,manifest_sha256=digest((path/'manifest.json').read_bytes()),**info))
             dump(destination/'fresh_capture_inventory.json',captures)
             print(json.dumps(dict(captured=history,capture_s=seconds,largest_model_bytes=info['largest_model_bytes'])),flush=True)
+    finish_preparation(destination)
+
+
+def finish_preparation(destination):
+    """Complete only bookkeeping after a capture-stage command was interrupted."""
+    destination=destination.resolve()
+    resume=json.loads((destination/'resume_protocol.json').read_text())
+    protocol=json.loads((destination/'protocol.json').read_text())
+    captures=json.loads((destination/'fresh_capture_inventory.json').read_text())
+    if {i['history'] for i in captures}!={f'{w}-{s}' for w,s in itertools.product(resume['rerun_workflows'],resume['rerun_seeds'])}:
+        raise RuntimeError('Fresh captured history grid incomplete')
+    for item in captures:
+        path=destination/'captures'/item['history']
+        if digest((path/'manifest.json').read_bytes())!=item['manifest_sha256']:raise RuntimeError('Fresh manifest changed')
+    source_hashes=json.loads((destination/'prepare_start.json').read_text())['source_sha256']
     derived=[]
     for workflow,seed,scope,k in itertools.product(resume['rerun_workflows'],resume['rerun_seeds'],
             protocol['capability_scopes'],protocol['loss_bounds']):
@@ -136,12 +154,39 @@ def case_run(destination,case,hyppo_cache):
     return run(destination/'cases'/case,protocol,hyppo_cache,capture_input=destination/'captures')
 
 
+def all_cases(destination,hyppo_cache):
+    """Run the fixed case list with the prospectively disclosed concurrency."""
+    resume=json.loads((destination/'resume_protocol.json').read_text())
+    items=json.loads((destination/'case_inventory.json').read_text());receipts=[]
+    logs=destination/'worker_logs';logs.mkdir(exist_ok=False)
+    env=dict(os.environ,OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1',MKL_NUM_THREADS='1',PYTHONPATH=str(ROOT/'src'))
+    def worker(item):
+        command=[sys.executable,str(Path(__file__).resolve()),'--output',str(destination.resolve()),
+            '--case',item['case'],'--hyppo-cache',str(hyppo_cache.resolve())]
+        started=time.time_ns()
+        with (logs/(item['case']+'.txt')).open('w') as stream:
+            result=subprocess.run(command,cwd=ROOT,env=env,stdout=stream,stderr=subprocess.STDOUT)
+        receipt=dict(case=item['case'],command=command,start_timestamp_ns=started,end_timestamp_ns=time.time_ns(),exit_code=result.returncode)
+        dump(logs/(item['case']+'.json'),receipt)
+        return receipt
+    with ThreadPoolExecutor(max_workers=resume['case_workers']) as pool:
+        jobs=[pool.submit(worker,item) for item in items]
+        for job in as_completed(jobs):
+            receipt=job.result();receipts.append(receipt);dump(destination/'worker_execution.json',receipts)
+            print(json.dumps(receipt),flush=True)
+    if any(r['exit_code'] for r in receipts):raise RuntimeError('A declared worker failed; see complete preserved logs')
+
+
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--protocol',type=Path,default=ROOT/'configs/scientific_resume_oct15.json')
     parser.add_argument('--prepare',action='store_true');parser.add_argument('--case')
+    parser.add_argument('--run-cases',action='store_true')
+    parser.add_argument('--finish-preparation',action='store_true')
     parser.add_argument('--hyppo-cache',type=Path,default=ROOT.parent/'baseline_sources/HYPPO/Components')
     args=parser.parse_args()
     if args.prepare:prepare(args.output,args.protocol)
+    elif args.finish_preparation:finish_preparation(args.output)
+    elif args.run_cases:all_cases(args.output,args.hyppo_cache)
     elif args.case:print(json.dumps(case_run(args.output,args.case,args.hyppo_cache),indent=2))
     else:parser.error('Specify --prepare or --case')

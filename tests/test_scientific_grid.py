@@ -22,5 +22,14 @@ class ScientificGridTests(unittest.TestCase):
         self.assertIn('Duplicate summary condition',errors)
         self.assertIn('Incomplete declared grid',errors)
 
+    def test_equal_counts_cannot_hide_wrong_raw_version_identity(self):
+        expected={('a-k1','exact',.5,'0',()),('a-k1','exact',.5,'1',())}
+        actual=[('a-k1','exact',.5,'0',()),('a-k1','exact',.5,'2',())]
+        self.assertIn('Incomplete manifest-derived raw request grid',module.request_grid_errors(expected,actual))
+
+    def test_repeated_raw_request_does_not_fill_the_declared_grid(self):
+        request=('a-k1','exact',.5,'0',())
+        self.assertIn('Duplicate declared raw request',module.request_grid_errors({request},[request,request]))
+
 
 if __name__=='__main__':unittest.main()

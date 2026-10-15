@@ -1,0 +1,292 @@
+{
+  "repository": "sraashis/deepdyn",
+  "commit": "48018b62a245dd791e45d60b28068489a8c32742",
+  "tree_url": "https://api.github.com/repos/sraashis/deepdyn/git/trees/48018b62a245dd791e45d60b28068489a8c32742?recursive=1",
+  "complete_images": 20,
+  "complete_annotations": 20,
+  "files": [
+    {
+      "path": "labels-ah/im0001.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0001.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "759ed1043d060d03499b3d4f97149db9ed97c528",
+      "sha256": "99264502e9b2656da06258f0e5b4d199cb6e4acc9e54ade8edbf228e0b7235a3"
+    },
+    {
+      "path": "labels-ah/im0002.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0002.ah.pgm",
+      "bytes": 423598,
+      "git_blob_sha1": "60cd1e549649fdebe2b7a5f3e50f987ceb0181b7",
+      "sha256": "68d3ddc8a9e8d735c290b6b9266988f4dc9beee00290f7a57a19f445dc6e9e3a"
+    },
+    {
+      "path": "labels-ah/im0003.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0003.ah.pgm",
+      "bytes": 423598,
+      "git_blob_sha1": "b2e015300979e2ea40b35b71947ab32a2ac2961d",
+      "sha256": "4c8f2bdac707ed2dcab9ec3cbe2aa630d4578217eab138ca55e6bd2f9da983fd"
+    },
+    {
+      "path": "labels-ah/im0004.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0004.ah.pgm",
+      "bytes": 423598,
+      "git_blob_sha1": "11a510d57b76d2914b85c463d2d30b2dfb8fdc3e",
+      "sha256": "d703b32b437bfb221643c29df149fff6cc4eb83ef90beda2b92ea6d81dac9c0f"
+    },
+    {
+      "path": "labels-ah/im0005.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0005.ah.pgm",
+      "bytes": 423598,
+      "git_blob_sha1": "586b9463c39c0ac559e907ac1021dc4d16684f73",
+      "sha256": "8bcfddbf052ad40a1d132568e90816b6d71a9c6783c8f7e86dac579d6860af99"
+    },
+    {
+      "path": "labels-ah/im0044.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0044.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "2c35e928fbc089516f956143dd073d11fccb0d40",
+      "sha256": "b30f93235568b9f9e2a5c36e1cd5c03ab8c91542797bdb190fda03a923e2df12"
+    },
+    {
+      "path": "labels-ah/im0077.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0077.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "49a1cdd4fc295749daea9349c87124ca8bbec390",
+      "sha256": "af05ba923d68bd51e12b587ba2e31bf7a2bef1f82a2f5733fdc7cca3c889714c"
+    },
+    {
+      "path": "labels-ah/im0081.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0081.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "658d3e9578806ff1cef622ce6997230ed0e99165",
+      "sha256": "cf6c32afc6eec6834933a07b420604f04b66aeeea533cd2a236d9ae1320885a4"
+    },
+    {
+      "path": "labels-ah/im0082.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0082.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "ba8cf1e75ad8a93ecd9b77460159e27e2553d999",
+      "sha256": "46681147cb1799d2584f1d655c1a45b39ef6b8d284fc4327052ade662039b044"
+    },
+    {
+      "path": "labels-ah/im0139.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0139.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "ff3d0c57b0ea347c3330d27a41ba8a06dba58a45",
+      "sha256": "0f6aa0a0652d17e981942c769ec04b2912ae48140d3fe13ddfa3c17545fbe0d7"
+    },
+    {
+      "path": "labels-ah/im0162.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0162.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "d80be949fae4c52431a77e640d15a25847c02751",
+      "sha256": "2d89fef36cb64b74dfbad20da32f2205c68c7361e6c2871b7f7ef8558a1782f5"
+    },
+    {
+      "path": "labels-ah/im0163.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0163.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "1b4aae70fef678f104d5037958babd6fed375c83",
+      "sha256": "97794fd65946fafb9388e4b7734e934934d9d872b4b25eefdf1e09972e2e4ecb"
+    },
+    {
+      "path": "labels-ah/im0235.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0235.ah.pgm",
+      "bytes": 423515,
+      "git_blob_sha1": "da20b465bfb639fee57b40b1eb03033be5a32250",
+      "sha256": "c524ffe368911a1e0079bf2cf7ec2f91ca88760cd1d5fe25afd0476cbf7d67c2"
+    },
+    {
+      "path": "labels-ah/im0236.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0236.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "76d8d386da7768826c6b929e88643a7bdc8c14b0",
+      "sha256": "c3ea3d0523aa9c5e31cfa6052774a339aa19ecf37d29213336521b4c67c10be2"
+    },
+    {
+      "path": "labels-ah/im0239.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0239.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "8f16acce7d7784bca3500659e032302956052c8b",
+      "sha256": "0b76a88c54b103377eb768d6af15260f8d564af9f8990f59ec2e7e8aa79592f8"
+    },
+    {
+      "path": "labels-ah/im0240.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0240.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "eabfa7e9afa42fe2339c4790335c619f15ac0a66",
+      "sha256": "1ed74fe135a14061d73dfe7c02b0a7a6ca935524f09d3f97cb6141976b1b9d70"
+    },
+    {
+      "path": "labels-ah/im0255.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0255.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "1abaae49373bbcffd75fd8263dce0834357b9442",
+      "sha256": "5c8cc626aa48e366afe3a457158f3ab36f007a8ef0260e9591e3bf5649accd17"
+    },
+    {
+      "path": "labels-ah/im0291.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0291.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "a145b4828c65ea65d574a658dfb4d3c439d76b40",
+      "sha256": "8110498ebd349a12f0beca1454d4824c9b0f8b00365a7f771f0aa8b0c622ff7c"
+    },
+    {
+      "path": "labels-ah/im0319.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0319.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "5e9c39a8e47d016ca6b26a47029f4c1f15a4c62d",
+      "sha256": "539272ffb17f8c12dd35994f0eabaf6c11b0d4e031b76cba4849c7839bd35335"
+    },
+    {
+      "path": "labels-ah/im0324.ah.pgm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/labels-ah/im0324.ah.pgm",
+      "bytes": 423558,
+      "git_blob_sha1": "ac48304a96a52996cc18f5944deefcda76dfb815",
+      "sha256": "518c8b860f8cb082832875bb870263bfd9b94cd5cda7e23483ef96239733ec9d"
+    },
+    {
+      "path": "stare-images/im0001.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0001.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "ecac039d45c33dbb3341a46bb8f2ab1962fd4d08",
+      "sha256": "2eb0309a2dfba4ebcbf9e4b34557c6099c6acfb777b0a4e41033f1220fa51f03"
+    },
+    {
+      "path": "stare-images/im0002.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0002.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "9a42994e90ebe0449bb07523298f835549226de3",
+      "sha256": "a1d19e5b2b0a3dd652bade1fe0ff44256f7f974a1df598b887de8d3c641d45ac"
+    },
+    {
+      "path": "stare-images/im0003.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0003.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "347ebc02d02905f0e42a2fe7a79edbc76484d05f",
+      "sha256": "198e35afd19328cf407e8d69d34f398b1ac69d58a1d2e0b2334a83a31ae01e19"
+    },
+    {
+      "path": "stare-images/im0004.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0004.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "1d884e1eb9839fc920660d984707b7d4337d94de",
+      "sha256": "f14e0f867ad1419d5c3aca250bda31226ec7369c2d175df2cd1344316afca7d1"
+    },
+    {
+      "path": "stare-images/im0005.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0005.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "fc7e06b74f5bbe322f5981e66d7c87101893b461",
+      "sha256": "29b4e5f056fa128553a900fc033f7894f25bed8da2fa05ed8f29bda34ed2695c"
+    },
+    {
+      "path": "stare-images/im0044.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0044.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "6569afa79f386a52794fec55ae8431f80558e125",
+      "sha256": "8d87d79af3689138f890d90509917cd942b39a8c5a44538d253f9b44844835fc"
+    },
+    {
+      "path": "stare-images/im0077.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0077.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "75b107cef062e213387499bfc23400932e28bec8",
+      "sha256": "d820b45001fb970ad2d9a28e0751d58830903a1ab428d961eb1ad6d01bee9ef0"
+    },
+    {
+      "path": "stare-images/im0081.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0081.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "16a26ff2dbdd4dc89651058d6da8d257321eb1d6",
+      "sha256": "def4aa59a261edf61ba1e37244db46b11d2c0e9be5d69c1afe38c21813147280"
+    },
+    {
+      "path": "stare-images/im0082.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0082.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "2d098282227790dc3cd89a11951aca3867dfe667",
+      "sha256": "6647e231d825aa2d427856863d967da38c85884bac562e045de06771050d7d36"
+    },
+    {
+      "path": "stare-images/im0139.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0139.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "67ae2a86e85d9495aa5dcc9756da364df4f2eb51",
+      "sha256": "d1673fc7c4f4c4b0b5aa993b6bc1fc7a09492af1db1fb57c66b642b89ad885c5"
+    },
+    {
+      "path": "stare-images/im0162.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0162.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "f352673f2d620f262b074631d38eeb4982a7f8c0",
+      "sha256": "9bac81dd2eb10ad2c09643b8e53a353c881736a277de408fef1b69caf4678a23"
+    },
+    {
+      "path": "stare-images/im0163.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0163.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "09e9f6a69f85dc240c5f1f15bd70ac245e8516f0",
+      "sha256": "99338d95af25a736ce09340e3087f40135d112a8aaee0f5c3a726f926064386e"
+    },
+    {
+      "path": "stare-images/im0235.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0235.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "678f79086cc17a9a709c2a699e5fc502983b409e",
+      "sha256": "e601616d844febf0e8596fe809505f37ecdc804e4604bd6cd9588a077e042c5e"
+    },
+    {
+      "path": "stare-images/im0236.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0236.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "2591c6256bb25dc82b6f84affc602b414351d057",
+      "sha256": "721dab89736d6a884c1664f226d0ab634b56ebcc847a0dac6cf8012ff2494d7c"
+    },
+    {
+      "path": "stare-images/im0239.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0239.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "fd347fae2e4ed2a178ad9fbc93f457bd612d4dd9",
+      "sha256": "249dbc55de72f383d4f29f15a2350bc99edf154f49a46ea659e1861f27f08ae3"
+    },
+    {
+      "path": "stare-images/im0240.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0240.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "3ec162cbcb2046f2b34acb723998d30e92dc26c0",
+      "sha256": "8129b59ee48456c9740b13b464a968b39542384cdca4a106acc3f0052285488a"
+    },
+    {
+      "path": "stare-images/im0255.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0255.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "a0129ae9077d453c418428cfc136678748464f87",
+      "sha256": "af9814bab1e4814770d8d77e0a0758d685c9903804709d27c2c27391809b79dd"
+    },
+    {
+      "path": "stare-images/im0291.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0291.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "aa744abe4831c3c083b372558dc4b22eb933d38b",
+      "sha256": "cc735e5d895da14fe5638e679baaaf4f5a5f52c3af5f1d18740cf9931c2f6552"
+    },
+    {
+      "path": "stare-images/im0319.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0319.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "c9a1ed3b5ec5e3dd80162dccfa23314b99065e69",
+      "sha256": "5f920e5af04d375d172155bc942214d4e46969a28319c75964b82577b5b910d1"
+    },
+    {
+      "path": "stare-images/im0324.ppm",
+      "url": "https://raw.githubusercontent.com/sraashis/deepdyn/48018b62a245dd791e45d60b28068489a8c32742/data/STARE/stare-images/im0324.ppm",
+      "bytes": 1270515,
+      "git_blob_sha1": "aa14f4db9dfff076865c84271efd2f3d919e10a5",
+      "sha256": "b04486b45950698f96c857cfce5befc1753655f835bee03589f5c914c0e4de0c"
+    }
+  ],
+  "source": "Pinned public copy in published research authors repository",
+  "annotation": "Adam Hoover",
+  "no_recovery_outcome_selection": true
+}

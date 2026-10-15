@@ -6,6 +6,7 @@ import gzip
 import hashlib
 import json
 import itertools
+import tarfile
 from pathlib import Path
 import numpy as np
 
@@ -25,6 +26,32 @@ def grid_errors(protocol, captures, rows):
     return errors
 
 
+def request_grid_errors(expected,actual):
+    errors=[]
+    if len(actual)!=len(set(actual)):errors.append('Duplicate declared raw request')
+    if set(actual)!=set(expected):errors.append('Incomplete manifest-derived raw request grid')
+    return errors
+
+
+def declared_requests(source,protocol):
+    from recoverml.core import Graph,Node
+    from recoverml.scientific_workflows import caps_for
+    from recoverml.robust_heuristics import fault_sets
+    expected=set()
+    with tarfile.open(source/'captures.tar.gz','r:gz') as archive:
+        for workflow,seed in itertools.product(protocol['workflows'],protocol['seeds']):
+            history=f'{workflow}-{seed}'
+            manifest=json.load(archive.extractfile('captures/'+history+'/manifest.json'))
+            graph=Graph(env=manifest['environment']);graph.nodes={n['id']:Node(**n) for n in manifest['nodes']}
+            graph.targets=manifest['targets'];graph.roots=set(manifest['mandatory_blobs'])
+            for scope,k,fraction,method in itertools.product(protocol['capability_scopes'],protocol['loss_bounds'],
+                    protocol['optional_snapshot_budget_fractions'],protocol['methods']):
+                for lost in fault_sets(caps_for(graph,scope),k):
+                    for version in graph.targets:
+                        expected.add((f'{history}-{scope}-k{k}',method,float(fraction),str(version),tuple(lost)))
+    return expected
+
+
 def run(source):
     rows=list(csv.DictReader((source/'summary.csv').open()))
     protocol=json.loads((source/'protocol.json').read_text())
@@ -32,17 +59,21 @@ def run(source):
     captures=json.loads((source/'capture_inventory.json').read_text())
     expected_rows=(len(protocol['workflows'])*len(protocol['seeds'])*len(protocol['capability_scopes'])*len(protocol['loss_bounds'])
         *len(protocol['optional_snapshot_budget_fractions'])*len(protocol['methods']))
-    errors=grid_errors(protocol,captures,rows);seen=set();counts=defaultdict(Counter);raw_count=0
+    errors=grid_errors(protocol,captures,rows);seen=set();identities=[];counts=defaultdict(Counter);metrics=defaultdict(list);raw_count=0
     with gzip.open(source/'execution_traces.jsonl.gz','rt') as stream:
         for line in stream:
             t=json.loads(line);raw_count+=1
             key=(t['case'],t['policy'],t['budget_fraction'])
             identity=(*key,t['version'],tuple(t['disabled']))
+            identities.append(identity)
             if identity in seen:errors.append('Duplicate request '+str(identity))
             seen.add(identity);counts[key]['requests']+=1
+            metrics[key].append(t)
             for field in ('exact','expected_blocked','unexpected'):counts[key][field]+=int(t[field])
             if not t['capture_archive_absent']:errors.append('Capture archive visible')
             if t['end_timestamp_ns']<t['start_timestamp_ns'] or t['latency_s']<0:errors.append('Invalid time')
+    expected_requests=declared_requests(source,protocol)
+    errors+=request_grid_errors(expected_requests,identities)
     for row in rows:
         key=(row['case'],row['policy'],float(row['budget_fraction']));counter=counts[key]
         for field,raw in [('requests','requests'),('exact','exact'),('blocked','expected_blocked'),('unexpected','unexpected')]:
@@ -50,12 +81,25 @@ def run(source):
         if int(row['retained_bytes'])>int(row['budget_bytes']):errors.append('Budget overrun '+str(key))
         if int(row['exact'])+int(row['blocked'])+int(row['unexpected'])!=int(row['requests']):
             errors.append('Outcome partition mismatch '+str(key))
+        raw=metrics[key]
+        if raw:
+            latency=[r['latency_s'] for r in raw]
+            expected_metrics=dict(latency_mean_s=float(np.mean(latency)),latency_p50_s=float(np.quantile(latency,.5)),
+                latency_p90_s=float(np.quantile(latency,.9)),latency_p99_s=float(np.quantile(latency,.99)),
+                cpu_total_s=sum(r['cpu_s'] for r in raw),read_bytes=sum(r['io_delta'].get('read_bytes',0) for r in raw),
+                write_bytes=sum(r['io_delta'].get('write_bytes',0) for r in raw),operation_events=sum(len(r['events']) for r in raw))
+            for field,value in expected_metrics.items():
+                if not np.isclose(float(row[field]),value,rtol=1e-12,atol=1e-12):
+                    errors.append('Summary/raw measured metric mismatch '+str(key)+' '+field)
     if len(rows)!=expected_rows:errors.append('Incomplete declared grid')
     if raw_count!=report['requests']:errors.append('Request denominator mismatch')
     if report['unexpected']:errors.append('Unexpected recovery outcomes')
     plans=json.loads(gzip.decompress((source/'planner_records.json.gz').read_bytes()))
     optima=[p for p in plans if 'budget_fraction' not in p];case_optima=defaultdict(dict)
     for p in optima:case_optima[p['case']][p['policy']]=p
+    expected_cases={f'{workflow}-{seed}-{scope}-k{k}' for workflow,seed,scope,k in itertools.product(
+        protocol['workflows'],protocol['seeds'],protocol['capability_scopes'],protocol['loss_bounds'])}
+    if set(case_optima)!=expected_cases:errors.append('Missing independent exact formulation case')
     disagreements=[];unknown=[]
     for case,values in case_optima.items():
         proven=[p for p in values.values() if p['status']=='ok' and p['diagnostic'].get('storage_optimal')]
@@ -82,6 +126,7 @@ def run(source):
         requests=raw_count,histories=len(captures),workflow_families=len({c['workflow'] for c in captures}),
         errors=errors,independent_formulation_cases=len(case_optima),optimum_disagreements=disagreements,
         solver_unknown_cases=unknown,unexpected_requests=report['unexpected'],
+        expected_manifest_derived_requests=len(expected_requests),
         capture_or_planning_failures=report['failures'],
         history_metrics=history_metrics,heuristic_complete_gaps=baseline_gaps,
         statistical_qualification='Descriptive constructed history-level summaries; no iid production sample or acceptance guarantee',
