@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "purpose": "Prospectively declared component controls reconstructed after loss of unverified auxiliary artifacts",
+  "workflows": ["iris_union", "digits_pca", "diabetes_poly", "digits_forest"],
+  "seed": 101,
+  "scope": "broad",
+  "loss_bounds": [1, 2],
+  "fixtures": ["shared_root_frontiers", "alternative_producers", "alias_cycle"],
+  "repetitions": 2,
+  "per_solver_call_time_limit_s": 10,
+  "controls": ["default", "no_decomposition", "no_root_shortcut", "forced_scenario_no_decomposition", "forced_counterexample_no_decomposition", "no_alternative_producers", "logical_identity"],
+  "same_contract_controls": ["default", "no_decomposition", "no_root_shortcut", "forced_scenario_no_decomposition", "forced_counterexample_no_decomposition"],
+  "different_contract_controls": ["no_alternative_producers", "logical_identity"],
+  "different_contract_comparison": "Report payload-only differences separately because altered graphs have different manifest and capability-contract byte costs; no speedup or retention guarantee relative to the original contract is claimed",
+  "no_alternative_producers_rule": "Keep the first captured replayable producer of each physical output and mark every later producer of that physical output unavailable while preserving all provenance nodes",
+  "logical_identity_rule": "Assign each distinct captured logical node its own selectable identity and charge its actual captured size without changing dependencies; metadata-only counterfactual and not fresh replay",
+  "archive_deduplication_control": "Sum the sizes of captured logical node outputs versus unique captured physical outputs; this is full-archive output accounting and is not a no-deduplication retention solver",
+  "certificate_controls": {"chain_lengths": [128, 1024], "repetitions": 3, "compare": "Indexed worklist certificate and independent fixed-point scan on identical chains"},
+  "execution_order": "Rotate seven controls by repetition to disclose order effects; timings are descriptive single-host measurements rather than isolated performance claims",
+  "input_rule": "Use immutable seed101 capture manifests from the complete recovered matrix and freeze source and input hashes in run_start.json; fail on any missing declared history rather than shrinking the matrix",
+  "excluded_claims": ["Three independent new theoretical discoveries", "Unconditional optimization speedup", "Natural alternative producers are common", "Production workflow sampling", "New recovery runtime measurements", "Second-machine reproduction"],
+  "exclusions": "No exclusion by outcome; timeouts and changed-contract controls remain visible"
+}

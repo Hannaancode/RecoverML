@@ -1,6 +1,38 @@
 name: Correctness and smoke benchmark
 on: [push, pull_request]
 jobs:
+  scientific-reproduction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONPATH: src
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: |
+          mkdir -p work/cloud_metadata
+          uname -a > work/cloud_metadata/uname.txt
+          lscpu > work/cloud_metadata/lscpu.txt
+          python -m pip freeze > work/cloud_metadata/packages.txt
+          python -m pip check > work/cloud_metadata/pip_check.txt
+          git rev-parse HEAD > work/cloud_metadata/commit.txt
+          python -c 'import json; from recoverml.core import environment; print(json.dumps(environment(), indent=2))' > work/cloud_metadata/environment.json
+      - run: python -m recoverml.scientific_benchmarks --protocol configs/scientific_ci_oct15.json --output work/ci_scientific --hyppo-cache work/pinned_hyppo
+      - run: python scripts/analyze_scientific_audit.py work/ci_scientific
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fresh-cloud-scientific-reproduction
+          path: |
+            work/ci_scientific
+            work/cloud_metadata
   verify:
     runs-on: ubuntu-latest
     env:

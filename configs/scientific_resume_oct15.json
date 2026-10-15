@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "purpose": "Finish the entire declared scientific matrix after the original run was interrupted and retain all original evidence unchanged",
+  "original_protocol": "configs/scientific_audit_oct15.json",
+  "original_directory": "results/research/scientific_audit_oct15",
+  "original_summary_sha256": "00a52f544468a7de160357ea41aa22a08245d63ee33486245a54d886fac22d95",
+  "original_trace_sha256": "894ac5bea3946c2764ff710692a60bdaf531e225ede95780fb31abc4a37a04ea",
+  "reuse_rule": "Reuse a history only if all 240 declared conditions and every exact declared request identity are present and reconcile, independent of recovery outcome and performance",
+  "reused_workflows": [
+    "iris_union",
+    "digits_pca",
+    "diabetes_poly"
+  ],
+  "rerun_workflows": [
+    "digits_forest"
+  ],
+  "rerun_seeds": [
+    101,
+    211
+  ],
+  "rerun_all_forest_conditions": true,
+  "fresh_forest_capture": true,
+  "fresh_capture_reason": "Use current strict recorded execution environment and source contracts without bypassing guards",
+  "case_workers": 6,
+  "concurrency_qualification": "Six separate case processes share one host and can contend; timings are descriptive rather than isolated comparative speedups",
+  "old_planner_records": "Lost in-memory records are recomputed as metadata-only certificates and are explicitly not original measured planning times or original selected artifact identities",
+  "partial_forest_policy": "Original partial forest rows and readable traces remain preserved but are not selected into the complete matrix; all forest conditions are rerun from fresh capture inputs",
+  "expected_final_rows": 1920,
+  "expected_final_requests": 36480,
+  "expected_reused_rows": 1440,
+  "expected_reused_requests": 28080,
+  "expected_new_rows": 480,
+  "expected_new_requests": 8400,
+  "failures": "Capture failures and solver unknowns remain recorded and cannot shrink the original declared grid",
+  "repetitions": 1,
+  "source_drift": "Freeze an exact source snapshot before each measurement and record every source hash; changed source is a validation failure"
+}

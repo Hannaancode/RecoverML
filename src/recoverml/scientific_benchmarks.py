@@ -40,7 +40,18 @@ def snapshots(g, caps, k, budget):
     return selected
 
 
-def run(destination, protocol_path, hyppo_cache):
+def read_capture(path):
+    """Read frozen inputs with their original contracts, never replace the env."""
+    graph=Graph.read(path/'manifest.json')
+    for blob in graph.candidates:
+        raw=(path/'blobs'/(blob+'.pkl')).read_bytes()
+        if digest(raw)!=blob or len(raw)!=graph.sizes()[blob]:
+            raise RuntimeError('Frozen capture payload integrity failed')
+        graph.archive[blob]=raw
+    return graph,json.loads((path/'capture_info.json').read_text())
+
+
+def run(destination, protocol_path, hyppo_cache, capture_input=None):
     from .scientific_workflows import capture, execute, caps_for
     destination.mkdir(parents=True,exist_ok=False)
     config=json.loads(protocol_path.read_text());dump(destination/'protocol.json',config)
@@ -61,12 +72,21 @@ def run(destination, protocol_path, hyppo_cache):
         for workflow in config['workflows']:
             for seed in config['seeds']:
                 history=f'{workflow}-{seed}';clock=time.perf_counter()
-                try:g,info=capture(workflow,seed,config['versions'])
+                try:
+                    if capture_input is None:g,info=capture(workflow,seed,config['versions'])
+                    else:g,info=read_capture(capture_input/history)
                 except Exception as exc:
                     failures.append(dict(history=history,phase='capture',error=repr(exc)));dump(destination/'failures.json',failures);continue
-                captures.append(dict(history=history,capture_s=time.perf_counter()-clock,**info))
-                full=destination/'captures'/history;write_store(g,g.candidates,full)
-                dump(full/'capture_info.json',info)
+                captures.append(dict(history=history,capture_s=time.perf_counter()-clock,
+                    capture_operation='capture' if capture_input is None else 'load_frozen_capture',**info))
+                dump(destination/'capture_inventory.json',captures)
+                if capture_input is None:
+                    full=destination/'captures'/history;write_store(g,g.candidates,full)
+                    dump(full/'capture_info.json',info)
+                else:
+                    dump(destination/'capture_reference.json',dict(directory=str(capture_input/history),
+                        manifest_sha256=digest((capture_input/history/'manifest.json').read_bytes()),
+                        info_sha256=digest((capture_input/history/'capture_info.json').read_bytes())))
                 for scope in config['capability_scopes']:
                     caps=caps_for(g,scope)
                     for k in config['loss_bounds']:
@@ -158,6 +178,10 @@ def run(destination, protocol_path, hyppo_cache):
                                     process_peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
                                 if writer is None:writer=csv.DictWriter(summary,fieldnames=list(row),lineterminator='\n');writer.writeheader()
                                 writer.writerow(row);summary.flush();rows.append(row)
+                                trace.flush()
+                                # An interrupted worker retains complete rows and their
+                                # matching compressed trace prefix plus current plans.
+                                dump(destination/'planner_checkpoint.json',plans)
                             # The full sensitivity grid changes only decision annotations.
                             for multiplier in config['sensitivity']['capture_cost_multipliers']:
                                 proxy=Graph(env=g.env);proxy.nodes={n:replace(v,compute_s=v.compute_s*multiplier) for n,v in g.nodes.items()}
@@ -180,13 +204,20 @@ def run(destination, protocol_path, hyppo_cache):
                                             exact_structural_requests=count,total_requests=len(faults)*len(g.targets)))
                         print(json.dumps(dict(completed_case=case,rows=len(rows),failures=len(failures))),flush=True)
                         dump(destination/'failures.json',failures)
+        # Write a final complete ledger rather than trusting the last synced
+        # streaming file checkpoint in a remotely synchronized workspace.
+        if rows:
+            summary.seek(0);summary.truncate()
+            writer=csv.DictWriter(summary,fieldnames=list(rows[0]),lineterminator='\n')
+            writer.writeheader();writer.writerows(rows);summary.flush()
     for name,value in [('planner_records',plans),('sensitivity',sensitivity)]:
         with gzip.open(destination/(name+'.json.gz'),'wt') as stream:json.dump(value,stream,allow_nan=False)
     dump(destination/'capture_inventory.json',captures)
     # Compress all unique captured bytes once, not one redundant store per policy.
     import tarfile
-    with tarfile.open(destination/'captures.tar.gz','w:gz') as stream:stream.add(destination/'captures',arcname='captures')
-    shutil.rmtree(destination/'captures')
+    if capture_input is None:
+        with tarfile.open(destination/'captures.tar.gz','w:gz') as stream:stream.add(destination/'captures',arcname='captures')
+        shutil.rmtree(destination/'captures')
     changed=[n for n,h in source_hashes.items() if digest(Path(__file__).with_name(n).read_bytes())!=h]
     report=dict(histories=len(captures),case_policy_budget_rows=len(rows),requests=sum(r['requests'] for r in rows),
         exact=sum(r['exact'] for r in rows),expected_blocked=sum(r['blocked'] for r in rows),unexpected=sum(r['unexpected'] for r in rows),
