@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "rows": 154,
+  "expected_rows": 154,
+  "independent_indexed_vs_full_scan_comparisons": 1452,
+  "complete_structural_certificates": 1452,
+  "errors": [],
+  "analysis_source_sha256": "190ca725be94bdae8b661e374c638e2e9b4dbfa7c42ec3f61099ee7b10780c9a",
+  "records_sha256": "9d15d7417e50c3f4e7520336f324bd3f5ab99da6aa1cd5e075f1790a3f7835d3",
+  "interpretation": "New independent structural reconciliation of saved selections, not new timed optimizer or disk-recovery measurements"
+}

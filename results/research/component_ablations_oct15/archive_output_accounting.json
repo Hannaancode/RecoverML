@@ -1,0 +1,90 @@
+[
+  {
+    "case": "iris_union-101-k1",
+    "captured_logical_outputs": 14,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 29097,
+    "unique_physical_output_bytes": 28666,
+    "deduplicated_output_bytes_saved": 431
+  },
+  {
+    "case": "iris_union-101-k2",
+    "captured_logical_outputs": 14,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 29097,
+    "unique_physical_output_bytes": 28666,
+    "deduplicated_output_bytes_saved": 431
+  },
+  {
+    "case": "digits_pca-101-k1",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 2012484,
+    "unique_physical_output_bytes": 2012484,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "digits_pca-101-k2",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 2012484,
+    "unique_physical_output_bytes": 2012484,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "diabetes_poly-101-k1",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 316555,
+    "unique_physical_output_bytes": 316555,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "diabetes_poly-101-k2",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 316555,
+    "unique_physical_output_bytes": 316555,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "digits_forest-101-k1",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 31228902,
+    "unique_physical_output_bytes": 31228902,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "digits_forest-101-k2",
+    "captured_logical_outputs": 13,
+    "unique_physical_outputs": 13,
+    "logical_output_bytes": 31228902,
+    "unique_physical_output_bytes": 31228902,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "shared_root_frontiers",
+    "captured_logical_outputs": 5,
+    "unique_physical_outputs": 5,
+    "logical_output_bytes": 491,
+    "unique_physical_output_bytes": 491,
+    "deduplicated_output_bytes_saved": 0
+  },
+  {
+    "case": "alternative_producers",
+    "captured_logical_outputs": 3,
+    "unique_physical_outputs": 2,
+    "logical_output_bytes": 867,
+    "unique_physical_output_bytes": 449,
+    "deduplicated_output_bytes_saved": 418
+  },
+  {
+    "case": "alias_cycle",
+    "captured_logical_outputs": 4,
+    "unique_physical_outputs": 2,
+    "logical_output_bytes": 652,
+    "unique_physical_output_bytes": 238,
+    "deduplicated_output_bytes_saved": 414
+  }
+]

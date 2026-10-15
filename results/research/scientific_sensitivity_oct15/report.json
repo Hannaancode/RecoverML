@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "histories": 8,
+  "rows": 5760,
+  "expected_rows": 5760,
+  "expected_hyppo_rows": 4320,
+  "expected_helix_rows": 1440,
+  "unique_structural_coverage_evaluations": 266,
+  "errors": [],
+  "finished_utc": "2026-10-15T17:01:03.992500+00:00",
+  "summary_sha256": "9bb6f77b4f0144b5362ab73691675131be432592830914e1c5ace92ece8348eb",
+  "selections_sha256": "343e2aedda1391e4e780082c54ab8a46a1151919de4b576c98e14855ddab7bd0",
+  "interpretation": "Complete structural decision sensitivity only; no fresh replay or latency measurements",
+  "limitations": [
+    "These histories were constructed from public recipes rather than sampled production traces",
+    "Declared recovery weights are sensitivity assumptions rather than observed access frequencies",
+    "The captured physical-ancestry adapter is not the native HYPPO hyperpath estimator",
+    "HELIX frequency and restricted-eligibility variants are not claimed",
+    "A robust partial-coverage optimum is not computed in this baseline-only sweep"
+  ]
+}

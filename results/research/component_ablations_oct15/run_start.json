@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-15T17:01:04.555743+00:00",
+  "protocol_commit": "db9a4daf16fa5bee5fa67017c7cd2a254af24eab",
+  "protocol_sha256": "8a2a50fdf69b6d860e336e451665c951f8fe26fcf631e205a4645ec11bfbb3b9",
+  "input_manifests_sha256": {
+    "iris_union-101": "af386f208e7e9cd1880eea778ad22ddba90ad26d6055e8f9557cc7a00abaeaec",
+    "digits_pca-101": "9850acf1bf7c0dd1343daacb36d0a3c05ebac68e221e81b2b0aedddbb560be9c",
+    "diabetes_poly-101": "a403a25910487f68e040273dfd7cee7476250125aa3f38c6fd0cbeba1ab27b22",
+    "digits_forest-101": "316b623c333a8c4205d842fd8289528cb4f389a4e52883a5b71013b689c70834"
+  },
+  "source_sha256": {
+    "audit_component_ablations.py": "f3431e378dc3f2fa31b2b1eff9508d463cb9b990955c9692dcb858dc58ea6687",
+    "component_retention.py": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72",
+    "capability_retention.py": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35",
+    "scenario_retention.py": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02",
+    "witness.py": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  "metadata_only": true,
+  "original_artifact_payloads_loaded": false
+}

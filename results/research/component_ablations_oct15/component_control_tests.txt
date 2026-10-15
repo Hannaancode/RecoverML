@@ -1,0 +1,8 @@
+test_disabled_atomic_shortcut_preserves_same_optimal_bytes (test_component_ablations.ComponentAblationTests.test_disabled_atomic_shortcut_preserves_same_optimal_bytes) ... ok
+test_logical_identity_and_reference_certificate_boundaries (test_component_ablations.ComponentAblationTests.test_logical_identity_and_reference_certificate_boundaries) ... ok
+test_removed_alternative_is_explicitly_a_different_contract (test_component_ablations.ComponentAblationTests.test_removed_alternative_is_explicitly_a_different_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.458s
+
+OK

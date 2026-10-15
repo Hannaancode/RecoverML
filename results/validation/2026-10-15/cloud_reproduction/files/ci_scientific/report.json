@@ -1,0 +1,20 @@
+{
+  "histories": 2,
+  "case_policy_budget_rows": 192,
+  "requests": 624,
+  "exact": 367,
+  "expected_blocked": 257,
+  "unexpected": 0,
+  "failures": [],
+  "source_changed_during_run": [],
+  "sensitivity_rows": 192,
+  "finish_timestamp_ns": 1792083690949536394,
+  "raw_trace_sha256": "4a57648759877663e22beb02984d905399a1bf6233c830cd9cecb18e668d50f9",
+  "limitations": [
+    "Eight constructed captures are not a random production sample",
+    "Repeated requests are correlated",
+    "Exact minima do not maximize partial coverage below their feasibility budget",
+    "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+    "No GPU, energy or cross-machine result is claimed"
+  ]
+}

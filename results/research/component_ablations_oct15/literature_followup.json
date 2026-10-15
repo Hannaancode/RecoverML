@@ -1,0 +1,52 @@
+{
+  "reviewed_date_utc": "2026-10-15",
+  "review_type": "Targeted primary-source follow-up by AI, not exhaustive or external peer review",
+  "sources": [
+    {
+      "title": "Implicit Hitting Set Algorithms for Reasoning Beyond NP",
+      "authors": "Saikko, Wallner, Jarvisalo",
+      "year": 2016,
+      "url": "https://www.dbai.tuwien.ac.at/user/wallner/files/SaikkoWJ2016.pdf",
+      "reviewed_sections": [
+        "3",
+        "4",
+        "Algorithms1and2"
+      ],
+      "retrieval": "Full PDF opened through web search tool",
+      "finding": "General weighted core/hitting-set framework and AbHS explanation optimization directly overlap with master/oracle architecture"
+    },
+    {
+      "title": "Propositional Abduction with Implicit Hitting Sets",
+      "authors": "Ignatiev, Morgado, Marques-Silva",
+      "year": 2016,
+      "url": "https://arxiv.org/pdf/1604.08229",
+      "reviewed_sections": [
+        "2.2",
+        "3.2",
+        "3.3"
+      ],
+      "retrieval": "Full PDF opened through web search tool",
+      "finding": "AbHS and Hyper already optimize paid explanations through counterexample-guided implicit hitting sets"
+    },
+    {
+      "title": "Optimizing Machine Learning Workloads in Collaborative Environments",
+      "year": 2020,
+      "url": "https://www.dfki.de/en/web/research/projects-and-publications/publication/11031",
+      "retrieval": "Institutional abstract reviewed; linked full PDF repeated timeout",
+      "reviewed_sections": [
+        "abstract"
+      ],
+      "finding": "Artifact Experiment Graph, budget-aware materialization and reuse predate RecoverML; full formulation audit remains pending"
+    },
+    {
+      "title": "Finding a Minimum Source Set in Directed Hypergraphs",
+      "authors": "Kim, Lee, Kim",
+      "year": 2017,
+      "url": "https://dblp.org/rec/journals/jise/KimLK17.html",
+      "retrieval": "Bibliography located; publisher full text unresolved; no full-text equivalence claim",
+      "reviewed_sections": []
+    }
+  ],
+  "our_derivation": "Cost-preserving weighted positive Horn abduction encoding for each explicitly listed failure scenario, shared paid retention hypotheses; possibly exponential scenario expansion when k varies",
+  "originality_verdict": "Three contribution categories are defensible; three confirmed independent new mathematical inventions are not established"
+}

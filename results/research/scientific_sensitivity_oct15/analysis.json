@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "rows": 5760,
+  "expected_rows": 5760,
+  "expected_hyppo_rows": 4320,
+  "expected_helix_rows": 1440,
+  "histories": 8,
+  "method_counts": {
+    "HELIX_rule": {
+      "rows": 1440,
+      "complete_conditions": 168
+    },
+    "HYPPO_frequency": {
+      "rows": 2160,
+      "complete_conditions": 355
+    },
+    "HYPPO_rank": {
+      "rows": 2160,
+      "complete_conditions": 396
+    }
+  },
+  "paired_annotation_changes": {
+    "cost_profile": {
+      "baseline": "nominal",
+      "comparisons": 4608,
+      "selected_set_changed": 298,
+      "exact_request_count_changed": 139,
+      "retained_byte_count_changed": 296
+    },
+    "frequency_profile": {
+      "baseline": "uniform",
+      "comparisons": 2880,
+      "selected_set_changed": 312,
+      "exact_request_count_changed": 232,
+      "retained_byte_count_changed": 290
+    },
+    "eligibility": {
+      "baseline": "all",
+      "comparisons": 2880,
+      "selected_set_changed": 2190,
+      "exact_request_count_changed": 1727,
+      "retained_byte_count_changed": 2190
+    },
+    "read_MiB_s": {
+      "baseline": 200,
+      "comparisons": 960,
+      "selected_set_changed": 140,
+      "exact_request_count_changed": 32,
+      "retained_byte_count_changed": 140
+    },
+    "tie_order": {
+      "baseline": "capture",
+      "comparisons": 720,
+      "selected_set_changed": 180,
+      "exact_request_count_changed": 60,
+      "retained_byte_count_changed": 180
+    }
+  },
+  "errors": [],
+  "summary_sha256": "9bb6f77b4f0144b5362ab73691675131be432592830914e1c5ace92ece8348eb",
+  "analysis_source_sha256": "ba4627928221abba5d23810ae519ffd1a4e08c9da615bcafee8a31f382c43652",
+  "interpretation": "Structural decision sensitivity only. These are not new executions or independent experimental samples."
+}

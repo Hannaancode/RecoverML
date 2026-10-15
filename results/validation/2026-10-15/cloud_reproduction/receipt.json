@@ -1,0 +1,356 @@
+{
+  "run_id": 38773600816,
+  "job_id": 116555451820,
+  "commit": "c6d26a014133fc1cf52951af81c2bafec9a5ee6b",
+  "url": "https://github.com/Hannaancode/RecoverML/actions/runs/38773600816",
+  "artifact_id": 11991539609,
+  "artifact_sha256": "ce0706de66fa3811c6f1cc59b6b1d35d8ee296113c5a428985d023be082329be",
+  "artifact_bytes": 1281146,
+  "analysis": {
+    "status": "PASS",
+    "rows": 192,
+    "expected_rows": 192,
+    "requests": 624,
+    "histories": 2,
+    "workflow_families": 2,
+    "errors": [],
+    "independent_formulation_cases": 8,
+    "optimum_disagreements": [],
+    "solver_unknown_cases": [],
+    "unexpected_requests": 0,
+    "capture_or_planning_failures": [],
+    "history_metrics": [
+      {
+        "history": "digits_forest-487",
+        "policy": "RecoverML_exact",
+        "mean_condition_coverage": 0.798611111111111,
+        "complete_conditions": 9,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "scenario_exact",
+        "mean_condition_coverage": 0.798611111111111,
+        "complete_conditions": 9,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "robust_greedy",
+        "mean_condition_coverage": 0.8402777777777778,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "robust_local",
+        "mean_condition_coverage": 0.8541666666666666,
+        "complete_conditions": 9,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "HYPPO_rank",
+        "mean_condition_coverage": 0.8402777777777778,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "HYPPO_frequency",
+        "mean_condition_coverage": 0.8402777777777778,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "HELIX_rule",
+        "mean_condition_coverage": 0.8402777777777778,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "digits_forest-487",
+        "policy": "target_snapshots",
+        "mean_condition_coverage": 0.7361111111111112,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "RecoverML_exact",
+        "mean_condition_coverage": 0.7238095238095239,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "scenario_exact",
+        "mean_condition_coverage": 0.7238095238095239,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "robust_greedy",
+        "mean_condition_coverage": 0.780952380952381,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "robust_local",
+        "mean_condition_coverage": 0.780952380952381,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "HYPPO_rank",
+        "mean_condition_coverage": 0.6666666666666666,
+        "complete_conditions": 6,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "HYPPO_frequency",
+        "mean_condition_coverage": 0.6666666666666666,
+        "complete_conditions": 6,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "HELIX_rule",
+        "mean_condition_coverage": 0.6380952380952382,
+        "complete_conditions": 6,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      },
+      {
+        "history": "iris_union-487",
+        "policy": "target_snapshots",
+        "mean_condition_coverage": 0.7238095238095239,
+        "complete_conditions": 8,
+        "conditions": 12,
+        "note": "Descriptive mean over correlated fixed scopes and budgets and loss bounds"
+      }
+    ],
+    "heuristic_complete_gaps": [
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k1",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-preprocessing-k1",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k1",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "iris_union-487-broad-k1",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k1",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.5,
+        "excess_bytes": 9778
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k1",
+        "policy": "robust_local",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k1",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 9778
+      },
+      {
+        "case": "digits_forest-487-preprocessing-k1",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 0.5,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k0",
+        "policy": "robust_greedy",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      },
+      {
+        "case": "digits_forest-487-broad-k1",
+        "policy": "robust_local",
+        "budget_fraction": 1.0,
+        "excess_bytes": 0
+      }
+    ],
+    "statistical_qualification": "Descriptive constructed history-level summaries; no iid production sample or acceptance guarantee",
+    "raw_sha256": "4a57648759877663e22beb02984d905399a1bf6233c830cd9cecb18e668d50f9"
+  },
+  "scope": "Fresh clone on a distinct hosted Azure Ubuntu CPU using its own captures and exact recovery; not original captured bytes across environments and not the entire publication matrix"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "rows": 154,
+  "expected_rows": 154,
+  "same_contract_rows": 110,
+  "cases": 11,
+  "uncertified_rows": 0,
+  "certified_same_contract_objective_comparisons": 99,
+  "enumerated_fault_certificate_checks": 1452,
+  "indexed_reference_chain_comparisons": 6,
+  "errors": [],
+  "finished_utc": "2026-10-15T17:01:07.810335+00:00",
+  "summary_sha256": "cb03c9c093b2054c01688b33d1a754b46b51d48fdef170ed291b43c9a9158b09",
+  "limitations": [
+    "Captured public-recipe histories and constructed fixtures, not independent production traces",
+    "Metadata-only planner controls and structural certificates, no fresh historical disk recovery",
+    "Different-contract rows are not same-objective speedup evidence",
+    "Timing includes single-host order effects and two repetitions provide descriptive checks only",
+    "Time limit applies to individual solver calls rather than a strict process deadline"
+  ]
+}

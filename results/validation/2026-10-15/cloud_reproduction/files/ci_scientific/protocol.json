@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "purpose": "Fresh-clone cloud CPU reproduction of a compact declared subset; not the complete paper matrix",
+  "workflows": [
+    "iris_union",
+    "digits_forest"
+  ],
+  "seeds": [
+    487
+  ],
+  "versions": 1,
+  "loss_bounds": [
+    0,
+    1
+  ],
+  "capability_scopes": [
+    "preprocessing",
+    "broad"
+  ],
+  "optional_snapshot_budget_fractions": [
+    0,
+    0.5,
+    1
+  ],
+  "methods": [
+    "RecoverML_exact",
+    "scenario_exact",
+    "robust_greedy",
+    "robust_local",
+    "HYPPO_rank",
+    "HYPPO_frequency",
+    "HELIX_rule",
+    "target_snapshots"
+  ],
+  "helix_read_MiB_s": 200,
+  "sensitivity": {
+    "capture_cost_multipliers": [
+      1
+    ],
+    "tie_orders": [
+      "capture"
+    ],
+    "HELIX_read_MiB_s": [
+      200
+    ]
+  },
+  "solver_time_limit_s": 30.0,
+  "recovery_repetitions": 1,
+  "analysis": "Descriptive paired history-level summaries only; no population-level significance claim from eight constructed captures",
+  "qualification": "New constructed public-recipe histories and seeds not used in prior planner calibration; not independently collected production workflow histories",
+  "exclusions": "None based on performance; all capture errors, solver unknowns and byte mismatches remain recorded"
+}

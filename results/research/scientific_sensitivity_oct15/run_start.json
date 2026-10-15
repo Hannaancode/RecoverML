@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-15T17:01:01.449803+00:00",
+  "protocol_commit": "68db4f5fb6c20373625743c9252742fd6c18fd71",
+  "protocol_sha256": "21b34133885c68576922643069acaeff8379de66b6dbdc1374854d9ca21e55c1",
+  "captures_sha256": "d92250487f48b9446adf1ebe4ec6e5c004359b03e4b92144addf1bd0497d9e4b",
+  "source_sha256": {
+    "audit_baseline_sensitivity.py": "7d8adb107ad8b4f34889fe402c6aa0d223a87451a2060451b0e146f33ccfdabc",
+    "published_materializers.py": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0",
+    "helix_materializer.py": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557",
+    "witness.py": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1",
+    "core.py": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f",
+    "capability_retention.py": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35",
+    "robust_heuristics.py": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  "hyppo_revision": "405e42de863272fcb71a625cf6b2ae0696c7a8c5",
+  "hyppo_source_sha256": "b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a",
+  "histories": [
+    "diabetes_poly-101",
+    "diabetes_poly-211",
+    "digits_forest-101",
+    "digits_forest-211",
+    "digits_pca-101",
+    "digits_pca-211",
+    "iris_union-101",
+    "iris_union-211"
+  ],
+  "metadata_only": true
+}
