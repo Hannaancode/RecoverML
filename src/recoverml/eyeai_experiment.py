@@ -203,6 +203,8 @@ def run(output, dataset, config, preflight=False):
     pool = output / 'payload_blobs'
     pool.mkdir()
     raw = (output / 'raw.jsonl').open('w', buffering=1)
+    plan_stream = (output / 'planner_records.jsonl').open('w', buffering=1)
+    store_stream = (output / 'store_records.jsonl').open('w', buffering=1)
     writer = None
     summary = (output / 'summary.csv').open('w', newline='', buffering=1)
     with tempfile.TemporaryDirectory(prefix='recoverml-retina-') as temporary:
@@ -315,8 +317,9 @@ def run(output, dataset, config, preflight=False):
                                 planning_s=planning_s, planning_cpu_s=planning_cpu_s, diagnostics=diagnostic))
                             stores.append(dict(condition_id=key, manifest=view.manifest(),
                                 capabilities=caps, k=k, selected=sorted(selected)))
-                            atomic_json(output / 'planner_records.json', plans)
-                            atomic_json(output / 'store_index.json', stores)
+                            # Append complete rows rather than repeatedly rewriting large ledgers.
+                            plan_stream.write(json.dumps(plans[-1]) + '\n')
+                            store_stream.write(json.dumps(stores[-1]) + '\n')
                             atomic_json(output / 'progress.json', dict(completed_rows=len(rows),
                                 expected_rows=protocol['expected_summary_rows'], last_condition=key,
                                 raw_requests=sum(row['requests'] for row in rows)))
@@ -327,6 +330,10 @@ def run(output, dataset, config, preflight=False):
                         shutil.rmtree(scratch / (capture_id + '_' + target_mode + '_' + mode))
     summary.close()
     raw.close()
+    plan_stream.close()
+    store_stream.close()
+    atomic_json(output / 'planner_records.json', plans)
+    atomic_json(output / 'store_index.json', stores)
     # Rewrite the entire final CSV from the complete in-memory ledger before packaging.
     with (output / 'summary.csv').open('w', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))

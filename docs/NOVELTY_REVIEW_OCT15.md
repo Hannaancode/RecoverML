@@ -158,3 +158,47 @@ A cautious claim is that RecoverML implements a byte-accounted historical ML ret
 Three useful contribution categories are the precise application contract and its relationship to prior optimization problems and the verified specialization of exact optimization and physical graph reductions and the reproducible measurements of when resilience costs extra storage and when sharing helps. These are contribution categories and not three confirmed independent theoretical inventions.
 
 The next evidence with the highest value is a same-contract robustness-aware heuristic comparison and an unseen-workflow study with natural alternatives and measured recovery costs. The current literature review supports further research and a narrower claim but does not support a final strong-publication-readiness verdict. Actual external human review and broader originality checking remain pending.
+
+## Follow-up review after reconstruction on 15 October
+
+This section extends the earlier review rather than treating its unresolved searches as completed. The fresh sources were checked during the reconstruction session and the restored auxiliary experiments are new executions with new receipts. Earlier claims about lost results are not evidence for this follow-up.
+
+### Closer prior work on abduction
+
+[Saikko and Wallner and Jarvisalo, KR 2016](https://www.dbai.tuwien.ac.at/user/wallner/files/SaikkoWJ2016.pdf) was read in full-text form at Sections 3 and 4 and Algorithms 1 and 2. Section 3 gives a generic minimum-cost hitting-set framework with predicate checks and core extraction. Section 4 instantiates it for minimum-cost propositional explanations using SAT reasoning and integer programming. The formal role of our retained artifacts is close to the role of paid hypotheses. This source establishes the general architecture before RecoverML.
+
+[Ignatiev and Morgado and Marques-Silva, ECAI 2016](https://arxiv.org/pdf/1604.08229) was checked at Section 2.2 and Sections 3.2 to 3.3. It revisits AbHS and introduces Hyper through stronger integration of consistency checks and counterexamples. It explicitly treats an unsuccessful entailment check as a source of a set which the next paid explanation must hit. This is another direct reason not to claim that our weighted master and counterexample loop are new general methods.
+
+[Derakhshan et al., SIGMOD 2020](https://www.dfki.de/en/web/research/projects-and-publications/publication/11031) has an institutional abstract describing an Experiment Graph with raw data and intermediate data and models and operations. It reports storage-aware materialization and reuse planning for collaborative ML. The linked full PDF timed out in this session so this extension does not claim a complete theorem-level reconstruction of Collab. The source overlaps with the scientific application and artifact graph and materialization story.
+
+The publisher full text for Kim and Lee and Kim, *Finding a Minimum Source Set in Directed Hypergraphs*, JISE 33(2), 413 to 428 (2017), remains unresolved in this session. Its bibliographic entry and abstract are leads rather than a completed equivalence audit. This unresolved item is not evidence of originality.
+
+### Cost-preserving finite-scenario reduction to weighted Horn abduction
+
+The following is our derivation from the current RecoverML contract. It is not attributed as a theorem published by the sources above and it is not claimed as a new theorem.
+
+Let the allowed failure scenarios be explicitly listed as F and let B be the captured physical artifacts. Introduce one positive hypothesis p_b for each optional artifact b with its retained-byte cost. Zero-byte artifacts can be retained for free first because the recovery property is monotone. Mandatory roots and manifest bytes and contract bytes contribute an additive constant.
+
+For every scenario f and artifact b introduce an availability atom a_(f,b). Build one definite Horn theory with these rules:
+
+1. For every mandatory root r add the fact a_(f,r)
+2. For every optional artifact b add p_b implies a_(f,b)
+3. For each producer that survives f add the implication from all of its dependency availability atoms to its output availability atom
+
+The hypotheses p_b are shared across all scenario copies. Therefore retaining one physical artifact is charged once even when it supports many versions and many scenarios. The manifestations are all target-availability atoms a_(f,t) for every protected target t and allowed f.
+
+For a selected set S the least model of this positive Horn theory contains exactly the grounded recovery closure in each scenario. This follows by induction on forward-chaining steps: root and retention facts are precisely the initial available artifacts and each producer rule is precisely one legal replay step. Conversely every added availability atom comes from one of those initial facts or a legal replay step. Cycles without a grounded input derive nothing. A positive Horn theory entails a positive atom exactly when that atom belongs to its least model.
+
+Thus S meets RecoverML's complete recovery contract if and only if its selected hypotheses explain all manifestations. The Horn theory is consistent because assigning every atom true satisfies it. The objective is the same paid payload-byte sum plus the same fixed costs. This gives a cost-preserving reduction to weighted positive Horn abduction for an explicit finite scenario list.
+
+The construction has a copy of availability and producer rules for each scenario. It is polynomial in that explicit list and is polynomial in the number of groups for a fixed loss bound k. If k varies with the number of groups the list may be exponential. This derivation does not claim a polynomial compact reduction for arbitrary k or equivalent computational complexity in the compact representation. RecoverML's compact adversary is an implementation choice for avoiding this explicit expansion on suitable cases.
+
+The consequences are direct. AND dependencies and correlated group losses do not by themselves establish a new general explanation-optimization problem because every explicitly enumerated contract can be encoded this way. Any originality claim must identify a more precise application requirement or a validated specialization or a new empirical finding.
+
+### What the new controls establish
+
+The reconstructed [component audit](ABLATIONS_OCT15.md) contains 154 structural planner controls and 110 rows retain exactly the same contract. All tested exact variants agree on optimal bytes. On these four real public-recipe captures removing additional producers changes no optimal payload bytes. Physical deduplication saves only 431 bytes for the Iris capture and zero bytes for the other three. The constructed alternative-producer fixture shows the mechanism can matter but does not show that it is common in real scientific histories.
+
+The separate [annotation sensitivity study](../results/research/scientific_sensitivity_oct15/RESULTS.md) contains 5760 metadata-only controls. It shows that cost and access-weight and eligible-artifact choices can change baseline decisions. It is not a native execution benchmark or an independent sample of 5760 scientific workflows.
+
+The supported contribution categories are stated in [CONTRIBUTIONS_OCT15.md](CONTRIBUTIONS_OCT15.md). Three categories can be presented clearly but three confirmed new theoretical discoveries cannot be claimed from this evidence.

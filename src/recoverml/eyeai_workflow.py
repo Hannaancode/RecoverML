@@ -26,6 +26,9 @@ def execute(op, values, params):
             path = Path(__file__).with_name(module_name + '.py')
             if not path.is_file() or digest(path.read_bytes()) != params['entrypoint_sha256']:
                 raise RestoreError('Retired or changed retinal feature entry point: ' + module_name)
+            shared = Path(__file__).with_name('eyeai_current.py')
+            if digest(shared.read_bytes()) != params['shared_feature_sha256']:
+                raise RestoreError('Shared retinal feature implementation mismatch')
             return importlib.import_module('recoverml.' + module_name).features(values[0])
         if op == 'retina_train':
             features, labels, split = values
@@ -91,7 +94,8 @@ def capture(directory, estimator, seed, versions, image_size=64, training_pixels
     feature_nodes = {}
     for revision, module in [('legacy_shift3', 'eyeai_legacy'), ('aligned', 'eyeai_current')]:
         feature_nodes[revision] = add('retina_features', [x], dict(revision=revision,
-            entrypoint_sha256=digest(Path(__file__).with_name(module + '.py').read_bytes())), 'features')
+            entrypoint_sha256=digest(Path(__file__).with_name(module + '.py').read_bytes()),
+            shared_feature_sha256=digest(Path(__file__).with_name('eyeai_current.py').read_bytes())), 'features')
     if graph.nodes[feature_nodes['legacy_shift3']].blob == graph.nodes[feature_nodes['aligned']].blob:
         raise RestoreError('The injected processing revision did not change feature bytes')
     qualities = []

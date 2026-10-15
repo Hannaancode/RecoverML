@@ -1,0 +1,9 @@
+# Execution preflight for the larger storage study
+
+The passing preflight is results/validation/2026-10-15/gigabyte_preflight_v2 and it uses two real forests with 2 and 3 trees on all 20,000 UCI Letter rows. This only validates the execution paths and does not claim a gigabyte-scale saving.
+
+The independent analyzer passes after checking all actual raw payload hashes and compressed payload hashes and decompressed contents and native pickle controls. There are 10 method and scope cases and 100 allowed structural requests. The exact methods and the local improvement baseline satisfy the allowed contracts. One broad-scope greedy request is structurally blocked and is preserved as a partial baseline result. There are 8 actual disk recovery requests across 4 distinct stores and all 8 recover exactly under the stronger all-preprocessing-disabled stress. Identical stores share runtime evidence. Native DVC performs a real add and workspace deletion and checkout and all 4 unique target files match their original hashes. There are no unexpected failures and both exact formulations agree.
+
+The first preflight is preserved at results/validation/2026-10-15/gigabyte_preflight. Its initial analyzer status is FAIL because the analyzer mistakenly required 5 native DVC command receipts when the runner performs 4 commands. The actual execution was successful and the initial analysis_initial_command_count_check.json remains available. The second preflight was started fresh after correcting the command-count expectation and adding an explicit native pickle prediction roundtrip and the failure contract in the saved frontier archive.
+
+The full 16-model protocol was fixed before running the main experiment and the main run waits for the earlier scientific matrix and retinal study to finish and for the source and protocol checkpoint to be committed and published. No main-run result is claimed in this document.

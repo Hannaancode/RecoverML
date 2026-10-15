@@ -1,9 +1,9 @@
 """Reconcile the frozen metadata-only sensitivity grid and expose negative results."""
 import argparse
-from collections import Counter
 import csv
 import gzip
 import hashlib
+import itertools
 import json
 from pathlib import Path
 
@@ -26,6 +26,15 @@ def analyze(root):
         errors.append("Incomplete declared row count")
     if len(set(keys)) != len(keys):
         errors.append("Duplicate condition")
+    expected_keys = set()
+    axes = (expected_histories, protocol["capability_scopes"], protocol["optional_snapshot_budget_fractions"], protocol["cost_profiles"])
+    for history, scope, fraction, cost in itertools.product(*axes):
+        for frequency, eligibility, method in itertools.product(protocol["frequency_profiles"], protocol["eligibility_profiles"], protocol["hyppo_methods"]):
+            expected_keys.add((history, scope, fraction, cost, frequency, eligibility, method, None, "native_hash"))
+        for speed, tie in itertools.product(protocol["helix_read_MiB_s"], protocol["helix_tie_orders"]):
+            expected_keys.add((history, scope, fraction, cost, "not_used", "all", "HELIX_rule", speed, tie))
+    if set(keys) != expected_keys:
+        errors.append("Declared condition cross-product differs from recorded grid")
     if {r["history"] for r in rows} != expected_histories:
         errors.append("Missing declared histories")
     for index, (row, saved) in enumerate(zip(rows, summary)):
@@ -56,6 +65,7 @@ def analyze(root):
         expected_hyppo_rows=expected_hyppo, expected_helix_rows=expected_helix, histories=len(expected_histories),
         method_counts=by_method, paired_annotation_changes=changes, errors=errors,
         summary_sha256=hashlib.sha256((root / "summary.csv").read_bytes()).hexdigest(),
+        analysis_source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         interpretation="Structural decision sensitivity only. These are not new executions or independent experimental samples.")
     (root / "analysis.json").write_text(json.dumps(report, indent=2) + "\n")
     lines = ["# Baseline annotation sensitivity", "", f"Status: **{report['status']}** and {len(rows)} metadata-only conditions across {len(expected_histories)} frozen captures", "",

@@ -19,7 +19,8 @@ class EyeAIWorkflowTests(unittest.TestCase):
         values = []
         for revision, entrypoint in [('aligned', 'eyeai_current'), ('legacy_shift3', 'eyeai_legacy')]:
             params = dict(revision=revision, implementation_sha256=implementation_sha256(),
-                entrypoint_sha256=digest(Path(module.__file__).with_name(entrypoint + '.py').read_bytes()))
+                entrypoint_sha256=digest(Path(module.__file__).with_name(entrypoint + '.py').read_bytes()),
+                shared_feature_sha256=digest(Path(module.__file__).with_name('eyeai_current.py').read_bytes()))
             values.append(execute('retina_features', [images], params))
         self.assertFalse(np.array_equal(*values))
         with patch.object(Path, 'is_file', return_value=False):
