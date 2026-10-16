@@ -57,10 +57,13 @@ def source(directory, estimator):
     plans = [row for row in read_json(directory, 'planner_records') if row['condition_id'] in ids]
     stores = [row for row in read_json(directory, 'store_index' if (directory / 'store_index.json').exists() else 'store_records') if row['condition_id'] in ids]
     captures = {row['capture_id'] for row in rows}
-    commands = [row for row in read_json(directory, 'native_commands') if any(
+    all_commands = read_json(directory, 'native_commands')
+    commands = [row for row in all_commands if any(
         Path(row['cwd']).name.startswith(capture + '_') for capture in captures)]
     return dict(directory=directory, rows=rows, raw=raw, plans=plans, stores=stores,
-                commands=commands, captures=captures, original_rows=len(all_rows), original_raw=all_raw)
+                commands=commands, captures=captures, original_rows=len(all_rows), original_raw=all_raw,
+                original_native_commands=len(all_commands), original_native_checkouts=sum(
+                    row['command'][1:4] == ['-m', 'dvc', 'checkout'] for row in all_commands))
 
 
 def keyed(values):
@@ -99,6 +102,9 @@ def audit(data, protocol, estimator):
         selected = set(store['selected'])
         if sorted(selected) != plan['selected'] or len(selected) != len(store['selected']):
             raise RuntimeError('Planner/store memberships differ: ' + condition)
+        if any(not math.isclose(float(row[field]), float(plan[field]), rel_tol=1e-10, abs_tol=1e-12)
+               for field in ('planning_s', 'planning_cpu_s')):
+            raise RuntimeError('Planner/summary timing differs: ' + condition)
         if retained_bytes(graph, selected, caps, k) != int(row['retained_bytes']):
             raise RuntimeError('Store byte accounting differs: ' + condition)
         for blob in selected - blobs_verified:
@@ -126,8 +132,21 @@ def audit(data, protocol, estimator):
                     raise RuntimeError('Native checkout receipt points at another command')
                 if receipt != plan['diagnostics']['native_checkout_receipts'][record['version']]:
                     raise RuntimeError('Native raw and planner receipt differ')
-                if not set(expected_hashes) <= set(receipt['verified_blobs']):
-                    raise RuntimeError('Native checkout did not verify all targets')
+                nodes = set(graph.targets[record['version']])
+                if record['policy'] == 'DVC_all_stages':
+                    pending = list(nodes)
+                    while pending:
+                        for dependency in graph.nodes[pending.pop()].deps:
+                            if dependency not in nodes:
+                                nodes.add(dependency)
+                                pending.append(dependency)
+                verified = {graph.nodes[node].blob for node in nodes}
+                if sorted(verified) != receipt['verified_blobs']:
+                    raise RuntimeError('Native checkout verified set differs from declared policy')
+                if not math.isclose(receipt['native_checkout_s'], native['elapsed_s'], rel_tol=1e-10):
+                    raise RuntimeError('Native checkout timing differs from actual command receipt')
+                if native['command'][-1] != 'payload/' + record['version'] + '.dvc':
+                    raise RuntimeError('Native checkout receipt points at another version')
                 checkout_ids.add(native['id'])
         latencies = [record['elapsed_s'] for record in records]
         metrics = {'mean_restore_s': np.mean(latencies), 'p50_s': np.quantile(latencies, .5),
@@ -144,7 +163,9 @@ def audit(data, protocol, estimator):
     return dict(status='PASS', estimator=estimator, complete_captures=len(data['captures']),
                 summary_rows=len(rows), raw_requests=len(data['raw']), native_checkout_commands=len(native_ids),
                 unique_verified_payload_blobs=len(blobs_verified), source_rows_excluded=data['original_rows'] - len(rows),
-                source_raw_requests_excluded=data['original_raw'] - len(data['raw']))
+                source_raw_requests_excluded=data['original_raw'] - len(data['raw']),
+                source_native_commands_excluded=data['original_native_commands'] - len(data['commands']),
+                source_native_checkout_commands_excluded=data['original_native_checkouts'] - len(native_ids))
 
 
 def merge(original, rerun, output, protocol_file, audit_only=False):
