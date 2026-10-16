@@ -64,3 +64,15 @@ equal the paid payload bytes in both methods before each trial. This strengthens
 DVC without giving it hidden downstream outputs or additional retained payload
 bytes. Cases, repetitions and the primary latency metric are unchanged. Earlier
 baseline versions are retained separately and do not supply the final headline.
+
+Revision3 completed with18/18 RecoverML wins when recomputation was required,
+median2.3256 times, and18/18 DVC wins when all target files were already paid
+retained outputs. This complete mixed outcome is preserved. It motivated a
+general production file-export path, `python -m recoverml.file_export`, which
+verifies and copies already-retained target files without deserializing models
+or importing numerical libraries. Missing target files fall back to the existing
+replay path. The normal value-restoration environment checks remain unchanged.
+Both worker integrations may use this same fast export; DVC may still skip its
+worker through its paid native cache. Revision4 repeats the complete unchanged
+case grid and latency metric with this engineering improvement. File export
+does not assert that an exported model can be loaded in a different environment.

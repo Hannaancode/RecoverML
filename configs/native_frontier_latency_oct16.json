@@ -1,6 +1,7 @@
 {
   "schema": 1,
-  "baseline_revision": 3,
+  "baseline_revision": 4,
+  "file_export_path": "Both worker integrations can export fully retained target files through the same standard-library SHA256 path, without loading model objects. Missing targets use the unchanged numerical replay path. DVC retains paid cache objects as in revision3.",
   "retained_cache_policy": "DVC may keep native cache objects for retained payloads, hard-linked to the paid store. Delete all other cache and run-cache objects. Verify unique initial payload inode bytes equal paid payload bytes for both methods.",
   "purpose": "Exploratory paired native DVC batch versus RecoverML recovery after the storage tie was established",
   "datasets": ["wine", "breast_cancer"],

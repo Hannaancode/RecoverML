@@ -1,5 +1,5 @@
 name: Native frontier paired latency
-# Baseline v3 preserves hard-linked native cache objects for retained payloads.
+# Revision4 keeps the paid native cache and adds a shared exact-file export path.
 on:
   push:
     branches: ['research/scientific-validation-oct15']

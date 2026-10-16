@@ -10,11 +10,7 @@ from pathlib import Path, PurePosixPath
 import shutil
 import time
 
-from threadpoolctl import threadpool_limits
-from recoverml.capability_retention import restricted
-from recoverml.core import Graph, RestoreError, digest, environment, pack, unpack
-from recoverml.multiview_workflow import execute
-from recoverml.witness import WitnessRestorer
+from recoverml.core import RestoreError, digest
 
 
 def reset_selected_cache(cache, blobs, layout):
@@ -41,6 +37,18 @@ def reset_selected_cache(cache, blobs, layout):
 
 def recover(engine, workspace):
     workspace = Path(workspace)
+    # Both integrations may use the same exact-file fast path. DVC can also
+    # skip its worker entirely when its retained output cache is intact.
+    if engine != 'blocked':
+        from recoverml.file_export import export_retained_targets
+        exported = export_retained_targets(workspace, workspace / 'outputs')
+        if exported is not None:
+            return dict(exported, engine=engine, declared_lost_groups=['shared_standardization_entrypoint'])
+    from threadpoolctl import threadpool_limits
+    from recoverml.capability_retention import restricted
+    from recoverml.core import Graph, environment, pack, unpack
+    from recoverml.multiview_workflow import execute
+    from recoverml.witness import WitnessRestorer
     graph = Graph.read(workspace / 'manifest.json')
     caps = {n.id: 'shared_standardization_entrypoint' for n in graph.nodes.values()
             if n.op == 'view_standardize'}
