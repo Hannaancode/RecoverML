@@ -682,3 +682,36 @@ A separately named recovered_frontier_payloads.tar.gz contains all four original
 Its frontier_recovery_receipt.json explicitly identifies it as a payload equivalent reconstruction and not an original container
 The strict original completeness check therefore still flags that one original archive
 See docs/RELEASE_STATUS_OCT16.md and docs/ORIGINAL_EVIDENCE_PARTS_OCT16.json for commands and precise file identities
+
+STRONGEST BASELINE FOLLOW UP
+
+The complete first grid is results/research/multiview_followup_oct16
+Its published captured payloads and raw logs can be checked without training
+
+    PYTHONPATH=src python scripts/analyze_multiview_followup.py results/research/multiview_followup_oct16
+
+The analyzer reads captures.tar.gz directly when expanded captures are absent
+It checks all physical payload hashes and recorded integer flow proofs and the full request identity grid
+All models and probabilities are protected and no favourable history is selected after running
+The manual frontier and the shared combined table controls remain in the grid
+
+The durable fresh rerun is .github/workflows/strong-baseline-followup.yml
+Its first run is https://github.com/Hannaancode/RecoverML/actions/runs/38945172079
+It uses three Ubuntu CPU runners and Python 3.12 and the pinned dependencies
+Each job uses exactly one of the three declared split seeds and all datasets and version sizes and captured stage controls
+Each job trains fresh separate entrypoint histories and then reuses those captured bytes for the shared entrypoint comparison
+The strict recorded environment contract stays enabled during recovery
+The three artifacts contain both frozen per job protocols and source receipts and captures and raw logs and independent audits
+The seed 20261016 artifact also contains the complete test output and fresh paired planner timing on all 48 older scientific conditions
+
+Download all three completed artifacts from the run page
+Check each audit and run_end.json before accepting a result
+If a job fails keep its artifact and failure log and correct the cause before a distinctly identified rerun
+Do not substitute earlier chat counts for lost raw execution evidence
+Artifacts are retained for 90 days so the final checked logs and reports must also be copied into the repository
+The workflow can be rerun through the existing GitHub run controls
+No GPU or new private dataset is required
+
+The first shared local run and a later local replay lost their unpublished files
+Their quoted storage gains and timings are provisional until a complete durable run is checked
+The earlier scientific and retinal and Letter measurements remain unchanged
