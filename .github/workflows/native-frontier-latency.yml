@@ -1,0 +1,48 @@
+name: Native frontier paired latency
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/native-frontier-latency.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  paired:
+    name: Native paired seed ${{ matrix.seed }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [20261016, 20261017, 20261018]
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e '.[paper]'
+          python -m pip check
+      - name: Record environment
+        run: |
+          mkdir -p work/native_metadata
+          git rev-parse HEAD > work/native_metadata/commit.txt
+          python -m pip freeze > work/native_metadata/packages.txt
+          lscpu > work/native_metadata/lscpu.txt
+      - name: Native paired recovery
+        run: python scripts/benchmark_native_frontier.py --output work/native_paired --seed ${{ matrix.seed }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-paired-seed-${{ matrix.seed }}
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            work/native_paired
+            work/native_metadata

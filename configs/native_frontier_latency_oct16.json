@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "purpose": "Exploratory paired native DVC batch versus RecoverML recovery after the storage tie was established",
+  "datasets": ["wine", "breast_cancer"],
+  "seeds": [20261016, 20261017, 20261018],
+  "versions": [4, 16, 64],
+  "concat_materialized": [false, true],
+  "repetitions": 3,
+  "methods": ["RecoverML_native", "DVC_native_batch"],
+  "primary_outcome": "Median whole-history subprocess wall time including CLI bootstrap and common parent SHA256 verification, among methods producing every exact target file from identical retained payloads",
+  "secondary_outcomes": ["worker core time", "common retained bytes", "child CPU time"],
+  "acceptance": "Report all 36 histories and paired repetitions, including losses and ties. No universal or significance claim from descriptive timings. Do not infer algorithmic superiority from CLI overhead.",
+  "failure_contract": "Both preprocessing views are declared unavailable. Frozen retained DVC frontiers remain usable. A dispatched lost producer raises. This does not physically delete an implementation module.",
+  "fairness": "Same mandatory roots and selected payloads; DVC uses one batched downstream replay stage, copy cache, no run-cache and no cached downstream objects. Both must materialize and SHA256-check the same target files. Setup is excluded and reported separately. OS file cache is not flushed.",
+  "limitations": ["Chosen after existing local-search storage findings", "Constructed histories", "DVC batch is an authored native pipeline control, not all possible DVC integrations", "One runner per seed and three paired repetitions are descriptive", "Storage equality is preserved", "Latency combines orchestration and replay; core times are separate"]
+}
