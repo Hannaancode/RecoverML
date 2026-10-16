@@ -6,8 +6,8 @@ work/
 results/**/capture_archives/
 results/**/policy_stores/
 results/**/repair_stores/
-results/research/multiview*_oct16/captures/
-results/research/multiview*_oct16/cases/
+results/research/multiview*_oct16*/captures/
+results/research/multiview*_oct16*/cases/
 results/smoke*/
 results/development_run/
 results/final/

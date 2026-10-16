@@ -77,3 +77,14 @@ Minimum storage and minimum restoration time are different goals and full snapsh
 No old result will be removed to create an appearance of universal superiority
 
 The paper and PDF remain unchanged while validation continues
+
+## Durable replay after a session reset
+
+The source and complete separate entrypoint grid were published before the session reset
+The first shared entrypoint run completed locally but its closed raw logs were not uploaded before that reset
+Its earlier chat counts and timings are therefore not admitted as published execution evidence
+The complete shared grid is being replayed as multiview_shared_followup_oct16_rerun1 from the unchanged published captures
+The runner now closes one complete gzip member per history and records a checked progress receipt
+Compressed prefix checkpoints are published under results/validation/2026-10-16/shared_loss_replay_checkpoints
+They are partial execution evidence and do not claim that the full grid has finished
+Only the final closed and independently audited replay will supply the completed shared study claims

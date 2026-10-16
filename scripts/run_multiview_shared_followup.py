@@ -32,6 +32,29 @@ def dump(path, value):
     path.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
 
 
+class CheckpointTrace:
+    """Close a complete gzip member per history so progress survives a reset."""
+    def __init__(self, path):
+        self.path = path
+        self.stream = None
+
+    def __enter__(self):
+        return self
+
+    def write(self, value):
+        if self.stream is None:
+            self.stream = gzip.open(self.path, 'at')
+        return self.stream.write(value)
+
+    def checkpoint(self):
+        if self.stream is not None:
+            self.stream.close()
+            self.stream = None
+
+    def __exit__(self, *exception):
+        self.checkpoint()
+
+
 def io_counters():
     try:
         return {k: int(v) for k, v in (line.split(':') for line in Path('/proc/self/io').read_text().splitlines())}
@@ -121,7 +144,8 @@ def run(output, protocol, hyppo_cache):
         runtime_accounting='Identical selected stores share one explicit measured request ledger and are not counted as independent executions'))
     module = load_source(hyppo_cache); rows = []; records = []; captures = []; errors = []
     k = config['maximum_lost_groups']
-    with gzip.open(output / 'execution_traces.jsonl.gz', 'wt') as trace, threadpool_limits(limits=1):
+    checkpoint_counts = Counter()
+    with CheckpointTrace(output / 'execution_traces.jsonl.gz') as trace, threadpool_limits(limits=1):
         for dataset in config['datasets']:
             for seed in config['seeds']:
                 for versions in config['versions']:
@@ -183,6 +207,10 @@ def run(output, protocol, hyppo_cache):
                                 if method in ('RecoverML_exact', 'scenario_exact') and (status != 'ok' or retained_bytes(g, selected, caps, k) != optimum):
                                     raise RuntimeError('Independent exact formulations disagree')
                         receipts = execute_stores(g, caps, k, selections, case, trace)
+                        trace.checkpoint()
+                        for receipt in receipts.values():
+                            for name in ('requests', 'exact', 'expected_blocked', 'unexpected'):
+                                checkpoint_counts[name] += receipt[name]
                         for method, selected in selections.items():
                             key = digest('\n'.join(sorted(selected)).encode()); receipt = receipts[key]
                             robust = all(certificate(restricted(g, caps, fault), selected)['complete'] for fault in fault_sets(caps, k))
@@ -197,6 +225,14 @@ def run(output, protocol, hyppo_cache):
                             writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
                         with gzip.open(output / 'planner_records.json.gz', 'wt') as handle: json.dump(records, handle)
                         dump(output / 'errors.json', errors)
+                        dump(output / 'checkpoint.json', dict(status='RUNNING_NOT_FINAL',
+                            timestamp_ns=time.time_ns(), completed_histories=len(captures),
+                            planned_histories=len(config['datasets'])*len(config['seeds'])*len(config['versions'])*len(config['concat_materialized']),
+                            conditions=len(rows), planning_calls=len(records), actual_runtime=dict(checkpoint_counts),
+                            closed_trace_sha256=digest((output/'execution_traces.jsonl.gz').read_bytes()),
+                            planner_sha256=digest((output/'planner_records.json.gz').read_bytes()),
+                            source_changed=[str(p) for p in source_paths if digest(p.read_bytes()) != hashes[str(p)]],
+                            errors=errors))
                         print(json.dumps(dict(history=history, conditions=len(rows), exact_bytes=optimum,
                             local_bytes=retained_bytes(g, selections['robust_local'], caps, k),
                             local_planning_s=statistics.median(timing['robust_local']), errors=len(errors))), flush=True)
