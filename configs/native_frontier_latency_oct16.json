@@ -1,5 +1,7 @@
 {
   "schema": 1,
+  "baseline_revision": 3,
+  "retained_cache_policy": "DVC may keep native cache objects for retained payloads, hard-linked to the paid store. Delete all other cache and run-cache objects. Verify unique initial payload inode bytes equal paid payload bytes for both methods.",
   "purpose": "Exploratory paired native DVC batch versus RecoverML recovery after the storage tie was established",
   "datasets": ["wine", "breast_cancer"],
   "seeds": [20261016, 20261017, 20261018],

@@ -22,6 +22,7 @@ from recoverml.capability_retention import contract, retained_bytes
 from recoverml.core import canonical, digest, write_store
 from recoverml.dag_retention import optimize
 from recoverml.multiview_workflow import capture
+from native_frontier_worker import reset_selected_cache
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -107,6 +108,9 @@ def run(output, protocol, seed):
                 invoke([sys.executable, '-m', 'dvc', 'init', '--no-scm', '-q'], native, history + ':init')
                 invoke([sys.executable, '-m', 'dvc', 'config', 'cache.type', 'copy'], native, history + ':cache-type')
                 invoke([sys.executable, '-m', 'dvc', 'commit', '-f'], native, history + ':commit')
+                retained_cache = {p.relative_to(native / '.dvc/cache').as_posix(): digest(p.read_bytes())
+                    for p in (native / '.dvc/cache').rglob('*')
+                    if p.is_file() and digest(p.read_bytes()) in selected}
                 for filename in ('dvc.yaml', 'dvc.lock'):
                     shutil.copy2(native / filename, case / filename)
                 for repetition in range(config['repetitions']):
@@ -120,13 +124,19 @@ def run(output, protocol, seed):
                         for blob in targets & selected:
                             os.link(workspace / 'blobs' / (blob + '.pkl'), outputs / (blob + '.pkl'))
                         cache = workspace / '.dvc/cache'
-                        if cache.exists():
-                            shutil.rmtree(cache)
+                        cache_hashes = reset_selected_cache(cache, workspace / 'blobs',
+                            retained_cache if method == 'DVC_native_batch' else {})
                         # Each process can read only the selected physical blob files in its store.
                         present = {p.stem for p in (workspace / 'blobs').glob('*.pkl')}
                         if present != selected or any(digest((workspace / 'blobs' / (b + '.pkl')).read_bytes()) != b for b in present):
                             raise RuntimeError('Native initial retained bytes differ')
-                        require_no_cache = not cache.exists()
+                        require_no_cache = set(cache_hashes) <= selected
+                        payload_files = list((workspace / 'blobs').glob('*.pkl')) + list(outputs.glob('*.pkl'))
+                        payload_files += [p for p in cache.rglob('*') if p.is_file()]
+                        physical = {(p.stat().st_dev, p.stat().st_ino): p.stat().st_size for p in payload_files}
+                        unique_initial_bytes = sum(physical.values())
+                        if not require_no_cache or unique_initial_bytes != sum(graph.sizes()[b] for b in selected):
+                            raise RuntimeError('Hidden downstream cache or duplicate paid payload storage')
                         if method == 'DVC_native_batch':
                             command = [sys.executable, '-m', 'dvc', 'repro', '--no-run-cache', '-q']
                         else:
@@ -150,6 +160,7 @@ def run(output, protocol, seed):
                             child_cpu_s=receipt['cpu_s'], core_s=None if worker is None else worker['core_elapsed_s'],
                             exact_targets=len(measured), expected_targets=len(targets), common_bytes=retained_bytes(graph, selected, caps, 1),
                             no_downstream_cache_before=require_no_cache, initial_payloads=sorted(present), target_sha256=measured,
+                            native_cache_sha256=cache_hashes, unique_initial_payload_bytes=unique_initial_bytes,
                             downstream_targets=len(downstream), paired_order=methods.index(method))
                         rows.append(row)
                         with (output / 'raw_recovery.jsonl').open('a') as stream:

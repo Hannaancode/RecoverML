@@ -1,5 +1,5 @@
 name: Native frontier paired latency
-# Baseline v2 avoids an unnecessary deserialize of newly computed DVC values.
+# Baseline v3 preserves hard-linked native cache objects for retained payloads.
 on:
   push:
     branches: ['research/scientific-validation-oct15']

@@ -5,7 +5,9 @@ Both enforce the declared shared preprocessing loss and verify exact outputs.
 """
 import argparse
 import json
-from pathlib import Path
+import os
+from pathlib import Path, PurePosixPath
+import shutil
 import time
 
 from threadpoolctl import threadpool_limits
@@ -13,6 +15,28 @@ from recoverml.capability_retention import restricted
 from recoverml.core import Graph, RestoreError, digest, environment, pack, unpack
 from recoverml.multiview_workflow import execute
 from recoverml.witness import WitnessRestorer
+
+
+def reset_selected_cache(cache, blobs, layout):
+    """Keep native cache references to paid payloads without duplicate storage."""
+    cache, blobs = Path(cache), Path(blobs)
+    expected = blobs.parent.resolve() / '.dvc' / 'cache'
+    if cache.resolve() != expected:
+        raise ValueError('Cache must be inside this recovery workspace')
+    for relative, blob in layout.items():
+        path = PurePosixPath(relative)
+        if path.is_absolute() or '..' in path.parts or ':' in relative or '\\' in relative:
+            raise ValueError('Unsafe native cache object path')
+        source = blobs / (blob + '.pkl')
+        if digest(source.read_bytes()) != blob:
+            raise RestoreError('Retained native cache source hash mismatch')
+    if cache.exists():
+        shutil.rmtree(cache)
+    for relative, blob in layout.items():
+        destination = cache / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        os.link(blobs / (blob + '.pkl'), destination)
+    return sorted(digest(p.read_bytes()) for p in cache.rglob('*') if p.is_file())
 
 
 def recover(engine, workspace):

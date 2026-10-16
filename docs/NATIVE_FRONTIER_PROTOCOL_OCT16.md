@@ -54,3 +54,13 @@ deserializing them again. It still verifies the serialized output hash. This
 removes avoidable baseline overhead without changing any case or metric.
 Run38948170791 is retained as baseline v1; the strengthened baseline v2 must
 complete a fresh full grid. These two executions must not be pooled.
+
+Run38949922822 completed baseline v2. Inspection of its worker receipts showed
+that clearing the entire native cache made DVC rerun even already-retained
+targets. The final revision3 therefore permits native cache entries for paid
+retained payloads, hard-linked to the same physical files. Every other cache
+object and all run-cache entries are cleared. Distinct inode byte counts must
+equal the paid payload bytes in both methods before each trial. This strengthens
+DVC without giving it hidden downstream outputs or additional retained payload
+bytes. Cases, repetitions and the primary latency metric are unchanged. Earlier
+baseline versions are retained separately and do not supply the final headline.

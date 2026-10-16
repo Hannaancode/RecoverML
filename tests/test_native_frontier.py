@@ -13,6 +13,25 @@ SPEC.loader.exec_module(worker)
 
 
 class NativeFrontierTests(unittest.TestCase):
+    def test_retained_native_cache_is_a_hard_link_and_extra_objects_are_removed(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            store = Path(temporary) / 'store'
+            blobs = store / 'blobs'
+            blobs.mkdir(parents=True)
+            raw = b'paid retained bytes'
+            blob = digest(raw)
+            source = blobs / (blob + '.pkl')
+            source.write_bytes(raw)
+            cache = store / '.dvc/cache'
+            cache.mkdir(parents=True)
+            (cache / 'unpaid').write_bytes(b'hidden downstream output')
+            hashes = worker.reset_selected_cache(cache, blobs, {'files/md5/aa/object': blob})
+            self.assertEqual(hashes, [blob])
+            self.assertFalse((cache / 'unpaid').exists())
+            self.assertTrue(source.samefile(cache / 'files/md5/aa/object'))
+            with self.assertRaises(ValueError):
+                worker.reset_selected_cache(Path(temporary) / 'outside', blobs, {})
+
     def test_both_backends_restore_all_exact_target_files_from_features(self):
         with threadpool_limits(limits=1):
             graph, _, _ = capture('wine', 20261016, 4, False)
