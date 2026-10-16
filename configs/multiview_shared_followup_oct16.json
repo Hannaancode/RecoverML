@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "purpose": "Exploratory correlated-entrypoint follow-up after an explicitly labelled metadata pilot",
+  "datasets": ["wine", "breast_cancer"],
+  "seeds": [20261016, 20261017, 20261018],
+  "versions": [4, 16, 64],
+  "concat_materialized": [false, true],
+  "maximum_lost_groups": 1,
+  "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint",
+  "capture_input": "results/research/multiview_followup_oct16/captures",
+  "methods": ["RecoverML_exact", "scenario_exact", "robust_greedy", "robust_local", "manual_best_frontier", "HYPPO_rank", "HYPPO_frequency", "HELIX_rule", "target_snapshots"],
+  "timing_repetitions": 3,
+  "solver_time_limit_s": 30,
+  "helix_read_MiB_s": 200,
+  "hypothesis": "A correlated shared-entrypoint loss exposes complementarity between view retention choices while an explicitly stored concat can eliminate the local-search gap",
+  "pilot_disclosure": "After the separate-group grid began, one wine seed 20261016 v64 manifest was tested with shared grouping. Fused exact retained 138676 bytes and local 270469 bytes; concat both retained 130480 bytes. Pilot wall timings were concurrent and are not final benchmark timings. This motivated the full fixed grid and all 36 configurations are retained",
+  "accounting": "Same captured bytes and metadata and new shared fault contract for all methods; robust heuristics compared at full candidate budget and published materializers at exact minimum budget",
+  "manual_control": "Choose smallest feasible of roots plus both view outputs or roots plus all model and probability targets or roots plus shared concat when present",
+  "limitations": ["Exploratory diagnostic after a favourable disclosed pilot rather than independent confirmation", "Adapted two-view histories and declared entrypoint restrictions rather than observed production outages", "Original separate-group grid preserved in full", "All fused and concat controls and small and large histories retained", "No claim of universal dominance or new min-cut theory", "Manual frontier is a retention-set control rather than a new native DVC execution"]
+}

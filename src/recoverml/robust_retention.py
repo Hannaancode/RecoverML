@@ -13,6 +13,10 @@ DIRECT_SCENARIO_CUTOFF=64
 
 def optimize(graph,capabilities,k,time_limit_s=30.):
     validate(graph,capabilities,k)
+    from .dag_retention import optimize as dag_exact
+    retained,status,diagnostic=dag_exact(graph,capabilities,k,time_limit_s=time_limit_s)
+    if status=='ok':
+        return retained,status,diagnostic
     groups=len(set(capabilities.values()))
     scenarios=sum(math.comb(groups,i) for i in range(min(k,groups)+1))
     method='expanded_exact' if scenarios<=DIRECT_SCENARIO_CUTOFF else 'counterexample'

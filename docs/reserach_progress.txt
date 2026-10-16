@@ -806,3 +806,15 @@ The strict original completeness check must still flag the one missing original 
 Reviewed the unchanged historical manuscript, current contract/optimizer and final evidence at85a086b against selected primary papers and official documentation. The internal decision is auditable retention planning and measured preservation tradeoffs. General implicit hitting-set and Horn-abduction machinery and standard cut/index techniques are attributed. The later2025 Hyppo system/demo is included; MinSS full text and external expert originality review remain unresolved.
 A new reproducible ledger/manifest audit classifies all27 final captures:6/8 scientific and18/18 retinal and1/1 Letter meet the sufficient single-producer physical-DAG condition. Strong local search ties all48 scientific and108 retinal and2 Letter full-contract byte optima; simple retinal greedy loses in12 cases. These are correlated conditions rather than independent production samples. Five structural/duplicate-condition tests pass. No models were executed and no measurements were changed.
 The author explicitly reported no assigned reviewers or comments. The neutral course packet and separate outgoing-review/incoming-feedback tracker are prepared, with zero genuine human course reviews completed. No review requests were sent and no reviewer identities or approvals were invented. Existing manuscript and PDF remain unchanged.
+
+16 October strongest baseline follow-up
+
+Added a guarded exact minimum cut engine for the already documented single producer DAG class and kept the general exact fallback
+Added integer flow and retained cut proof checking without running an optimizer in the proof checker
+The generated production tests check 64 DAGs at three loss bounds against brute force and include zero and large integer byte costs
+The initial full suite passes 124 tests with six optional Torch tests skipped in the minimal environment
+The new fixed two view classification grid completed 36 histories and 324 method conditions and 12948 actual requests with zero unexpected outcomes
+Its separate entrypoint failure results mostly tie strong local search and a manual frontier matches every exact minimum
+The correlated shared entrypoint follow-up keeps all original captured bytes and tests the same complete grid and a combined feature table control
+The favourable pilot and its role in motivating that follow-up are disclosed in configs/multiview_shared_followup_oct16.json
+Read docs/STRONG_BASELINE_FOLLOWUP_OCT16.md for the protocol and scope and current evidence
