@@ -66,8 +66,8 @@ are different from unexpected execution errors.
 
 | Study / subset | Cases | Faster than local | Slower than local | Median paired planning ratio vs local | Vs scenario exact |
 |---|---:|---:|---:|---:|---:|
-| New cloud / separate | 36 | See all case rows | See all case rows | 11.92x | 2.28x |
-| New cloud / shared | 36 | See all case rows | See all case rows | 16.88x | 1.73x |
+| New cloud / separate | 36 | 36 | 0 | 11.92x | 2.28x |
+| New cloud / shared | 36 | 36 | 0 | 16.88x | 1.73x |
 | Earlier scientific cases / all | 48 | 44 | 4 | 4.20x | 2.18x |
 | Earlier cases / DAG eligible | 36 | 36 | 0 | 6.27x | 2.85x |
 | Earlier cases / general fallback | 12 | 8 | 4 | 1.64x | 0.93x |
