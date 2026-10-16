@@ -40,3 +40,10 @@ benefit matters more than another system's features.
 Status at specification: implementation worker checks pass for exact recovery
 and rejection of a missing retired view. Native DVC measurements are pending.
 Raw commands and failures will be retained by GitHub Actions even on failure.
+
+The first launch at source `b8ae201` failed before any timing trial because the
+runner unpacked three capture return values into two variables. Run
+38947760758 preserves the failed artifacts. This is a setup failure, not a
+measured DVC loss. The fix changes no protocol condition or comparison metric.
+A separately labelled Wine/16 smoke run precedes the complete grid and is
+excluded from the full study's statistics.

@@ -36,6 +36,17 @@ jobs:
           python -m pip freeze > work/native_metadata/packages.txt
           lscpu > work/native_metadata/lscpu.txt
       - name: Native paired recovery
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          config = json.loads(Path('configs/native_frontier_latency_oct16.json').read_text())
+          config.update(datasets=['wine'], versions=[16], concat_materialized=[False], repetitions=1,
+                        purpose='Untimed acceptance smoke; excluded from the fixed-grid results')
+          Path('work/native_smoke_protocol.json').write_text(json.dumps(config, indent=2)+'\n')
+          PY
+          python scripts/benchmark_native_frontier.py --protocol work/native_smoke_protocol.json --output work/native_smoke --seed ${{ matrix.seed }}
+      - name: Full fixed native recovery grid
         run: python scripts/benchmark_native_frontier.py --output work/native_paired --seed ${{ matrix.seed }}
       - uses: actions/upload-artifact@v4
         if: always()
@@ -46,3 +57,5 @@ jobs:
           path: |
             work/native_paired
             work/native_metadata
+            work/native_smoke
+            work/native_smoke_protocol.json

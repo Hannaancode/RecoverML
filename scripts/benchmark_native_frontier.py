@@ -68,7 +68,7 @@ def run(output, protocol, seed):
             history = f'{dataset}-s{seed}-v{versions}-concat{int(concat)}'
             case = output / 'cases' / history
             case.mkdir(parents=True)
-            graph, info = capture(dataset, seed, versions, concat)
+            graph, _, info = capture(dataset, seed, versions, concat)
             caps = {n.id: 'shared_standardization_entrypoint' for n in graph.nodes.values() if n.op == 'view_standardize'}
             selected, status, diagnostic = optimize(graph, caps, 1)
             if status != 'ok':
