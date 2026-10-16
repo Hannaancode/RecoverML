@@ -212,3 +212,10 @@ Primary records checked:
 - https://www.dfki.de/en/web/research/projects-and-publications/publication/11031
 - https://www.agora-ecosystem.com/publications/behrouz-collaborative-ml/
 - https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=155_2010
+
+
+## Fresh-clone follow-up on 16 October
+
+The [complete Collab paper](https://www.dfki.de/fileadmin/user_upload/import/11031_ml-paper.pdf) became accessible. Sections 4–6 were inspected, especially Section 5.1, Algorithm 1 and Section 6.1. Collab selects materializations under a storage budget using frequency, recomputation cost and estimated model quality; its storage-aware variant accounts for shared columns. Its reuse planner chooses loading versus recomputation for an incoming DAG. This establishes closer application and implementation overlap than the earlier abstract-only review. The inspected formulation does not state RecoverML's universal bounded capability-loss retention contract. That observation is a scoped comparison, not proof of global originality or an equivalence theorem. No native Collab experiment was run.
+
+The MinSS full publisher page remains inaccessible on this follow-up; its theorem-level comparison is still open. External human review and a systematic literature search are not completed by this access check. The completed heuristic ties strengthen the case for positioning the current work as checked retention automation and measured tradeoffs rather than a demonstrated need for a general optimizer.

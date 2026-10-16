@@ -1,5 +1,7 @@
 # RecoverML full project summary
 
+This is the historical October14 project summary. Later scientific, retinal and Letter experiments and their limitations are recorded in [release status](RELEASE_STATUS_OCT16.md), [final audit](FINAL_SCIENTIFIC_AUDIT.md) and [handover](WORK_HANDOVER.md). The existing manuscript remains unchanged pending the author's drafting instruction. Original evidence publication is incomplete even though the later raw ledgers are published.
+
 This summary describes the original course prototype and the later research work and the final saved paper experiments
 The project has working code and automated benchmarks and raw logs and plots and a complete current paper draft
 The latest full research artifact is on GitHub and all source and paper and plots and raw evidence files were verified

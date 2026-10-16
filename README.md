@@ -20,7 +20,7 @@ Strong simple retention methods match our minimum storage on these histories and
 
 Read the [larger storage results](results/research/gigabyte_letter_oct16/RESULTS.md) and [scientific comparison](results/research/scientific_complete_oct16/RESULTS.md) and [retinal study](results/research/eyeai_complete_oct15/RESULTS.md)
 Read the [remaining tasks and file map](docs/WORK_HANDOVER.md) before continuing in a new conversation
-The current branch is research/scientific-validation-oct15 and the handover records the upload status
+The current branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Full evidence publication remains incomplete.
 
 ## What we have achieved
 
@@ -131,8 +131,8 @@ The literature comparison defines the specific proposed novelty and the next pap
 | results/research | Separate new recovery experiments and their raw evidence |
 | results/runs | New local runs created by the runner and excluded from Git |
 
-CHECKSUMS.json records the SHA-256 values for submitted files
-CHECKSUMS_GITHUB.json checks the currently published files and the complete local package also keeps every saved evidence archive
+CHECKSUMS.json and CHECKSUMS_GITHUB.json cover every tracked regular file except the two checksum manifests themselves, using exact Git blob bytes. They identify the available release and do not certify that all referenced historical evidence has been published. Original October 14 manifests are preserved in docs/history.
+Run `python scripts/verify_release.py` for committed-byte checks and published raw-ledger reconciliation; add `--require-complete` to fail while any required original evidence is missing.
 The GitHub Actions workflow runs correctness checks and a smoke experiment on every push
 
 ## Run the project

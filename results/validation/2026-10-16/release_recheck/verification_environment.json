@@ -1,0 +1,15 @@
+{
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "system": "Windows",
+  "machine": "AMD64",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "networkx": "3.5",
+    "Pillow": "12.3.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "scope": "Fresh disposable-ledger analysis environment only; not the original benchmark runtime. DVC and PyTorch execution were not required or rerun."
+}

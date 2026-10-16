@@ -206,11 +206,27 @@ outcome-independent resumption rule and full raw identity reconciliation
 
 7 VERIFY THE SUPPLIED FILES BEFORE EDITING THEM
 
-For a GitHub clone use CHECKSUMS_GITHUB.json if that manifest is supplied
-For a complete local archive use CHECKSUMS.json
-A manifest covers its listed files rather than every later unlisted addition
-These manifests must be refreshed after final edits and publication
-A mismatch in an unfinished development checkout is not a passed file audit
+CHECKSUMS.json and CHECKSUMS_GITHUB.json now identify all tracked regular files
+except the two checksum manifests themselves. Original October14 manifests are
+preserved under docs/history. Neither refreshed manifest asserts that absent
+historical archives are available. Read docs/RELEASE_STATUS_OCT16.md first.
+
+Use exact committed Git bytes for portable verification, including on Windows
+where checkout newline conversion can change text-file working bytes:
+
+    python scripts/verify_release.py --output work/release_check.json
+
+Use a new output path. --require-complete intentionally fails until the
+missing historical artifacts are supplied and match their recorded hashes.
+To recheck available retinal and large ledgers and regenerate figures without
+changing original results, use the pinned plotting/numerical environment:
+
+    python scripts/recheck_published_ledgers.py --output work/new_ledger_recheck
+
+This performs metadata/structural analysis and six ledger corruption controls.
+It does not replay models, rerun DVC, or verify an absent frontier archive.
+The earlier direct-file check below additionally detects working-copy changes;
+Windows CRLF conversion can cause a mismatch even when Git bytes are correct.
 
     python - <<'PY'
 import hashlib
@@ -321,8 +337,10 @@ The interrupted historical attempt is results/research/scientific_audit_oct15
 It is not a complete dataset and should not be passed to the final analysis as if
 it were complete
 The recovery/resumption source and fixed retry selection are separate provenance
-The intended reconciled publication path is results/research/scientific_complete_oct16
-Read its actual report/analysis when published and do not infer missing rows
+The reconciled publication path is results/research/scientific_complete_oct16.
+Its raw request log and text analysis are published. Original capture/planner
+archives and summary.csv remain absent at the audited cutoff; the full original
+analyzer cannot run from this clone alone. Do not reconstruct historical timings.
 
 For the compact fresh-cloud protocol instead of the full grid
 
@@ -390,7 +408,9 @@ Do not treat them as literal nested prefixes or independent production histories
 The original interrupted folder is results/research/eyeai_rebuild_oct15
 Its complete logistic subset can be reused only through the declared resumption
 rule and all forest histories must be rerun without selecting favorable outcomes
-The intended final publication path is results/research/eyeai_complete_oct15
+The completed publication path is results/research/eyeai_complete_oct15.
+Raw requests, summaries and native-control receipts are published; the retained
+payload archive and compressed store/planner indexes are still missing.
 The intermediate summary prefix is not the final complete evidence
 
 After the full study passes run the native pipeline reproduction control
@@ -468,7 +488,11 @@ That does not imply the same saving for compressed or native-pickle representati
 A failed goal remains a valid measured outcome
 The canonical JSON/base64 codec may be larger than a native sklearn pickle
 A big file saving is not evidence that optimization is algorithmically necessary
-The intended publication path is results/research/gigabyte_letter_oct16
+The completed publication path is results/research/gigabyte_letter_oct16.
+The request log, ledgers and native file-hash receipts are published. The compact
+selected_frontier.tar.gz is missing, so original payload verification and the
+full archive-verifying audit_gigabyte_ledger.py command remain unavailable.
+Recomputable multi-gigabyte models were deliberately excluded from Git.
 The large temporary capture files need not be committed as multiple GB to Git
 Keep the complete raw receipts and inventories and source/data identities and
 small selected frontier and commands needed to regenerate them

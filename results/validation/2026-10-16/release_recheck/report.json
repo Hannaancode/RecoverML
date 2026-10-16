@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "original_inputs_unchanged": true,
+  "semantic_controls_passed": 6,
+  "large_payloads_replayed": false,
+  "missing_frontier_archive": true,
+  "source_host": "win32",
+  "python": "3.12.8",
+  "scope": "Ledger and structural reconciliation and six mutation controls on temporary copies. No new benchmark timings, DVC execution, or model payload verification.",
+  "figures": "New renders from existing measurements; not byte-identical recovery of missing historical figures."
+}

@@ -781,3 +781,10 @@ The engineering evidence is substantially stronger and the one GB uncompressed g
 Strong general novelty and production prevalence remain unresolved and the real course peer reviews have not been supplied
 The paper and PDF remain unchanged and drafting and formatting are still deferred
 The handover file records all needed paths and whether each item is on GitHub or still local
+
+
+16 OCTOBER FRESH-CLONE RELEASE RECONCILIATION
+The continuation started from the published research branch at cbd26d4 rather than the transient original workspace. All three published raw logs parse and their actual record counts reconcile. The new verification tool uses exact Git object bytes to avoid Windows newline conversion and checks declared scientific conditions and retinal request identities and all 56 frozen large-study source hashes.
+The existing retinal and large structural analyzers were executed on disposable copies with pinned plotting/numerical dependencies. Large numeric cross-links and six ledger corruption controls passed and original input files remained unchanged. No model recovery, training or DVC command was rerun. Regenerated plots are new derivatives under results/validation/2026-10-16/release_recheck.
+Top-level checksums now identify the available tracked release and the original manifests are preserved in docs/history. Full original publication is still incomplete: the scientific archives/summary/old plots and retinal retained-store/index archives and the large selected frontier remain missing. Exact filenames and expected recorded hashes are kept by scripts/verify_release.py and docs/RELEASE_STATUS_OCT16.md. Full-completeness verification must remain a failure until those originals are recovered.
+Outdated final-audit statements that the large experiment and native retinal control were pending are corrected. The final large canonical saving is 3664716552 bytes and gzip saving is 290607161 bytes, with zero broad-loss savings and heuristic ties. Collab Sections4–6 were accessible and reviewed; MinSS full text and external/course human reviews remain unresolved. Paper and PDF bytes are intentionally unchanged.

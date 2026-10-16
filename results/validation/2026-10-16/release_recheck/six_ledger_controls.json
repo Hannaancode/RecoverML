@@ -1,0 +1,54 @@
+[
+  {
+    "case": "unchanged",
+    "expected": "PASS",
+    "actual": "PASS",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "case": "structural_reordered",
+    "expected": "PASS",
+    "actual": "PASS",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "case": "structural_duplicate_identity",
+    "expected": "FAIL",
+    "actual": "FAIL",
+    "passed": true,
+    "errors": [
+      "Saved structural certificate ledger differs",
+      "Duplicate saved structural request identity"
+    ]
+  },
+  {
+    "case": "structural_flipped_recoverability",
+    "expected": "FAIL",
+    "actual": "FAIL",
+    "passed": true,
+    "errors": [
+      "Saved structural certificate ledger differs"
+    ]
+  },
+  {
+    "case": "structural_missing_record",
+    "expected": "FAIL",
+    "actual": "FAIL",
+    "passed": true,
+    "errors": [
+      "Saved structural certificate ledger differs"
+    ]
+  },
+  {
+    "case": "runtime_duplicate_identity",
+    "expected": "FAIL",
+    "actual": "FAIL",
+    "passed": true,
+    "errors": [
+      "Duplicate actual runtime request",
+      "Actual runtime request grid differs"
+    ]
+  }
+]
