@@ -1,0 +1,19 @@
+phase,method,conditions,fully_recoverable_conditions,method_attributed_requests,method_attributed_exact,method_attributed_expected_blocked,unexpected,budget,warning
+separate,HELIX_rule,36,15,3024,2109,915,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+separate,HYPPO_frequency,36,21,3024,2192,832,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+separate,HYPPO_rank,36,18,3024,1786,1238,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+separate,RecoverML_exact,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+separate,manual_best_frontier,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+separate,robust_greedy,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+separate,robust_local,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+separate,scenario_exact,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+separate,target_snapshots,36,36,3024,3024,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,HELIX_rule,36,15,2016,1374,642,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+shared,HYPPO_frequency,36,21,2016,1568,448,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+shared,HYPPO_rank,36,18,2016,1397,619,0,exact_minimum,Method outcomes share physical store executions; do not sum as unique requests
+shared,RecoverML_exact,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,manual_best_frontier,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,robust_greedy,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,robust_local,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,scenario_exact,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests
+shared,target_snapshots,36,36,2016,2016,0,0,full_candidate,Method outcomes share physical store executions; do not sum as unique requests

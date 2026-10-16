@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-16T18:54:36.224470+00:00",
+  "source_commit": "e0c745a754599e45562067197da76ea7de0dd0e5",
+  "command": "PYTHONPATH=src python scripts/audit_cloud_followup.py results/research/strong_baseline_cloud_oct16 --source-commit 00bd37a8addd6cea919edf2189c3246811bb669e --output work/drafting_cloud_recheck.json",
+  "published_audit_sha256": "3f5b6785128a26eb2ca5fc806aca76460e62362742338c31350f2e4fd1e37b3a",
+  "fresh_audit_sha256": "0eb3dd3ffec77485f7823bdb41c080de4712b83fcd127b6b22238adb63b7c35a",
+  "structured_reports_identical": true,
+  "scope": "Independent recorded-evidence recheck including archive hashes, proof and trace reconciliation; no fresh training or recovery timings"
+}

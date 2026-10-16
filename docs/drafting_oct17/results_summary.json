@@ -1,0 +1,124 @@
+{
+  "source_commit": "e0c745a754599e45562067197da76ea7de0dd0e5",
+  "experiment_source_commit": "00bd37a8addd6cea919edf2189c3246811bb669e",
+  "cloud": {
+    "captured_histories": 36,
+    "paired_contract_cases": 72,
+    "method_rows": 648,
+    "actual_unique_requests": {
+      "requests": 19652,
+      "exact": 16110,
+      "expected_blocked": 3542,
+      "unexpected": 0
+    },
+    "phases": {
+      "separate": {
+        "histories": 36,
+        "local_comparison": {
+          "tie": 30,
+          "win": 6
+        },
+        "maximum_percent_saved_vs_local": 0.1941601444912703,
+        "median_percent_saved_vs_local": 0.0,
+        "manual_frontier_ties": 36,
+        "manual_frontier_wins": 0,
+        "manual_frontier_losses": 0,
+        "median_planning_speedup_vs_local": 11.92072741448576,
+        "median_planning_speedup_vs_scenario": 2.283823883086156
+      },
+      "shared": {
+        "histories": 36,
+        "local_comparison": {
+          "tie": 27,
+          "win": 9
+        },
+        "maximum_percent_saved_vs_local": 48.73803210668205,
+        "median_percent_saved_vs_local": 0.0,
+        "manual_frontier_ties": 36,
+        "manual_frontier_wins": 0,
+        "manual_frontier_losses": 0,
+        "median_planning_speedup_vs_local": 16.88223481984605,
+        "median_planning_speedup_vs_scenario": 1.7326523494144928
+      }
+    }
+  },
+  "scientific": {
+    "histories": 8,
+    "requests": 36480,
+    "exact": 15420,
+    "expected_blocked": 21060,
+    "unexpected": 0,
+    "source_guard_scope": "Original six complete nonforest histories lack a closed end-of-run source guard because that process was interrupted; their source snapshot and strict per-request environment/operator guards and raw reconciliation remain available"
+  },
+  "retinal": {
+    "raw_requests": 10920,
+    "exact_requests": 10920,
+    "exact_comparison_conditions": 108,
+    "exact_beats_greedy": 12,
+    "exact_ties_greedy": 96,
+    "exact_beats_local": 0,
+    "exact_ties_local": 108,
+    "maximum_saved_bytes": 12316663
+  },
+  "letter": {
+    "models": 16,
+    "actual_runtime_requests": 48,
+    "actual_exact": 48,
+    "scopes": {
+      "preprocessing": {
+        "snapshot_bytes": 3669545821,
+        "exact_bytes": 4829269,
+        "saving_bytes": 3664716552,
+        "saving_percent": 99.86839600224194,
+        "gzip_snapshot_bytes": 291175536,
+        "gzip_exact_bytes": 568375,
+        "gzip_saving_bytes": 290607161,
+        "native_pickle_snapshot_bytes": 2751548681,
+        "native_pickle_snapshot_minus_canonical_frontier_bytes": 2746719412,
+        "native_gzip_snapshot_bytes": 224313265,
+        "native_gzip_snapshot_minus_gzip_frontier_bytes": 223744890,
+        "planning_s": 0.021091411000270455,
+        "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+      },
+      "broad": {
+        "snapshot_bytes": 3669548445,
+        "exact_bytes": 3669548445,
+        "saving_bytes": 0,
+        "saving_percent": 0.0,
+        "gzip_snapshot_bytes": 291178160,
+        "gzip_exact_bytes": 291178160,
+        "gzip_saving_bytes": 0,
+        "native_pickle_snapshot_bytes": 2751551305,
+        "native_pickle_snapshot_minus_canonical_frontier_bytes": -917997140,
+        "native_gzip_snapshot_bytes": 224315889,
+        "native_gzip_snapshot_minus_gzip_frontier_bytes": -66862271,
+        "planning_s": 0.010681430000204273,
+        "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+      }
+    },
+    "uncompressed_1GB_goal_met": true,
+    "gzip_1GB_goal_met": false
+  },
+  "old_condition_timing": {
+    "all": {
+      "conditions": 48,
+      "faster_than_local": 44,
+      "median_speedup_vs_local": 4.202924624101291,
+      "median_speedup_vs_scenario": 2.1838632924776444
+    },
+    "dag": {
+      "conditions": 36,
+      "faster_than_local": 36,
+      "median_speedup_vs_local": 6.272664623152096,
+      "median_speedup_vs_scenario": 2.854323466031661
+    },
+    "general_fallback": {
+      "conditions": 12,
+      "faster_than_local": 8,
+      "median_speedup_vs_local": 1.6356557029782732,
+      "median_speedup_vs_scenario": 0.9280733704953765
+    }
+  },
+  "native_dvc_batch_v2": "PENDING at frozen cutoff; do not infer a latency winner",
+  "scope": "Frozen report extraction and byte verification, not a fresh execution or external novelty review"
+}
