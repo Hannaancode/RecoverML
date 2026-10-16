@@ -1,0 +1,10 @@
+test_alternative_producers_fail_sufficient_uniqueness_condition (test_contribution_audit.ContributionAuditTests.test_alternative_producers_fail_sufficient_uniqueness_condition) ... ok
+test_and_dependency_is_eligible (test_contribution_audit.ContributionAuditTests.test_and_dependency_is_eligible) ... ok
+test_duplicate_policy_condition_is_not_silently_overwritten (test_contribution_audit.ContributionAuditTests.test_duplicate_policy_condition_is_not_silently_overwritten) ... ok
+test_mandatory_root_breaks_a_physical_cycle (test_contribution_audit.ContributionAuditTests.test_mandatory_root_breaks_a_physical_cycle) ... ok
+test_ungrounded_cycle_is_not_an_easy_dag (test_contribution_audit.ContributionAuditTests.test_ungrounded_cycle_is_not_an_easy_dag) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

@@ -1,6 +1,6 @@
 # RecoverML contributions in plain words
 
-This statement is based on the code and the saved evidence rather than a guarantee of publication. It describes three contribution categories and does not claim three separate new mathematical inventions.
+Updated 16 October 2026 after reviewing the final captured graphs, strong-baseline comparisons and selected primary sources. The decision is **auditable retention planning and measured preservation tradeoffs**. See the [full contribution decision](CONTRIBUTION_POSITIONING_OCT16.md) and [internal review](INTERNAL_REVIEW_OCT16.md). This describes three contribution categories and does not claim three separate new mathematical inventions or guarantee publication.
 
 ## 1 A precise promise about old ML results
 
@@ -25,5 +25,11 @@ The fresh annotation sweep has 5760 structural conditions and shows that baselin
 The exact current benchmark counts and application results must be read from their reconciled result reports. A win over snapshot storage does not establish a win over a manually chosen replay plan and a faster recovery does not automatically establish minimum retained bytes. The intended empirical contribution is an honest map of these tradeoffs.
 
 ## Present verdict
+
+The final structural/ledger audit checks all eight scientific captures, all eighteen completed retinal captures and the fixed Letter capture. Twenty-five of these twenty-seven captures meet the documented sufficient single-producer physical-DAG condition. The two remaining captures failing that sufficient condition are not demonstrated hard instances. Strong local search matches exact storage in all 48 scientific,108 retinal and2 Letter full-contract comparisons. Exact retention beats the weaker retinal greedy policy in 12 of 108 conditions. These are correlated conditions, not independent studies.
+
+The best supported claims are therefore the explicit contract, its checked executable implementation, and evidence about storage/recovery boundaries. The experiments establish useful selective retention and exact recovery under declared assumptions. They do not establish a practical need for the general optimizer or superior decisions over every strong simple baseline. Automatic planning is implemented, but reduced human effort or fewer operator mistakes has not been measured in a user study.
+
+The [neutral course-review packet](COURSE_PEER_REVIEW_PACKET.md) and [tracker](COURSE_PEER_REVIEW_TRACKER.json) are ready. The author reports no assigned reviewers or comments, so genuine course reviews remain unassigned/unreceived. Internal AI review does not fulfill that requirement. The manuscript/PDF has not been revised in this phase.
 
 There is a concrete working research system and a clear formal task and useful validation work. Strong new theoretical originality and universal superiority have not been established. The [novelty review](NOVELTY_REVIEW_OCT15.md) gives the close prior work and the finite-scenario reduction to weighted Horn abduction. A paper can report these three contribution categories if its scope and comparisons remain accurate.

@@ -1,0 +1,2968 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "source_commit": "85a086bf3fb10d0bf4094589333cbfa15f1d6579",
+  "checks": {
+    "scientific_conditions": true,
+    "retinal_conditions": true,
+    "letter_scopes": true,
+    "comparisons_reconcile": true
+  },
+  "topology_summary": {
+    "scientific": {
+      "captures": 8,
+      "sufficient_single_producer_dag": 6
+    },
+    "retinal": {
+      "captures": 18,
+      "sufficient_single_producer_dag": 18
+    },
+    "letter": {
+      "captures": 1,
+      "sufficient_single_producer_dag": 1
+    }
+  },
+  "topology_records": [
+    {
+      "study": "scientific",
+      "capture": "iris_union-101",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 1,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": false,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "iris_union-211",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 1,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": false,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "digits_pca-101",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "digits_pca-211",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "diabetes_poly-101",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "diabetes_poly-211",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "digits_forest-101",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "scientific",
+      "capture": "digits_forest-211",
+      "physical_artifacts": 13,
+      "optional_artifacts": 11,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s3_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s3_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s3_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s17_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s17_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s17_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s29_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s29_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "logistic_s29_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s3_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s3_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s3_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s17_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s17_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s17_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s29_v2",
+      "physical_artifacts": 9,
+      "optional_artifacts": 6,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s29_v8",
+      "physical_artifacts": 21,
+      "optional_artifacts": 18,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "retinal",
+      "capture": "forest_s29_v16",
+      "physical_artifacts": 37,
+      "optional_artifacts": 34,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    },
+    {
+      "study": "letter",
+      "capture": "fixed_16_forests",
+      "physical_artifacts": 39,
+      "optional_artifacts": 37,
+      "multiple_producer_artifacts": 0,
+      "physical_dag_after_fixing_roots": true,
+      "sufficient_single_producer_dag": true,
+      "qualification": "A false result only fails a sufficient condition; it is not evidence of hard optimization."
+    }
+  ],
+  "scientific_full_budget": {
+    "conditions": 48,
+    "ties": 48,
+    "exact_lower_bytes": 0,
+    "baseline_lower_bytes": 0,
+    "rows": [
+      {
+        "condition": [
+          "diabetes_poly-101-broad-k0"
+        ],
+        "exact_bytes": 49674,
+        "baseline_bytes": 49674,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-101-broad-k1"
+        ],
+        "exact_bytes": 56485,
+        "baseline_bytes": 56485,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-101-broad-k2"
+        ],
+        "exact_bytes": 56485,
+        "baseline_bytes": 56485,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-101-preprocessing-k0"
+        ],
+        "exact_bytes": 49182,
+        "baseline_bytes": 49182,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-101-preprocessing-k1"
+        ],
+        "exact_bytes": 55993,
+        "baseline_bytes": 55993,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-101-preprocessing-k2"
+        ],
+        "exact_bytes": 55993,
+        "baseline_bytes": 55993,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-broad-k0"
+        ],
+        "exact_bytes": 49680,
+        "baseline_bytes": 49680,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-broad-k1"
+        ],
+        "exact_bytes": 56489,
+        "baseline_bytes": 56489,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-broad-k2"
+        ],
+        "exact_bytes": 56489,
+        "baseline_bytes": 56489,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-preprocessing-k0"
+        ],
+        "exact_bytes": 49188,
+        "baseline_bytes": 49188,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-preprocessing-k1"
+        ],
+        "exact_bytes": 55997,
+        "baseline_bytes": 55997,
+        "tied": true
+      },
+      {
+        "condition": [
+          "diabetes_poly-211-preprocessing-k2"
+        ],
+        "exact_bytes": 55997,
+        "baseline_bytes": 55997,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-broad-k0"
+        ],
+        "exact_bytes": 945249,
+        "baseline_bytes": 945249,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-broad-k1"
+        ],
+        "exact_bytes": 29838488,
+        "baseline_bytes": 29838488,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-broad-k2"
+        ],
+        "exact_bytes": 29838488,
+        "baseline_bytes": 29838488,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-preprocessing-k0"
+        ],
+        "exact_bytes": 944757,
+        "baseline_bytes": 944757,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-preprocessing-k1"
+        ],
+        "exact_bytes": 1419460,
+        "baseline_bytes": 1419460,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-101-preprocessing-k2"
+        ],
+        "exact_bytes": 1419460,
+        "baseline_bytes": 1419460,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-broad-k0"
+        ],
+        "exact_bytes": 945251,
+        "baseline_bytes": 945251,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-broad-k1"
+        ],
+        "exact_bytes": 29562531,
+        "baseline_bytes": 29562531,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-broad-k2"
+        ],
+        "exact_bytes": 29562531,
+        "baseline_bytes": 29562531,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-preprocessing-k0"
+        ],
+        "exact_bytes": 944759,
+        "baseline_bytes": 944759,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-preprocessing-k1"
+        ],
+        "exact_bytes": 1419462,
+        "baseline_bytes": 1419462,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_forest-211-preprocessing-k2"
+        ],
+        "exact_bytes": 1419462,
+        "baseline_bytes": 1419462,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-broad-k0"
+        ],
+        "exact_bytes": 945321,
+        "baseline_bytes": 945321,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-broad-k1"
+        ],
+        "exact_bytes": 961697,
+        "baseline_bytes": 961697,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-broad-k2"
+        ],
+        "exact_bytes": 961697,
+        "baseline_bytes": 961697,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-preprocessing-k0"
+        ],
+        "exact_bytes": 944829,
+        "baseline_bytes": 944829,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-preprocessing-k1"
+        ],
+        "exact_bytes": 961205,
+        "baseline_bytes": 961205,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-101-preprocessing-k2"
+        ],
+        "exact_bytes": 961205,
+        "baseline_bytes": 961205,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-broad-k0"
+        ],
+        "exact_bytes": 945322,
+        "baseline_bytes": 945322,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-broad-k1"
+        ],
+        "exact_bytes": 961698,
+        "baseline_bytes": 961698,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-broad-k2"
+        ],
+        "exact_bytes": 961698,
+        "baseline_bytes": 961698,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-preprocessing-k0"
+        ],
+        "exact_bytes": 944830,
+        "baseline_bytes": 944830,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-preprocessing-k1"
+        ],
+        "exact_bytes": 961206,
+        "baseline_bytes": 961206,
+        "tied": true
+      },
+      {
+        "condition": [
+          "digits_pca-211-preprocessing-k2"
+        ],
+        "exact_bytes": 961206,
+        "baseline_bytes": 961206,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-broad-k0"
+        ],
+        "exact_bytes": 17438,
+        "baseline_bytes": 17438,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-broad-k1"
+        ],
+        "exact_bytes": 29167,
+        "baseline_bytes": 29167,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-broad-k2"
+        ],
+        "exact_bytes": 29167,
+        "baseline_bytes": 29167,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-preprocessing-k0"
+        ],
+        "exact_bytes": 16946,
+        "baseline_bytes": 16946,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-preprocessing-k1"
+        ],
+        "exact_bytes": 22029,
+        "baseline_bytes": 22029,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-101-preprocessing-k2"
+        ],
+        "exact_bytes": 22029,
+        "baseline_bytes": 22029,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-broad-k0"
+        ],
+        "exact_bytes": 17434,
+        "baseline_bytes": 17434,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-broad-k1"
+        ],
+        "exact_bytes": 29731,
+        "baseline_bytes": 29731,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-broad-k2"
+        ],
+        "exact_bytes": 29731,
+        "baseline_bytes": 29731,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-preprocessing-k0"
+        ],
+        "exact_bytes": 16942,
+        "baseline_bytes": 16942,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-preprocessing-k1"
+        ],
+        "exact_bytes": 22025,
+        "baseline_bytes": 22025,
+        "tied": true
+      },
+      {
+        "condition": [
+          "iris_union-211-preprocessing-k2"
+        ],
+        "exact_bytes": 22025,
+        "baseline_bytes": 22025,
+        "tied": true
+      }
+    ]
+  },
+  "retinal_full_contract": {
+    "conditions": 108,
+    "ties": 108,
+    "exact_lower_bytes": 0,
+    "baseline_lower_bytes": 0,
+    "rows": [
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 551828,
+        "baseline_bytes": 551828,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2518134,
+        "baseline_bytes": 2518134,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8309319,
+        "baseline_bytes": 8309319,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 550756,
+        "baseline_bytes": 550756,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2517062,
+        "baseline_bytes": 2517062,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8308247,
+        "baseline_bytes": 8308247,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 530715,
+        "baseline_bytes": 530715,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2497021,
+        "baseline_bytes": 2497021,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1534650,
+        "baseline_bytes": 1534650,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 530581,
+        "baseline_bytes": 530581,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1059660,
+        "baseline_bytes": 1059660,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1534516,
+        "baseline_bytes": 1534516,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 539749,
+        "baseline_bytes": 539749,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2506055,
+        "baseline_bytes": 2506055,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4425767,
+        "baseline_bytes": 4425767,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 539213,
+        "baseline_bytes": 539213,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2505519,
+        "baseline_bytes": 2505519,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4425231,
+        "baseline_bytes": 4425231,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 554902,
+        "baseline_bytes": 554902,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2521208,
+        "baseline_bytes": 2521208,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8517700,
+        "baseline_bytes": 8517700,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 553830,
+        "baseline_bytes": 553830,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2520136,
+        "baseline_bytes": 2520136,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8516628,
+        "baseline_bytes": 8516628,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 533796,
+        "baseline_bytes": 533796,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2500102,
+        "baseline_bytes": 2500102,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1528065,
+        "baseline_bytes": 1528065,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 533662,
+        "baseline_bytes": 533662,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1047888,
+        "baseline_bytes": 1047888,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1527931,
+        "baseline_bytes": 1527931,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 542834,
+        "baseline_bytes": 542834,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2509140,
+        "baseline_bytes": 2509140,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4514094,
+        "baseline_bytes": 4514094,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 542298,
+        "baseline_bytes": 542298,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2508604,
+        "baseline_bytes": 2508604,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4513558,
+        "baseline_bytes": 4513558,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 558647,
+        "baseline_bytes": 558647,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2524953,
+        "baseline_bytes": 2524953,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8945523,
+        "baseline_bytes": 8945523,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 557575,
+        "baseline_bytes": 557575,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2523881,
+        "baseline_bytes": 2523881,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8944451,
+        "baseline_bytes": 8944451,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 537553,
+        "baseline_bytes": 537553,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2503859,
+        "baseline_bytes": 2503859,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1606512,
+        "baseline_bytes": 1606512,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 537419,
+        "baseline_bytes": 537419,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1107888,
+        "baseline_bytes": 1107888,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1606378,
+        "baseline_bytes": 1606378,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 546586,
+        "baseline_bytes": 546586,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512892,
+        "baseline_bytes": 2512892,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4765139,
+        "baseline_bytes": 4765139,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 546050,
+        "baseline_bytes": 546050,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512356,
+        "baseline_bytes": 2512356,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4764603,
+        "baseline_bytes": 4764603,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 551801,
+        "baseline_bytes": 551801,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2518107,
+        "baseline_bytes": 2518107,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2918197,
+        "baseline_bytes": 2918197,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 550729,
+        "baseline_bytes": 550729,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1732700,
+        "baseline_bytes": 1732700,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2917125,
+        "baseline_bytes": 2917125,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 530716,
+        "baseline_bytes": 530716,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2497022,
+        "baseline_bytes": 2497022,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 826523,
+        "baseline_bytes": 826523,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 530582,
+        "baseline_bytes": 530582,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 678397,
+        "baseline_bytes": 678397,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 826389,
+        "baseline_bytes": 826389,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 539752,
+        "baseline_bytes": 539752,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2506058,
+        "baseline_bytes": 2506058,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1722965,
+        "baseline_bytes": 1722965,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 539216,
+        "baseline_bytes": 539216,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1130237,
+        "baseline_bytes": 1130237,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1722429,
+        "baseline_bytes": 1722429,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 554886,
+        "baseline_bytes": 554886,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2521192,
+        "baseline_bytes": 2521192,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2970562,
+        "baseline_bytes": 2970562,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 553814,
+        "baseline_bytes": 553814,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1760425,
+        "baseline_bytes": 1760425,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2969490,
+        "baseline_bytes": 2969490,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 533792,
+        "baseline_bytes": 533792,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2500098,
+        "baseline_bytes": 2500098,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 835759,
+        "baseline_bytes": 835759,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 533658,
+        "baseline_bytes": 533658,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 684553,
+        "baseline_bytes": 684553,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 835625,
+        "baseline_bytes": 835625,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 542840,
+        "baseline_bytes": 542840,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2509146,
+        "baseline_bytes": 2509146,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1750693,
+        "baseline_bytes": 1750693,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 542304,
+        "baseline_bytes": 542304,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1145645,
+        "baseline_bytes": 1145645,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1750157,
+        "baseline_bytes": 1750157,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 558635,
+        "baseline_bytes": 558635,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2524941,
+        "baseline_bytes": 2524941,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 3034455,
+        "baseline_bytes": 3034455,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 557563,
+        "baseline_bytes": 557563,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1794246,
+        "baseline_bytes": 1794246,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 3033383,
+        "baseline_bytes": 3033383,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 537558,
+        "baseline_bytes": 537558,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2503864,
+        "baseline_bytes": 2503864,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 847043,
+        "baseline_bytes": 847043,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 537424,
+        "baseline_bytes": 537424,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 692078,
+        "baseline_bytes": 692078,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 846909,
+        "baseline_bytes": 846909,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 546588,
+        "baseline_bytes": 546588,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512894,
+        "baseline_bytes": 2512894,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1784513,
+        "baseline_bytes": 1784513,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 546052,
+        "baseline_bytes": 546052,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1164429,
+        "baseline_bytes": 1164429,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1783977,
+        "baseline_bytes": 1783977,
+        "tied": true
+      }
+    ]
+  },
+  "retinal_simple_greedy": {
+    "conditions": 108,
+    "ties": 96,
+    "exact_lower_bytes": 12,
+    "baseline_lower_bytes": 0,
+    "rows": [
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 551828,
+        "baseline_bytes": 551828,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2518134,
+        "baseline_bytes": 2518134,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8309319,
+        "baseline_bytes": 8309319,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 550756,
+        "baseline_bytes": 550756,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2517062,
+        "baseline_bytes": 2517062,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8308247,
+        "baseline_bytes": 8308247,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 530715,
+        "baseline_bytes": 530715,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2497021,
+        "baseline_bytes": 2497021,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1534650,
+        "baseline_bytes": 1534650,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 530581,
+        "baseline_bytes": 530581,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1059660,
+        "baseline_bytes": 2496887,
+        "tied": false
+      },
+      {
+        "condition": [
+          "forest_s17_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1534516,
+        "baseline_bytes": 1534516,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 539749,
+        "baseline_bytes": 539749,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2506055,
+        "baseline_bytes": 2506055,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4425767,
+        "baseline_bytes": 4425767,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 539213,
+        "baseline_bytes": 539213,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2505519,
+        "baseline_bytes": 2505519,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s17_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4425231,
+        "baseline_bytes": 4425231,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 554902,
+        "baseline_bytes": 554902,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2521208,
+        "baseline_bytes": 2521208,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8517700,
+        "baseline_bytes": 8517700,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 553830,
+        "baseline_bytes": 553830,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2520136,
+        "baseline_bytes": 2520136,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8516628,
+        "baseline_bytes": 8516628,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 533796,
+        "baseline_bytes": 533796,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2500102,
+        "baseline_bytes": 2500102,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1528065,
+        "baseline_bytes": 1528065,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 533662,
+        "baseline_bytes": 533662,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1047888,
+        "baseline_bytes": 2499968,
+        "tied": false
+      },
+      {
+        "condition": [
+          "forest_s29_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1527931,
+        "baseline_bytes": 1527931,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 542834,
+        "baseline_bytes": 542834,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2509140,
+        "baseline_bytes": 2509140,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4514094,
+        "baseline_bytes": 4514094,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 542298,
+        "baseline_bytes": 542298,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2508604,
+        "baseline_bytes": 2508604,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s29_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4513558,
+        "baseline_bytes": 4513558,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 558647,
+        "baseline_bytes": 558647,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2524953,
+        "baseline_bytes": 2524953,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8945523,
+        "baseline_bytes": 8945523,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 557575,
+        "baseline_bytes": 557575,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2523881,
+        "baseline_bytes": 2523881,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 8944451,
+        "baseline_bytes": 8944451,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 537553,
+        "baseline_bytes": 537553,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2503859,
+        "baseline_bytes": 2503859,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1606512,
+        "baseline_bytes": 1606512,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 537419,
+        "baseline_bytes": 537419,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1107888,
+        "baseline_bytes": 2503725,
+        "tied": false
+      },
+      {
+        "condition": [
+          "forest_s3_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1606378,
+        "baseline_bytes": 1606378,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 546586,
+        "baseline_bytes": 546586,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512892,
+        "baseline_bytes": 2512892,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4765139,
+        "baseline_bytes": 4765139,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 546050,
+        "baseline_bytes": 546050,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512356,
+        "baseline_bytes": 2512356,
+        "tied": true
+      },
+      {
+        "condition": [
+          "forest_s3_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 4764603,
+        "baseline_bytes": 4764603,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 551801,
+        "baseline_bytes": 551801,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2518107,
+        "baseline_bytes": 2523921,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2918197,
+        "baseline_bytes": 2918197,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 550729,
+        "baseline_bytes": 550729,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1732700,
+        "baseline_bytes": 1732700,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2917125,
+        "baseline_bytes": 2917125,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 530716,
+        "baseline_bytes": 530716,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2497022,
+        "baseline_bytes": 2497743,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 826523,
+        "baseline_bytes": 826523,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 530582,
+        "baseline_bytes": 530582,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 678397,
+        "baseline_bytes": 678397,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 826389,
+        "baseline_bytes": 826389,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 539752,
+        "baseline_bytes": 539752,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2506058,
+        "baseline_bytes": 2508958,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1722965,
+        "baseline_bytes": 1722965,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 539216,
+        "baseline_bytes": 539216,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1130237,
+        "baseline_bytes": 1130237,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s17_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1722429,
+        "baseline_bytes": 1722429,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 554886,
+        "baseline_bytes": 554886,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2521192,
+        "baseline_bytes": 2527006,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2970562,
+        "baseline_bytes": 2970562,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 553814,
+        "baseline_bytes": 553814,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1760425,
+        "baseline_bytes": 1760425,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 2969490,
+        "baseline_bytes": 2969490,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 533792,
+        "baseline_bytes": 533792,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2500098,
+        "baseline_bytes": 2500819,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 835759,
+        "baseline_bytes": 835759,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 533658,
+        "baseline_bytes": 533658,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 684553,
+        "baseline_bytes": 684553,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 835625,
+        "baseline_bytes": 835625,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 542840,
+        "baseline_bytes": 542840,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2509146,
+        "baseline_bytes": 2512046,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1750693,
+        "baseline_bytes": 1750693,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 542304,
+        "baseline_bytes": 542304,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1145645,
+        "baseline_bytes": 1145645,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s29_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1750157,
+        "baseline_bytes": 1750157,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 558635,
+        "baseline_bytes": 558635,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2524941,
+        "baseline_bytes": 2530747,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 3034455,
+        "baseline_bytes": 3034455,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 557563,
+        "baseline_bytes": 557563,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1794246,
+        "baseline_bytes": 1794246,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v16",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 3033383,
+        "baseline_bytes": 3033383,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 537558,
+        "baseline_bytes": 537558,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2503864,
+        "baseline_bytes": 2504584,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 847043,
+        "baseline_bytes": 847043,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 537424,
+        "baseline_bytes": 537424,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 692078,
+        "baseline_bytes": 692078,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v2",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 846909,
+        "baseline_bytes": 846909,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "intact"
+        ],
+        "exact_bytes": 546588,
+        "baseline_bytes": 546588,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "legacy_removed"
+        ],
+        "exact_bytes": 2512894,
+        "baseline_bytes": 2515790,
+        "tied": false
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "investigation_features",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1784513,
+        "baseline_bytes": 1784513,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "intact"
+        ],
+        "exact_bytes": 546052,
+        "baseline_bytes": 546052,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "legacy_removed"
+        ],
+        "exact_bytes": 1164429,
+        "baseline_bytes": 1164429,
+        "tied": true
+      },
+      {
+        "condition": [
+          "logistic_s3_v8",
+          "model_prediction",
+          "training_prediction_removed"
+        ],
+        "exact_bytes": 1783977,
+        "baseline_bytes": 1783977,
+        "tied": true
+      }
+    ]
+  },
+  "letter_full_contract": {
+    "conditions": 2,
+    "ties": 2,
+    "exact_lower_bytes": 0,
+    "baseline_lower_bytes": 0,
+    "rows": [
+      {
+        "condition": [
+          "broad"
+        ],
+        "exact_bytes": 3669548445,
+        "baseline_bytes": 3669548445,
+        "tied": true
+      },
+      {
+        "condition": [
+          "preprocessing"
+        ],
+        "exact_bytes": 4829269,
+        "baseline_bytes": 4829269,
+        "tied": true
+      }
+    ]
+  },
+  "letter_storage": {
+    "snapshot_bytes": 3669545821,
+    "exact_bytes": 4829269,
+    "saving_bytes": 3664716552,
+    "saving_percent": 99.86839600224194,
+    "gzip_snapshot_bytes": 291175536,
+    "gzip_exact_bytes": 568375,
+    "gzip_saving_bytes": 290607161,
+    "native_pickle_snapshot_bytes": 2751548681,
+    "native_pickle_snapshot_minus_canonical_frontier_bytes": 2746719412,
+    "native_gzip_snapshot_bytes": 224313265,
+    "native_gzip_snapshot_minus_gzip_frontier_bytes": 223744890,
+    "planning_s": 0.021091411000270455,
+    "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+  },
+  "broad_saving_bytes": 0,
+  "source_sha256_git": {
+    "results/research/scientific_complete_oct16/captures.tar.gz": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7",
+    "results/research/scientific_complete_oct16/summary.csv": "c65c49f41083734a5e6ade6aa29b62d345a64941fffcfc372105c01490fbcfcc",
+    "results/research/eyeai_complete_oct15/summary.csv": "15e67577c757721ea41de75e0dc277efb682826c623ebaa00dc4d5ef3c20a4be",
+    "results/research/gigabyte_letter_oct16/summary.csv": "5575e3fb120e5474d62806bf92f340baebf276ec97f5c63b0d3c77b3ff8cb1de",
+    "results/research/gigabyte_letter_oct16/manifest.json": "28230fb3baab1578dc307c18dbfddf7a19e6c9eb36311958a792b87bc9f20397",
+    "results/research/gigabyte_letter_oct16/analysis.json": "f516bfb0ec6cfc50d193d882fcb84ab71e0bed38f41c6f21439ac6c0af430589",
+    "results/research/scientific_complete_oct16/protocol.json": "bbd46ff0960e9ea14c19c701312a008f5f41cf5aa774213f15a3620e6c1eab84",
+    "results/research/eyeai_complete_oct15/protocol.json": "fc0c8e273b7d861a36b06cc4eda3c4822f44f035bd258f113c63db2f0a734c2b",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v2/manifest.json": "21df47efd1e2b9a36fe953bf0b632192fc67b69dff720ac2d534ebc36711984d",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v8/manifest.json": "678ced9e0a46232ec35d7fe60fdfccf94aa5c5a9cc625984c70228826156d3b0",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v16/manifest.json": "761767358da541aa59dbc7a91d7b0049f142379d9729a379cc85092ee7859555",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v2/manifest.json": "ac50ff503a8d244e6aedb1dd9f1d4d3f57d79535d84c5567729dd5fa319e9c3f",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v8/manifest.json": "cad4c5c2dff7c5e72d0aeaae3bc1d7b5356d9075ff3ecd66788b29b8d0d26bea",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v16/manifest.json": "e214bce940b304d104e6803cf805e0d0f201d690af01a11b9325e3c5ab877834",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v2/manifest.json": "c63ee019586f01a18376177258bde933b2e95b6e21005bf6acc1225cbb016dca",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v8/manifest.json": "c27cbdc3e29cc8a3b8ed620d9a7e18ea05e4f383a1aa112899bd3f2060362a85",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v16/manifest.json": "dc40a2517cfc8a8d0aae743467132e9fffb9994c7be2d165a8eb3191ec31fb92",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v2/manifest.json": "419c8c7fc6c0b5408bfde6b925296abe24a495952df5d50e2bdeac1704ea50fb",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v8/manifest.json": "b8019c21af7a15f77c87614994aed4991017197477cb8f50732597794c5bd3b6",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v16/manifest.json": "dd772ddf6027e2061cd5330b9741a2d5ce74f12108a04515e08ae07723276b63",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v2/manifest.json": "c7cdb21ad48707ff1e44b48a1d94bf73359753ec0116fc8dd6b250b4bad0ef57",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v8/manifest.json": "445bfb7c861f3d196c08cfd46ab857bfaef9d375439fac2ff21bb78926156d22",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v16/manifest.json": "160f178767f1126ec7c0970f829da1a5566f2b883717bebe069eddf906596a4c",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v2/manifest.json": "8deb851d4775e12a7fd01980e058cb2d2bc1d714f64de682805a2865fddb1754",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v8/manifest.json": "38178ecd79cd068f68e0f274c909f6ae4de291d84c97f3ca7f086be956d5effe",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v16/manifest.json": "e859ce1bc5ce266404f41c4cdec46d3924eee4c9f75596741a5f73ff213a4ca8"
+  },
+  "source_sha256_working_tree": {
+    "results/research/scientific_complete_oct16/captures.tar.gz": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7",
+    "results/research/scientific_complete_oct16/summary.csv": "28def95547a5413894ef56895bf017ceabb7585dfbbc6584fcbf65c24e06e079",
+    "results/research/eyeai_complete_oct15/summary.csv": "15e67577c757721ea41de75e0dc277efb682826c623ebaa00dc4d5ef3c20a4be",
+    "results/research/gigabyte_letter_oct16/summary.csv": "5575e3fb120e5474d62806bf92f340baebf276ec97f5c63b0d3c77b3ff8cb1de",
+    "results/research/gigabyte_letter_oct16/manifest.json": "28230fb3baab1578dc307c18dbfddf7a19e6c9eb36311958a792b87bc9f20397",
+    "results/research/gigabyte_letter_oct16/analysis.json": "01d081988c21e9417151dfcbfe3fa4b4dd1a9cec813fd8fad98f3800dc8255ad",
+    "results/research/scientific_complete_oct16/protocol.json": "3cc787b6e9e1f417d98043986aae87f4b0c6ca89d5b304c17ce641ec3e014ec6",
+    "results/research/eyeai_complete_oct15/protocol.json": "21e31495e3c8900eb4f5c19468a328e9fe3cd5358bc85ce2c39adde5b18489c7",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v2/manifest.json": "21df47efd1e2b9a36fe953bf0b632192fc67b69dff720ac2d534ebc36711984d",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v8/manifest.json": "678ced9e0a46232ec35d7fe60fdfccf94aa5c5a9cc625984c70228826156d3b0",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v16/manifest.json": "761767358da541aa59dbc7a91d7b0049f142379d9729a379cc85092ee7859555",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v2/manifest.json": "ac50ff503a8d244e6aedb1dd9f1d4d3f57d79535d84c5567729dd5fa319e9c3f",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v8/manifest.json": "cad4c5c2dff7c5e72d0aeaae3bc1d7b5356d9075ff3ecd66788b29b8d0d26bea",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v16/manifest.json": "e214bce940b304d104e6803cf805e0d0f201d690af01a11b9325e3c5ab877834",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v2/manifest.json": "c63ee019586f01a18376177258bde933b2e95b6e21005bf6acc1225cbb016dca",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v8/manifest.json": "c27cbdc3e29cc8a3b8ed620d9a7e18ea05e4f383a1aa112899bd3f2060362a85",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v16/manifest.json": "dc40a2517cfc8a8d0aae743467132e9fffb9994c7be2d165a8eb3191ec31fb92",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v2/manifest.json": "419c8c7fc6c0b5408bfde6b925296abe24a495952df5d50e2bdeac1704ea50fb",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v8/manifest.json": "b8019c21af7a15f77c87614994aed4991017197477cb8f50732597794c5bd3b6",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v16/manifest.json": "dd772ddf6027e2061cd5330b9741a2d5ce74f12108a04515e08ae07723276b63",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v2/manifest.json": "c7cdb21ad48707ff1e44b48a1d94bf73359753ec0116fc8dd6b250b4bad0ef57",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v8/manifest.json": "445bfb7c861f3d196c08cfd46ab857bfaef9d375439fac2ff21bb78926156d22",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v16/manifest.json": "160f178767f1126ec7c0970f829da1a5566f2b883717bebe069eddf906596a4c",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v2/manifest.json": "8deb851d4775e12a7fd01980e058cb2d2bc1d714f64de682805a2865fddb1754",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v8/manifest.json": "38178ecd79cd068f68e0f274c909f6ae4de291d84c97f3ca7f086be956d5effe",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v16/manifest.json": "e859ce1bc5ce266404f41c4cdec46d3924eee4c9f75596741a5f73ff213a4ca8"
+  },
+  "checkout_newline_conversions_only": [
+    "results/research/scientific_complete_oct16/summary.csv",
+    "results/research/gigabyte_letter_oct16/analysis.json",
+    "results/research/scientific_complete_oct16/protocol.json",
+    "results/research/eyeai_complete_oct15/protocol.json"
+  ],
+  "scope": "Post-run structural and comparison-ledger audit. Conditions are correlated, not independent workflow samples. No model execution, new timings, or novelty proof."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "review_date": "2026-10-16",
+  "review_type": "Internal AI-assisted targeted primary-source review",
+  "exhaustive_search": false,
+  "external_expert_review": false,
+  "sources": [
+    {"title": "HELIX", "url": "https://www.vldb.org/pvldb/vol12/p446-xin.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Section5", "Definition4", "Problem3"]},
+    {"title": "HYPPO ICDE2024", "url": "https://dsachar.net/publication/2024-icde-kss/2024-icde-kss.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["SectionIII", "Problem2", "History Manager"]},
+    {"title": "Hyppo EDBT2025", "url": "https://dsachar.net/publication/2025-edbt-kss/2025-edbt-kss.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Architecture", "History Manager", "Implementation", "references"]},
+    {"title": "Optimizing Machine Learning Workloads in Collaborative Environments", "url": "https://www.dfki.de/fileadmin/user_upload/import/11031_ml-paper.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Sections4-6", "Section5.1", "Algorithm1", "Section6.1"]},
+    {"title": "Kishu", "url": "https://www.vldb.org/pvldb/vol18/p970-li.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Sections4-6", "exact restoration remark in Section5"]},
+    {"title": "CHEX", "url": "https://www.vldb.org/pvldb/vol15/p1297-malik.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Section4", "Problem1", "heuristic objective"]},
+    {"title": "ExoFlow", "url": "https://www.usenix.org/system/files/osdi23-zhuang.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["execution/recovery semantics", "task annotations", "exactly-once boundary"]},
+    {"title": "Implicit Hitting Set Algorithms for Reasoning Beyond NP", "url": "https://www.dbai.tuwien.ac.at/user/wallner/files/SaikkoWJ2016.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Sections3-4", "framework and propositional abduction"]},
+    {"title": "Hyper propositional abduction", "url": "https://arxiv.org/pdf/1604.08229", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["AbHS discussion", "Hyper formulation", "oracle-call comparisons"]},
+    {"title": "Minimum-cost source location", "url": "https://www.keisu.t.u-tokyo.ac.jp/data/2007/METR07-39.pdf", "status": "SELECTED_FULL_TEXT_SECTIONS_INSPECTED", "entry_points": ["Section2", "Lemmas2.2-2.4", "deficient-set covering"]},
+    {"title": "DVC repro", "url": "https://doc.dvc.org/command-reference/repro", "status": "OFFICIAL_DOCUMENTATION_INSPECTED", "entry_points": ["stage reproduction", "frozen stage behavior"]},
+    {"title": "scikit-learn model persistence", "url": "https://scikit-learn.org/stable/model_persistence.html", "status": "OFFICIAL_DOCUMENTATION_INSPECTED", "entry_points": ["dependency/runtime compatibility", "model reconstruction metadata"]},
+    {"title": "Finding a Minimum Source Set in Directed Hypergraphs", "authors": "Hyun Jun Kim, Kwang Hee Lee, Myoung-Ho Kim", "year": 2017, "venue": "JISE33(2):413-428", "url": "https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=155_2010", "status": "FULL_TEXT_UNRESOLVED", "reason": "Publisher retrieval failed; direct publisher request encountered certificate validation failure. Certificate validation was not bypassed. Bibliographic/abstract leads do not count as a theorem-level review."}
+  ],
+  "search_scope": ["Targeted MinSS author/title and official-publisher searches", "HYPPO materialization and later system publication", "Robust artifact materialization and capability-loss retention queries", "Backward links from current project novelty matrix and selected primary papers"],
+  "unresolved": ["Full MinSS mathematical comparison", "Complete forward citation/index coverage", "Equivalent robust hypergraph/Horn-abduction formulations outside the selected sources", "External expert judgment", "Independent production-workflow prevalence"],
+  "qualification": "Search non-results do not prove originality. Source review is distinct from executing native competitor systems."
+}
