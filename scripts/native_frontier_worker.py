@@ -36,7 +36,8 @@ def recover(engine, workspace):
             if node.blob in memo:
                 return memo[node.blob]
             path = workspace / 'blobs' / (node.blob + '.pkl')
-            if path.exists():
+            loaded = path.exists()
+            if loaded:
                 raw = path.read_bytes()
             else:
                 if node_id in caps or not node.replayable:
@@ -46,7 +47,8 @@ def recover(engine, workspace):
                 operations.append(dict(node=node_id, op=node.op, sha256=digest(raw)))
             if digest(raw) != node.blob:
                 raise RestoreError('Direct native replay hash mismatch')
-            value = unpack(raw)
+            if loaded:
+                value = unpack(raw)
             memo[node.blob] = value
             return value
 

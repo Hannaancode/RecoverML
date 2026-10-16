@@ -1,5 +1,17 @@
 # Strong baseline follow-up on 16 October
 
+## Completed cloud rerun
+
+The durable three-seed run 38945172079 has now completed. Its full raw evidence
+and cross-block audit are at `results/research/strong_baseline_cloud_oct16`.
+There are 19,652 actual requests across both loss groupings, with zero unexpected
+outcomes. Shared-loss exact storage beats the specified local search in9/36
+histories by up to48.7380%, ties27, and ties every manual frontier. All18 concat
+controls tie. Median paired planning speedups versus local are11.92/16.88 for
+separate/shared losses. These are fresh executions, not the lost original logs.
+The historical progress sections below remain as provenance of the interrupted
+attempts. Use the new RESULTS.md and complete_audit.json for completed claims.
+
 The earlier studies do not establish that RecoverML beats every other method
 Strong local search and manual DVC retention already match several proven storage minima
 No method can improve a proven minimum under the same byte accounting and recovery contract

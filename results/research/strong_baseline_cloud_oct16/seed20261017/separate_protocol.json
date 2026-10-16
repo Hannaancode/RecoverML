@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "purpose": "Exploratory strongest-baseline challenge fixed before executing this new grid",
+  "datasets": [
+    "wine",
+    "breast_cancer"
+  ],
+  "seeds": [
+    20261017
+  ],
+  "versions": [
+    4,
+    16,
+    64
+  ],
+  "concat_materialized": [
+    false,
+    true
+  ],
+  "maximum_lost_groups": 1,
+  "methods": [
+    "RecoverML_exact",
+    "scenario_exact",
+    "robust_greedy",
+    "robust_local",
+    "manual_best_frontier",
+    "HYPPO_rank",
+    "HYPPO_frequency",
+    "HELIX_rule",
+    "target_snapshots"
+  ],
+  "timing_repetitions": 3,
+  "solver_time_limit_s": 30,
+  "helix_read_MiB_s": 200,
+  "hypothesis": "Paired feature retention can require two additions that one-add local exchange misses and explicit concat caching can remove that gap",
+  "accounting": "Same captured bytes and metadata and declared fault contract for all methods; robust heuristics compared at full candidate budget and published materializers at exact minimum budget",
+  "manual_control": "Choose smallest feasible of roots plus all view outputs or roots plus all model and probability targets or roots plus shared concat when present",
+  "limitations": [
+    "Constructed diagnostic histories motivated by inspection of the baseline",
+    "Two-view grouping is an adaptation rather than independently collected multimodal production data",
+    "All configurations and failures retained",
+    "No universal dominance or new min-cut theory claim",
+    "Native DVC is not rerun in this experiment and the manual frontier is a retention-set control"
+  ],
+  "cloud_scope": "Fresh captures and replay on this GitHub runner; one fixed seed block of the complete grid"
+}

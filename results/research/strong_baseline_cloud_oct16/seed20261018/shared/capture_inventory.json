@@ -1,0 +1,1946 @@
+[
+  {
+    "history": "wine-s20261018-v4-concat0",
+    "capture_s": 0.0007915119999779563,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 4,
+    "materialize_concat": false,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 2,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 3,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "9213764ecb9fd977935c0dd5c22ba50097848f5bb1ac8f2af3242d1accdd6ae8",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "wine-s20261018-v4-concat1",
+    "capture_s": 0.0014096859999881417,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 4,
+    "materialize_concat": true,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 2,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 3,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "b86ff4e4486a251fdb04da7b42899210df51cba93538e088aea114f124bba418",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "wine-s20261018-v16-concat0",
+    "capture_s": 0.0025479689999770017,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 16,
+    "materialize_concat": false,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.0025118864315095794,
+        "accuracy": 0.9111111111111111
+      },
+      {
+        "version": 2,
+        "C": 0.00630957344480193,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 3,
+        "C": 0.01584893192461114,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 4,
+        "C": 0.039810717055349734,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 5,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 6,
+        "C": 0.25118864315095824,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 7,
+        "C": 0.6309573444801936,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 8,
+        "C": 1.584893192461114,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 9,
+        "C": 3.981071705534973,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 10,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 11,
+        "C": 25.11886431509582,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 12,
+        "C": 63.09573444801943,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 13,
+        "C": 158.48931924611142,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 14,
+        "C": 398.1071705534977,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 15,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "cacbbf80bc1972634e7420f3c8304456a56cb4ef89e473d80231bb8940501d30",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "wine-s20261018-v16-concat1",
+    "capture_s": 0.0019504389999838168,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 16,
+    "materialize_concat": true,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.0025118864315095794,
+        "accuracy": 0.9111111111111111
+      },
+      {
+        "version": 2,
+        "C": 0.00630957344480193,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 3,
+        "C": 0.01584893192461114,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 4,
+        "C": 0.039810717055349734,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 5,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 6,
+        "C": 0.25118864315095824,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 7,
+        "C": 0.6309573444801936,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 8,
+        "C": 1.584893192461114,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 9,
+        "C": 3.981071705534973,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 10,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 11,
+        "C": 25.11886431509582,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 12,
+        "C": 63.09573444801943,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 13,
+        "C": 158.48931924611142,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 14,
+        "C": 398.1071705534977,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 15,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "8de3e1c4507c0419f7d5f36c129c0d6e5abee3e77b0d1dbbc2b40480a1eb8239",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "wine-s20261018-v64-concat0",
+    "capture_s": 0.006393281999976352,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 64,
+    "materialize_concat": false,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.0012451970847350332,
+        "accuracy": 0.7111111111111111
+      },
+      {
+        "version": 2,
+        "C": 0.0015505157798326253,
+        "accuracy": 0.7333333333333333
+      },
+      {
+        "version": 3,
+        "C": 0.0019306977288832496,
+        "accuracy": 0.7777777777777778
+      },
+      {
+        "version": 4,
+        "C": 0.002404099183509972,
+        "accuracy": 0.8666666666666667
+      },
+      {
+        "version": 5,
+        "C": 0.0029935772947204905,
+        "accuracy": 0.9111111111111111
+      },
+      {
+        "version": 6,
+        "C": 0.003727593720314938,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 7,
+        "C": 0.004641588833612777,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 8,
+        "C": 0.005779692884153313,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 9,
+        "C": 0.0071968567300115215,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 10,
+        "C": 0.00896150501946605,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 11,
+        "C": 0.01115883992507748,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 12,
+        "C": 0.013894954943731374,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 13,
+        "C": 0.017301957388458945,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 14,
+        "C": 0.021544346900318832,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 15,
+        "C": 0.026826957952797246,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 16,
+        "C": 0.03340484983513244,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 17,
+        "C": 0.04159562163071847,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 18,
+        "C": 0.0517947467923121,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 19,
+        "C": 0.06449466771037621,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 20,
+        "C": 0.08030857221391513,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 21,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 22,
+        "C": 0.12451970847350319,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 23,
+        "C": 0.15505157798326238,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 24,
+        "C": 0.19306977288832497,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 25,
+        "C": 0.24040991835099718,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 26,
+        "C": 0.29935772947204903,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 27,
+        "C": 0.3727593720314938,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 28,
+        "C": 0.46415888336127775,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 29,
+        "C": 0.5779692884153314,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 30,
+        "C": 0.7196856730011514,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 31,
+        "C": 0.8961505019466041,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 32,
+        "C": 1.115883992507748,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 33,
+        "C": 1.3894954943731375,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 34,
+        "C": 1.7301957388458944,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 35,
+        "C": 2.154434690031882,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 36,
+        "C": 2.6826957952797246,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 37,
+        "C": 3.340484983513244,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 38,
+        "C": 4.1595621630718425,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 39,
+        "C": 5.179474679231207,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 40,
+        "C": 6.449466771037621,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 41,
+        "C": 8.030857221391512,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 42,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 43,
+        "C": 12.451970847350319,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 44,
+        "C": 15.505157798326222,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 45,
+        "C": 19.306977288832496,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 46,
+        "C": 24.040991835099693,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 47,
+        "C": 29.935772947204903,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 48,
+        "C": 37.27593720314938,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 49,
+        "C": 46.41588833612773,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 50,
+        "C": 57.79692884153313,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 51,
+        "C": 71.96856730011514,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 52,
+        "C": 89.6150501946605,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 53,
+        "C": 111.5883992507748,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 54,
+        "C": 138.9495494373136,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 55,
+        "C": 173.01957388458945,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 56,
+        "C": 215.44346900318823,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 57,
+        "C": 268.26957952797216,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 58,
+        "C": 334.04849835132444,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 59,
+        "C": 415.95621630718426,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 60,
+        "C": 517.9474679231203,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 61,
+        "C": 644.946677103762,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 62,
+        "C": 803.0857221391504,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 63,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "b0c4686f6012ca565adc60877a6d40c8f57ab59b0ff4649d20a13755a7b6b34f",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "wine-s20261018-v64-concat1",
+    "capture_s": 0.006986922000010054,
+    "dataset": "wine",
+    "seed": 20261018,
+    "versions": 64,
+    "materialize_concat": true,
+    "rows": 178,
+    "columns": 13,
+    "train_rows": 133,
+    "test_rows": 45,
+    "feature_nodes": [
+      "30a0f2f89b2b72987fcbf10861844ceb664201c82a43df1b4b07d886875d1269",
+      "75667ad575e9f17e114bb8eae351209d491f01158972db6f0d4c0a5696044fa9"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.6222222222222222
+      },
+      {
+        "version": 1,
+        "C": 0.0012451970847350332,
+        "accuracy": 0.7111111111111111
+      },
+      {
+        "version": 2,
+        "C": 0.0015505157798326253,
+        "accuracy": 0.7333333333333333
+      },
+      {
+        "version": 3,
+        "C": 0.0019306977288832496,
+        "accuracy": 0.7777777777777778
+      },
+      {
+        "version": 4,
+        "C": 0.002404099183509972,
+        "accuracy": 0.8666666666666667
+      },
+      {
+        "version": 5,
+        "C": 0.0029935772947204905,
+        "accuracy": 0.9111111111111111
+      },
+      {
+        "version": 6,
+        "C": 0.003727593720314938,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 7,
+        "C": 0.004641588833612777,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 8,
+        "C": 0.005779692884153313,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 9,
+        "C": 0.0071968567300115215,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 10,
+        "C": 0.00896150501946605,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 11,
+        "C": 0.01115883992507748,
+        "accuracy": 0.9333333333333333
+      },
+      {
+        "version": 12,
+        "C": 0.013894954943731374,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 13,
+        "C": 0.017301957388458945,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 14,
+        "C": 0.021544346900318832,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 15,
+        "C": 0.026826957952797246,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 16,
+        "C": 0.03340484983513244,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 17,
+        "C": 0.04159562163071847,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 18,
+        "C": 0.0517947467923121,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 19,
+        "C": 0.06449466771037621,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 20,
+        "C": 0.08030857221391513,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 21,
+        "C": 0.1,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 22,
+        "C": 0.12451970847350319,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 23,
+        "C": 0.15505157798326238,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 24,
+        "C": 0.19306977288832497,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 25,
+        "C": 0.24040991835099718,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 26,
+        "C": 0.29935772947204903,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 27,
+        "C": 0.3727593720314938,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 28,
+        "C": 0.46415888336127775,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 29,
+        "C": 0.5779692884153314,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 30,
+        "C": 0.7196856730011514,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 31,
+        "C": 0.8961505019466041,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 32,
+        "C": 1.115883992507748,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 33,
+        "C": 1.3894954943731375,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 34,
+        "C": 1.7301957388458944,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 35,
+        "C": 2.154434690031882,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 36,
+        "C": 2.6826957952797246,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 37,
+        "C": 3.340484983513244,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 38,
+        "C": 4.1595621630718425,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 39,
+        "C": 5.179474679231207,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 40,
+        "C": 6.449466771037621,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 41,
+        "C": 8.030857221391512,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 42,
+        "C": 10.0,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 43,
+        "C": 12.451970847350319,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 44,
+        "C": 15.505157798326222,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 45,
+        "C": 19.306977288832496,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 46,
+        "C": 24.040991835099693,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 47,
+        "C": 29.935772947204903,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 48,
+        "C": 37.27593720314938,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 49,
+        "C": 46.41588833612773,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 50,
+        "C": 57.79692884153313,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 51,
+        "C": 71.96856730011514,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 52,
+        "C": 89.6150501946605,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 53,
+        "C": 111.5883992507748,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 54,
+        "C": 138.9495494373136,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 55,
+        "C": 173.01957388458945,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 56,
+        "C": 215.44346900318823,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 57,
+        "C": 268.26957952797216,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 58,
+        "C": 334.04849835132444,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 59,
+        "C": 415.95621630718426,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 60,
+        "C": 517.9474679231203,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 61,
+        "C": 644.946677103762,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 62,
+        "C": 803.0857221391504,
+        "accuracy": 0.9555555555555556
+      },
+      {
+        "version": 63,
+        "C": 1000.0,
+        "accuracy": 0.9555555555555556
+      }
+    ],
+    "source_manifest_sha256": "2580ccca09e3b117a305668408c2c7d7f9b30ce6e1572b26bcc266037aa3dca8",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v4-concat0",
+    "capture_s": 0.0011217650000503454,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 4,
+    "materialize_concat": false,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 2,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 3,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "4bb327a854e63f519e6fb342533967974a389ec212750424759979a942aefa29",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v4-concat1",
+    "capture_s": 0.0011844410000207972,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 4,
+    "materialize_concat": true,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 2,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 3,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "70a170a02591a2fc55b3fdce7645d43bbbac676ab47f11fd9506962d8916a786",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v16-concat0",
+    "capture_s": 0.001998183000011977,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 16,
+    "materialize_concat": false,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.0025118864315095794,
+        "accuracy": 0.9230769230769231
+      },
+      {
+        "version": 2,
+        "C": 0.00630957344480193,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 3,
+        "C": 0.01584893192461114,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 4,
+        "C": 0.039810717055349734,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 5,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 6,
+        "C": 0.25118864315095824,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 7,
+        "C": 0.6309573444801936,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 8,
+        "C": 1.584893192461114,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 9,
+        "C": 3.981071705534973,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 10,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 11,
+        "C": 25.11886431509582,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 12,
+        "C": 63.09573444801943,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 13,
+        "C": 158.48931924611142,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 14,
+        "C": 398.1071705534977,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 15,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "7ed13ebca6e1ddb6acfdf32116432f969565baf249ebf6644ec9ec210c920179",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v16-concat1",
+    "capture_s": 0.002262868000002527,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 16,
+    "materialize_concat": true,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.0025118864315095794,
+        "accuracy": 0.9230769230769231
+      },
+      {
+        "version": 2,
+        "C": 0.00630957344480193,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 3,
+        "C": 0.01584893192461114,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 4,
+        "C": 0.039810717055349734,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 5,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 6,
+        "C": 0.25118864315095824,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 7,
+        "C": 0.6309573444801936,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 8,
+        "C": 1.584893192461114,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 9,
+        "C": 3.981071705534973,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 10,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 11,
+        "C": 25.11886431509582,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 12,
+        "C": 63.09573444801943,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 13,
+        "C": 158.48931924611142,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 14,
+        "C": 398.1071705534977,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 15,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "76cd78646076aadcf5ad6dcd88158ad0cbab21242cbaaee56b77d1bb1b15f595",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v64-concat0",
+    "capture_s": 0.006880295999962982,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 64,
+    "materialize_concat": false,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.0012451970847350332,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 2,
+        "C": 0.0015505157798326253,
+        "accuracy": 0.8811188811188811
+      },
+      {
+        "version": 3,
+        "C": 0.0019306977288832496,
+        "accuracy": 0.9090909090909091
+      },
+      {
+        "version": 4,
+        "C": 0.002404099183509972,
+        "accuracy": 0.9230769230769231
+      },
+      {
+        "version": 5,
+        "C": 0.0029935772947204905,
+        "accuracy": 0.9300699300699301
+      },
+      {
+        "version": 6,
+        "C": 0.003727593720314938,
+        "accuracy": 0.9370629370629371
+      },
+      {
+        "version": 7,
+        "C": 0.004641588833612777,
+        "accuracy": 0.9440559440559441
+      },
+      {
+        "version": 8,
+        "C": 0.005779692884153313,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 9,
+        "C": 0.0071968567300115215,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 10,
+        "C": 0.00896150501946605,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 11,
+        "C": 0.01115883992507748,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 12,
+        "C": 0.013894954943731374,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 13,
+        "C": 0.017301957388458945,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 14,
+        "C": 0.021544346900318832,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 15,
+        "C": 0.026826957952797246,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 16,
+        "C": 0.03340484983513244,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 17,
+        "C": 0.04159562163071847,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 18,
+        "C": 0.0517947467923121,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 19,
+        "C": 0.06449466771037621,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 20,
+        "C": 0.08030857221391513,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 21,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 22,
+        "C": 0.12451970847350319,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 23,
+        "C": 0.15505157798326238,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 24,
+        "C": 0.19306977288832497,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 25,
+        "C": 0.24040991835099718,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 26,
+        "C": 0.29935772947204903,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 27,
+        "C": 0.3727593720314938,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 28,
+        "C": 0.46415888336127775,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 29,
+        "C": 0.5779692884153314,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 30,
+        "C": 0.7196856730011514,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 31,
+        "C": 0.8961505019466041,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 32,
+        "C": 1.115883992507748,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 33,
+        "C": 1.3894954943731375,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 34,
+        "C": 1.7301957388458944,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 35,
+        "C": 2.154434690031882,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 36,
+        "C": 2.6826957952797246,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 37,
+        "C": 3.340484983513244,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 38,
+        "C": 4.1595621630718425,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 39,
+        "C": 5.179474679231207,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 40,
+        "C": 6.449466771037621,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 41,
+        "C": 8.030857221391512,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 42,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 43,
+        "C": 12.451970847350319,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 44,
+        "C": 15.505157798326222,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 45,
+        "C": 19.306977288832496,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 46,
+        "C": 24.040991835099693,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 47,
+        "C": 29.935772947204903,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 48,
+        "C": 37.27593720314938,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 49,
+        "C": 46.41588833612773,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 50,
+        "C": 57.79692884153313,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 51,
+        "C": 71.96856730011514,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 52,
+        "C": 89.6150501946605,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 53,
+        "C": 111.5883992507748,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 54,
+        "C": 138.9495494373136,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 55,
+        "C": 173.01957388458945,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 56,
+        "C": 215.44346900318823,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 57,
+        "C": 268.26957952797216,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 58,
+        "C": 334.04849835132444,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 59,
+        "C": 415.95621630718426,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 60,
+        "C": 517.9474679231203,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 61,
+        "C": 644.946677103762,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 62,
+        "C": 803.0857221391504,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 63,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "3fd39ec8a34986b2c36dcbcf51877d709d3bcb38816c883f6caf178dab35c3d7",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  },
+  {
+    "history": "breast_cancer-s20261018-v64-concat1",
+    "capture_s": 0.00686454699996375,
+    "dataset": "breast_cancer",
+    "seed": 20261018,
+    "versions": 64,
+    "materialize_concat": true,
+    "rows": 569,
+    "columns": 30,
+    "train_rows": 426,
+    "test_rows": 143,
+    "feature_nodes": [
+      "44fe6337c2917d70569d2b69376809891b41dbde5f847cc0c66e5c32357bc6af",
+      "b58147d4a65504e35e7442d58506ccc8605605f6fa279ffe1a429a970fa94d6d"
+    ],
+    "all_versions_used": true,
+    "quality": [
+      {
+        "version": 0,
+        "C": 0.001,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 1,
+        "C": 0.0012451970847350332,
+        "accuracy": 0.8741258741258742
+      },
+      {
+        "version": 2,
+        "C": 0.0015505157798326253,
+        "accuracy": 0.8811188811188811
+      },
+      {
+        "version": 3,
+        "C": 0.0019306977288832496,
+        "accuracy": 0.9090909090909091
+      },
+      {
+        "version": 4,
+        "C": 0.002404099183509972,
+        "accuracy": 0.9230769230769231
+      },
+      {
+        "version": 5,
+        "C": 0.0029935772947204905,
+        "accuracy": 0.9300699300699301
+      },
+      {
+        "version": 6,
+        "C": 0.003727593720314938,
+        "accuracy": 0.9370629370629371
+      },
+      {
+        "version": 7,
+        "C": 0.004641588833612777,
+        "accuracy": 0.9440559440559441
+      },
+      {
+        "version": 8,
+        "C": 0.005779692884153313,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 9,
+        "C": 0.0071968567300115215,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 10,
+        "C": 0.00896150501946605,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 11,
+        "C": 0.01115883992507748,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 12,
+        "C": 0.013894954943731374,
+        "accuracy": 0.951048951048951
+      },
+      {
+        "version": 13,
+        "C": 0.017301957388458945,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 14,
+        "C": 0.021544346900318832,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 15,
+        "C": 0.026826957952797246,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 16,
+        "C": 0.03340484983513244,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 17,
+        "C": 0.04159562163071847,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 18,
+        "C": 0.0517947467923121,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 19,
+        "C": 0.06449466771037621,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 20,
+        "C": 0.08030857221391513,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 21,
+        "C": 0.1,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 22,
+        "C": 0.12451970847350319,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 23,
+        "C": 0.15505157798326238,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 24,
+        "C": 0.19306977288832497,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 25,
+        "C": 0.24040991835099718,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 26,
+        "C": 0.29935772947204903,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 27,
+        "C": 0.3727593720314938,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 28,
+        "C": 0.46415888336127775,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 29,
+        "C": 0.5779692884153314,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 30,
+        "C": 0.7196856730011514,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 31,
+        "C": 0.8961505019466041,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 32,
+        "C": 1.115883992507748,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 33,
+        "C": 1.3894954943731375,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 34,
+        "C": 1.7301957388458944,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 35,
+        "C": 2.154434690031882,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 36,
+        "C": 2.6826957952797246,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 37,
+        "C": 3.340484983513244,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 38,
+        "C": 4.1595621630718425,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 39,
+        "C": 5.179474679231207,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 40,
+        "C": 6.449466771037621,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 41,
+        "C": 8.030857221391512,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 42,
+        "C": 10.0,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 43,
+        "C": 12.451970847350319,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 44,
+        "C": 15.505157798326222,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 45,
+        "C": 19.306977288832496,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 46,
+        "C": 24.040991835099693,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 47,
+        "C": 29.935772947204903,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 48,
+        "C": 37.27593720314938,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 49,
+        "C": 46.41588833612773,
+        "accuracy": 0.972027972027972
+      },
+      {
+        "version": 50,
+        "C": 57.79692884153313,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 51,
+        "C": 71.96856730011514,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 52,
+        "C": 89.6150501946605,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 53,
+        "C": 111.5883992507748,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 54,
+        "C": 138.9495494373136,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 55,
+        "C": 173.01957388458945,
+        "accuracy": 0.965034965034965
+      },
+      {
+        "version": 56,
+        "C": 215.44346900318823,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 57,
+        "C": 268.26957952797216,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 58,
+        "C": 334.04849835132444,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 59,
+        "C": 415.95621630718426,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 60,
+        "C": 517.9474679231203,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 61,
+        "C": 644.946677103762,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 62,
+        "C": 803.0857221391504,
+        "accuracy": 0.958041958041958
+      },
+      {
+        "version": 63,
+        "C": 1000.0,
+        "accuracy": 0.958041958041958
+      }
+    ],
+    "source_manifest_sha256": "800bcf37820a702279e6b2acfdca63ee65ac9f8739de20ed1a1669450aac7af2",
+    "reused_original_capture": true,
+    "capability_grouping": "Both view_standardize nodes use the same implementation and StandardScaler dependency and therefore share one retired preprocessing entrypoint"
+  }
+]

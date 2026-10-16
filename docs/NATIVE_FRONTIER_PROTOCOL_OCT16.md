@@ -47,3 +47,10 @@ runner unpacked three capture return values into two variables. Run
 measured DVC loss. The fix changes no protocol condition or comparison metric.
 A separately labelled Wine/16 smoke run precedes the complete grid and is
 excluded from the full study's statistics.
+
+Before admitting a final latency claim, the direct DVC batch is strengthened
+to retain newly computed values in memory instead of serializing and then
+deserializing them again. It still verifies the serialized output hash. This
+removes avoidable baseline overhead without changing any case or metric.
+Run38948170791 is retained as baseline v1; the strengthened baseline v2 must
+complete a fresh full grid. These two executions must not be pooled.

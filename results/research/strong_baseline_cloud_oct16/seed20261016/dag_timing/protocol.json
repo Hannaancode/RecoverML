@@ -1,0 +1,31 @@
+{
+  "purpose": "Follow-up timing after engineering change, all 48 original conditions, no case selection",
+  "workflows": [
+    "iris_union",
+    "digits_pca",
+    "diabetes_poly",
+    "digits_forest"
+  ],
+  "seeds": [
+    101,
+    211
+  ],
+  "scopes": [
+    "preprocessing",
+    "broad"
+  ],
+  "k": [
+    0,
+    1,
+    2
+  ],
+  "repetitions": 5,
+  "methods": [
+    "RecoverML_auto",
+    "scenario_exact",
+    "robust_local"
+  ],
+  "timing_scope": "Full callable including applicability and proof checks; randomized repeated method order; shared host descriptive timings",
+  "metadata_only": true,
+  "payload_recovery_rerun": false
+}

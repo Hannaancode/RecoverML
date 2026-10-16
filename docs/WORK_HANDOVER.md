@@ -1,5 +1,20 @@
 # RecoverML continuation checklist and file map
 
+Latest completed follow-up: `results/research/strong_baseline_cloud_oct16`
+preserves all three successful cloud seed blocks from run38945172079 at00bd37a.
+The cross-block/source/raw-log audit passes:72 paired history/contract cases,
+648 rows,1,944 planner calls,216 flow proofs,19,652 unique actual requests,
+16,110 exact,3,542 expected blocked and zero unexpected. Shared-loss storage
+beats local in9/36 cases by up to48.7380%, ties27; all18 concat controls and
+all72 manual-frontier comparisons tie. Median paired local planning speedups
+are11.92/16.88 for separate/shared losses. Old48-condition timing retains four
+slower cases. These fresh results supersede the partial/lost-run status below.
+Run `scripts/audit_cloud_followup.py` as described in the new RESULTS.md.
+An independently specified native DVC batch latency study is in progress;
+its first setup failure is preserved and must not be counted as a DVC loss.
+Human reviews, the original-container provenance gap and manuscript integration
+remain open. No universal dominance or weighted overall winner is established.
+
 Updated 16 October 2026 for Abdul Hannaan. Paper drafting and formatting remain deferred. This file records the state needed to continue in another conversation without reconstructing decisions from chat.
 
 ## What is complete

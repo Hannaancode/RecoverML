@@ -1,0 +1,8 @@
+test_changed_optimum_and_planner_median_are_rejected (test_cloud_followup.CloudFollowupTests.test_changed_optimum_and_planner_median_are_rejected) ... ok
+test_frozen_grid_rejects_missing_controls_and_method_replacement (test_cloud_followup.CloudFollowupTests.test_frozen_grid_rejects_missing_controls_and_method_replacement) ... ok
+test_shared_execution_cannot_be_relabelled_or_count_method_twice (test_cloud_followup.CloudFollowupTests.test_shared_execution_cannot_be_relabelled_or_count_method_twice) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.070s
+
+OK

@@ -1,4 +1,5 @@
 name: Native frontier paired latency
+# Baseline v2 avoids an unnecessary deserialize of newly computed DVC values.
 on:
   push:
     branches: ['research/scientific-validation-oct15']

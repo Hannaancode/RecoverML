@@ -1,0 +1,18 @@
+{
+  "status": "RUNNING_NOT_FINAL",
+  "timestamp_ns": 1792174561200236534,
+  "completed_histories": 12,
+  "planned_histories": 12,
+  "conditions": 108,
+  "planning_calls": 324,
+  "actual_runtime": {
+    "requests": 2576,
+    "exact": 2093,
+    "expected_blocked": 483,
+    "unexpected": 0
+  },
+  "closed_trace_sha256": "43623bbe2a3567fc123bc491ed79907ab6135d1a011fb33875a31ea6ee112232",
+  "planner_sha256": "9ff300e9714c641a32dff335068f8d107b3c0335df098af086913020a9f3d0f9",
+  "source_changed": [],
+  "errors": []
+}
