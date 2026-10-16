@@ -1,0 +1,218 @@
+{
+  "schema": 1,
+  "purpose": "Clean rerun of source-guard flagged or incomplete scientific case attempts without changing outcome-dependent inclusion",
+  "timestamp_ns": 1792085156965909487,
+  "original_resume_protocol": "configs/scientific_resume_oct15.json",
+  "original_attempt": "results/research/scientific_resume_oct15",
+  "decision_rule": "Rerun a complete case if ANY source guard flag is nonempty or gzip integrity or full manifest-derived request identity grid or CSV/raw measured metric reconciliation fails, regardless of exact recovery counts and timing or storage results",
+  "selected_cases": [
+    "digits_forest-101-broad-k0",
+    "digits_forest-101-broad-k1",
+    "digits_forest-101-broad-k2",
+    "digits_forest-101-preprocessing-k0",
+    "digits_forest-101-preprocessing-k1",
+    "digits_forest-101-preprocessing-k2",
+    "digits_forest-211-preprocessing-k1",
+    "digits_forest-211-preprocessing-k2"
+  ],
+  "reused_cases": [
+    "digits_forest-211-broad-k0",
+    "digits_forest-211-broad-k1",
+    "digits_forest-211-broad-k2",
+    "digits_forest-211-preprocessing-k0"
+  ],
+  "initial_closed_worker_audit": [
+    {
+      "case": "digits_forest-101-broad-k0",
+      "rows": 40,
+      "raw": 120,
+      "expected_raw": 120,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py"
+      ],
+      "summary_sha256": "4e3c7debbf1b2826ff948e375aec2364452fe6fdba4ac38f2191caea04eb26d6",
+      "trace_sha256": "f85400eaee7533bea72c6df5836f20a70f6eb122c759b9571703de9905e2da2c",
+      "report_sha256": "8444cc33367706a943d24ce978a728856d1dba982e85ce9acff3a384fa7820f9"
+    },
+    {
+      "case": "digits_forest-101-broad-k1",
+      "rows": 40,
+      "raw": 720,
+      "expected_raw": 720,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "5517807d4c08c6d070b77b90a17a289546b9037132e54a2aff034757b22450c1",
+      "trace_sha256": "7e35473484b703266fda4ce6a4d7218938e04cdf1fe5d0607421f78f4685cbb2",
+      "report_sha256": "64d7e20291c65dd83a46389d3f3f993103ad390c2b6d4a7fd789febcf7d47cee"
+    },
+    {
+      "case": "digits_forest-101-broad-k2",
+      "rows": 40,
+      "raw": 1920,
+      "expected_raw": 1920,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "fb42c344ed85695e0a46dee8d08b929df010e2216486b6a645f4ae72eea41a5e",
+      "trace_sha256": "e6219ef72562690939c9abc5ddb132f963c9ae2b8582dc6fbf83b9dac062479a",
+      "report_sha256": "d673af7b4142b94a8f08fbc143f4fdf3db694d9b827645fa6fca84aff14805e7"
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k0",
+      "rows": 40,
+      "raw": 120,
+      "expected_raw": 120,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py"
+      ],
+      "summary_sha256": "971143b35d4f9ed4115f3f64d370f4fac35ce780af52d8f213fed17de7ee38b2",
+      "trace_sha256": "10f88d83c947e0ae9f3e79f8e4649483e11ed573ea322eadd3cd98b4066a38cc",
+      "report_sha256": "fdc44c5b71912f0a222c7dcf3f40090d0cb9f568886a249962ca70ef4237c4c8"
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k1",
+      "rows": 40,
+      "raw": 480,
+      "expected_raw": 480,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "612f69379521549dfbf0469bd73bde79744fed2ff6c7111a4f9d8497b5d32393",
+      "trace_sha256": "c760ecb3728301fd738a105f7672f4ac51d48a9764144c8fa83cf010d4fe78cc",
+      "report_sha256": "54bf8b698d9b17ce6f8d94e3dbfce68f0907b37443b40bcedb6c2cb3e6026cfc"
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k2",
+      "rows": 40,
+      "raw": 840,
+      "expected_raw": 840,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "b01ee45df6722e1d45c8d5d2fbca2fd70c6d576dd96651aa73bb61ee89a2b682",
+      "trace_sha256": "42006d929866226b924103253762283ab7281dee4ed3eaa6e94634bf5fa9295c",
+      "report_sha256": "62f33776d8d69ecf4f7bb833520fe48d6b892c9789e93b8846f735c4df188092"
+    },
+    {
+      "case": "digits_forest-211-broad-k0",
+      "rows": 40,
+      "raw": 120,
+      "expected_raw": 120,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [],
+      "summary_sha256": "21747f813f2a98af2a2bf5a4ec9a4ffbd3190080057ae1b48e9196e73437743f",
+      "trace_sha256": "33c135f838ac3668a21ae1ae39f49527d3540229c3cd00246c9ca9bf8f89d76d",
+      "report_sha256": "76bda28bc165c9cedde3780e121e4fb209806c61f6264e8c4dae21bd58f9e2ce"
+    },
+    {
+      "case": "digits_forest-211-broad-k1",
+      "rows": 40,
+      "raw": 720,
+      "expected_raw": 720,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [],
+      "summary_sha256": "765a26eceeed968f4ac4c61b8eade16f7e46a303f3c86dd2bc43602fa680ab99",
+      "trace_sha256": "54b3b6791f2c6072145186f44a29ad9e59c1292cc2f34ab845247770d5374ed1",
+      "report_sha256": "8215d360fa101a714de9f72756a0f9803e848a81a72770f912ce3103ba669ee6"
+    },
+    {
+      "case": "digits_forest-211-broad-k2",
+      "rows": 40,
+      "raw": 1920,
+      "expected_raw": 1920,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [],
+      "summary_sha256": "a71f25d2ba951c037368c5e0cf89158271052a066a027dc258166e1ac436b807",
+      "trace_sha256": "64efd5abf53b668a727a50c845b5b6f7260ac59c1aa7a23a30ae2bea9898c1f7",
+      "report_sha256": "bcb3e77e57e7e981a17de7b4088ee01c60f7928214197a62ae5504c84c513215"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k0",
+      "rows": 40,
+      "raw": 120,
+      "expected_raw": 120,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [],
+      "summary_sha256": "26e5fc14c945c29c8552df6e36548ffca97e2222e8af5f115147705688b61e5c",
+      "trace_sha256": "629cbed60efb1221583e1193484b7e300634fa6c9b78c070d538aeead9daa9cd",
+      "report_sha256": "735168c9a8dc4f47971283a55d1cab1eb36356a6457172b55e6667a8aff41772"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k1",
+      "rows": 40,
+      "raw": 480,
+      "expected_raw": 480,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "bec57ba658b0bf11302a012ff47f6fb38e0a0fdc76c566d0061e707bd228b36f",
+      "trace_sha256": "3993ca8957be2379370061066ee0dfd4c4edd4a385026d437410d20c980a067f",
+      "report_sha256": "a7538e8bd786958dd0ad53a320a3fd8c4d676afde146c9ba39967bd5e4bbc8a3"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k2",
+      "rows": 40,
+      "raw": 840,
+      "expected_raw": 840,
+      "gzip_error": null,
+      "identity_grid_ok": true,
+      "summary_mismatch_rows": 0,
+      "source_drift": [
+        "eyeai_experiment.py",
+        "eyeai_workflow.py"
+      ],
+      "summary_sha256": "7e4e39291268d780f4f8ea1e42d8e9e8dc2e5558532365c40de0486f718a2966",
+      "trace_sha256": "4b0e6d75a0a6dd619644cd92bbba9ef2ecbf0298d3b8f79d9454ba43fc511cd3",
+      "report_sha256": "0b55035ae96e9237c3a948ea24cd0d5144dd4bce5536efa254ebeaca898a9ddd"
+    }
+  ],
+  "selection_qualification": "The first attempts are retained with their flags; no flags or failure records are cleared",
+  "frozen_capture_archive_sha256": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7",
+  "fresh_capture_policy": "Use exactly the same two frozen forest capture stores and never change their environment or operator guards",
+  "case_workers": 6,
+  "execution_directory_policy": "Run with all long-lived output streams in a unique /tmp directory and copy only closed reconciled output files into the repository",
+  "source_policy": "All src/recoverml modules must remain byte-stable for every rerun; any flag prevents acceptance",
+  "concurrency_qualification": "Six case processes and other disclosed study processes may share this host so timings are descriptive",
+  "expected_rerun_rows": 320,
+  "expected_reused_rows": 160,
+  "expected_final_forest_rows": 480,
+  "expected_final_forest_requests": 8400,
+  "expected_complete_rows": 1920,
+  "expected_complete_requests": 36480,
+  "exclusions": "No exclusion based on scientific outcomes; every initial attempt and why it is superseded remains available"
+}

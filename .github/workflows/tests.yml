@@ -1,5 +1,19 @@
 name: Correctness and smoke benchmark
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - 'results/**'
+      - '**.md'
+      - 'reproducibility.txt'
+      - 'CHECKSUMS*.json'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'results/**'
+      - '**.md'
+      - 'reproducibility.txt'
+      - 'CHECKSUMS*.json'
 jobs:
   scientific-reproduction:
     runs-on: ubuntu-latest
