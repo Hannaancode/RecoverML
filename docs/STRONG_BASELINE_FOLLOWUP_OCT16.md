@@ -88,3 +88,10 @@ The runner now closes one complete gzip member per history and records a checked
 Compressed prefix checkpoints are published under results/validation/2026-10-16/shared_loss_replay_checkpoints
 They are partial execution evidence and do not claim that the full grid has finished
 Only the final closed and independently audited replay will supply the completed shared study claims
+
+The local replay was interrupted before its final publication as well
+The durable rerun is defined by .github/workflows/strong-baseline-followup.yml
+It runs all three fixed seed blocks on separate GitHub runners and makes new captures on each runner before recovery
+This preserves the strict recorded runtime contract rather than silently changing the environment of the old captured models
+Each block checks both full failure groupings and uploads its raw logs and captures and audits even if a later step fails
+These are fresh executions with new timestamps and not reconstructions of the lost local logs

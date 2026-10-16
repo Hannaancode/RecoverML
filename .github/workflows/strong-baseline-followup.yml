@@ -1,0 +1,98 @@
+name: Durable strongest baseline follow-up
+
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/strong-baseline-followup.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  multiview:
+    name: Full two-view study seed ${{ matrix.seed }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [20261016, 20261017, 20261018]
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      BLOCK_SEED: ${{ matrix.seed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned CPU dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e '.[paper]'
+          python -m pip check
+      - name: Record environment and fixed seed block
+        run: |
+          mkdir -p work/cloud_metadata
+          uname -a > work/cloud_metadata/uname.txt
+          lscpu > work/cloud_metadata/lscpu.txt
+          python -m pip freeze > work/cloud_metadata/packages.txt
+          git rev-parse HEAD > work/cloud_metadata/commit.txt
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from recoverml.core import environment
+          Path('work/cloud_metadata/environment.json').write_text(json.dumps(environment(), indent=2)+'\n')
+          seed = int(os.environ['BLOCK_SEED'])
+          separate = json.loads(Path('configs/multiview_followup_oct16.json').read_text())
+          shared = json.loads(Path('configs/multiview_shared_followup_oct16.json').read_text())
+          for protocol in (separate, shared):
+              protocol['seeds'] = [seed]
+              protocol['cloud_scope'] = 'Fresh captures and replay on this GitHub runner; one fixed seed block of the complete grid'
+          shared['capture_input'] = 'work/separate/captures'
+          Path('work/separate_protocol.json').write_text(json.dumps(separate, indent=2)+'\n')
+          Path('work/shared_protocol.json').write_text(json.dumps(shared, indent=2)+'\n')
+          PY
+      - name: Check implementation and release bytes
+        if: matrix.seed == 20261016
+        run: |
+          python -m unittest discover -s tests -v > work/full_suite.txt 2>&1
+          python scripts/verify_release.py --output work/release_check.json
+      - name: Fresh separate-entrypoint captures and complete comparisons
+        run: >-
+          python scripts/run_multiview_followup.py
+          --protocol work/separate_protocol.json
+          --output work/separate
+          --hyppo-cache work/pinned_hyppo
+      - name: Check separate-entrypoint evidence
+        run: python scripts/analyze_multiview_followup.py work/separate
+      - name: Complete shared-entrypoint comparisons
+        run: >-
+          python scripts/run_multiview_shared_followup.py
+          --protocol work/shared_protocol.json
+          --output work/shared
+          --hyppo-cache work/pinned_hyppo
+      - name: Check shared-entrypoint evidence
+        run: python scripts/analyze_multiview_followup.py work/shared
+      - name: Fresh paired timing on all 48 old conditions
+        if: matrix.seed == 20261016
+        run: python scripts/benchmark_dag_followup.py --output work/dag_timing
+      - name: Preserve raw logs and captures even after a failed step
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: strongest-baseline-seed-${{ matrix.seed }}
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            work/cloud_metadata
+            work/full_suite.txt
+            work/release_check.json
+            work/separate_protocol.json
+            work/shared_protocol.json
+            work/separate
+            work/shared
+            work/dag_timing

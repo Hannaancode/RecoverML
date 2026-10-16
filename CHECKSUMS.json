@@ -1,4 +1,5 @@
 {
+  ".github/workflows/strong-baseline-followup.yml": "7c853d5e7a04d8007f48800648b40ae522c8f9e68f49a6306bad4a05bd9da96f",
   ".github/workflows/tests.yml": "4e898e55e865ab9e4ecfbda9b6561c37b2776a32ed1354577723ab32122ba262",
   ".gitignore": "8307105152a259616357f230b5a0efbbbdb5d0f7e9f51df912f56c1f2077f2f9",
   "Makefile": "4caaa1023dab6325c31449b2c26c482215f4d7a044bc64fd3a484a611d1bb9c8",
@@ -65,7 +66,7 @@
   "docs/RELEASE_STATUS_OCT16.md": "601ac3bb4121be0a281d2b3a09326b4cf786b47f8c6c2a40e23f7698abd89012",
   "docs/RUBRIC_AUDIT.md": "16330706a887a2fe6df2c1cb20f65fdb5178c08b4f9678ff9e0dcb20347f0e9c",
   "docs/SCIENTIFIC_PROTOCOL_OCT15.md": "b0b8a3c04b477b8bf900d0df1b0e08ce5ad4da741adaaaf51314571f9e09b530",
-  "docs/STRONG_BASELINE_FOLLOWUP_OCT16.md": "349b88972f4f384b9fdbbc14b786d978600e827f4272972774458a9a1bbf38f9",
+  "docs/STRONG_BASELINE_FOLLOWUP_OCT16.md": "6e6c61c12b8c5c0de556350ddf2efbfa918b54d20ed4f27149417cc96306c836",
   "docs/SUBMISSION.md": "e05eabcaa0bbc0ee4a216e308f75783667e9fcce3fbfc3c97a678c5b6ba2a5c5",
   "docs/TRACTABLE_SUBCLASS_OCT15.md": "f0d3a266e0ed93b4ea3dcf6f6f1cc29edbf95f578f75def55abb7b72986e922b",
   "docs/VALIDATION_CHECKPOINT_OCT15.md": "4903e024efc2c51e99cd19c6e3d0bca15477973227fbcfbc4aff174d5ed5d9b3",
@@ -1056,6 +1057,7 @@
   "tests/test_scientific_negative.py": "cf5408f8fd7cf7f68107c98da623c0aa9612fcf015557f2193176b0b505b8b5d",
   "tests/test_scientific_workflows.py": "8136b6e23445ecfcb04a11969223005edcb8a7e257d712d215274362611243aa",
   "tests/test_torch.py": "d6fee42273710577bba17ed7d7065b1c111a1e456ab766265c0c9a1ad0213035",
+  "tests/test_trace_checkpoints.py": "05c3dde5c67773592e7f6a573d6c367da7b22cce970f190a37897d8916e49e75",
   "tests/test_witness.py": "fa24068513b0ddf3804ac02d6658904718daf6a96cebeb75ca8eedc86c759898",
   "tests/test_witness_optimizer.py": "495c7822efb8c3e49fb5c0bf93c742ccd36261205de9d22c0a49725f165a9e67"
 }
