@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "seed": 20261017,
+  "histories": 1,
+  "native_commands": 2,
+  "exact_target_checks": 64,
+  "source_changed": [],
+  "comparisons": [
+    {
+      "history": "wine-s20261017-v16-concat0",
+      "median_s": {
+        "RecoverML_native": 1.2762505610000119,
+        "DVC_native_batch": 2.275171340000014
+      },
+      "dvc_to_recoverml_ratio": 1.7826995807291113
+    }
+  ],
+  "closed_evidence_sha256": {
+    "source_snapshot.tar.gz": "bcfea12a77898f0734c9539b2036a855bf4d2ea57b5d725bf45c3a0608c5a19b",
+    "case_receipts.tar.gz": "436be6c1f3b45af6554ab70c817f0acfc4725d2ec76ebc2904009ff6299b6241",
+    "commands.json": "61230d25501d7d41b94a615b92628b2c9f21dfadb689b3cc06714271c6da8cbd",
+    "protocol.json": "e92bc434adbb902595e76a3ef9f4495f63f873d60d9fc0bfe854a979dc70eec7",
+    "captures.tar.gz": "762ef545ace4e59550ec2e961432a8cd4e03441f50b99c81c039b26f1ef22d7f",
+    "run_start.json": "969950b1b849bb2abfa11cf9f7835db1521bb856c6bc7c2f89c348b4e71d6e23",
+    "raw_recovery.jsonl": "721d3efbf022a0146f056c84f9bf0a12936a7327eca9fb5efd8827318122d956"
+  },
+  "qualification": [
+    "Chosen after existing local-search storage findings",
+    "Constructed histories",
+    "DVC batch is an authored native pipeline control, not all possible DVC integrations",
+    "One runner per seed and three paired repetitions are descriptive",
+    "Storage equality is preserved",
+    "Latency combines orchestration and replay; core times are separate"
+  ]
+}

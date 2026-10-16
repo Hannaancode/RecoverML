@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "baseline_revision": 4,
+  "file_export_path": "Both worker integrations can export fully retained target files through the same standard-library SHA256 path, without loading model objects. Missing targets use the unchanged numerical replay path. DVC retains paid cache objects as in revision3.",
+  "retained_cache_policy": "DVC may keep native cache objects for retained payloads, hard-linked to the paid store. Delete all other cache and run-cache objects. Verify unique initial payload inode bytes equal paid payload bytes for both methods.",
+  "purpose": "Untimed acceptance smoke; excluded from the fixed-grid results",
+  "datasets": [
+    "wine"
+  ],
+  "seeds": [
+    20261016,
+    20261017,
+    20261018
+  ],
+  "versions": [
+    16
+  ],
+  "concat_materialized": [
+    false
+  ],
+  "repetitions": 1,
+  "methods": [
+    "RecoverML_native",
+    "DVC_native_batch"
+  ],
+  "primary_outcome": "Median whole-history subprocess wall time including CLI bootstrap and common parent SHA256 verification, among methods producing every exact target file from identical retained payloads",
+  "secondary_outcomes": [
+    "worker core time",
+    "common retained bytes",
+    "child CPU time"
+  ],
+  "acceptance": "Report all 36 histories and paired repetitions, including losses and ties. No universal or significance claim from descriptive timings. Do not infer algorithmic superiority from CLI overhead.",
+  "failure_contract": "Both preprocessing views are declared unavailable. Frozen retained DVC frontiers remain usable. A dispatched lost producer raises. This does not physically delete an implementation module.",
+  "fairness": "Same mandatory roots and selected payloads; DVC uses one batched downstream replay stage, copy cache, no run-cache and no cached downstream objects. Both must materialize and SHA256-check the same target files. Setup is excluded and reported separately. OS file cache is not flushed.",
+  "limitations": [
+    "Chosen after existing local-search storage findings",
+    "Constructed histories",
+    "DVC batch is an authored native pipeline control, not all possible DVC integrations",
+    "One runner per seed and three paired repetitions are descriptive",
+    "Storage equality is preserved",
+    "Latency combines orchestration and replay; core times are separate"
+  ]
+}

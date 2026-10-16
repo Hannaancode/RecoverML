@@ -107,3 +107,7 @@ It runs all three fixed seed blocks on separate GitHub runners and makes new cap
 This preserves the strict recorded runtime contract rather than silently changing the environment of the old captured models
 Each block checks both full failure groupings and uploads its raw logs and captures and audits even if a later step fails
 These are fresh executions with new timestamps and not reconstructions of the lost local logs
+
+## Final native comparator follow-up
+
+The separate paired native DVC study is complete. Read [its full protocol, final v4 results and preserved baseline corrections](../results/research/native_frontier_cloud_oct16/RESULTS.md) and the [comparator decision](COMPARATOR_DECISION_OCT16.md). The complete cloud storage rerun supersedes the historical interrupted replay status above.

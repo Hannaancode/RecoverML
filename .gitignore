@@ -8,6 +8,9 @@ results/**/policy_stores/
 results/**/repair_stores/
 results/research/multiview*_oct16*/captures/
 results/research/multiview*_oct16*/cases/
+results/research/native_frontier_cloud_oct16/v1/
+results/research/native_frontier_cloud_oct16/v2/
+results/research/native_frontier_cloud_oct16/v3/
 results/smoke*/
 results/development_run/
 results/final/

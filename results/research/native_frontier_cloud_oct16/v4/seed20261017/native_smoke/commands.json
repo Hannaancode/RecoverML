@@ -1,0 +1,88 @@
+[
+  {
+    "label": "wine-s20261017-v16-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-yv1fbzqv/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6055085910000031,
+    "cpu_s": 0.4558769999999999,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261017-v16-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-yv1fbzqv/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.38969671699999253,
+    "cpu_s": 0.38917,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261017-v16-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-yv1fbzqv/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6547536829999956,
+    "cpu_s": 0.6204660000000002,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261017-v16-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-yv1fbzqv/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.273997457000007,
+    "cpu_s": 2.236998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261017-v16-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-yv1fbzqv/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2752579770000096,
+    "cpu_s": 1.2749409999999997,
+    "stdout": "",
+    "stderr": ""
+  }
+]

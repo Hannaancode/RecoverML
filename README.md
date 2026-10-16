@@ -4,13 +4,22 @@ RecoverML helps a machine learning pipeline save space and restore earlier versi
 
 For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
 It explains Linux and Windows with WSL2 and installation and every run from start to finish
-The earlier complete release is recorded in the [publication record](docs/PUBLICATION_OCT14.json) and the [current handover](docs/WORK_HANDOVER.md) lists which new files still need publication
+The earlier complete release is recorded in the [publication record](docs/PUBLICATION_OCT14.json) and the [current handover](docs/WORK_HANDOVER.md) records completed work and remaining limitations
 
 It records the data and model files and the links between them and stores identical parts once
 The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
 Every loaded or rebuilt artifact is checked against its original SHA-256 fingerprint
 
 ## Latest checked progress on 16 October
+
+The complete three-seed correlated-loss rerun is saved in this repository: RecoverML uses less storage than strong local search in **9 of 36** shared-loss comparisons, ties 27, and saves up to **48.74%**. Its median paired planning speedup is **16.88x**. The manual optimal frontier matches our storage in every comparison.
+
+The final native DVC batch comparison uses the same optimal paid payloads. RecoverML is faster in all 36 constructed histories: median paired speedup **2.19x with recomputation** and **9.91x when all target files are retained**. All 12,096 target-file hash checks pass. These are cold local CLI measurements; earlier mixed and superseded controls are retained.
+
+Read the [complete storage evidence](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native protocol and evidence](results/research/native_frontier_cloud_oct16/RESULTS.md), and [comparator decision](docs/COMPARATOR_DECISION_OCT16.md). These establish specific systems advantages using established optimization methods. They do not establish universal dominance or a new general optimization algorithm.
+
+The following older studies retain their original populations and outcomes:
+
 
 We completed the new scientific study with 1920 conditions and 36480 real requests and zero unexpected outcomes
 We completed the EyeAI inspired study with 10920 exact recoveries and the native DVC control restored all 32 target files after the older processing code was removed
@@ -21,7 +30,7 @@ Strong simple retention methods match our minimum storage on these histories and
 Read the [larger storage results](results/research/gigabyte_letter_oct16/RESULTS.md) and [scientific comparison](results/research/scientific_complete_oct16/RESULTS.md) and [retinal study](results/research/eyeai_complete_oct15/RESULTS.md)
 Read the [remaining tasks and file map](docs/WORK_HANDOVER.md) before continuing in a new conversation
 The [contribution decision](docs/CONTRIBUTION_POSITIONING_OCT16.md) and [internal scientific review](docs/INTERNAL_REVIEW_OCT16.md) distinguish supported claims from unresolved novelty. The [course review packet](docs/COURSE_PEER_REVIEW_PACKET.md) is prepared; genuine human course reviews await assignment.
-The current branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Thirteen missing originals are restored and one original archive container remains unavailable with a separately verified payload reconstruction. See the release status for this exact distinction. Run `python scripts/materialize_evidence.py` after clone to assemble the byte-identical retinal archive from its transport parts.
+Main now contains the research history, including the real October 15/16 commits. The research branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Thirteen missing originals are restored and one original archive container remains unavailable with a separately verified payload reconstruction. See the release status for this exact distinction. Run `python scripts/materialize_evidence.py` after clone to assemble the byte-identical retinal archive from its transport parts.
 
 ## What we have achieved
 

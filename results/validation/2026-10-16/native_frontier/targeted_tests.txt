@@ -1,0 +1,18 @@
+test_changed_optimum_and_planner_median_are_rejected (test_cloud_followup.CloudFollowupTests.test_changed_optimum_and_planner_median_are_rejected) ... ok
+test_frozen_grid_rejects_missing_controls_and_method_replacement (test_cloud_followup.CloudFollowupTests.test_frozen_grid_rejects_missing_controls_and_method_replacement) ... ok
+test_shared_execution_cannot_be_relabelled_or_count_method_twice (test_cloud_followup.CloudFollowupTests.test_shared_execution_cannot_be_relabelled_or_count_method_twice) ... ok
+test_both_backends_restore_all_exact_target_files_from_features (test_native_frontier.NativeFrontierTests.test_both_backends_restore_all_exact_target_files_from_features) ... ok
+test_missing_retired_view_cannot_be_silently_recomputed (test_native_frontier.NativeFrontierTests.test_missing_retired_view_cannot_be_silently_recomputed) ... ok
+test_retained_native_cache_is_a_hard_link_and_extra_objects_are_removed (test_native_frontier.NativeFrontierTests.test_retained_native_cache_is_a_hard_link_and_extra_objects_are_removed) ... ok
+test_corrupt_retention_or_existing_output_fails_closed (test_file_export.FileExportTests.test_corrupt_retention_or_existing_output_fails_closed) ... ok
+test_export_is_exact_without_deserializing_values_or_asserting_runtime_compatibility (test_file_export.FileExportTests.test_export_is_exact_without_deserializing_values_or_asserting_runtime_compatibility) ... ok
+test_import_does_not_load_numerical_or_model_libraries (test_file_export.FileExportTests.test_import_does_not_load_numerical_or_model_libraries) ... ok
+test_missing_target_returns_fallback_without_creating_output (test_file_export.FileExportTests.test_missing_target_returns_fallback_without_creating_output) ... ok
+test_duplicate_replacement_and_missing_requests_are_rejected (test_native_audit.NativeAuditTests.test_duplicate_replacement_and_missing_requests_are_rejected) ... ok
+test_corrupt_part_and_unsafe_member_are_rejected (test_native_materialization.NativeMaterializationTests.test_corrupt_part_and_unsafe_member_are_rejected) ... ok
+test_roundtrip_preserves_original_bytes_and_refuses_overwrite (test_native_materialization.NativeMaterializationTests.test_roundtrip_preserves_original_bytes_and_refuses_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.929s
+
+OK

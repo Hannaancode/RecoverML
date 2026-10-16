@@ -1,0 +1,1898 @@
+[
+  {
+    "label": "wine-s20261016-v4-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.41942856299999676,
+    "cpu_s": 0.41228699999999996,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.37223508700000707,
+    "cpu_s": 0.3716769999999999,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.4942095510000115,
+    "cpu_s": 0.48609000000000013,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06435424200000739,
+    "cpu_s": 0.06396399999999991,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5803623520000087,
+    "cpu_s": 0.577534,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06237064599999087,
+    "cpu_s": 0.062000000000000055,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5764035330000041,
+    "cpu_s": 0.5743190000000002,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06364974800000311,
+    "cpu_s": 0.06330899999999984,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-uf609b_n/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5534576029999982,
+    "cpu_s": 0.551479,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.4378623699999906,
+    "cpu_s": 0.4298350000000002,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.38314641000000904,
+    "cpu_s": 0.3825109999999996,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5008381079999964,
+    "cpu_s": 0.49428300000000025,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06530461100000196,
+    "cpu_s": 0.06494399999999967,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5941657060000125,
+    "cpu_s": 0.591145,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5890531440000046,
+    "cpu_s": 0.5870150000000001,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06556403299998692,
+    "cpu_s": 0.06516699999999975,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06523519599998906,
+    "cpu_s": 0.06482800000000033,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v4-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-i4g1pyhu/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5846352200000098,
+    "cpu_s": 0.5825459999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42897838899999385,
+    "cpu_s": 0.4211909999999994,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.36056002200000137,
+    "cpu_s": 0.3599950000000005,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6155397950000037,
+    "cpu_s": 0.5947720000000007,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.126042971000004,
+    "cpu_s": 2.104571,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2225818419999968,
+    "cpu_s": 1.2210549999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2067036469999977,
+    "cpu_s": 1.2062659999999994,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.1109773529999956,
+    "cpu_s": 2.0893639999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2170243089999957,
+    "cpu_s": 1.2166940000000004,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-k8f3j9dz/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.104533315999987,
+    "cpu_s": 2.0806070000000005,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42114083100000244,
+    "cpu_s": 0.41356000000000037,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.35867745000000184,
+    "cpu_s": 0.3579560000000015,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.603707177000004,
+    "cpu_s": 0.582380999999998,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.087325851000003,
+    "cpu_s": 2.0644220000000004,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2221590199999923,
+    "cpu_s": 1.2215399999999974,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.1594060879999972,
+    "cpu_s": 2.1366130000000005,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2071680650000047,
+    "cpu_s": 1.2056900000000006,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.2089011589999927,
+    "cpu_s": 1.2084640000000029,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v16-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-9fvz9ayy/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.078802877000001,
+    "cpu_s": 2.0587829999999983,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42824372900000185,
+    "cpu_s": 0.41491399999999956,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3685821309999966,
+    "cpu_s": 0.3680109999999992,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 1.0622216249999923,
+    "cpu_s": 0.9837610000000012,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.9442920089999944,
+    "cpu_s": 3.8692109999999964,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.5747346790000023,
+    "cpu_s": 1.5734200000000058,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.5665618210000076,
+    "cpu_s": 1.5660710000000009,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.950280247000009,
+    "cpu_s": 3.8678939999999997,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.569032137000022,
+    "cpu_s": 1.5675850000000011,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ksoyb4h1/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.9367475329999877,
+    "cpu_s": 3.864781999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.4208651840000073,
+    "cpu_s": 0.41338799999999765,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3591607730000135,
+    "cpu_s": 0.35860699999999923,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 1.0811936369999842,
+    "cpu_s": 0.9958489999999998,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.8781897400000105,
+    "cpu_s": 3.8116930000000053,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.5641332460000115,
+    "cpu_s": 1.5636289999999917,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.5689483259999975,
+    "cpu_s": 1.567453999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.9178495270000155,
+    "cpu_s": 3.8382190000000023,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.545952944000021,
+    "cpu_s": 1.545521000000008,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261016-v64-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-xs3lrmuo/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 3.901560103999998,
+    "cpu_s": 3.818583999999994,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42279561000000854,
+    "cpu_s": 0.4146999999999963,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.36699581700000294,
+    "cpu_s": 0.3664679999999976,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5037142600000095,
+    "cpu_s": 0.49827300000001173,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06506982599998423,
+    "cpu_s": 0.06468699999999217,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5887488559999952,
+    "cpu_s": 0.5854870000000005,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5839297779999981,
+    "cpu_s": 0.5815809999999999,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.064167996000009,
+    "cpu_s": 0.06380100000001221,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06384729100000186,
+    "cpu_s": 0.06344799999999395,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-h772hyty/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6001035800000238,
+    "cpu_s": 0.5979150000000004,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.41389996999998857,
+    "cpu_s": 0.40730700000000297,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3639555519999931,
+    "cpu_s": 0.3634309999999914,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.48843678899999077,
+    "cpu_s": 0.4824959999999976,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06453129300001592,
+    "cpu_s": 0.0641430000000014,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5953015579999885,
+    "cpu_s": 0.5837839999999943,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.571769579000005,
+    "cpu_s": 0.5692190000000039,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06362406500002749,
+    "cpu_s": 0.06330800000000636,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06328060699999583,
+    "cpu_s": 0.06297399999999698,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v4-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-238bp_o_/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.5580399720000173,
+    "cpu_s": 0.5559680000000071,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42893895700001394,
+    "cpu_s": 0.4110340000000008,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.35361939300000245,
+    "cpu_s": 0.3530919999999895,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6417596210000056,
+    "cpu_s": 0.6221249999999969,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6668410320000078,
+    "cpu_s": 0.6632590000000107,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06628085100001613,
+    "cpu_s": 0.06595199999999579,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.0666997820000006,
+    "cpu_s": 0.06635099999999738,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6926766780000264,
+    "cpu_s": 0.6903420000000011,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6731296730000054,
+    "cpu_s": 0.6704840000000019,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-by9907e4/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06712301100000673,
+    "cpu_s": 0.06669700000000489,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.4388601880000067,
+    "cpu_s": 0.4312350000000009,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3730490500000201,
+    "cpu_s": 0.3725239999999985,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6565444350000007,
+    "cpu_s": 0.6348250000000064,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06689224199999444,
+    "cpu_s": 0.06651599999999291,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6904216469999938,
+    "cpu_s": 0.6862739999999974,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6794025659999932,
+    "cpu_s": 0.6771929999999884,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06641355099998236,
+    "cpu_s": 0.06607200000000546,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6940678119999859,
+    "cpu_s": 0.6916790000000077,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v16-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-dw4mbrlf/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 0.06560783500000866,
+    "cpu_s": 0.0652290000000022,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42053893099998163,
+    "cpu_s": 0.4128259999999955,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3540074299999958,
+    "cpu_s": 0.35350299999998924,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 1.0708035250000023,
+    "cpu_s": 0.9816970000000111,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.9015082330000155,
+    "cpu_s": 1.9002320000000026,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.251586483000011,
+    "cpu_s": 4.174013000000002,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.8862246770000013,
+    "cpu_s": 1.8858079999999973,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.277062562999987,
+    "cpu_s": 4.195919999999987,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.9312711030000003,
+    "cpu_s": 1.9298620000000142,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat0:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-6dui081q/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.274942764999992,
+    "cpu_s": 4.199910000000003,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.42687297399999125,
+    "cpu_s": 0.4197329999999937,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.3669296099999997,
+    "cpu_s": 0.3663789999999949,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 1.0561377340000035,
+    "cpu_s": 0.9804420000000107,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.9308974999999862,
+    "cpu_s": 1.930513999999988,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.213556455999992,
+    "cpu_s": 4.131528000000003,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:RecoverML_native:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.87882337100001,
+    "cpu_s": 1.8773550000000085,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:DVC_native_batch:1",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.1821504080000125,
+    "cpu_s": 4.100023999999991,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:DVC_native_batch:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 4.193406691999996,
+    "cpu_s": 4.131575000000012,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "breast_cancer-s20261016-v64-concat1:RecoverML_native:2",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-gopcwstr/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.9330758600000024,
+    "cpu_s": 1.9316949999999906,
+    "stdout": "",
+    "stderr": ""
+  }
+]

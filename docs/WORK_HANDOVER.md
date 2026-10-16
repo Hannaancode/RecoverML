@@ -1,19 +1,17 @@
 # RecoverML continuation checklist and file map
 
-Latest completed follow-up: `results/research/strong_baseline_cloud_oct16`
-preserves all three successful cloud seed blocks from run38945172079 at00bd37a.
-The cross-block/source/raw-log audit passes:72 paired history/contract cases,
-648 rows,1,944 planner calls,216 flow proofs,19,652 unique actual requests,
-16,110 exact,3,542 expected blocked and zero unexpected. Shared-loss storage
-beats local in9/36 cases by up to48.7380%, ties27; all18 concat controls and
-all72 manual-frontier comparisons tie. Median paired local planning speedups
-are11.92/16.88 for separate/shared losses. Old48-condition timing retains four
-slower cases. These fresh results supersede the partial/lost-run status below.
-Run `scripts/audit_cloud_followup.py` as described in the new RESULTS.md.
-An independently specified native DVC batch latency study is in progress;
-its first setup failure is preserved and must not be counted as a DVC loss.
-Human reviews, the original-container provenance gap and manuscript integration
-remain open. No universal dominance or weighted overall winner is established.
+Latest completed follow-ups are permanently saved under:
+- `results/research/strong_baseline_cloud_oct16`: all three seed blocks, 72 history/contract cases, 648 method rows, 1,944 planner calls, 216 flow proofs, and 19,652 actual requests (16,110 exact, 3,542 expected blocked, zero unexpected). Shared-loss storage: 9/36 wins over local search, 27 ties, maximum 48.7380%; all 18 combined-table controls and all 72 manual frontiers tie. Median paired local planning speedups: 11.92x separate, 16.88x shared.
+- `results/research/native_frontier_cloud_oct16`: final v4 run 38953068522, runtime source f00981ea84357199f0bde6916a5536684b1ed567. Same optimal paid payloads as batched native DVC; 36/36 faster, 216 commands, 12,096 exact file checks. Median paired speedups: 2.1856x for 18 recomputation histories, 9.9067x for 18 fully retained histories. Cold CLI scope only.
+- Superseded native v1/v2/v3 evidence and the first setup failure are preserved. Correct-cache v3 had 18 DVC wins for retained targets; the standard-library file export in v4 addresses that overhead. No pooling of development versions.
+- Main now contains the research history with original commit dates; no history was fabricated or backdated. The final evidence commit is identifiable from Git history without embedding its own hash.
+- Run both complete follow-up checkers from their RESULTS.md instructions. CI now rechecks both complete published grids.
+
+These completed fresh reruns supersede the lost/partial-run statuses in historical notes below; they do not reconstruct missing old logs.
+The comparison decision is in `docs/COMPARATOR_DECISION_OCT16.md`.
+Human course reviews (zero assigned/completed), one original Letter archive-container gap, and manuscript integration remain open.
+The payload-equivalent Letter reconstruction is checked separately; `release_complete` remains false.
+No universal dominance, weighted overall winner or new general optimization theory is established.
 
 Updated 16 October 2026 for Abdul Hannaan. Paper drafting and formatting remain deferred. This file records the state needed to continue in another conversation without reconstructing decisions from chat.
 
@@ -21,7 +19,7 @@ Updated 16 October 2026 for Abdul Hannaan. Paper drafting and formatting remain 
 
 - The checked DAG exact engine and the complete first multiview grid are published. The first grid has 36 constructed histories and 324 method conditions and 12948 actual requests with zero unexpected outcomes. Strong local search ties 30 storage conditions and loses six by only 129 bytes. The manual frontier matches all 36 minima. Read `docs/STRONG_BASELINE_FOLLOWUP_OCT16.md` and the raw evidence at `results/research/multiview_followup_oct16`.
 - The locally completed correlated-loss study and its later replay lost their unpublished files after chat resets. Earlier chat storage wins and timings must not be treated as a closed published study. Only the four-history prefix at `results/validation/2026-10-16/shared_loss_replay_checkpoints/closed_prefix_04.tar.gz` is published. It is partial evidence and not proof that the full grid finished.
-- A durable complete rerun was launched from commit `00bd37a8addd6cea919edf2189c3246811bb669e`. GitHub Actions run https://github.com/Hannaancode/RecoverML/actions/runs/38945172079 has three fixed seed jobs. Each makes fresh captures on its own runner and evaluates both complete failure groupings under that recorded runtime. This avoids changing the environment contract of old captured models. At this checkpoint all three jobs are running and no final cloud result is claimed. Retrieve and independently check all three artifacts before publishing numerical claims. The artifacts have a 90 day retention limit and the final raw logs and reports should be copied into the repository.
+- A durable complete rerun was launched from commit `00bd37a8addd6cea919edf2189c3246811bb669e`. GitHub Actions run https://github.com/Hannaancode/RecoverML/actions/runs/38945172079 has three fixed seed jobs. Each makes fresh captures on its own runner and evaluates both complete failure groupings under that recorded runtime. This avoids changing the environment contract of old captured models. Historical launch status: all three jobs subsequently finished and their artifact bytes, raw logs, captures and reports were copied into the repository and checked. See the completed follow-up above.
 
 - The scientific matrix at `results/research/scientific_complete_oct16` passed independent reconciliation of 1920 conditions and 36480 actual requests with zero unexpected outcomes. Both exact formulations agree on all 48 compared minima. Strong local search matches those minima in all 48 full budget cases. Below that budget the exact complete recovery objective does not maximize partial coverage.
 - The EyeAI inspired STARE study is at `results/research/eyeai_complete_oct15` despite completing on 16 October. All 540 rows and 10920 requests reconcile and all requests recover exactly. There are 624 native DVC checkout receipts. RecoverML beats simple greedy in 12 of 108 minimum storage comparisons and ties it in 96 and ties strong local search in all 108. The simple feature frontier formula also matches all 108 optima. These are constructed histories from 20 public images and not the private EyeAI dataset.
@@ -36,7 +34,7 @@ Repository: https://github.com/Hannaancode/RecoverML
 
 Current research branch: `research/scientific-validation-oct15`
 
-The fresh-clone continuation started at `cbd26d476d3c6313b456be7bd4bdc769ada637f7`, which added all three raw request logs after this handover's first version. Inspect `git rev-parse HEAD` on the research branch for the documentation/verification follow-up. Main has the older Oct14 checkpoint and must not be assumed to contain today's files.
+The fresh-clone continuation started at `cbd26d476d3c6313b456be7bd4bdc769ada637f7`, which added all three raw request logs after this handover's first version. Inspect `git rev-parse HEAD` on the research branch for the documentation/verification follow-up. This was the original continuation checkpoint; main has since been advanced to include the research history and today's work.
 
 The research branch contains implementation, frozen protocols, the UCI Letter input, sensitivity/component/cloud evidence, final scientific/retinal/Letter reports, and all three raw request logs. Publication is still incomplete: the exact missing original archives and files are listed in [release status](RELEASE_STATUS_OCT16.md). Local files or unreferenced Git objects do not establish publication. The new verification scripts check committed Git bytes, so Windows newline conversion cannot silently change the identity being audited.
 

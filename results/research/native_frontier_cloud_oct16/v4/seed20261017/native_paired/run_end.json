@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "seed": 20261017,
+  "histories": 12,
+  "native_commands": 72,
+  "exact_target_checks": 4032,
+  "source_changed": [],
+  "comparisons": [
+    {
+      "history": "breast_cancer-s20261017-v16-concat0",
+      "median_s": {
+        "RecoverML_native": 0.0632312719999959,
+        "DVC_native_batch": 0.6970407290000082
+      },
+      "dvc_to_recoverml_ratio": 11.023670834900386
+    },
+    {
+      "history": "breast_cancer-s20261017-v16-concat1",
+      "median_s": {
+        "RecoverML_native": 0.06396323999999254,
+        "DVC_native_batch": 0.7253573300000085
+      },
+      "dvc_to_recoverml_ratio": 11.340221821159982
+    },
+    {
+      "history": "breast_cancer-s20261017-v4-concat0",
+      "median_s": {
+        "RecoverML_native": 0.060366454000018166,
+        "DVC_native_batch": 0.5868690329999993
+      },
+      "dvc_to_recoverml_ratio": 9.721774166158951
+    },
+    {
+      "history": "breast_cancer-s20261017-v4-concat1",
+      "median_s": {
+        "RecoverML_native": 0.061479646000009325,
+        "DVC_native_batch": 0.5929794230000027
+      },
+      "dvc_to_recoverml_ratio": 9.645133984667263
+    },
+    {
+      "history": "breast_cancer-s20261017-v64-concat0",
+      "median_s": {
+        "RecoverML_native": 2.216163941000019,
+        "DVC_native_batch": 4.736794737999986
+      },
+      "dvc_to_recoverml_ratio": 2.137384626817166
+    },
+    {
+      "history": "breast_cancer-s20261017-v64-concat1",
+      "median_s": {
+        "RecoverML_native": 2.2049397389999967,
+        "DVC_native_batch": 4.688745907000026
+      },
+      "dvc_to_recoverml_ratio": 2.1264734922535826
+    },
+    {
+      "history": "wine-s20261017-v16-concat0",
+      "median_s": {
+        "RecoverML_native": 1.2442263389999795,
+        "DVC_native_batch": 2.22601936800001
+      },
+      "dvc_to_recoverml_ratio": 1.7890791234889996
+    },
+    {
+      "history": "wine-s20261017-v16-concat1",
+      "median_s": {
+        "RecoverML_native": 1.2515516209999902,
+        "DVC_native_batch": 2.174265104
+      },
+      "dvc_to_recoverml_ratio": 1.7372556333415647
+    },
+    {
+      "history": "wine-s20261017-v4-concat0",
+      "median_s": {
+        "RecoverML_native": 0.061790362000010646,
+        "DVC_native_batch": 0.602746578999998
+      },
+      "dvc_to_recoverml_ratio": 9.754702181545628
+    },
+    {
+      "history": "wine-s20261017-v4-concat1",
+      "median_s": {
+        "RecoverML_native": 0.06069095999998808,
+        "DVC_native_batch": 0.6085532029999996
+      },
+      "dvc_to_recoverml_ratio": 10.027081512635805
+    },
+    {
+      "history": "wine-s20261017-v64-concat0",
+      "median_s": {
+        "RecoverML_native": 1.6603673640000238,
+        "DVC_native_batch": 4.164391844999983
+      },
+      "dvc_to_recoverml_ratio": 2.508114731289023
+    },
+    {
+      "history": "wine-s20261017-v64-concat1",
+      "median_s": {
+        "RecoverML_native": 1.6646746379999797,
+        "DVC_native_batch": 4.127819411000019
+      },
+      "dvc_to_recoverml_ratio": 2.4796553733523443
+    }
+  ],
+  "closed_evidence_sha256": {
+    "source_snapshot.tar.gz": "d9b0dbf4579c3d7a0c64ad99de58b95c59eb13fd74e722e1cd0976e055a833bc",
+    "case_receipts.tar.gz": "3321f9e0a0db175cb97480020566d13c9bb6c7697a0a791086178459502bb931",
+    "commands.json": "23cf78e456bf7226af9a62b42ce5dee58e18bddb1ef257f5368ba920f03077a6",
+    "protocol.json": "3a8f6e55f491f34c0f8b173dc6f21033b936aa031cde07173de957c71e78d0ab",
+    "captures.tar.gz": "71d3859b59834a174a7cf8e65ccfbe582f8cb7cab5c5f3ab6e90b6d3a7edd350",
+    "run_start.json": "4897429b81c9b7b411c4e53902d4cd53a843e406cd0ccca546b65889033cb374",
+    "raw_recovery.jsonl": "40640bb86e598f67ce3a3b15c370d8497a21763eb641e9fe4a830def855407dc"
+  },
+  "qualification": [
+    "Chosen after existing local-search storage findings",
+    "Constructed histories",
+    "DVC batch is an authored native pipeline control, not all possible DVC integrations",
+    "One runner per seed and three paired repetitions are descriptive",
+    "Storage equality is preserved",
+    "Latency combines orchestration and replay; core times are separate"
+  ]
+}

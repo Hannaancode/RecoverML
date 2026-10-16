@@ -1,0 +1,88 @@
+[
+  {
+    "label": "wine-s20261018-v16-concat0:init",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ilmubval/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.48232104500000617,
+    "cpu_s": 0.458047,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261018-v16-concat0:cache-type",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ilmubval/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.40284571600000163,
+    "cpu_s": 0.402173,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261018-v16-concat0:commit",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "commit",
+      "-f"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ilmubval/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 0.6940837639999984,
+    "cpu_s": 0.6592450000000001,
+    "stdout": "Generating lock file 'dvc.lock'\nUpdating lock file 'dvc.lock'\n",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261018-v16-concat0:RecoverML_native:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "/home/runner/work/RecoverML/RecoverML/scripts/native_frontier_worker.py",
+      "--engine",
+      "recoverml",
+      "--workspace",
+      ".",
+      "--receipt",
+      "worker.json"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ilmubval/RecoverML_native",
+    "returncode": 0,
+    "elapsed_s": 1.3545070849999945,
+    "cpu_s": 1.3528699999999998,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "label": "wine-s20261018-v16-concat0:DVC_native_batch:0",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.12.15/x64/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--no-run-cache",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-paired-ilmubval/DVC_native_batch",
+    "returncode": 0,
+    "elapsed_s": 2.4003395109999985,
+    "cpu_s": 2.366765,
+    "stdout": "",
+    "stderr": ""
+  }
+]

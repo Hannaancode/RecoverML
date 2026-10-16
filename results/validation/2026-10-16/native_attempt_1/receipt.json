@@ -1,0 +1,65 @@
+{
+  "status": "SETUP_FAILURE_NO_TIMING_TRIALS",
+  "run_id": 38947760758,
+  "source_commit": "b8ae201df4adbe7a89bade64d3f484f6fb1102e7",
+  "error": "Capture returns three values, initial runner unpacked two. Fixed without changing protocol; no method loss is inferred.",
+  "artifacts": [
+    {
+      "id": 12067582224,
+      "name": "native-paired-seed-20261017",
+      "size_in_bytes": 112720,
+      "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12067582224",
+      "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12067582224/zip",
+      "expired": false,
+      "created_at": "2026-10-16T18:30:41Z",
+      "expires_at": "2027-01-14T18:29:40Z",
+      "updated_at": "2026-10-16T18:30:41Z",
+      "digest": "sha256:4179c204a40de6cf578ca43bcbf98b0f02033c8e9f3ae2b3073b57066a89d071",
+      "workflow_run": {
+        "id": 38947760758,
+        "repository_id": 1403005739,
+        "head_repository_id": 1403005739,
+        "head_branch": "research/scientific-validation-oct15",
+        "head_sha": "b8ae201df4adbe7a89bade64d3f484f6fb1102e7"
+      }
+    },
+    {
+      "id": 12067231962,
+      "name": "native-paired-seed-20261018",
+      "size_in_bytes": 112644,
+      "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12067231962",
+      "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12067231962/zip",
+      "expired": false,
+      "created_at": "2026-10-16T18:30:38Z",
+      "expires_at": "2027-01-14T18:29:40Z",
+      "updated_at": "2026-10-16T18:30:38Z",
+      "digest": "sha256:cb88d2268df7a46af96783d50dd512f3c23bc34ace0b44534ffed6eb9218c2f3",
+      "workflow_run": {
+        "id": 38947760758,
+        "repository_id": 1403005739,
+        "head_repository_id": 1403005739,
+        "head_branch": "research/scientific-validation-oct15",
+        "head_sha": "b8ae201df4adbe7a89bade64d3f484f6fb1102e7"
+      }
+    },
+    {
+      "id": 12065908918,
+      "name": "native-paired-seed-20261016",
+      "size_in_bytes": 112652,
+      "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12065908918",
+      "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12065908918/zip",
+      "expired": false,
+      "created_at": "2026-10-16T18:30:35Z",
+      "expires_at": "2027-01-14T18:29:40Z",
+      "updated_at": "2026-10-16T18:30:35Z",
+      "digest": "sha256:18296813fe8954e830ffcfdfa4b0e7cdd0b5a11d7ba0b14fdedc2708a7ba3f84",
+      "workflow_run": {
+        "id": 38947760758,
+        "repository_id": 1403005739,
+        "head_repository_id": 1403005739,
+        "head_branch": "research/scientific-validation-oct15",
+        "head_sha": "b8ae201df4adbe7a89bade64d3f484f6fb1102e7"
+      }
+    }
+  ]
+}

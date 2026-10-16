@@ -3,13 +3,12 @@
 Subsequent complete evidence: the durable cloud follow-up at
 `results/research/strong_baseline_cloud_oct16/RESULTS.md` now establishes a
 specific local-search storage gap on exploratory constructed histories:
-9/36 shared-loss cases improve by up to48.7380%;27 tie, including all18 concat
+9/36 shared-loss cases improve by up to 48.7380%; 27 tie, including all 18 concat
 controls. All manual frontiers still tie. The new integer-cut implementation
 also supplies solver-free checkable optimality evidence and measured planning
 improvements on its supported subclass. These findings strengthen C2/C3 without
 making a new graph-theory claim. The earlier 48/108/2 ties below remain valid
-for their original study populations. The native latency comparison is a
-separate fixed protocol and is not a completed result in this memo yet.
+for their original study populations. The separate native latency protocol is now complete: same optimal paid payloads, RecoverML faster in all 36 constructed histories; median paired speedups 2.1856x for recomputation and 9.9067x for fully retained targets. Cold CLI scope and all earlier mixed controls are documented in [native results](../results/research/native_frontier_cloud_oct16/RESULTS.md). See [comparator decision](COMPARATOR_DECISION_OCT16.md) for supported priorities and limits.
 
 Review date: 16 October 2026. Evidence base: research branch at `85a086b`, including the recovered original scientific captures and summaries. This is an internal AI-assisted scientific assessment, not a genuine course review, an external expert endorsement, or a claim of exhaustive literature coverage. The existing manuscript/PDF is unchanged.
 

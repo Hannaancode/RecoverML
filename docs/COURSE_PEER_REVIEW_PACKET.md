@@ -10,10 +10,10 @@ The [tracker](COURSE_PEER_REVIEW_TRACKER.json) records these as separate activit
 
 ## Material to give a reviewer
 
-Use a fixed commit URL on `research/scientific-validation-oct15`, recording the actual commit in the tracker when the instructor assigns the review. The technical evidence reviewed here was at `85a086b`; later review-document commits must be separately identified.
+Use a fixed commit URL from the current published main/research history, recording the actual commit in the tracker when the instructor assigns the review. The technical evidence reviewed here was at `85a086b`; later review-document commits must be separately identified.
 
 1. `paper/RecoverML_capability_loss.md` and its PDF: clearly labelled **unchanged 14 October draft**. It has not yet integrated all final studies.
-2. Final result supplements: scientific `RESULTS.md`, retinal `RESULTS.md`, Letter `RESULTS.md`, native retinal DVC report, and `docs/RELEASE_STATUS_OCT16.md`.
+2. Final result supplements: scientific `RESULTS.md`, retinal `RESULTS.md`, Letter `RESULTS.md`, native retinal DVC report, complete storage follow-up and paired native frontier RESULTS.md files, and `docs/RELEASE_STATUS_OCT16.md`. Include `docs/COMPARATOR_DECISION_OCT16.md` as an optional internal assessment, not a reviewer verdict.
 3. `docs/CONTRIBUTION_POSITIONING_OCT16.md` and `docs/INTERNAL_REVIEW_OCT16.md`: optional author/internal assessments, explicitly separate from the reviewer's independent judgment. Ask the reviewer to read the manuscript first if they wish to avoid anchoring on this assessment.
 4. `reproducibility.txt`, `docs/WORK_HANDOVER.md`, source/tests, and the frozen protocols. Verification entry points are `scripts/verify_release.py` and `scripts/audit_contribution_evidence.py`. State whether the reviewer ran anything or only inspected documents.
 5. Actual course rubric and instructions supplied by the instructor, including any missing/cropped text. The repository transcription does not replace instructor clarification.

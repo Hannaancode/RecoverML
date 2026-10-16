@@ -1,0 +1,843 @@
+{
+  "schema": 1,
+  "qualification": "New transport archives preserving every compact evidence file byte-for-byte. These superseded controls are not pooled into the final revision4 statistics.",
+  "baselines": {
+    "v1": {
+      "bytes": 9957669,
+      "sha256": "d38d183d329244388ec60af40adc7563e42c5d2dfb1d5f21aebb63ad9addd3fb",
+      "parts": [
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v1.tar.gz.part00",
+          "bytes": 4194304,
+          "sha256": "36636659b61ce71961c891688b4e79a980ae773cca346bba41af3212bbaff4ed"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v1.tar.gz.part01",
+          "bytes": 4194304,
+          "sha256": "775f9e53dd4495b52f21ed9d8df1a16b543c504e0b1f3624daf07e99aeb2e6a0"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v1.tar.gz.part02",
+          "bytes": 1569061,
+          "sha256": "419d9d51eeb69fe917a5fb51f844922b4df483374471abfe3712af1475a59fd2"
+        }
+      ],
+      "files": {
+        "complete_audit.json": {
+          "bytes": 16540,
+          "sha256": "f59fa0b37eae33d50d979c3071ade3503de2519cbb57c3e23846516d5d6ec6c2"
+        },
+        "seed20261016/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "c63ff6f8f96b8dce803f4ceddaf275ee0818251e6cea4cf64e994a2f41a0deb1"
+        },
+        "seed20261016/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "4e4531336abbcee7c2328783b5fdb43b0e997ac34f87ae162ed8efc842308226"
+        },
+        "seed20261016/native_metadata/lscpu.txt": {
+          "bytes": 3362,
+          "sha256": "0535bb1480e83c69fe356e41634e13a277dab7414cf5d563975b02388982cb37"
+        },
+        "seed20261016/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261016/native_paired/captures.tar.gz": {
+          "bytes": 2551643,
+          "sha256": "2667a9ee90c4c42b34a82425016b32221f643528d0059a3e34976a78e924aab7"
+        },
+        "seed20261016/native_paired/case_receipts.tar.gz": {
+          "bytes": 401425,
+          "sha256": "c47685d97d464aa66389f109bfe5d10313ff12563cbde648c17c0d59c72e4869"
+        },
+        "seed20261016/native_paired/commands.json": {
+          "bytes": 50367,
+          "sha256": "cc392efe472e8faa959c5d0e9347a0d697ee453b19238e439c769935a22c2fef"
+        },
+        "seed20261016/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261016/native_paired/raw_recovery.jsonl": {
+          "bytes": 644845,
+          "sha256": "b4ffa74f822d8a575c67adb99101c8bd71ef1a98eedfbce7e4ab1dcdf2cc2991"
+        },
+        "seed20261016/native_paired/run_end.json": {
+          "bytes": 4086,
+          "sha256": "89f136199c3a55885471eae25a1733a5f8fea003375058b51efc6e7ca8a4a017"
+        },
+        "seed20261016/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "2f9cf5d0e0e951c7adaefcfca1c736a25a53903570e9aa4cad93852d17bf12a3"
+        },
+        "seed20261016/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105761,
+          "sha256": "65eb1b145acdeb579fe74bdadd6768eba4d0718767b7e7903687bbe321e62fa8"
+        },
+        "seed20261016/native_smoke/captures.tar.gz": {
+          "bytes": 52712,
+          "sha256": "b2eba676983863b8fd6aaf876ee800efdd6374194872bb41161283f5481e0588"
+        },
+        "seed20261016/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8699,
+          "sha256": "3d913e7dde94ef946acfaa9f7c6d0ea1239e1b33f3eea1635f6403045cff86b4"
+        },
+        "seed20261016/native_smoke/commands.json": {
+          "bytes": 2236,
+          "sha256": "d53784355813c84ce55fc06153ec053187062f93817bbbd65dc2cbd594e3e45f"
+        },
+        "seed20261016/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261016/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10442,
+          "sha256": "a47fea67e40ba3893fbbaf7044873e89862c56f1ba31093b643394f84225b045"
+        },
+        "seed20261016/native_smoke/run_end.json": {
+          "bytes": 1464,
+          "sha256": "aad80d9498b4ee1d8ee212da5d70563855437e2194588316d6c2d3bdb09ed19a"
+        },
+        "seed20261016/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "4a3b3bc74f38d6ef4d69b50fd65c3327294453a8b1671b9d2b63464b1a6fc267"
+        },
+        "seed20261016/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105763,
+          "sha256": "e5d99cd6b2c7cb8a95c2727d65a3a487c15247f21ac342181f860f87d4235c24"
+        },
+        "seed20261016/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261017/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "3f25c6b898fb458e5b9429021514cd1047eacdf8095c16c19a1ee1ae91de187a"
+        },
+        "seed20261017/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "4e4531336abbcee7c2328783b5fdb43b0e997ac34f87ae162ed8efc842308226"
+        },
+        "seed20261017/native_metadata/lscpu.txt": {
+          "bytes": 3189,
+          "sha256": "4476e601951bb5e5dc85ca4b9d2e3bc795bb83c0d4e62b8d9f2bdec6659b0e7a"
+        },
+        "seed20261017/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261017/native_paired/captures.tar.gz": {
+          "bytes": 2570645,
+          "sha256": "ebe63060fd076f2582fd604948711d54642035929cedcc7498cf2911c0a0c5dc"
+        },
+        "seed20261017/native_paired/case_receipts.tar.gz": {
+          "bytes": 402350,
+          "sha256": "ba0841ddf71a8af325b31d378dddaefd29f4148937ab8560d71349d1a982b811"
+        },
+        "seed20261017/native_paired/commands.json": {
+          "bytes": 50354,
+          "sha256": "308a3704744596d20951f0628a58da86f8ca44021630e16e4013fe4ae7d00e60"
+        },
+        "seed20261017/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261017/native_paired/raw_recovery.jsonl": {
+          "bytes": 644786,
+          "sha256": "1fda7ac907a8d9d1fbd2eca49796fcf8b6ff499798b81204ba6044c3a5e0eb9e"
+        },
+        "seed20261017/native_paired/run_end.json": {
+          "bytes": 4087,
+          "sha256": "288a29435c29e5e1076b787cb7ee4d287431f368bc0a5bf5c8cafdc89d0e6a64"
+        },
+        "seed20261017/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "60cea3e558ce290d958073c3ede3f5fb716ccacc6b22b535a811846251aa03df"
+        },
+        "seed20261017/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105745,
+          "sha256": "6ffe15d93c82d6044384b9e8fe8331659918032ba0ca969a08d31fcdd3da1473"
+        },
+        "seed20261017/native_smoke/captures.tar.gz": {
+          "bytes": 52809,
+          "sha256": "52ca81ff695f2b08b8c71864963ac58aa591fb1c59b2d98ff6d3113ac7735b90"
+        },
+        "seed20261017/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8701,
+          "sha256": "eda7946df51618210d0b54b749b3c08826bfbc6d856405400b4eda91c0939b49"
+        },
+        "seed20261017/native_smoke/commands.json": {
+          "bytes": 2242,
+          "sha256": "11627d0cd7f06821ad63fad6bfe260385bbc40f8125456944bea97e621e6d190"
+        },
+        "seed20261017/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261017/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10450,
+          "sha256": "4a66f6c29e95176e279af42199816c4d1d38ccca2ff2b4d191cec625f4144948"
+        },
+        "seed20261017/native_smoke/run_end.json": {
+          "bytes": 1462,
+          "sha256": "f736588f1536f2112f182d1fe3945012af9aac2ef5c4b4cf0255ec152db4f454"
+        },
+        "seed20261017/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "05f14200de8a89b7d516372a0cd8eccf4e4198cd5e998314022c58d5ffc46b90"
+        },
+        "seed20261017/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105743,
+          "sha256": "dabeea7f6b26b632c334051fda3e8506f56426d7a415ae90104b52ca5cefac2a"
+        },
+        "seed20261017/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261018/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "c79d4f04cb975093cd131b9acc09a2c14ef450519d36d10a5d2b473ee39c213d"
+        },
+        "seed20261018/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "4e4531336abbcee7c2328783b5fdb43b0e997ac34f87ae162ed8efc842308226"
+        },
+        "seed20261018/native_metadata/lscpu.txt": {
+          "bytes": 3339,
+          "sha256": "4b1ebe526b12ce9b830b970d257dd9f342e7c06f1ccb5020f2b081d5998ea3c4"
+        },
+        "seed20261018/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261018/native_paired/captures.tar.gz": {
+          "bytes": 2571189,
+          "sha256": "66aed46fe99744723edea1a6fbda68eda22e54c73fb2c7b733f57346ddd8d066"
+        },
+        "seed20261018/native_paired/case_receipts.tar.gz": {
+          "bytes": 401141,
+          "sha256": "40457328d2c51751d74aa53b1daed8326fcfe08c4dc3a58445dcd18d0ee21274"
+        },
+        "seed20261018/native_paired/commands.json": {
+          "bytes": 50404,
+          "sha256": "1a9a223dc87c6b0460efd890a797ca5c4b4a9d473547213aa1525706b921d8c6"
+        },
+        "seed20261018/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261018/native_paired/raw_recovery.jsonl": {
+          "bytes": 644852,
+          "sha256": "4f73df5ac452fd30abb2af8931fcbd6fd723f1db7035a2060f8167f5d7525da2"
+        },
+        "seed20261018/native_paired/run_end.json": {
+          "bytes": 4094,
+          "sha256": "0399d83773a8a8181fed6ed257f473cef7698630c3474bb5bf8c0de0b15aeb9b"
+        },
+        "seed20261018/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "2c8c44d9316c22d127b526b5dc8bc2d9ad0ded704643e3255b2cf2c98895921d"
+        },
+        "seed20261018/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105754,
+          "sha256": "887afcdcac46d46421194acd7599d84c77d4afb230177db6c14f36587946be40"
+        },
+        "seed20261018/native_smoke/captures.tar.gz": {
+          "bytes": 52954,
+          "sha256": "932dc5906917ff3ceb869b19dc2c504c216c8853897bb105ea2afc6b3a448df9"
+        },
+        "seed20261018/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8692,
+          "sha256": "cdb1d171bd1f490af89fd9b87a6d968c400c12e35cccbc57e00044616454bdf5"
+        },
+        "seed20261018/native_smoke/commands.json": {
+          "bytes": 2210,
+          "sha256": "ac2d869bae80a8e0a7be7a28a56f21e8f534fae5b3b14eb20eb2925cefa01f8f"
+        },
+        "seed20261018/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261018/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10451,
+          "sha256": "6327bc8a0a17aa534e29471cba0cb677138e3d21ab6d6b29460362bf338deccd"
+        },
+        "seed20261018/native_smoke/run_end.json": {
+          "bytes": 1464,
+          "sha256": "7ed671e1cbaf5efcbc1f53ba4d25e4b8e051166df437488e38ce7ebc5a6cb806"
+        },
+        "seed20261018/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "e2603f05702d0cb68df8f35859f9e932c27446a5b9ce12af22b5f90762a88507"
+        },
+        "seed20261018/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105751,
+          "sha256": "e5f7d9281aa3ebc459bfacd08f6d5193b6279a9fdb0e0808464da2425810ac91"
+        },
+        "seed20261018/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        }
+      }
+    },
+    "v2": {
+      "bytes": 9961612,
+      "sha256": "2d13a53452d7bf46d58e4035724a86015b616142e6d3e3fb3ce9d83d53a8f416",
+      "parts": [
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v2.tar.gz.part00",
+          "bytes": 4194304,
+          "sha256": "63bb98b8315a210fee3c5ec8e50d76d16e4744c57125bf09ce49ccdd1665d682"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v2.tar.gz.part01",
+          "bytes": 4194304,
+          "sha256": "7944e9c0315e3c747fa128578bda437fa66c79adbd5c68d84df642359e78f1fe"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v2.tar.gz.part02",
+          "bytes": 1573004,
+          "sha256": "251c1c0be2608e9aec5e2247f88a1f0723f946a8f2ca91bef8dba839034b7d2a"
+        }
+      ],
+      "files": {
+        "complete_audit.json": {
+          "bytes": 16549,
+          "sha256": "99d06ec8ab3e77668e285a8a0e2472b6d10ec86fb41ec154e02a82b0d60c9841"
+        },
+        "seed20261016/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "1e21ca321f6bf062f6e5e3bd0024aca3299f56478bc56fb2acda707fc3bb8324"
+        },
+        "seed20261016/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "6e8392bc6730587b6a5923d85519f331c92f7e02fffe1eac547c3cc1c4d1aef2"
+        },
+        "seed20261016/native_metadata/lscpu.txt": {
+          "bytes": 3339,
+          "sha256": "4b1ebe526b12ce9b830b970d257dd9f342e7c06f1ccb5020f2b081d5998ea3c4"
+        },
+        "seed20261016/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261016/native_paired/captures.tar.gz": {
+          "bytes": 2551520,
+          "sha256": "2c98f0d2c103d877ab9a9f08f491340517a19788bbe2bc22727ed20a8dd12be2"
+        },
+        "seed20261016/native_paired/case_receipts.tar.gz": {
+          "bytes": 403772,
+          "sha256": "7d7412e9c2741591550c4ceaace7d354b074fad95a69038925e27607486cbe5e"
+        },
+        "seed20261016/native_paired/commands.json": {
+          "bytes": 50367,
+          "sha256": "f56c39a1c5b59d023eaa0c83f64bea15882845a19447023da6e765d2f51ed249"
+        },
+        "seed20261016/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261016/native_paired/raw_recovery.jsonl": {
+          "bytes": 644844,
+          "sha256": "2200b36cfc63179fa0b5afc8e952d1c912dad5658229c9405e6734ea58d25d1e"
+        },
+        "seed20261016/native_paired/run_end.json": {
+          "bytes": 4096,
+          "sha256": "4bf8d52ff0a2324610c91eecda549be4eaeb0caddc3db70492be1e612f4c1add"
+        },
+        "seed20261016/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "5aa31db0e32d2e602f3dc3db080a8f2cca2cfed0de97e6fd4805c53d3831a6c0"
+        },
+        "seed20261016/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105774,
+          "sha256": "b7c6c7994a09c9be8d3f74bd1715cd08337a5c19ed3784b6e121c2d16cd58427"
+        },
+        "seed20261016/native_smoke/captures.tar.gz": {
+          "bytes": 52738,
+          "sha256": "d521c57d8b4c9e50b4122513b47b466d5cbcc26c691c60a438314221b57d6aa9"
+        },
+        "seed20261016/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8733,
+          "sha256": "a1e7c6977e7637a7c8805fe8cadf12c8530ac57f80682f2e97233e6c14a7d2ce"
+        },
+        "seed20261016/native_smoke/commands.json": {
+          "bytes": 2219,
+          "sha256": "9809b961cb1a0defe96b94b22d3d3336121ed63f52c5fcdba06cf7552d08e605"
+        },
+        "seed20261016/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261016/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10449,
+          "sha256": "872cb914d6feed4b1ef030a0d5805ef6d8dee09bcda3f71f88edc08af0fa696e"
+        },
+        "seed20261016/native_smoke/run_end.json": {
+          "bytes": 1463,
+          "sha256": "2a45c10d9ca1e2eb0a7e3a54d5cad20b203fd796ddb7a4082129fa763f3c650b"
+        },
+        "seed20261016/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "8dedfc2e3adb4360592b37b3af97993f7076d42fa690de5cd17bca4e43fbb7e7"
+        },
+        "seed20261016/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105776,
+          "sha256": "d41df5e1d5521f4594f921b257ddd1ff6c902d5d4ef552d5474c90d7c9acffa1"
+        },
+        "seed20261016/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261017/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "397f71c4ad195211628474d077d9acf43736b0f4dcc577f554c9f4804ae20d6d"
+        },
+        "seed20261017/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "6e8392bc6730587b6a5923d85519f331c92f7e02fffe1eac547c3cc1c4d1aef2"
+        },
+        "seed20261017/native_metadata/lscpu.txt": {
+          "bytes": 3339,
+          "sha256": "e2df535c811efa12c233d27957938e328c559882432955ed0a31588554b3338b"
+        },
+        "seed20261017/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261017/native_paired/captures.tar.gz": {
+          "bytes": 2570572,
+          "sha256": "4225a988daa1aa126edf53ad53e33d941a3e43980f9f0d0c898b72c629076dc4"
+        },
+        "seed20261017/native_paired/case_receipts.tar.gz": {
+          "bytes": 403029,
+          "sha256": "fc8d7afea371dc87a43318cad2ef86c7a3bbc2d7a147a983fa05cbadeddb4899"
+        },
+        "seed20261017/native_paired/commands.json": {
+          "bytes": 50367,
+          "sha256": "3c4c051907fe80a6f47193352b60ec3764cc79b4a480a262905096db4c1ccef6"
+        },
+        "seed20261017/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261017/native_paired/raw_recovery.jsonl": {
+          "bytes": 644842,
+          "sha256": "95a20eebfd1a2a0492cde6e5cade04896907189ad322f29481ac295158a35a1e"
+        },
+        "seed20261017/native_paired/run_end.json": {
+          "bytes": 4087,
+          "sha256": "a453a0326768e883b1eb0776509bf3bda920ebf467984a6cee89267d510550a0"
+        },
+        "seed20261017/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "ca01524022c05734b8c1e567324ba57c271721aa1309fe650fd133cf940e8aa7"
+        },
+        "seed20261017/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105790,
+          "sha256": "e10ac2fb5b02261242af385cabaca9ab4cacc9126d03a5ea50c51b55e4c243c5"
+        },
+        "seed20261017/native_smoke/captures.tar.gz": {
+          "bytes": 52933,
+          "sha256": "49e267dc7852a9de361e44730c80b33870bb19098ae94c6733ab8cc4f13290a5"
+        },
+        "seed20261017/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8686,
+          "sha256": "f60b29cbc46d2b958fce4e42f827d626d723f3a838c031b572b7fae0ee298201"
+        },
+        "seed20261017/native_smoke/commands.json": {
+          "bytes": 2231,
+          "sha256": "1e9ee7fb8ed16d43fa244e1bebc1f2eb77b7a2d13e39f5a2feafdbb7d79ddb95"
+        },
+        "seed20261017/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261017/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10451,
+          "sha256": "66a55afb9a46d97f7666d1f97919908a20ef0fc6a4d51bd99035c006966e597b"
+        },
+        "seed20261017/native_smoke/run_end.json": {
+          "bytes": 1464,
+          "sha256": "765aae9368971e05f6ffe26016a1a0cfce37f7b62e98bee814d5a36e91b05622"
+        },
+        "seed20261017/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "1cb5a468b6e325e32f02cac524263252e2b44e73fe1864e878e79b425e1beaf7"
+        },
+        "seed20261017/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105786,
+          "sha256": "57f3e930c215803f35fab4b3000e613e53c52e0e3e08705e3adbc4a4dfd76148"
+        },
+        "seed20261017/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261018/artifact_receipt.json": {
+          "bytes": 223820,
+          "sha256": "982c4c4e97c54f0f21bccba1ade05fb827da4474e0a3c61586c999e70b51ab7f"
+        },
+        "seed20261018/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "6e8392bc6730587b6a5923d85519f331c92f7e02fffe1eac547c3cc1c4d1aef2"
+        },
+        "seed20261018/native_metadata/lscpu.txt": {
+          "bytes": 3189,
+          "sha256": "d893a2e1fe38c883e9c6304826742490a3e71cb4324cac80c4809870147219b4"
+        },
+        "seed20261018/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261018/native_paired/captures.tar.gz": {
+          "bytes": 2568545,
+          "sha256": "c801e592f26dbdf11a5b7d9f82a6bf0d40329a0c606d48d7701f9fa2bed039c9"
+        },
+        "seed20261018/native_paired/case_receipts.tar.gz": {
+          "bytes": 403423,
+          "sha256": "d3153e7af3565e0f26d6f20be2bfd8acc0fee53cc15b29296e62275e62f45508"
+        },
+        "seed20261018/native_paired/commands.json": {
+          "bytes": 50357,
+          "sha256": "b0cfa34deb4323036f17113ea966c870a340e37798faa07529777c87ad1ec950"
+        },
+        "seed20261018/native_paired/protocol.json": {
+          "bytes": 1742,
+          "sha256": "0dccd299723377d71eff22a946244011df0c01bfa8a81a22db160c19d0d4f1b0"
+        },
+        "seed20261018/native_paired/raw_recovery.jsonl": {
+          "bytes": 644786,
+          "sha256": "5113afce75337269ff4ae89638f0337f325d214038964ff5e74dc2435e16edca"
+        },
+        "seed20261018/native_paired/run_end.json": {
+          "bytes": 4092,
+          "sha256": "7c21db3bc9c45ab4cea2aa52810d0d6f9e29cc0288c7a2865fc561810faf5037"
+        },
+        "seed20261018/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "865aa7a71f74712114504067ffb2d8a3fedaa8b172024a427a78ec80c2584fea"
+        },
+        "seed20261018/native_paired/source_snapshot.tar.gz": {
+          "bytes": 105789,
+          "sha256": "ad4fdac9cbfc25b03430239a1b1b02444a09424720e5c117e9f8b76b06f7ca28"
+        },
+        "seed20261018/native_smoke/captures.tar.gz": {
+          "bytes": 52844,
+          "sha256": "4b70097722378712ddb07870eaab5917f802694e6243e76535e310b0b804cf6a"
+        },
+        "seed20261018/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8666,
+          "sha256": "5ac735811087b94bd77d0f09b3f6c5560b61161d87828dad949aade7d7ea99b1"
+        },
+        "seed20261018/native_smoke/commands.json": {
+          "bytes": 2231,
+          "sha256": "99b8bcd2737e8152e78cd0b689e48f4fd76c6cb6ca81ecf6d39a8a8508bc538b"
+        },
+        "seed20261018/native_smoke/protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        },
+        "seed20261018/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10439,
+          "sha256": "420a14f5c94896b168e3642040a1618854fee54957b35474533e7044a9676014"
+        },
+        "seed20261018/native_smoke/run_end.json": {
+          "bytes": 1463,
+          "sha256": "aed022eab237eab1d082adae394c3d6f9e7f44c5677088f3336d24dff756a4d1"
+        },
+        "seed20261018/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "26fa2754c7a382507fa59a29e3bb6e16f8b802eb7dff9121e126cae62015f1fa"
+        },
+        "seed20261018/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 105783,
+          "sha256": "5dc9ebac1516915196c17f4e56127ae338d00f01043239205d1787db336aab87"
+        },
+        "seed20261018/native_smoke_protocol.json": {
+          "bytes": 1771,
+          "sha256": "3efa632a13a8aed97d4413c1ca11be7a46079c0d6a43a6a9118e32a13a976a84"
+        }
+      }
+    },
+    "v3": {
+      "bytes": 9949405,
+      "sha256": "76999538bf27c7f47a6cf2eaa900f1c1023f5cd6605ad6a775aca4a231eea327",
+      "parts": [
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v3.tar.gz.part00",
+          "bytes": 4194304,
+          "sha256": "0838979ca58cfc8f9cc2819fd08f6ff91f65f6049a03bfbb13e62585c8cc2b70"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v3.tar.gz.part01",
+          "bytes": 4194304,
+          "sha256": "13b6377e2cf29bc30435fb85814c2bdb826ef97240107f942af471051bf16795"
+        },
+        {
+          "path": "results/research/native_frontier_cloud_oct16/baseline_parts/v3.tar.gz.part02",
+          "bytes": 1560797,
+          "sha256": "e2ba717eb84d401c895e6a86d05a4b79e11f0ef8085445c57d10d5e0b29ad8a8"
+        }
+      ],
+      "files": {
+        "complete_audit.json": {
+          "bytes": 16563,
+          "sha256": "cc0bad5547849a2035bcf66a68df816ce699a6453364061f5c252ddbd36ed9df"
+        },
+        "seed20261016/artifact_receipt.json": {
+          "bytes": 220286,
+          "sha256": "8d277506e90f2ee0c00544b718579e678a066c5517a690b0ed5dd3723a2406b7"
+        },
+        "seed20261016/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "09b21ca499e62edff5401cef97eebde8e0f81643886c59c181d79952df817690"
+        },
+        "seed20261016/native_metadata/lscpu.txt": {
+          "bytes": 3465,
+          "sha256": "9b2bafede55a1198e3e0fa0698e86a41690a5bbfc4693b239e7f32c695b1a7df"
+        },
+        "seed20261016/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261016/native_paired/captures.tar.gz": {
+          "bytes": 2551514,
+          "sha256": "53452aa0dd1548025ef65dd52b582a34d0e17f302595c432b356e56af9d3849d"
+        },
+        "seed20261016/native_paired/case_receipts.tar.gz": {
+          "bytes": 397151,
+          "sha256": "25ad0cd5ddd7842c2e0b6a3f951ea9d308483ca49d1c18b1378a17c8efb3bfa1"
+        },
+        "seed20261016/native_paired/commands.json": {
+          "bytes": 50424,
+          "sha256": "bd570be86b05bc38a91f77e01bef83e3730b0a23fbb6eb19e3830c5eb124e6b3"
+        },
+        "seed20261016/native_paired/protocol.json": {
+          "bytes": 2017,
+          "sha256": "50569becc05e59c6bdafc192fd472748dcad37598d439a8661e7e5e874528abb"
+        },
+        "seed20261016/native_paired/raw_recovery.jsonl": {
+          "bytes": 670725,
+          "sha256": "47e62abedafd99913f5bd0c1c445741bb5356eac1e77cc1bf9a2e613ef450975"
+        },
+        "seed20261016/native_paired/run_end.json": {
+          "bytes": 4096,
+          "sha256": "e1241620e056d8f276fccc1ff67db710b5393f11a31dab81276e781a3284928b"
+        },
+        "seed20261016/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "5c75e2c62e41888eb69bf4ace9f5886ae8672ef6d860cc4ce3b5fc1b98a404c9"
+        },
+        "seed20261016/native_paired/source_snapshot.tar.gz": {
+          "bytes": 106396,
+          "sha256": "c03320960554978a94f47288933751f2a2e1f342705037e29772c62ae9c78227"
+        },
+        "seed20261016/native_smoke/captures.tar.gz": {
+          "bytes": 52705,
+          "sha256": "d66a97567084a5beedaee7ed69626d50f33227f29763d474300c67ec6d0f96fe"
+        },
+        "seed20261016/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8691,
+          "sha256": "c44e5ec5acbba1888fcd4234cb8628fbffd5190e9187b210dee65780552c3091"
+        },
+        "seed20261016/native_smoke/commands.json": {
+          "bytes": 2202,
+          "sha256": "28d0851c2070e2ee980adc73e965a2d4f9daf7f1c780070991098ee75ee50d04"
+        },
+        "seed20261016/native_smoke/protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        },
+        "seed20261016/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10695,
+          "sha256": "4af1e04cdf36d332a44b5bb186cbc24dc31c36e117d1e965b2ddd9287fcf1993"
+        },
+        "seed20261016/native_smoke/run_end.json": {
+          "bytes": 1462,
+          "sha256": "7feb9bfa9f76114d5b783689e1d9f5050ebf66379682566113f5d16890b2295c"
+        },
+        "seed20261016/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "a1d1af827b0a34ff92968b0aeee54a6cf34476126bfe39ba3374951f5943e645"
+        },
+        "seed20261016/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 106378,
+          "sha256": "874cbc55210ff39b42f0de3ff06f08edb26521ed5296d12b50b6140167c9309a"
+        },
+        "seed20261016/native_smoke_protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        },
+        "seed20261017/artifact_receipt.json": {
+          "bytes": 220286,
+          "sha256": "8d7fdb320efae40bec93fa36bf1986bd02e0b03edd513694dda089f331476f6c"
+        },
+        "seed20261017/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "09b21ca499e62edff5401cef97eebde8e0f81643886c59c181d79952df817690"
+        },
+        "seed20261017/native_metadata/lscpu.txt": {
+          "bytes": 3465,
+          "sha256": "e58c6c82a2a3c4bec0df6cde8d3adfbb45ef9bdd4cf88a456e9cb2f643923131"
+        },
+        "seed20261017/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261017/native_paired/captures.tar.gz": {
+          "bytes": 2570606,
+          "sha256": "c5286949647dbbefc88c062834d026ab65a102f16601165f9779cbcb40afe6d9"
+        },
+        "seed20261017/native_paired/case_receipts.tar.gz": {
+          "bytes": 398209,
+          "sha256": "e19260a96d35283b06e378b72d306d2de5aa9cf460cc25c91bcf7ef82c6bddc9"
+        },
+        "seed20261017/native_paired/commands.json": {
+          "bytes": 50410,
+          "sha256": "31a944ea598c94e338537fc0035703548029a6bc6a188cbc318348ca3c3501ed"
+        },
+        "seed20261017/native_paired/protocol.json": {
+          "bytes": 2017,
+          "sha256": "50569becc05e59c6bdafc192fd472748dcad37598d439a8661e7e5e874528abb"
+        },
+        "seed20261017/native_paired/raw_recovery.jsonl": {
+          "bytes": 670711,
+          "sha256": "0f522628a07209f75344f2ddf8dc74551b6eacfe5a4f0ae6f2bd0f0239c1b340"
+        },
+        "seed20261017/native_paired/run_end.json": {
+          "bytes": 4092,
+          "sha256": "b0adc376405bc2735d9a5fc28b604bfb3d81cf531f61b2b053a2a51453fc8ad8"
+        },
+        "seed20261017/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "6110b3dabf5b1fefa4f92cd3226cb102b286620f68d04a142fce33d597f9d846"
+        },
+        "seed20261017/native_paired/source_snapshot.tar.gz": {
+          "bytes": 106407,
+          "sha256": "50fd2c8fd685b7c1e77f5dd42a20f0de08752e96afbc374542f169394f5dcb68"
+        },
+        "seed20261017/native_smoke/captures.tar.gz": {
+          "bytes": 52925,
+          "sha256": "7b8d3130ca8152ee7f0c5c554ce781fb6a2da8a5a71087ea3d1e544f07c700d4"
+        },
+        "seed20261017/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8688,
+          "sha256": "b10de0604f46e41e981cc6bd94b870ca1f61bde112edad13e9b7b4e762aac098"
+        },
+        "seed20261017/native_smoke/commands.json": {
+          "bytes": 2231,
+          "sha256": "e440557c37c8f37c826193326c4934fd83abccb8df6f6b0cea46f5076c759c72"
+        },
+        "seed20261017/native_smoke/protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        },
+        "seed20261017/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10705,
+          "sha256": "0e731a9bbdba449900036d1c96a14b323219e74525e27cfd2dc5b08a2bd8cae6"
+        },
+        "seed20261017/native_smoke/run_end.json": {
+          "bytes": 1460,
+          "sha256": "46c9b17d829efe9e0a2fea3a838200c5fed5e3544805b6957b88a9e00f71d0c1"
+        },
+        "seed20261017/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "3382742e50ff14d15f9f85d1d7f4e5634bf8b88e30d30733eebad15a5a319ea8"
+        },
+        "seed20261017/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 106401,
+          "sha256": "d8122dec57a40629832ebbcb1999528f537a542eb2009000b800289bd095f6e8"
+        },
+        "seed20261017/native_smoke_protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        },
+        "seed20261018/artifact_receipt.json": {
+          "bytes": 220286,
+          "sha256": "d969eab7736932859888598629409bc08cdd420a5455b59dd395883039ae80ea"
+        },
+        "seed20261018/native_metadata/commit.txt": {
+          "bytes": 41,
+          "sha256": "09b21ca499e62edff5401cef97eebde8e0f81643886c59c181d79952df817690"
+        },
+        "seed20261018/native_metadata/lscpu.txt": {
+          "bytes": 3362,
+          "sha256": "0535bb1480e83c69fe356e41634e13a277dab7414cf5d563975b02388982cb37"
+        },
+        "seed20261018/native_metadata/packages.txt": {
+          "bytes": 1911,
+          "sha256": "3e7894ba566d8185e1e89cb43bce20115e5c1e8ba8ea0da6b22654f816108637"
+        },
+        "seed20261018/native_paired/captures.tar.gz": {
+          "bytes": 2571143,
+          "sha256": "f6d3044fa808362efbef7869f9e1bde53be207e51a790ea3d2a25d6eb161ec2d"
+        },
+        "seed20261018/native_paired/case_receipts.tar.gz": {
+          "bytes": 395972,
+          "sha256": "c6901943a2bc8fb3c8810f9dd4c2557d5842c1f1e98ed70248273f49e14b0445"
+        },
+        "seed20261018/native_paired/commands.json": {
+          "bytes": 50394,
+          "sha256": "644dc22a8a6d7d59bed2989369bd513dc52613fcf7560ab1632742c378bb8c1c"
+        },
+        "seed20261018/native_paired/protocol.json": {
+          "bytes": 2017,
+          "sha256": "50569becc05e59c6bdafc192fd472748dcad37598d439a8661e7e5e874528abb"
+        },
+        "seed20261018/native_paired/raw_recovery.jsonl": {
+          "bytes": 670708,
+          "sha256": "c936d58ba0f460dbef939da774cfb37361a516aa2f56c7f800c1c969f2631610"
+        },
+        "seed20261018/native_paired/run_end.json": {
+          "bytes": 4097,
+          "sha256": "b65bc5d61a423290bf8785848028156e3f8a01565a353dac5b64db41a37ce893"
+        },
+        "seed20261018/native_paired/run_start.json": {
+          "bytes": 6477,
+          "sha256": "4759f5a724a7ccd7a5c4aa8af046944d087e1784ddfdd88175accb45799d08d3"
+        },
+        "seed20261018/native_paired/source_snapshot.tar.gz": {
+          "bytes": 106398,
+          "sha256": "a8286202b6a1c41b60dbfc3e8f879087418d40d5482f10ef888af10ef3d83191"
+        },
+        "seed20261018/native_smoke/captures.tar.gz": {
+          "bytes": 52954,
+          "sha256": "81a3570e708be813f2e7b563fc0dfd28a6aebb83c06218eda40478ff18b24c19"
+        },
+        "seed20261018/native_smoke/case_receipts.tar.gz": {
+          "bytes": 8699,
+          "sha256": "a40960b2407a4ae3930287aa5ebc8a6ff27ee566484d776c6103cb57d863b2b4"
+        },
+        "seed20261018/native_smoke/commands.json": {
+          "bytes": 2213,
+          "sha256": "d423de91bc884f70164fe559d33dd1923f6b09c5587fd38b29a7fa3f62b093f3"
+        },
+        "seed20261018/native_smoke/protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        },
+        "seed20261018/native_smoke/raw_recovery.jsonl": {
+          "bytes": 10708,
+          "sha256": "5e9043f34def61894b93cfd31a880a0d39dea24d3c49a35ffba3db2afcd93e5d"
+        },
+        "seed20261018/native_smoke/run_end.json": {
+          "bytes": 1464,
+          "sha256": "02e649187819f5ed297a78758025515ee69ab4270e930914edb32521ca34f422"
+        },
+        "seed20261018/native_smoke/run_start.json": {
+          "bytes": 6466,
+          "sha256": "7dc55c94517821c2bb9a62bb639e29c7e287d9eb54b782c35a50c5d8787631c8"
+        },
+        "seed20261018/native_smoke/source_snapshot.tar.gz": {
+          "bytes": 106400,
+          "sha256": "10e0675cdbb5a64cfcdfeb02c00b6c86743c1eb0e6018bf9845e32b612977d1b"
+        },
+        "seed20261018/native_smoke_protocol.json": {
+          "bytes": 2046,
+          "sha256": "da3ec5995ed83142a4c601e4475437163120de0b8d70638498edb6f2d2402047"
+        }
+      }
+    }
+  }
+}
