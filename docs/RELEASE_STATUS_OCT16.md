@@ -21,26 +21,27 @@ This is a fresh-clone verification of the available research-branch release base
 | Letter preprocessing | 3,669,545,821 snapshot bytes minus 4,829,269 retained bytes = 3,664,716,552 bytes saved | 99.8684% canonical saving; gzip saving 290,607,161 bytes, below one GB compressed. Heuristics tie. |
 | Letter broad loss | Zero canonical/gzip saving | Training/prediction loss requires snapshots. 48 actual runtime requests cover three shared stores; broader cases are structural checks. |
 
-## Incomplete original publication
+## Original evidence recovery update
 
-These required original files are absent from the audited branch. Known expected hashes are preserved in the original receipts and in the release inventory. Do not remove an expected file from the inventory merely to obtain a passing completeness status.
+Thirteen of the fourteen missing originals have now been recovered from the original capture workspace. Twelve match previously published SHA256 hashes exactly. The interrupted retinal archive had no previously published container hash and its newly observed SHA256 is recorded in `results/validation/2026-10-16/original_evidence_recovery/original_recovery_receipt.json`. Compressed stream integrity checks pass. No measurements or historical source files were rewritten.
 
-- `results/research/eyeai_complete_oct15/planner_records.json.gz`
-- `results/research/eyeai_complete_oct15/store_index.json.gz`
-- `results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz`
-- `results/research/gigabyte_letter_oct16/selected_frontier.tar.gz`
-- `results/research/scientific_complete_oct16/accepted_case_evidence.tar.gz`
-- `results/research/scientific_complete_oct16/captures.tar.gz`
-- `results/research/scientific_complete_oct16/common_budget_coverage.png`
-- `results/research/scientific_complete_oct16/planner_records.json.gz`
-- `results/research/scientific_complete_oct16/sensitivity.json.gz`
-- `results/research/scientific_complete_oct16/source_versions.tar.gz`
-- `results/research/scientific_complete_oct16/storage_recovery_tradeoff.png`
-- `results/research/scientific_complete_oct16/summary.csv`
-- `results/research/scientific_complete_oct16/superseded_attempts.tar.gz`
-- `results/research/eyeai_complete_oct15/interrupted_attempt_evidence.tar.gz`
+The original 26 MB retinal payload archive exceeds the connector transport request limit. Its exact original bytes are published as seven parts listed in `docs/ORIGINAL_EVIDENCE_PARTS_OCT16.json`. The release checker verifies every part and then verifies the assembled bytes against the original full archive SHA256 `b088181bb0e57b266108fa188faeda549b3231834d517d4c7585593a93894e94`. This is a storage layout change and not a replacement of the original data.
 
-The interrupted retinal archive has no published expected hash; its name comes from the saved merger source. Obtain it from the original capture workspace before asserting that superseded attempts are fully preserved. Full fitted Letter payloads are deliberately not committed and are a separate fresh-regeneration input.
+After cloning this research branch run:
+
+```bash
+python scripts/materialize_evidence.py
+```
+
+This restores `results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz` exactly for the existing retinal analyzer and restore tools. The checker can also verify the original bytes directly from committed parts without writing that file.
+
+One original container remains unavailable:
+
+- `results/research/gigabyte_letter_oct16/selected_frontier.tar.gz` with its historical SHA256 `0adf53f32d1e18b179ed7616acbf2408ddc9caa0dc3a634d671fcc3c410656c5`
+
+All four frontier payload files were recovered from a preserved preflight archive and match the full study's recorded hashes and byte sizes. The full study manifest and failure contract are unchanged. They are published in the separately named `results/research/gigabyte_letter_oct16/recovered_frontier_payloads.tar.gz` with `frontier_recovery_receipt.json`. This is a verified payload-equivalent reconstruction and is explicitly not the original archive bytes. The original missing hash remains in the inventory. The original strict `--require-complete` check must therefore still report one unresolved original file. No fitted forest or execution timing was recreated for this repair.
+
+The reconstruction is reproducible with `scripts/recover_letter_frontier.py` using the preserved source archive under `results/validation/2026-10-16/original_evidence_recovery`. Original available-file checks and checksum validation remain separate from complete original provenance.
 
 ## Remaining human/research inputs
 

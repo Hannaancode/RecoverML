@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "originals_recovered": 13,
+  "previously_recorded_hashes_matched": 12,
+  "interrupted_archive_new_observed_hash": "b0df9b530f2138c51c1acb0f4737f9bad2d16a99df6e26e3e92e25c4e7eb3312",
+  "original_archives_missing": [
+    "results/research/gigabyte_letter_oct16/selected_frontier.tar.gz"
+  ],
+  "payload_equivalent_replacement": "results/research/gigabyte_letter_oct16/recovered_frontier_payloads.tar.gz",
+  "original_archive_hash_replaced": false,
+  "measurements_modified": false,
+  "restored_files": [
+    {
+      "path": "results/research/eyeai_complete_oct15/planner_records.json.gz",
+      "exists": true,
+      "bytes": 203212,
+      "sha256": "daf79496deec732aad9359bf9f6f44737e96f768d54d99d69347a3bfa76acda5",
+      "git_sha1": "902d771e45381eb903aaac0834c6c42d3d3d3708",
+      "gzip_integrity": "PASS"
+    },
+    {
+      "path": "results/research/eyeai_complete_oct15/store_index.json.gz",
+      "exists": true,
+      "bytes": 779218,
+      "sha256": "6055f9d3edb07aefc357b24b4201ad906cc461dbfd112c8472094255114e1e7c",
+      "git_sha1": "826e09d1d4b0b3d313ad469678cf5a9e93fad48c",
+      "gzip_integrity": "PASS"
+    },
+    {
+      "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz",
+      "exists": true,
+      "bytes": 26058591,
+      "sha256": "b088181bb0e57b266108fa188faeda549b3231834d517d4c7585593a93894e94",
+      "git_sha1": "887ca069a95ba736d68ac94615de26089a47a764",
+      "gzip_integrity": "PASS",
+      "archive_members": 316
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/accepted_case_evidence.tar.gz",
+      "exists": true,
+      "bytes": 1230864,
+      "sha256": "4813b03127f7e0985627ba30c093350ad8af26fd0a172d6ddef5b1431e01d3db",
+      "git_sha1": "5f1dfcadffb3e912268a2823424725d59b6cdf18",
+      "gzip_integrity": "PASS",
+      "archive_members": 132
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/captures.tar.gz",
+      "exists": true,
+      "bytes": 9304696,
+      "sha256": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7",
+      "git_sha1": "5330df15de1cbaca29b401841dbb9e265ce383e6",
+      "gzip_integrity": "PASS",
+      "archive_members": 136
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/common_budget_coverage.png",
+      "exists": true,
+      "bytes": 228715,
+      "sha256": "21548de16509a09ed672dba77dd838a8b524065e44082aa8e143d1a12047af3d",
+      "git_sha1": "4e8715769f74466c5ebc8e9a2a5d8cb5968623d3"
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/planner_records.json.gz",
+      "exists": true,
+      "bytes": 29575,
+      "sha256": "340773ae334c866a0a00fdbf74595e298a742cd01b7666bca9d2856b3752928f",
+      "git_sha1": "c4cf8d76ddd3e68fb66c3d3ca8d1eff8778b692b",
+      "gzip_integrity": "PASS"
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/sensitivity.json.gz",
+      "exists": true,
+      "bytes": 9893,
+      "sha256": "4a8145d706dc4d31a0a72a51cbb185b46b04ba7ae58f7eac77d8f6e6510fe0de",
+      "git_sha1": "aa8df01b0e1324b1dfeaf0ceb712597c10fbb411",
+      "gzip_integrity": "PASS"
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/source_versions.tar.gz",
+      "exists": true,
+      "bytes": 1344293,
+      "sha256": "a2c3e5d29dca0d2fb77b070ed8ec8111cbaa0e38d79280a96ab0f157ef4be77d",
+      "git_sha1": "c932f5ea32d0eda6572d493dd950831661f5c6bc",
+      "gzip_integrity": "PASS",
+      "archive_members": 752
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/storage_recovery_tradeoff.png",
+      "exists": true,
+      "bytes": 187774,
+      "sha256": "b1e05d2a65530bca02cece61fb82ea8034d54c8abf2faced24d06415c058ce14",
+      "git_sha1": "f3ea2b92605d23f5f731fe06682495a7888d178f"
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/summary.csv",
+      "exists": true,
+      "bytes": 546225,
+      "sha256": "c65c49f41083734a5e6ade6aa29b62d345a64941fffcfc372105c01490fbcfcc",
+      "git_sha1": "87d29a9b19c4a33117d83334dddf5c97ad4fe5c0"
+    },
+    {
+      "path": "results/research/scientific_complete_oct16/superseded_attempts.tar.gz",
+      "exists": true,
+      "bytes": 5557346,
+      "sha256": "78336a717c958b57a9bc5401f1c22c10c0cc18b9d2aec37eacccbf8074a29dac",
+      "git_sha1": "bbb5f0d610142e2bbf0571f879f4b7d62acc0cfc",
+      "gzip_integrity": "PASS",
+      "archive_members": 871
+    },
+    {
+      "path": "results/research/eyeai_complete_oct15/interrupted_attempt_evidence.tar.gz",
+      "exists": true,
+      "bytes": 1672892,
+      "sha256": "b0df9b530f2138c51c1acb0f4737f9bad2d16a99df6e26e3e92e25c4e7eb3312",
+      "git_sha1": "542cd76c5d4f3c2975fdacbeb4e1b6abbd990559",
+      "gzip_integrity": "PASS",
+      "archive_members": 118
+    }
+  ]
+}

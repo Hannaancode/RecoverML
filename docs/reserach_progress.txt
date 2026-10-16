@@ -788,3 +788,15 @@ The continuation started from the published research branch at cbd26d4 rather th
 The existing retinal and large structural analyzers were executed on disposable copies with pinned plotting/numerical dependencies. Large numeric cross-links and six ledger corruption controls passed and original input files remained unchanged. No model recovery, training or DVC command was rerun. Regenerated plots are new derivatives under results/validation/2026-10-16/release_recheck.
 Top-level checksums now identify the available tracked release and the original manifests are preserved in docs/history. Full original publication is still incomplete: the scientific archives/summary/old plots and retinal retained-store/index archives and the large selected frontier remain missing. Exact filenames and expected recorded hashes are kept by scripts/verify_release.py and docs/RELEASE_STATUS_OCT16.md. Full-completeness verification must remain a failure until those originals are recovered.
 Outdated final-audit statements that the large experiment and native retinal control were pending are corrected. The final large canonical saving is 3664716552 bytes and gzip saving is 290607161 bytes, with zero broad-loss savings and heuristic ties. Collab Sections4–6 were accessible and reviewed; MinSS full text and external/course human reviews remain unresolved. Paper and PDF bytes are intentionally unchanged.
+
+16 October original evidence recovery
+
+Recovered thirteen of the fourteen missing original evidence files from the capture workspace
+Twelve match their previously published SHA256 hashes and the interrupted retinal archive has a newly recorded observed hash
+The complete original retinal payload archive is published as seven transport parts which reconstruct the exact original archive hash
+Added part corruption and missing part and independent historical hash checks and an explicit reassembly command
+The original Letter frontier container could not be located and its historical hash remains unresolved
+All four underlying frontier payloads were found in a preserved preflight archive and match the full study hashes and sizes
+A deterministic separately named payload equivalent reconstruction contains those files and the unchanged full study manifest and contract
+No model was retrained and no execution log or timing or original expected hash was changed
+The strict original completeness check must still flag the one missing original container while available evidence integrity can pass

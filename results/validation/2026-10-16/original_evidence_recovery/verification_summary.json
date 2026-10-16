@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "checked_timestamp_ns": 1792143650892738644,
+  "scope": "Committed/staged byte identity and existing published ledger consistency; no new model training or benchmark timings",
+  "originals_recovered": 13,
+  "prior_recorded_original_hashes_matched": 12,
+  "available_evidence_checks": "PASS",
+  "checksum_status": {
+    "CHECKSUMS.json": "PASS",
+    "CHECKSUMS_GITHUB.json": "PASS"
+  },
+  "missing_original_archives": [
+    "results/research/gigabyte_letter_oct16/selected_frontier.tar.gz"
+  ],
+  "original_hash_mismatches": [],
+  "original_archives_verified_via_parts": [
+    "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz"
+  ],
+  "payload_equivalent_reconstruction_verified": true,
+  "targeted_tests_passed": 11,
+  "strict_original_complete": false
+}

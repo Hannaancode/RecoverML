@@ -77,5 +77,52 @@ class ReleaseVerificationTests(unittest.TestCase):
             self.assertIn(omitted, result['unlisted'])
 
 
+class ChunkedOriginalTests(unittest.TestCase):
+    def example(self):
+        class MemorySnapshot:
+            def json(self, path):
+                return json.loads(self.files[path])
+        snapshot = MemorySnapshot()
+        chunks = [b'original first bytes', b' and original final bytes']
+        expected = release.sha(b''.join(chunks))
+        parts = [dict(path='parts/' + str(i), bytes=len(data), sha256=release.sha(data))
+                 for i, data in enumerate(chunks)]
+        manifest = dict(artifacts={'original.tar.gz': dict(bytes=sum(map(len, chunks)), sha256=expected, parts=parts)})
+        snapshot.files = {p['path']: data for p, data in zip(parts, chunks)}
+        snapshot.files[release.PARTS_MANIFEST] = json.dumps(manifest).encode()
+        return snapshot, expected, b''.join(chunks)
+
+    def test_parts_recover_exact_historical_bytes(self):
+        snapshot, expected, original = self.example()
+        data, assembled = release.original_evidence_bytes(snapshot, 'original.tar.gz', expected)
+        self.assertTrue(assembled)
+        self.assertEqual(data, original)
+
+    def test_part_tamper_is_rejected(self):
+        snapshot, expected, _ = self.example()
+        snapshot.files['parts/0'] = b'X' + snapshot.files['parts/0'][1:]
+        with self.assertRaises(ValueError):
+            release.original_evidence_bytes(snapshot, 'original.tar.gz', expected)
+
+    def test_missing_part_is_rejected(self):
+        snapshot, expected, _ = self.example()
+        del snapshot.files['parts/1']
+        with self.assertRaises(ValueError):
+            release.original_evidence_bytes(snapshot, 'original.tar.gz', expected)
+
+    def test_self_consistent_manifest_cannot_change_historical_identity(self):
+        snapshot, _, _ = self.example()
+        with self.assertRaises(ValueError):
+            release.original_evidence_bytes(snapshot, 'original.tar.gz', release.sha(b'other historical bytes'))
+
+    def test_unsafe_part_path_is_rejected(self):
+        snapshot, expected, _ = self.example()
+        manifest = snapshot.json(release.PARTS_MANIFEST)
+        manifest['artifacts']['original.tar.gz']['parts'][0]['path'] = '../escape'
+        snapshot.files[release.PARTS_MANIFEST] = json.dumps(manifest).encode()
+        with self.assertRaises(ValueError):
+            release.original_evidence_bytes(snapshot, 'original.tar.gz', expected)
+
+
 if __name__ == '__main__':
     unittest.main()

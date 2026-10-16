@@ -20,10 +20,45 @@ CHECKSUM_FILES = {'CHECKSUMS.json', 'CHECKSUMS_GITHUB.json'}
 SCIENTIFIC = 'results/research/scientific_complete_oct16'
 RETINAL = 'results/research/eyeai_complete_oct15'
 LARGE = 'results/research/gigabyte_letter_oct16'
+PARTS_MANIFEST = 'docs/ORIGINAL_EVIDENCE_PARTS_OCT16.json'
 
 
 def sha(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def original_evidence_bytes(snapshot, path, expected_sha256):
+    """Read original bytes directly or from hash-verified transport parts.
+
+    The independently recorded historical hash is authoritative. A manifest
+    cannot declare different bytes to be the original missing artifact.
+    """
+    if path in snapshot.files:
+        return snapshot.files[path], False
+    if PARTS_MANIFEST not in snapshot.files:
+        return None, False
+    entry = snapshot.json(PARTS_MANIFEST).get('artifacts', {}).get(path)
+    if entry is None:
+        return None, False
+    if entry['sha256'] != expected_sha256:
+        raise ValueError('Part manifest differs from historical archive hash')
+    parts, seen = [], set()
+    for item in entry['parts']:
+        name = item['path']
+        relative = PurePosixPath(name)
+        if relative.is_absolute() or '..' in relative.parts or name in seen:
+            raise ValueError('Unsafe or duplicate part path')
+        seen.add(name)
+        if name not in snapshot.files:
+            raise ValueError('Missing original archive part: ' + name)
+        data = snapshot.files[name]
+        if len(data) != item['bytes'] or sha(data) != item['sha256']:
+            raise ValueError('Original archive part size or hash differs: ' + name)
+        parts.append(data)
+    data = b''.join(parts)
+    if len(data) != entry['bytes'] or sha(data) != expected_sha256:
+        raise ValueError('Assembled archive differs from historical bytes')
+    return data, True
 
 
 class Snapshot:
@@ -93,14 +128,27 @@ def evidence_inventory(snapshot):
         required[RETINAL + '/' + stem + '.gz'] = item['compressed_sha256']
     required[RETINAL + '/stores_deduplicated.tar.gz'] = snapshot.json(RETINAL + '/store_compaction.json')['archive_sha256']
     required[LARGE + '/selected_frontier.tar.gz'] = snapshot.json(LARGE + '/store_membership.json')['frontier_archive_sha256']
-    missing = sorted(p for p in required if p not in snapshot.files)
-    mismatches = sorted(p for p, digest in required.items() if p in snapshot.files and sha(snapshot.files[p]) != digest)
+    missing, mismatches, via_parts, part_errors = [], [], [], {}
+    for path, digest in required.items():
+        try:
+            data, assembled = original_evidence_bytes(snapshot, path, digest)
+        except (ValueError, KeyError, TypeError) as error:
+            mismatches.append(path)
+            part_errors[path] = str(error)
+            continue
+        if data is None:
+            missing.append(path)
+        elif sha(data) != digest:
+            mismatches.append(path)
+        elif assembled:
+            via_parts.append(path)
     additional = [RETINAL + '/interrupted_attempt_evidence.tar.gz']
     missing_unhashed = [p for p in additional if p not in snapshot.files]
     return dict(status='COMPLETE' if not (missing or mismatches or missing_unhashed) else 'INCOMPLETE',
                 required=len(required), present=len(required)-len(missing),
                 missing=missing, hash_mismatches=mismatches, expected_sha256=required,
-                additional_required_without_recorded_hash=additional, missing_without_recorded_hash=missing_unhashed)
+                additional_required_without_recorded_hash=additional, missing_without_recorded_hash=missing_unhashed,
+                byte_identical_originals_available_via_parts=sorted(via_parts), part_errors=part_errors)
 
 
 def scientific_audit(snapshot):

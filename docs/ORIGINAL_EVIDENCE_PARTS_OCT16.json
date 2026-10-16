@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "reason": "Original 26058591 byte archive exceeded the connector transport request size. Parts reconstruct the exact original bytes and must match the independently recorded complete archive hash.",
+  "artifacts": {
+    "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz": {
+      "bytes": 26058591,
+      "sha256": "b088181bb0e57b266108fa188faeda549b3231834d517d4c7585593a93894e94",
+      "parts": [
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-000",
+          "bytes": 4000000,
+          "sha256": "abbda9b7a3cd59117cbcd6645e77aa2b45569fafec67235e545cd25b13678a66",
+          "git_sha1": "6fab8ca638b27f708df89ba6b258edc6e9a4331e"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-001",
+          "bytes": 4000000,
+          "sha256": "f63fe71de80c795ce13d6dad5f0c99b9875bb98b5fbebacebf746e82eca6e3d0",
+          "git_sha1": "40932eb381647efb6f6238986a733895a57b6bc5"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-002",
+          "bytes": 4000000,
+          "sha256": "209a2edcb9d2853dd96450417928f7be036781cb35cc39b507d481f2245f8a92",
+          "git_sha1": "5f34c315b921a61ebed6499db03894b42922adee"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-003",
+          "bytes": 4000000,
+          "sha256": "f535c820d35bd92f3c18a32120b64dd2563b81b7f8b50e746c5d47c04a73408e",
+          "git_sha1": "3f107894bea1c4a41ecbe8a74ff84c33638c01bf"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-004",
+          "bytes": 4000000,
+          "sha256": "06bd5727973fa0e48c6c14ccb634e95ac5b23142ec038b0fe266597c70cde45e",
+          "git_sha1": "4b37624756580e84bdfa5fa8bdf4c3753ad3c2e3"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-005",
+          "bytes": 4000000,
+          "sha256": "10a0715ab06ad71ed972a56f170112ef9dbb5cbf2b42ad889d43bff54fba5097",
+          "git_sha1": "5c1cd5ef0344d0430fda0c88cfcf310f697900cf"
+        },
+        {
+          "path": "results/research/eyeai_complete_oct15/stores_deduplicated.tar.gz.parts/part-006",
+          "bytes": 2058591,
+          "sha256": "bf56651ac983f23172f933278fa88b78b117ac25ac7f7440a05a13b13a731178",
+          "git_sha1": "ec86a6bd57dd8cd293a679664c2481050b14d148"
+        }
+      ]
+    }
+  }
+}

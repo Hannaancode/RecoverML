@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "kind": "PAYLOAD_EQUIVALENT_RECONSTRUCTION_NOT_ORIGINAL_ARCHIVE",
+  "original_archive_sha256": "0adf53f32d1e18b179ed7616acbf2408ddc9caa0dc3a634d671fcc3c410656c5",
+  "original_archive_bytes_recovered": false,
+  "source_preflight": "results/validation/2026-10-16/original_evidence_recovery/source_preflight_frontier.tar.gz",
+  "source_preflight_sha256": "9cb0febd077cff0d872fc76eab4285859123c5b584d9fd4341b84325700ef756",
+  "replacement": "results/research/gigabyte_letter_oct16/recovered_frontier_payloads.tar.gz",
+  "replacement_sha256": "6c64cf86053bb57a3dc99808bcd3caacf20bec473005eb64eddb89dcaea37606",
+  "replacement_bytes": 549174,
+  "payload_files": 4,
+  "payload_bytes": 4800580,
+  "members": [
+    {
+      "path": "blobs/44dd41f6c0200a567842122b9a03ad861fd693c13eb8cd008f7ea63cdc4a3b4a.pkl",
+      "bytes": 160165,
+      "sha256": "44dd41f6c0200a567842122b9a03ad861fd693c13eb8cd008f7ea63cdc4a3b4a"
+    },
+    {
+      "path": "blobs/4c9a6303ef410555a54e4714f1ae65a0b37f08eea1cb9700fec7bfd866a43fc6.pkl",
+      "bytes": 160137,
+      "sha256": "4c9a6303ef410555a54e4714f1ae65a0b37f08eea1cb9700fec7bfd866a43fc6"
+    },
+    {
+      "path": "blobs/a13a0c4ff66b7da87d5e22b2b0bd499418c0c14c6e6482340f9a69232a59d851.pkl",
+      "bytes": 1920139,
+      "sha256": "a13a0c4ff66b7da87d5e22b2b0bd499418c0c14c6e6482340f9a69232a59d851"
+    },
+    {
+      "path": "blobs/d06b48e651352e7abeb374925f9f3f99e96f7a069e6f963d723714ddda658a20.pkl",
+      "bytes": 2560139,
+      "sha256": "d06b48e651352e7abeb374925f9f3f99e96f7a069e6f963d723714ddda658a20"
+    },
+    {
+      "path": "capability_contract.json",
+      "bytes": 603,
+      "sha256": "71a2a5f62c180af8ff58a24abf38c56e5461dc3f16c48673a398cacb11f2e813"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 28086,
+      "sha256": "28230fb3baab1578dc307c18dbfddf7a19e6c9eb36311958a792b87bc9f20397"
+    }
+  ],
+  "measurements_changed": false,
+  "models_retrained": false,
+  "qualification": "All four payloads match the existing full-study hashes and sizes. Manifest and contract bytes are copied unchanged. The missing original archive hash remains an unresolved provenance record and is not replaced by the new container hash."
+}

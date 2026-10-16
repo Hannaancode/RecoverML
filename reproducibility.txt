@@ -670,3 +670,15 @@ Its initial analyzer order mismatch and corrected analysis are both preserved an
 The final six control receipts are results/validation/2026-10-16/gigabyte_ledger_controls_v3
 Read docs/WORK_HANDOVER.md for current publication status and required inputs and remaining research and course work
 Publication of all new binary evidence is incomplete until the branch tree has been verified against the file hashes
+
+ORIGINAL EVIDENCE RECOVERY
+
+Thirteen missing originals were recovered from the original workspace and published
+The retinal payload archive is stored as exact byte parts because the upload transport rejects a single large request
+After cloning run python scripts/materialize_evidence.py and it reconstructs the exact original retinal archive after checking every part and the historical complete archive hash
+The release verifier performs the same byte checks directly on Git objects
+The original Letter selected_frontier.tar.gz container remains missing and its expected hash is not changed
+A separately named recovered_frontier_payloads.tar.gz contains all four original payloads with the exact full study hashes plus the unchanged full study manifest and failure contract
+Its frontier_recovery_receipt.json explicitly identifies it as a payload equivalent reconstruction and not an original container
+The strict original completeness check therefore still flags that one original archive
+See docs/RELEASE_STATUS_OCT16.md and docs/ORIGINAL_EVIDENCE_PARTS_OCT16.json for commands and precise file identities

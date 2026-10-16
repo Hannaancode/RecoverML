@@ -1,0 +1,16 @@
+test_missing_part_is_rejected (test_release_verification.ChunkedOriginalTests.test_missing_part_is_rejected) ... ok
+test_part_tamper_is_rejected (test_release_verification.ChunkedOriginalTests.test_part_tamper_is_rejected) ... ok
+test_parts_recover_exact_historical_bytes (test_release_verification.ChunkedOriginalTests.test_parts_recover_exact_historical_bytes) ... ok
+test_self_consistent_manifest_cannot_change_historical_identity (test_release_verification.ChunkedOriginalTests.test_self_consistent_manifest_cannot_change_historical_identity) ... ok
+test_unsafe_part_path_is_rejected (test_release_verification.ChunkedOriginalTests.test_unsafe_part_path_is_rejected) ... ok
+test_checksum_manifest_cannot_silently_omit_a_tracked_file (test_release_verification.ReleaseVerificationTests.test_checksum_manifest_cannot_silently_omit_a_tracked_file) ... ok
+test_duplicate_retinal_request_at_fixed_count_is_rejected (test_release_verification.ReleaseVerificationTests.test_duplicate_retinal_request_at_fixed_count_is_rejected) ... ok
+test_duplicate_scientific_request_at_fixed_count_is_rejected (test_release_verification.ReleaseVerificationTests.test_duplicate_scientific_request_at_fixed_count_is_rejected) ... ok
+test_frozen_source_tamper_is_rejected (test_release_verification.ReleaseVerificationTests.test_frozen_source_tamper_is_rejected) ... ok
+test_missing_historical_archive_does_not_become_complete (test_release_verification.ReleaseVerificationTests.test_missing_historical_archive_does_not_become_complete) ... ok
+test_same_length_raw_tamper_fails_recorded_checksum (test_release_verification.ReleaseVerificationTests.test_same_length_raw_tamper_fails_recorded_checksum) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 7.380s
+
+OK

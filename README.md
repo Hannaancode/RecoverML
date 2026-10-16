@@ -20,7 +20,7 @@ Strong simple retention methods match our minimum storage on these histories and
 
 Read the [larger storage results](results/research/gigabyte_letter_oct16/RESULTS.md) and [scientific comparison](results/research/scientific_complete_oct16/RESULTS.md) and [retinal study](results/research/eyeai_complete_oct15/RESULTS.md)
 Read the [remaining tasks and file map](docs/WORK_HANDOVER.md) before continuing in a new conversation
-The current branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Full evidence publication remains incomplete.
+The current branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Thirteen missing originals are restored and one original archive container remains unavailable with a separately verified payload reconstruction. See the release status for this exact distinction. Run `python scripts/materialize_evidence.py` after clone to assemble the byte-identical retinal archive from its transport parts.
 
 ## What we have achieved
 

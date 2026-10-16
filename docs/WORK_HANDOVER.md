@@ -21,7 +21,7 @@ The fresh-clone continuation started at `cbd26d476d3c6313b456be7bd4bdc769ada637f
 
 The research branch contains implementation, frozen protocols, the UCI Letter input, sensitivity/component/cloud evidence, final scientific/retinal/Letter reports, and all three raw request logs. Publication is still incomplete: the exact missing original archives and files are listed in [release status](RELEASE_STATUS_OCT16.md). Local files or unreferenced Git objects do not establish publication. The new verification scripts check committed Git bytes, so Windows newline conversion cannot silently change the identity being audited.
 
-Original capture workspace: `/workspace/scratch/03a1fa6b3213/recoverml_git`. Its remaining unpublished originals are not accessible from the fresh Windows clone used for this continuation. Clone the research branch using the guide; do not assume either transient path is available on another host.
+Original capture workspace: `/workspace/scratch/03a1fa6b3213/recoverml_git`. It was revisited for this recovery and supplied thirteen original files and the four recorded Letter frontier payloads from a preserved preflight. Clone the research branch using the guide; do not assume either transient path is available on another host.
 
 ## Completed in the fresh-clone continuation
 
@@ -37,7 +37,7 @@ This is ledger, source and byte verification on Windows/Python3.12.8 with pinned
 
 | Task | Work still required | Files or data needed | Availability at this checkpoint |
 |---|---|---|---|
-| Finish original evidence publication | Recover the missing historical archives/summary/figures and verify their recorded hashes before publishing | Exact paths in `docs/RELEASE_STATUS_OCT16.md` and `scripts/verify_release.py`; original capture workspace | All raw request logs now published; 13 hash-identified files plus the interrupted retinal archive remain absent in the audited clone. Do not fabricate originals or silently drop them from the completeness check |
+| Finish original evidence publication | Recover the missing historical archives/summary/figures and verify their recorded hashes before publishing | Exact paths in `docs/RELEASE_STATUS_OCT16.md` and `scripts/verify_release.py`; original capture workspace | Thirteen missing originals recovered and published with original retinal archive bytes verified from transport parts. One original Letter frontier container is still missing and a separately named four-payload hash-matched reconstruction is available. The original expected archive hash remains unchanged |
 | Available-release documentation and checksums | Complete for the checked scope; regenerate checksums again after any subsequent tracked edit | README, guide, progress, final audit, release status, handover, both checksum manifests | Updated with current measured results and explicit incomplete-publication scope. Historical checksum manifests preserved. Use `python scripts/verify_release.py` on the final commit |
 | Published-ledger integrity | Complete for available numerical/structural ledgers; compact payload audit still awaits the missing frontier | `results/validation/2026-10-16/release_recheck`, original `gigabyte_ledger_controls_v3`, new verification scripts/tests | Six mutation controls and numerical/source checks freshly pass; missing payload archive is explicitly not verified. Original analyzer failure remains preserved |
 | Resolve scientific novelty and contribution strength | Obtain an external challenge and resolve remaining full-paper gaps; decide whether stronger claims need independent workflows | Novelty/contribution/subclass/frontier reviews and new evidence for any stronger claim | Collab Sections4–6 full-text comparison completed. MinSS full text and external expert review remain unresolved; heuristic ties are retained |
@@ -72,3 +72,7 @@ No GPU is needed for the current CPU planners and forests. Linux or WSL2 with Py
 3. Recover missing originals from the capture workspace or obtain an author-supplied archive. Check hashes before upload. Repeat no completed experiment merely because an unpublished archive is missing; a genuinely fresh rerun must have new identities and measurements.
 4. Retain the first failed native control and analyzer order mismatch as labelled superseded evidence.
 5. Ask the author for paper drafting instructions only after giving an honest scientific readiness report and distinguish external peer review from implementation completion.
+
+## Subsequent original workspace recovery
+
+Read RELEASE_STATUS_OCT16.md for the current repair. Thirteen originals are restored and a payload-equivalent Letter frontier archive is available under its explicit new name. The strict original-container gap is now one file rather than fourteen. Run scripts/materialize_evidence.py after clone to reconstruct the byte-identical retinal archive from its committed parts. Both old original archive identities and all existing measurements remain unchanged.
