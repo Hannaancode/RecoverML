@@ -1,0 +1,13 @@
+# Python 3.12 and Linux or WSL2
+# Direct dependencies for the CPU prototype and complete paper benchmark runner
+# These versions match pyproject.toml and its paper extra
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+threadpoolctl==3.6.0
+networkx==3.5
+dvc==3.67.1
+Pillow==12.3.0
+# Optional earlier PyTorch studies use torch==2.9.1 from the CPU wheel index
+# See reproducibility.txt for installation and dataset preparation

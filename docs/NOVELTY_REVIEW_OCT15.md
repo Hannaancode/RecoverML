@@ -202,3 +202,13 @@ The reconstructed [component audit](ABLATIONS_OCT15.md) contains 154 structural 
 The separate [annotation sensitivity study](../results/research/scientific_sensitivity_oct15/RESULTS.md) contains 5760 metadata-only controls. It shows that cost and access-weight and eligible-artifact choices can change baseline decisions. It is not a native execution benchmark or an independent sample of 5760 scientific workflows.
 
 The supported contribution categories are stated in [CONTRIBUTIONS_OCT15.md](CONTRIBUTIONS_OCT15.md). Three categories can be presented clearly but three confirmed new theoretical discoveries cannot be claimed from this evidence.
+
+
+## 16 October access and coverage checkpoint
+
+The DFKI institutional record and the TU Berlin Agora project record were checked again. Both support the overlap in experiment graphs and storage-aware materialization and future workload reuse. The complete institutional Collab PDF again timed out and the MinSS publisher link returned HTTP 403. These are unresolved full-paper checks rather than evidence that either method lacks the features we study. No universal superiority claim or full native Collab comparison is made.
+
+Primary records checked:
+- https://www.dfki.de/en/web/research/projects-and-publications/publication/11031
+- https://www.agora-ecosystem.com/publications/behrouz-collaborative-ml/
+- https://jise.iis.sinica.edu.tw/JISESearch/pages/View/PaperView.jsf?keyId=155_2010

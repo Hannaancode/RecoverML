@@ -1,0 +1,150 @@
+# RecoverML — Comprehensive Scientific Validation and Improvement Plan
+
+## Mission
+
+Perform an adversarial, independent-style scientific audit of the entire RecoverML project.
+
+Repository: `Hannaancode/RecoverML`
+
+Evaluate the current implementation and manuscript titled **RecoverML: Minimum Storage for Exact Historical ML Recovery under Replay Capability Loss**, while preserving the original course project on fine-grained lineage and deterministic time travel for ML pipelines.
+
+The objective is to make this work as scientifically rigorous, reproducible, novel and publication-ready as the evidence permits.
+
+**Do not optimize for favorable results. Optimize for scientific truth.**
+
+## Non-negotiable instructions
+
+- Do not fabricate benchmarks, execution traces, proofs, citations, tests, or results.
+- Do not cherry-pick datasets, workloads, failure scenarios, seeds, baselines, or metrics.
+- Never delete, rewrite, backdate, or conceal unfavorable historical results.
+- Preserve earlier milestone submissions and archived evidence.
+- Do not call a test passed if it was skipped, partially executed, or failed.
+- Do not treat multiple requests from one history as independent statistical samples.
+- Never describe a reimplemented algorithm as a complete native published system.
+- Do not claim novel results without checking the relevant literature.
+- Never claim a solver timeout proves optimality or robustness.
+- Run real experiments whenever possible. Document infrastructure limitations honestly.
+- Use new experiment folders, pinned dependencies, reproducible scripts and genuine Git commits.
+- Do not stop at writing plans. Implement, test, analyze and document the improvements within the available resources.
+
+For every task, report **PASS, PARTIAL, FAIL, or BLOCKED**, with exact supporting files and evidence. Only mark a checklist item complete when its acceptance criteria are satisfied.
+
+---
+
+## Phase 1 — Benchmark fairness and cherry-picking audit
+
+- [ ] **Task 1 — Audit every existing experiment.** Examine all experiment-generating scripts, archived pilots, saved results, source versions and manuscript claims. Identify excluded runs, failed experiments, parameter choices made after seeing results and inconsistencies. Produce a complete experiment inventory and explain every exclusion.
+
+- [ ] **Task 2 — Audit published-method baselines.** Check the HELIX rule reimplementation, the pinned original HYPPO components and their adapters against the primary published papers and source code. Verify ranking decisions, graph semantics, budgets, input costs, execution assumptions and excluded operations. Identify any mismatch that could unfairly disadvantage a baseline.
+
+- [ ] **Task 3 — Verify equal experimental conditions.** Compare methods using identical datasets, histories, failure scenarios, execution environments, storage accounting rules and maximum budgets. Report actual storage consumed, not only permitted storage. Also show coverage across multiple common storage budgets, rather than only the RecoverML optimum.
+
+- [ ] **Task 4 — Implement stronger direct baselines.** Add at least a simple robustness-aware greedy retention method, a stronger local-improvement heuristic where feasible, and the independent exact scenario formulation. Compare their exact recovery coverage, retained bytes, planning costs and scalability under the same recovery contract. This is critical because HELIX and HYPPO were not designed to solve RecoverML's fault-robust objective.
+
+- [ ] **Task 5 — Conduct a baseline sensitivity study.** Sweep relevant storage budgets, workload sizes, operation costs, recovery frequencies, group-loss bounds, tie-breaking orders and materialization settings. Predeclare parameter ranges before the final evaluation. Report complete results, including settings where RecoverML performs worse.
+
+- [ ] **Task 6 — Test genuinely unseen workflows.** Construct a held-out benchmark set that is not used to design or tune RecoverML. Prefer real publicly available ML pipeline histories containing different preprocessing operators, feature transformations, models and branching structures. Do not build every workflow specifically to produce equal-hash alternative artifacts. Publish the selection rules before evaluating.
+
+**Phase 1 acceptance:** Baselines are correctly characterized, experimental conditions are transparent, comparisons are reproducible, and negative results are included.
+
+---
+
+## Phase 2 — Correctness, robustness and practical performance
+
+- [ ] **Task 7 — Independently verify mathematical correctness.** Recheck the formal recovery contract, closed-set equivalence, storage-cut validity, optimality proof, component decomposition, cycle handling, and any other manuscript propositions. Use a separately implemented exhaustive solver on sufficiently small graphs. Search for counterexamples. Distinguish proven claims from claims supported only by tests.
+
+- [ ] **Task 8 — Verify every reported storage optimum.** Compare RecoverML with the independent exact formulation for all tractable cases. Check actual stored payload bytes, mandatory inputs, manifest size, capability metadata and deduplication accounting. Verify optimality status and numerical tolerances. Report every disagreement and solver-unknown outcome.
+
+- [ ] **Task 9 — Test more realistic failures.** Expand beyond injected preprocessing-call restrictions to include training failures, prediction failures, unavailable external tools, environment drift, changed dependencies, missing source data and corrupted stored files where meaningful. Explicitly define which failures are supported, rejected or outside the formal guarantee.
+
+- [ ] **Task 10 — Test exact reproducibility across environments.** Use a genuinely separate execution environment, ideally another physical or cloud machine, and rebuild from a fresh clone. Validate artifact bytes, model inference, pinned dependencies and restoration outcomes. Record operating system, Python version, package versions, hardware and execution commands. If exact recovery is unsupported across environments, document this clearly rather than bypassing integrity checks.
+
+- [ ] **Task 11 — Evaluate recovery time against storage savings.** Measure end-to-end restoration latency, computation time, CPU use, memory use and where possible I/O and energy. Include model loading, dependency recovery and model retraining. Produce storage-versus-recovery-cost Pareto curves and identify when retaining full snapshots is more economical.
+
+- [ ] **Task 12 — Evaluate larger and more diverse models.** Test random forests, neural networks, realistic feature engineering and larger checkpoint sizes. Use additional workloads where feasible, including complex DAGs with shared branches, alternate producers and limited replay paths. Report scale limits, failures and timeouts. Do not assert general large-model support from small examples.
+
+- [ ] **Task 13 — Perform comprehensive ablation studies.** Disable physical deduplication, alternative-producer support, component decomposition, rooted-provider reduction, indexed certificate construction and engine selection individually where meaningful. Measure each component's actual contribution to storage, correctness, planning time and recovery time. Avoid attributing a combined improvement to one component.
+
+- [ ] **Task 14 — Validate test coverage and negative cases.** Run the complete automated test suite, including optional PyTorch tests if an appropriate environment can be installed. Add corruption, adversarial cycle, nondeterministic replay, ungrounded dependencies, timeout, missing file and environment-mismatch tests. Preserve failed diagnostics and verify that unsafe recovery fails closed.
+
+**Phase 2 acceptance:** Correctness holds under the stated formal contract, supported failure conditions are explicitly characterized, restoration costs are measured and the system's boundaries are experimentally demonstrated.
+
+---
+
+## Phase 3 — Scientific novelty and related-work audit
+
+- [ ] **Task 15 — Conduct a fresh systematic novelty review.** Search primary literature from SIGMOD, VLDB/PVLDB, ICDE, CIDR, OSDI, USENIX, MLSys, EDBT and related venues. Review HELIX, HYPPO, LIMA, MEMPHIS, Kishu, CHEX, ExoFlow, Checkmate, DVC, Disdat, FlorDB and relevant fault-tolerant source-placement and robust optimization papers. Perform backward and forward citation chaining where possible.
+
+- [ ] **Task 16 — Construct an adversarial novelty matrix.** For each prior method, identify its exact mathematical objective, constraints, failure model, artifact representation, algorithm and evaluation. Explicitly separate established ideas from RecoverML's candidate contributions. Do not count different terminology as evidence of novelty. Cite exact papers, sections, algorithms and propositions.
+
+- [ ] **Task 17 — Challenge the claimed algorithmic contribution.** Determine whether bounded correlated replay-loss retention, physical artifact identity, component decomposition and closed-set optimization reduce to previously established robust materialization, source-location, hypergraph-cut or checkpoint-placement formulations. Attempt an explicit reduction or equivalence proof. If novelty is weak, say so and narrow the claims.
+
+- [ ] **Task 18 — Verify scientific significance.** Identify the practical scenarios in which the recovery problem occurs. Evaluate whether capability loss and identical alternative producers are realistic and frequent enough to justify the system. Distinguish an interesting formal optimization problem from a demonstrated operational need. Explain what new knowledge the experiments establish that could not simply be predicted from the objective.
+
+**Phase 3 acceptance:** Every novelty claim has a precisely stated distinction supported by primary references. Potential overlapping work and unresolved originality questions are recorded.
+
+---
+
+## Phase 4 — Statistical reliability and research integrity
+
+- [ ] **Task 19 — Perform statistically correct analysis.** Treat independent histories or independently generated workflows as experimental units. Do not create artificial sample sizes from repeated requests. Report means, medians, ranges, appropriate confidence intervals and paired comparisons. Explain whether results are descriptive or support statistical generalization.
+
+- [ ] **Task 20 — Report all negative and conditional results.** Include zero-saving cases, solver slowdowns, snapshot advantages, failed recovery settings, failed serialization diagnostics and cases where adding fitting or prediction failures removes the storage benefit. Analyze why the result occurs. Never discard a failure merely because it weakens the paper.
+
+- [ ] **Task 21 — Audit all headline numbers and figures.** Regenerate every table and plot directly from saved raw experiment files. Verify the 3,344-per-policy published comparison, the 20.26% tabular mean, the much lower median, the 112-version results, planning-time claims and every remaining headline statistic. Check units, denominators, baseline definitions and whether plotted results represent complete recovery or only successful requests.
+
+**Phase 4 acceptance:** Every reported number is traceable to raw evidence, statistical uncertainty is appropriately treated, and the paper accurately represents unfavorable results.
+
+---
+
+## Phase 5 — Independent reproducibility and final manuscript
+
+- [ ] **Task 22 — Create a complete reproduction package.** Update `requirements.txt`, `pyproject.toml`, README, the reproduction guide and benchmark scripts as necessary. Pin external source revisions, record source and output hashes, include dataset acquisition instructions and provide one-command execution paths where feasible. Run clean-install tests and validate GitHub Actions. Preserve all old evidence.
+
+- [ ] **Task 23 — Perform an independent-style paper review.** Review the complete manuscript as a skeptical database-systems referee. Check definitions, proof assumptions, mathematical notation, experimental fairness, baselines, figures, related-work completeness, limitations, conclusions and unsupported claims. Correct defects and create a separate reviewer report listing remaining major and minor issues. An actual external human review must be recorded as pending until performed.
+
+- [ ] **Task 24 — Produce a final research audit and submission decision.** Create `docs/FINAL_SCIENTIFIC_AUDIT.md` containing the full checklist, PASS/PARTIAL/FAIL/BLOCKED status, exact evidence paths, raw-result links, unresolved risks, novelty verdict, baseline-fairness verdict, reproducibility verdict, strongest supported findings and recommendation on whether the paper is ready for external submission.
+
+**Phase 5 acceptance:** A third party can obtain the code and data, execute the supported experiments, verify the numerical claims and understand precisely what is established and what remains uncertain.
+
+---
+
+## Required execution and reporting protocol
+
+Work through the phases systematically. Prioritize scientific validity over performance optimization or manuscript polishing.
+
+For each completed task:
+
+1. State what was examined or changed.
+2. State the actual results, including failures.
+3. Link to relevant code, logs, tables, figures and generated reports.
+4. Identify remaining limitations.
+5. Mark the task complete only when its acceptance criteria are satisfied.
+
+Do not silently weaken correctness requirements, exclude unfavorable test cases or alter historical experiments to make the project appear successful.
+
+Do not spend the entire execution budget drafting plans. Perform concrete audits, implementation changes and validation runs, committing genuine progress. If computational limits prevent completion, preserve intermediate work and leave the relevant checklist items incomplete.
+
+## Final deliverables
+
+- Updated, tested RecoverML repository.
+- Fair and repeatable benchmark protocols.
+- Robustness-aware baseline implementations and comparisons.
+- Held-out real-workflow evaluation.
+- Mathematical correctness and novelty audit.
+- Storage, restoration-time and scalability analysis.
+- Statistical analysis with correct experimental units.
+- Full raw evidence and reproducibility instructions.
+- Revised research manuscript with defensible claims.
+- Final 24-task checklist with evidence-backed status.
+- Separate list of remaining work requiring external researchers or computing environments.
+
+## Definition of completion
+
+The project is not ready for a strong publication claim merely because every local unit test passes.
+
+Research readiness requires evidence supporting correctness, meaningful novelty, fair comparisons, practical relevance, accurate reporting and independent reproducibility.
+
+If any critical issue remains unresolved, explicitly report **NOT YET READY** rather than claiming 100% scientific confidence.
+
+The final assessment must prioritize scientific honesty over achieving favorable metrics or publication acceptance.

@@ -1,0 +1,68 @@
+{
+  "status": "REVIEW_COMPLETE",
+  "evidence_directory": "results/research/gigabyte_letter_oct16",
+  "supported_claims": [
+    "All 16 fixed real Letter forest models completed and canonical model payloads are unique",
+    "Exact preprocessing retention saves 3,664,716,552 canonical uncompressed bytes against target snapshots",
+    "Gzip comparison saves 290,607,161 bytes and does not reach 1 GB compressed",
+    "48 unique actual replays are exact with 0 unexpected failures and 32 native DVC target files verified",
+    "Broad loss exact plan has full 96/96 structural coverage and zero storage saving"
+  ],
+  "material_qualifications": [
+    "The savings apply to an explicitly declared preprocessing-failure scope and require recomputing models",
+    "RecoverML exact ties scenario exact and both robust heuristics in preprocessing retained storage",
+    "Broad robust local and snapshots tie exact storage and coverage and greedy misses one allowed request",
+    "All actual recovery stress disables preprocessing only and does not physically replay all broad faults",
+    "800 structural requests include 799 recoverable because broad greedy misses one and exact methods cover their complete own contracts",
+    "Native sklearn representations have different byte identities and are representation controls rather than the same historical artifact contract",
+    "Native DVC command startup and in-process recovery timing cannot establish a fair universal speed ranking",
+    "Stored snapshots have observed mean 2.1169 s versus 6.6548 s for the small recomputation frontier on this host",
+    "One host and correlated versions support descriptive timing only and no independent statistical significance claim",
+    "A shared feature frontier lets simple baselines match exact and this experiment does not establish new optimization theory or necessity of a general solver",
+    "These results establish one large practical storage case and do not establish how often such opportunities occur in production"
+  ],
+  "scope_results": {
+    "preprocessing": {
+      "snapshot_bytes": 3669545821,
+      "exact_bytes": 4829269,
+      "saving_bytes": 3664716552,
+      "saving_percent": 99.86839600224194,
+      "gzip_snapshot_bytes": 291175536,
+      "gzip_exact_bytes": 568375,
+      "gzip_saving_bytes": 290607161,
+      "native_pickle_snapshot_bytes": 2751548681,
+      "native_pickle_snapshot_minus_canonical_frontier_bytes": 2746719412,
+      "native_gzip_snapshot_bytes": 224313265,
+      "native_gzip_snapshot_minus_gzip_frontier_bytes": 223744890,
+      "planning_s": 0.021091411000270455,
+      "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+    },
+    "broad": {
+      "snapshot_bytes": 3669548445,
+      "exact_bytes": 3669548445,
+      "saving_bytes": 0,
+      "saving_percent": 0.0,
+      "gzip_snapshot_bytes": 291178160,
+      "gzip_exact_bytes": 291178160,
+      "gzip_saving_bytes": 0,
+      "native_pickle_snapshot_bytes": 2751551305,
+      "native_pickle_snapshot_minus_canonical_frontier_bytes": -917997140,
+      "native_gzip_snapshot_bytes": 224315889,
+      "native_gzip_snapshot_minus_gzip_frontier_bytes": -66862271,
+      "planning_s": 0.010681430000204273,
+      "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+    }
+  },
+  "preprocessing_method_retained_bytes": {
+    "RecoverML_exact": 4829269,
+    "scenario_exact": 4829269,
+    "robust_greedy": 4829269,
+    "robust_local": 4829269,
+    "target_snapshots": 3669545821
+  },
+  "runtime_store_means": {
+    "c5b223c1bf1eb505d8b0b977692557d2406e2fcd0a1fa5806c23084c9d0b4fb7": 6.654770947125144,
+    "9e74962c714d0b49ebed4bdf4eacbd27d5ddd3f0e924083d1fb3e8360d8aa672": 2.116912808875014,
+    "f5cc4e6603225bade3a94acd915adba19ba436923ddd1fa60f04be56b4b68dfa": 2.7104212171250026
+  }
+}

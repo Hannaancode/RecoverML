@@ -1,0 +1,11 @@
+{
+  "case": "structural_reordered",
+  "mutation": "Reverse complete ledger order without changing records",
+  "expected_status": "PASS",
+  "observed_status": "PASS",
+  "errors": [],
+  "changed_inputs": [
+    "allowed_scenario_certificates.json"
+  ],
+  "control_passed": true
+}

@@ -1,14 +1,26 @@
-# RecoverML — Milestone 2
+# RecoverML
 
 RecoverML helps a machine learning pipeline save space and restore earlier versions of its work
 
 For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
 It explains Linux and Windows with WSL2 and installation and every run from start to finish
-The complete saved evidence is on GitHub and the [publication record](docs/PUBLICATION_OCT14.json) records the verified upload
+The earlier complete release is recorded in the [publication record](docs/PUBLICATION_OCT14.json) and the [current handover](docs/WORK_HANDOVER.md) lists which new files still need publication
 
 It records the data and model files and the links between them and stores identical parts once
 The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
 Every loaded or rebuilt artifact is checked against its original SHA-256 fingerprint
+
+## Latest checked progress on 16 October
+
+We completed the new scientific study with 1920 conditions and 36480 real requests and zero unexpected outcomes
+We completed the EyeAI inspired study with 10920 exact recoveries and the native DVC control restored all 32 target files after the older processing code was removed
+We trained all 16 planned forests on the complete Letter Recognition data and saved 3.665 GB of uncompressed canonical files while keeping exact historical recovery
+The measured saving with gzip is 290.6 MB and losing both training and prediction tools requires the full model snapshots
+Strong simple retention methods match our minimum storage on these histories and snapshots restore faster so the result shows a clear storage and recovery time tradeoff
+
+Read the [larger storage results](results/research/gigabyte_letter_oct16/RESULTS.md) and [scientific comparison](results/research/scientific_complete_oct16/RESULTS.md) and [retinal study](results/research/eyeai_complete_oct15/RESULTS.md)
+Read the [remaining tasks and file map](docs/WORK_HANDOVER.md) before continuing in a new conversation
+The current branch is research/scientific-validation-oct15 and the handover records the upload status
 
 ## What we have achieved
 
@@ -55,7 +67,16 @@ The final suite has 77 tests with 72 passing and five optional PyTorch checks sk
 Our three contributions are a clear minimum storage recovery contract and an exact physical optimizer and a reproducible study of the price of stronger recovery
 Read the [full project summary in simple words](docs/PROJECT_SUMMARY.md) and [current paper](paper/RecoverML_capability_loss.md) and [paper PDF](output/pdf/RecoverML_capability_loss.pdf)
 The [saved paper evidence](results/research/paper_oct14/README.md) contains the logs and source versions and selected stores and figures
-The next plan is independent reproduction and expert novelty review and a selected venue format after the author reads the paper
+The compact independent cloud reproduction is complete and the next plan is expert novelty review and final evidence publication and paper revision when the author requests it
+
+## Scientific audit added 15 October
+
+Read the [24 task scientific audit](docs/FINAL_SCIENTIFIC_AUDIT.md) and the [new fixed experiment protocol](docs/SCIENTIFIC_PROTOCOL_OCT15.md)
+The audit keeps earlier results and checks the baselines and old raw logs and storage bytes and related work
+It adds direct robustness-aware greedy and local search comparisons and new public recipe workflows across common budgets
+The expanded local test suite passes all 109 tests with CPU PyTorch and no skipped tests
+The witness restorer now handles a 2048 step chain and the optimizer checks solver values before claiming a proven result
+The paper text is unchanged while the author reviews it and the audit reports what is supported and what still needs outside validation
 
 ## Earlier capability loss checkpoint
 

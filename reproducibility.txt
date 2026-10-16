@@ -1,135 +1,137 @@
 RecoverML reproduction guide
-Updated 14 October 2026
+Updated 16 October 2026
 
-Read this guide from start to finish before running a long experiment
-Commands marked PowerShell run in Windows and all other commands run in Ubuntu
-Run the Ubuntu commands from the repository root unless stated otherwise
-The paper formatting will be revised after the author has reviewed the draft
+This guide starts with a fresh Linux or Windows laptop and explains installation
+and saved-data checks and fresh experiments and the exact recovery boundary
+Run commands from the repository root unless a step says otherwise
+Commands labelled PowerShell run in Windows and other commands run in Ubuntu
+The paper draft and PDF are preserved while the author reviews the results
 
-Current publication availability
-The source and guide and paper and plots and complete saved evidence are on GitHub
-The raw execution logs and planner records and selected model/data stores are included
-The verified data release is 127bbd6b5aa9471502af58e88ac0336656be2327
-The publication receipt is docs/PUBLICATION_OCT14.json
-Fresh experiments create their own logs and stores and do not require these saved archives
-Saved-data figure audits use the included evidence and archived store replay also
-requires the matching environment described below
+1 CHOOSE THE CHECK YOU WANT
 
-1 WHAT THIS GUIDE REPRODUCES
+A Saved evidence audit
+Check supplied file identities and regenerate figures/tables from recorded logs
+This checks the analysis and does not create new execution measurements
 
-There are three different checks
+B Fresh capture and recovery
+Capture new histories in your own environment and restore their own exact bytes
+This is the main route for a laptop or second-environment reproduction
 
-A Saved evidence check
-Verify the supplied files and regenerate the nine current paper plots and
-their claim tables from saved measurements
-This verifies the analysis and does not create new benchmark measurements
+C Original archived store replay
+Restore the old captured outputs from an old selected store in its fully matching
+recorded environment and source implementation
+Python patch versions and numerical library paths and BLAS identities matter
+Matching only the eight direct package versions is not enough
+An environment/source rejection means that archived replay did not pass
+Do not disable the guard to make an old capture replay in a different environment
 
-B Fresh experiment run
-Capture new histories and run the planners and recovery requests in your own
-installed environment and write new measurements in a new results folder
-This is the main route for checking the project on another computer
+The guarantee assumes intact retained files and the recorded supported operators
+and only the declared allowed capability losses
+It does not promise that retraining on every CPU produces the same old bytes
+It does not promise recovery from corruption or deletion of mandatory retained data
+The checks detect such conditions and refuse unsafe recovery
 
-C Archived store replay
-Recover original captured targets from a saved selected store with its
-recorded source and exact environment checks
-The current guard compares the whole recorded environment including Python
-patch version and numerical library paths and BLAS details
-Matching only the main package versions is not sufficient for this route
-An environment rejection on a fresh laptop is expected when those fields differ
-Do not disable the guard or claim that a rejected replay passed
-Use route B to test fresh capture and exact recovery on that laptop
+2 WHAT HAS ACTUALLY BEEN REPRODUCED
 
-The exact promise concerns intact retained files and recorded operators and
-the declared allowed capability losses in the supported recorded environment
-It does not promise that training on every CPU produces the same bytes
-It does not simulate arbitrary disk corruption or a complete operating system loss
+The original paper evidence is results/research/paper_oct14
+Its archived comparisons and nine figures have separate saved-data audits
+The verified October14 publication receipt is docs/PUBLICATION_OCT14.json
 
-2 COMPUTER AND SOFTWARE NEEDED
+A fresh compact cloud run also completed at commit
+    c6d26a014133fc1cf52951af81c2bafec9a5ee6b
+Workflow
+    https://github.com/Hannaancode/RecoverML/actions/runs/38773600816
+Receipt and original artifact ZIP
+    results/validation/2026-10-15/cloud_reproduction
+Readable scope
+    docs/CLOUD_REPRODUCTION_OCT15.md
+
+This run used two new histories and 192 conditions and 624 real recovery requests
+367 requests were exact and 257 were expected blocked and zero were unexpected
+The eight exact-formulation comparisons agreed
+It ran on a separate GitHub-hosted Azure Ubuntu 24.04.5 environment with four
+virtual CPUs on AMD EPYC 7763 and Python 3.12.15
+The neural CI job passed its then-current 102 tests with CPU PyTorch
+The saved later same-host checkpoint passed all 109 tests without skips at
+    results/validation/2026-10-15/final_checkpoint/tests_with_cpu_torch.txt
+These are different source checkpoints and the test counts are not interchangeable
+
+This is fresh capture/recovery on another environment and not exact old-blob
+replay across changed runtimes and not the complete paper matrix on that machine
+The current full scientific and retinal resumptions and larger storage result
+must be judged by their completed reports rather than by their expected counts
+Read docs/FINAL_SCIENTIFIC_AUDIT.md for the dated status and open limitations
+
+3 COMPUTER AND OPERATING SYSTEM
 
 Use a Linux CPU computer or Ubuntu through WSL2 on Windows
-A GPU is not needed for the current complete paper matrix
-The recorded host used an eight CPU quota and an eight GiB memory limit
-Those are recorded measurements rather than a measured minimum requirement
-Allow free disk space for this repository and newly captured stores and logs
-The complete matrix needs much more space and time than the smoke check
-Exact duration depends on the computer and solver and no fixed duration is promised
+A GPU is not needed for the current planners and CPU forests and benchmark grids
+The recorded local host had an eight CPU quota and an eight GiB memory limit
+Those are recorded values and not a measured minimum hardware specification
+Allow enough disk space for captured models and native DVC caches and archives
+The larger study can create multiple GB of real temporary data
+The exact duration and peak disk/RAM needs depend on the machine
+Start with the smoke test before running long studies
 
 Use Python 3.12
-The original final captures record Python 3.12.14
-The project accepts Python >=3.12 and <3.13 for fresh experiments
-Python 3.11 and 3.13 are outside this package's declared range
+Fresh experiments accept Python >=3.12 and <3.13
+Original captures record Python 3.12.14 and the fresh cloud run records 3.12.15
+Do not change the package range merely to use Python 3.11 or 3.13
 
-Internet is needed for initial package installation and the pinned HYPPO download
-Optional earlier text experiments also download the public 20 Newsgroups data
-The current matrix uses the included Banknote data and scikit-learn datasets
+Linux supplies Bash and /proc resource readings used by the full runners
+Windows users do not need to replace Windows or buy another computer
+WSL2 runs Ubuntu on the existing laptop
+Keep the repository and timing outputs in the Linux filesystem rather than /mnt/c
+because a mounted Windows filesystem changes I/O behavior
+A personal laptop is a valid additional reproduction environment
+A second environment is not a distributed scale-out benchmark or external review
 
-3 WINDOWS SETUP
-
-If Ubuntu with WSL2 is already installed open it and go to section 4
+If WSL2 is already installed skip to section 4
 Otherwise open PowerShell as Administrator
 
 PowerShell:
     wsl --list --online
-
-Choose Ubuntu-24.04 if that name is listed because it supplies Python 3.12
-
-PowerShell:
     wsl --install -d Ubuntu-24.04
 
-Restart if requested and open Ubuntu and create your Linux user account
-Check the version from PowerShell
+Use the listed distribution name if it differs
+Restart if requested then open Ubuntu and create its user account
 
 PowerShell:
     wsl --list --verbose
-
-The Ubuntu entry should show version 2
-If the installed distribution has another name use its exact name
-
-PowerShell:
     wsl --set-version Ubuntu-24.04 2
 
-Keep the project in the Linux home folder for the timing runs
-Avoid running the storage benchmark from a mounted Windows folder such as /mnt/c
-That filesystem choice can change I/O timings
-WSL uses your laptop hardware and does not require replacing Windows
+The last command is needed only if that Ubuntu installation is not already WSL2
+Official instructions
+    https://learn.microsoft.com/en-us/windows/wsl/install
 
-Official installation instructions:
-https://learn.microsoft.com/en-us/windows/wsl/install
+4 FRESH CLONE AND EXACT SOURCE VERSION
 
-4 PREPARE UBUNTU AND GET THE CODE
-
-Ubuntu 24.04 commands:
+Ubuntu 24.04:
     sudo apt update
     sudo apt install -y git python3.12 python3.12-venv python3-pip build-essential
     mkdir -p ~/projects
     cd ~/projects
-    git clone https://github.com/Hannaancode/RecoverML.git
+    git clone --branch research/scientific-validation-oct15 https://github.com/Hannaancode/RecoverML.git
     cd RecoverML
-
-If you already have the repository do not overwrite uncommitted work
-Use a separate fresh clone for reproduction if the existing copy has local changes
-
-The current research code is published on research/capability-loss-recovery
-If the default branch is still an earlier milestone switch to the research branch
-
-    git fetch origin
-    git switch research/capability-loss-recovery
-    git pull --ff-only
     git status --short
     git rev-parse HEAD
 
-Record the displayed commit SHA so the exact version is known
-For an exact repeat of a particular publication use its verified commit SHA
-Use git checkout --detach followed by that SHA instead of updating a moving branch
-The final publication receipt records which remote commit was verified
+The current validation work is on research/scientific-validation-oct15
+The default main branch and older research/capability-loss-recovery branch may
+still contain an earlier publication and do not automatically include this work
+Record the actual displayed commit before starting an experiment
+A moving branch may have newer changes than a cited publication
+For an exact old source version use a separate clone and git checkout --detach
+followed by the required verified commit SHA
+For the historical cloud experiment use the exact commit from section 2
 
-If using the supplied ZIP extract it and open its RecoverML folder
-Skip the Git commands when there is no Git metadata in the ZIP
-Verify CHECKSUMS.json as described in section 7
+If your existing clone has edits keep it and use a separate fresh clone
+Do not overwrite uncommitted work to reproduce the study
+A supplied ZIP has no Git metadata so record the ZIP identity and checksum receipt
+and skip only commands that require Git metadata
 
-5 CREATE AN ISOLATED PYTHON ENVIRONMENT
+5 INSTALL THE PINNED ENVIRONMENT
 
-    python3.12 --version
     python3.12 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
@@ -137,13 +139,13 @@ Verify CHECKSUMS.json as described in section 7
     python -m pip install -e '.[paper]'
     python -m pip check
 
-requirements.txt pins the seven direct packages used by the complete CPU paper run
-The five core packages and the two paper packages match pyproject.toml
-Transitive packages are resolved by pip and are recorded with pip freeze below
-The editable installation makes the recoverml command available
-Always use python -m pip so installation targets the active Python interpreter
+The eight direct CPU dependencies match requirements.txt and pyproject.toml
+There are five core packages and three packages in the paper extra
+Transitive packages are resolved by pip and recorded with pip freeze
+This is not a complete transitive lock file or portable virtual machine image
+Always use python -m pip so installation targets the active interpreter
 
-Check the required packages
+Check the direct versions
 
     python - <<'PY'
 import importlib.metadata
@@ -151,62 +153,71 @@ import sys
 expected = {
     'numpy': '2.3.5', 'scipy': '1.17.0', 'scikit-learn': '1.8.0',
     'matplotlib': '3.10.8', 'threadpoolctl': '3.6.0',
-    'networkx': '3.5', 'dvc': '3.67.1',
+    'networkx': '3.5', 'dvc': '3.67.1', 'Pillow': '12.3.0',
 }
 assert sys.version_info[:2] == (3, 12), sys.version
 for name, version in expected.items():
     actual = importlib.metadata.version(name)
     assert actual == version, (name, actual, version)
     print(name, actual)
-print('Required direct versions match')
+print('All eight direct versions match')
 PY
 
-Set consistent numerical threading before launching Python
+Set these before launching benchmark Python processes
 
     export OPENBLAS_NUM_THREADS=1
     export OMP_NUM_THREADS=1
     export MPLBACKEND=Agg
+    export PYTHONPATH=src
 
-The benchmark runners also set the numerical thread variables
-Fresh captures record their actual environment and source identities
-This is different from claiming that the environment matches an archived capture
+Do not change source modules while a measured experiment is running
+The runner records module hashes and any source drift invalidates that case
+Changing an unused package module still triggers the conservative whole-source
+check used by the current scientific runner
 
-6 MAKE A NEW REVIEW FOLDER AND RECORD THE MACHINE
+6 USE UNIQUE TEMPORARY OUTPUTS AND RECORD THE MACHINE
 
-Use a unique name each time and leave the original evidence unchanged
-The following command creates a UTC timestamped folder
+Long-running append-only outputs must be outside a remotely synchronized folder
+A previous run lost visible raw-log writes while summary output advanced
+The cause is unproven and the missing measurements were not reconstructed
+Use a unique /tmp directory for all open measurement streams
+Only copy closed and reconciled evidence into the repository after completion
+/tmp is temporary so copy completed work promptly and checkpoint real progress
 
-    review_out="results/runs/review_$(date -u +%Y%m%dT%H%M%SZ)"
-    mkdir -p "$review_out"
-    git rev-parse HEAD > "$review_out/commit.txt"
-    python --version > "$review_out/python.txt"
-    python -m pip freeze > "$review_out/packages.txt"
-    uname -a > "$review_out/linux.txt"
-    lscpu > "$review_out/cpu.txt"
-    free -h > "$review_out/memory.txt"
-    python - <<'PY' > "$review_out/environment.json"
+    review_root="$(mktemp -d /tmp/recoverml-review-XXXXXXXX)"
+    mkdir "$review_root/metadata"
+    git rev-parse HEAD > "$review_root/metadata/commit.txt"
+    python --version > "$review_root/metadata/python.txt"
+    python -m pip freeze > "$review_root/metadata/packages.txt"
+    uname -a > "$review_root/metadata/linux.txt"
+    lscpu > "$review_root/metadata/cpu.txt"
+    free -h > "$review_root/metadata/memory.txt"
+    df -h /tmp > "$review_root/metadata/disk_before.txt"
+    python - <<'PY' > "$review_root/metadata/environment.json"
 import json
 from recoverml.core import environment
 print(json.dumps(environment(), indent=2))
 PY
 
-For a ZIP without Git metadata omit only the git rev-parse command
-Record that the input was the ZIP and keep the verified checksum list
-Use the actual measured hardware details rather than copying our server details
+The commands below create experiment subfolders that must not already exist
+A failed run stays preserved and a corrected retry uses a new directory
+Keep stdout/stderr and do not combine incomplete prefixes without a documented
+outcome-independent resumption rule and full raw identity reconciliation
 
-7 VERIFY THE SUPPLIED FILES
+7 VERIFY THE SUPPLIED FILES BEFORE EDITING THEM
 
-Run this before making changes to tracked files
-For a GitHub clone use CHECKSUMS_GITHUB.json in the command below
-For the complete local package replace that name with CHECKSUMS.json
-Both manifests cover the complete supplied evidence
-They exclude their own checksum entries as explained below
+For a GitHub clone use CHECKSUMS_GITHUB.json if that manifest is supplied
+For a complete local archive use CHECKSUMS.json
+A manifest covers its listed files rather than every later unlisted addition
+These manifests must be refreshed after final edits and publication
+A mismatch in an unfinished development checkout is not a passed file audit
 
     python - <<'PY'
 import hashlib
 import json
 from pathlib import Path
-manifest = json.loads(Path('CHECKSUMS_GITHUB.json').read_text())
+manifest_path = Path('CHECKSUMS_GITHUB.json')
+manifest = json.loads(manifest_path.read_text())
 errors = []
 for name, expected in manifest.items():
     path = Path(name)
@@ -216,290 +227,422 @@ for name, expected in manifest.items():
         errors.append('Changed: ' + name)
 if errors:
     raise SystemExit('\n'.join(errors))
-print('Verified', len(manifest), 'supplied files')
+print('Verified', len(manifest), 'listed files')
 PY
 
-CHECKSUMS.json excludes itself to avoid a circular checksum
-CHECKSUMS_GITHUB.json excludes itself and the complete manifest to avoid a circular checksum
-The saved evidence inventory and claim ledgers provide additional result hashes
-A checksum verifies file identity and does not by itself prove experiment correctness
+A checksum verifies identity and does not itself prove an experiment correct
+The checksum manifests exclude themselves to avoid circular identities
+Result reports and publication receipts add their own source and raw-output hashes
 
-8 RUN THE CORRECTNESS TESTS
+8 CORRECTNESS TESTS AND FIRST FRESH EXECUTION
 
-    python -m unittest discover -s tests -v > "$review_out/tests.txt" 2>&1
-    tail -n 12 "$review_out/tests.txt"
+    python -m unittest discover -s tests -v > "$review_root/tests.txt" 2>&1
+    tail -n 12 "$review_root/tests.txt"
+    python -m recoverml benchmark --config configs/smoke.json --out "$review_root/smoke"
+    python -m recoverml.audit "$review_root/smoke"
+    python -m recoverml analyze "$review_root/smoke"
 
-The saved 14 October run has 77 tests with 72 passing and five optional PyTorch skips
-Skipping those optional tests means that the PyTorch path was not checked in that run
-Any new failed test must be investigated before reporting a successful reproduction
-Optional PyTorch installation is described in section 15
+A fresh no-Torch install may skip optional neural tests
+That is a successful subset only and is not a full optional-Torch validation
+For all optional neural tests install CPU Torch first as described in section 15
+Check the actual test count and skips for the checked-out source version
+The smoke benchmark captures its own new artifacts and is not the full matrix
+Check its exact-byte audit before starting longer jobs
 
-9 CHECK THE EXISTING MILESTONE 2 LOGS
+9 ORIGINAL MILESTONE2 AND PAPER EVIDENCE
+
+Audit the saved milestone logs without generating new timings
 
     python -m recoverml.performance --audit-only --out results/milestone2/performance
     python -m recoverml.audit results/milestone2/storage
 
-These commands inspect existing logs and counters and do not generate new timings
-The saved performance study has 5400 requests and 54 trials and 2129 CPU/memory
-samples and 39600 operation records and all requests restore exact artifacts
+The original performance study has 5,400 requests and 54 trials and 2,129 resource
+samples and 39,600 operation records and all 5,400 requests restore exact artifacts
+Its throughput/concurrency and latency plots address the original rubric
+A P99 from a short exploratory setting is not a stable new workload tail estimate
 
-10 REGENERATE ALL NINE CURRENT PAPER FIGURES FROM SAVED DATA
+Regenerate all nine original paper figures and result tables from saved data
 
-This step requires the complete saved raw evidence
-The complete evidence is included in the GitHub repository
-If a required file is absent check your checkout and the checksum results
-For new measurements run the fresh paper matrix in section 13 and use its new figures
+    python scripts/analyze_paper_benchmarks.py --input results/research/paper_oct14 --output "$review_root/main_figures"
+    python scripts/analyze_retention_extensions.py --input results/research/paper_oct14 --output "$review_root/extension_figures"
 
-    python scripts/analyze_paper_benchmarks.py --input results/research/paper_oct14 --output "$review_out/main_figures"
-    python scripts/analyze_retention_extensions.py --input results/research/paper_oct14 --output "$review_out/extension_figures"
+The first script produces five figures and the second produces four
+Inspect their claim ledgers and tables and numerical inputs as well as the PNGs
+Fonts and rendering metadata can change image bytes on a different environment
+The underlying numerical claims should still reconcile with their raw inputs
+Saved-data analysis does not bypass old-capture environment guards because it
+is not executing old models
 
-The first command creates five figures
-    coverage_comparison.png
-    storage_conditions.png
-    dvc_storage.png
-    planning_scaling.png
-    certificate_index.png
+The published comparison has 3,344 requests per policy
+RecoverML 3,344 exact and HYPPO-frequency 2,291 and HYPPO-rank 2,240 and the best
+tested common-budget HELIX setting 1,940
+The original tabular mean saving is 20.26355556% and median 13.95840017%
+Pooled-byte saving is 15.17422476% and answers a different aggregation question
+These are saved results and not outcomes promised for every fresh capture
+Read docs/EVIDENCE_REVIEW_OCT15.md for denominators and conditional results
 
-The second command creates four figures
-    published_methods.png
-    lossless_outage_coverage.png
-    component_planning.png
-    fault_scope_storage.png
-
-Both commands audit raw trace totals and the claimed exact outcomes and write
-their tables and claim ledgers beside the figures
-Check the numerical tables and the input hashes as well as opening the plots
-Rendering metadata and fonts can change image file hashes on another environment
-Do not mistake that for a change in the underlying measurements
-
-11 RUN A FRESH SMALL EXPERIMENT
-
-This captures and restores new artifacts in your own environment
-It is the first execution check to use on another laptop
-
-    python -m recoverml benchmark --config configs/smoke.json --out "$review_out/fresh_smoke"
-    python -m recoverml.audit "$review_out/fresh_smoke"
-    python -m recoverml analyze "$review_out/fresh_smoke"
-
-The output includes raw request and operation records and summaries and figures
-Check that the audit succeeds before starting the longer runner
-This is a smoke experiment and does not reproduce the full paper matrix
-
-12 RUN THE COMPLETE FRESH MILESTONE 2 PERFORMANCE MATRIX
-
-    bash run_benchmarks.sh "$review_out/fresh_milestone2"
-
-The script runs the correctness suite and smoke storage benchmark and audit
-and the three-policy performance matrix at two scales and 1 and 2 and 4 workers
-with three trials per condition
-It writes tests and requests and resource samples and operation events and plots
-It refuses an already existing destination
-Use a new folder for a retry rather than replacing original logs
-
-13 RUN THE COMPLETE FRESH CURRENT PAPER MATRIX
-
-Check that section 5 installed DVC and NetworkX before this step
-The pinned original HYPPO file is downloaded and hash checked automatically
-The original third-party source is not redistributed as our project code
+For fresh original matrices use new destinations
 
     set -o pipefail
-    bash scripts/run_paper_benchmarks.sh "$review_out/fresh_paper" 2>&1 | tee "$review_out/paper_runner.log"
+    bash run_benchmarks.sh "$review_root/milestone2" 2>&1 | tee "$review_root/milestone2_runner.log"
+    bash scripts/run_paper_benchmarks.sh "$review_root/paper" 2>&1 | tee "$review_root/paper_runner.log"
 
-The script runs the following suites in order
+The first runner performs tests and smoke storage audit and the performance grid
+The second covers tabular and estimator and scaling and indexing and DVC and
+merged histories and held-out selector controls and components and published
+materialization rules and broader fault scopes and both figure analyses
+Read each suite's report because a partial runner is not a completed full matrix
+The script preserves earlier completed suites if a later command fails
 
-    tabular       Four datasets and three seeds and twelve versions and two loss bounds
-    estimators    Real Digits forest and canonical neural inference artifacts
-    scaling       Two exact planners against analytic storage minima
-    index         Indexed certificate recovery against the recorded scan implementation
-    dvc           Native DVC add and historical checkout with target hash checks
-    merged        A shared graph with multiple real historical branches
-    holdout       New topology settings reserved for engine selector checks
-    auto_real     The engine selector on the newly created merged graph
-    components    Exact physical reduction and layered AND dependency controls
-    published     HYPPO components and HELIX rule sensitivity controls at common budgets
-    fault_scope   Preprocessing and fitting and prediction capability loss controls
-    analysis      The five initial figures and their tables and claim ledger
-    extension_analysis  The four final figures and verified comparison tables
+10 NEW PROSPECTIVE SCIENTIFIC MATRIX
 
-The runner uses built-in default settings matching the declared paper matrix
-Each suite records its own actual measurements and source and environment
-The HYPPO file is pinned to revision
-    405e42de863272fcb71a625cf6b2ae0696c7a8c5
-and SHA-256
-    b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a
+Read docs/SCIENTIFIC_PROTOCOL_OCT15.md and configs/scientific_audit_oct15.json
+The fixed full grid has four public-recipe adaptations and two seeds and three
+versions and five common budgets and two capability scopes and three loss bounds
+There are eight methods including the direct robustness-aware greedy/local
+baselines and the separate scenario-expanded exact formulation
+Expected full counts are 1,920 rows and 36,480 requests across eight captures
+The counts are acceptance requirements rather than evidence that a run finished
 
-The HELIX comparator is our documented published rule implementation
-The HYPPO comparator runs unchanged released materialization functions with
-the disclosed graph adapter
-These are decision rule comparisons through a shared recovery executor
-They do not measure full native HELIX or HYPPO system performance
+    set -o pipefail
+    python -m recoverml.scientific_benchmarks --protocol configs/scientific_audit_oct15.json --output "$review_root/scientific" --hyppo-cache "$review_root/pinned_hyppo" 2>&1 | tee "$review_root/scientific_runner.log"
+    python scripts/analyze_scientific_audit.py "$review_root/scientific"
 
-DVC runs its native snapshot commands and its metadata accounting is separate
-from the common normalized payload storage measure
-Capability failures are injected replay call restrictions rather than package
-uninstallation and retained files remain intact
+The analyzer must reconcile the full declared row/request identity grid and
+summary metrics and selected payloads and exact objectives before claims are used
+The output includes execution_traces.jsonl.gz and planner_records.json.gz and
+captures.tar.gz and capture_inventory.json and source_snapshot and run_start.json
+plus report.json and analysis.json and coverage/storage/recovery plots
+No unexpected recovery and no source drift are required for a clean result
+Expected blocked requests below a method's feasible budget stay in the result
+The exact policies do not solve partial-coverage maximization below their minimum
 
-If a suite fails the shell exits and the earlier completed suites remain saved
-Keep the failure log and use a new destination for a corrected rerun
-Do not describe a partial matrix as a completed full run
+The interrupted historical attempt is results/research/scientific_audit_oct15
+It is not a complete dataset and should not be passed to the final analysis as if
+it were complete
+The recovery/resumption source and fixed retry selection are separate provenance
+The intended reconciled publication path is results/research/scientific_complete_oct16
+Read its actual report/analysis when published and do not infer missing rows
 
-14 COMPARE THE NEW RESULTS WITH THE SAVED RESULTS
+For the compact fresh-cloud protocol instead of the full grid
 
-Read report.json and summary.csv and the claim ledger in each new suite
-The saved paper evidence is results/research/paper_oct14
-Important saved counts include
+    python -m recoverml.scientific_benchmarks --protocol configs/scientific_ci_oct15.json --output "$review_root/scientific_compact" --hyppo-cache "$review_root/pinned_hyppo"
+    python scripts/analyze_scientific_audit.py "$review_root/scientific_compact"
 
-    tabular      48 cases and 28512 requests across the compared policies
-    estimators   8 cases and 1584 requests across the compared policies
-    published    56 cases and 33440 requests across ten policies
-    fault_scope  36 scope/bound cases and 3920 exact requests across two exact methods
-    merged       112 protected versions and 2464 exact requests across two exact methods
-    components   118 planning runs and 9288 exact disk requests
-    dvc          40 actual historical snapshot checkouts
+That configuration has two histories and 192 rows and 624 requests
+The generic runner text may still mention eight histories but its protocol and
+actual capture inventory define the compact scope
 
-The saved published comparison has 3344 requests for each policy
-    RecoverML decomposed   3344 exact
-    HYPPO rank             2240 exact
-    HYPPO frequency        2291 exact
-    Best tested common budget HELIX setting   1940 exact
+11 BASELINE SENSITIVITY AND COMPONENT ABLATIONS
 
-These are the saved measurements and are not promised outcomes on every new capture
-Capture times can affect cost-based comparator decisions and a new machine can
-change numerical bytes and alias opportunities even with the same dataset seeds
-For a fixed recorded graph the certified exact methods should agree on the
-minimum retained bytes and every protected request should match its own capture
-Store all deviations and explain them instead of editing measurements to match
+These are structural metadata/planner controls and not new disk-recovery timing
+Use the supplied eight frozen manifest inputs without unpickling captured models
 
-Timing differences across CPUs and filesystems are expected
-Compare relative behavior and repeated trial distributions within each machine
-Do not compare an old server time with one new laptop time as a paired speedup
-The index result is a certificate kernel measurement rather than whole-system speed
-The current source guard also restricts direct replay of old captures as below
+    mkdir "$review_root/component_inputs"
+    tar -xzf results/research/scientific_sensitivity_oct15_inputs.tar.gz -C "$review_root/component_inputs"
+    python scripts/audit_baseline_sensitivity.py --captures "$review_root/component_inputs" --protocol configs/scientific_sensitivity_oct15.json --output "$review_root/sensitivity" --hyppo-cache "$review_root/pinned_hyppo"
+    python scripts/analyze_baseline_sensitivity.py "$review_root/sensitivity"
+    python scripts/audit_component_ablations.py --captures "$review_root/component_inputs" --protocol configs/component_ablations_oct15.json --output "$review_root/component_ablations"
+    python scripts/analyze_component_ablations.py "$review_root/component_ablations" --captures "$review_root/component_inputs"
+    python scripts/audit_tractable_subclass.py --output "$review_root/tractable_subclass.json"
 
-15 OPTIONAL EARLIER PYTORCH WORKLOADS
+The capture argument expects an extracted directory and not the tar filename
+Expected sensitivity conditions are 5,760 and component rows 154 with 110 using
+the same contract and 1,452 independently compared structural certificates
+Changed-contract logical-identity controls cannot support same-contract speedups
+Archive dedup accounting is not an optimized no-dedup retention experiment
+The min-cut audit checks 2,275 small DAG specifications and 127,400 optima
+It is a post-protocol mathematical necessity challenge and not a new main baseline
 
-The current paper matrix uses scikit-learn neural artifacts and does not require Torch
-To check the earlier CNN and text Transformer studies install the pinned CPU wheel
+12 EYEAI-INSPIRED PUBLIC RETINAL WORKFLOW
+
+This is a public STARE adaptation inspired by an EyeAI provenance case study
+It is not a reproduction of EyeAI's private clinical dataset or full system
+Read docs/EYEAI_PROTOCOL_OCT15.md and configs/eyeai_rebuild_oct15.json
+The acquisition script uses the pinned authors' research repository revision
+    sraashis/deepdyn at 48018b62a245dd791e45d60b28068489a8c32742
+It requires all 20 STARE images and all 20 Adam Hoover masks and checks both
+Git blob identities and SHA256 hashes
+Do not select images based on recovery or accuracy results
+
+    python scripts/download_stare.py --destination "$review_root/stare" --report "$review_root/stare_acquisition.json"
+    set -o pipefail
+    python -m recoverml.eyeai_experiment --config configs/eyeai_rebuild_oct15.json --dataset "$review_root/stare" --output "$review_root/eyeai" 2>&1 | tee "$review_root/eyeai_runner.log"
+    python scripts/analyze_eyeai.py "$review_root/eyeai"
+
+The actual image-level split uses 15 training and 5 test images per seed
+The model uses 64x64 resized image features and 6,000 selected training pixels
+Legacy features have a three-pixel shift and corrected features are aligned
+Logistic and 24-tree forests are tested with seeds 3/17/29 and 2/8/16 versions
+Targets are models/predictions and an extra old-feature investigation contract
+Availability is intact or legacy-extractor unavailable or training/prediction
+unavailable
+
+Expected full evidence is 18 captures and 540 rows and 10,920 actual requests
+Native snapshot controls require 624 used historical checkout receipts
+All selected stores and raw outcomes and native command logs must reconcile
+Expected blocked outcomes and slower reconstruction stay in the results
+There is one runtime repetition and the 20 images recur across seed conditions
+The frozen protocol says nested prefixes but the actual histories only overlap
+because changing the version count changes the legacy half
+Do not treat them as literal nested prefixes or independent production histories
+
+The original interrupted folder is results/research/eyeai_rebuild_oct15
+Its complete logistic subset can be reused only through the declared resumption
+rule and all forest histories must be rerun without selecting favorable outcomes
+The intended final publication path is results/research/eyeai_complete_oct15
+The intermediate summary prefix is not the final complete evidence
+
+After the full study passes run the native pipeline reproduction control
+and the separate simple-frontier challenge
+
+    python scripts/native_retina_repro.py --input "$review_root/eyeai" --output "$review_root/eyeai_native_repro" --capture forest_s3_v16
+    python scripts/check_eyeai_frontier_formula.py "$review_root/eyeai"
+
+The native control removes the actual old replay entry point and checks that it
+remains missing before/after DVC reproduction while preserving the feature file
+This is different from a DVC snapshot checkout
+DVC can be given the same explicit frontier and may match the retained-byte result
+The post-protocol formula compares 108 exact conditions with a simple frontier
+A simple-rule tie means the graph does not establish need for a general optimizer
+
+13 LARGER USEFUL STORAGE STUDY
+
+Run this after the scientific and retinal grids and native controls are complete
+Read docs/GIGABYTE_PROTOCOL_OCT15.md and configs/gigabyte_letter_oct15.json
+The included official UCI Letter Recognition data has 20,000 rows and 16 features
+and 26 classes with DOI 10.24432/C5ZP40 and CC BY4.0 attribution
+Data path
+    data/letter_recognition/letter-recognition.data
+Expected SHA256
+    2b89f3602cf768d3c8355267d2f13f2417809e101fc2b5ceee10db19a60de6e2
+The included data README records the source
+If absent obtain the official archive from
+    https://archive.ics.uci.edu/static/public/59/letter+recognition.zip
+Extract letter-recognition.data to the path above and verify its hash
+Do not substitute a different dataset under the same protocol
+
+    python - <<'PY'
+import hashlib
+from pathlib import Path
+p = Path('data/letter_recognition/letter-recognition.data')
+expected = '2b89f3602cf768d3c8355267d2f13f2417809e101fc2b5ceee10db19a60de6e2'
+assert hashlib.sha256(p.read_bytes()).hexdigest() == expected
+print('Letter data hash matches')
+PY
+
+Start with the fixed two-model preflight
+
+    python scripts/gigabyte_history.py --protocol configs/gigabyte_letter_preflight_oct15.json --output "$review_root/letter_preflight" --work "$review_root/letter_preflight_work"
+    python scripts/analyze_gigabyte_history.py "$review_root/letter_preflight" --verify-payloads "$review_root/letter_preflight_work"
+
+This validates execution only and cannot prove a 1 GB saving
+The saved corrected preflight is results/validation/2026-10-15/gigabyte_preflight_v2
+It has 8/8 actual exact recoveries and 4 verified native DVC target files
+The initial analyzer-count failure is preserved separately
+
+Full fixed run
+
+    set -o pipefail
+    python scripts/gigabyte_history.py --protocol configs/gigabyte_letter_oct15.json --output "$review_root/letter" --work "$review_root/letter_work" 2>&1 | tee "$review_root/letter_runner.log"
+    python scripts/analyze_gigabyte_history.py "$review_root/letter" --verify-payloads "$review_root/letter_work"
+
+Use all 16 declared configurations regardless of accuracy or storage outcome
+The grid is 64/128/192/256 trees times two feature-sampling settings times two seeds
+The stratified split has 15,000 training and 5,000 test observations
+MinMaxScaler and chi2 SelectKBest(k=12) fit only training data
+No padding and no duplicate model copies and no early stopping at the storage goal
+are allowed
+
+The five methods run under preprocessing and broad one-group-loss scopes
+Every allowed scenario is structurally checked
+Actual requests are performed once per distinct selected store/outage combination
+for every historical model under simultaneous loss of all preprocessing groups
+That is a stronger labelled stress than the allowed one-group contract
+Do not multiply reused receipt counts by the number of policies that share a store
+Native DVC add/delete/checkout verifies every unique canonical target file
+Actual level 6 gzip and native protocol 5 sklearn pickle controls are separate
+
+The target is at least 1,000,000,000 uncompressed canonical bytes saved
+That does not imply the same saving for compressed or native-pickle representations
+A failed goal remains a valid measured outcome
+The canonical JSON/base64 codec may be larger than a native sklearn pickle
+A big file saving is not evidence that optimization is algorithmically necessary
+The intended publication path is results/research/gigabyte_letter_oct16
+The large temporary capture files need not be committed as multiple GB to Git
+Keep the complete raw receipts and inventories and source/data identities and
+small selected frontier and commands needed to regenerate them
+
+14 ARCHIVED OLD STORE REPLAY AND FAIRNESS AUDITS
+
+The following old-store examples require the fully matching old environment and
+recorded source implementation as explained in section 1
+
+    python scripts/replay_paper_store.py --evidence results/research/paper_oct14/tabular --store banknote-logistic-00-npy-k1/robust > "$review_root/archived_banknote_replay.json"
+    python scripts/replay_paper_store.py --evidence results/research/paper_oct14/published --store digits-mlp-00-npy-k1/RecoverML_decomposed > "$review_root/archived_neural_replay.json"
+
+The original matching-host receipts have 48 and 16 exact requests respectively
+A new environment rejection must be preserved as a rejection and not called success
+Fresh capture/recovery remains the recommended laptop check
+
+Metadata audits can run without pretending to re-execute old models
+
+    python scripts/audit_published_fairness.py --hyppo-cache "$review_root/pinned_hyppo" --output "$review_root/published_fairness.json"
+    python scripts/audit_storage_optima.py --output "$review_root/storage_optima.json"
+    python scripts/scientific_inventory.py --output "$review_root/inventory" --regenerate-figures
+
+The storage audit can return solver-unknown cases under its time limits
+The saved audit reports 192/194 re-certified cases and two unresolved direct runs
+A timeout does not establish optimality or a mathematical counterexample
+
+HYPPO's released source is downloaded and verified at
+    revision 405e42de863272fcb71a625cf6b2ae0696c7a8c5
+    SHA256 b857a387b81127585cb19a5925f1b1a84ed63361db5184ea3c84f8adc864765a
+The project executes pinned unchanged ranking functions through its disclosed graph
+adapter and reimplements a documented HELIX rule
+Neither is a full native HELIX or HYPPO lifecycle/runtime benchmark
+DVC commands are native and their startup/metadata costs are labelled separately
+
+15 OPTIONAL CPU PYTORCH PATHS
+
+Install CPU Torch before capturing new neural histories
 
     python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
     python -m pip check
+    python -m unittest discover -s tests -v > "$review_root/tests_with_torch.txt" 2>&1
+    tail -n 12 "$review_root/tests_with_torch.txt"
+
+The earlier text workload also needs public 20 Newsgroups data
+
     python -c "from sklearn.datasets import fetch_20newsgroups; fetch_20newsgroups(subset='all', remove=('headers','footers','quotes'))"
-    python -m unittest discover -s tests -v > "$review_out/tests_with_torch.txt" 2>&1
-    tail -n 12 "$review_out/tests_with_torch.txt"
+    python -m recoverml benchmark --config configs/pytorch_oct13.json --out "$review_root/pytorch"
+    python -m recoverml.audit "$review_root/pytorch"
+    python -m recoverml analyze "$review_root/pytorch"
+    python -m recoverml.torch_checkpoint_audit --benchmark "$review_root/pytorch" --out "$review_root/pytorch_checkpoints"
+    python -m recoverml.boundary_controls --config configs/boundary_controls_oct13.json --out "$review_root/boundary_controls"
 
-Then run the existing Make targets with new destinations if their default folders
-already exist
+Installing Torch changes recorded environment fields
+Create fresh captures after installing it and do not expect a no-Torch old capture
+to satisfy the same archived environment identity
+Small CNN/text models do not establish large neural training-state or LLM recovery
 
-    make pytorch-study
-    make boundary-controls
+The Make targets make eyeai-study and make gigabyte-study also use
+scripts/run_isolated_study.py to write open streams in a unique /tmp directory
+and copy completed analyzed outputs to results/runs
+The eyeai-study target expects the pinned data under work/stare
+Acquire it first with
 
-Read the Makefile for the explicit equivalent Python commands and output folders
-Torch adds fields to the recorded environment so capture a fresh history after
-installing it and do not expect a non-Torch archived manifest to match
+    python scripts/download_stare.py --destination work/stare --report "$review_root/stare_make_acquisition.json"
 
-16 ARCHIVED STORE REPLAY IN A MATCHING ENVIRONMENT
+Both Make targets use fixed default destination names and need new destinations
+or a separate clone if those folders already contain a run
+Use the explicit commands above when choosing arbitrary paths
 
-This section is optional on a new laptop and does not replace the fresh-run checks
-It also requires the selected store archives included in results/research
-The recorded environment must match the complete manifest including code hashes
-and Python patch version and numerical library paths and BLAS identities
+16 READ RESULTS CORRECTLY AND SAVE COMPLETED WORK
 
-The following examples were checked in the original matching host environment
+Read report.json and analysis.json and summary.csv and their raw trace identities
+Check the exact request and expected blocked and unexpected failure denominators
+All methods within a case must see the same graph and requests and admitted budget
+Actual retained bytes matter as well as the maximum allowed bytes
+A heuristic above budget is not admissible and a heuristic below full coverage
+cannot be compared with a fully robust store as if it met the same guarantee
 
-    python scripts/replay_paper_store.py --evidence results/research/paper_oct14/tabular --store banknote-logistic-00-npy-k1/robust > "$review_out/archived_banknote_replay.json"
-    python scripts/replay_paper_store.py --evidence results/research/paper_oct14/published --store digits-mlp-00-npy-k1/RecoverML_decomposed > "$review_out/archived_neural_replay.json"
+The independent unit is the history or appropriately grouped dataset/seed block
+Versions and fault combinations and policy repeats are correlated conditions
+One recovery trial per request does not estimate a stable tail distribution
+Do not compare a server time with a laptop time as a paired speedup
+Process peak RSS is a process high-water mark and /proc I/O reflects the page cache
+Kernel microbenchmarks do not establish whole-system recovery speedup
+Snapshots can restore faster and broad failure scopes can legitimately save zero
 
-The saved receipts have 48 and 16 exact requests respectively
-The script loads the recorded capability extension selected by its source hash
-and checks every allowed group loss and every version without a capture archive
-It verifies the restored targets by their original SHA-256 identities
+After all processes are closed and analyzers pass save the whole review directory
+Choose a new descriptive destination and preserve original results
 
-Execution environment/operator code mismatch means the recorded contract was not met
-Do not remove that check or label the attempt exact reproduction of the old store
-Use fresh captures on your machine or reproduce the full recorded environment
-The supplied environment metadata does not currently constitute a portable VM image
+    save_tag="$(date -u +%Y%m%dT%H%M%SZ)"
+    saved_review="results/runs/reproduction_${save_tag}"
+    test ! -e "$saved_review"
+    mkdir -p results/runs
+    cp -a "$review_root" "$saved_review"
+    diff -qr "$review_root" "$saved_review"
 
-17 PAPER PDF AND FORMATTING
+The results/runs directory is intentionally ignored by Git
+For a publication select complete audited evidence under a new results/research
+folder and record the source commit and protocol and raw-output SHA256 hashes
+Do not commit environments or third-party source caches or duplicate GB payloads
+Retain data acquisition receipts and failure diagnostics and any reuse mapping
+A GitHub upload is complete only after remote file/commit identities are verified
+Use genuine current-date commits and never rewrite dates to imply earlier work
 
-The current PDF is output/pdf/RecoverML_capability_loss.pdf
-It is a review draft and not yet the final 10-12 page ACM/VLDB layout
-The author will review it before the formatting changes
-Reading it does not require installing LaTeX
+17 COMMON PROBLEMS
 
-To render the unchanged current draft locally if needed
+Python 3.12 is unavailable
+Use Ubuntu 24.04 or a supported Python 3.12 installation and recreate the environment
+Do not silently change package/runtime versions for an exact old replay
 
-    sudo apt install -y pandoc texlive-latex-recommended texlive-latex-extra
-    bash scripts/render_capability_paper.sh
+recoverml is not found
+Activate .venv and run python -m pip install -e '.[paper]' in the repository root
 
-This render command writes the current PDF path and therefore changes its
-tracked checksum if the local TeX output differs
-Verify the originally supplied checksums first and use a separate review clone
-for rendering if keeping the original package byte for byte
-The earlier milestone paper and PDF are separate preserved artifacts
+A required package is missing
+Install requirements.txt in the active environment and repeat section 5's version test
 
-18 COMMON PROBLEMS
+HYPPO/STARE download fails
+Keep the log and check access to GitHub/raw.githubusercontent.com
+The pins and hashes must match and an inaccessible download is not a passed check
+Do not invent or substitute a source revision
 
-python3.12 command not found
-Use a Linux distribution that supplies Python 3.12 or install Python 3.12 using
-the official Python build instructions and then recreate the virtual environment
-Do not change the package range merely to install on Python 3.13
+Source or environment identity mismatch
+Preserve the rejection and use fresh captures in your own environment
+Do not disable the identity check
 
-ModuleNotFoundError for recoverml
-Activate .venv and run python -m pip install -e '.[paper]' from the repository root
+Existing output directory
+Use a new destination and keep the incomplete attempt
+Do not merge summaries while losing raw-request identities or timing evidence
 
-Missing networkx or dvc
-Install requirements.txt in the active environment and repeat the version check
+Missing raw records despite advancing summaries
+Stop safely and preserve the attempt and move new streams to a unique /tmp path
+Reuse only fully reconciled capture/case boundaries under a documented rule
+Never reconstruct lost timings from aggregates
 
-Execution environment/operator code mismatch
-This is the strict archived capture guard described in sections 1 and 16
-Use a fresh capture for the laptop check and preserve the rejection log
+Memory/disk pressure or solver timeout
+Record the failure and save complete existing evidence
+Changed settings require a separately labelled protocol/run
+A timeout is an unknown optimization result and is not proof of infeasibility
 
-HYPPO download fails
-Check access to raw.githubusercontent.com and keep the failed request log
-The pinned source must pass its recorded SHA-256 before the comparator runs
+No display for plots
+Use MPLBACKEND=Agg and open the produced PNGs separately
 
-Choose a new output folder or FileExistsError
-Use a new output destination and preserve earlier evidence
+Native Windows resource failures
+Use Linux or WSL2 for Bash and /proc monitoring
 
-Plots fail to open on a terminal-only machine
-Set MPLBACKEND=Agg and open the saved PNGs using your usual image viewer
+18 PAPER AND NEXT STEPS
 
-Memory pressure or a long solver run
-Keep other large programs closed and begin with the smoke check
-Record any changed experiment settings and do not combine that run with the
-unchanged full matrix as if the settings were identical
+Current draft
+    paper/RecoverML_capability_loss.md
+Current PDF
+    output/pdf/RecoverML_capability_loss.pdf
+These remain review artifacts and are not the final 10–12-page ACM/VLDB layout
+Drafting and formatting resume after the author reviews the evidence
+Do not overwrite the paper/PDF simply to run an experiment
 
-Resource tracing requires Linux /proc
-Run the complete performance benchmark in Linux or WSL2 rather than native PowerShell
+Read docs/FINAL_SCIENTIFIC_AUDIT.md and docs/CONTRIBUTIONS_OCT15.md and
+    docs/NOVELTY_REVIEW_OCT15.md
+    docs/TRACTABLE_SUBCLASS_OCT15.md
+for the distinction between a working recovery system and proved novel theory
+The separate cloud run supplies one fresh-environment reproduction but cannot
+replace actual external human review or the assigned course peer-review tasks
+No reproduction process can guarantee conference acceptance
 
-19 WHAT TO SAVE FROM A LAPTOP RUN
-
-Save the exact repository commit and machine details and Python version and
-pip freeze and source environment and the test log and runner stdout/stderr
-and all raw request and operation and planning logs and regenerated tables and plots
-Keep successes and expected blocked requests and unexpected failures
-Record whether this was a saved evidence audit or fresh run or archived replay
-
-The results/runs folder is intentionally excluded from Git to keep unfinished
-local runs separate from selected paper evidence
-Before publishing a new experiment audit it and archive the selected complete
-results under a clearly dated results/research folder and record their hashes
-Do not commit the virtual environment or downloaded third-party source cache
-
-20 WHEN THE REPRODUCTION CHECK IS COMPLETE
-
-The installation and tests must pass and the chosen fresh run must finish
-Its exact methods must agree on the fixed graph objective and protected outputs
-must match their own captured bytes and the analysis must audit the saved traces
-Record timing changes and explain any changed capture identities or baseline choices
-
-A successful laptop run is evidence from another physical machine
-It is not automatically an independent reviewer validation because the author
-is still involved and another researcher's run would be a separate check
-The current package records one-host experiments and does not claim that this
-second-machine check has already happened
-
-Useful official references
+Official setup references
     https://learn.microsoft.com/en-us/windows/wsl/install
     https://docs.python.org/3.12/library/venv.html
-    https://www.acm.org/publications/policies/artifact-review-and-badging-current
+
+16 OCTOBER VALIDATED RESULT LOCATIONS
+
+The full scientific result is results/research/scientific_complete_oct16 and independently passes 1920 rows and 36480 raw requests with zero unexpected outcomes
+The completed retinal result is results/research/eyeai_complete_oct15 and passes 540 rows and 10920 exact requests plus 624 native checkouts
+Its native_dvc_repro subfolder recovers all 32 targets after actual legacy module retirement and the manual DVC frontier matches the exact storage optimum
+The fixed larger result is results/research/gigabyte_letter_oct16 and passes all payload hashes and 48 actual exact recoveries and 32 native DVC target files
+Its initial analyzer order mismatch and corrected analysis are both preserved and scripts/audit_gigabyte_ledger.py tests deliberate corruption without changing the real evidence
+The final six control receipts are results/validation/2026-10-16/gigabyte_ledger_controls_v3
+Read docs/WORK_HANDOVER.md for current publication status and required inputs and remaining research and course work
+Publication of all new binary evidence is incomplete until the branch tree has been verified against the file hashes

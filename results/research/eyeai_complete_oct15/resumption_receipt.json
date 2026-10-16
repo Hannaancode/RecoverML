@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "rule": "Reuse all complete logistic captures and rerun every forest capture without outcome selection",
+  "attempts": [
+    {
+      "source_attempt": "interrupted_logistic",
+      "source_directory": "results/research/eyeai_rebuild_oct15",
+      "source_hashes": {
+        "progress.json": "d46bd2cc3a8a25f6b2f553f4d7c2abfafe157788c1197aef36f59c19f3710c83",
+        "source_hashes.json": "39528648bb90be72065bff9594bd7132a9cf128c60c4879e7bef481ea6aaa017",
+        "raw.jsonl": "2c5a4547411e42ba8bfed555a5ff8ac77ac2f38abd0577ec29cbc18b53056f2c",
+        "INTERRUPTED.json": "bf18a7a92f18b116f160ef33b2ab5859dff4053e74796d7df818d7cf7bbe7b57",
+        "data_acquisition.json": "bfc3c3d9c72e9a6d28d36b73cbc96cd8763267edc7da384786d08cfa4a65a37c",
+        "store_records.jsonl": "fd833b09fd058a19ad490c13cbe0a4cc2c90040fa4be8ba49783b440632ad899",
+        "planner_records.jsonl": "9a327b0eef84b2eab69c253d70c8741dcbb06069d22ed6c6f782c341acbc6f30",
+        "summary.csv": "4fc2e9b6cba2452714a8848d21f673be582d76910f6852ceb635403d87b076f2",
+        "native_commands.json": "b9f3b81973dfb590e50a59fbb6260cf49b10d43c3bdd9e4ba0eb9c84331522a0",
+        "protocol.json": "ed2196f8b99c92a40c400518810cd98a2f78c7ab9fdd5e18ef3bf6eab9d6080f",
+        "capture_inventory.json": "4603af98ff88e4d56a6f2e0af1995068be9a404d0c43f42af97aadb21c9c0c3d"
+      },
+      "included_captures": [
+        "logistic_s17_v16",
+        "logistic_s17_v2",
+        "logistic_s17_v8",
+        "logistic_s29_v16",
+        "logistic_s29_v2",
+        "logistic_s29_v8",
+        "logistic_s3_v16",
+        "logistic_s3_v2",
+        "logistic_s3_v8"
+      ]
+    },
+    {
+      "source_attempt": "forest_rerun",
+      "source_directory": "/tmp/recoverml_eyeai_forest_resume_oct16",
+      "source_hashes": {
+        "raw.jsonl.gz": "6e4915cf3aca0e6f082ce0cec28099b10facfb9d522205a868a681c4f6a0540e",
+        "store_compaction.json": "a05ee81366e7fd35e92b6dfd8e5138ce944f3581cfc1570c2d57bae328e2c068",
+        "progress.json": "244825b80f1935f1311ea54e99dc5e382bd64b8fa8c90f5fb27b2639781a55af",
+        "store_index.json": "d7d444da79ed31d0be8b7102c182af644eb30373145aa1d072bcb50ed3e7af51",
+        "source_hashes.json": "be87898839f36ca2241ba7cca46d215bde64cdafff8577985001a9d7f182f7cd",
+        "raw.jsonl": "5ad01667c4a6500905fd0e1e3f4fc1b577503bee98ba06f1bdc8b514d6e22e13",
+        "store_records.jsonl": "7ed9b014dac2eb909c71b01a71d3af9209ab788797caa3b3cea5a9b26be86038",
+        "planner_records.jsonl": "c7bd4b09e4ead310f79809d66dc68c02a6a8ba28220eeafb80e2f215c4be23f5",
+        "summary.csv": "7b212174352a99092d5b02260f08ee5644f280f6a6db034e1cde3de6d7132469",
+        "native_commands.json": "20947b7df409513a4a5140f25f6fc17bab198aee091854583936d3c473e48dd9",
+        "protocol.json": "d5a709c13bd8c3209b42281a92af72b5e0307d0f1532049f71c73eb0db8bcd27",
+        "stores_deduplicated.tar.gz": "15b1372b5bb8477ff8c9c70a39139e0af29fc684696a6a294139adfe158857cb",
+        "planner_records.json": "441c7cdbeb1c905f5b29cfaddb1b157dc8b92e1c71bfe24c33de76c4466a4d81",
+        "capture_inventory.json": "badcd33df9abbb0f7ae21456c3f662234d60bf0d549a2f4dc4ac68a50eb7b123"
+      },
+      "included_captures": [
+        "forest_s17_v16",
+        "forest_s17_v2",
+        "forest_s17_v8",
+        "forest_s29_v16",
+        "forest_s29_v2",
+        "forest_s29_v8",
+        "forest_s3_v16",
+        "forest_s3_v2",
+        "forest_s3_v8"
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "status": "PASS",
+      "estimator": "logistic",
+      "complete_captures": 9,
+      "summary_rows": 270,
+      "raw_requests": 5460,
+      "native_checkout_commands": 312,
+      "unique_verified_payload_blobs": 133,
+      "source_rows_excluded": 142,
+      "source_raw_requests_excluded": 133,
+      "source_native_commands_excluded": 204,
+      "source_native_checkout_commands_excluded": 144
+    },
+    {
+      "status": "PASS",
+      "estimator": "forest",
+      "complete_captures": 9,
+      "summary_rows": 270,
+      "raw_requests": 5460,
+      "native_checkout_commands": 312,
+      "unique_verified_payload_blobs": 133,
+      "source_rows_excluded": 0,
+      "source_raw_requests_excluded": 0,
+      "source_native_commands_excluded": 0,
+      "source_native_checkout_commands_excluded": 0
+    }
+  ],
+  "summary_rows": 540,
+  "raw_requests": 10920,
+  "native_checkout_commands": 624,
+  "original_interruption": {
+    "status": "INTERRUPTED_NOT_FULL_GRID",
+    "interrupted_exit_code": 130,
+    "completed_summary_rows": 412,
+    "summary_requests": 7772,
+    "readable_raw_requests": 5593,
+    "raw_summary_disagreement": true,
+    "reused_whole_capture_count": 9,
+    "reused_rows": 270,
+    "reused_requests": 5460,
+    "reused_native_checkout_commands": 312,
+    "discarded_completed_summary_rows": 142,
+    "retained_grid_target_rows": 540,
+    "retained_grid_target_requests": 10920,
+    "cause": "Raw path stopped updating during active writes; root cause not proven. No missing timings reconstructed. All forest captures will be remeasured in /tmp.",
+    "original_file_hashes": {
+      "summary.csv": "4fc2e9b6cba2452714a8848d21f673be582d76910f6852ceb635403d87b076f2",
+      "raw.jsonl": "2c5a4547411e42ba8bfed555a5ff8ac77ac2f38abd0577ec29cbc18b53056f2c",
+      "planner_records.jsonl": "9a327b0eef84b2eab69c253d70c8741dcbb06069d22ed6c6f782c341acbc6f30",
+      "store_records.jsonl": "fd833b09fd058a19ad490c13cbe0a4cc2c90040fa4be8ba49783b440632ad899",
+      "native_commands.json": "b9f3b81973dfb590e50a59fbb6260cf49b10d43c3bdd9e4ba0eb9c84331522a0",
+      "protocol.json": "ed2196f8b99c92a40c400518810cd98a2f78c7ab9fdd5e18ef3bf6eab9d6080f",
+      "source_hashes.json": "39528648bb90be72065bff9594bd7132a9cf128c60c4879e7bef481ea6aaa017"
+    }
+  },
+  "qualification": "Original missing raw timings were not reconstructed. Source-attempt native receipt IDs were remapped with original IDs preserved."
+}

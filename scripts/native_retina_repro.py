@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Strong native DVC replay control with actual legacy module retirement."""
 import argparse
+from contextlib import contextmanager
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -20,6 +21,23 @@ import yaml
 from recoverml.capability_retention import optimize, retained_bytes
 from recoverml.core import Graph, canonical, digest
 from recoverml.eyeai_workflow import capabilities_for
+
+
+@contextmanager
+def preserved_workspace(output):
+    """Keep native diagnostic files after a failure instead of losing them."""
+    directory = Path(tempfile.mkdtemp(prefix='recoverml-native-retina-', dir='/tmp'))
+    try:
+        yield directory
+    except BaseException as error:
+        shutil.copytree(directory, output / 'failed_workspace')
+        (output / 'failure.json').write_text(json.dumps(dict(status='FAIL',
+            error=type(error).__name__ + ': ' + str(error),
+            diagnostic_workspace='failed_workspace',
+            qualification='Failed attempts are retained and are not counted as successful native recoveries.'), indent=2) + '\n')
+        raise
+    finally:
+        shutil.rmtree(directory)
 
 
 def run(input_directory, output, capture_id='forest_s3_v16'):
@@ -48,7 +66,7 @@ def run(input_directory, output, capture_id='forest_s3_v16'):
 
     # /tmp is deliberately outside the synchronized workspace. A deleted module
     # must not reappear from a background synchronization operation.
-    with tempfile.TemporaryDirectory(prefix='recoverml-native-retina-', dir='/tmp') as temporary:
+    with preserved_workspace(output) as temporary:
         native = Path(temporary)
         shutil.copytree(repo / 'src' / 'recoverml', native / 'source' / 'recoverml',
                         ignore=shutil.ignore_patterns('__pycache__'))
@@ -120,7 +138,10 @@ def run(input_directory, output, capture_id='forest_s3_v16'):
         invoke([sys.executable, '-m', 'dvc', 'freeze', 'features_legacy'], native)
         if legacy_file.exists():
             raise RuntimeError('Retired module unexpectedly reappeared before DVC replay')
-        second = invoke([sys.executable, '-m', 'dvc', 'repro', '--force', '-q'], native)
+        # Forcing a frozen stage makes DVC validate its retired source dependency.
+        # Normal repro skips that unchanged retained frontier and executes every
+        # missing downstream stage; disable the run cache explicitly.
+        second = invoke([sys.executable, '-m', 'dvc', 'repro', '--no-run-cache', '--verbose'], native)
         missing_after = not legacy_file.exists()
         if not missing_before or not missing_after:
             raise RuntimeError('Physical retirement control is invalid because the module reappeared')

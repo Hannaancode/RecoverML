@@ -1,0 +1,10 @@
+{
+  "url": "https://archive.ics.uci.edu/static/public/59/letter+recognition.zip",
+  "sha256": "2b89f3602cf768d3c8355267d2f13f2417809e101fc2b5ceee10db19a60de6e2",
+  "bytes": 712565,
+  "citation": "Slate, D. (1991). Letter Recognition. UCI ML Repository. doi:10.24432/C5ZP40",
+  "license": "CC BY 4.0",
+  "original_rows": 20000,
+  "original_features": 16,
+  "original_classes": 26
+}

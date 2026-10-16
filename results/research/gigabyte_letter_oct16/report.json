@@ -1,0 +1,28 @@
+{
+  "result_rows": 10,
+  "unique_runtime_stores": 3,
+  "actual_runtime_requests": 48,
+  "actual_runtime_exact": 48,
+  "actual_expected_blocked": 0,
+  "actual_unexpected": 0,
+  "native_dvc_files_checked": 32,
+  "finish_timestamp_ns": 1792133433799230980,
+  "source_changed_during_run": [],
+  "protocol_sha256": "72345e638d3d19e48cffb78336350e7871d289d14843a2d96fc888051e675723",
+  "raw_trace_sha256": "0f7bb3d8de6edcea924fd443c8197c879ed47346eebb3f287485e5bc7d9aef10",
+  "classification_accuracy_range": [
+    0.95,
+    0.9564
+  ],
+  "models": 16,
+  "unique_payloads": 39,
+  "unique_payload_bytes": 3674160042,
+  "limitations": [
+    "Constructed fixed tuning history, not a random production sample",
+    "The model versions reuse one dataset and split and are correlated",
+    "Storage and latency are different objectives; slower recovery can accompany lower storage",
+    "Broad processing loss can require all target snapshots; negative results are retained",
+    "Canonical uncompressed, gzip and native pickle results are separate representations",
+    "No GPU, energy, production prevalence or second-machine result is claimed"
+  ]
+}

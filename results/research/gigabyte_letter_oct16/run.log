@@ -1,0 +1,102 @@
+{"phase": "capture", "version": 0, "accuracy": 0.9522, "canonical_model_bytes": 101985566, "total_payload_bytes": 109388880}
+{"phase": "capture", "version": 1, "accuracy": 0.9516, "canonical_model_bytes": 101223957, "total_payload_bytes": 210652965}
+{"phase": "capture", "version": 2, "accuracy": 0.95, "canonical_model_bytes": 81628867, "total_payload_bytes": 292321960}
+{"phase": "capture", "version": 3, "accuracy": 0.9524, "canonical_model_bytes": 81849378, "total_payload_bytes": 374211466}
+{"phase": "capture", "version": 4, "accuracy": 0.954, "canonical_model_bytes": 203485352, "total_payload_bytes": 577736946}
+{"phase": "capture", "version": 5, "accuracy": 0.955, "canonical_model_bytes": 202702003, "total_payload_bytes": 780479077}
+{"phase": "capture", "version": 6, "accuracy": 0.9528, "canonical_model_bytes": 163312373, "total_payload_bytes": 943831578}
+{"phase": "capture", "version": 7, "accuracy": 0.9528, "canonical_model_bytes": 163808520, "total_payload_bytes": 1107680226}
+{"phase": "capture", "version": 8, "accuracy": 0.9546, "canonical_model_bytes": 305072209, "total_payload_bytes": 1412792563}
+{"phase": "capture", "version": 9, "accuracy": 0.9564, "canonical_model_bytes": 304793652, "total_payload_bytes": 1717626343}
+{"phase": "capture", "version": 10, "accuracy": 0.9554, "canonical_model_bytes": 244548350, "total_payload_bytes": 1962214821}
+{"phase": "capture", "version": 11, "accuracy": 0.9544, "canonical_model_bytes": 245209161, "total_payload_bytes": 2207464110}
+{"phase": "capture", "version": 12, "accuracy": 0.9556, "canonical_model_bytes": 407092075, "total_payload_bytes": 2614596313}
+{"phase": "capture", "version": 13, "accuracy": 0.9558, "canonical_model_bytes": 406776522, "total_payload_bytes": 3021412963}
+{"phase": "capture", "version": 14, "accuracy": 0.9554, "canonical_model_bytes": 326058488, "total_payload_bytes": 3347511579}
+{"phase": "capture", "version": 15, "accuracy": 0.954, "canonical_model_bytes": 326608335, "total_payload_bytes": 3674160042}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "0", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "1", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "2", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "3", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "4", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "5", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "6", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "7", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "8", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "9", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "10", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "11", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "12", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "13", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "14", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "RecoverML_exact", "scope": "preprocessing", "version": "15", "exact": true, "expected_blocked": false}
+{"phase": "plan_complete", "scope": "preprocessing", "policy": "RecoverML_exact", "retained_bytes": 4829269, "saving_bytes": 3664716552}
+{"phase": "plan_complete", "scope": "preprocessing", "policy": "scenario_exact", "retained_bytes": 4829269, "saving_bytes": 3664716552}
+{"phase": "plan_complete", "scope": "preprocessing", "policy": "robust_greedy", "retained_bytes": 4829269, "saving_bytes": 3664716552}
+{"phase": "plan_complete", "scope": "preprocessing", "policy": "robust_local", "retained_bytes": 4829269, "saving_bytes": 3664716552}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "0", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "1", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "2", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "3", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "4", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "5", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "6", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "7", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "8", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "9", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "10", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "11", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "12", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "13", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "14", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "target_snapshots", "scope": "preprocessing", "version": "15", "exact": true, "expected_blocked": false}
+{"phase": "plan_complete", "scope": "preprocessing", "policy": "target_snapshots", "retained_bytes": 3669545821, "saving_bytes": 0}
+{"phase": "plan_complete", "scope": "broad", "policy": "RecoverML_exact", "retained_bytes": 3669548445, "saving_bytes": 0}
+{"phase": "plan_complete", "scope": "broad", "policy": "scenario_exact", "retained_bytes": 3669548445, "saving_bytes": 0}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "0", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "1", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "2", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "3", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "4", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "5", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "6", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "7", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "8", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "9", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "10", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "11", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "12", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "13", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "14", "exact": true, "expected_blocked": false}
+{"phase": "stress_recovery", "policy": "robust_greedy", "scope": "broad", "version": "15", "exact": true, "expected_blocked": false}
+{"phase": "plan_complete", "scope": "broad", "policy": "robust_greedy", "retained_bytes": 3267099280, "saving_bytes": 402449165}
+{"phase": "plan_complete", "scope": "broad", "policy": "robust_local", "retained_bytes": 3669548445, "saving_bytes": 0}
+{"phase": "plan_complete", "scope": "broad", "policy": "target_snapshots", "retained_bytes": 3669548445, "saving_bytes": 0}
+{
+  "result_rows": 10,
+  "unique_runtime_stores": 3,
+  "actual_runtime_requests": 48,
+  "actual_runtime_exact": 48,
+  "actual_expected_blocked": 0,
+  "actual_unexpected": 0,
+  "native_dvc_files_checked": 32,
+  "finish_timestamp_ns": 1792133433799230980,
+  "source_changed_during_run": [],
+  "protocol_sha256": "72345e638d3d19e48cffb78336350e7871d289d14843a2d96fc888051e675723",
+  "raw_trace_sha256": "0f7bb3d8de6edcea924fd443c8197c879ed47346eebb3f287485e5bc7d9aef10",
+  "classification_accuracy_range": [
+    0.95,
+    0.9564
+  ],
+  "models": 16,
+  "unique_payloads": 39,
+  "unique_payload_bytes": 3674160042,
+  "limitations": [
+    "Constructed fixed tuning history, not a random production sample",
+    "The model versions reuse one dataset and split and are correlated",
+    "Storage and latency are different objectives; slower recovery can accompany lower storage",
+    "Broad processing loss can require all target snapshots; negative results are retained",
+    "Canonical uncompressed, gzip and native pickle results are separate representations",
+    "No GPU, energy, production prevalence or second-machine result is claimed"
+  ]
+}

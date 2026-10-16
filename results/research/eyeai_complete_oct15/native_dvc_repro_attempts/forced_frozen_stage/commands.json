@@ -1,0 +1,113 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-m",
+      "dvc",
+      "init",
+      "--no-scm",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:15:23.010523+00:00",
+    "elapsed_s": 0.33984654500000033,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "expected_returncode": 0
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-m",
+      "dvc",
+      "config",
+      "cache.type",
+      "copy"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:15:23.350649+00:00",
+    "elapsed_s": 0.3082753410000123,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "expected_returncode": 0
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "-q"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:15:23.659165+00:00",
+    "elapsed_s": 36.20276780500001,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "expected_returncode": 0
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-c",
+      "import recoverml.eyeai_legacy"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:15:59.868524+00:00",
+    "elapsed_s": 0.2619580649999875,
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "expected_returncode": 0
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-c",
+      "import recoverml.eyeai_legacy"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:16:00.130990+00:00",
+    "elapsed_s": 0.012011640000025636,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'recoverml.eyeai_legacy'\n",
+    "expected_returncode": 1
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-m",
+      "dvc",
+      "freeze",
+      "features_legacy"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:16:00.163100+00:00",
+    "elapsed_s": 0.4979248939999934,
+    "returncode": 0,
+    "stdout": "Modifying stage 'features_legacy' in 'dvc.yaml'\n",
+    "stderr": "",
+    "expected_returncode": 0
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+      "-m",
+      "dvc",
+      "repro",
+      "--force",
+      "--verbose"
+    ],
+    "cwd": "/tmp/recoverml-native-retina-b196oo68",
+    "started_utc": "2026-10-16T06:16:00.661339+00:00",
+    "elapsed_s": 0.7168319470000029,
+    "returncode": 255,
+    "stdout": "2026-10-16 11:46:00,743 DEBUG: v3.67.1 (pip), CPython 3.12.14 on Linux-6.18.44-x86_64-with-glibc2.39\n2026-10-16 11:46:00,743 DEBUG: command: repro --force --verbose\nVerifying outputs in frozen stage: 'features_legacy'\n2026-10-16 11:46:01,241 DEBUG: Analytics is enabled.\n2026-10-16 11:46:01,266 DEBUG: Trying to spawn ['daemon', 'analytics', '/tmp/tmpbruu6d_o', '-v']\n2026-10-16 11:46:01,270 DEBUG: Spawned ['daemon', 'analytics', '/tmp/tmpbruu6d_o', '-v'] with pid 134\n",
+    "stderr": "2026-10-16 11:46:01,234 WARNING: stage: 'features_legacy' is frozen. Its dependencies are not going to be reproduced.\n2026-10-16 11:46:01,239 ERROR: failed to reproduce 'features_legacy': dependency 'source/recoverml/eyeai_legacy.py' does not exist\nTraceback (most recent call last):\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/reproduce.py\", line 187, in _reproduce\n    ret = repro_fn(stage, upstream=upstream, force=force_stage, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/reproduce.py\", line 117, in _reproduce_stage\n    ret = stage.reproduce(**kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/funcy/decorators.py\", line 47, in wrapper\n    return deco(call, *dargs, **dkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/decorators.py\", line 44, in rwlocked\n    return call()\n           ^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/funcy/decorators.py\", line 68, in __call__\n    return self._func(*self._args, **self._kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/__init__.py\", line 448, in reproduce\n    self.run(**kwargs)\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/funcy/decorators.py\", line 47, in wrapper\n    return deco(call, *dargs, **dkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/decorators.py\", line 44, in rwlocked\n    return call()\n           ^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/funcy/decorators.py\", line 68, in __call__\n    return self._func(*self._args, **self._kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/__init__.py\", line 616, in run\n    self.save(\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/__init__.py\", line 493, in save\n    self.save_deps(allow_missing=allow_missing)\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/stage/__init__.py\", line 507, in save_deps\n    dep.save()\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/dependency/base.py\", line 51, in save\n    super().save()\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/output.py\", line 692, in save\n    raise self.DoesNotExistError(self)\ndvc.dependency.base.DependencyDoesNotExistError: dependency 'source/recoverml/eyeai_legacy.py' does not exist\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/cli/__init__.py\", line 212, in main\n    ret = cmd.do_run()\n          ^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/cli/command.py\", line 30, in do_run\n    return self.run()\n           ^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/commands/repro.py\", line 11, in run\n    stages = self.repo.reproduce(**self._common_kwargs, **self._repro_kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/__init__.py\", line 59, in wrapper\n    return f(repo, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/scm_context.py\", line 150, in run\n    return method(repo, *args, **kw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/reproduce.py\", line 248, in reproduce\n    return _reproduce(steps, graph=graph, on_error=on_error or \"fail\", **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/reproduce.py\", line 191, in _reproduce\n    _raise_error(exc, stage)\n  File \"/workspace/scratch/03a1fa6b3213/repro_install_check/lib/python3.12/site-packages/dvc/repo/reproduce.py\", line 155, in _raise_error\n    raise ReproductionError(f\"failed to reproduce{segment} {names}\") from exc\ndvc.exceptions.ReproductionError: failed to reproduce 'features_legacy'\n\n",
+    "expected_returncode": 0
+  }
+]

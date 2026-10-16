@@ -1,0 +1,11 @@
+{
+  "reason": "Runner uses numeric insertion order for versions while reading canonical JSON sorts string keys lexicographically once versions reach 10",
+  "saved_rows": 800,
+  "recomputed_rows": 800,
+  "order_sensitive_equal": false,
+  "complete_multiset_equal": true,
+  "duplicate_request_identities": 0,
+  "original_analysis_sha256": "75b7bfd30012380f18b8c521a74b3ae0f9e9fe2f563cdd8ced47873e4638d6a0",
+  "original_analyzer_sha256": "cc7a6d65bf7c4d5133b4a71016b97993510dfe28b099b58e936505549566e212",
+  "scope": "Post-execution analyzer correction only; no captured files or raw requests or measured timing is changed"
+}

@@ -1,7 +1,25 @@
-.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling pytorch-study boundary-controls oracle-audit capability-study capability-banknote capability-dual-banknote capability-scaling
+.PHONY: test smoke benchmark analyze oracle iteration2 rubric new-data new-data-repeated planner-ablation frontier-scaling neural-study topology-scaling pytorch-study boundary-controls oracle-audit capability-study capability-banknote capability-dual-banknote capability-scaling scientific-audit
 export PYTHONPATH := src
 export OPENBLAS_NUM_THREADS := 1
 export OMP_NUM_THREADS := 1
+
+.PHONY: eyeai-study gigabyte-study component-ablations
+
+eyeai-study:
+	python scripts/run_isolated_study.py eyeai --destination results/runs/new_eyeai_study
+
+gigabyte-study:
+	python scripts/run_isolated_study.py gigabyte --destination results/runs/new_gigabyte_study
+
+component-ablations:
+	mkdir -p work/component_inputs
+	tar -xzf results/research/scientific_sensitivity_oct15_inputs.tar.gz -C work/component_inputs
+	python scripts/audit_component_ablations.py --captures work/component_inputs --protocol configs/component_ablations_oct15.json --output results/runs/new_component_ablations
+	python scripts/analyze_component_ablations.py results/runs/new_component_ablations --captures work/component_inputs
+
+scientific-audit:
+	python -m recoverml.scientific_benchmarks --hyppo-cache work/pinned_hyppo --output results/runs/new_scientific_audit
+	python scripts/analyze_scientific_audit.py results/runs/new_scientific_audit
 
 rubric:
 	bash run_benchmarks.sh

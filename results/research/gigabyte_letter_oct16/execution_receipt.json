@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+    "scripts/gigabyte_history.py",
+    "--protocol",
+    "configs/gigabyte_letter_oct15.json",
+    "--output",
+    "/tmp/recoverml_letter_oct16_oolz8u5t/results",
+    "--work",
+    "/workspace/scratch/03a1fa6b3213/recoverml_git/work/gigabyte_letter_oct16"
+  ],
+  "temporary_output": "/tmp/recoverml_letter_oct16_oolz8u5t/results",
+  "payload_work": "/workspace/scratch/03a1fa6b3213/recoverml_git/work/gigabyte_letter_oct16",
+  "start_timestamp_ns": 1792133060683787703,
+  "run_exit_code": 0,
+  "analysis_exit_code": 1,
+  "finish_timestamp_ns": 1792133449878115205
+}

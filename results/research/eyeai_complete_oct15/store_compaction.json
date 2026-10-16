@@ -1,0 +1,8 @@
+{
+  "logical_stores": 540,
+  "unique_payload_blobs": 259,
+  "unique_payload_bytes": 45686805,
+  "archive_bytes": 26058591,
+  "archive_sha256": "b088181bb0e57b266108fa188faeda549b3231834d517d4c7585593a93894e94",
+  "method": "Exact SHA-256 payload pool with every store membership and manifest"
+}

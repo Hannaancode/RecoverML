@@ -1,0 +1,78 @@
+{
+  "estimator": "logistic",
+  "seed": 3,
+  "versions": 2,
+  "images": 20,
+  "image_size": 64,
+  "train_images": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "test_images": [
+    4,
+    5,
+    7,
+    9,
+    19
+  ],
+  "training_pixels": 6000,
+  "test_pixels": 19214,
+  "image_names": [
+    "im0001",
+    "im0002",
+    "im0003",
+    "im0004",
+    "im0005",
+    "im0044",
+    "im0077",
+    "im0081",
+    "im0082",
+    "im0139",
+    "im0162",
+    "im0163",
+    "im0235",
+    "im0236",
+    "im0239",
+    "im0240",
+    "im0255",
+    "im0291",
+    "im0319",
+    "im0324"
+  ],
+  "quality": [
+    {
+      "version": 0,
+      "revision": "legacy_shift3",
+      "auroc": 0.5975853492804309,
+      "average_precision": 0.10253272564370469
+    },
+    {
+      "version": 1,
+      "revision": "aligned",
+      "auroc": 0.6286127557580972,
+      "average_precision": 0.1205886265416127
+    }
+  ],
+  "feature_nodes": {
+    "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+    "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+  },
+  "feature_revision_changes_bytes": true,
+  "artificially_equal_alternatives": false,
+  "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+  "data_source": "STARE fundus images and Adam Hoover vessel labels",
+  "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+}

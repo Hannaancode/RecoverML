@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "rule": "Reuse all complete logistic captures and rerun every forest capture without outcome selection",
+  "audits": [
+    {
+      "status": "PASS",
+      "estimator": "logistic",
+      "complete_captures": 9,
+      "summary_rows": 270,
+      "raw_requests": 5460,
+      "native_checkout_commands": 312,
+      "unique_verified_payload_blobs": 133,
+      "source_rows_excluded": 142,
+      "source_raw_requests_excluded": 133,
+      "source_native_commands_excluded": 204,
+      "source_native_checkout_commands_excluded": 144
+    },
+    {
+      "status": "PASS",
+      "estimator": "forest",
+      "complete_captures": 9,
+      "summary_rows": 270,
+      "raw_requests": 5460,
+      "native_checkout_commands": 312,
+      "unique_verified_payload_blobs": 133,
+      "source_rows_excluded": 0,
+      "source_raw_requests_excluded": 0,
+      "source_native_commands_excluded": 0,
+      "source_native_checkout_commands_excluded": 0
+    }
+  ],
+  "summary_rows": 540,
+  "raw_requests": 10920,
+  "native_checkout_commands": 624,
+  "qualification": "Original missing raw timings were not reconstructed. Source-attempt native receipt IDs were remapped with original IDs preserved."
+}

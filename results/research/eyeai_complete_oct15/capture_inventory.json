@@ -1,0 +1,2144 @@
+[
+  {
+    "capture_id": "logistic_s3_v2",
+    "estimator": "logistic",
+    "seed": 3,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5975853492804309,
+        "average_precision": 0.10253272564370469
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.6286127557580972,
+        "average_precision": 0.1205886265416127
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s3_v8",
+    "estimator": "logistic",
+    "seed": 3,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5975853492804309,
+        "average_precision": 0.10253272564370469
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5967674679488018,
+        "average_precision": 0.10196985242084482
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5960132255973921,
+        "average_precision": 0.10151326532563387
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5952629977729849,
+        "average_precision": 0.10113073894562716
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.6529405799385708,
+        "average_precision": 0.14345609726698583
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.6583902828897542,
+        "average_precision": 0.14777613908404202
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.6633153046161999,
+        "average_precision": 0.15135809433824188
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.6676912437755195,
+        "average_precision": 0.15445654279808269
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s3_v16",
+    "estimator": "logistic",
+    "seed": 3,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5975853492804309,
+        "average_precision": 0.10253272564370469
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5967674679488018,
+        "average_precision": 0.10196985242084482
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5960132255973921,
+        "average_precision": 0.10151326532563387
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5952629977729849,
+        "average_precision": 0.10113073894562716
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.5945676118783222,
+        "average_precision": 0.10080458400495962
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.5938925080722538,
+        "average_precision": 0.10052821310705616
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.5931083138585138,
+        "average_precision": 0.10023674328927949
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.5925403804689421,
+        "average_precision": 0.10008109139051699
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.6715707779437698,
+        "average_precision": 0.15708208332326315
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.6750984650019645,
+        "average_precision": 0.15900491101345307
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.6785731603037287,
+        "average_precision": 0.16083151323395684
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.6811988704168284,
+        "average_precision": 0.16214743175604773
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.6836477667971737,
+        "average_precision": 0.16328146683403044
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.6858563151913367,
+        "average_precision": 0.16423826995093696
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.6878967421764286,
+        "average_precision": 0.1652454184371832
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.6898122999172833,
+        "average_precision": 0.1660565689694461
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s17_v2",
+    "estimator": "logistic",
+    "seed": 17,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5886868427684832,
+        "average_precision": 0.10732926609665583
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.6413477476626903,
+        "average_precision": 0.13794991154458341
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s17_v8",
+    "estimator": "logistic",
+    "seed": 17,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5886868427684832,
+        "average_precision": 0.10732926609665583
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5885373036823619,
+        "average_precision": 0.10705544174094034
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5884602880074069,
+        "average_precision": 0.10684695475629548
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5884443747339857,
+        "average_precision": 0.10661740601330415
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.6740834449419775,
+        "average_precision": 0.18748701281458907
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.681109992698168,
+        "average_precision": 0.20093447359979047
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.6875707436371652,
+        "average_precision": 0.21392088745032628
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.6931596147008191,
+        "average_precision": 0.2254175696912063
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s17_v16",
+    "estimator": "logistic",
+    "seed": 17,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5886868427684832,
+        "average_precision": 0.10732926609665583
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5885373036823619,
+        "average_precision": 0.10705544174094034
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5884602880074069,
+        "average_precision": 0.10684695475629548
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5884443747339857,
+        "average_precision": 0.10661740601330415
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.5883706711518241,
+        "average_precision": 0.10637292991121369
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.5882824248173971,
+        "average_precision": 0.10612344244626543
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.5882277562512896,
+        "average_precision": 0.10592428458015415
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.5881792550303837,
+        "average_precision": 0.10579674914806203
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.6979916154561285,
+        "average_precision": 0.23527152248095232
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.7009780952649255,
+        "average_precision": 0.24072568447837014
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.7045243568258426,
+        "average_precision": 0.2467055868314342
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.7076839410706359,
+        "average_precision": 0.2511959858669824
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.7105149047982707,
+        "average_precision": 0.25484101313089996
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.713077056029189,
+        "average_precision": 0.25788127855587184
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.7153986427272153,
+        "average_precision": 0.26058411124867736
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.7175483813003048,
+        "average_precision": 0.26299227560259353
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s29_v2",
+    "estimator": "logistic",
+    "seed": 29,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688535275000972,
+        "average_precision": 0.08254995692120481
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.6195922371731146,
+        "average_precision": 0.10387471023564387
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s29_v8",
+    "estimator": "logistic",
+    "seed": 29,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688535275000972,
+        "average_precision": 0.08254995692120481
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5689841469064479,
+        "average_precision": 0.08235830588694001
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.568976300360327,
+        "average_precision": 0.08219357886216354
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688812036328826,
+        "average_precision": 0.08198808653395481
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.6390278760491342,
+        "average_precision": 0.13018282811869025
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.6435368255467165,
+        "average_precision": 0.134285768796444
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.6476051744218971,
+        "average_precision": 0.13587275471514298
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.6502381170882082,
+        "average_precision": 0.13582884586813856
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "logistic_s29_v16",
+    "estimator": "logistic",
+    "seed": 29,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688535275000972,
+        "average_precision": 0.08254995692120481
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5689841469064479,
+        "average_precision": 0.08235830588694001
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.568976300360327,
+        "average_precision": 0.08219357886216354
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688812036328826,
+        "average_precision": 0.08198808653395481
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688247426162296,
+        "average_precision": 0.08184378582069837
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688517364406566,
+        "average_precision": 0.08174311300790382
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.5688735703081237,
+        "average_precision": 0.0816557593485468
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.5689522489906954,
+        "average_precision": 0.08155385152669134
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.653190934441766,
+        "average_precision": 0.1366768842229425
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.6557949216471197,
+        "average_precision": 0.13815718806571065
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.658156092365447,
+        "average_precision": 0.13941959242589397
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.6603631466833332,
+        "average_precision": 0.14063887857475957
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.66171309377032,
+        "average_precision": 0.14152508824110308
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.6675445700877382,
+        "average_precision": 0.14946688474656697
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.6695139252312854,
+        "average_precision": 0.1509365757379801
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.671568654208171,
+        "average_precision": 0.1523962866625317
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s3_v2",
+    "estimator": "forest",
+    "seed": 3,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5936410590461868,
+        "average_precision": 0.10329428496357568
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.7509027362143323,
+        "average_precision": 0.26048379693969886
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s3_v8",
+    "estimator": "forest",
+    "seed": 3,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5936410590461868,
+        "average_precision": 0.10329428496357568
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5985306132992901,
+        "average_precision": 0.10385147024114708
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5793789980543508,
+        "average_precision": 0.09789722260127962
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5848315635378316,
+        "average_precision": 0.10048246390836786
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.7568425430946384,
+        "average_precision": 0.26180537722050723
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.7463227194475732,
+        "average_precision": 0.24121252680616462
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.7411771430985132,
+        "average_precision": 0.2306058539803432
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.7381146000841654,
+        "average_precision": 0.23270854892165174
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s3_v16",
+    "estimator": "forest",
+    "seed": 3,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      4,
+      5,
+      7,
+      9,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 19214,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5936410590461868,
+        "average_precision": 0.10329428496357568
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.5985306132992901,
+        "average_precision": 0.10385147024114708
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5793789980543508,
+        "average_precision": 0.09789722260127962
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.5848315635378316,
+        "average_precision": 0.10048246390836786
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.5987155433583753,
+        "average_precision": 0.10421022607182762
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.5951700527456485,
+        "average_precision": 0.10278829727192265
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.5944425855438977,
+        "average_precision": 0.10280991835211792
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.6013494919790623,
+        "average_precision": 0.10450533048701703
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.7567934262294882,
+        "average_precision": 0.27079455203539016
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.7559745849022715,
+        "average_precision": 0.2515531792902708
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.7488495151062287,
+        "average_precision": 0.257279803144015
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.7495801066572552,
+        "average_precision": 0.23666526596530332
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.7442005706562862,
+        "average_precision": 0.25721600503466246
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.7408211418257337,
+        "average_precision": 0.23542458843865133
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.7451647029520563,
+        "average_precision": 0.24061445427386333
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.7559600976961327,
+        "average_precision": 0.2707294711743036
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s17_v2",
+    "estimator": "forest",
+    "seed": 17,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5951887854822216,
+        "average_precision": 0.10246423430976465
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.7725956490521704,
+        "average_precision": 0.3308839666148804
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s17_v8",
+    "estimator": "forest",
+    "seed": 17,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5951887854822216,
+        "average_precision": 0.10246423430976465
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.598629650159247,
+        "average_precision": 0.10295099871562144
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5941254704504217,
+        "average_precision": 0.10129723935814196
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.6017448828166342,
+        "average_precision": 0.1040585150399686
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.7745802778960065,
+        "average_precision": 0.3079224531904721
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.7951631833856289,
+        "average_precision": 0.3459946753718979
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.7885424431366965,
+        "average_precision": 0.3442069865090188
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.7818376061868371,
+        "average_precision": 0.3427879831422087
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s17_v16",
+    "estimator": "forest",
+    "seed": 17,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "test_images": [
+      2,
+      10,
+      11,
+      15,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18359,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.5951887854822216,
+        "average_precision": 0.10246423430976465
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.598629650159247,
+        "average_precision": 0.10295099871562144
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.5941254704504217,
+        "average_precision": 0.10129723935814196
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.6017448828166342,
+        "average_precision": 0.1040585150399686
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.5808317959385367,
+        "average_precision": 0.09853370867909042
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.6049082359946063,
+        "average_precision": 0.10587487307119031
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.5974471378569162,
+        "average_precision": 0.1024787009080469
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.589045805101232,
+        "average_precision": 0.1014472016822813
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.7814721529136138,
+        "average_precision": 0.3332461741209024
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.7748091929990734,
+        "average_precision": 0.3205270402621073
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.7927724044042459,
+        "average_precision": 0.3308167161478217
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.7579451395609307,
+        "average_precision": 0.28419657776784496
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.778796990792382,
+        "average_precision": 0.3174034980304565
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.7749584846299858,
+        "average_precision": 0.316594394884239
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.7639266459007332,
+        "average_precision": 0.3098496270265229
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.7632686815358061,
+        "average_precision": 0.30889589638564396
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s29_v2",
+    "estimator": "forest",
+    "seed": 29,
+    "versions": 2,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.6209214164994442,
+        "average_precision": 0.09359584095109558
+      },
+      {
+        "version": 1,
+        "revision": "aligned",
+        "auroc": 0.7291970578181279,
+        "average_precision": 0.20655893546305598
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s29_v8",
+    "estimator": "forest",
+    "seed": 29,
+    "versions": 8,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.6209214164994442,
+        "average_precision": 0.09359584095109558
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.628881844149854,
+        "average_precision": 0.09521990714759422
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.6177006225381462,
+        "average_precision": 0.09362227043160735
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.622345223466222,
+        "average_precision": 0.09256157603096998
+      },
+      {
+        "version": 4,
+        "revision": "aligned",
+        "auroc": 0.7404304120528407,
+        "average_precision": 0.20918099441728358
+      },
+      {
+        "version": 5,
+        "revision": "aligned",
+        "auroc": 0.7427909004628097,
+        "average_precision": 0.2502945563414277
+      },
+      {
+        "version": 6,
+        "revision": "aligned",
+        "auroc": 0.7310348980256043,
+        "average_precision": 0.22902982414791526
+      },
+      {
+        "version": 7,
+        "revision": "aligned",
+        "auroc": 0.7447474410025019,
+        "average_precision": 0.21446480396022413
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  },
+  {
+    "capture_id": "forest_s29_v16",
+    "estimator": "forest",
+    "seed": 29,
+    "versions": 16,
+    "images": 20,
+    "image_size": 64,
+    "train_images": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "test_images": [
+      9,
+      10,
+      17,
+      18,
+      19
+    ],
+    "training_pixels": 6000,
+    "test_pixels": 18744,
+    "image_names": [
+      "im0001",
+      "im0002",
+      "im0003",
+      "im0004",
+      "im0005",
+      "im0044",
+      "im0077",
+      "im0081",
+      "im0082",
+      "im0139",
+      "im0162",
+      "im0163",
+      "im0235",
+      "im0236",
+      "im0239",
+      "im0240",
+      "im0255",
+      "im0291",
+      "im0319",
+      "im0324"
+    ],
+    "quality": [
+      {
+        "version": 0,
+        "revision": "legacy_shift3",
+        "auroc": 0.6209214164994442,
+        "average_precision": 0.09359584095109558
+      },
+      {
+        "version": 1,
+        "revision": "legacy_shift3",
+        "auroc": 0.628881844149854,
+        "average_precision": 0.09521990714759422
+      },
+      {
+        "version": 2,
+        "revision": "legacy_shift3",
+        "auroc": 0.6177006225381462,
+        "average_precision": 0.09362227043160735
+      },
+      {
+        "version": 3,
+        "revision": "legacy_shift3",
+        "auroc": 0.622345223466222,
+        "average_precision": 0.09256157603096998
+      },
+      {
+        "version": 4,
+        "revision": "legacy_shift3",
+        "auroc": 0.6212772829525939,
+        "average_precision": 0.09233429437071344
+      },
+      {
+        "version": 5,
+        "revision": "legacy_shift3",
+        "auroc": 0.6170588902049858,
+        "average_precision": 0.09086005253395914
+      },
+      {
+        "version": 6,
+        "revision": "legacy_shift3",
+        "auroc": 0.6250294032258175,
+        "average_precision": 0.09425882080177733
+      },
+      {
+        "version": 7,
+        "revision": "legacy_shift3",
+        "auroc": 0.6166331084672421,
+        "average_precision": 0.09315456219347143
+      },
+      {
+        "version": 8,
+        "revision": "aligned",
+        "auroc": 0.7335524879350824,
+        "average_precision": 0.2065181534817593
+      },
+      {
+        "version": 9,
+        "revision": "aligned",
+        "auroc": 0.7459290711463393,
+        "average_precision": 0.21008333132171958
+      },
+      {
+        "version": 10,
+        "revision": "aligned",
+        "auroc": 0.7574812126393529,
+        "average_precision": 0.24827481018083714
+      },
+      {
+        "version": 11,
+        "revision": "aligned",
+        "auroc": 0.740394740118981,
+        "average_precision": 0.2194790907291557
+      },
+      {
+        "version": 12,
+        "revision": "aligned",
+        "auroc": 0.7260179059888252,
+        "average_precision": 0.20965566501544103
+      },
+      {
+        "version": 13,
+        "revision": "aligned",
+        "auroc": 0.7124872195115628,
+        "average_precision": 0.18815423917641688
+      },
+      {
+        "version": 14,
+        "revision": "aligned",
+        "auroc": 0.7390202938975022,
+        "average_precision": 0.23147910624541046
+      },
+      {
+        "version": 15,
+        "revision": "aligned",
+        "auroc": 0.7323107080450297,
+        "average_precision": 0.20503658777695832
+      }
+    ],
+    "feature_nodes": {
+      "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+      "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+    },
+    "feature_revision_changes_bytes": true,
+    "artificially_equal_alternatives": false,
+    "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+    "data_source": "STARE fundus images and Adam Hoover vessel labels",
+    "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+  }
+]

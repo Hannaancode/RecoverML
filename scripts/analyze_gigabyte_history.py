@@ -75,7 +75,14 @@ def analyze(output, work=None):
         if method in {'RecoverML_exact','scenario_exact'}:
             check(plan['status']=='ok' and plan['diagnostic'].get('storage_optimal') and plan['diagnostic'].get('robust_certified'),f'Uncertified exact result {scope}/{method}')
             check(count==total,f'Exact method fails allowed contract {scope}/{method}')
-    check(structural==load(output/'allowed_scenario_certificates.json'),'Saved structural certificate ledger differs')
+    saved_structural=load(output/'allowed_scenario_certificates.json')
+    # Canonical JSON sorts version keys lexicographically whereas capture
+    # records follow numeric insertion order. Check full records and their
+    # multiplicities rather than treating serialization order as semantics.
+    check(Counter(canonical(row) for row in structural)==Counter(canonical(row) for row in saved_structural),
+          'Saved structural certificate ledger differs')
+    saved_keys=[(row['scope'],row['policy'],row['version'],tuple(row['disabled'])) for row in saved_structural]
+    check(len(saved_keys)==len(set(saved_keys)),'Duplicate saved structural request identity')
     for scope in config['capability_scopes']:
         exacts=[p['retained_bytes'] for p in plans if p['scope']==scope and p['policy'] in {'RecoverML_exact','scenario_exact'}]
         check(len(exacts)==2 and len(set(exacts))==1,f'Independent exact optima disagree for {scope}')

@@ -1,0 +1,14 @@
+{
+  "case": "structural_duplicate_identity",
+  "mutation": "Replace second record with first while preserving row count",
+  "expected_status": "FAIL",
+  "observed_status": "FAIL",
+  "errors": [
+    "Saved structural certificate ledger differs",
+    "Duplicate saved structural request identity"
+  ],
+  "changed_inputs": [
+    "allowed_scenario_certificates.json"
+  ],
+  "control_passed": true
+}

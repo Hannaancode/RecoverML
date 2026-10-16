@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "models": 16,
+  "case_rows": 10,
+  "unique_runtime_stores": 3,
+  "actual_runtime_requests": 48,
+  "actual_exact": 48,
+  "actual_expected_blocked": 0,
+  "actual_unexpected": 0,
+  "allowed_structural_requests": 800,
+  "allowed_structural_exact": 799,
+  "payload_files_verified": true,
+  "native_dvc_files_verified": 32,
+  "scopes": {
+    "preprocessing": {
+      "snapshot_bytes": 3669545821,
+      "exact_bytes": 4829269,
+      "saving_bytes": 3664716552,
+      "saving_percent": 99.86839600224194,
+      "gzip_snapshot_bytes": 291175536,
+      "gzip_exact_bytes": 568375,
+      "gzip_saving_bytes": 290607161,
+      "native_pickle_snapshot_bytes": 2751548681,
+      "native_pickle_snapshot_minus_canonical_frontier_bytes": 2746719412,
+      "native_gzip_snapshot_bytes": 224313265,
+      "native_gzip_snapshot_minus_gzip_frontier_bytes": 223744890,
+      "planning_s": 0.021091411000270455,
+      "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+    },
+    "broad": {
+      "snapshot_bytes": 3669548445,
+      "exact_bytes": 3669548445,
+      "saving_bytes": 0,
+      "saving_percent": 0.0,
+      "gzip_snapshot_bytes": 291178160,
+      "gzip_exact_bytes": 291178160,
+      "gzip_saving_bytes": 0,
+      "native_pickle_snapshot_bytes": 2751551305,
+      "native_pickle_snapshot_minus_canonical_frontier_bytes": -917997140,
+      "native_gzip_snapshot_bytes": 224315889,
+      "native_gzip_snapshot_minus_gzip_frontier_bytes": -66862271,
+      "planning_s": 0.010681430000204273,
+      "qualification": "The native representation controls use native model pickles and common canonical roots/predictions; canonical and native byte identities differ"
+    }
+  },
+  "uncompressed_1GB_goal_met": true,
+  "gzip_1GB_goal_met": false,
+  "interpretation": "A storage result for a declared failure scope; not proof of novelty, universal baseline superiority, or production prevalence"
+}

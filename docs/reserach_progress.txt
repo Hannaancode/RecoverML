@@ -682,3 +682,102 @@ The complete data release is 127bbd6b5aa9471502af58e88ac0336656be2327 on both ma
 The recursive remote tree contains all 626 tracked files and every Git blob hash and file mode matches the local committed artifact
 The publication receipt and completed upload record are updated and both checksum manifests now cover the complete published evidence
 The paper and PDF bytes remain unchanged and venue formatting waits for the author review
+
+15 October 2026 verified continuation and durable checkpoints
+
+The workspace returned to its earlier checkpoint after an interruption and the later local files were missing
+We withdrew the missing experiment numbers and resumed from the actual preserved files
+The source and protocols and completed raw evidence were saved on the GitHub branch research/scientific-validation-oct15
+The latest evidence checkpoint is e0bc16a and all 31 uploaded files matched their expected Git hashes
+
+The largest completed verified saving at this checkpoint is 19986511 bytes or 93.496 percent on one graph with 112 versions
+This compares 21376829 snapshot bytes with 1390318 retained bytes and all 448 requested recoveries were exact
+This is about 19.99 MB and is not a gigabyte result
+
+The interrupted scientific grid has 1515 summary rows and 28484 readable raw records and an incomplete gzip footer
+Six complete nonforest histories provide 1440 rows and 28080 requests and were selected only by identity and completeness
+The forest measurements provide 480 rows and 8400 requests but eight case attempts have source drift flags
+Those eight cases will be rerun with the same frozen input stores and stable source while the four clean cases will be reused
+The final grid must reconcile 1920 rows and 36480 requests before it is reported as complete
+
+The nonuniform sensitivity study completed all 5760 metadata conditions with zero budget or eligibility errors
+Changing costs changed 298 of 4608 paired choices and changing frequency changed 312 of 2880
+Changing eligibility changed 2190 of 2880 and changing read speed changed 140 of 960 and changing tie order changed 180 of 720
+These are structural decision checks rather than new replay or timing measurements
+
+The component study completed all 154 controls and its 110 comparable rows agree on the minimum bytes
+There are 99 comparisons against a case reference and 1452 independent full scan versus indexed closure comparisons with no errors
+Alternative producers added no retained payload saving in these four real workflow histories
+Full archive dedup saved only 431 bytes for Iris and zero for the other three recipes
+Decomposition was slower in six of eight small real settings and faster in two and these timings came from a shared host
+
+A separate cloud reproduction completed on a GitHub hosted Azure Ubuntu machine with four virtual CPUs and Python 3.12.15
+It completed 192 conditions and 624 actual requests with 367 exact recoveries and 257 expected blocked requests and zero unexpected outcomes
+Both exact formulations agreed in eight cases and the CPU PyTorch job passed 102 tests
+The downloaded raw ZIP matched the hash reported by GitHub
+This proves fresh capture and replay in another environment and does not claim that old captured blobs replay across an environment change
+This is a compact reproduction rather than the whole publication matrix
+The expanded local suite separately passed all 109 tests with CPU PyTorch
+
+The EyeAI inspired rebuilt study uses all 20 public STARE images and annotations and actual logistic and forest models
+A spatial feature revision creates a real processing change and the fixed design has 540 method conditions and 10920 recovery requests
+These are constructed histories using different data from the private EyeAI study
+The first attempt was interrupted when its raw log path stopped updating and we will not infer the missing timings
+Nine complete logistic histories will be reused only after all their raw records and store and native DVC ledgers agree
+All nine forest histories will be rerun in an isolated temporary output directory
+A separate analysis will check whether a simple feature frontier rule matches the exact optimizer
+
+The larger storage study has a fixed grid of 16 forest models on the complete UCI Letter Recognition data
+It uses 20000 rows and 16 features and 26 classes and its small preflight passed all eight actual stress recoveries and all four native DVC file checks
+The full run will start after the current scientific and retinal checks finish as the author requested
+It will measure canonical model bytes and gzip bytes and native pickle sizes separately
+Every fixed model configuration will run regardless of whether the result reaches one gigabyte and no padding or duplicate models are allowed
+
+The literature review gives an explicit finite scenario reduction to weighted positive Horn abduction
+The master and oracle design and hashing and closure and ordinary decomposition are established techniques
+The current three contribution categories are the precise recovery contract and a checked exact implementation and an empirical storage versus recovery study
+These are not three confirmed independent theoretical inventions
+A separate independent enumeration also identifies a standard minimum cut solution for a restricted graph subclass
+This challenges whether the current real workflows need a general optimizer and the final review must retain this finding
+
+The manuscript and PDF are unchanged and drafting and formatting wait for the author
+
+16 October 2026 continued validation
+
+We resumed from the durable source and raw evidence checkpoint
+Long running raw logs will be written in separate temporary directories and only closed and reconciled files will be copied into the repository
+The retry rules preserve earlier attempts and choose reruns by source stability and data completeness rather than by whether the results are favourable
+
+16 October completed fixed experiments and critical findings
+
+The scientific matrix is now fully reconciled with 1920 conditions and 36480 actual requests and zero unexpected outcomes
+All 48 exact formulation comparisons agree and robust local search matches their minimum storage in all 48 full budget cases
+The exact complete recovery policy does not maximize partial coverage when the full guarantee cannot fit the budget and other methods can recover more individual requests at those budgets
+
+The completed retinal matrix is saved as eyeai_complete_oct15 with 540 conditions and 10920 exact recoveries and 624 native DVC checkout receipts
+Exact storage beats simple greedy in 12 of 108 cases and ties it in 96 and ties strong local search in all 108
+The simple feature frontier formula also matches all 108 exact minima so these histories do not establish a practical need for the general optimizer
+The native DVC reproduction control physically removes the legacy module and restores all 32 target files exactly
+Its manually chosen frontier and RecoverML both cost 2523881 common accounting bytes
+The initial forced frozen stage failure is retained and the ordinary no run cache DVC command succeeds
+
+All 16 fixed Letter Recognition forests have trained on the complete new public dataset and all 48 unique store runtime requests are exact
+Actual target snapshots cost 3669545821 canonical bytes and the exact preprocessing store costs 4829269 bytes
+The saving is 3664716552 bytes or 3.6647 decimal GB and 99.8684 percent
+Actual gzip saving is 290607161 bytes or 290.61 decimal MB and is below one GB
+The native model pickle representation control totals about 2.75 GB before compression and is reported separately from the canonical model identity
+Broad training and prediction loss requires the full target snapshots and saves zero bytes
+Exact storage ties both direct robustness aware heuristics in the preprocessing case and does not beat every method on every metric
+All 32 native DVC target files match and all large raw payloads and compressed contents and all 56 source snapshots are verified
+The 800 structural requests include one expected broad greedy failure and are distinct from the 48 actual replay requests
+
+The first larger study analyzer failed because it compared record order after numeric version insertion was changed by canonical JSON string sorting
+All 800 saved records matched independent recomputation with zero duplicate identities before changing the analyzer
+The corrected analyzer checks full record multiplicities and duplicate request identities and passes
+The initial failure and old analyzer and diagnosis are preserved and six temporary copy controls accept reordered valid evidence and reject corruption
+The independent final review also reconciles all ten numeric summary rows and three runtime stores and verifies the compact frontier archive
+
+The engineering evidence is substantially stronger and the one GB uncompressed goal is met
+Strong general novelty and production prevalence remain unresolved and the real course peer reviews have not been supplied
+The paper and PDF remain unchanged and drafting and formatting are still deferred
+The handover file records all needed paths and whether each item is on GitHub or still local

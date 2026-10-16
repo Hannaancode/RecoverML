@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "controls": 6,
+  "controls_passed": 6,
+  "original_inputs_unchanged": true,
+  "original_input_sha256": {
+    "protocol.json": "9677c9ec1416217c28b52d5e82f04ed12f6d330696e20b8ca8c564b74c45db10",
+    "capture_inventory.json": "5bc73a72708ff41fb532c2dec8741b5f427e052665635a8cfbe8619e11d22b3d",
+    "report.json": "df14c95eecd506e659be6a067f558b6bbf387174d89b1cec43c607e7716ccca5",
+    "planner_records.json": "43dcc82db8314ecf8b628a0e25fb5b0f8274ee242db14466be8dffe70098b5bb",
+    "blob_inventory.json": "ad620fc8130b012343ab07bcfd94aae5d3c0efb84ea9755e38de4ac8e4606ec3",
+    "runtime_store_index.json": "1bb043394b0c628fdd85c1cbddd4bbf6f7e6035820e821cbb45db8f34b3534e3",
+    "manifest.json": "28230fb3baab1578dc307c18dbfddf7a19e6c9eb36311958a792b87bc9f20397",
+    "summary.csv": "5575e3fb120e5474d62806bf92f340baebf276ec97f5c63b0d3c77b3ff8cb1de",
+    "allowed_scenario_certificates.json": "003876eee910f3f7432b829a28a572cf5f8d1dccb998ccea4bebda089c2c750f",
+    "execution_traces.jsonl.gz": "0f7bb3d8de6edcea924fd443c8197c879ed47346eebb3f287485e5bc7d9aef10",
+    "native_dvc_report.json": "85908319dbc06d43c38032bc3fcd2050779facf21e9dffdf1ab2f85ff34f9b4e",
+    "native_dvc_commands.json": "b3284106485c1b627f0e120506fa0a37f58b88bba8c009f157273d0bb4337f31",
+    "store_membership.json": "4d7db4daa6f32f22f84e33eca7e71709f708102d8247b078013f0419bad98c84",
+    "selected_frontier.tar.gz": "0adf53f32d1e18b179ed7616acbf2408ddc9caa0dc3a634d671fcc3c410656c5"
+  },
+  "analyzer_sha256": "d5ad55fd87a76d5dcc57839c2158c6efa6e426350f02d237330e4a32ddae4eee",
+  "cases": [
+    {
+      "case": "unchanged",
+      "mutation": null,
+      "expected_status": "PASS",
+      "observed_status": "PASS",
+      "errors": [],
+      "changed_inputs": [],
+      "control_passed": true
+    },
+    {
+      "case": "structural_reordered",
+      "mutation": "Reverse complete ledger order without changing records",
+      "expected_status": "PASS",
+      "observed_status": "PASS",
+      "errors": [],
+      "changed_inputs": [
+        "allowed_scenario_certificates.json"
+      ],
+      "control_passed": true
+    },
+    {
+      "case": "structural_duplicate_identity",
+      "mutation": "Replace second record with first while preserving row count",
+      "expected_status": "FAIL",
+      "observed_status": "FAIL",
+      "errors": [
+        "Saved structural certificate ledger differs",
+        "Duplicate saved structural request identity"
+      ],
+      "changed_inputs": [
+        "allowed_scenario_certificates.json"
+      ],
+      "control_passed": true
+    },
+    {
+      "case": "structural_flipped_recoverability",
+      "mutation": "Invert one recoverability outcome",
+      "expected_status": "FAIL",
+      "observed_status": "FAIL",
+      "errors": [
+        "Saved structural certificate ledger differs"
+      ],
+      "changed_inputs": [
+        "allowed_scenario_certificates.json"
+      ],
+      "control_passed": true
+    },
+    {
+      "case": "structural_missing_record",
+      "mutation": "Remove one complete structural record",
+      "expected_status": "FAIL",
+      "observed_status": "FAIL",
+      "errors": [
+        "Saved structural certificate ledger differs"
+      ],
+      "changed_inputs": [
+        "allowed_scenario_certificates.json"
+      ],
+      "control_passed": true
+    },
+    {
+      "case": "runtime_duplicate_identity",
+      "mutation": "Replace second actual runtime request with first at fixed row count",
+      "expected_status": "FAIL",
+      "observed_status": "FAIL",
+      "errors": [
+        "Duplicate actual runtime request",
+        "Actual runtime request grid differs"
+      ],
+      "changed_inputs": [
+        "execution_traces.jsonl.gz"
+      ],
+      "control_passed": true
+    }
+  ],
+  "numeric_cross_links": {
+    "status": "PASS",
+    "errors": [],
+    "summary_rows": 10,
+    "runtime_stores": 3,
+    "raw_requests": 48
+  },
+  "frontier_archive": {
+    "status": "PASS",
+    "errors": [],
+    "archive_sha256": "0adf53f32d1e18b179ed7616acbf2408ddc9caa0dc3a634d671fcc3c410656c5",
+    "payload_files": 4,
+    "payload_bytes": 4800580,
+    "archive_members": [
+      "manifest.json",
+      "capability_contract.json",
+      "blobs/44dd41f6c0200a567842122b9a03ad861fd693c13eb8cd008f7ea63cdc4a3b4a.pkl",
+      "blobs/4c9a6303ef410555a54e4714f1ae65a0b37f08eea1cb9700fec7bfd866a43fc6.pkl",
+      "blobs/a13a0c4ff66b7da87d5e22b2b0bd499418c0c14c6e6482340f9a69232a59d851.pkl",
+      "blobs/d06b48e651352e7abeb374925f9f3f99e96f7a069e6f963d723714ddda658a20.pkl"
+    ]
+  },
+  "scope": "Ledger semantic controls only; training and disk recovery are not rerun and payload verification is separate"
+}

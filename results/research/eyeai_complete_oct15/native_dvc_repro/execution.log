@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "capture_id": "forest_s3_v16",
+  "versions": 16,
+  "stages": 34,
+  "first_native_repro_s": 35.10664922900003,
+  "second_native_repro_s": 35.96167742,
+  "actual_native_repro_commands": 2,
+  "exact_unique_targets": 32,
+  "expected_unique_targets": 32,
+  "native_first_exact": true,
+  "legacy_module_absent_before": true,
+  "legacy_module_absent_after": true,
+  "isolated_temporary_directory": "/tmp/recoverml-native-retina-4qco4ctb",
+  "removed_run_cache_files": 34,
+  "retained_native_cache_files": 1,
+  "native_retained_payload_bytes": 1966221,
+  "manual_frontier_common_bytes": 2523881,
+  "RecoverML_certified_common_bytes": 2523881,
+  "manual_DVC_matches_exact_minimum": true,
+  "qualification": "Native DVC can replay from a manually chosen retained feature frontier. Timing includes native stage process startup and is not a proof of algorithmic speed superiority."
+}

@@ -1,0 +1,9 @@
+{
+  "case": "unchanged",
+  "mutation": null,
+  "expected_status": "PASS",
+  "observed_status": "PASS",
+  "errors": [],
+  "changed_inputs": [],
+  "control_passed": true
+}

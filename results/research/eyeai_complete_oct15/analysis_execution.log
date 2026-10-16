@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "summary_rows": 540,
+  "raw_requests": 10920,
+  "exact_requests": 10920,
+  "unexpected_errors": 0,
+  "exact_comparison_conditions": 108,
+  "native_checkout_commands": 624,
+  "native_failed_commands": 0,
+  "positive_savings_conditions": 90,
+  "zero_savings_conditions": 18,
+  "negative_savings_conditions": 0,
+  "exact_beats_greedy": 12,
+  "exact_ties_greedy": 96,
+  "exact_beats_local": 0,
+  "exact_ties_local": 108,
+  "maximum_saved_bytes": 12316663,
+  "statistical_unit": "Three seed blocks on the same 20 images, not 108 independent studies",
+  "timing_scope": "One repetition per actual request, uncontrolled host cache and system load; descriptive only",
+  "native_timing_scope": "Snapshot read/decoding timed each request; native DVC CLI checkout timed once per version and reused across availability/fault conditions"
+}

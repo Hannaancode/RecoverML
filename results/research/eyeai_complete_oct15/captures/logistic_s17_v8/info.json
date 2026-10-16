@@ -1,0 +1,114 @@
+{
+  "estimator": "logistic",
+  "seed": 17,
+  "versions": 8,
+  "images": 20,
+  "image_size": 64,
+  "train_images": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18
+  ],
+  "test_images": [
+    2,
+    10,
+    11,
+    15,
+    19
+  ],
+  "training_pixels": 6000,
+  "test_pixels": 18359,
+  "image_names": [
+    "im0001",
+    "im0002",
+    "im0003",
+    "im0004",
+    "im0005",
+    "im0044",
+    "im0077",
+    "im0081",
+    "im0082",
+    "im0139",
+    "im0162",
+    "im0163",
+    "im0235",
+    "im0236",
+    "im0239",
+    "im0240",
+    "im0255",
+    "im0291",
+    "im0319",
+    "im0324"
+  ],
+  "quality": [
+    {
+      "version": 0,
+      "revision": "legacy_shift3",
+      "auroc": 0.5886868427684832,
+      "average_precision": 0.10732926609665583
+    },
+    {
+      "version": 1,
+      "revision": "legacy_shift3",
+      "auroc": 0.5885373036823619,
+      "average_precision": 0.10705544174094034
+    },
+    {
+      "version": 2,
+      "revision": "legacy_shift3",
+      "auroc": 0.5884602880074069,
+      "average_precision": 0.10684695475629548
+    },
+    {
+      "version": 3,
+      "revision": "legacy_shift3",
+      "auroc": 0.5884443747339857,
+      "average_precision": 0.10661740601330415
+    },
+    {
+      "version": 4,
+      "revision": "aligned",
+      "auroc": 0.6740834449419775,
+      "average_precision": 0.18748701281458907
+    },
+    {
+      "version": 5,
+      "revision": "aligned",
+      "auroc": 0.681109992698168,
+      "average_precision": 0.20093447359979047
+    },
+    {
+      "version": 6,
+      "revision": "aligned",
+      "auroc": 0.6875707436371652,
+      "average_precision": 0.21392088745032628
+    },
+    {
+      "version": 7,
+      "revision": "aligned",
+      "auroc": 0.6931596147008191,
+      "average_precision": 0.2254175696912063
+    }
+  ],
+  "feature_nodes": {
+    "legacy_shift3": "d5e26bae89a925fc25c1c69f45cea4bd5b9253a168752ee893ca17c807cef3a8",
+    "aligned": "e30c08da4d5c1504b5f2b8d6a323a398e22b56a3276f862f0c81b31635601154"
+  },
+  "feature_revision_changes_bytes": true,
+  "artificially_equal_alternatives": false,
+  "implementation_sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41",
+  "data_source": "STARE fundus images and Adam Hoover vessel labels",
+  "qualification": "Constructed histories inspired by EyeAI, not its data or clinical task"
+}

@@ -1,0 +1,14 @@
+{
+  "store_index.json": {
+    "uncompressed_sha256": "09dbbaaecad8e587c4d13aa007536ff5b5882926ee7bbf4915a4878a2d0ef0c6",
+    "compressed_sha256": "6055f9d3edb07aefc357b24b4201ad906cc461dbfd112c8472094255114e1e7c",
+    "compressed_bytes": 779218,
+    "uncompressed_bytes": 14073315
+  },
+  "planner_records.json": {
+    "uncompressed_sha256": "eff9fab8a62f98272f0b4585acd89942860a1795d3fa5db617fbe4ae0d7a7e18",
+    "compressed_sha256": "daf79496deec732aad9359bf9f6f44737e96f768d54d99d69347a3bfa76acda5",
+    "compressed_bytes": 203212,
+    "uncompressed_bytes": 5194448
+  }
+}

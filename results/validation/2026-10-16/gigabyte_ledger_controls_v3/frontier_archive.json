@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "archive_sha256": "0adf53f32d1e18b179ed7616acbf2408ddc9caa0dc3a634d671fcc3c410656c5",
+  "payload_files": 4,
+  "payload_bytes": 4800580,
+  "archive_members": [
+    "manifest.json",
+    "capability_contract.json",
+    "blobs/44dd41f6c0200a567842122b9a03ad861fd693c13eb8cd008f7ea63cdc4a3b4a.pkl",
+    "blobs/4c9a6303ef410555a54e4714f1ae65a0b37f08eea1cb9700fec7bfd866a43fc6.pkl",
+    "blobs/a13a0c4ff66b7da87d5e22b2b0bd499418c0c14c6e6482340f9a69232a59d851.pkl",
+    "blobs/d06b48e651352e7abeb374925f9f3f99e96f7a069e6f963d723714ddda658a20.pkl"
+  ]
+}

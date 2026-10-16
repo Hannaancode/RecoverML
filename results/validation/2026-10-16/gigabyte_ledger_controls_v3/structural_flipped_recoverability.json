@@ -1,0 +1,13 @@
+{
+  "case": "structural_flipped_recoverability",
+  "mutation": "Invert one recoverability outcome",
+  "expected_status": "FAIL",
+  "observed_status": "FAIL",
+  "errors": [
+    "Saved structural certificate ledger differs"
+  ],
+  "changed_inputs": [
+    "allowed_scenario_certificates.json"
+  ],
+  "control_passed": true
+}

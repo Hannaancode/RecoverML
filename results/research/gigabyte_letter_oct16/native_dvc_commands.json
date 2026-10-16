@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/dvc",
+      "init",
+      "--no-scm"
+    ],
+    "returncode": 0,
+    "stdout": "Initialized DVC repository.\n\n+---------------------------------------------------------------------+\n|                                                                     |\n|        DVC has enabled anonymous aggregate usage analytics.         |\n|     Read the analytics documentation (and how to opt-out) here:     |\n|             <https://dvc.org/doc/user-guide/analytics>              |\n|                                                                     |\n+---------------------------------------------------------------------+\n\nWhat's next?\n------------\n- Check out the documentation: <https://dvc.org/doc>\n- Get help and share ideas: <https://dvc.org/chat>\n- Star us on GitHub: <https://github.com/treeverse/dvc>\n",
+    "stderr": "",
+    "elapsed_s": 0.5649232450000454,
+    "start_timestamp_ns": 1792133425698492083,
+    "end_timestamp_ns": 1792133426263416731
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/dvc",
+      "config",
+      "cache.type",
+      "hardlink"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "elapsed_s": 0.37715451100029895,
+    "start_timestamp_ns": 1792133426263681795,
+    "end_timestamp_ns": 1792133426640855245
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/dvc",
+      "add",
+      "snapshots"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "elapsed_s": 2.2802414269999645,
+    "start_timestamp_ns": 1792133426642315486,
+    "end_timestamp_ns": 1792133428922557645
+  },
+  {
+    "command": [
+      "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/dvc",
+      "checkout",
+      "snapshots.dvc"
+    ],
+    "returncode": 0,
+    "stdout": "A       snapshots/\n",
+    "stderr": "",
+    "elapsed_s": 0.3875037100001464,
+    "start_timestamp_ns": 1792133428923275150,
+    "end_timestamp_ns": 1792133429310779542
+  }
+]

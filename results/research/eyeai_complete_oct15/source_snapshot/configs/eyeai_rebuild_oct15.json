@@ -1,0 +1,23 @@
+{
+  "protocol": "EyeAI-inspired STARE rebuild after missing previous local artifacts",
+  "dataset_repository": "sraashis/deepdyn",
+  "dataset_commit": "48018b62a245dd791e45d60b28068489a8c32742",
+  "images": 20,
+  "annotation": "Adam Hoover",
+  "image_size": 64,
+  "train_images": 15,
+  "test_images": 5,
+  "training_pixels": 6000,
+  "seeds": [3, 17, 29],
+  "estimators": ["logistic", "forest"],
+  "versions": [2, 8, 16],
+  "feature_revisions": ["legacy_shift3", "aligned"],
+  "targets": ["model_prediction", "investigation_features"],
+  "availability": ["intact", "legacy_removed", "training_prediction_removed"],
+  "policies": ["RecoverML_exact", "robust_greedy", "robust_local", "DVC_target_snapshots", "DVC_all_stages"],
+  "expected_summary_rows": 540,
+  "expected_recovery_requests": 10920,
+  "timing_repetitions": 1,
+  "statistics": "descriptive with three seed blocks and nested version prefixes",
+  "failure_policy": "Keep all outcomes and do not select configurations using recovery results"
+}

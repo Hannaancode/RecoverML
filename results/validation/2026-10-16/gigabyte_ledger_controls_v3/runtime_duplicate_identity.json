@@ -1,0 +1,14 @@
+{
+  "case": "runtime_duplicate_identity",
+  "mutation": "Replace second actual runtime request with first at fixed row count",
+  "expected_status": "FAIL",
+  "observed_status": "FAIL",
+  "errors": [
+    "Duplicate actual runtime request",
+    "Actual runtime request grid differs"
+  ],
+  "changed_inputs": [
+    "execution_traces.jsonl.gz"
+  ],
+  "control_passed": true
+}

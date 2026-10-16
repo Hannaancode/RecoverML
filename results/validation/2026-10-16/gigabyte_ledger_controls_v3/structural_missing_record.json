@@ -1,0 +1,13 @@
+{
+  "case": "structural_missing_record",
+  "mutation": "Remove one complete structural record",
+  "expected_status": "FAIL",
+  "observed_status": "FAIL",
+  "errors": [
+    "Saved structural certificate ledger differs"
+  ],
+  "changed_inputs": [
+    "allowed_scenario_certificates.json"
+  ],
+  "control_passed": true
+}
