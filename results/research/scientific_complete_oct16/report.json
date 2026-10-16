@@ -1,0 +1,25 @@
+{
+  "histories": 8,
+  "case_policy_budget_rows": 1920,
+  "requests": 36480,
+  "exact": 15420,
+  "expected_blocked": 21060,
+  "unexpected": 0,
+  "failures": [],
+  "source_changed_during_run": [],
+  "sensitivity_rows": 2160,
+  "finish_timestamp_ns": 1792117530194880353,
+  "raw_trace_sha256": "b59a6b1a79ed972c470d839e6b7355d1f7ebfd4a602b1f5caa22dba2fb67d1d2",
+  "limitations": [
+    "Eight constructed captures are not a random production sample",
+    "Repeated requests are correlated",
+    "Original nonforest measurements and fresh forest measurements were not concurrent with each other",
+    "Six separate case processes share one host and can contend; timings are descriptive rather than isolated comparative speedups",
+    "Exact minima do not maximize partial coverage below their feasibility budget",
+    "One trial per request and process high-water RSS and cached Linux I/O are descriptive",
+    "Lost original planner certificates were recomputed as labelled metadata only; original planning times remain in original summary",
+    "Uniform-cost annotation sensitivity here is not the separate nonuniform published-component sensitivity study",
+    "No GPU, energy or second-machine result is claimed"
+  ],
+  "source_guard_scope": "Original six complete nonforest histories lack a closed end-of-run source guard because that process was interrupted; their source snapshot and strict per-request environment/operator guards and raw reconciliation remain available"
+}

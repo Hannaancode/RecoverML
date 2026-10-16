@@ -1,0 +1,21 @@
+{"completed_case": "digits_forest-101-broad-k2", "rows": 40, "failures": 0}
+{
+  "histories": 1,
+  "case_policy_budget_rows": 40,
+  "requests": 1920,
+  "exact": 1030,
+  "expected_blocked": 890,
+  "unexpected": 0,
+  "failures": [],
+  "source_changed_during_run": [],
+  "sensitivity_rows": 180,
+  "finish_timestamp_ns": 1792117502548987884,
+  "raw_trace_sha256": "3008ebffba64eba28dcaca85483b30fb6412acdf58aec4a840ec98931c68a867",
+  "limitations": [
+    "Eight constructed captures are not a random production sample",
+    "Repeated requests are correlated",
+    "Exact minima do not maximize partial coverage below their feasibility budget",
+    "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+    "No GPU, energy or cross-machine result is claimed"
+  ]
+}

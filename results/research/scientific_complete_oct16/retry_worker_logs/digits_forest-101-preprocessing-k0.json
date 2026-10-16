@@ -1,0 +1,16 @@
+{
+  "case": "digits_forest-101-preprocessing-k0",
+  "command": [
+    "/workspace/scratch/03a1fa6b3213/repro_install_check/bin/python",
+    "/workspace/scratch/03a1fa6b3213/recoverml_git/scripts/retry_scientific_matrix.py",
+    "--output",
+    "/tmp/recoverml_scientific_retry_oct16_20261016",
+    "--case",
+    "digits_forest-101-preprocessing-k0",
+    "--hyppo-cache",
+    "/workspace/scratch/03a1fa6b3213/baseline_sources/HYPPO/Components"
+  ],
+  "start_timestamp_ns": 1792117140222624005,
+  "end_timestamp_ns": 1792117202479233960,
+  "exit_code": 0
+}

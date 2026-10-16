@@ -1,0 +1,53 @@
+{
+  "methods": {
+    "RecoverML_exact": {
+      "exact": 1734,
+      "requests": 4560,
+      "complete_conditions": 128,
+      "conditions": 240
+    },
+    "scenario_exact": {
+      "exact": 1734,
+      "requests": 4560,
+      "complete_conditions": 128,
+      "conditions": 240
+    },
+    "robust_greedy": {
+      "exact": 2221,
+      "requests": 4560,
+      "complete_conditions": 112,
+      "conditions": 240
+    },
+    "robust_local": {
+      "exact": 2324,
+      "requests": 4560,
+      "complete_conditions": 128,
+      "conditions": 240
+    },
+    "HYPPO_rank": {
+      "exact": 1989,
+      "requests": 4560,
+      "complete_conditions": 104,
+      "conditions": 240
+    },
+    "HYPPO_frequency": {
+      "exact": 1856,
+      "requests": 4560,
+      "complete_conditions": 100,
+      "conditions": 240
+    },
+    "HELIX_rule": {
+      "exact": 1700,
+      "requests": 4560,
+      "complete_conditions": 96,
+      "conditions": 240
+    },
+    "target_snapshots": {
+      "exact": 1862,
+      "requests": 4560,
+      "complete_conditions": 112,
+      "conditions": 240
+    }
+  },
+  "qualification": "Common-budget exact solver minimizes a fully robust feasible store and does not optimize partial coverage. Strong robust_local ties the exact minimum on all 48 full-budget cases. No universal performance win is supported."
+}

@@ -1,0 +1,3762 @@
+[
+  {
+    "version": "original",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "original",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "original",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "original",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "original",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "original",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "original",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "original",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "original",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "original",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "original",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "original",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "original",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "original",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "original",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "original",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "original",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "original",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "original",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "original",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "original",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "original",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "original",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "original",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "original",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "original",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "original",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "original",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "original",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "original",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "original",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "original",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "original",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "original",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "original",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "original",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "original",
+    "path": "scientific_benchmarks.py",
+    "sha256": "6cd734d449dd0563f5dafd604f44290c2ff55d62b0738bfd5f5a030411f32f2f"
+  },
+  {
+    "version": "original",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "original",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "original",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "original",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "original",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "original",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "original",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "original",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "original",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "original",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "original",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "original",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "original",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "fresh_prepare",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k0",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k1",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-preprocessing-k2",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-broad-k0",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-broad-k1",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-101-broad-k2",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "eyeai_experiment.py",
+    "sha256": "67d76ac578ff9bbf414f578e1dc407fc37bb59a5cd151f77c8fb8d15b25f422f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "eyeai_workflow.py",
+    "sha256": "e7d8c2b11d2f053a70aac76c7e348b41a11220ee9911c3998e8a4b5dc94d1e0d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k0",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k1",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-preprocessing-k2",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-broad-k0",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-broad-k1",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "__init__.py",
+    "sha256": "74cef64abcbfdfe0ba5faab93958efe1be26be204776ed9bc0edb64c66d26d8d"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "__main__.py",
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "analysis.py",
+    "sha256": "2a3dc4523348e0515bb52f1f619caef22b4354bcef4d2d23b63e9ad49c695692"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "audit.py",
+    "sha256": "563ad6663a62114ca8711ba757cefcb04fbd1cdfbc9be7e31034d8d8af5daf0e"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "benchmark.py",
+    "sha256": "676c15a83ff2dfbe399eaf7e17a0b6e14eeb28955c29113bf4789701e4948e92"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "boundary_controls.py",
+    "sha256": "e54ec02ca5edda0b45a8595ce07d1b9de5c07d92dc998c4547eafff646158415"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "capability_experiment.py",
+    "sha256": "ad97e8ff40008f8e32362a72c7488ca495202263b05f904fc34d570e9219d6ab"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "capability_ops.py",
+    "sha256": "5880cb01cb0a80ac16a282f9873aeb0e146644a23fd0b81c04c3652571d0afbd"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "capability_retention.py",
+    "sha256": "27d9b0c33b503ad9dc5b3c6d9b134a3532f245698a7afa5af51983a738e50b35"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "capability_scaling.py",
+    "sha256": "7607b2b2a30e7f4ed4112bed2cf338acccb1a58d5ec7bfc1c9ba731542c845b0"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "cli.py",
+    "sha256": "0fd973d37642de4dcd3467456ac90892197978cd4e82722a01164856ac12c806"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "comparison.py",
+    "sha256": "a11114a89adcb96b0656be8b6e9c13ad4626818f9944205546d1cb578526f03a"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "component_retention.py",
+    "sha256": "b64a0bcf77a22871d58ca370e0676303ba020b82694000a5818553f05d59df72"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "core.py",
+    "sha256": "648126b1b3f1d67c244f32cee480e23ff28e30ed71322139e6615657de64980f"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "eyeai_current.py",
+    "sha256": "0fa8b1bd3fc2c983bcb2204b13d5e4a51e35a8847b92872f1c9cf8deffa0cca3"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "eyeai_experiment.py",
+    "sha256": "214eccfb70769ab82c2e666a69f8794e35b9d6071c4ed8c2178908d6d22c1fcc"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "eyeai_legacy.py",
+    "sha256": "fff9804a284c0a82e08f59d611f5a6317dc1ab55499dede255fe2c641da3224b"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "eyeai_workflow.py",
+    "sha256": "02d133a3e44033839dd52f9a587698ac567bce6d761fa7f8a53a8c876eabaf41"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "frontier_scaling.py",
+    "sha256": "3dda4c77d821748762a30e53072ead567140240ffd67505f9b700883d050e535"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "helix_materializer.py",
+    "sha256": "23e07ae42246dc8a9a29af7c34b5e84e0688d6873b396bcea48fe97088d56557"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "model_codec.py",
+    "sha256": "d43a2b4ff33dc7e97f94fb9780e5e9b7fa2fc0abcde8ff5972a4cbf74cbdcbc6"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "operators.py",
+    "sha256": "4c6ea8b0764a3f2ad3c4e8a612bb96298a9451b5cba2f5ade1d5bbf28ab65825"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "optimizer.py",
+    "sha256": "3696cd463fcb3a789f2914f83269b77355b5f05bb18aeb6d5501582457c70d29"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "oracle_audit.py",
+    "sha256": "ba9fdedb981098483abbe898597cb4098b46f09ecd0c4f011d9ac44380f43064"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "oracle_experiment.py",
+    "sha256": "f4701775c259a7776a53c57994eff70def08e6c17c5fc3a1b34f5e73bf554fd7"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_auto_real.py",
+    "sha256": "b540455a7db99b899c836b47d4bff049b747da65906c620be80af0d63cbe6d9e"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_benchmarks.py",
+    "sha256": "04b875a27ef8bdcf1d6da39b642d0f815bf0e1a90e89c63121ecf69702795f45"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_components.py",
+    "sha256": "6ef0f646d6f7e2ae66b9aa3f2c33b0bcbd1abd61fbe54638a0c2c0d3fef78064"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_evidence.py",
+    "sha256": "4324b9b3c2eab29c4f6781bf74816bb84e60638afae641f7b1614da706f4aa3a"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_fault_scope.py",
+    "sha256": "5015547107ebf52fad9051ab62985b850335939e9fd0227d96e9cb39ecd46655"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_holdout.py",
+    "sha256": "b4b96d765d7f8734c623a621dd2bd44e54ff75e6bc2c711dead6bdf37d7252f9"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_merged.py",
+    "sha256": "6a3be48d553e316834c3afa573ec54da51188b9bf503276491c9bfa9297aa68d"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "paper_published.py",
+    "sha256": "ad03d30d55af14e81ea0b21260cd35c3df11ee5ac530524ed52c1ed1c74e87e2"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "performance.py",
+    "sha256": "dc613049fe576492cd66fb0bd3a4b8fe2b6f0efe9537c0dd0fe42dfdbadb02a7"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "planner_ablation.py",
+    "sha256": "6ad1c6d81a36c6d41b3881c1c19588a757eae189d746852986f04a3846eceb0c"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "policies.py",
+    "sha256": "2a1d3171700530bba88d2a4931da614076c6c250b826760a687c218107b72447"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "published_materializers.py",
+    "sha256": "7d17b3b19719c381135447b49cc35de8de7df70818bc66f44b5f9bc09a53fcc0"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "robust_heuristics.py",
+    "sha256": "a9614d76db6326f37828362d67a687103a3b5ff065acb4cdf8424e7533721ea9"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "robust_retention.py",
+    "sha256": "c9691d4b7d2a0b475d030a260bbd22863428eebaee8857948afb9e98f308d5c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "scenario_retention.py",
+    "sha256": "d49b2e6870c1b8c111c44526db56182c6e78f0a0cb167fd0582f1232c73d7f02"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "scientific_benchmarks.py",
+    "sha256": "f4d8155c7cc562c81bb26d9ff2a27882506519e413f15477c00fb8ef241d1e83"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "scientific_workflows.py",
+    "sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "topology_scaling.py",
+    "sha256": "266d0a42e5d631b6beee914861cabe8348875d02748e86795dafd47836b10d48"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "torch_checkpoint_audit.py",
+    "sha256": "f8c233d958be35d91773fc6f41b1f3837962de46638ac2bed5e42ddf2b1f05d4"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "torch_ops.py",
+    "sha256": "c02314a20ad506cb08924d34ecd441e0f790d1837059875529073687860db607"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "torch_workloads.py",
+    "sha256": "157422168de4c13506067df51d4998e98bb77140f257d42a91d655c1b7b0f83a"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness.py",
+    "sha256": "d64da4806095478fa1126083b199342fbe14d94226831659e3a42c4a73b661c1"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_audit.py",
+    "sha256": "7b92e47b6445fd912ad14516b41d2ad43ad19f50863921124ffda94d0fb7882f"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_budget_audit.py",
+    "sha256": "ff57cbe5bb995c82b0d191d8bafa8a6e5e36a21613bf56c4ac629ed71337b065"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_experiment.py",
+    "sha256": "af08597b7d078249a53a338b19825ba2f0d1e799c6a68492c317fbfa55f42c8f"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_optimizer.py",
+    "sha256": "565a9f0b1788af999cbd1872cee5a25d6daf8d3599681ee268874a8af15d07ea"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_pipeline.py",
+    "sha256": "e60a2fc6c2c142d5d379becc713e9dcd660a4ec6f1b82b07da42c969375453e7"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "witness_scaling.py",
+    "sha256": "b7dcaed4ae4b2ef665820c414fe1b2001e0945f95bdd880d17761ac604d21faf"
+  },
+  {
+    "version": "digits_forest-211-broad-k2",
+    "path": "workloads.py",
+    "sha256": "177f8b3b0c71eb392d9b151de480f4e4fc245987324497a810033303587c1173"
+  }
+]

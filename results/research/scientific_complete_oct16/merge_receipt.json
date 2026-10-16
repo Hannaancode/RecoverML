@@ -1,0 +1,381 @@
+{
+  "start_timestamp_ns": 1792117526939542156,
+  "finish_timestamp_ns": 1792117530197898678,
+  "original_summary_rows": 1515,
+  "original_readable_requests": 28484,
+  "original_gzip_error": "EOFError('Compressed file ended before the end-of-stream marker was reached')",
+  "reused_histories": [
+    {
+      "history": "iris_union-101",
+      "rows": 240,
+      "requests": 5640,
+      "expected_request_identities": 5640,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    },
+    {
+      "history": "iris_union-211",
+      "rows": 240,
+      "requests": 5640,
+      "expected_request_identities": 5640,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    },
+    {
+      "history": "digits_pca-101",
+      "rows": 240,
+      "requests": 4200,
+      "expected_request_identities": 4200,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    },
+    {
+      "history": "digits_pca-211",
+      "rows": 240,
+      "requests": 4200,
+      "expected_request_identities": 4200,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    },
+    {
+      "history": "diabetes_poly-101",
+      "rows": 240,
+      "requests": 4200,
+      "expected_request_identities": 4200,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    },
+    {
+      "history": "diabetes_poly-211",
+      "rows": 240,
+      "requests": 4200,
+      "expected_request_identities": 4200,
+      "complete": true,
+      "selection_basis": "All declared identities and counts present; no performance or recovery outcome filtering"
+    }
+  ],
+  "reused_rows": 1440,
+  "reused_requests": 28080,
+  "new_rows": 480,
+  "new_requests": 8400,
+  "excluded_partial_forest_rows": 75,
+  "excluded_partial_forest_raw": 404,
+  "exclusion": "All forest conditions rerun, as frozen before new measurements; no performance or outcome selection",
+  "worker_receipts": [
+    {
+      "case": "digits_forest-101-preprocessing-k0",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 120,
+        "exact": 120,
+        "expected_blocked": 0,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117202251309657,
+        "raw_trace_sha256": "68b61a32c309c494243fcc31c707e19a08225c44c05a5ca642f705272e7f6d6a",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "87eede76207511f63570443e750fe507c0d444b635b216be21cd75d7196b4cd3",
+      "trace_sha256": "68b61a32c309c494243fcc31c707e19a08225c44c05a5ca642f705272e7f6d6a",
+      "run_start_sha256": "ccab6b95df8f5f6ceba257dcd48183f54e65c9885b0172314de834175ea37a9c"
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k1",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 480,
+        "exact": 390,
+        "expected_blocked": 90,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117330160977065,
+        "raw_trace_sha256": "f4869a90ea27d9c350bb32b711b409f0b46914568ef29427bfad2bf6d5c94a49",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "2c1b74ff0f9361ae6bc63819e1799c6f7f6296061e9efb59bc8d92bf68ecce92",
+      "trace_sha256": "f4869a90ea27d9c350bb32b711b409f0b46914568ef29427bfad2bf6d5c94a49",
+      "run_start_sha256": "963630bda60a1e0715bbe54463c62bfc51e5e20da632b514bade464e9b1ae328"
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k2",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 840,
+        "exact": 660,
+        "expected_blocked": 180,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117458665650557,
+        "raw_trace_sha256": "c0319d8562fa8da6060b8d39eced429e09e6ac3b8169283607d196ac0d0cadeb",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "15babc177002ebaae54e604dedb62faa830528c4e0fa83258b3cf62c89e4dc99",
+      "trace_sha256": "c0319d8562fa8da6060b8d39eced429e09e6ac3b8169283607d196ac0d0cadeb",
+      "run_start_sha256": "0ce74f689f6e4ce64a6b96d78eb1069736385fa8cb188debc8e4083df42f1499"
+    },
+    {
+      "case": "digits_forest-101-broad-k0",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 120,
+        "exact": 120,
+        "expected_blocked": 0,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117203778798957,
+        "raw_trace_sha256": "325323f12441acaa7ce86dc746dce747cfb94aac2bf61a8ab7bcc542aa54237f",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "81f80d89b006967a4df8e40d70cfecca8942440724ef2f3bc34dba233657ddbf",
+      "trace_sha256": "325323f12441acaa7ce86dc746dce747cfb94aac2bf61a8ab7bcc542aa54237f",
+      "run_start_sha256": "214246ed4ce7423c4e6e21a67119bbf9f186dce1c0b61a484d2c001b9526b5d4"
+    },
+    {
+      "case": "digits_forest-101-broad-k1",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 720,
+        "exact": 446,
+        "expected_blocked": 274,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117331123372329,
+        "raw_trace_sha256": "73a7dbfdeb24906dead596ceb0549427129cb00ef1d615f1fab66e5521655d0f",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "e3f07241bd77499eb7423fcbf312d4463f7e5cd7e5280f2bcc9207da3cdc2fd6",
+      "trace_sha256": "73a7dbfdeb24906dead596ceb0549427129cb00ef1d615f1fab66e5521655d0f",
+      "run_start_sha256": "912a8513f8169e44f1fbda4353fa07061dac57b4d8e03e2869ee603f4664c8e2"
+    },
+    {
+      "case": "digits_forest-101-broad-k2",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 1920,
+        "exact": 1030,
+        "expected_blocked": 890,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117502548987884,
+        "raw_trace_sha256": "3008ebffba64eba28dcaca85483b30fb6412acdf58aec4a840ec98931c68a867",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "3160b3521f8983b3456f0479642cc37f83ee61205889621aa9736dcb08bfdaf1",
+      "trace_sha256": "3008ebffba64eba28dcaca85483b30fb6412acdf58aec4a840ec98931c68a867",
+      "run_start_sha256": "c4950bfae3a2719ce63771f3c3888468b84d349a07299bb8f595d0d4358b2b26"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k0",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 120,
+        "exact": 120,
+        "expected_blocked": 0,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792083896637287136,
+        "raw_trace_sha256": "629cbed60efb1221583e1193484b7e300634fa6c9b78c070d538aeead9daa9cd",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "26e5fc14c945c29c8552df6e36548ffca97e2222e8af5f115147705688b61e5c",
+      "trace_sha256": "629cbed60efb1221583e1193484b7e300634fa6c9b78c070d538aeead9daa9cd",
+      "run_start_sha256": "13f5ff7812e5e1ae388d4e100b5f11175b8dfbf95ae6406b146ca9d9091b0c2d"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k1",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 480,
+        "exact": 390,
+        "expected_blocked": 90,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117394532928360,
+        "raw_trace_sha256": "e2dc69f69a78e0f8141c9e4898ed1f187e8574aa9c961468de98584f7bf1fc26",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "ccc2af8ea33e1164b13c246f7cfa0cfb8f1a0307b798a7a4c9c34af6310caf39",
+      "trace_sha256": "e2dc69f69a78e0f8141c9e4898ed1f187e8574aa9c961468de98584f7bf1fc26",
+      "run_start_sha256": "09d24cb2f985c8a8486370454a4e5a69a348f6bc04d73edac96c2aa2f7e0c1a4"
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k2",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 840,
+        "exact": 660,
+        "expected_blocked": 180,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792117511488406856,
+        "raw_trace_sha256": "078c54d390869919d37153b50506212b39c7c4db7c572bc5fe74244a67b033fc",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "317488e99ff48d81945ec5ccf6f2d8c1363851b3ec062eda80e83c3d3bcc8d56",
+      "trace_sha256": "078c54d390869919d37153b50506212b39c7c4db7c572bc5fe74244a67b033fc",
+      "run_start_sha256": "b7a3380eb5454ab9d524afc0088e9b618f7b90b36d65e2d518c36026a82cbdbb"
+    },
+    {
+      "case": "digits_forest-211-broad-k0",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 120,
+        "exact": 120,
+        "expected_blocked": 0,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792084306398110710,
+        "raw_trace_sha256": "33c135f838ac3668a21ae1ae39f49527d3540229c3cd00246c9ca9bf8f89d76d",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "21747f813f2a98af2a2bf5a4ec9a4ffbd3190080057ae1b48e9196e73437743f",
+      "trace_sha256": "33c135f838ac3668a21ae1ae39f49527d3540229c3cd00246c9ca9bf8f89d76d",
+      "run_start_sha256": "abb73e8bd53e01b96fa38ba16917f100fb67f597eb903e94469c47645c26314b"
+    },
+    {
+      "case": "digits_forest-211-broad-k1",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 720,
+        "exact": 446,
+        "expected_blocked": 274,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792084634848025797,
+        "raw_trace_sha256": "54b3b6791f2c6072145186f44a29ad9e59c1292cc2f34ab845247770d5374ed1",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "765a26eceeed968f4ac4c61b8eade16f7e46a303f3c86dd2bc43602fa680ab99",
+      "trace_sha256": "54b3b6791f2c6072145186f44a29ad9e59c1292cc2f34ab845247770d5374ed1",
+      "run_start_sha256": "05cb2c10cb66856463d9f019dfa58123bb83c8eba33d16509a8f3e97a9005357"
+    },
+    {
+      "case": "digits_forest-211-broad-k2",
+      "report": {
+        "histories": 1,
+        "case_policy_budget_rows": 40,
+        "requests": 1920,
+        "exact": 1030,
+        "expected_blocked": 890,
+        "unexpected": 0,
+        "failures": [],
+        "source_changed_during_run": [],
+        "sensitivity_rows": 180,
+        "finish_timestamp_ns": 1792085013204806102,
+        "raw_trace_sha256": "64efd5abf53b668a727a50c845b5b6f7260ac59c1aa7a23a30ae2bea9898c1f7",
+        "limitations": [
+          "Eight constructed captures are not a random production sample",
+          "Repeated requests are correlated",
+          "Exact minima do not maximize partial coverage below their feasibility budget",
+          "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+          "No GPU, energy or cross-machine result is claimed"
+        ]
+      },
+      "summary_sha256": "a71f25d2ba951c037368c5e0cf89158271052a066a027dc258166e1ac436b807",
+      "trace_sha256": "64efd5abf53b668a727a50c845b5b6f7260ac59c1aa7a23a30ae2bea9898c1f7",
+      "run_start_sha256": "4881f54e876a78af742d8ec79c67039155f126319fe4768a94df8ce5b8480696"
+    }
+  ],
+  "source_versions_sha256": "a2c3e5d29dca0d2fb77b070ed8ec8111cbaa0e38d79280a96ab0f157ef4be77d",
+  "capture_archive_sha256": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7",
+  "original_files_still_match_frozen_hashes": true
+}

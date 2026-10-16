@@ -8,7 +8,10 @@ import json
 import itertools
 import tarfile
 from pathlib import Path
+import sys
 import numpy as np
+
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 
 
 def grid_errors(protocol, captures, rows):
@@ -60,10 +63,15 @@ def run(source):
     expected_rows=(len(protocol['workflows'])*len(protocol['seeds'])*len(protocol['capability_scopes'])*len(protocol['loss_bounds'])
         *len(protocol['optional_snapshot_budget_fractions'])*len(protocol['methods']))
     errors=grid_errors(protocol,captures,rows);seen=set();identities=[];counts=defaultdict(Counter);metrics=defaultdict(list);raw_count=0
+    row_lookup={(r['case'],r['policy'],float(r['budget_fraction'])):r for r in rows}
     with gzip.open(source/'execution_traces.jsonl.gz','rt') as stream:
         for line in stream:
             t=json.loads(line);raw_count+=1
             key=(t['case'],t['policy'],t['budget_fraction'])
+            row=row_lookup.get(key)
+            if row is None:errors.append('Undeclared raw condition '+str(key))
+            elif t['history']!=row['history'] or t['budget_bytes']!=int(row['budget_bytes']):
+                errors.append('Raw/summary history or budget mismatch '+str(key))
             identity=(*key,t['version'],tuple(t['disabled']))
             identities.append(identity)
             if identity in seen:errors.append('Duplicate request '+str(identity))
@@ -93,6 +101,13 @@ def run(source):
                     errors.append('Summary/raw measured metric mismatch '+str(key)+' '+field)
     if len(rows)!=expected_rows:errors.append('Incomplete declared grid')
     if raw_count!=report['requests']:errors.append('Request denominator mismatch')
+    for report_field,row_field in [('exact','exact'),('expected_blocked','blocked'),('unexpected','unexpected')]:
+        if report[report_field]!=sum(int(r[row_field]) for r in rows):
+            errors.append('Report/summary aggregate mismatch '+report_field)
+    if report['case_policy_budget_rows']!=len(rows):errors.append('Report row denominator mismatch')
+    if report['histories']!=len(captures):errors.append('Report capture denominator mismatch')
+    if report['raw_trace_sha256']!=hashlib.sha256((source/'execution_traces.jsonl.gz').read_bytes()).hexdigest():
+        errors.append('Report raw trace hash mismatch')
     if report['unexpected']:errors.append('Unexpected recovery outcomes')
     plans=json.loads(gzip.decompress((source/'planner_records.json.gz').read_bytes()))
     optima=[p for p in plans if 'budget_fraction' not in p];case_optima=defaultdict(dict)
@@ -158,7 +173,10 @@ def run(source):
                 ax.scatter(x,y,label=policy,color=colors[policy],s=24,alpha=.7)
         ax.set_title(workflow);ax.set_xlabel('Actual bytes / full target snapshot bytes');ax.set_ylabel('Mean end-to-end recovery latency (ms)')
         ax.set_yscale('log');ax.grid(alpha=.25)
-    handles,labels=axes.flat[0].get_legend_handles_labels();fig.legend(handles,labels,loc='lower center',ncol=4,fontsize=8)
+    legend={}
+    for ax in axes.flat:
+        handles,labels=ax.get_legend_handles_labels();legend.update(zip(labels,handles))
+    fig.legend(list(legend.values()),list(legend),loc='lower center',ncol=4,fontsize=8)
     fig.suptitle('Complete recovery only, preprocessing k=1, both seeds and all declared budgets')
     fig.tight_layout(rect=(0,.08,1,.96));fig.savefig(source/'storage_recovery_tradeoff.png',dpi=180);plt.close(fig)
     lines=['# Supplementary scientific audit results','',

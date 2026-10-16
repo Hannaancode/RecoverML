@@ -1,0 +1,21 @@
+{"completed_case": "digits_forest-101-preprocessing-k1", "rows": 40, "failures": 0}
+{
+  "histories": 1,
+  "case_policy_budget_rows": 40,
+  "requests": 480,
+  "exact": 390,
+  "expected_blocked": 90,
+  "unexpected": 0,
+  "failures": [],
+  "source_changed_during_run": [],
+  "sensitivity_rows": 180,
+  "finish_timestamp_ns": 1792117330160977065,
+  "raw_trace_sha256": "f4869a90ea27d9c350bb32b711b409f0b46914568ef29427bfad2bf6d5c94a49",
+  "limitations": [
+    "Eight constructed captures are not a random production sample",
+    "Repeated requests are correlated",
+    "Exact minima do not maximize partial coverage below their feasibility budget",
+    "One recovery trial per request; process high-water memory and cached Linux I/O are descriptive",
+    "No GPU, energy or cross-machine result is claimed"
+  ]
+}

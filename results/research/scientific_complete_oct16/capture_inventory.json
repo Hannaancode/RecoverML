@@ -1,0 +1,514 @@
+[
+  {
+    "history": "iris_union-101",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "iris_union",
+    "dataset": "iris",
+    "seed": 101,
+    "versions": 3,
+    "rows": 150,
+    "columns": 4,
+    "transformed_columns": 3,
+    "train_rows": 112,
+    "test_rows": 38,
+    "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+    "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+    "split_sha256": "6c60d1db2858ce6648e804a37e21725f3f538039f231c0b7af2993a3360096db",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "https://scikit-learn.org/1.8/auto_examples/compose/plot_feature_union.html",
+    "declared_configurations": [
+      {
+        "C": 0.1,
+        "kernel": "linear",
+        "random_state": 101
+      },
+      {
+        "C": 1.0,
+        "kernel": "linear",
+        "random_state": 101
+      },
+      {
+        "C": 10.0,
+        "kernel": "linear",
+        "random_state": 101
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      0.9210526315789473,
+      0.9473684210526315,
+      0.9473684210526315
+    ],
+    "model_bytes": [
+      5062,
+      3142,
+      2663
+    ],
+    "largest_model_bytes": 5062,
+    "model_sha256": [
+      "50e2e77c8661fd349d23181cda60022027f8b2a5ac654fa0a8ed3bd96a0b5530",
+      "f8e527a7ef020a6d0351ec63b0302ef60c77bc74c6bbfc35650a627b3a19b529",
+      "0358d79e908ce623f3bfdd04794d9960729996e28583bec417f86df0a2b2654c"
+    ],
+    "prediction_sha256": [
+      "843abc3fdbad5632914491db23e8e5f2acf3b5e9f1e05295afac495377bea4db",
+      "6ee19efcaf1da18e87ab4a0c409c96681c5ca356efa30509450e4276613e2614",
+      "6ee19efcaf1da18e87ab4a0c409c96681c5ca356efa30509450e4276613e2614"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 1,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "iris_union-211",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "iris_union",
+    "dataset": "iris",
+    "seed": 211,
+    "versions": 3,
+    "rows": 150,
+    "columns": 4,
+    "transformed_columns": 3,
+    "train_rows": 112,
+    "test_rows": 38,
+    "source_x_sha256": "15391057d94669c414327a095474763b899b1bdc126d1d74832c288165e646c6",
+    "source_y_sha256": "c06ff7b6cca4d185915b731b88c523b1c2298e14d37e9aaa4f41a3e03e37d695",
+    "split_sha256": "6bc4a34c8311c221a265056050320bc7a87118f1bb3341e9d0a9fc9f7e1aac30",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "https://scikit-learn.org/1.8/auto_examples/compose/plot_feature_union.html",
+    "declared_configurations": [
+      {
+        "C": 0.1,
+        "kernel": "linear",
+        "random_state": 211
+      },
+      {
+        "C": 1.0,
+        "kernel": "linear",
+        "random_state": 211
+      },
+      {
+        "C": 10.0,
+        "kernel": "linear",
+        "random_state": 211
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      1.0,
+      1.0,
+      0.9736842105263158
+    ],
+    "model_bytes": [
+      5150,
+      3382,
+      2903
+    ],
+    "largest_model_bytes": 5150,
+    "model_sha256": [
+      "11d74cc405dd9473bdb03e4b8be60b6eb186be1220295c224247d35e19406460",
+      "3f386248e5ad7bc5e700efe5efbdac004bae77e7e34d6cff0f4b5c7a7c315932",
+      "2066057acc3247e9533131e25d0e80ead37bca88417ee7673cb6743bbcf4e8f8"
+    ],
+    "prediction_sha256": [
+      "8253e1ff8c2190bcab931e7630aae824a3ad3919bf02fff64fd2509caf36ec63",
+      "8253e1ff8c2190bcab931e7630aae824a3ad3919bf02fff64fd2509caf36ec63",
+      "c37735f20c8f0847d8b0ded1a4efcb874dee2a93db69aa50a1b780f8fb8a3d9b"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 1,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "digits_pca-101",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "digits_pca",
+    "dataset": "digits",
+    "seed": 101,
+    "versions": 3,
+    "rows": 1797,
+    "columns": 64,
+    "transformed_columns": 8,
+    "train_rows": 1347,
+    "test_rows": 450,
+    "source_x_sha256": "e7d73c470798bf9f3ee9e0833b0c08916de82a4b5934bf1fd2a55fc2a5008740",
+    "source_y_sha256": "52158d072d3e61ed9c740d758e121295514e7dbe2c6f1d09320ef561209bafd3",
+    "split_sha256": "29d635cbee830d60cd26813cd0765c6101ceb06f82f43d5d832da5f5037374d5",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "https://scikit-learn.org/1.8/auto_examples/compose/plot_compare_reduction.html",
+    "declared_configurations": [
+      {
+        "C": 0.1,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 101
+      },
+      {
+        "C": 1.0,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 101
+      },
+      {
+        "C": 10.0,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 101
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      0.8733333333333333,
+      0.8755555555555555,
+      0.8822222222222222
+    ],
+    "model_bytes": [
+      1730,
+      1730,
+      1732
+    ],
+    "largest_model_bytes": 1732,
+    "model_sha256": [
+      "c9ea1484ab1da796ab42266727aa48ba11905b9f9544a78746648d7989546336",
+      "7eee54663ed07a2bc6dfaac029918b2803d3567eea6f9e90af81ae1b2785c376",
+      "930d007fb0f4fd8bc0c0c972b1262dd6b4fb04e1f17bd0934fadf9153a74b587"
+    ],
+    "prediction_sha256": [
+      "804782b20a2d619cca05838fbc1cc79c68d30ffcbce579c9f0ead2b95852f5a5",
+      "c7f4d982dd1a5cebb62ae9eb3cfe737d7950ee86178b6b9bc8be8734a877aea7",
+      "989d9a2ac80e35bbfbcc0ddee07cec5a6e33da6d2b61f0793ec244f610c00ee2"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "digits_pca-211",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "digits_pca",
+    "dataset": "digits",
+    "seed": 211,
+    "versions": 3,
+    "rows": 1797,
+    "columns": 64,
+    "transformed_columns": 8,
+    "train_rows": 1347,
+    "test_rows": 450,
+    "source_x_sha256": "e7d73c470798bf9f3ee9e0833b0c08916de82a4b5934bf1fd2a55fc2a5008740",
+    "source_y_sha256": "52158d072d3e61ed9c740d758e121295514e7dbe2c6f1d09320ef561209bafd3",
+    "split_sha256": "6e334a9f66f63856d64917eb1471f8fa8b1964c098859aa457488c17552a485b",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "https://scikit-learn.org/1.8/auto_examples/compose/plot_compare_reduction.html",
+    "declared_configurations": [
+      {
+        "C": 0.1,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 211
+      },
+      {
+        "C": 1.0,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 211
+      },
+      {
+        "C": 10.0,
+        "dual": false,
+        "max_iter": 10000,
+        "random_state": 211
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      0.8933333333333333,
+      0.9044444444444445,
+      0.9044444444444445
+    ],
+    "model_bytes": [
+      1730,
+      1730,
+      1732
+    ],
+    "largest_model_bytes": 1732,
+    "model_sha256": [
+      "ca0a60d332554a2dc3cf2a105f4d3398c364936767851b2a6ea68d20e6742959",
+      "c362c690388f23aa250935e425469a3159c6112b6325c9a203fddea0b231590d",
+      "06e2cc849ef785500ef6cc580916b8dc3e86af4aff105d4b399965fcf26af042"
+    ],
+    "prediction_sha256": [
+      "364b56e75feb9984c8057450d00a15efea05e32a7bb1cfb4030e33eed72d211a",
+      "d8a91b7f9613ef17fe3532f44cb6c93bc4cc20ab4d88b48057d9f46bd4c6d93b",
+      "a07016a80b97e8a0581f1a82c136f9a5abd536f29b1ee096fadb4ce44d295124"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "diabetes_poly-101",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "diabetes_poly",
+    "dataset": "diabetes",
+    "seed": 101,
+    "versions": 3,
+    "rows": 442,
+    "columns": 10,
+    "transformed_columns": 65,
+    "train_rows": 331,
+    "test_rows": 111,
+    "source_x_sha256": "40bcf47b48ab5d45421be223bca82af9b03a4067bc9dac9ce2db43e9e892d144",
+    "source_y_sha256": "743dbaa902139e5af4c999b749993e783b461dcc5ca0247be6133c2b7dc24e86",
+    "split_sha256": "03bb449f0fc8b8fd129f3c5da0a8883eef5f03da5071c0cc8f24043bc4621abb",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "constructed adaptation: StandardScaler + PolynomialFeatures(degree=2) + Ridge",
+    "declared_configurations": [
+      {
+        "alpha": 0.1,
+        "solver": "svd"
+      },
+      {
+        "alpha": 1.0,
+        "solver": "svd"
+      },
+      {
+        "alpha": 10.0,
+        "solver": "svd"
+      }
+    ],
+    "classification": false,
+    "quality_metric": "r2",
+    "quality": [
+      0.3716788794529249,
+      0.40544144192528786,
+      0.4706985334587358
+    ],
+    "model_bytes": [
+      1255,
+      1255,
+      1256
+    ],
+    "largest_model_bytes": 1256,
+    "model_sha256": [
+      "ae8f33b74723b3512221fcc44af29064c079828394e6e4cf1f21b38842a5134f",
+      "7dfb891d34e31eff6a002b5261e3bc5a0b2014781d1c9668aa97a057138f8e49",
+      "048059c0c17d8ea7abf6b0d05d71ef3cf36ce09b191c71c9536591a9ae271f38"
+    ],
+    "prediction_sha256": [
+      "cccb8ddf9093c38ead6e930f8608045c68e527c4179e9135daec3e5277926047",
+      "8910f0e8300bc7b8cbeda586c92340e66a9cd5e3bd4c5da2b1ef881216185dc8",
+      "f026b6c1e1b9fd066463c900ab734a14a93968c7703f7d3d027cd0106416af55"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "diabetes_poly-211",
+    "capture_s": null,
+    "capture_timing": "Not checkpointed before interruption",
+    "workflow": "diabetes_poly",
+    "dataset": "diabetes",
+    "seed": 211,
+    "versions": 3,
+    "rows": 442,
+    "columns": 10,
+    "transformed_columns": 65,
+    "train_rows": 331,
+    "test_rows": 111,
+    "source_x_sha256": "40bcf47b48ab5d45421be223bca82af9b03a4067bc9dac9ce2db43e9e892d144",
+    "source_y_sha256": "743dbaa902139e5af4c999b749993e783b461dcc5ca0247be6133c2b7dc24e86",
+    "split_sha256": "6024bb6a6dab8cdb3d3060888fe720445887027b16234af7a1285311e5f3376a",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "constructed adaptation: StandardScaler + PolynomialFeatures(degree=2) + Ridge",
+    "declared_configurations": [
+      {
+        "alpha": 0.1,
+        "solver": "svd"
+      },
+      {
+        "alpha": 1.0,
+        "solver": "svd"
+      },
+      {
+        "alpha": 10.0,
+        "solver": "svd"
+      }
+    ],
+    "classification": false,
+    "quality_metric": "r2",
+    "quality": [
+      0.45665891431205163,
+      0.476553140904593,
+      0.49496761494789976
+    ],
+    "model_bytes": [
+      1254,
+      1255,
+      1255
+    ],
+    "largest_model_bytes": 1255,
+    "model_sha256": [
+      "29cbfb10b6e44ddef4d70e0a6b16daf2a94260174f2613fcccf27b4680348251",
+      "c1b2ce6797e75cd28f5a47747051070bf1102f192cb3136895e6101db4e9e040",
+      "410664055656dc28083a19fb614762d8f6f11857d05ace610ccf63ce377e8e9c"
+    ],
+    "prediction_sha256": [
+      "edbc4aa5821b8711ee7afc0a115684ed478022e3f8dc435d2634def9562d734d",
+      "1436b169cd655a7973e09776ee5b6951868f4f879111af85d8004fc89bd30c5e",
+      "7b054c0180ff58f0ca95faafcc00995e2e5b75739405f8fe2f01c83501f8a3fa"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "digits_forest-101",
+    "capture_s": 2.375555147,
+    "manifest_sha256": "316b623c333a8c4205d842fd8289528cb4f389a4e52883a5b71013b689c70834",
+    "workflow": "digits_forest",
+    "dataset": "digits",
+    "seed": 101,
+    "versions": 3,
+    "rows": 1797,
+    "columns": 64,
+    "transformed_columns": 32,
+    "train_rows": 1347,
+    "test_rows": 450,
+    "source_x_sha256": "e7d73c470798bf9f3ee9e0833b0c08916de82a4b5934bf1fd2a55fc2a5008740",
+    "source_y_sha256": "52158d072d3e61ed9c740d758e121295514e7dbe2c6f1d09320ef561209bafd3",
+    "split_sha256": "29d635cbee830d60cd26813cd0765c6101ceb06f82f43d5d832da5f5037374d5",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "constructed adaptation: MinMaxScaler + SelectKBest(chi2, k=32) + RandomForestClassifier",
+    "declared_configurations": [
+      {
+        "n_estimators": 64,
+        "random_state": 101,
+        "n_jobs": 1
+      },
+      {
+        "n_estimators": 128,
+        "random_state": 101,
+        "n_jobs": 1
+      },
+      {
+        "n_estimators": 256,
+        "random_state": 101,
+        "n_jobs": 1
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      0.9688888888888889,
+      0.9711111111111111,
+      0.9777777777777777
+    ],
+    "model_bytes": [
+      4117356,
+      8250983,
+      16513716
+    ],
+    "largest_model_bytes": 16513716,
+    "model_sha256": [
+      "81a23afefa4227e0a2d83bbe0726cf1d47997207e7a57f0bfd44c57412689ccf",
+      "75024c83576e2b0063914b17a089de962aab8dcb417f53caffd6f42ca6bcb08d",
+      "b67c1c9fc6c858093cd64482b365e819fed70ec39ec1cfb5b5fd1ced9ed14811"
+    ],
+    "prediction_sha256": [
+      "b621e88c788fb52687b19260708cd3b25f581bb914e4e7afdf24dbc98518d4c2",
+      "aef87e8fa0832234e5aa81ab3bd71ab97d84aa83672a7f937e39811ad9d2af02",
+      "91b29db4673c6f3ae8f2a6e36c7b650ff810b51b5b9fce445a360fc7510a748a"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  },
+  {
+    "history": "digits_forest-211",
+    "capture_s": 2.4950482609999654,
+    "manifest_sha256": "4805674b9e640d6918f793d46f4bf4a402e2e73e62c9fba9896f069f2d1abf3b",
+    "workflow": "digits_forest",
+    "dataset": "digits",
+    "seed": 211,
+    "versions": 3,
+    "rows": 1797,
+    "columns": 64,
+    "transformed_columns": 32,
+    "train_rows": 1347,
+    "test_rows": 450,
+    "source_x_sha256": "e7d73c470798bf9f3ee9e0833b0c08916de82a4b5934bf1fd2a55fc2a5008740",
+    "source_y_sha256": "52158d072d3e61ed9c740d758e121295514e7dbe2c6f1d09320ef561209bafd3",
+    "split_sha256": "6e334a9f66f63856d64917eb1471f8fa8b1964c098859aa457488c17552a485b",
+    "implementation_sha256": "94129cacd0ecac7250b6e6f6a4778dcd16bdb8e4723d42035702c1664203d70f",
+    "recipe_source": "constructed adaptation: MinMaxScaler + SelectKBest(chi2, k=32) + RandomForestClassifier",
+    "declared_configurations": [
+      {
+        "n_estimators": 64,
+        "random_state": 211,
+        "n_jobs": 1
+      },
+      {
+        "n_estimators": 128,
+        "random_state": 211,
+        "n_jobs": 1
+      },
+      {
+        "n_estimators": 256,
+        "random_state": 211,
+        "n_jobs": 1
+      }
+    ],
+    "classification": true,
+    "quality_metric": "accuracy",
+    "quality": [
+      0.9688888888888889,
+      0.9711111111111111,
+      0.9666666666666667
+    ],
+    "model_bytes": [
+      4125453,
+      8123964,
+      16356679
+    ],
+    "largest_model_bytes": 16356679,
+    "model_sha256": [
+      "2fc1f713eb8535292db0f8f7f16f8df8ce489b5f5bd81d338b35efba47ac774c",
+      "6a252a86622f8b885a1660dd588bcb314fef7ffcec30bb4506ecbdfa2985ca8e",
+      "ff474293a46593f77a4e39b9fe6700886af5e1ec57ec45d0573f155b085ca1ce"
+    ],
+    "prediction_sha256": [
+      "1266d72aa22744b84ea77cface31b210c225b27a92a405d14b8cc0d7d501541f",
+      "e6f4e497fa427a5b8055d105d5a856b77e52e3e6de005f7f8f593fca1c09e505",
+      "ac3af49ed08c4058792e76df8b4dfd0c7b2563469082a4279f422de681010fab"
+    ],
+    "native_prediction_check": true,
+    "training_partition_only_fit": true,
+    "deliberately_equal_alternatives": false,
+    "naturally_aliased_blob_count": 0,
+    "qualification": "Fixed constructed public-recipe adaptations; not production workflow traces; inference state targets"
+  }
+]

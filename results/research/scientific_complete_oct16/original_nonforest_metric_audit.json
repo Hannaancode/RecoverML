@@ -1,0 +1,7 @@
+{
+  "histories": 6,
+  "rows": 1440,
+  "requests": 28080,
+  "measured_metric_errors": [],
+  "original_compression_truncation": "EOFError('Compressed file ended before the end-of-stream marker was reached')"
+}
