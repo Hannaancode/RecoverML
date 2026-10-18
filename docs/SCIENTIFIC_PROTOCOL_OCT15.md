@@ -40,4 +40,4 @@ Complete rows and negative results will remain in the output even when there are
 The source and protocol are hashed and earlier milestone evidence remains unchanged
 
 Paper drafting and formatting are outside this execution request
-Actual external review and another physical machine cannot be replaced by parallel AI review on this host
+Fresh-environment measurements and external scientific review are distinct validation activities

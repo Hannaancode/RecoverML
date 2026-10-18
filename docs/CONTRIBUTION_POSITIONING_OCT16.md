@@ -10,7 +10,7 @@ improvements on its supported subclass. These findings strengthen C2/C3 without
 making a new graph-theory claim. The earlier 48/108/2 ties below remain valid
 for their original study populations. The separate native latency protocol is now complete: same optimal paid payloads, RecoverML faster in all 36 constructed histories; median paired speedups 2.1856x for recomputation and 9.9067x for fully retained targets. Cold CLI scope and all earlier mixed controls are documented in [native results](../results/research/native_frontier_cloud_oct16/RESULTS.md). See [comparator decision](COMPARATOR_DECISION_OCT16.md) for supported priorities and limits.
 
-Review date: 16 October 2026. Evidence base: research branch at `85a086b`, including the recovered original scientific captures and summaries. This is an internal AI-assisted scientific assessment, not a genuine course review, an external expert endorsement, or a claim of exhaustive literature coverage. The existing manuscript/PDF is unchanged.
+Assessment date: 16 October 2026. Evidence base: research branch at `85a086b`, including recovered original scientific captures and summaries. This is an automated internal assessment rather than external peer review or an exhaustive literature survey. The manuscript/PDF at this cutoff is unchanged.
 
 ## Recommended position
 
@@ -78,14 +78,13 @@ MinSS (Kim, Lee and Kim, JISE 33(2):413â€“428,2017) remains a full-text acc
 | â€œAll36,480 requests recovered.â€‌ | â€œ15,420 exact and21,060 expected blocked across the scientific multi-budget matrix; zero unexpected.â€‌ |
 | â€œPortable historical recovery after libraries disappear.â€‌ | â€œExact recovery under captured environment/source contracts and declared surviving producers; unsupported environments fail closed.â€‌ |
 | â€œA434.89x system recovery speedup.â€‌ | â€œA generated-chain certificate-kernel measurement from the earlier study; it is not model recovery throughput.â€‌ |
-| â€œIndependent peer review completed.â€‌ | â€œInternal checks are complete within scope; genuine course/external reviews await human assignment.â€‌ |
+| â€œIndependent peer review completed.â€‌ | â€œInternal checks are complete within scope; external scientific reviews are outside this internal assessment.â€‌ |
 
 ## Best next steps and decision gates
 
-1. **For the course:** request the actual Milestone3 assignments and grading instructions, distinguish reviews the student must write from feedback the student must receive, and use the neutral [review packet](COURSE_PEER_REVIEW_PACKET.md). No course review is complete yet.
-2. **For the current contribution:** lead with the contract, checked system and tradeoff evidence. Use the structural scorecard to explain why exact certification and simple choices can coexist. The complete final reports belong alongside the older draft when requesting review.
-3. **For a stronger optimization paper:** acquire independently motivated workflows with interacting alternative producers and demonstrate a material same-contract advantage over strong heuristics or a useful specialization with evidence. Freeze acceptance metrics before evaluating them. Larger easy forests alone do not answer this question. This is new research, not an already achieved contribution.
-4. **For a stronger systems paper:** validate annotation/capture effort and deployment behavior with real users/workflows, and measure recovery deadlines and operating costs if claiming operational value. No human-effort benefit or production economics is currently measured.
-5. **Before submission:** resolve the closest full-paper gaps, obtain an independent expert challenge, close or explicitly disclose the original frontier-container provenance gap, and integrate the final results into the manuscript when drafting is authorized.
+1. **For the current contribution:** lead with the contract, checked system and tradeoff evidence. Use the structural scorecard to explain why exact certification and simple choices can coexist. The complete final reports belong alongside the older draft when requesting review.
+2. **For a stronger optimization paper:** acquire independently motivated workflows with interacting alternative producers and demonstrate a material same-contract advantage over strong heuristics or a useful specialization with evidence. Freeze acceptance metrics before evaluating them. Larger easy forests alone do not answer this question. This is new research, not an already achieved contribution.
+3. **For a stronger systems paper:** validate annotation/capture effort and deployment behavior with real users/workflows, and measure recovery deadlines and operating costs if claiming operational value. No human-effort benefit or production economics is currently measured.
+4. **Before submission:** resolve the closest full-paper gaps, obtain an independent expert challenge, close or explicitly disclose the original frontier-container provenance gap, and integrate the final results into the manuscript in a subsequent revision.
 
-No venue acceptance probability is assigned. The internal positioning and claim-selection task is complete for this evidence base. External novelty confirmation, genuine course reviews, stronger empirical necessity and manuscript integration remain open.
+No venue acceptance probability is assigned. The internal positioning and claim-selection task is complete for this evidence base. External novelty assessment, stronger operational evidence and manuscript integration remain open.

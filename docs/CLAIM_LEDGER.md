@@ -26,5 +26,3 @@ The initial PyTorch diagnostic run with nonfinite text outputs is retained and e
 The novelty comparison credits prior slicing and frontier and exact bytes and MILP mechanisms
 The current presolve distinction is a candidate contribution and not an independently established first-of-its-kind result
 The configured extra CI job has not yet been observed so second-machine reproduction is not claimed
-
-Approximately 85 percent means an internal development checkpoint and does not estimate acceptance or rubric marks

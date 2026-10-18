@@ -30,6 +30,5 @@ The final structural/ledger audit checks all eight scientific captures, all eigh
 
 The best supported claims are therefore the explicit contract, its checked executable implementation, and evidence about storage/recovery boundaries. The experiments establish useful selective retention and exact recovery under declared assumptions. They do not establish a practical need for the general optimizer or superior decisions over every strong simple baseline. Automatic planning is implemented, but reduced human effort or fewer operator mistakes has not been measured in a user study.
 
-The [neutral course-review packet](COURSE_PEER_REVIEW_PACKET.md) and [tracker](COURSE_PEER_REVIEW_TRACKER.json) are ready. The author reports no assigned reviewers or comments, so genuine course reviews remain unassigned/unreceived. Internal AI review does not fulfill that requirement. The manuscript/PDF has not been revised in this phase.
 
 There is a concrete working research system and a clear formal task and useful validation work. Strong new theoretical originality and universal superiority have not been established. The [novelty review](NOVELTY_REVIEW_OCT15.md) gives the close prior work and the finite-scenario reduction to weighted Horn abduction. A paper can report these three contribution categories if its scope and comparisons remain accurate.

@@ -1,10 +1,10 @@
-# RecoverML scientific audit and submission decision
+# RecoverML scientific validation audit
 
-Review date: 16 October 2026. This is an internal parallel AI review of the implementation and saved evidence. It is not an external human review or a guarantee of publication. Paper drafting and formatting are deferred at the author's request.
+Audit date: 16 October 2026. Automated internal assessment of the implementation and saved evidence. This report is not external peer review. The manuscript at this cutoff is the dated October 14 checkpoint.
 
 **Decision: NOT YET READY for a strong external submission claim.** There is a working system with substantial checked evidence. The full scientific and retinal studies and the larger storage experiment now pass their independent reconciliation and the new raw evidence release is being completed. More fundamentally, strong algorithmic originality and a practical need for the general optimizer remain unresolved. Completing a large storage experiment alone cannot settle those questions.
 
-This checklist follows the author's 24-task validation plan supplied on 15 October. PASS means the stated, bounded acceptance check is supported. PARTIAL means useful work exists but the full task is incomplete. BLOCKED identifies work needing unavailable evidence or an author decision. Historical review documents retain their original dates and may describe gaps that later evidence resolves; this report states the current scope explicitly.
+This checklist records 24 technical validation checks defined on 15 October. PASS means the stated, bounded acceptance check is supported. PARTIAL means useful work exists but the full task is incomplete. BLOCKED identifies work needing unavailable evidence or an author decision. Historical review documents retain their original dates and may describe gaps that later evidence resolves; this report states the current scope explicitly.
 
 ## Evidence boundaries and closed results
 
@@ -50,8 +50,8 @@ The frozen retinal protocol uses the words “nested version prefixes”. The ac
 | 20 Negative and conditional results | PARTIAL | Zero-saving tabular cases, fitting/prediction-loss snapshot requirements, planner slowdowns, failed serialization/preflight diagnostics and interruptions remain visible. Component study includes no-alternative benefit and slow decomposition | Final new reports must include every frozen setting and failures. Completeness of unknown early selection history cannot be certified. Do not replace or conceal an unfavorable run |
 | 21 Audit headlines and figures | PARTIAL | [Inventory/evidence review](EVIDENCE_REVIEW_OCT15.md) regenerates nine original paper PNGs and tables from raw data. Published denominator 3,344 per policy and tabular 20.26355556% mean / 13.95840017% median / 15.17422476% pooled-byte saving reconcile | Audit every new headline from the final complete logs and update the future manuscript. The old 434.89x index figure is a generated-chain certificate kernel, not whole-system recovery speed |
 | 22 Complete reproduction package | PARTIAL | Eight matching direct pins in `requirements.txt`/`pyproject.toml`, [detailed guide](../reproducibility.txt), scripts, source snapshots and raw evidence exist. Compact fresh-cloud CI is observed successful | Publish and hash-check final resumed/large outputs, refresh the checksum manifests after all edits and verify current branch contents. Full cross-host paper-matrix reproduction and portable old-runtime image remain separate scopes |
-| 23 Independent-style paper review | BLOCKED by current drafting deferral; external review pending | [Baseline](BASELINE_REVIEW_OCT15.md), [correctness](CORRECTNESS_REVIEW_OCT15.md), [evidence](EVIDENCE_REVIEW_OCT15.md) and [novelty](NOVELTY_REVIEW_OCT15.md) reviews already identify major/minor scientific issues | The author has deferred paper drafting/formatting. Review the complete revised manuscript after evidence integration. A real external human review has not occurred and cannot be replaced by parallel AI review |
-| 24 Final checklist and submission decision | PASS as a dated audit deliverable | This file records all 24 tasks, evidence scope, incomplete work, rubric gaps and a NOT YET READY decision | This report is not a certification of future experiments. Replace pending entries only after their exact evidence is complete and reconciled |
+| 23 Independent-style paper review | BLOCKED by the historical manuscript cutoff; external review pending | [Baseline](BASELINE_REVIEW_OCT15.md), [correctness](CORRECTNESS_REVIEW_OCT15.md), [evidence](EVIDENCE_REVIEW_OCT15.md) and [novelty](NOVELTY_REVIEW_OCT15.md) reviews already identify major/minor scientific issues | The reviewed manuscript is a dated checkpoint. Review the complete revised manuscript after evidence integration. A real external human review has not occurred and cannot be replaced by internal automated assessment |
+| 24 Final checklist and submission decision | PASS as a dated audit deliverable | This file records all 24 tasks, evidence scope, incomplete work, scope gaps and a NOT YET READY decision | This report is not a certification of future experiments. Replace pending entries only after their exact evidence is complete and reconciled |
 
 ## Strongest supported findings
 
@@ -70,29 +70,13 @@ The general weighted master/oracle architecture is established implicit hitting-
 
 The current baseline characterization is honest if it keeps component/rule and native-system results separate. The native DVC pipeline reproduction control is complete and its manually preserved feature frontier matches the exact payload minimum at 2,523,881 common bytes. Such a tie should be reported as evidence that RecoverML automates a valid retention choice rather than evidence that no other tool can implement it.
 
-## Course rubric follow-through
-
-The four Milestone 2 screenshots show implementation/authenticity 35%, automated harness 25%, trace authenticity 25% and plots/analysis 15%. [Rubric evidence](RUBRIC_AUDIT.md) links the original implementation, 5,400-request/54-trial performance matrix, raw timestamp/resource logs and plots. The required genuine continuous Git history over Weeks 4–7 cannot be created retrospectively; only actual commits count and the instructor must confirm their course-week mapping.
-
-The seven later rubric images were inspected for this review. They do not explicitly require two physical machines or a GPU. The empirical-rigor image is cropped after the start of its Excellent description, so its unseen text is not inferred.
-
-| Later rubric | Requirement visible in supplied images | Current state and required author work |
-|---|---|---|
-| Milestone 3 peer review 1 | 35%; conference-style technical depth | Actual assigned peer paper and submitted review are not present as verified evidence. Our self-audits do not complete this course activity |
-| Milestone 3 peer review 2 | 35%; balanced actionable critique | Same boundary: a separate genuine course review is required |
-| Milestone 3 author changelog/rebuttal | 30%; point-by-point changes in response to peer critique | Requires actual received comments and a table mapping each comment to exact code/text change and validation; pending |
-| Milestone 4 architecture/novelty | 25%; contribution, diagrams, concurrency protocols, crash/recovery invariants | Working recovery invariants exist, but literature originality and full architectural explanation require revision. Do not claim distributed crash consistency from immutable-file recovery |
-| Milestone 4 empirical rigor | 30%; visible scale-up/scale-out, contention, P99 and ablations wording | Original local concurrency traces and current controls help. No verified multi-node scale-out result or stable new-matrix P99 study exists. Two environments used for reproduction are not a scale-out benchmark |
-| Milestone 4 artifact | 25%; reproducible code and all figures from raw data | Original figure regeneration and compact CI pass. Final evidence integration and checksum/publication verification remain open |
-| Milestone 4 writing/formatting | 20%; 10–12-page ACM/VLDB double-column layout, vector figures and accurate positioning | Explicitly deferred by the author. Current draft/PDF are preserved and are not the final formatted submission |
-
 ## Remaining work outside this checkpoint
 
 The declared matrices and real native DVC control are now complete and reconciled. Finish remote evidence publication and checksum verification and final numerical claim integration. A successful large result should be reported even if simple retention matches it or compression reduces the apparent saving.
 
 The next scientific decision is whether the paper's defensible contribution is checked retention automation with clear tradeoffs or a stronger optimization result supported by independent workflows. Resolve full-paper literature access and obtain an external expert challenge of the objective and candidate novelty. No amount of local benchmark repetition can guarantee acceptance or manufacture operational prevalence.
 
-After the author authorizes manuscript work, integrate these limits and the final results, complete the skeptical full-manuscript review and course peer responses, and format the paper. A personal laptop can provide another fresh-environment reproduction; current compact cloud evidence already supplies one separate execution environment. GPUs are only necessary if a later workload explicitly needs them, not for the present CPU planners/forests.
+A later manuscript revision can integrate the final results and address external review. A personal laptop can provide another fresh-environment reproduction; current compact cloud evidence already supplies one separate execution environment. GPUs are only necessary if a later workload explicitly needs them, not for the present CPU planners/forests.
 
 ## Final 16 October engineering review
 
@@ -102,7 +86,7 @@ Independent review reconciles all ten numeric summary rows and three runtime sto
 
 The small selected frontier averages about 6.65 seconds per version in this run and the snapshot store averages about 2.12 seconds. The large storage reduction therefore carries a measured recovery time cost. These are descriptive shared host timings and do not support a claim of universal speed superiority. The strong heuristic and manual DVC ties also remain part of the conclusion.
 
-The remaining items are release integration and research positioning and external peer review and manuscript work. The engineering experiment completion does not resolve general originality or prove widespread interacting storage choices in production science. See WORK_HANDOVER.md for the exact file map and publication cutoff.
+The remaining items are release integration and research positioning and external peer review and manuscript work. The engineering experiment completion does not resolve general originality or prove widespread interacting storage choices in production science. See [artifact guide](ARTIFACT_GUIDE.md) for the file map and publication scope.
 
 ## Original evidence recovery checkpoint
 

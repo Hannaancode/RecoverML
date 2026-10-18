@@ -2,7 +2,7 @@
 
 Date: 15 October 2026
 
-Review type: parallel AI review of the current repository and selected primary sources
+Review type: automated internal assessment of the repository and selected primary sources
 
 This is an adversarial research audit and is not an external human peer review. No manuscript text or historical experimental evidence was changed for this review. The associated source register is [literature_sources.json](../results/validation/2026-10-15/scientific_audit/literature_sources.json).
 

@@ -1,6 +1,6 @@
 # Current paper status
 
-Historical manuscript checkpoint: the status below describes 14 October. For the completed 16 October experiments, verified published ledgers and remaining original evidence gaps, read [release status](RELEASE_STATUS_OCT16.md) and [work handover](WORK_HANDOVER.md). Manuscript revision and formatting remain deferred; the existing manuscript has not yet incorporated those later results.
+Historical manuscript checkpoint: the status below describes 14 October. For the completed 16 October experiments, verified published ledgers and remaining original evidence gaps, read [release status](RELEASE_STATUS_OCT16.md) and [artifact guide](ARTIFACT_GUIDE.md). The repository manuscript is a dated checkpoint and has not incorporated those later result reports.
 
 Updated 14 October 2026
 

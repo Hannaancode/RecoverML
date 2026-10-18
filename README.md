@@ -1,227 +1,103 @@
-# RecoverML
+# RecoverML: Exact Artifact Time Travel for ML Pipelines under Declared Capability Loss
 
-RecoverML helps a machine learning pipeline save space and restore earlier versions of its work
+## Abstract
 
-For setup and checks and fresh experiments read the [complete reproduction guide](reproducibility.txt)
-It explains Linux and Windows with WSL2 and installation and every run from start to finish
-The earlier complete release is recorded in the [publication record](docs/PUBLICATION_OCT14.json) and the [current handover](docs/WORK_HANDOVER.md) records completed work and remaining limitations
+RecoverML selects the files needed to recover protected outputs from earlier machine learning pipeline versions when declared processing capabilities become unavailable. It records dependencies and physical file identities and minimizes retained bytes while preserving every required result under the specified losses. General exact formulations support alternative producers and cyclic histories, while an eligibility-checked minimum-cut route accelerates single-producer physical DAGs. Selected stores are checked and recovered files are verified against their original SHA-256 hashes. Experiments demonstrate specific storage and planning advantages over tested heuristics and faster native recovery at identical retained storage.
 
-It records the data and model files and the links between them and stores identical parts once
-The planner chooses what to keep within a storage budget and restores old models and predictions from saved files or recorded steps
-Every loaded or rebuilt artifact is checked against its original SHA-256 fingerprint
+Time travel here means exact recovery of protected historical artifacts, including features, models and predictions. The guarantee assumes complete recorded dependencies, intact retained files and the supported replay environment.
 
-## Latest checked progress on 16 October
+## Method
 
-The complete three-seed correlated-loss rerun is saved in this repository: RecoverML uses less storage than strong local search in **9 of 36** shared-loss comparisons, ties 27, and saves up to **48.74%**. Its median paired planning speedup is **16.88x**. The manual optimal frontier matches our storage in every comparison.
+1. **Capture:** record operations, inputs, parameters, implementation identities and output files, counting identical physical contents once.
+2. **Declare preservation requirements:** identify mandatory roots, protected historical outputs and groups of processing capabilities that may be lost.
+3. **Select:** minimize retained bytes using exact scenario or master/oracle optimization, or minimum cut when the graph passes the specialization guard.
+4. **Check and recover:** validate the selection and its certificate, export retained targets or replay surviving producers, and verify exact target hashes.
 
-The final native DVC batch comparison uses the same optimal paid payloads. RecoverML is faster in all 36 constructed histories: median paired speedup **2.19x with recomputation** and **9.91x when all target files are retained**. All 12,096 target-file hash checks pass. These are cold local CLI measurements; earlier mixed and superseded controls are retained.
+The contribution is a checked retention and recovery system using established optimization methods. The algorithms and guarantee boundaries are described in the [DAG specialization](docs/TRACTABLE_SUBCLASS_OCT15.md), [contribution assessment](docs/CONTRIBUTION_POSITIONING_OCT16.md) and [comparison scope](docs/COMPARATOR_DECISION_OCT16.md).
 
-Read the [complete storage evidence](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native protocol and evidence](results/research/native_frontier_cloud_oct16/RESULTS.md), and [comparator decision](docs/COMPARATOR_DECISION_OCT16.md). These establish specific systems advantages using established optimization methods. They do not establish universal dominance or a new general optimization algorithm.
+## Results
 
-The following older studies retain their original populations and outcomes:
+The current evidence includes the complete three-seed cloud studies published on 16 October 2026. Planning time, retained storage and recovery time are separate measurements.
 
+| Evaluation | Measured result | Scope |
+|---|---|---|
+| Shared preprocessing loss | Less storage than strong local search in **9/36** cases, ties in 27, maximum reduction **48.74%** | All protected results remain recoverable; the manual optimal frontier matches every minimum |
+| Separate preprocessing loss | Six storage wins and 30 ties against local search | Each winning difference is 129 serialized bytes |
+| Cloud planning | Median paired speedups **11.92x / 16.88x** over local search and **2.28x / 1.73x** over scenario exact | Separate / shared loss respectively; exact minima agree across all 72 history-contract pairs |
+| Native DVC recovery | RecoverML has lower median elapsed time in **36/36** histories; median paired speedups **2.19x** with recomputation and **9.91x** for retained targets | Identical optimal paid payloads, three paired trials, startup and verification included; all **12,096** target hash checks pass |
+| Scientific fixed-budget matrix | **36,480** actual requests across 1,920 method-budget rows with zero unexpected outcomes | RecoverML completes 128/240 conditions, tying strong local search; individual partial recovery is a separate objective |
+| Retinal processing-change study | **10,920 exact recoveries**, 90 snapshot-storage wins and 18 ties | Strong local search matches all 108 storage minima; separate physical code-retirement control recovers all 32 protected targets |
+| Letter forest study | **3.6647 GB** of uncompressed canonical bytes saved, or **290.61 MB** with measured gzip, and **48/48 exact recoveries** | Preprocessing loss; strong heuristics match the savings, broader loss saves zero and snapshot loading is faster |
 
-We completed the new scientific study with 1920 conditions and 36480 real requests and zero unexpected outcomes
-We completed the EyeAI inspired study with 10920 exact recoveries and the native DVC control restored all 32 target files after the older processing code was removed
-We trained all 16 planned forests on the complete Letter Recognition data and saved 3.665 GB of uncompressed canonical files while keeping exact historical recovery
-The measured saving with gzip is 290.6 MB and losing both training and prediction tools requires the full model snapshots
-Strong simple retention methods match our minimum storage on these histories and snapshots restore faster so the result shows a clear storage and recovery time tradeoff
+The shared-loss grid uses 36 constructed histories rather than 36 independent production workflows. The largest local-search storage gap is 131,793 bytes. Native DVC results concern the tested cold command integrations and do not establish universal speed superiority.
 
-Read the [larger storage results](results/research/gigabyte_letter_oct16/RESULTS.md) and [scientific comparison](results/research/scientific_complete_oct16/RESULTS.md) and [retinal study](results/research/eyeai_complete_oct15/RESULTS.md)
-Read the [remaining tasks and file map](docs/WORK_HANDOVER.md) before continuing in a new conversation
-The [contribution decision](docs/CONTRIBUTION_POSITIONING_OCT16.md) and [internal scientific review](docs/INTERNAL_REVIEW_OCT16.md) distinguish supported claims from unresolved novelty. The [course review packet](docs/COURSE_PEER_REVIEW_PACKET.md) is prepared; genuine human course reviews await assignment.
-Main now contains the research history, including the real October 15/16 commits. The research branch is research/scientific-validation-oct15. The [release status](docs/RELEASE_STATUS_OCT16.md) separates verified published ledgers from missing original archives. Thirteen missing originals are restored and one original archive container remains unavailable with a separately verified payload reconstruction. See the release status for this exact distinction. Run `python scripts/materialize_evidence.py` after clone to assemble the byte-identical retinal archive from its transport parts.
+Detailed evidence: [cloud storage and planning](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native DVC protocols and results](results/research/native_frontier_cloud_oct16/RESULTS.md), [scientific matrix](results/research/scientific_complete_oct16/RESULTS.md), [retinal study](results/research/eyeai_complete_oct15/RESULTS.md) and [Letter study](results/research/gigabyte_letter_oct16/RESULTS.md).
 
-## What we have achieved
+### Earlier concurrency control
 
-We built a working Python prototype and an automated benchmark and faster version 2 and version 3 and version 4 planners
-The storage study tested 11200 requests across 80 histories and version 2 restored all 1175 admitted requests exactly
-On matched feasible histories planning was 19.3 times faster than version 1 and planning plus five restores was 3.4 times faster
-The worker experiment restored all 5400 requests exactly and recorded real times and CPU and memory use
-The new public data study tested 3600 requests across 24 Digits and Wine histories and version 3 restored all 535 admitted requests exactly
-Version 3 reduced the opaque solver model from 129 variables to 98 and its repeated planner study measured a 1.18 times median history speedup over version 2
-The new Iris scaling study used 15 histories and version 4 reduced a depth 128 model from 1256 variables to 69 while keeping every proven optimal objective unchanged
-The same study measured a 3.38 times median history speedup over version 2 and completed 120 exact restores
-The CPU neural study used the real Digits data and a multilayer neural network and completed 630 recovery requests with no unexpected failures
-At a 50 percent storage budget version 4 restored all 18 requested outputs while full snapshots restored none and full replay restored 9
-The wide graph study reached 1038 nodes and 1068 edges and all 315 planner runs kept the same proven optimal result
-Version 4 used 98.21 percent fewer variables at the median and was 10.47 times faster than version 2 at the median
-The PyTorch study adds a CNN for Digits images and a Transformer for real 20 Newsgroups text and restores all 48 admitted version 4 requests exactly
-The same study checks 24 native model checkpoints and the 50 percent budget restores 18 of 24 requests while target snapshots restore 6
-The new placement study uses 45 histories and 1215 planner runs and 135 exact restores and explains where the frontier improves planning
-The earlier milestone suite has 49 passing automated tests and the raw measurements and plots are included
+The earlier prototype completed 5,400 exact requests across 54 trials and recorded timestamps, latency percentiles, throughput and CPU/RSS samples. The following figures belong to that earlier implementation, not the final native DVC integration. The [performance report](docs/reports/PERFORMANCE_REPORT.md) explains queueing and observed contention.
 
-## New recovery experiments
+![Earlier prototype throughput across worker counts](results/milestone2/performance/throughput_vs_concurrency.png)
 
-The separate research branch adds a minimum storage planner and tests full model and prediction recovery when a legacy import step is unavailable
-It can use another recorded step that produced the same bytes and checks every rebuilt file
-The lossless feature import study saves about 17.86 percent of total storage across three public datasets and the rounded CSV control keeps the original recovery rule
-The twelve version study saves about 23.64 percent in the lossless cases and a separate disk only audit reproduces every equal budget outcome across 702 attempts
-The new planner also passes generated cycle checks with up to 3073 nodes and the research suite includes 57 test cases with optional PyTorch checks
-Read the [new research note](docs/WITNESS_PLANNER_AND_PIPELINES.md) for the experiments and the proof and the next steps
+![Earlier prototype service latency distribution](results/milestone2/performance/latency_cdf.png)
 
-## Latest paper work
+## Reproduction
 
-Our idea is to keep the smallest shared set of files that protects every required old model and prediction after any allowed tool loss
-The new planner uses exact physical graph reduction and certified solving and checks every recovered result against its captured bytes
-
-The final published method study has 28 histories and 56 cases and 33440 real requests
-RecoverML restores all 3344 requests and HYPPO rank restores 2240 and HYPPO frequency restores 2291 at the same limits
-The best tested common budget HELIX rule setting restores 1940 and all tested main methods recover every no outage request in the lossless subset
-HYPPO uses unchanged released components and HELIX uses our documented published rule implementation and both use the common recovery executor
-
-One shared graph protects 112 old versions and saves 93.50 percent of target snapshot bytes with one declared preprocessing loss and 83.94 percent with two
-The layered study completes 9288 exact recoveries and the broader fitting and prediction outage study completes all 3920 requests exactly
-The final suite has 77 tests with 72 passing and five optional PyTorch checks skipped
-
-Our three contributions are a clear minimum storage recovery contract and an exact physical optimizer and a reproducible study of the price of stronger recovery
-Read the [full project summary in simple words](docs/PROJECT_SUMMARY.md) and [current paper](paper/RecoverML_capability_loss.md) and [paper PDF](output/pdf/RecoverML_capability_loss.pdf)
-The [saved paper evidence](results/research/paper_oct14/README.md) contains the logs and source versions and selected stores and figures
-The compact independent cloud reproduction is complete and the next plan is expert novelty review and final evidence publication and paper revision when the author requests it
-
-## Scientific audit added 15 October
-
-Read the [24 task scientific audit](docs/FINAL_SCIENTIFIC_AUDIT.md) and the [new fixed experiment protocol](docs/SCIENTIFIC_PROTOCOL_OCT15.md)
-The audit keeps earlier results and checks the baselines and old raw logs and storage bytes and related work
-It adds direct robustness-aware greedy and local search comparisons and new public recipe workflows across common budgets
-The expanded local test suite passes all 109 tests with CPU PyTorch and no skipped tests
-The witness restorer now handles a 2048 step chain and the optimizer checks solver values before claiming a proven result
-The paper text is unchanged while the author reviews it and the audit reports what is supported and what still needs outside validation
-
-## Earlier capability loss checkpoint
-
-The new planner saves enough files before replay tools become unavailable and protects every old model and prediction after any allowed combination of tool outages
-It tries to break a small store with an allowed outage and learns which extra files must be saved and repeats until recovery is certified
-Two recorded tools can rebuild the same feature bytes so the planner can keep small shared files and still recover every protected version
-
-Our three contributions are a clear recovery contract for tool outages and a minimum storage planner that learns from failing cases and a reproducible study of storage savings with exact recovery
-The complete new Banknote study restored all 792 requests with the new method
-With lossless features and at most one tool group outage the store saved 43.24 percent compared with full target snapshots and 34.04 percent compared with the minimum store for losing all declared tools
-The three seed one outage condition completed 144 exact recoveries and the two outage and rounded CSV controls show when a larger store is needed
-The complete test suite has 63 tests with 58 passing and five optional PyTorch checks skipped in this environment
-Read the [idea and three contributions and literature comparison](docs/CAPABILITY_LOSS_NOVELTY.md) and the [saved raw evidence](results/research/capability_loss_oct13/README.md)
-The literature comparison defines the specific proposed novelty and the next paper checks
-
-## Start here
-
-| What you need | Where to look |
-|---|---|
-| Instructor review and reproduction | [Submission guide](docs/SUBMISSION.md) |
-| Complete setup and reproduction steps | [Reproduction guide](reproducibility.txt) |
-| Evidence for each rubric requirement | [Rubric checklist](docs/RUBRIC_AUDIT.md) |
-| All experiments and their files | [Results guide](results/README.md) |
-| Latest throughput and latency analysis | [Performance report](docs/reports/PERFORMANCE_REPORT.md) |
-| Storage coverage and planner comparison | [Iteration 2 report](docs/reports/ITERATION2_REPORT.md) |
-| How the planner works | [Planner design](docs/PLANNER_V2.md) |
-| Exact frontier rule and proof | [Frontier reduction](docs/FRONTIER_REDUCTION.md) |
-| Focused novelty comparison | [Novelty audit](docs/NOVELTY_AUDIT.md) |
-| Current research paper | [Paper draft](paper/RecoverML_capability_loss.md) and [Paper PDF](output/pdf/RecoverML_capability_loss.pdf) |
-| Full project explanation | [Simple project summary](docs/PROJECT_SUMMARY.md) |
-| Earlier milestone paper | [Milestone draft](paper/RecoverML_draft.md) and [Milestone PDF](output/pdf/RecoverML_paper.pdf) |
-| Research sources for the next stage | [References](docs/REFERENCES.md) |
-| Latest code improvements | [8 October progress](docs/history/PROGRESS_OCT8.md) |
-| Current experiments and research decisions | [Research progress](docs/reserach_progress.txt) |
-| Alternative artifact recovery and storage planning | [New recovery experiments](docs/WITNESS_PLANNER_AND_PIPELINES.md) |
-| Recovery after replay tool outages and three contributions | [New paper direction](docs/CAPABILITY_LOSS_NOVELTY.md) |
-| Full paper readiness and remaining work | [Paper status](docs/PAPER_STATUS.md) |
-
-## Project layout
-
-| Folder | Purpose |
-|---|---|
-| src/recoverml | Working capture and planning and restoration code |
-| tests | Correctness and trace validation and runner tests |
-| configs | Settings for smoke and performance and earlier experiments |
-| scripts | Packaging and extra latency analysis tools |
-| examples | Complete small captured history for replay |
-| docs | Submission guide and rubric checklist and design and reports |
-| results/milestone2 | Current performance and storage evidence and plots |
-| results/archive | Earlier experiments and their complete submitted logs |
-| results/validation | Dated test logs and later audit checks |
-| results/research | Separate new recovery experiments and their raw evidence |
-| results/runs | New local runs created by the runner and excluded from Git |
-
-CHECKSUMS.json and CHECKSUMS_GITHUB.json cover every tracked regular file except the two checksum manifests themselves, using exact Git blob bytes. They identify the available release and do not certify that all referenced historical evidence has been published. Original October 14 manifests are preserved in docs/history.
-Run `python scripts/verify_release.py` for committed-byte checks and published raw-ledger reconciliation; add `--require-complete` to fail while any required original evidence is missing.
-The GitHub Actions workflow runs correctness checks and a smoke experiment on every push
-
-## Run the project
-
-Use Python 3.12 and Linux or WSL for CPU and memory tracing
+The tested full runner uses **Python 3.12 on Linux**, including Ubuntu through WSL2 on Windows. The main planners and forest studies run on CPUs. Optional earlier PyTorch studies have a separate CPU dependency described in the [complete reproduction guide](reproducibility.txt).
 
 ```bash
-python -m venv .venv
+git clone https://github.com/Hannaancode/RecoverML.git
+cd RecoverML
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m pip install -e '.[paper]'
-bash run_benchmarks.sh
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
 ```
 
-The runner tests three policies at two data sizes and 1 and 2 and 4 workers and repeats each setting three times
-It creates a new folder under results/runs and saves tests and storage checks and performance logs and plots
-Use an explicit new folder when needed
+### Check the published evidence
 
 ```bash
-bash run_benchmarks.sh results/runs/my_experiment
-```
-
-An existing folder is refused before any tests start so earlier evidence stays unchanged
-An ordinary CPU computer or Linux VM is enough
-
-For the current paper matrix run the following with a new output folder
-
-```bash
-bash scripts/run_paper_benchmarks.sh results/runs/my_paper_reproduction
-```
-
-The [reproduction guide](reproducibility.txt) includes package checks and saved figure regeneration and a small first run and the full matrix and what to compare
-Fresh runs capture their own environment and strict replay of archived stores also needs their full recorded environment
-
-## Review the supplied evidence
-
-```bash
+python scripts/verify_release.py
+python scripts/materialize_evidence.py
 PYTHONPATH=src python -m recoverml.performance --audit-only --out results/milestone2/performance
 PYTHONPATH=src python -m recoverml.audit results/milestone2/storage
 ```
 
-![Throughput across worker counts](results/milestone2/performance/throughput_vs_concurrency.png)
+The release verifier checks committed Git bytes and reconciles saved ledgers without retraining models. The materializer reconstructs the original retinal archive from its hash-checked transport parts. One original Letter archive container remains unavailable; its verified payload-equivalent reconstruction has a separate identity. The [release status](docs/RELEASE_STATUS_OCT16.md) describes this distinction. `python scripts/verify_release.py --require-complete` intentionally rejects that outstanding original-container gap.
 
-![Service latency CDF](results/milestone2/performance/latency_cdf.png)
-
-The results guide links the earlier storage and planning plots and every raw log group
-The performance report explains queue wait and slower cases and measurement scope
-
-## Replay an example
+### Run a fresh experiment
 
 ```bash
-recoverml select examples/captured_history --budget-bytes 2000000 --out work/retained
-recoverml restore work/retained --version 0 --out work/restored_v0
+bash run_benchmarks.sh
 ```
 
-The example records its original environment and restoration checks that environment
-A fresh local benchmark captures histories using the installed environment
+This runs correctness tests, a storage smoke study and the earlier concurrency matrix over two data sizes, three policies, 1/2/4 workers and three repetitions. A new timestamped directory is created under `results/runs`; existing outputs are not overwritten.
 
-## Next plan
-
-Repeat the main timing study on another machine and compare the measured results
-Add larger real workflow graphs and measure how load costs affect planning
-Ask an independent reviewer to challenge the novelty table and reproduce the main experiment
-Turn the current paper draft into the selected venue format and connect every claim to its evidence
-The earlier configurations and reports and raw measurements remain available for this work
-
-[Public repository](https://github.com/Hannaancode/RecoverML)
-
-## Run the PyTorch studies
-
-Install the pinned CPU package and prepare the text dataset once and then run the automated study
+The archived October 14 paper matrix has a separate runner:
 
 ```bash
-python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
-python -c "from sklearn.datasets import fetch_20newsgroups; fetch_20newsgroups(subset='all', remove=('headers','footers','quotes'))"
-make pytorch-study
-make boundary-controls
-make oracle-audit
+bash scripts/run_paper_benchmarks.sh results/runs/paper_reproduction_01
 ```
 
-The checkpoints contain trained weights and model settings and the loader checks exact predictions
-The research progress file records the experiments and the completed checks
+The complete guide also covers fresh scientific and retinal and Letter studies, the three-runner cloud protocols, plotting from saved records, native DVC controls and strict archived-store replay. A fresh capture records its own environment; replaying an old store requires its original supported environment and source identities.
+
+## Artifact contents
+
+| Location | Contents |
+|---|---|
+| [src/recoverml](src/recoverml) | Capture, physical graph, retention planners, certificates and recovery |
+| [tests](tests) | Correctness, failure-boundary and evidence-audit tests |
+| [configs](configs) and [scripts](scripts) | Fixed study settings, automated runners and analyzers |
+| [results/research](results/research) | Research protocols, raw ledgers, source snapshots, selected stores and plots |
+| [results/milestone2](results/milestone2) and [results/archive](results/archive) | Earlier prototype and storage evidence |
+| [results/validation](results/validation) | Dated audit receipts and validation logs |
+| [docs](docs) | Technical design, literature comparisons, experiment protocols and reports |
+| [paper](paper) and [output/pdf](output/pdf) | Dated manuscript checkpoints and PDFs |
+
+The [artifact guide](docs/ARTIFACT_GUIDE.md) maps the main studies to their commands and evidence. The [results index](results/README.md) includes the earlier experiments. Repository manuscript files are dated checkpoints and should be read with the later result reports. `CHECKSUMS.json` and `CHECKSUMS_GITHUB.json` cover tracked regular files except the checksum manifests themselves; frozen source snapshots retain their original identities.
+
+## Conclusion
+
+RecoverML makes exact historical artifact preservation an explicit, checked storage-selection task. The evaluated shared-loss workflows expose storage choices missed by the tested local heuristic, and the guarded specialization and direct export path provide measured planning and recovery advantages. The evidence also records heuristic ties and representation and recovery-time tradeoffs, defining the scope of the demonstrated benefits.

@@ -116,4 +116,4 @@ We should prioritize these distinguishing tests rather than add UI features or c
 
 Included: working Python package, explicit supported operators, disk-backed restore CLI, automated benchmark harness, raw CSV/JSONL logs, retention decision traces, certificates, exact-reference fixtures, preliminary plots, correctness tests, pinned dependencies and a complete small captured example.
 
-Pending: instructor-accessible remote Git repository link. No GitHub upload or external publication has occurred.
+At this report's original cutoff, remote publication was pending. The current repository and reproduction entry points are listed in [artifact guide](../ARTIFACT_GUIDE.md).

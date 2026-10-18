@@ -1,7 +1,7 @@
 # Which RecoverML advantages are supported?
 
 Updated 16 October 2026. This decision uses the full saved grids, including ties, slower cases and broader-loss controls.
-It is an internal assessment, not a genuine course review or exhaustive novelty certification.
+It is an internal assessment, not external peer review or exhaustive novelty certification.
 
 For the preservation use case, require complete exact recovery under the declared loss contract first,
 then compare retained physical bytes among feasible stores, then compare recovery/planning cost.

@@ -231,5 +231,5 @@ be regenerated locally. Opaque responses regenerated on a fresh run have new
 hashes, but are shared identically across its policies.
 
 The source, harness, raw traces, plots, reports and tests are published in the
-instructor-accessible repository listed in `docs/SUBMISSION.md`. See that guide
+public repository documented in `docs/ARTIFACT_GUIDE.md`. See that guide
 for the publication and reproduction checks.

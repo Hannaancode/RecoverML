@@ -1,9 +1,9 @@
 # Results guide
 
-The final paper studies are together in [research/paper_oct14](research/paper_oct14/README.md)
+The archived October 14 paper studies are together in [research/paper_oct14](research/paper_oct14/README.md)
 They include published method comparisons and native DVC checkouts and exact physical optimization and the complete saved raw evidence
 
-Start with milestone2 for the current submission and use archive for the earlier storage studies
+The latest research studies are indexed in the [artifact guide](../docs/ARTIFACT_GUIDE.md). The milestone2 folder contains the earlier performance control and archive contains earlier storage studies
 Every previously submitted result file is retained and the original experiment data has unchanged bytes
 The separate reports and source and configs remain available for future work
 

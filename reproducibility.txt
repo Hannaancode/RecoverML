@@ -1,11 +1,11 @@
 RecoverML reproduction guide
-Updated 16 October 2026
+Documentation updated 18 October 2026; recorded experiment versions remain unchanged
 
 This guide starts with a fresh Linux or Windows laptop and explains installation
 and saved-data checks and fresh experiments and the exact recovery boundary
 Run commands from the repository root unless a step says otherwise
 Commands labelled PowerShell run in Windows and other commands run in Ubuntu
-The paper draft and PDF are preserved while the author reviews the results
+Repository manuscript files are dated checkpoints and later result reports identify their own evidence cutoffs
 
 1 CHOOSE THE CHECK YOU WANT
 
@@ -274,7 +274,7 @@ Audit the saved milestone logs without generating new timings
 
 The original performance study has 5,400 requests and 54 trials and 2,129 resource
 samples and 39,600 operation records and all 5,400 requests restore exact artifacts
-Its throughput/concurrency and latency plots address the original rubric
+Its throughput/concurrency and latency plots describe the earlier performance control
 A P99 from a short exploratory setting is not a stable new workload tail estimate
 
 Regenerate all nine original paper figures and result tables from saved data
@@ -638,23 +638,20 @@ Use MPLBACKEND=Agg and open the produced PNGs separately
 Native Windows resource failures
 Use Linux or WSL2 for Bash and /proc monitoring
 
-18 PAPER AND NEXT STEPS
+18 MANUSCRIPT AND TECHNICAL REFERENCES
 
-Current draft
+Repository manuscript checkpoint
     paper/RecoverML_capability_loss.md
-Current PDF
+Repository PDF checkpoint
     output/pdf/RecoverML_capability_loss.pdf
-These remain review artifacts and are not the final 10–12-page ACM/VLDB layout
-Drafting and formatting resume after the author reviews the evidence
-Do not overwrite the paper/PDF simply to run an experiment
+These are dated drafts and later experiment reports have their own cutoffs.
 
-Read docs/FINAL_SCIENTIFIC_AUDIT.md and docs/CONTRIBUTIONS_OCT15.md and
+Technical design and evidence scope
+    docs/ARTIFACT_GUIDE.md
+    docs/FINAL_SCIENTIFIC_AUDIT.md
+    docs/CONTRIBUTIONS_OCT15.md
     docs/NOVELTY_REVIEW_OCT15.md
     docs/TRACTABLE_SUBCLASS_OCT15.md
-for the distinction between a working recovery system and proved novel theory
-The separate cloud run supplies one fresh-environment reproduction but cannot
-replace actual external human review or the assigned course peer-review tasks
-No reproduction process can guarantee conference acceptance
 
 Official setup references
     https://learn.microsoft.com/en-us/windows/wsl/install
@@ -668,7 +665,7 @@ Its native_dvc_repro subfolder recovers all 32 targets after actual legacy modul
 The fixed larger result is results/research/gigabyte_letter_oct16 and passes all payload hashes and 48 actual exact recoveries and 32 native DVC target files
 Its initial analyzer order mismatch and corrected analysis are both preserved and scripts/audit_gigabyte_ledger.py tests deliberate corruption without changing the real evidence
 The final six control receipts are results/validation/2026-10-16/gigabyte_ledger_controls_v3
-Read docs/WORK_HANDOVER.md for current publication status and required inputs and remaining research and course work
+Read docs/ARTIFACT_GUIDE.md for the evidence map and docs/RELEASE_STATUS_OCT16.md for original archive availability
 Publication of all new binary evidence is incomplete until the branch tree has been verified against the file hashes
 
 ORIGINAL EVIDENCE RECOVERY

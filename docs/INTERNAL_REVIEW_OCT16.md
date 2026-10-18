@@ -1,6 +1,6 @@
 # Internal scientific review of RecoverML
 
-16 October 2026. Internal AI-assisted review requested by the author. This is one review, not two simulated reviewers or a genuine course peer review. The author confirmed that no reviewers/comments have been assigned or received. Repository base: `85a086b`. The manuscript is the unchanged 14 October draft; later results are assessed as a separate supplement.
+16 October 2026. Automated internal scientific assessment. Repository base: `85a086b`. The manuscript is the dated 14 October draft; later results are assessed as a separate supplement. This is not an external human peer review.
 
 ## Assessment
 
@@ -20,7 +20,7 @@ The present evidence is insufficient for a strong new general optimization or un
 | M6 | Repeated conditions are not independent workflow samples. | Eight constructed scientific captures, eighteen histories over the same20 STARE images, one fixed Letter history, one runtime trial. | Keep analysis descriptive and separate captures, versions, conditions, fault cases and actual executed requests. Do not infer production prevalence, stableP99 or population significance. |
 | M7 | The current manuscript is a historical checkpoint. | Abstract/Introduction/Section 6 still foreground earlier published-component results and omit the final strong-baseline ties and larger-study qualifications. | Record the revision requirements now. Manuscript editing/formatting remains deferred; a final submission assessment must wait for integration. This review does not silently treat the old draft as final. |
 | M8 | Complete original-container provenance still has one gap. | Recovery receipts restore thirteen originals; Letter reconstructed payloads match hashes but the original container hash is unrecovered. | Distinguish the verified payload-equivalent archive from the historical original. Do not reset its expected original hash to make completeness pass. This is a provenance caveat, not evidence that the measured numbers changed. |
-| M9 | â€œIndependentâ€‌ is overloaded. | Scenario MILP is separately coded but shares project helpers; internal audits are AI-assisted; cloud run is a distinct environment with fresh capture. | Name the kind of independence. No external implementation, theorem certification, full changed-runtime old-blob replay, or human course review has been established by those facts. |
+| M9 | â€œIndependentâ€‌ is overloaded. | Scenario MILP is separately coded but shares project helpers; internal audits are automated; cloud run is a distinct environment with fresh capture. | Name the kind of independence. No external implementation, theorem certification, full changed-runtime old-blob replay, or external human review has been established by those facts. |
 
 ## Definition and proof review
 
@@ -46,10 +46,8 @@ This is an internal argument review and finite verification, not a proof-assista
 2. Present k=0, preprocessing loss and training/prediction loss separately; avoid averaging them into an unqualified advantage.
 3. Identify which figures are original, rerendered or new post-run diagnostics. Retain the original ordering-check failure and corrected multiset/duplicate checks.
 4. Cite the 2025 Hyppo system/demo as well as the2024 paper. Keep the MinSS full-text gap explicit. Avoid claiming a literature search is exhaustive.
-5. Audit code-authenticity, scale-out, crash semantics and course writing requirements separately from standalone retention correctness.
+5. Audit code-authenticity, scale-out, crash semantics and manuscript requirements separately from standalone retention correctness.
 
-## Completion decision
+## Assessment scope
 
-**Complete:** this internal review, final-capture structural scorecard, evidence-based contribution choice, and neutral course-review preparation.
-
-**Pending:** genuine course reviewer assignment, human reviews and incoming comments; full closest-work originality challenge; stronger production/necessity evidence if desired; manuscript integration and final whole-paper review. Actual course review completion cannot be supplied by an AI label or a favorable recommendation.
+The structural scorecard and numerical checks are complete for the stated cutoff. External expert review and evaluation on independently collected operational workflows remain outside this assessment.

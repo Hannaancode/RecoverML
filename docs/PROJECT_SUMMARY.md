@@ -1,8 +1,8 @@
 # RecoverML full project summary
 
-This is the historical October14 project summary. Later scientific, retinal and Letter experiments and their limitations are recorded in [release status](RELEASE_STATUS_OCT16.md), [final audit](FINAL_SCIENTIFIC_AUDIT.md) and [handover](WORK_HANDOVER.md). The existing manuscript remains unchanged pending the author's drafting instruction. Original evidence publication is incomplete even though the later raw ledgers are published.
+This is the historical October14 project summary. Later scientific, retinal and Letter experiments and their limitations are recorded in [release status](RELEASE_STATUS_OCT16.md), [final audit](FINAL_SCIENTIFIC_AUDIT.md) and [artifact guide](ARTIFACT_GUIDE.md). The repository manuscript is a dated checkpoint. Original evidence publication is incomplete even though the later raw ledgers are published.
 
-This summary describes the original course prototype and the later research work and the final saved paper experiments
+This summary describes the original prototype and the later research work and the final saved paper experiments
 The project has working code and automated benchmarks and raw logs and plots and a complete current paper draft
 The latest full research artifact is on GitHub and all source and paper and plots and raw evidence files were verified
 Paper acceptance and an independent novelty review are separate steps
@@ -258,7 +258,7 @@ Caching and hashes and lineage and generic cuts and alternative computations and
 The review also includes fault tolerant source placement and does not claim that generic placement under failures is new
 Independent research review is still needed to challenge the novelty boundary before submission
 
-## 14 The course connection and hardware
+## 14 Database concepts and hardware
 
 This is an advanced database systems project because it studies provenance and materialized results and shared storage and recovery and cost based optimization
 A saved ML intermediate is like a saved query result and replay is like recomputing a query from its dependencies
@@ -274,7 +274,7 @@ Numerical libraries use one thread for the paper studies
 The final suite has 77 tests with 72 passing and five optional PyTorch checks skipped in the current environment
 Earlier PyTorch experiments retain their own source and environment and are not counted as new runs today
 
-## 15 Files and milestone evidence
+## 15 Files and experimental evidence
 
 The repository separates working code and tests and configurations and reports and manuscripts and saved result groups
 Earlier submitted evidence remains in results/milestone2 and earlier storage studies remain in results/archive
@@ -285,11 +285,6 @@ The original milestone performance study also includes latency percentiles and t
 The benchmark runner varies parameters automatically and refuses to overwrite existing evidence
 Plots and tables are generated from saved summaries and their input hashes are recorded
 Selected stores and exact recorded source versions are archived so reviewers can inspect the files actually needed for recovery
-
-The milestone rubric weights are implementation 35 percent and harness 25 percent and trace authenticity 25 percent and plots and analysis 15 percent
-The code and runner and logs and figures address those technical categories
-The instructor decides the grade and continuous history across course weeks must come from real dated progress
-New commits cannot prove work that was not committed in an earlier week
 
 ## 16 Current completion and next steps
 

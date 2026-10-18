@@ -1,6 +1,6 @@
 # Published evidence release status — 16 October 2026
 
-This is a fresh-clone verification of the available research-branch release based on commit `cbd26d476d3c6313b456be7bd4bdc769ada637f7`, followed by documentation and verification-tool changes. Inspect the current branch head for the resulting commit. Manuscript/PDF work remains deferred.
+This is a fresh-clone verification of the available research-branch release based on commit `cbd26d476d3c6313b456be7bd4bdc769ada637f7`, followed by documentation and verification-tool changes. Inspect the current branch head for the resulting commit. The manuscript/PDF at this cutoff is unchanged.
 
 ## Completed bounded checks
 
@@ -45,6 +45,6 @@ The reconstruction is reproducible with `scripts/recover_letter_frontier.py` usi
 
 ## Remaining human/research inputs
 
-External expert novelty review, genuine course peer reviews and their actual comments, complete MinSS full-paper access, independent operational workflows if claiming optimization necessity, and missing/cropped rubric wording remain unresolved. Existing course concurrency traces and a second cloud environment do not establish multi-node scale-out or distributed crash consistency. No manuscript revision or formatting was performed.
+External expert assessment, complete MinSS full-paper access and independently collected operational workflows remain outside the current evidence. Existing course concurrency traces and a second cloud environment do not establish multi-node scale-out or distributed crash consistency. No manuscript revision or formatting was performed.
 
 Run `python scripts/verify_release.py --output work/release_check.json` from the repository root after committing. Run with `--require-complete` when testing whether the missing publication gap has actually closed. A successful available-evidence check is explicitly narrower than full release completion or payload replay.

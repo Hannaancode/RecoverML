@@ -31,4 +31,4 @@ The [experiment reports](reports) preserve the measured comparisons and research
 
 - [Hyppo EDBT 2025 system/demo](https://dsachar.net/publication/2025-edbt-kss/2025-edbt-kss.pdf): later history/discovery and reuse interface, separate from the pinned 2024 component experiment.
 - [Primary-source register and exact review scope](../results/validation/2026-10-16/contribution_review/source_register.json).
-- [Contribution decision](CONTRIBUTION_POSITIONING_OCT16.md), [internal review](INTERNAL_REVIEW_OCT16.md), and [genuine course-review preparation](COURSE_PEER_REVIEW_PACKET.md). Internal AI review is separate from actual course/human feedback.
+- [Contribution assessment](CONTRIBUTION_POSITIONING_OCT16.md) and [internal technical assessment](INTERNAL_REVIEW_OCT16.md). These are internal analyses rather than external peer reviews.

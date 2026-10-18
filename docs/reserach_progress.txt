@@ -778,16 +778,16 @@ The initial failure and old analyzer and diagnosis are preserved and six tempora
 The independent final review also reconciles all ten numeric summary rows and three runtime stores and verifies the compact frontier archive
 
 The engineering evidence is substantially stronger and the one GB uncompressed goal is met
-Strong general novelty and production prevalence remain unresolved and the real course peer reviews have not been supplied
+General novelty and production prevalence remain unresolved
 The paper and PDF remain unchanged and drafting and formatting are still deferred
-The handover file records all needed paths and whether each item is on GitHub or still local
+The artifact guide and release status record evidence locations and availability
 
 
 16 OCTOBER FRESH-CLONE RELEASE RECONCILIATION
 The continuation started from the published research branch at cbd26d4 rather than the transient original workspace. All three published raw logs parse and their actual record counts reconcile. The new verification tool uses exact Git object bytes to avoid Windows newline conversion and checks declared scientific conditions and retinal request identities and all 56 frozen large-study source hashes.
 The existing retinal and large structural analyzers were executed on disposable copies with pinned plotting/numerical dependencies. Large numeric cross-links and six ledger corruption controls passed and original input files remained unchanged. No model recovery, training or DVC command was rerun. Regenerated plots are new derivatives under results/validation/2026-10-16/release_recheck.
 Top-level checksums now identify the available tracked release and the original manifests are preserved in docs/history. Full original publication is still incomplete: the scientific archives/summary/old plots and retinal retained-store/index archives and the large selected frontier remain missing. Exact filenames and expected recorded hashes are kept by scripts/verify_release.py and docs/RELEASE_STATUS_OCT16.md. Full-completeness verification must remain a failure until those originals are recovered.
-Outdated final-audit statements that the large experiment and native retinal control were pending are corrected. The final large canonical saving is 3664716552 bytes and gzip saving is 290607161 bytes, with zero broad-loss savings and heuristic ties. Collab Sections4–6 were accessible and reviewed; MinSS full text and external/course human reviews remain unresolved. Paper and PDF bytes are intentionally unchanged.
+Outdated final-audit statements that the large experiment and native retinal control were pending are corrected. The final large canonical saving is 3664716552 bytes and gzip saving is 290607161 bytes, with zero broad-loss savings and heuristic ties. Collab Sections4–6 were accessible and reviewed; MinSS full text and external scientific reviews remain unresolved. Paper and PDF bytes are intentionally unchanged.
 
 16 October original evidence recovery
 
@@ -802,10 +802,9 @@ No model was retrained and no execution log or timing or original expected hash 
 The strict original completeness check must still flag the one missing original container while available evidence integrity can pass
 
 
-16 OCTOBER CONTRIBUTION POSITIONING AND GENUINE REVIEW PREPARATION
+16 OCTOBER CONTRIBUTION POSITIONING
 Reviewed the unchanged historical manuscript, current contract/optimizer and final evidence at85a086b against selected primary papers and official documentation. The internal decision is auditable retention planning and measured preservation tradeoffs. General implicit hitting-set and Horn-abduction machinery and standard cut/index techniques are attributed. The later2025 Hyppo system/demo is included; MinSS full text and external expert originality review remain unresolved.
 A new reproducible ledger/manifest audit classifies all27 final captures:6/8 scientific and18/18 retinal and1/1 Letter meet the sufficient single-producer physical-DAG condition. Strong local search ties all48 scientific and108 retinal and2 Letter full-contract byte optima; simple retinal greedy loses in12 cases. These are correlated conditions rather than independent production samples. Five structural/duplicate-condition tests pass. No models were executed and no measurements were changed.
-The author explicitly reported no assigned reviewers or comments. The neutral course packet and separate outgoing-review/incoming-feedback tracker are prepared, with zero genuine human course reviews completed. No review requests were sent and no reviewer identities or approvals were invented. Existing manuscript and PDF remain unchanged.
 
 16 October strongest baseline follow-up
 
