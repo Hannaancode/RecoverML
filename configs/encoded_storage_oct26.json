@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "datasets": ["iris", "wine", "breast_cancer", "digits", "diabetes", "linnerud"],
+  "recipes": ["standard_linear", "pca_neighbors", "minmax_tree", "robust_forest"],
+  "versions": [1, 4, 16],
+  "losses": ["intact", "preprocessing", "broad"],
+  "seed_base": 2026102601,
+  "methods": ["raw_exact", "gzip_exact", "adaptive_exact", "adaptive_local", "adaptive_snapshots", "adaptive_raw_choice", "HYPPO_rank", "HYPPO_frequency", "HELIX_rule"],
+  "robust_methods": ["raw_exact", "gzip_exact", "adaptive_exact", "adaptive_local", "adaptive_snapshots", "adaptive_raw_choice"],
+  "encoding": "Per-file minimum of raw, zlib9, XZ6 and gzip9; fixed reversible eight-byte shuffle permitted. Strong gzip baseline chooses shuffled/unshuffled gzip9. Common compressed metadata and one mode byte per encoded payload are fully counted.",
+  "expected_histories": 72,
+  "expected_conditions": 216,
+  "expected_requests": 4536,
+  "primary_gate": {"minimum_saving_from_raw_exact": 0.1, "minimum_fraction_each_dataset_recipe_loss": 0.9, "all_robust_requests_exact": true},
+  "stronger_controls": "Report every gzip-exact result, same-codec local/snapshot result, and manual exact-optimum tie. No minimum gain over gzip or an oracle is assumed. Adapters receive the adaptive optimum optional-byte budget; expected blocks remain visible.",
+  "helix_read_MiB_s": 200,
+  "solver_time_limit_s": 120,
+  "scope": "Finite authored catalogue fixed before full execution; not a population estimate. This is a storage-format and encoding-aware selection experiment using established lossless codecs and optimization methods. No new general compression algorithm or universal dominance is claimed. Recovery times are single descriptive measurements, not a timing comparison."
+}

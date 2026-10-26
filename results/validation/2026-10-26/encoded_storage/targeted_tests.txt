@@ -1,0 +1,11 @@
+test_all_recipe_families_preserve_strict_runtime_and_canonical_output_hashes (test_encoded_store.EncodedStoreTests.test_all_recipe_families_preserve_strict_runtime_and_canonical_output_hashes) ... ok
+test_encoded_costs_change_optimum_without_changing_targets_and_replay_has_no_archive (test_encoded_store.EncodedStoreTests.test_encoded_costs_change_optimum_without_changing_targets_and_replay_has_no_archive) ... ok
+test_encoding_modes_roundtrip_and_corruption_size_and_trailing_are_rejected (test_encoded_store.EncodedStoreTests.test_encoding_modes_roundtrip_and_corruption_size_and_trailing_are_rejected) ... ok
+test_retained_export_avoids_model_imports_and_rejects_invalid_requests_and_outputs (test_encoded_store.EncodedStoreTests.test_retained_export_avoids_model_imports_and_rejects_invalid_requests_and_outputs) ... ok
+test_request_denominators_reject_missing_duplicate_and_relabelled_scenarios (test_encoded_audit.EncodedAuditTests.test_request_denominators_reject_missing_duplicate_and_relabelled_scenarios) ... ok
+test_unsafe_or_duplicate_archive_members_cannot_enter_an_audit (test_encoded_audit.EncodedAuditTests.test_unsafe_or_duplicate_archive_members_cannot_enter_an_audit) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.479s
+
+OK

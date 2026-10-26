@@ -1,0 +1,74 @@
+name: Lossless storage and deterministic time travel
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/encoded-storage-oct26.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/benchmark_encoded_storage.py --dataset iris --recipe standard_linear --output work/encoded_acceptance --smoke
+      - run: python scripts/audit_encoded_storage.py work/encoded_acceptance --smoke --output work/encoded_acceptance_audit.json
+      - run: python -c "import json; d=json.load(open('work/encoded_acceptance_audit.json')); assert d['unexpected']==0 and d['robust_requests']==d['robust_exact']"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: encoded-storage-acceptance
+          path: |
+            work/encoded_acceptance/*.json
+            work/encoded_acceptance/*.gz
+            work/encoded_acceptance/failure.txt
+            work/encoded_acceptance_audit.json
+          retention-days: 90
+  census:
+    needs: acceptance
+    name: Storage ${{ matrix.dataset }} - ${{ matrix.recipe }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        dataset: [iris, wine, breast_cancer, digits, diabetes, linnerud]
+        recipe: [standard_linear, pca_neighbors, minmax_tree, robust_forest]
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/benchmark_encoded_storage.py --dataset ${{ matrix.dataset }} --recipe ${{ matrix.recipe }} --output work/encoded_census
+      - run: python scripts/audit_encoded_storage.py work/encoded_census --output work/encoded_census_audit.json
+      - run: python -c "import json; d=json.load(open('work/encoded_census_audit.json')); assert d['unexpected']==0 and d['robust_requests']==d['robust_exact']"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: encoded-storage-${{ matrix.dataset }}-${{ matrix.recipe }}
+          path: |
+            work/encoded_census/*.json
+            work/encoded_census/*.gz
+            work/encoded_census/failure.txt
+            work/encoded_census_audit.json
+          retention-days: 90
