@@ -22,6 +22,7 @@ Use a new output directory for each fresh run. Saved-data audits inspect existin
 
 | Study | Protocol and results | Evidence |
 |---|---|---|
+| Broad recovery census, 26 October | [Protocol](RECOVERY_CENSUS_OCT26.md), [results](../results/research/recovery_census_oct26/RESULTS.md) | All 864 fixed configurations, 7,776 method trials and 54,540 target hash checks; 24 original execution artifacts and separate corrected audit artifact |
 | Planner efficiency, 26 October | [Protocol](PLANNER_EFFICIENCY_OCT26.md), [results](../results/research/planner_efficiency_oct26/RESULTS.md) | All 230 frozen conditions plus 24 scaling controls; 2,904 paired timing calls, retained sets, original artifact ZIPs and audits |
 | Three-seed separate/shared preprocessing loss | [Protocol](STRONG_BASELINE_FOLLOWUP_OCT16.md), [results](../results/research/strong_baseline_cloud_oct16/RESULTS.md) | Per-seed captures, raw ledgers, planning repetitions and integer flow certificates |
 | Native DVC recovery at equal storage | [Protocol](NATIVE_FRONTIER_PROTOCOL_OCT16.md), [results](../results/research/native_frontier_cloud_oct16/RESULTS.md) | Final revision in `v4/`; earlier revisions are separately labelled |
@@ -46,6 +47,10 @@ These are internal technical assessments and do not constitute external peer rev
 Checksums identify available committed bytes and do not imply that every referenced original archive exists. One original Letter archive container is still missing. The separately named replacement contains verified original payloads but is not asserted to have the original container identity. The release verifier preserves that distinction and its strict completeness mode reports the gap.
 
 Recovery uses the selected store and surviving supported producers. Original capture archives are not a fallback source for omitted files. Roots, retained files and the recorded replay environment must satisfy the declared contract. Corruption, missing mandatory data and unsupported runtime changes are detected rather than silently bypassed.
+
+The broad census's complete byte/source/ledger audit is `PYTHONPATH=src python scripts/audit_recovery_census_release.py results/research/recovery_census_oct26 --output work/new_census_audit.json`.
+It materializes all original blocks, recomputes the full result and requires equality with the preserved verification-only cloud audit.
+Use a fresh output path. The 100% DVC win rate applies to the fixed authored catalogue; it is not a production probability or a win over every recovery engine.
 
 ## Manuscript checkpoints
 

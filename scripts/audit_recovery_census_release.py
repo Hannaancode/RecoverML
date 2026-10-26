@@ -1,8 +1,10 @@
 """Verify every original artifact and independently audit the complete recovery census."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import tempfile
+import zipfile
 
 from materialize_recovery_census import materialize,require
 from audit_recovery_census import complete
@@ -21,6 +23,14 @@ def release(directory):
                 require({k:v for k,v in original.items() if k!='auditor_sha256'}==
                         {k:v for k,v in block.items() if k!='auditor_sha256'},
                         'Recreated audit differs from original runner audit')
+        receipt=json.loads((directory/'verification/receipt.json').read_bytes())
+        archive=directory/'verification/corrected-audit-original.zip'
+        require('sha256:'+hashlib.sha256(archive.read_bytes()).hexdigest()==receipt['artifact']['digest'],
+                'Original corrected cloud-audit artifact differs')
+        with zipfile.ZipFile(archive) as zipped:
+            require(zipped.namelist()==['complete_recovery_census_audit.json'],'Cloud audit inventory differs')
+            require(json.loads(zipped.read(zipped.namelist()[0]))==result,
+                    'Complete local audit differs from verification-only cloud audit')
         result['audit_repair']='Numeric version ordering corrected after initial runner audits failed; original timing artifacts unchanged.'
         result['original_artifacts_verified']=len(manifest['artifacts'])
         return result

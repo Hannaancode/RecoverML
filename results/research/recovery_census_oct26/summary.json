@@ -1,0 +1,87 @@
+{
+  "overall": {
+    "cases": 864,
+    "dvc_substantial_wins": 864,
+    "median_dvc_to_recoverml": 8.96704455424233,
+    "minimum_dvc_to_recoverml": 1.3657593718188705,
+    "maximum_dvc_to_recoverml": 233.4586113716095,
+    "direct_faster_cases": 301,
+    "direct_substantial_wins": 21,
+    "direct_substantial_losses": 48,
+    "median_direct_to_recoverml": 0.9929147170909509,
+    "median_elapsed_s": {
+      "RecoverML": 0.05703552399999978,
+      "DVC_native": 1.0434340055000035,
+      "direct_control": 0.056399569999989296
+    }
+  },
+  "interfaces": {
+    "cli": {
+      "cases": 432,
+      "dvc_substantial_wins": 432,
+      "median_dvc_to_recoverml": 1.6951980528691506,
+      "minimum_dvc_to_recoverml": 1.3657593718188705,
+      "maximum_dvc_to_recoverml": 11.141692299052481,
+      "direct_faster_cases": 150,
+      "direct_substantial_wins": 1,
+      "direct_substantial_losses": 2,
+      "median_direct_to_recoverml": 0.9952168657299982,
+      "median_elapsed_s": {
+        "RecoverML": 0.8423270149999951,
+        "DVC_native": 1.3486278064999908,
+        "direct_control": 0.8378806930000167
+      }
+    },
+    "warm_api": {
+      "cases": 432,
+      "dvc_substantial_wins": 432,
+      "median_dvc_to_recoverml": 48.321226906543245,
+      "minimum_dvc_to_recoverml": 2.3795748405456743,
+      "maximum_dvc_to_recoverml": 233.4586113716095,
+      "direct_faster_cases": 151,
+      "direct_substantial_wins": 20,
+      "direct_substantial_losses": 46,
+      "median_direct_to_recoverml": 0.9869752635378368,
+      "median_elapsed_s": {
+        "RecoverML": 0.008014695500037305,
+        "DVC_native": 0.9485150524999995,
+        "direct_control": 0.007338774499984879
+      }
+    }
+  },
+  "availability": {
+    "False": {
+      "cases": 476,
+      "dvc_substantial_wins": 476,
+      "median_dvc_to_recoverml": 2.144258579044831,
+      "minimum_dvc_to_recoverml": 1.3657593718188705,
+      "maximum_dvc_to_recoverml": 203.48224829398694,
+      "direct_faster_cases": 122,
+      "direct_substantial_wins": 6,
+      "direct_substantial_losses": 38,
+      "median_direct_to_recoverml": 0.9896662175878537,
+      "median_elapsed_s": {
+        "RecoverML": 0.6808103235000047,
+        "DVC_native": 1.420495670000001,
+        "direct_control": 0.6774450424999969
+      }
+    },
+    "True": {
+      "cases": 388,
+      "dvc_substantial_wins": 388,
+      "median_dvc_to_recoverml": 11.60893335473474,
+      "minimum_dvc_to_recoverml": 6.866737607166415,
+      "maximum_dvc_to_recoverml": 233.4586113716095,
+      "direct_faster_cases": 179,
+      "direct_substantial_wins": 15,
+      "direct_substantial_losses": 10,
+      "median_direct_to_recoverml": 0.9978447478135983,
+      "median_elapsed_s": {
+        "RecoverML": 0.028478425500040316,
+        "DVC_native": 0.2450577484999883,
+        "direct_control": 0.02798415850000424
+      }
+    }
+  },
+  "qualification": "Census of this finite authored catalogue, not an estimate that recovery is faster in 90% of production deployments. Repeated trials and related histories are not independent populations."
+}

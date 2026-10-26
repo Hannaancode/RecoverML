@@ -34,3 +34,17 @@ A new general optimization theory, universal dominance and independent human end
 ## Planner follow-up on 26 October
 
 The [complete fixed follow-up](../results/research/planner_efficiency_oct26/RESULTS.md) preserves all 230 frozen optima and reports every slower case. Against the previous implementation, 4,096 independent branches improve by a median 7.824x and a wide retained frontier by 1.950x across three seeds; the small frozen groups remain near parity. Revised planning is faster than local search in 212/230 conditions and scenario exact in 217/230, so neither comparison is a universal win. Storage parity with the manual optimum remains unchanged.
+
+## Complete recovery census on 26 October
+
+The [complete recovery census](../results/research/recovery_census_oct26/RESULTS.md) supersedes the earlier 36-history native latency result as the broader evidence.
+At equal optimal paid payloads, all 864 fixed configurations exceed a 1.10x DVC/RecoverML median time ratio.
+Median paired speedups are 1.6952x for CLI and 48.3212x for warm API, with 7,776/7,776 exact method trials.
+Every dataset, recipe, loss, request-size and interface stratum passes the prespecified 90% gate.
+The initial checker ordering failure and the successful verification-only repair are both documented; original timings were not rerun.
+
+The direct executor provides an explicit negative control: RecoverML reaches 1.10x speedup in 21/864 comparisons and is at least 1.10x slower in 48/864.
+Its median ratio is near parity, slightly favoring the direct control.
+The demonstrated advantage is reduced orchestration cost relative to the tested native DVC integration, not a faster general replay engine.
+This authored finite catalogue cannot establish recovery wins in 90% of unknown production workloads.
+Complete native HYPPO/HELIX lifecycle comparisons and universal dominance remain unestablished; manual optimum storage parity remains.

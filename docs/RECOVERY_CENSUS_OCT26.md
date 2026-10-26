@@ -85,5 +85,16 @@ The full timing matrix ran at source 5174f3a669df73fa963a0003c6db2af49a9538be in
 The initial block audits failed because canonical JSON sorts version keys lexically while requests use numeric order.
 The checker now reconstructs the frozen numeric order explicitly and a 16-version regression test covers this case.
 The original timing artifacts and failed audit statuses are preserved. A separate verification-only workflow rechecks those
-same artifacts; no workload, trial, threshold or measured time is changed. No 90% claim or universal superiority is established
-until every original block passes the corrected complete audit.
+same artifacts; no workload, trial, threshold or measured time is changed.
+
+The corrected [verification-only run 40340457810](https://github.com/Hannaancode/RecoverML/actions/runs/40340457810)
+passes all 24 blocks. The [complete results and original artifacts](../results/research/recovery_census_oct26/RESULTS.md)
+confirm 864/864 substantial DVC wins, with 1.6952x CLI and 48.3212x warm-API median paired speedups,
+7,776/7,776 exact trials and 54,540 target hash checks. Every fixed stratum exceeds the 90% gate.
+The direct executor remains near parity and has faster cases. No population probability or universal superiority follows.
+
+To audit all preserved artifacts without repeating timings:
+
+```sh
+PYTHONPATH=src python scripts/audit_recovery_census_release.py results/research/recovery_census_oct26 --output work/new_complete_census_audit.json
+```

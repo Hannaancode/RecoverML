@@ -712,3 +712,38 @@ No GPU or new private dataset is required
 The first shared local run and a later local replay lost their unpublished files
 Their quoted storage gains and timings are provisional until a complete durable run is checked
 The earlier scientific and retinal and Letter measurements remain unchanged
+
+26 OCTOBER COMPLETE RECOVERY CENSUS
+
+Read docs/RECOVERY_CENSUS_OCT26.md and results/research/recovery_census_oct26/RESULTS.md.
+The fixed catalogue contains 6 datasets, 4 recipe families, 3 history lengths,
+3 declared loss contracts, 2 request sizes and 2 interfaces: 864 configurations.
+Three methods and three paired repetitions produce 7776 exact trials and 54540 target-file hash checks.
+These are related authored benchmark cells, not independent production samples.
+The substantial native DVC win threshold is 1.10x in at least 90% of every named stratum.
+All fixed cells pass; the direct executor remains near parity and has faster cases.
+
+Audit the original published artifact bytes and all ledgers without new timings:
+
+    PYTHONPATH=src python scripts/audit_recovery_census_release.py results/research/recovery_census_oct26 --output work/new_complete_census_audit.json
+
+Recreate the complete comparison table and scientific figures:
+
+    python scripts/summarize_recovery_census.py work/new_complete_census_audit.json --output work/new_census_figures
+
+To inspect expanded original blocks, choose an output directory that does not exist:
+
+    python scripts/materialize_recovery_census.py results/research/recovery_census_oct26 --output work/new_materialized_census
+
+The execution source is 5174f3a669df73fa963a0003c6db2af49a9538be.
+The original timing run is https://github.com/Hannaancode/RecoverML/actions/runs/40337905283.
+Its benchmark steps finished, but block audits failed on lexical versus numeric version-key ordering.
+The verification-only run https://github.com/Hannaancode/RecoverML/actions/runs/40340457810 passes
+the corrected complete audit of the unchanged original measurements; no timing rerun was substituted.
+All 24 original block ZIPs and the corrected audit ZIP are preserved with GitHub digests and member hashes.
+
+A fresh Linux CPU reproduction uses Python 3.12, the pinned requirements and the paper extra.
+Run scripts/benchmark_recovery_census.py once for every dataset/recipe pair from the fixed config,
+with a new output path for each. Then use scripts/audit_recovery_census.py --complete on their parent.
+The existing .github/workflows/recovery-census-oct26.yml automates that matrix and separately excludes acceptance timings.
+New execution records its own source and runtime; it need not reproduce old timing values.

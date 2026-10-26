@@ -17,10 +17,11 @@ The contribution is a checked retention and recovery system using established op
 
 ## Results
 
-The evidence includes the complete three-seed cloud studies published on 16 October 2026 and the planner-efficiency follow-up on 26 October. Planning time, retained storage and recovery time are separate measurements.
+The evidence includes the complete three-seed cloud studies published on 16 October 2026 and the planner-efficiency and broad recovery follow-ups on 26 October. Planning time, retained storage and recovery time are separate measurements.
 
 | Evaluation | Measured result | Scope |
 |---|---|---|
+| Complete recovery census (26 October) | At least **1.10x faster than native DVC in 864/864 configurations**; median paired speedups **1.70x CLI / 48.32x warm API** | Six datasets, four recipe families, 72 captures; **7,776/7,776** exact method trials and **54,540** file-hash checks. Every fixed stratum passes the 90% gate. Finite authored catalogue; direct executor remains near parity. |
 | Planner scaling update (26 October) | **7.82x faster** than previous RecoverML at 4,096 independent branches; **1.95x** for a wide retained frontier | Same exact optimum and checks; synthetic metadata controls. All 230 frozen conditions retain their minima; small-history timings are mostly flat and slower cases are retained. |
 | Shared preprocessing loss | Less storage than strong local search in **9/36** cases, ties in 27, maximum reduction **48.74%** | All protected results remain recoverable; the manual optimal frontier matches every minimum |
 | Separate preprocessing loss | Six storage wins and 30 ties against local search | Each winning difference is 129 serialized bytes |
@@ -30,9 +31,9 @@ The evidence includes the complete three-seed cloud studies published on 16 Octo
 | Retinal processing-change study | **10,920 exact recoveries**, 90 snapshot-storage wins and 18 ties | Strong local search matches all 108 storage minima; separate physical code-retirement control recovers all 32 protected targets |
 | Letter forest study | **3.6647 GB** of uncompressed canonical bytes saved, or **290.61 MB** with measured gzip, and **48/48 exact recoveries** | Preprocessing loss; strong heuristics match the savings, broader loss saves zero and snapshot loading is faster |
 
-The shared-loss grid uses 36 constructed histories rather than 36 independent production workflows. The largest local-search storage gap is 131,793 bytes. Native DVC results concern the tested cold command integrations and do not establish universal speed superiority.
+The shared-loss grid uses 36 constructed histories rather than 36 independent production workflows. The largest local-search storage gap is 131,793 bytes. The broad census measures the tested CLI and warm API integrations at equal optimal payload storage. Its 100% catalogue win rate does not establish a 90% production win probability or universal speed superiority. A direct executor is slightly faster overall and the manual frontier matches optimal storage.
 
-Detailed evidence: [planner efficiency](results/research/planner_efficiency_oct26/RESULTS.md), [cloud storage and planning](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native DVC protocols and results](results/research/native_frontier_cloud_oct16/RESULTS.md), [scientific matrix](results/research/scientific_complete_oct16/RESULTS.md), [retinal study](results/research/eyeai_complete_oct15/RESULTS.md) and [Letter study](results/research/gigabyte_letter_oct16/RESULTS.md).
+Detailed evidence: [complete recovery census](results/research/recovery_census_oct26/RESULTS.md), [planner efficiency](results/research/planner_efficiency_oct26/RESULTS.md), [cloud storage and planning](results/research/strong_baseline_cloud_oct16/RESULTS.md), [earlier native DVC results](results/research/native_frontier_cloud_oct16/RESULTS.md), [scientific matrix](results/research/scientific_complete_oct16/RESULTS.md), [retinal study](results/research/eyeai_complete_oct15/RESULTS.md) and [Letter study](results/research/gigabyte_letter_oct16/RESULTS.md).
 
 ### Earlier concurrency control
 
