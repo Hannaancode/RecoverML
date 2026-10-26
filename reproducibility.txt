@@ -747,3 +747,40 @@ Run scripts/benchmark_recovery_census.py once for every dataset/recipe pair from
 with a new output path for each. Then use scripts/audit_recovery_census.py --complete on their parent.
 The existing .github/workflows/recovery-census-oct26.yml automates that matrix and separately excludes acceptance timings.
 New execution records its own source and runtime; it need not reproduce old timing values.
+
+26 OCTOBER LOSSLESS STORAGE AND DETERMINISTIC TIME TRAVEL
+
+The optional encoded store preserves canonical target hashes and optimizes actual encoded lengths.
+Read docs/ENCODED_STORAGE_OCT26.md, docs/ENCODED_TRANSFER_OCT26.md and results/research/encoded_storage_oct26/RESULTS.md.
+All 216 fresh storage conditions and all 230 older transfer conditions remain in the evidence.
+Fresh runs have 4536 actual requests: 4320 exact, 216 expected component-adapter blocks and zero unexpected outcomes.
+Adaptive exact itself recovers all 504 requests. Byte-level frozen transfer is not additional model replay.
+The older Letter group retains one selected-only measurement and one unavailable selected store.
+The manual optimal frontier still ties when supplied the same encoding choices.
+
+Audit every original artifact, objective and request, including post-hoc raw fallback for the gzip control:
+
+    PYTHONPATH=src python scripts/audit_encoded_storage_release.py results/research/encoded_storage_oct26 --output work/new_encoded_audit.json
+
+Create the full tables and scientific figures from that audit:
+
+    PYTHONPATH=src python scripts/summarize_encoded_storage.py --audit work/new_encoded_audit.json --evidence results/research/encoded_storage_oct26 --output work/new_encoded_figures
+
+Materialize the byte-identical 24 fresh and four transfer artifacts into a new directory:
+
+    PYTHONPATH=src python scripts/materialize_encoded_storage.py results/research/encoded_storage_oct26 --output work/new_encoded_originals
+
+Use the format with a complete raw capture and a declared capability contract:
+
+    PYTHONPATH=src python -m recoverml.encoded_store create --capture FULL_CAPTURE --contract CONTRACT_JSON --output NEW_STORE
+    PYTHONPATH=src python -m recoverml.encoded_store recover --store NEW_STORE --output NEW_OUTPUT --operators census --disable preprocessing
+
+Choose the correct supported operator family and an output directory outside the persistent store.
+Retained-file export asserts original bytes; replay retains the supported environment/operator contract.
+Raw/zlib/XZ/gzip, mode bytes, compressed metadata and a reversible byte shuffle are standard lossless mechanisms.
+Original outputs are not quantized or assigned new identities.
+Filesystem allocation overhead, requested decoded outputs, compression CPU and replay RAM are not silently included as storage savings.
+The fresh source is 8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509, run 40351032954.
+The frozen-transfer source is 8d868f92a75c910f3e33001e9715d5704a71680e, run 40353106464.
+All 28 original artifact ZIPs are preserved as checked parts, with 97458348 original bytes.
+Their source snapshots, actual encoded files, store inventories, traces and independent audits remain available after Actions artifact expiry.

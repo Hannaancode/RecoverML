@@ -88,3 +88,13 @@ MinSS (Kim, Lee and Kim, JISE 33(2):413â€“428,2017) remains a full-text acc
 4. **Before submission:** resolve the closest full-paper gaps, obtain an independent expert challenge, close or explicitly disclose the original frontier-container provenance gap, and integrate the final results into the manuscript in a subsequent revision.
 
 No venue acceptance probability is assigned. The internal positioning and claim-selection task is complete for this evidence base. External novelty assessment, stronger operational evidence and manuscript integration remain open.
+
+## Storage implementation evidence added on 26 October
+
+The [lossless storage follow-up](../results/research/encoded_storage_oct26/RESULTS.md) strengthens the systems implementation and evidence categories.
+It preserves original canonical hashes while separating encoded planning costs from canonical execution sizes.
+All 216 fresh conditions use less storage than raw exact, with a 71.83% median reduction and 504/504 exact requests for adaptive exact.
+The strengthened gzip comparison has 9.80% median savings, but the same-codec local search mostly ties and every supplied manual optimum still ties.
+This is standard lossless coding integrated with checked retention selection and recovery, not a new compression or general optimization algorithm.
+Full denominators, expected adapter blocks and the two incomplete Letter objectives remain explicit.
+No external novelty certification, full native-system dominance or human peer endorsement follows from these automated checks.

@@ -75,3 +75,11 @@ PYTHONPATH=src python -m recoverml.encoded_store recover --store NEW_STORE --out
 
 Choose the operator family that produced the capture and an output directory outside the persistent store.
 Fresh writes refuse an existing destination. The Python API also accepts an explicit supported replay callback.
+
+## Completed evidence and stronger baseline
+
+The [complete results](../results/research/encoded_storage_oct26/RESULTS.md) retain all 216 fresh conditions and all 230 older transfer conditions.
+The fresh engineering gate passes with at least 35.96% raw-byte savings everywhere and 504/504 adaptive-exact recovery requests.
+After execution, the gzip control was strengthened to permit raw fallback; this is a disclosed additional byte-level exact control and adds no model-replay requests.
+It gives 9.80% median saving, with only 106/216 reaching 10%. Manual same-codec optima still tie.
+The original frozen execution protocol and raw results are unchanged.

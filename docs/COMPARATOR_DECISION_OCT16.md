@@ -48,3 +48,18 @@ Its median ratio is near parity, slightly favoring the direct control.
 The demonstrated advantage is reduced orchestration cost relative to the tested native DVC integration, not a faster general replay engine.
 This authored finite catalogue cannot establish recovery wins in 90% of unknown production workloads.
 Complete native HYPPO/HELIX lifecycle comparisons and universal dominance remain unestablished; manual optimum storage parity remains.
+
+## Lossless storage follow-up on 26 October
+
+The [complete lossless-store experiment](../results/research/encoded_storage_oct26/RESULTS.md) preserves original artifact identities while optimizing actual encoded file lengths.
+All 216 fresh conditions improve on raw exact storage by at least 35.96%, with a 71.83% median reduction.
+Adaptive exact completes all 504 requests. Six robust controls complete all 3,024 requests; the three adapters contribute 216 expected blocks and no unexpected outcomes.
+The stronger shuffled-gzip control was subsequently given raw fallback and reoptimized without changing measured requests.
+Adaptive storage remains smaller in all 216 comparisons, with 9.80% median saving, but only 106/216 savings reach 10%.
+Thus the stronger 10%-gain / 90%-frequency claim is not established against compressed storage.
+
+Same-codec local search ties 213/216 conditions and loses by at most 1.45% in the other three.
+Same-codec snapshots tie all 72 broad-loss conditions. The supplied manual optimum ties every exact byte result.
+These facts rule out an all-baseline storage-dominance claim even though the encoded store is materially smaller than the old raw representation.
+All 230 older conditions also remain reported: 228 complete byte-level objectives, one selected-only Letter measurement and one unavailable Letter selected store.
+That transfer is not counted as new model replay, and standard compression is not claimed as a new optimization invention.

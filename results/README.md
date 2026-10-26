@@ -9,6 +9,7 @@ The separate reports and source and configs remain available for future work
 
 | Evidence | Folder |
 |---|---|
+| Lossless storage and deterministic time travel: all fresh and frozen conditions | [research/encoded_storage_oct26](research/encoded_storage_oct26/RESULTS.md) |
 | Complete fixed recovery census, 26 October: 864 configurations and original artifacts | [research/recovery_census_oct26](research/recovery_census_oct26/RESULTS.md) |
 | Latest throughput and latency experiment | [milestone2/performance](milestone2/performance) |
 | Storage smoke check | [milestone2/storage](milestone2/storage) |

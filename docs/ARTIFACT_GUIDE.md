@@ -22,6 +22,7 @@ Use a new output directory for each fresh run. Saved-data audits inspect existin
 
 | Study | Protocol and results | Evidence |
 |---|---|---|
+| Lossless storage, 26 October | [Fresh protocol](ENCODED_STORAGE_OCT26.md), [frozen transfer](ENCODED_TRANSFER_OCT26.md), [results](../results/research/encoded_storage_oct26/RESULTS.md) | 216 fresh conditions, 4,536 requests and all 230 older transfer conditions; 28 original artifacts, stronger gzip controls and explicit unavailable objectives |
 | Broad recovery census, 26 October | [Protocol](RECOVERY_CENSUS_OCT26.md), [results](../results/research/recovery_census_oct26/RESULTS.md) | All 864 fixed configurations, 7,776 method trials and 54,540 target hash checks; 24 original execution artifacts and separate corrected audit artifact |
 | Planner efficiency, 26 October | [Protocol](PLANNER_EFFICIENCY_OCT26.md), [results](../results/research/planner_efficiency_oct26/RESULTS.md) | All 230 frozen conditions plus 24 scaling controls; 2,904 paired timing calls, retained sets, original artifact ZIPs and audits |
 | Three-seed separate/shared preprocessing loss | [Protocol](STRONG_BASELINE_FOLLOWUP_OCT16.md), [results](../results/research/strong_baseline_cloud_oct16/RESULTS.md) | Per-seed captures, raw ledgers, planning repetitions and integer flow certificates |

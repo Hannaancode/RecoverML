@@ -1,0 +1,2222 @@
+{
+  "schema": 1,
+  "primary_source_commit": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509",
+  "transfer_source_commit": "8d868f92a75c910f3e33001e9715d5704a71680e",
+  "primary_run": 40351032954,
+  "transfer_run": 40353106464,
+  "datasets": [
+    "iris",
+    "wine",
+    "breast_cancer",
+    "digits",
+    "diabetes",
+    "linnerud"
+  ],
+  "recipes": [
+    "standard_linear",
+    "pca_neighbors",
+    "minmax_tree",
+    "robust_forest"
+  ],
+  "transfer_groups": {
+    "scientific": 48,
+    "cloud": 72,
+    "retinal": 108,
+    "letter": 2
+  },
+  "artifacts": [
+    {
+      "kind": "primary",
+      "dataset": "digits",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12664975009,
+        "name": "encoded-storage-digits-standard_linear",
+        "size_in_bytes": 1222886,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664975009",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664975009/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:35Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:35Z",
+        "digest": "sha256:8c08bc7b8e9c7342a65236e873571fd22c042305c067a71baf34c6a043ac903b",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-digits-standard_linear.zip",
+          "bytes": 1222886,
+          "sha256": "8c08bc7b8e9c7342a65236e873571fd22c042305c067a71baf34c6a043ac903b"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 14735,
+          "sha256": "43be1f07bcb909752ff613059cbc383cef99767191dcb1ebdc595a6f8ad31850"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4596,
+          "sha256": "ddb0d28291ecdf1bca553c492b39708e00eca776efe82c87aebdb57fffa707ce"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 998871,
+          "sha256": "095e218f107000bcc8389e20226061493f3d123ad31adcae42de1e1d38f77849"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1427313,
+          "sha256": "8390cf55f98880f16f8e8fd8cf7c18563ff1a5ccafb965fee736bc64055d3002"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "4c458b0b53708b1374e09350627be5249bb90805a4e73fe63fab32f9e1fafc7a"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9159,
+          "sha256": "7259f93a5a1fb74fdc4071f7eb23704c2b75734946f8b577455dc385bf6ba6ce"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112858,
+          "sha256": "dac77a9f491dba40c257ae5b238c7c8e81813bebbc053f7c1028f58301cbc677"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 34902,
+          "sha256": "611a77570fdf37e8b3e9f4e943a05fedfc9dcf5b7a530e568254a40282e2c3ab"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6300,
+          "sha256": "37c92e967f86cf539e2357504057c3ad9c0cd89b718dfbb0fda491a7e6cfa7a2"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "diabetes",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12664930191,
+        "name": "encoded-storage-diabetes-robust_forest",
+        "size_in_bytes": 1298363,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664930191",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664930191/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:52Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:52Z",
+        "digest": "sha256:bd0488da55c2b8b098cfde4fa0644a472a24faa9fa613d5fe90a0fa7c2c4c43b",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-diabetes-robust_forest.zip",
+          "bytes": 1298363,
+          "sha256": "bd0488da55c2b8b098cfde4fa0644a472a24faa9fa613d5fe90a0fa7c2c4c43b"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16462,
+          "sha256": "0a9ecc6ff48dd77bb20397e8f102a7b4fb0ca35ba4078d912ecfdebd4efca339"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4564,
+          "sha256": "b87ed8baf85a6fcd3e1113b0440e0ee1ddf3c21fc6c668ca38ceba1538b14d11"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 1036083,
+          "sha256": "45886a85da88e0dbc4f7f5f86007ac192561d07f25697f983796fcf995e1f005"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1697692,
+          "sha256": "c360b60b17655b110fe999e9acf39e22cbfe0bd8f94cb988214e3327854aab15"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "5ea0d9a223585da1ed69697f9ba623802dc7472e6abdde52903e634aa2fd5c63"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9159,
+          "sha256": "f271fc020e2857c1a84b66e4c7122cd9e8b5a689f19dd32907da48e7ddd2893f"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112850,
+          "sha256": "501ce6141348868a58e875555b77cf462d24d6c0a37de9431750c721815cf83a"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 59426,
+          "sha256": "0294c9be2b2cb43aaf8206a7506bc644023f08496c14a5d917adef1ed9e3892b"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6270,
+          "sha256": "ad8fd1421be2f5498a56514e832625b18046eba4efa88dbcad3b74a9b4f7f25a"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "linnerud",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12664590562,
+        "name": "encoded-storage-linnerud-standard_linear",
+        "size_in_bytes": 334802,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664590562",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664590562/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:43Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:43Z",
+        "digest": "sha256:53ef0327a8e9d401cc8db51d6bdfbdb85417634f109f330f5c00f124ca52f514",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-linnerud-standard_linear.zip",
+          "bytes": 334802,
+          "sha256": "53ef0327a8e9d401cc8db51d6bdfbdb85417634f109f330f5c00f124ca52f514"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16373,
+          "sha256": "413f69bb2e4fc97d376aa1e16f540d8389f23becc51f4803c61229fdfb07c781"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4487,
+          "sha256": "b46734f831b9e2a8ab52ac189b31578454c5774bd5d87e2a9521c61364f847d5"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 71151,
+          "sha256": "3cbb7c3e0cc038f03dd89d6448017707940b98ad24973b8125bf1f176a610bfd"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1715483,
+          "sha256": "9961c35ece16a56677592acf30142366a6355dfb9fdd119231999301eb9d8e3b"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "1988ac9df07ec96b930d01d0d97d53320072af45d0401829a0421518ac8c8b52"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9161,
+          "sha256": "23de6564d4f1eee524389853fb86fadb44451b9ba95c567ce0b5dbff74f9c118"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112864,
+          "sha256": "b29710d964c3f77c13b725f07abd6f416d25562c6c8ab126bc58196b57104cb3"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 62634,
+          "sha256": "3deaefa3fe3252fe6988e0d4655e793076a521f4d2af1af54924c70a9f4cecd8"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6195,
+          "sha256": "ae8f16e6bb38a65cfcf7667f694ef8497a5041d1acec30a82ac3a0708db3d419"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "digits",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12664515504,
+        "name": "encoded-storage-digits-robust_forest",
+        "size_in_bytes": 2724529,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664515504",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664515504/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:12Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:12Z",
+        "digest": "sha256:3610ab93043412caf47bef8d3993bd078726d29891e2b734046b1ebb1f0c9ed6",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-digits-robust_forest.zip.part000",
+          "bytes": 2097152,
+          "sha256": "cd5745e4326030e15f87c37ec0b960c24c07f8284dcac7fde9b16d2f37e8c8f4"
+        },
+        {
+          "path": "artifacts/encoded-storage-digits-robust_forest.zip.part001",
+          "bytes": 627377,
+          "sha256": "98b01e70392d25817e059b30f9ebad3bf3106c1485b2987f8d38068233951cdc"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16469,
+          "sha256": "ba9a8e19ceddef5855d62bd71974b48c4545da136693e5fedf8848259ee9e99d"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 2463348,
+          "sha256": "5fe3b2fc10852e20cf4a274dc21f173cce27c03727ba45514cda7a62e4d8f351"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4578,
+          "sha256": "ae122720b1f75d2cd51cc5fe15ca9b5fc673212f61401f4df2dd35de8dad7e5f"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1712397,
+          "sha256": "337a693e31e74a0452d2a82b0d5048e11da961915845443a30ac9aa39feed961"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "6ddc0f10b548ac885c04c3b196415d605343ff7ea6f6b93018fa0c7eb7e2c768"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "73e7b9590fb9426c24c5db6c54e14145e053363ebc8823232dbe10b3f211a176"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112852,
+          "sha256": "e2e8611faf663e486f5a5d16503968bc0771ae586405f29acafb6cfa05be7e5d"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 55204,
+          "sha256": "fe0d0dec0bfe187a17f817e3cfb7d224317930b54bc1adfabfc0310d9cba2531"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6281,
+          "sha256": "fa5e367702b796e8c47fa3df95dd53d3a1b8f66091de3aef255311daaa4f619a"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "wine",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12664235838,
+        "name": "encoded-storage-wine-minmax_tree",
+        "size_in_bytes": 387936,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664235838",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664235838/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:30Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:30Z",
+        "digest": "sha256:bea68687ddba607cef25c4ca2d11722c0d29c2d4db5157a2d97c0341a0d900f8",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-wine-minmax_tree.zip",
+          "bytes": 387936,
+          "sha256": "bea68687ddba607cef25c4ca2d11722c0d29c2d4db5157a2d97c0341a0d900f8"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 14386,
+          "sha256": "37393d3769310ec1d7b84bafb7fbd3666f08079d9694404d8baaa8c0da679055"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 162742,
+          "sha256": "23c475848c5d6aa1c7f2ac271f9fe8b934cf1a6e5f5addfa95a6e02e2d40fedf"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4456,
+          "sha256": "c065937a107fbb2996bebbcde4cc2eb43bddcc835266fc222d77662c93f72664"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1439558,
+          "sha256": "577ee0d5cbb8bd36013fd553a8fffb0da56b91906725b6f75c5366bbddad8517"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "7bac25834190be6e97b11eb33b3d0090dd4d1b9a9767f161275d03dcf88e1b7d"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9153,
+          "sha256": "6be09dc3cbfbf34672ec51a9dff166395e08482c00bc169dc97dea6959cf8102"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112855,
+          "sha256": "7eee9dbcff28ed7e51a7c15466cb322653d8e9225488a62c248e3239407df4ff"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 37171,
+          "sha256": "f844bc1b09348733856dbb1bcb1b498e3c5b9d5d4a4a1f76d9d9ffade2b185d3"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6154,
+          "sha256": "8b6add45969f132ef09db189197804403f2a33568585c9edee7ee7f90ee864b9"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "breast_cancer",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12664176167,
+        "name": "encoded-storage-breast_cancer-minmax_tree",
+        "size_in_bytes": 1135373,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664176167",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664176167/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:27Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:27Z",
+        "digest": "sha256:2c1b76cc0c6b7806a17d871cf79a4292f29f0bf75d8a76e8e69a00f575943ce9",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-breast_cancer-minmax_tree.zip",
+          "bytes": 1135373,
+          "sha256": "2c1b76cc0c6b7806a17d871cf79a4292f29f0bf75d8a76e8e69a00f575943ce9"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 15028,
+          "sha256": "7533976fef2c24114d8496382e3ef17464f56a7e4ee4783a2cf90f47c6ae9e41"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 919306,
+          "sha256": "49f0d4213ec62d4f807f88d08d9a9e514b714f36926225ef9ef2917e4d54bd7f"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4588,
+          "sha256": "cf8467cb77773c3ddad6d2e87adc5446773898246c308b4241515bf91baa4abb"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1424722,
+          "sha256": "1eca7c85fac2efc9684590dfd8fba52729ea200b5b634f63f920152110f761ee"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "f592e297572aa8b17dfe2ffdb2ef1e29e9b8545d738d642c4cecf5b12e4fe005"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9162,
+          "sha256": "2f4866097eea76db44f0f4f563d0ca48aef1d0f0905b30a22596727e7f09f208"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112862,
+          "sha256": "bb2762da9f47843ce1483b6065e053a879ca8b2dacaee5f6cdf62d22cee3e3c3"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 28811,
+          "sha256": "6eef2ce88abae7411224abcc2b4a48c2cc1118fa19f4227bb276736f7d0987ce"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6295,
+          "sha256": "4d877ab435554f790e3378c8fcf8613fa3bf89c2c7072727907e11567877de98"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "diabetes",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12664056126,
+        "name": "encoded-storage-diabetes-standard_linear",
+        "size_in_bytes": 475267,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664056126",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664056126/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:37Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:37Z",
+        "digest": "sha256:2833f288b175e6522074550f583b36771ee565c22e0e3161ea56bd48204aae9e",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-diabetes-standard_linear.zip",
+          "bytes": 475267,
+          "sha256": "2833f288b175e6522074550f583b36771ee565c22e0e3161ea56bd48204aae9e"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16418,
+          "sha256": "86691ff7c2523e579613ab3e3e2e47c4c5b86c3ad18dccb9aaed55163f3d8d5e"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 220864,
+          "sha256": "d68b796cb7eea044cff61c42a45a3ffa4a6b23f4d865d82616d6c3f56b30f98e"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4585,
+          "sha256": "9082d7d33b6710a4778ceb10c6a2977d723a4d299fd3842ea59135ea1293b2a6"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1698324,
+          "sha256": "f7f616c54951f7fc64df5547f38949a9d9c58ff685a5d1c8a7ada7baea8f0552"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "7162d5e5bf7a187d042a7aa33425c9ba36132e3df1ff4640f1a3ccc152789960"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9161,
+          "sha256": "2901f59210604331afb0ded41299eee078781e3cc1847cdc487651ff31089f8e"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112894,
+          "sha256": "fcdbd83b7f6b6b7cc3551bfa5a31d8118ef9eca7ae05043e3615cc9ba4328cf9"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 47143,
+          "sha256": "be9e5393e32cfec51bbc34e753b8f5182cc04a67e81bfa2715388e5b8c33647b"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6292,
+          "sha256": "f164868aea29a8c01d454af900d35a8fc8d3467462b2510d9f8663fec7916dcb"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "iris",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12664016102,
+        "name": "encoded-storage-iris-pca_neighbors",
+        "size_in_bytes": 420350,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664016102",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664016102/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:28Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:28Z",
+        "digest": "sha256:aa65f961d2d015c20ef77e115dfe5deed60c89e71448259fa9e62acf9154c8ff",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-iris-pca_neighbors.zip",
+          "bytes": 420350,
+          "sha256": "aa65f961d2d015c20ef77e115dfe5deed60c89e71448259fa9e62acf9154c8ff"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 12125,
+          "sha256": "f86e2fe211b86f7c77664f28190256d85845099209c73817be29cb1830229ced"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4484,
+          "sha256": "93c16504010f1fb1a819a0fe6233cd8f6fa7ca28d819bb803435fc886819ad1d"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 216302,
+          "sha256": "06aa75cd9d34af8732d1d07ca025580f05713ab080af573333852520a0f71255"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1215059,
+          "sha256": "a091457b2149b903e770e4669f8a812483fbdd4662352915fd66c091053194e1"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "e78ef00e1e0b1205fb65580a41000b6afefd00408931426c44252ed4b2fff3ec"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9155,
+          "sha256": "f25487084baeb5714bb08f00e391220bb03c8c275b9499b6585b5c0db66d658c"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112894,
+          "sha256": "9baaf9ce96f6cae692529fbc890565735f178b5ab8f77a8109209aae7eac6469"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 35639,
+          "sha256": "b21296969a9ae272c997ed4f01a9bb8ca2045c4d479a9a6bfbcf493e360e7fab"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6184,
+          "sha256": "da15c2402badb5c0fe51e91021258520465e4496bb04f83f7e2c0bc1d96ba1e5"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "diabetes",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12663945668,
+        "name": "encoded-storage-diabetes-pca_neighbors",
+        "size_in_bytes": 1459446,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663945668",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663945668/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:26Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:26Z",
+        "digest": "sha256:e9071df083d43699298b0363704825221e0a62a0157f0ec384eb2d0748eaf9f8",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-diabetes-pca_neighbors.zip",
+          "bytes": 1459446,
+          "sha256": "e9071df083d43699298b0363704825221e0a62a0157f0ec384eb2d0748eaf9f8"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16448,
+          "sha256": "e1d78919a9817e36919147d0429a481bfe93ea93f3bb80cf9862ab2ba553ab54"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4594,
+          "sha256": "b3ff2d031227b730ad16dae4b614476c68c841957fd76ebefaa42109834f838d"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 1199886,
+          "sha256": "b125e4d5b31f7e7d04b02a13951b7404e7a140e246261dc1ee3152e830a49703"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1700929,
+          "sha256": "27a9a591732667281e0c9dc288151c0fce979333e62a5afded076a5473470053"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "bd1588a2b0ce977326664da6ad1a27af5a02a7e81b181e9ff6ea8019ea3adec2"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9159,
+          "sha256": "698dbdcf0dc546c5b2770dd4596ecbff72a9188b44a3d3e2d9a0c31ea77735bc"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112860,
+          "sha256": "7bade9507981435256ed935ef5c408f60ac6d71c5e7f53a415d2d0c9b602d636"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 56649,
+          "sha256": "0d62e39f8c086f05002630261999ce117c03f09f7985abc2f9b99079b382722c"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6300,
+          "sha256": "b3630e0e8855e8f14c33d6dc7667d61eb303cef8cb860c2328048411471369b2"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "linnerud",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12663925700,
+        "name": "encoded-storage-linnerud-minmax_tree",
+        "size_in_bytes": 309042,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663925700",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663925700/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:20Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:20Z",
+        "digest": "sha256:407017b898ca57957579e707001393cac1909af66a86ce608587e7c501567dbd",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-linnerud-minmax_tree.zip",
+          "bytes": 309042,
+          "sha256": "407017b898ca57957579e707001393cac1909af66a86ce608587e7c501567dbd"
+        }
+      ],
+      "files": {
+        "encoded_census/comparisons.json": {
+          "bytes": 4467,
+          "sha256": "48eedc7a149c163112fcd67fc732e19a85428210db575e85fb10edc80252e94c"
+        },
+        "encoded_census/captures.json": {
+          "bytes": 13540,
+          "sha256": "2b1407fd02f887e1ebd4dd3ffc06462f896b68505a953591b81f82de39578c72"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 83194,
+          "sha256": "313a4f4d4bf183d7f047ffce132e2c0cede9951e2381046629814811d34253f7"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1367477,
+          "sha256": "092da94567eea6f86fab4611a77a4619c9094540c08a58bf72247aa4fb31807c"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "a8d0366102fc43709015ac0e018d9bac04f44c7b523a662c8e56f7a16db3f8ba"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "91db0a522ed41337fd39b2b0b31f6deddaf3c81c6611ad74cf078fdc3c997b98"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112859,
+          "sha256": "5f24571fe022846b545091cd099926578938019b9ceddd1d616e9630275e88f4"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 42787,
+          "sha256": "f1ed185735d1cf0745bff78f1c80d8fad592ed9fbf73af1966f8c18b2000a5f9"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6170,
+          "sha256": "c3d25e003c497948bdc81783fdf386ed15aca14022b42061da168dbce90f9be2"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "wine",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12663805917,
+        "name": "encoded-storage-wine-pca_neighbors",
+        "size_in_bytes": 629256,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663805917",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663805917/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:27Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:27Z",
+        "digest": "sha256:14fbe0a61a5263974ec856d8c576ebab766c62ebae4ef4298f0e750751eb3667",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-wine-pca_neighbors.zip",
+          "bytes": 629256,
+          "sha256": "14fbe0a61a5263974ec856d8c576ebab766c62ebae4ef4298f0e750751eb3667"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 13287,
+          "sha256": "72a168fb2afc3f2247b390044fb77ae638236f0fdd2b8e0b05eef61488ae4a32"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4522,
+          "sha256": "2fcfee6651d45e7ac2506099ca0db6521f7ea7c174c8b548422ef9986ebf8f9f"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 409641,
+          "sha256": "e4f48854593867ccdb118b86c85c4d8ddcbb33a6ddac35a13318a70b2a71abc2"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1321344,
+          "sha256": "bc67afd20ed1a453a3e10b9b5368b6579d4b1eeff41836c71a19afabef5c0bbd"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "43de3a0cb79d602962220e98f940e1f54ff2fe5e2df64034fb3a5ef470a4fd03"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9155,
+          "sha256": "e4f24ad18847e2c33ad6a2311cb233f848633a441cde2d6c66a0db6315a9e6a9"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112849,
+          "sha256": "8f8361dd297db559fa84c8db50ef91bd6096c571b2c8ec02b152b7c7dc1c0896"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 38240,
+          "sha256": "82bdcf0d020fae9f73c1e96f1c98d5e9e4b636eba7bd04fb2a249152d988b839"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6222,
+          "sha256": "2df7dea8235260e5771997972b1d16dc3f916ebc9a79891d4870476276f8c36e"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "diabetes",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12663777778,
+        "name": "encoded-storage-diabetes-minmax_tree",
+        "size_in_bytes": 461555,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663777778",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663777778/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:18Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:18Z",
+        "digest": "sha256:3dd5fb74327b4602a55aa063f2872316f0805c287881072615173fafc1f6f3be",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-diabetes-minmax_tree.zip",
+          "bytes": 461555,
+          "sha256": "3dd5fb74327b4602a55aa063f2872316f0805c287881072615173fafc1f6f3be"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 15283,
+          "sha256": "a22d7f686425c7ee15d37f7c1752ab6403027338affc839853979742845b65ac"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 224605,
+          "sha256": "68c99098eb78ce8c0636d70b5c4943e68a3c37059b86be072a7ed0c6040946b7"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4531,
+          "sha256": "6859193393c84b82b09b75286409b3635c89f6a1d49359ba6fc454d9859421e0"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1518880,
+          "sha256": "f55d25632b70f23999d8debb246afca3822073acbb81b001894debad67903372"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "d9acc0588a0d6f2addad757c13c435d98364f73d49b8ca6ceafdade6c81fcba5"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "11829883c9929a7aa9edc0d45e01ae71e42efe44f8dd966111d1d05295bb1ecc"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112874,
+          "sha256": "fbfc39478244436be4d65b1e00e037d819e9e09c15c27f5d01e78021bf284fee"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 44328,
+          "sha256": "7f5f0233bf5580204218dac3f8501bfe83e45aa38b076cabd20bd84eb501303b"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6234,
+          "sha256": "1da60f99ad1beff783aee352b7a280f174e2f6c3c969968688c57004ae24cc34"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "iris",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12663737978,
+        "name": "encoded-storage-iris-minmax_tree",
+        "size_in_bytes": 291781,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663737978",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663737978/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:32Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:32Z",
+        "digest": "sha256:f8b3a4f09f07f52edbe05ec5973e71ccaef2d06be48ad744190e40745e5b6952",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-iris-minmax_tree.zip",
+          "bytes": 291781,
+          "sha256": "f8b3a4f09f07f52edbe05ec5973e71ccaef2d06be48ad744190e40745e5b6952"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 12396,
+          "sha256": "c3c3417bb22e986b6351f3d7db932fbbae83fd099098c3194ed27404a76c395a"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 86121,
+          "sha256": "e1097b50fbf7d82d541e25732128c963cb2f9f2603b18a31b73c31a6b2299a09"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4428,
+          "sha256": "dd264ed760a8c02217d7032c9c4d14bd6334b2fd3515e3a74fa981d7d9145c44"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1239426,
+          "sha256": "0f81616e144855930f72eef731a73a2c1ca19be4adcc6837c62192bc56226535"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "f035ac6897addfb64553dc498ba5ce84d09222bbff6bcaf9549e019770f0dcdc"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9153,
+          "sha256": "90bc7f6b32af20fb9eec35bdc719a94b73b286e85e450a3301eca4c759a5c5ea"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112873,
+          "sha256": "34640d29dbf3e891d7fa0dc6c3a20decb0bc4fd2c37b20e6d0d39a599c548c9b"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 36489,
+          "sha256": "143e7f12a9a580b74dc83ac995316d92d762c525b5f2bcccdc925bd7bc3e3a29"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6127,
+          "sha256": "336bfebafc0ea29b61423416a2b27fc0397d001f9b6b231121aeb7963a3a767d"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "wine",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12663723195,
+        "name": "encoded-storage-wine-standard_linear",
+        "size_in_bytes": 377425,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663723195",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663723195/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:31Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:31Z",
+        "digest": "sha256:cf495090454b7b6c4535078aaddec9289b6a36846adcdccff87c83126c7a6325",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-wine-standard_linear.zip",
+          "bytes": 377425,
+          "sha256": "cf495090454b7b6c4535078aaddec9289b6a36846adcdccff87c83126c7a6325"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 12712,
+          "sha256": "3e2aa834f671f93c6b9d6d78ac97b896623306d1a5a657ed90f28c7b0a5b65b6"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4491,
+          "sha256": "51e8e61926adcf14247bf2e6e192949605ece2b7db0accaea40fa2e6dda9bd00"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 165034,
+          "sha256": "16777dc4844c328a1aca5b4346425710651e0699259f6cf190e9ce58547495c2"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1253512,
+          "sha256": "42fb5da037845d14309b35a7d4c6c782d6f4d1e82a50d2f03984d9dd25bd41bf"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "d4299a38e7664c0ecc01626b652e1cb1a745fe9e1a29ce07169cbc9233c8e69e"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "07a06809eb6ad7ceb6bddd3818a73711b90be7d65d66d3154ba5f2217d23c5a0"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112864,
+          "sha256": "550c2fcefbdfe0eb34600f96af17c32d8e929644d994031ce1489a284b0e329a"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 32200,
+          "sha256": "74555f0e8b50294b825a7c8857fc9aad5c0f4cea4f90105ef27787912394ccb6"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6193,
+          "sha256": "24c0d2910dbd1e2c0ed1b7b3738b821787841dbeb6b9a1c9d5d6b3a75c374634"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "digits",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12663698099,
+        "name": "encoded-storage-digits-pca_neighbors",
+        "size_in_bytes": 4753594,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663698099",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663698099/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:37Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:37Z",
+        "digest": "sha256:4d59d7237d4381c20940b6aac05b3677881f82ad28e7f1f48562e46074dc3977",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-digits-pca_neighbors.zip.part000",
+          "bytes": 2097152,
+          "sha256": "cd2cdef42fcd6347d9a560ab139e10835d0dba50fa1bfe341c4528c341f324bc"
+        },
+        {
+          "path": "artifacts/encoded-storage-digits-pca_neighbors.zip.part001",
+          "bytes": 2097152,
+          "sha256": "61c9e770c7f346125ebdf409054a8befd2a098d75a3b44ebb62b71d9842960dc"
+        },
+        {
+          "path": "artifacts/encoded-storage-digits-pca_neighbors.zip.part002",
+          "bytes": 559290,
+          "sha256": "56671c87d3f0e46adddf9d1d95e4c3a4862b053c91ad98d48f38f5bd5753e803"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 15901,
+          "sha256": "aa00ef32397bbc9f7b1fb5125112a2734e6a6fec89f471ea29eb7427273c10e4"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 4506304,
+          "sha256": "5421ee123ded75ebe1bb75b770d4e6bd7e30a83ace1d83b655b4bb6a64f2c7fa"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1560447,
+          "sha256": "1a6f995d13217cd814f0a2d3ce51a72a4906e9472aaf96b203e6653287bd539b"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4629,
+          "sha256": "bb29f21e81975705dd2f7e90dea259d648164956b6a7053a3c2554cab6b1df4b"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "e66b848aa7d975f6970668a82d8c6d845cd7940e2bc7cadd6b48227c79f5811d"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "cd0202dbf619da26e442949ef8ea4caeb544dd9dd079c0265f11476c93aa3ada"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112862,
+          "sha256": "523404965ec5a65b585e5f54329a9684c3aec3f0b936316971fee5bfb15bb37d"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 53803,
+          "sha256": "ff5af68dc62019c2c81027e407f8ac9a4eb85fb4bc252305548a0996ed1c1491"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6333,
+          "sha256": "17d5d0bddc27bc521b79753f51f6e71b642ba84a37e336232ab2bcdb299e732d"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "iris",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12663683313,
+        "name": "encoded-storage-iris-robust_forest",
+        "size_in_bytes": 436802,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663683313",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663683313/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:38Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:38Z",
+        "digest": "sha256:c138986a7a8d931fde4d58251f241753b06ab0a3a6cf5769de0fc181927cde8f",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-iris-robust_forest.zip",
+          "bytes": 436802,
+          "sha256": "c138986a7a8d931fde4d58251f241753b06ab0a3a6cf5769de0fc181927cde8f"
+        }
+      ],
+      "files": {
+        "encoded_census/comparisons.json": {
+          "bytes": 4459,
+          "sha256": "3e859b27122d44bb6d701b28fd4528b8477c36e2f98decfa3608019215793309"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 222623,
+          "sha256": "6d41df630e4730ddc54410e5c024b1fb2ca71f77402414c3b4a4be7a2d088ff4"
+        },
+        "encoded_census/captures.json": {
+          "bytes": 12146,
+          "sha256": "37fa6cc89c50adde1d95114cbf91835bc3140666475e6c764c1f9dc6cb587c16"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1214530,
+          "sha256": "f3db960c35fa5b9c1780a0cad834507d9ba815f489f7f36dde5db82e869079c2"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "87d17a87b6fc0c4fcfeeca3f8a791fda7c74946730dfffea43b0b351cff48cae"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9155,
+          "sha256": "4a601c8ec67272676461d0819dcf8a941494e30ac84d1b41665eb0666d79ce65"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112880,
+          "sha256": "fbdf863ce5186bc92627ba1b82370b2c117cb79a9290399561aa0513826936ca"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 38946,
+          "sha256": "c7ad97e744e44cf7f769515a81e8f4e6025521f66ca27fc1567de76dac56676b"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6160,
+          "sha256": "c8f1f837736ec62141ccbdf5f65a8a094eb7709f23da1ba2ec64d3426029c68a"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "iris",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12663612229,
+        "name": "encoded-storage-iris-standard_linear",
+        "size_in_bytes": 286916,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663612229",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663612229/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:36Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:36Z",
+        "digest": "sha256:54c643682220221ba62dbb1828f01a3511f462207f5708e68b19dc4faae1b345",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-iris-standard_linear.zip",
+          "bytes": 286916,
+          "sha256": "54c643682220221ba62dbb1828f01a3511f462207f5708e68b19dc4faae1b345"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 12420,
+          "sha256": "f3fb14992422ff261e366ddf52adebaada183b71774cf1961c7261e072825dc0"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4460,
+          "sha256": "d78ffde1f74a7dd6a7edf7750ec708b7ed30acc9f60344fd73e24d5e098d9fa8"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 82292,
+          "sha256": "80947245fb96d13d2e33f3086b03fc916765b9d8290538dec6e4e9226bdcc949"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1267590,
+          "sha256": "8c57cd295d61ff16d0a678b602bd94c5d3e6405ccf872ad1e075b4257da91850"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "f8d32d9b097c64f583aa3f1c567f7d1a3c6cf762f5d6fd3fd493f2505ee4d5c0"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9157,
+          "sha256": "16abfbe38fc3bd95f0f68787bd24fee7ae597bb6c022c5da1e7ecc0182d04066"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112870,
+          "sha256": "25dd7ded0d4f148a9b46904f8896598f9051e965965d741646665f152097ce19"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 35377,
+          "sha256": "d1f05e6e86f16b5590721f2e3459d7d84f91c78b8577e84d558de490e8b99e98"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6162,
+          "sha256": "72901ca8271be1f31e0f5157b528674a6e49f7edc6d5edc47e94d7fcf92e8c0a"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "digits",
+      "recipe": "minmax_tree",
+      "artifact": {
+        "id": 12663478595,
+        "name": "encoded-storage-digits-minmax_tree",
+        "size_in_bytes": 886425,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663478595",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663478595/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:39Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:39Z",
+        "digest": "sha256:9c2fc12dc16340f3fe7fe4a8c33e158f18db46fdf322abfa30e600df2cb025a4",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-digits-minmax_tree.zip",
+          "bytes": 886425,
+          "sha256": "9c2fc12dc16340f3fe7fe4a8c33e158f18db46fdf322abfa30e600df2cb025a4"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 15287,
+          "sha256": "f56202bf930580d5c9ff8edc525578591e7e45db136169a3fc2c0dcf575b7553"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 656145,
+          "sha256": "2185475a740fa34227bd9d24f4d3a01c56ccf4a24c08b91790bfd803b7715ff1"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4560,
+          "sha256": "e4815ef583f6612047ab9ca1efd712d1d96910ca1d7f474dad60eaf320ca5b1c"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1478306,
+          "sha256": "2749d8818089e0dbb8c7b6fe8c2b95eeb1bc4bb23f1763a9c207841af701d13d"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9155,
+          "sha256": "c6fd9a826079ee7fbc4e8f5ff8d0150c116b254d6f0578a61699c9b7f6b88801"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "7868b54ae4fcbc2bf7659f0cbacc625b889669c94cc46690a42abe78a14b78db"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112860,
+          "sha256": "6b752e9bbb95c586ded1acadebbfc9c83e3978350319d2ace7f3281298d2afa9"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 37930,
+          "sha256": "dc7ad0ee90b4ef815fec6dc5dae194c118f26010dfb93065aba3b07da043d347"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6261,
+          "sha256": "bdeb7973a094f788ab8a147c04be813e3aedc9d6998abbf2dc1fe4c75c8fdc1e"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "wine",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12663457733,
+        "name": "encoded-storage-wine-robust_forest",
+        "size_in_bytes": 558812,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663457733",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663457733/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:23Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:23Z",
+        "digest": "sha256:5df04ef63fb7cf2ec06350462ee8019d33bf05e6bb51bec255cb5096d18fd508",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-wine-robust_forest.zip",
+          "bytes": 558812,
+          "sha256": "5df04ef63fb7cf2ec06350462ee8019d33bf05e6bb51bec255cb5096d18fd508"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 13570,
+          "sha256": "befe9e7dea28c720ca3101535146c471b78930648f058c315e1d4b3e9c5f1d13"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4509,
+          "sha256": "b8a7125f3c46f420db2d18370ad1410ee28426c74e31199188f7bee534ba07af"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 335872,
+          "sha256": "2cbc5c10b2a1a17ec14db8cf687c1831a5020779bd74739cd8d4d45aee8b6280"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1347968,
+          "sha256": "db1c287ed6cf97e23cdabe13e34550e44bae4d019bb712c37c370d7512a6ca6a"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "0dbd912f6e758ffe0cf0371ce8a3e7adeae7057a8274af3edc5ad52d76e73692"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9155,
+          "sha256": "f35c3348ffd472edb7a26a8cb10f42c0aa4321b8db0487d9f97b80024e4459fb"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112843,
+          "sha256": "7bebf61de424a48ad872c660465afe89c25a3a50d197952972e6bc8b7c6bdb03"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 39677,
+          "sha256": "0ca627c52f821ca898ae4a581a18b1a9966b70c31dad7a4183b6bfa2eb096767"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6209,
+          "sha256": "01e6f6eca18074ad3d41d1fe1d12f3090e4aab0212b8eef1454434d9fe37ccaa"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "breast_cancer",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12663024333,
+        "name": "encoded-storage-breast_cancer-pca_neighbors",
+        "size_in_bytes": 1813995,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663024333",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12663024333/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:27Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:27Z",
+        "digest": "sha256:18f768baf1776de2d28e0539a35f6a6c3afd2afbbe6dee94c544c3587461a179",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-breast_cancer-pca_neighbors.zip",
+          "bytes": 1813995,
+          "sha256": "18f768baf1776de2d28e0539a35f6a6c3afd2afbbe6dee94c544c3587461a179"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 15058,
+          "sha256": "4133aaded226a9f15c5f144f2af19c981d5c3e2e561aaa8024814f7bfd6a5495"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 1577101,
+          "sha256": "bf7a14ebb4042ef827d724de9b4b0231d177e02d29c01278702c4e6468de39e5"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4642,
+          "sha256": "de2c505c1e74c4e4b9747eacac9d499c711ad7476bc44a25cb533b7fa8ffc14b"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1480814,
+          "sha256": "e199e55495aabda3dbf2ec0551f7aa37da0f53f8cd939909407632d6d5077fc5"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "ec0816cdbb149ed8fc0f822967515f136375abd1d96194ab99aa0c525b51fd4f"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9164,
+          "sha256": "3b7a4da3e0d4cceba5a056f8469a24aff364f3d5d3725c697af40389c3390750"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112865,
+          "sha256": "f1a9ecf22f936e0427c4ebe824f87044e0ac0fa55245cf6f3811755b7eead241"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 47234,
+          "sha256": "17dbd23deb18e7ce2d70f7b5295215e16babb5adb64a28673ce8c7469cacda74"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6352,
+          "sha256": "d79683bf9c1550c638868fbbc249be7c06280d33d8934b140e7befabfb5dfd76"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "linnerud",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12662914543,
+        "name": "encoded-storage-linnerud-robust_forest",
+        "size_in_bytes": 464914,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662914543",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662914543/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:35Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:35Z",
+        "digest": "sha256:7805423fba38ed3f4c78dad849e7ebf51f3201962926cf4c4e491775622713e4",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-linnerud-robust_forest.zip",
+          "bytes": 464914,
+          "sha256": "7805423fba38ed3f4c78dad849e7ebf51f3201962926cf4c4e491775622713e4"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16403,
+          "sha256": "f8c588dfb14ff252f57da8bbf8b05334c58ddbea7c9143a7d77e64658aecfda5"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4498,
+          "sha256": "60ed33e5a255f68d437d1f3fc2fc35f5ea7b5ff5095e5f0078c59d3ed1f892a9"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 200603,
+          "sha256": "29ac021110d60e334a5f6a4fb8d0d89ca7e098aff4263c07a14fa595bc60de59"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1694788,
+          "sha256": "0780baa57d1af0dbc6e8b10ed1a5198d91836dc29b7085347c8212cfd1ce33c0"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "fb8c8b775852f7931d3aa39c673317b55b7ea212247ddeea5aaa6ec909ec54bc"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9159,
+          "sha256": "a0c1905eddcf47de769289525ba8fd9f7676a9cf598e535d582e2009d5dc0883"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112868,
+          "sha256": "0e479a0a0b078b86d55384a883e1ff73fdd5eaa0f4f128ed08aa186d40dcd4fb"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 61564,
+          "sha256": "0a65432f0d1e6f13b0a4f16f7ebb5db0475770d813de4c65cf8cef63d2e3df58"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6204,
+          "sha256": "63685073d8efe57beed6e161a883bbeeb078ede49e402dd356e7144ff26f1641"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "breast_cancer",
+      "recipe": "robust_forest",
+      "artifact": {
+        "id": 12662874677,
+        "name": "encoded-storage-breast_cancer-robust_forest",
+        "size_in_bytes": 1492104,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662874677",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662874677/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:40:04Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:40:04Z",
+        "digest": "sha256:64c95b1f39e4d1368b684297b5af3939edeee56a764be756ca842898782fd576",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-breast_cancer-robust_forest.zip",
+          "bytes": 1492104,
+          "sha256": "64c95b1f39e4d1368b684297b5af3939edeee56a764be756ca842898782fd576"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 16481,
+          "sha256": "3fcda6131148495e774b23eafdb8bf619a7a7972cdeaadc02433bc9f47ca40fc"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4643,
+          "sha256": "42ce5e26241ad67e71a43b1655ca537da054a0a6592ed12530cbe8d1d0c0b0ec"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 1230348,
+          "sha256": "e8bd8b60505170385dd2582860a987a264b8c56b80e77bbe1020e82e9295f90f"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1737111,
+          "sha256": "5296a43210325dc9d3a1a1c815cc407d38dcfc421bc2db76b4dc6ac346865edd"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "4bdcf650037e31c4f17f7917b8709a3e28bb6193a32ee257a9fbec6623b9e532"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9164,
+          "sha256": "1e5294af2581353b3c8875c4d4e3eed811a6a4fcbd10a98cfa728c710435ac8d"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112860,
+          "sha256": "abe56c8af661a8870d9ba2df98851f0ca9dd2e84366000774c3f22d25540a489"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 51244,
+          "sha256": "8257ce26fef2af29c9294291dc8ad9d69112a13b62ad5ffa244c9e127632a3fa"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6353,
+          "sha256": "fd4c3f120ec809cbc96f74b790f4c9587dce586a203ff967e6b38b49d73bf376"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "linnerud",
+      "recipe": "pca_neighbors",
+      "artifact": {
+        "id": 12662719964,
+        "name": "encoded-storage-linnerud-pca_neighbors",
+        "size_in_bytes": 345267,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662719964",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662719964/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:19Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:19Z",
+        "digest": "sha256:8d133b5528117ae438c38da6771e18ee9c204d6e0a8adcf40ca2c360615b9bed",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-linnerud-pca_neighbors.zip",
+          "bytes": 345267,
+          "sha256": "8d133b5528117ae438c38da6771e18ee9c204d6e0a8adcf40ca2c360615b9bed"
+        }
+      ],
+      "files": {
+        "encoded_census/comparisons.json": {
+          "bytes": 4480,
+          "sha256": "e8953c9aa60c540d2f826f02f15de2e6d2892a69528ccfdb5a762f56d2617ca7"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 81382,
+          "sha256": "cdb303a13ad16e8bbf25e475d7115209908cf5c1b61a077d926fc331a193cc92"
+        },
+        "encoded_census/captures.json": {
+          "bytes": 16382,
+          "sha256": "cb43394d3e7d666522c16845723182ad835caebca19f81569b87bed98511ecee"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1718922,
+          "sha256": "0e2383f2344a23a7c6389bcbcc3a78fe20b5f265ce7fe20ec072419aaed0d0e6"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 879,
+          "sha256": "7b2759450d8977880e67c1c0fef33dfa33384477caab9c53cd29a5375b372d4c"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9159,
+          "sha256": "8e8012b94f7537964ab76b435697bf76c085946154a901e1d7b1cf9c158e8ab6"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112873,
+          "sha256": "59db31e8d395cf3346779e1f51994298eba6a27eb73ae5a1d90e5cbbac1f71a2"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 61344,
+          "sha256": "4765458e8d8674a447d5f2103dd785b3f7a546910e2830235b736999ff9539ab"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6186,
+          "sha256": "5bdba9b3e7e30232f118943409330b1f7c6fa86a0d5e6fe2440f18da2a11e5eb"
+        }
+      }
+    },
+    {
+      "kind": "primary",
+      "dataset": "breast_cancer",
+      "recipe": "standard_linear",
+      "artifact": {
+        "id": 12662204327,
+        "name": "encoded-storage-breast_cancer-standard_linear",
+        "size_in_bytes": 1151488,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662204327",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12662204327/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:39:25Z",
+        "expires_at": "2027-01-24T15:36:48Z",
+        "updated_at": "2026-10-26T15:39:25Z",
+        "digest": "sha256:122cf36d20cd15be2811c273697217ba4e0d8dd088ca6e2bc7529a314d591438",
+        "workflow_run": {
+          "id": 40351032954,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-storage-breast_cancer-standard_linear.zip",
+          "bytes": 1151488,
+          "sha256": "122cf36d20cd15be2811c273697217ba4e0d8dd088ca6e2bc7529a314d591438"
+        }
+      ],
+      "files": {
+        "encoded_census/captures.json": {
+          "bytes": 14484,
+          "sha256": "a5ff07b0df6b4b421fe8a9608036b7ebaea61f184bc05cf6da127b5d13661921"
+        },
+        "encoded_census/comparisons.json": {
+          "bytes": 4622,
+          "sha256": "cb6af51556275553dfbf9af031398282c38778038ad86f8a517a2c683c6549a1"
+        },
+        "encoded_census/objects.tar.gz": {
+          "bytes": 939061,
+          "sha256": "c282f67b366caef8908150e1e1c52618f7500bf1327539b1ee9ee6dec19d89e6"
+        },
+        "encoded_census/plans.json": {
+          "bytes": 1376613,
+          "sha256": "28a11b1d0fb739b7c45c3afa4f77488480668e629289e62f986aafd7bca740b1"
+        },
+        "encoded_census/progress.json": {
+          "bytes": 60,
+          "sha256": "f0590bd5fb4e0431610c8d92e54dea4501d105432241ee5a1a5d1ef786d1e76f"
+        },
+        "encoded_census/report.json": {
+          "bytes": 878,
+          "sha256": "7431580336a46ac6a83144ba4c3f3ca3ece6325a4c98891e7b653c856e42b2e5"
+        },
+        "encoded_census/run_start.json": {
+          "bytes": 9166,
+          "sha256": "cd449dec8089d6c2a809b73f183ac2dc84701f798a874845c9353d0f5efdf814"
+        },
+        "encoded_census/source_snapshot.tar.gz": {
+          "bytes": 112880,
+          "sha256": "e70e6872201465dfb77e866a68565b0564f5e31eb9ccc45ce02c4817d4c41118"
+        },
+        "encoded_census/trials.jsonl.gz": {
+          "bytes": 27941,
+          "sha256": "faa9d46433f5fcd53c31c8e2146a064c2cca9b9f1bcfc9bdfc4454424b775cc6"
+        },
+        "encoded_census_audit.json": {
+          "bytes": 6333,
+          "sha256": "c589b39aba8c764415d5109d8366cb5811e06dd89c78eb874603d29cd4688465"
+        }
+      }
+    },
+    {
+      "kind": "transfer",
+      "group": "letter",
+      "artifact": {
+        "id": 12665480496,
+        "name": "encoded-transfer-letter",
+        "size_in_bytes": 823896,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12665480496",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12665480496/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:50:44Z",
+        "expires_at": "2027-01-24T15:49:29Z",
+        "updated_at": "2026-10-26T15:50:44Z",
+        "digest": "sha256:996cfbc422659faab92b826a7775f1f6aee6bbfd4e577e36234f4b2f50082bec",
+        "workflow_run": {
+          "id": 40353106464,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8d868f92a75c910f3e33001e9715d5704a71680e"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-transfer-letter.zip",
+          "bytes": 823896,
+          "sha256": "996cfbc422659faab92b826a7775f1f6aee6bbfd4e577e36234f4b2f50082bec"
+        }
+      ],
+      "files": {
+        "encoded_transfer/conditions.json": {
+          "bytes": 222586,
+          "sha256": "03a9b8abcec394606537e3a5aff0f2ba6fef4e3632e5dc258ea4be0af7ef1c42"
+        },
+        "encoded_transfer/input_sha256.json": {
+          "bytes": 400,
+          "sha256": "e5bee29ad99e7337b4d059ced062c3d7e9a9073458115b2c4046baf5c84ba428"
+        },
+        "encoded_transfer/objects.tar.gz": {
+          "bytes": 680032,
+          "sha256": "b82adce2aa6074cb30795e095b402d815c4b63540c83ed90e1e3bdf3fec12371"
+        },
+        "encoded_transfer/payload_inventory.json": {
+          "bytes": 1441,
+          "sha256": "fffde83c330ac94db30a36231387f632fbc369c7cd827c949abbb7abc42b32f3"
+        },
+        "encoded_transfer/report.json": {
+          "bytes": 1107,
+          "sha256": "eac883583aeea50fa5d99d26debd544c31592a6021a90e43d48216b20a4c7b73"
+        },
+        "encoded_transfer/source_snapshot.tar.gz": {
+          "bytes": 119771,
+          "sha256": "7e3d9a8945a5648f9d6b478d170c5805990a528aa565ffbe96d4e5d3b297dd7a"
+        },
+        "encoded_transfer/run_start.json": {
+          "bytes": 7747,
+          "sha256": "cdc3728ca99ca816193c8acf2511fd4f0faf4e8c38f063c8b6778128abce9e6a"
+        },
+        "encoded_transfer_audit.json": {
+          "bytes": 231311,
+          "sha256": "7b29131b193686adb866cd1ce3d5d15dad6b613a8fb5ef1ccfa003346d57821a"
+        }
+      }
+    },
+    {
+      "kind": "transfer",
+      "group": "retinal",
+      "artifact": {
+        "id": 12664582847,
+        "name": "encoded-transfer-retinal",
+        "size_in_bytes": 43266226,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664582847",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664582847/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:52:40Z",
+        "expires_at": "2027-01-24T15:49:29Z",
+        "updated_at": "2026-10-26T15:52:40Z",
+        "digest": "sha256:fb099d50482b6d515cc53ab94780c0cdc7feb33582ace21026c478df3d03852c",
+        "workflow_run": {
+          "id": 40353106464,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8d868f92a75c910f3e33001e9715d5704a71680e"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part000",
+          "bytes": 2097152,
+          "sha256": "a5710e2bbbb63e84664f62e9f43864d6de910033fecacc9ac88530d11ed89723"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part001",
+          "bytes": 2097152,
+          "sha256": "6734117c8b85cf47c7ddafb7419d6a83e281cb0b815174e0d1e67d04e21f39cb"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part002",
+          "bytes": 2097152,
+          "sha256": "3cff6bc0c3338563efa2a53f4cf9d172ae35fdbf1315fb66d4b294d4ee92f050"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part003",
+          "bytes": 2097152,
+          "sha256": "e5fa5b6e49430bcf9c4f8b4d6118627a258f2a9a48b4523313186e0d9d89229a"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part004",
+          "bytes": 2097152,
+          "sha256": "dd005c0645e6498f06670abb1b95385abb7ac4df1dce564f73c77faaebfdc2a9"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part005",
+          "bytes": 2097152,
+          "sha256": "565eeefd4875c23f8a25506a049aa3fc19c5e5e826b28ac9c2c6b0f28d44f16a"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part006",
+          "bytes": 2097152,
+          "sha256": "12fc3d02f6d36375fb99ae961f97cef27b968d83de8980692c292b6b5a7e0991"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part007",
+          "bytes": 2097152,
+          "sha256": "90f107850267d49b5f142f3212a50efd0239e2c1b8553cb77664ebd52718ce16"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part008",
+          "bytes": 2097152,
+          "sha256": "9e95087dc97c3a25b99f5ae2fe932255ba305cde1177818c0662f97de2ceab66"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part009",
+          "bytes": 2097152,
+          "sha256": "1d237ea6f1348343404cab1f9e0ef8f82fb1f7dbe3f981bcc7e6c44728233ea3"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part010",
+          "bytes": 2097152,
+          "sha256": "fea724d23e0dd37762b6aa601d1a7a7a0c8733053d80c1262cf0546efde62bad"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part011",
+          "bytes": 2097152,
+          "sha256": "df412f8ab4a283930fac997ebd7ac8d41b2de628e091e5fbc2a3363b3c831415"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part012",
+          "bytes": 2097152,
+          "sha256": "d956e7972070273953adf78a178b70adab132c8bd9c8b1cfd4940f93f7acf977"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part013",
+          "bytes": 2097152,
+          "sha256": "8d8a106b22bf2566dc04b7f07822a32070bbb537811a8d2881f196cab96abe1d"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part014",
+          "bytes": 2097152,
+          "sha256": "94b5c77d4453aee80debd529c3a33cc33a4d4e9c58567f8b4d13ccdeacb4c920"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part015",
+          "bytes": 2097152,
+          "sha256": "1af9144a2b635368ad4a24444c1815379f9ad06804fc7ad201d78630c76bbd0c"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part016",
+          "bytes": 2097152,
+          "sha256": "7e19cfc39d46ec8e1ca167e64bc629d2241340931d5a87782f17ffa25e7d2420"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part017",
+          "bytes": 2097152,
+          "sha256": "044a69560d9ce6a96b1e8b0177c80b2601f12e385e202ad0460951f5f9e7c7f9"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part018",
+          "bytes": 2097152,
+          "sha256": "3d3abc0586bba0df29dc7913acffbf582114b2009923ad9a935a78a8f04121b5"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part019",
+          "bytes": 2097152,
+          "sha256": "f23e3f5a3b074df6c982dd178d35544bc04ef1021ec24e3c19f77a6a8066065f"
+        },
+        {
+          "path": "artifacts/encoded-transfer-retinal.zip.part020",
+          "bytes": 1323186,
+          "sha256": "194471ac48132436dc8c859606fcbd2b261753136a2e877a12cf00ebb284bbe3"
+        }
+      ],
+      "files": {
+        "encoded_transfer/conditions.json": {
+          "bytes": 16618076,
+          "sha256": "fcb60f6f0dd5820c16adbc6974bc30d7f423030939ebb6886a60bf7bc7c18c03"
+        },
+        "encoded_transfer/objects.tar.gz": {
+          "bytes": 41771047,
+          "sha256": "570fb1f1c9a4e1c11a772b155e9d306caf6a9f21bec92c293909df14883778cb"
+        },
+        "encoded_transfer/input_sha256.json": {
+          "bytes": 2946,
+          "sha256": "246e3d0e621eced743270aeadb3edeb6493a3c5c23777e51b519d8d3b752dc38"
+        },
+        "encoded_transfer/payload_inventory.json": {
+          "bytes": 92421,
+          "sha256": "c02e25fe4788f413f47a01a7b35eaa62b7d27b94b9a2a8881e1ad0ecb2a1e5d1"
+        },
+        "encoded_transfer/report.json": {
+          "bytes": 1114,
+          "sha256": "9071b7c22592ad7d9c4dc183ab3099156d8b4812a9f77901e000d25553e7d72a"
+        },
+        "encoded_transfer/source_snapshot.tar.gz": {
+          "bytes": 119779,
+          "sha256": "6ac86cd32ed5da63de19c8369e9e820e40fe20576c07455b44fff0be5754c2ff"
+        },
+        "encoded_transfer/run_start.json": {
+          "bytes": 7748,
+          "sha256": "f2db256643e974b320178847f0f29129dec946939b46d53d8b0211dc6460fd85"
+        },
+        "encoded_transfer_audit.json": {
+          "bytes": 17270946,
+          "sha256": "defdf570e0e325762fe10925aefc45c97369fbd9a64eac1870470686be9923d3"
+        }
+      }
+    },
+    {
+      "kind": "transfer",
+      "group": "cloud",
+      "artifact": {
+        "id": 12664552678,
+        "name": "encoded-transfer-cloud",
+        "size_in_bytes": 14945226,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664552678",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664552678/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:53:18Z",
+        "expires_at": "2027-01-24T15:49:29Z",
+        "updated_at": "2026-10-26T15:53:18Z",
+        "digest": "sha256:75603000ff0642ba5be411da5bf18acbd01f7e91a911c33196893d5b667da32b",
+        "workflow_run": {
+          "id": 40353106464,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8d868f92a75c910f3e33001e9715d5704a71680e"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part000",
+          "bytes": 2097152,
+          "sha256": "957e636f989c7d8065deeabf8f0be5ab5d8616967f9b3e01520c1cf86001ca0e"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part001",
+          "bytes": 2097152,
+          "sha256": "8cb475c78ce4f804c282b07777c997455508630eca08787c94302824ae4023bc"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part002",
+          "bytes": 2097152,
+          "sha256": "fc09b0fdf198da503db4290591c0ae4d51360d7497b7f99b4c4bd0a6b55156e7"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part003",
+          "bytes": 2097152,
+          "sha256": "3ed96c89215e3671dce671547096974d1528b2ab72dab42ff18291ca5ec6ca65"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part004",
+          "bytes": 2097152,
+          "sha256": "c1066042a075262bbb058df5a47e821ee7c999def6129994258337034dd53881"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part005",
+          "bytes": 2097152,
+          "sha256": "d117209e75295654006ce160e99a1c156c79a29c718a3976014e772b6f970380"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part006",
+          "bytes": 2097152,
+          "sha256": "2e1aea75e2ad8158e87e36ab042ce45954f34c037d78affd5b23e4bf2e13ad60"
+        },
+        {
+          "path": "artifacts/encoded-transfer-cloud.zip.part007",
+          "bytes": 265162,
+          "sha256": "740276f0a8e1f0ba02ed5b1d1861f70c57c2c8827d1af42f12355e01bc7a0014"
+        }
+      ],
+      "files": {
+        "encoded_transfer/conditions.json": {
+          "bytes": 41657646,
+          "sha256": "ef03d176660ff311c59e36ca0f79bffa8eac08caa1db8c4d81c37350c8310494"
+        },
+        "encoded_transfer/input_sha256.json": {
+          "bytes": 1839,
+          "sha256": "a66141a40015eca845b4ecebcff0c8280c6f0dd3515e3745990410bea872861a"
+        },
+        "encoded_transfer/objects.tar.gz": {
+          "bytes": 5046873,
+          "sha256": "1d3c12851c8c35e457ec09ff0885b472f69e13d30ae383bc660af47b84256965"
+        },
+        "encoded_transfer/payload_inventory.json": {
+          "bytes": 331894,
+          "sha256": "6fedeb48164e3a744286419e97eb08454ced6e9b999bd3dc09ddebf22ffcd428"
+        },
+        "encoded_transfer/report.json": {
+          "bytes": 1110,
+          "sha256": "d63b5dc411ad0a6519d184a2c1852b4989bd0870540869895649a6ebde89c934"
+        },
+        "encoded_transfer/run_start.json": {
+          "bytes": 7746,
+          "sha256": "28cd66fed2e9dd1a21e76542c3de0422b9a00744ffb6f7abfca6818196a5581e"
+        },
+        "encoded_transfer/source_snapshot.tar.gz": {
+          "bytes": 119767,
+          "sha256": "e8ad7487bdf6475876ca14e42af376bfc0fdb1671912f5bb983deaeebda6465f"
+        },
+        "encoded_transfer_audit.json": {
+          "bytes": 43152894,
+          "sha256": "e30c2fdf6a4cd44a12a7ea30bdf780a604207028c7419a0dc0f5b61320fe6ba6"
+        }
+      }
+    },
+    {
+      "kind": "transfer",
+      "group": "scientific",
+      "artifact": {
+        "id": 12664277888,
+        "name": "encoded-transfer-scientific",
+        "size_in_bytes": 14704672,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664277888",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12664277888/zip",
+        "expired": false,
+        "created_at": "2026-10-26T15:53:38Z",
+        "expires_at": "2027-01-24T15:49:29Z",
+        "updated_at": "2026-10-26T15:53:38Z",
+        "digest": "sha256:27a68505f3da3cfe0ee0c9e2fb546fa9edb82fddd7ce1f0544d5ebdda68ded57",
+        "workflow_run": {
+          "id": 40353106464,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "8d868f92a75c910f3e33001e9715d5704a71680e"
+        }
+      },
+      "parts": [
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part000",
+          "bytes": 2097152,
+          "sha256": "3f7ff9cce8769049738d711a72bb32abcd5e347009ddf170fe5b3d77fc116d84"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part001",
+          "bytes": 2097152,
+          "sha256": "7fabe13665659829274ed4334021315c2fe9dbaf85153abdd73c36e51eaf99e4"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part002",
+          "bytes": 2097152,
+          "sha256": "9a68c24c20fcd0e501ca1d1398d4c3fab287288f5aad1517ff725fa955b3e7d4"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part003",
+          "bytes": 2097152,
+          "sha256": "fe475811ce69667771f163241731a6b34ebb0b0061a5d5ee001afc4f353d2ab2"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part004",
+          "bytes": 2097152,
+          "sha256": "3e1703a1709ffd52e495baf9b3af48f1152c9af55c8c3927c58974e764e6bda1"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part005",
+          "bytes": 2097152,
+          "sha256": "c98a60be477b77356e62b44c983b01c72893d07994edbb03b47bd4221631af8c"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part006",
+          "bytes": 2097152,
+          "sha256": "08e8868949add265a7b8ac09dd25d8dc2e83102ebec5a72d9afeb0fa2377816e"
+        },
+        {
+          "path": "artifacts/encoded-transfer-scientific.zip.part007",
+          "bytes": 24608,
+          "sha256": "f199900493b9a41deb48d9fc756e4c7939a680e53b6734a9b767b918de628830"
+        }
+      ],
+      "files": {
+        "encoded_transfer/input_sha256.json": {
+          "bytes": 275,
+          "sha256": "fe9dda195f51170eb8ef4c90f9cdec728b861211145a43f8d9b12bf1762cf329"
+        },
+        "encoded_transfer/objects.tar.gz": {
+          "bytes": 14109355,
+          "sha256": "74b0c08e57345b1913cb1657ba4e6ede03be18d36024a8dfa04b8c33612e642b"
+        },
+        "encoded_transfer/conditions.json": {
+          "bytes": 9127771,
+          "sha256": "03d65aef2b8bb1d5078c4d2584d0139d94e8ac71acb01cb8f0aa8699e2a3e710"
+        },
+        "encoded_transfer/payload_inventory.json": {
+          "bytes": 30451,
+          "sha256": "a35098b15ac8bc7c5c291c228056bdfff71844a48f8295229c3da7a67c9f72df"
+        },
+        "encoded_transfer/report.json": {
+          "bytes": 1114,
+          "sha256": "0f6c37692824676408125e3a9c0e9eb3257696e817ebb69db7c7f9c619e01eb2"
+        },
+        "encoded_transfer/run_start.json": {
+          "bytes": 7751,
+          "sha256": "ef015fc22dab367502d051edf222df0c5072da5d04a94eafb94544ff3c2551d2"
+        },
+        "encoded_transfer/source_snapshot.tar.gz": {
+          "bytes": 119762,
+          "sha256": "dbeb0c299e3eabf8d03c42ba29b98e1af027cf9c2ce7a3f26be54ef9ccdb8093"
+        },
+        "encoded_transfer_audit.json": {
+          "bytes": 9502157,
+          "sha256": "e53c460a78cad63ed0cbe8a0f672249df88ffb8f7bb6f16aa031954bb27a5565"
+        }
+      }
+    }
+  ]
+}

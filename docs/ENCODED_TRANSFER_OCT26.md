@@ -21,3 +21,7 @@ The incomplete original large Letter archive is not declared repaired by this ex
 Encoded representations preserve original payload hashes and conditional reachability, but these byte-level checks are not new end-to-end model recovery requests.
 Fresh supported-runtime recovery is tested separately by the complete 72-capture storage census.
 Manual optima still tie when given the same encoding options; standard compression is credited rather than claimed as new research.
+
+The [completed result](../results/research/encoded_storage_oct26/RESULTS.md) has 228 full encoded objectives,
+one selected-only Letter measurement and one unavailable Letter selected store.
+All four original cloud jobs and their independent audits passed; missing data remains a recorded outcome rather than an audit failure or a fabricated value.
