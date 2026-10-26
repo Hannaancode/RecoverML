@@ -1,0 +1,42 @@
+name: Lossless encoding transfer on all frozen storage conditions
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/encoded-transfer-oct26.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  transfer:
+    name: Frozen transfer ${{ matrix.group }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [scientific, cloud, retinal, letter]
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/benchmark_encoded_transfer.py --group ${{ matrix.group }} --output work/encoded_transfer
+      - run: python scripts/audit_encoded_transfer.py work/encoded_transfer --output work/encoded_transfer_audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: encoded-transfer-${{ matrix.group }}
+          path: |
+            work/encoded_transfer/*.json
+            work/encoded_transfer/*.gz
+            work/encoded_transfer/failure.txt
+            work/encoded_transfer_audit.json
+          retention-days: 90

@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "groups": {"scientific": 48, "cloud": 72, "retinal": 108, "letter": 2},
+  "policies": ["adaptive", "gzip9"],
+  "methods": ["raw_exact", "gzip_exact", "adaptive_exact", "adaptive_local", "adaptive_snapshots", "adaptive_raw_choice"],
+  "solver_time_limit_s": 120,
+  "qualification": "Byte-level transfer of every older frozen condition, not fresh model replay. Missing candidates and selected-only large Letter measurements remain explicit. Equal-codec manual optima must tie. Encoded bytes, all metadata and one-byte mode prefixes count. Unknown cases are nonwins in full-denominator saving rates."
+}
