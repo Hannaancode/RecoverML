@@ -33,11 +33,19 @@ def optimize(graph,capabilities,k,time_limit_s=30.):
     if time_limit_s<=0 or not math.isfinite(time_limit_s):raise ValueError('Positive finite time limit required')
     if any(not isinstance(s,int) or s<0 for s in graph.sizes().values()):raise ValueError('Invalid artifact byte size')
     targets={graph.nodes[t].blob for ts in graph.targets.values() for t in ts}
+    # Index once per call: independent branches must not repeatedly scan the
+    # entire captured history. Keep all physical aliases and insertion order.
+    by_blob={}
+    order={nid:i for i,nid in enumerate(graph.nodes)}
+    for node in graph.nodes.values():by_blob.setdefault(node.blob,[]).append(node)
+    target_index={}
+    for position,(version,target) in enumerate((v,t) for v,ts in graph.targets.items() for t in ts):
+        target_index.setdefault(graph.nodes[target].blob,[]).append((position,version,target))
     retained=set(graph.roots);records=[]
     for component in components(graph):
         if not component&targets:continue
         if len(component)==1:
-            blob=next(iter(component));providers=[n for n in graph.nodes.values()
+            blob=next(iter(component));providers=[n for n in by_blob[blob]
                 if n.replayable and n.blob==blob and {graph.nodes[d].blob for d in n.deps}<=graph.roots]
             groups={capabilities[n.id] for n in providers if n.id in capabilities}
             survives=any(n.id not in capabilities for n in providers) or len(groups)>k
@@ -45,17 +53,20 @@ def optimize(graph,capabilities,k,time_limit_s=30.):
             records.append(dict(kind='root_provider_exact',optional_blobs=1,
                 root_producer_groups=len(groups),retained_target=not survives))
             continue
-        live=[n for n in graph.nodes.values() if n.replayable and n.blob in component]
+        local_nodes=[n for blob in component for n in by_blob[blob]]
+        live=[n for n in local_nodes if n.replayable]
         needed_roots={graph.nodes[d].blob for n in live for d in n.deps}&graph.roots
         projected=Graph(env=graph.env);projected.roots=set(needed_roots)
-        for nid,node in graph.nodes.items():
-            if node.blob not in component|needed_roots:continue
+        projection=local_nodes+[n for blob in needed_roots for n in by_blob[blob]]
+        for node in sorted(projection,key=lambda n:order[n.id]):
+            nid=node.id
             # Opaque ancestry is provenance, not an executable dependency.
             # Root producers are not needed because these values are fixed.
             projected.nodes[nid]=(replace(node,deps=[],replayable=False)
                 if node.blob in needed_roots or not node.replayable else node)
-        projected.targets={version:[t for t in ts if graph.nodes[t].blob in component]
-            for version,ts in graph.targets.items() if any(graph.nodes[t].blob in component for t in ts)}
+        projected.targets={}
+        for _,version,target in sorted(row for blob in component for row in target_index.get(blob,())):
+            projected.targets.setdefault(version,[]).append(target)
         local_caps={nid:group for nid,group in capabilities.items()
                     if nid in projected.nodes and projected.nodes[nid].replayable}
         chosen,status,diag=select_engine(projected,local_caps,k,time_limit_s=time_limit_s)

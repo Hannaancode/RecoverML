@@ -93,7 +93,10 @@ def verify_proof(graph, capabilities, k, selected, proof):
                 todo.append(v)
     if 'sink' in reached:
         raise ValueError('Retained vertices do not separate failures from targets')
-    upper_bound = sum(graph.sizes()[b] for b in selected - graph.roots)
+    # Build the physical-size index once. Rebuilding it for each paid blob
+    # made certificate checking quadratic on wide retained frontiers.
+    sizes = graph.sizes()
+    upper_bound = sum(sizes[b] for b in selected - graph.roots)
     if upper_bound != flow_value:
         raise ValueError('Flow lower bound and retained upper bound differ')
     return True

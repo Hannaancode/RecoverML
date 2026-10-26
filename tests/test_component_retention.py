@@ -1,5 +1,6 @@
 import itertools
 import random
+import copy
 import unittest
 from recoverml.core import Graph
 from recoverml.component_retention import optimize,components
@@ -45,3 +46,22 @@ class ComponentTests(unittest.TestCase):
         g.targets={'0':[target]}
         selected,status,_=optimize(g,{live:'one',loop:'other'},1)
         self.assertEqual(status,'ok');self.assertEqual(selected,g.roots|{g.nodes[target].blob})
+
+    def test_indexed_projections_preserve_aliases_target_order_and_input(self):
+        g=Graph(env={});root=g.add('input',[],{},'root',False,'',0,0,mandatory=True)
+        a=g.add('external',[],{},'a',False,'',0,0)
+        alias=g.add('unavailable',[root],{},'a',False,'',0,0)
+        b=g.add('external',[],{},'b',False,'',0,0)
+        x=g.add('test',[a,root],{},'x',True,'',0,0)
+        y=g.add('test',[b,root],{},'y',True,'',0,0)
+        g.targets={'later':[y,x,y],'earlier':[alias,x]}
+        original=copy.deepcopy(g.manifest())
+        selected,status,diag=optimize(g,{},0)
+        self.assertEqual(status,'ok');self.assertTrue(diag['storage_optimal'])
+        self.assertEqual(g.manifest(),original)
+        self.assertTrue(independent_can(g,selected,{},set()))
+        optional=sorted(g.candidates-g.roots)
+        best=min(retained_bytes(g,s,{},0) for flags in itertools.product((False,True),repeat=len(optional))
+            for s in [g.roots|{b for b,f in zip(optional,flags) if f}]
+            if independent_can(g,s,{},set()))
+        self.assertEqual(retained_bytes(g,selected,{},0),best)

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "reference_commit": "3e2cebb00b280e193a698359278a4a33927f19d7",
+  "repetitions": 3,
+  "groups": {"scientific": 48, "cloud": 72, "retinal": 108, "letter": 2, "scaling": 24},
+  "methods": ["RecoverML_indexed", "RecoverML_previous", "scenario_exact", "robust_local"],
+  "scaling_methods": ["RecoverML_indexed", "RecoverML_previous"],
+  "scaling_widths": [64, 256, 1024, 4096],
+  "scaling_seeds": [101, 211, 307],
+  "scaling_topologies": ["independent_branches", "wide_frontier"],
+  "timing_scope": "Full callable, same process and metadata, deterministic randomized method order. No persisted planner cache. Library warmup excluded, complete raw repetitions retained.",
+  "objective": "Preserve every frozen optimum and every declared-loss recovery certificate; compare planning efficiency, retaining all slower cases.",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}
