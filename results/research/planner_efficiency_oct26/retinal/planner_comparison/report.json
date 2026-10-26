@@ -1,0 +1,2551 @@
+{
+  "status": "PASS",
+  "group": "retinal",
+  "conditions": 108,
+  "calls": 1296,
+  "all_exact_equal_frozen": true,
+  "all_closures_pass": true,
+  "input_sha256": {
+    "results/research/eyeai_complete_oct15/summary.csv": "15e67577c757721ea41de75e0dc277efb682826c623ebaa00dc4d5ef3c20a4be",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v2/manifest.json": "21df47efd1e2b9a36fe953bf0b632192fc67b69dff720ac2d534ebc36711984d",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v8/manifest.json": "678ced9e0a46232ec35d7fe60fdfccf94aa5c5a9cc625984c70228826156d3b0",
+    "results/research/eyeai_complete_oct15/captures/logistic_s3_v16/manifest.json": "761767358da541aa59dbc7a91d7b0049f142379d9729a379cc85092ee7859555",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v2/manifest.json": "ac50ff503a8d244e6aedb1dd9f1d4d3f57d79535d84c5567729dd5fa319e9c3f",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v8/manifest.json": "cad4c5c2dff7c5e72d0aeaae3bc1d7b5356d9075ff3ecd66788b29b8d0d26bea",
+    "results/research/eyeai_complete_oct15/captures/logistic_s17_v16/manifest.json": "e214bce940b304d104e6803cf805e0d0f201d690af01a11b9325e3c5ab877834",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v2/manifest.json": "c63ee019586f01a18376177258bde933b2e95b6e21005bf6acc1225cbb016dca",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v8/manifest.json": "c27cbdc3e29cc8a3b8ed620d9a7e18ea05e4f383a1aa112899bd3f2060362a85",
+    "results/research/eyeai_complete_oct15/captures/logistic_s29_v16/manifest.json": "dc40a2517cfc8a8d0aae743467132e9fffb9994c7be2d165a8eb3191ec31fb92",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v2/manifest.json": "419c8c7fc6c0b5408bfde6b925296abe24a495952df5d50e2bdeac1704ea50fb",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v8/manifest.json": "b8019c21af7a15f77c87614994aed4991017197477cb8f50732597794c5bd3b6",
+    "results/research/eyeai_complete_oct15/captures/forest_s3_v16/manifest.json": "dd772ddf6027e2061cd5330b9741a2d5ce74f12108a04515e08ae07723276b63",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v2/manifest.json": "c7cdb21ad48707ff1e44b48a1d94bf73359753ec0116fc8dd6b250b4bad0ef57",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v8/manifest.json": "445bfb7c861f3d196c08cfd46ab857bfaef9d375439fac2ff21bb78926156d22",
+    "results/research/eyeai_complete_oct15/captures/forest_s17_v16/manifest.json": "160f178767f1126ec7c0970f829da1a5566f2b883717bebe069eddf906596a4c",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v2/manifest.json": "8deb851d4775e12a7fd01980e058cb2d2bc1d714f64de682805a2865fddb1754",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v8/manifest.json": "38178ecd79cd068f68e0f274c909f6ae4de291d84c97f3ca7f086be956d5effe",
+    "results/research/eyeai_complete_oct15/captures/forest_s29_v16/manifest.json": "e859ce1bc5ce266404f41c4cdec46d3924eee4c9f75596741a5f73ff213a4ca8"
+  },
+  "source_changed": [],
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 108,
+      "indexed_faster": 46,
+      "indexed_slower": 62,
+      "median_paired_speedup": 0.9957702373747122,
+      "minimum_paired_speedup": 0.8564795272539276,
+      "maximum_paired_speedup": 1.1630378611065546,
+      "storage_wins": 0,
+      "storage_ties": 108
+    },
+    "scenario_exact": {
+      "cases": 108,
+      "indexed_faster": 108,
+      "indexed_slower": 0,
+      "median_paired_speedup": 1.4250543376965226,
+      "minimum_paired_speedup": 1.0204160283783403,
+      "maximum_paired_speedup": 1.8633054870647092,
+      "storage_wins": 0,
+      "storage_ties": 108
+    },
+    "robust_local": {
+      "cases": 108,
+      "indexed_faster": 96,
+      "indexed_slower": 12,
+      "median_paired_speedup": 3.1736061204212316,
+      "minimum_paired_speedup": 0.7035561785732929,
+      "maximum_paired_speedup": 93.09181881386968,
+      "storage_wins": 0,
+      "storage_ties": 108
+    }
+  },
+  "comparisons": [
+    {
+      "case": "logistic_s3_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 537424,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 537424,
+        "scenario_exact": 537424,
+        "RecoverML_indexed": 537424,
+        "RecoverML_previous": 537424
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012975099998584483,
+        "RecoverML_previous": 0.001239000999930795,
+        "scenario_exact": 0.0020149740000761085,
+        "robust_local": 0.0009700759999304864
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9549067059721803,
+        "scenario_exact": 1.552954505395667,
+        "robust_local": 0.7476443341757033
+      }
+    },
+    {
+      "case": "logistic_s3_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 692078,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 692078,
+        "robust_local": 692078,
+        "scenario_exact": 692078,
+        "RecoverML_indexed": 692078
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015537599999788654,
+        "RecoverML_previous": 0.0014963830001306633,
+        "scenario_exact": 0.0023486489999413607,
+        "robust_local": 0.003027009000106773
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9630721605338131,
+        "scenario_exact": 1.5115905931246187,
+        "robust_local": 1.948183117178938
+      }
+    },
+    {
+      "case": "logistic_s3_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 846909,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 846909,
+        "RecoverML_indexed": 846909,
+        "RecoverML_previous": 846909,
+        "robust_local": 846909
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015082649999840214,
+        "RecoverML_previous": 0.001588013999935356,
+        "scenario_exact": 0.0022633380001479964,
+        "robust_local": 0.004882793999968271
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0528746605882782,
+        "scenario_exact": 1.5006235642754915,
+        "robust_local": 3.237358156570629
+      }
+    },
+    {
+      "case": "logistic_s3_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 537558,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 537558,
+        "RecoverML_previous": 537558,
+        "robust_local": 537558,
+        "scenario_exact": 537558
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013001550000808493,
+        "RecoverML_previous": 0.0012446709999949235,
+        "scenario_exact": 0.00211025199996584,
+        "robust_local": 0.0009603680000509485
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9573250880991301,
+        "scenario_exact": 1.6230772483547078,
+        "robust_local": 0.7386565447898356
+      }
+    },
+    {
+      "case": "logistic_s3_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2503864,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 2503864,
+        "RecoverML_previous": 2503864,
+        "robust_local": 2503864,
+        "RecoverML_indexed": 2503864
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015990749998309184,
+        "RecoverML_previous": 0.0013695749998987594,
+        "scenario_exact": 0.002705095999999685,
+        "robust_local": 0.0031626529998902697
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8564795272539276,
+        "scenario_exact": 1.6916629928463105,
+        "robust_local": 1.977801541656695
+      }
+    },
+    {
+      "case": "logistic_s3_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 847043,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 847043,
+        "RecoverML_previous": 847043,
+        "RecoverML_indexed": 847043,
+        "robust_local": 847043
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001526648999970348,
+        "RecoverML_previous": 0.001593884999920192,
+        "scenario_exact": 0.0021810549999372597,
+        "robust_local": 0.00488710199988418
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0440415576541497,
+        "scenario_exact": 1.4286551787474542,
+        "robust_local": 3.201195559672919
+      }
+    },
+    {
+      "case": "logistic_s3_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 546052,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 546052,
+        "scenario_exact": 546052,
+        "RecoverML_previous": 546052,
+        "robust_local": 546052
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0023485690001052717,
+        "RecoverML_previous": 0.002272435000122641,
+        "scenario_exact": 0.0030005890000666113,
+        "robust_local": 0.0025138880000667996
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9675828132027554,
+        "scenario_exact": 1.2776243746435014,
+        "robust_local": 1.070391374472761
+      }
+    },
+    {
+      "case": "logistic_s3_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1164429,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 1164429,
+        "scenario_exact": 1164429,
+        "RecoverML_previous": 1164429,
+        "RecoverML_indexed": 1164429
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0027902959998300503,
+        "RecoverML_previous": 0.0027830819999508094,
+        "scenario_exact": 0.0039980779999950755,
+        "robust_local": 0.050527819000080854
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9974146112528276,
+        "scenario_exact": 1.432850851751423,
+        "robust_local": 18.108408213020546
+      }
+    },
+    {
+      "case": "logistic_s3_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1783977,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 1783977,
+        "scenario_exact": 1783977,
+        "RecoverML_previous": 1783977,
+        "RecoverML_indexed": 1783977
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002978327000164427,
+        "RecoverML_previous": 0.0030689479999637115,
+        "scenario_exact": 0.003911536000032356,
+        "robust_local": 0.07638586600000963
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0304268133735086,
+        "scenario_exact": 1.3133332907422217,
+        "robust_local": 25.647239539443632
+      }
+    },
+    {
+      "case": "logistic_s3_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 546588,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 546588,
+        "RecoverML_indexed": 546588,
+        "RecoverML_previous": 546588,
+        "robust_local": 546588
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0023383089999242657,
+        "RecoverML_previous": 0.002387672000168095,
+        "scenario_exact": 0.0028534440000385075,
+        "robust_local": 0.0025237959998776205
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0211105547835757,
+        "scenario_exact": 1.2203023638582096,
+        "robust_local": 1.0793252730752705
+      }
+    },
+    {
+      "case": "logistic_s3_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2512894,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 2512894,
+        "RecoverML_indexed": 2512894,
+        "RecoverML_previous": 2512894,
+        "robust_local": 2512894
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002643902000045273,
+        "RecoverML_previous": 0.002649031999908402,
+        "scenario_exact": 0.003767887000094561,
+        "robust_local": 0.03471025599992572
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0019403139235272,
+        "scenario_exact": 1.4251235484636122,
+        "robust_local": 13.128420039521647
+      }
+    },
+    {
+      "case": "logistic_s3_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1784513,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 1784513,
+        "robust_local": 1784513,
+        "RecoverML_previous": 1784513,
+        "scenario_exact": 1784513
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003060631999915131,
+        "RecoverML_previous": 0.0030326500000228407,
+        "scenario_exact": 0.0037708219999785797,
+        "robust_local": 0.07772314099997857
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9908574438569987,
+        "scenario_exact": 1.2320403106558193,
+        "robust_local": 25.394474409904156
+      }
+    },
+    {
+      "case": "logistic_s3_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 557563,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 557563,
+        "RecoverML_indexed": 557563,
+        "robust_local": 557563,
+        "RecoverML_previous": 557563
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004119896000020162,
+        "RecoverML_previous": 0.0037334520000058546,
+        "scenario_exact": 0.0044615659999180934,
+        "robust_local": 0.005423448000101416
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9062005448651091,
+        "scenario_exact": 1.0829317050469864,
+        "robust_local": 1.3164041034227258
+      }
+    },
+    {
+      "case": "logistic_s3_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1794246,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 1794246,
+        "RecoverML_previous": 1794246,
+        "scenario_exact": 1794246,
+        "robust_local": 1794246
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0046395090000714845,
+        "RecoverML_previous": 0.004506249000087337,
+        "scenario_exact": 0.006621390999953292,
+        "robust_local": 0.30846463600005336
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9712771329935788,
+        "scenario_exact": 1.4271749445579847,
+        "robust_local": 66.48648294362627
+      }
+    },
+    {
+      "case": "logistic_s3_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 3033383,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 3033383,
+        "scenario_exact": 3033383,
+        "robust_local": 3033383,
+        "RecoverML_previous": 3033383
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005018619000111357,
+        "RecoverML_previous": 0.004901539999991655,
+        "scenario_exact": 0.006076039999925342,
+        "robust_local": 0.4478074779999588
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9766710722377802,
+        "scenario_exact": 1.2106995967995422,
+        "robust_local": 89.22922381436456
+      }
+    },
+    {
+      "case": "logistic_s3_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 558635,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 558635,
+        "robust_local": 558635,
+        "scenario_exact": 558635,
+        "RecoverML_indexed": 558635
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0037925630001609534,
+        "RecoverML_previous": 0.003762958000152139,
+        "scenario_exact": 0.004101761999891096,
+        "robust_local": 0.00551717300004384
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9921939332299666,
+        "scenario_exact": 1.0815277161426244,
+        "robust_local": 1.454734700467651
+      }
+    },
+    {
+      "case": "logistic_s3_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2524941,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 2524941,
+        "RecoverML_indexed": 2524941,
+        "robust_local": 2524941,
+        "scenario_exact": 2524941
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004225152999879356,
+        "RecoverML_previous": 0.004116980999924635,
+        "scenario_exact": 0.006471389999887833,
+        "robust_local": 0.1904742520000582
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9743980868958333,
+        "scenario_exact": 1.531634475739131,
+        "robust_local": 45.08103067640319
+      }
+    },
+    {
+      "case": "logistic_s3_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 3034455,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 3034455,
+        "RecoverML_indexed": 3034455,
+        "scenario_exact": 3034455,
+        "RecoverML_previous": 3034455
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0048722149999775866,
+        "RecoverML_previous": 0.004956091999929413,
+        "scenario_exact": 0.006076310000025842,
+        "robust_local": 0.45356335600013153
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0172153732855,
+        "scenario_exact": 1.2471350299717467,
+        "robust_local": 93.09181881386968
+      }
+    },
+    {
+      "case": "logistic_s17_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 530582,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 530582,
+        "RecoverML_indexed": 530582,
+        "RecoverML_previous": 530582,
+        "scenario_exact": 530582
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001244219999989582,
+        "RecoverML_previous": 0.0012576560000070458,
+        "scenario_exact": 0.0019672950002131984,
+        "robust_local": 0.000960638999913499
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0107987333571042,
+        "scenario_exact": 1.5811472249519143,
+        "robust_local": 0.7720813038864047
+      }
+    },
+    {
+      "case": "logistic_s17_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 678397,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 678397,
+        "RecoverML_previous": 678397,
+        "scenario_exact": 678397,
+        "robust_local": 678397
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00158229399994525,
+        "RecoverML_previous": 0.0014234860000215122,
+        "scenario_exact": 0.002339291999987836,
+        "robust_local": 0.003066502999899967
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8996343284312315,
+        "scenario_exact": 1.4784180437192955,
+        "robust_local": 1.9380108879930487
+      }
+    },
+    {
+      "case": "logistic_s17_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 826389,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 826389,
+        "RecoverML_indexed": 826389,
+        "robust_local": 826389,
+        "scenario_exact": 826389
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001573175999965315,
+        "RecoverML_previous": 0.0014959920001729188,
+        "scenario_exact": 0.0022698010000112845,
+        "robust_local": 0.004949279000129536
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9509374667589018,
+        "scenario_exact": 1.442814408598484,
+        "robust_local": 3.1460427823960297
+      }
+    },
+    {
+      "case": "logistic_s17_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 530716,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 530716,
+        "RecoverML_previous": 530716,
+        "RecoverML_indexed": 530716,
+        "scenario_exact": 530716
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012154259998169437,
+        "RecoverML_previous": 0.0013041329998486617,
+        "scenario_exact": 0.0020842330000050424,
+        "robust_local": 0.0009592070000508102
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0729842870278226,
+        "scenario_exact": 1.7148168628274782,
+        "robust_local": 0.7891940769699489
+      }
+    },
+    {
+      "case": "logistic_s17_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2497022,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 2497022,
+        "RecoverML_indexed": 2497022,
+        "scenario_exact": 2497022,
+        "RecoverML_previous": 2497022
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013833709999744315,
+        "RecoverML_previous": 0.0013504189998911897,
+        "scenario_exact": 0.002251106000130676,
+        "robust_local": 0.0031190120000701427
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9761799256426145,
+        "scenario_exact": 1.627261233734322,
+        "robust_local": 2.254646078403979
+      }
+    },
+    {
+      "case": "logistic_s17_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 826523,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 826523,
+        "robust_local": 826523,
+        "RecoverML_previous": 826523,
+        "scenario_exact": 826523
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015953579998040368,
+        "RecoverML_previous": 0.0015954079999573878,
+        "scenario_exact": 0.00223446499990132,
+        "robust_local": 0.004911619000040446
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.000031341023994,
+        "scenario_exact": 1.4006041278357502,
+        "robust_local": 3.078693936184704
+      }
+    },
+    {
+      "case": "logistic_s17_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 539216,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 539216,
+        "robust_local": 539216,
+        "RecoverML_indexed": 539216,
+        "scenario_exact": 539216
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002379336000103649,
+        "RecoverML_previous": 0.0023427170001468767,
+        "scenario_exact": 0.003023622999990039,
+        "robust_local": 0.0024904040001274552
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9846095717649054,
+        "scenario_exact": 1.2707843700336243,
+        "robust_local": 1.0466802502962878
+      }
+    },
+    {
+      "case": "logistic_s17_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1130237,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 1130237,
+        "scenario_exact": 1130237,
+        "robust_local": 1130237,
+        "RecoverML_indexed": 1130237
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0028792029997930513,
+        "RecoverML_previous": 0.002806004999911238,
+        "scenario_exact": 0.004058530999827781,
+        "robust_local": 0.050783919999958016
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.974576992352719,
+        "scenario_exact": 1.4096022406615636,
+        "robust_local": 17.638186679997283
+      }
+    },
+    {
+      "case": "logistic_s17_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1722429,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 1722429,
+        "robust_local": 1722429,
+        "RecoverML_previous": 1722429,
+        "RecoverML_indexed": 1722429
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030788359999860404,
+        "RecoverML_previous": 0.0030974409999089403,
+        "scenario_exact": 0.0037597220000407106,
+        "robust_local": 0.07705609300001015
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0060428681238573,
+        "scenario_exact": 1.2211504607773058,
+        "robust_local": 25.027670522353098
+      }
+    },
+    {
+      "case": "logistic_s17_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 539752,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 539752,
+        "RecoverML_previous": 539752,
+        "RecoverML_indexed": 539752,
+        "robust_local": 539752
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002357876000132819,
+        "RecoverML_previous": 0.0024229569999079104,
+        "scenario_exact": 0.0029825859999164095,
+        "robust_local": 0.0025311199999578093
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0276015362009814,
+        "scenario_exact": 1.2649460784826685,
+        "robust_local": 1.073474601639455
+      }
+    },
+    {
+      "case": "logistic_s17_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2506058,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 2506058,
+        "scenario_exact": 2506058,
+        "RecoverML_indexed": 2506058,
+        "robust_local": 2506058
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0026112309999462013,
+        "RecoverML_previous": 0.0026304959999379207,
+        "scenario_exact": 0.0043341469997812965,
+        "robust_local": 0.034872010000071896
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0073777463549247,
+        "scenario_exact": 1.6598098750629844,
+        "robust_local": 13.354624696470882
+      }
+    },
+    {
+      "case": "logistic_s17_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1722965,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 1722965,
+        "RecoverML_indexed": 1722965,
+        "robust_local": 1722965,
+        "RecoverML_previous": 1722965
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030525659999511845,
+        "RecoverML_previous": 0.003051705999951082,
+        "scenario_exact": 0.003979933999971763,
+        "robust_local": 0.07809729399991738
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9997182698096893,
+        "scenario_exact": 1.303799491979996,
+        "robust_local": 25.584145928758392
+      }
+    },
+    {
+      "case": "logistic_s17_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 550729,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 550729,
+        "RecoverML_indexed": 550729,
+        "scenario_exact": 550729,
+        "robust_local": 550729
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0037754410000161442,
+        "RecoverML_previous": 0.0038734150000436784,
+        "scenario_exact": 0.004387837999956901,
+        "robust_local": 0.005492736999940462
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0259503459402797,
+        "scenario_exact": 1.162205421813806,
+        "robust_local": 1.454859710406539
+      }
+    },
+    {
+      "case": "logistic_s17_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1732700,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 1732700,
+        "robust_local": 1732700,
+        "RecoverML_previous": 1732700,
+        "scenario_exact": 1732700
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004541975999927672,
+        "RecoverML_previous": 0.004593032000002495,
+        "scenario_exact": 0.006710688000111986,
+        "robust_local": 0.30983000800006266
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0112409224697876,
+        "scenario_exact": 1.477482047509465,
+        "robust_local": 68.2148051872129
+      }
+    },
+    {
+      "case": "logistic_s17_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 2917125,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 2917125,
+        "robust_local": 2917125,
+        "RecoverML_previous": 2917125,
+        "scenario_exact": 2917125
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004993873000103122,
+        "RecoverML_previous": 0.005014269999946919,
+        "scenario_exact": 0.006188780000002225,
+        "robust_local": 0.4481677420001233
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0040844049985604,
+        "scenario_exact": 1.2392746070783998,
+        "robust_local": 89.74352010771375
+      }
+    },
+    {
+      "case": "logistic_s17_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 551801,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 551801,
+        "robust_local": 551801,
+        "RecoverML_indexed": 551801,
+        "scenario_exact": 551801
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003939146999982768,
+        "RecoverML_previous": 0.0038144949999150413,
+        "scenario_exact": 0.004126848999931099,
+        "robust_local": 0.005488850000119783
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9683555855954927,
+        "scenario_exact": 1.04765041770443,
+        "robust_local": 1.3934108069954725
+      }
+    },
+    {
+      "case": "logistic_s17_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2518107,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 2518107,
+        "RecoverML_indexed": 2518107,
+        "robust_local": 2518107,
+        "RecoverML_previous": 2518107
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004086021999910372,
+        "RecoverML_previous": 0.004249178000009124,
+        "scenario_exact": 0.006677425000134463,
+        "robust_local": 0.1910829250000461
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.039930279401905,
+        "scenario_exact": 1.6342117101378637,
+        "robust_local": 46.76502598474446
+      }
+    },
+    {
+      "case": "logistic_s17_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 2918197,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 2918197,
+        "robust_local": 2918197,
+        "RecoverML_indexed": 2918197,
+        "scenario_exact": 2918197
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005778242000133105,
+        "RecoverML_previous": 0.004953727999918556,
+        "scenario_exact": 0.006073153999977876,
+        "robust_local": 0.4501877140000943
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8573071186365064,
+        "scenario_exact": 1.0510383607744325,
+        "robust_local": 77.9108445076762
+      }
+    },
+    {
+      "case": "logistic_s29_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 533658,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 533658,
+        "robust_local": 533658,
+        "RecoverML_previous": 533658,
+        "RecoverML_indexed": 533658
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012227400000028865,
+        "RecoverML_previous": 0.0012708400001884002,
+        "scenario_exact": 0.0020921179998367734,
+        "robust_local": 0.0009426649999113579
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0393378806495248,
+        "scenario_exact": 1.7110080637190528,
+        "robust_local": 0.7709447633259177
+      }
+    },
+    {
+      "case": "logistic_s29_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 684553,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 684553,
+        "scenario_exact": 684553,
+        "RecoverML_indexed": 684553,
+        "robust_local": 684553
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014328140000543499,
+        "RecoverML_previous": 0.0015519359999416338,
+        "scenario_exact": 0.002434209000057308,
+        "robust_local": 0.0030818620000445662
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0831384952148466,
+        "scenario_exact": 1.6989009040705723,
+        "robust_local": 2.1509156107685046
+      }
+    },
+    {
+      "case": "logistic_s29_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 835625,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 835625,
+        "RecoverML_indexed": 835625,
+        "scenario_exact": 835625,
+        "RecoverML_previous": 835625
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015169309999691905,
+        "RecoverML_previous": 0.0014949599999454222,
+        "scenario_exact": 0.0023247240001182945,
+        "robust_local": 0.005023557999948025
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9855161506856841,
+        "scenario_exact": 1.5325179590670313,
+        "robust_local": 3.311658869157566
+      }
+    },
+    {
+      "case": "logistic_s29_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 533792,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 533792,
+        "scenario_exact": 533792,
+        "robust_local": 533792,
+        "RecoverML_indexed": 533792
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012423669998042897,
+        "RecoverML_previous": 0.0012851169999521517,
+        "scenario_exact": 0.0020275580000088667,
+        "robust_local": 0.0009378860002016154
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0344101220932271,
+        "scenario_exact": 1.6320121190664822,
+        "robust_local": 0.7549186354349083
+      }
+    },
+    {
+      "case": "logistic_s29_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2500098,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 2500098,
+        "robust_local": 2500098,
+        "RecoverML_indexed": 2500098,
+        "RecoverML_previous": 2500098
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013697159999992436,
+        "RecoverML_previous": 0.0014315010000700568,
+        "scenario_exact": 0.002429290000009132,
+        "robust_local": 0.0031110559998523968
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0451078910305838,
+        "scenario_exact": 1.7735720397589527,
+        "robust_local": 2.2713146373803874
+      }
+    },
+    {
+      "case": "logistic_s29_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 835759,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 835759,
+        "RecoverML_previous": 835759,
+        "RecoverML_indexed": 835759,
+        "scenario_exact": 835759
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015933639999730076,
+        "RecoverML_previous": 0.0015581879999899684,
+        "scenario_exact": 0.002226089000032516,
+        "robust_local": 0.0050198409999211435
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.977923437467123,
+        "scenario_exact": 1.397100097699099,
+        "robust_local": 3.1504671876647032
+      }
+    },
+    {
+      "case": "logistic_s29_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 542304,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 542304,
+        "robust_local": 542304,
+        "scenario_exact": 542304,
+        "RecoverML_indexed": 542304
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002315116000090711,
+        "RecoverML_previous": 0.002318662000106997,
+        "scenario_exact": 0.0030590090000259806,
+        "robust_local": 0.0024771289999989676
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0015316727179746,
+        "scenario_exact": 1.3213199683757195,
+        "robust_local": 1.0699805106534224
+      }
+    },
+    {
+      "case": "logistic_s29_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1145645,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 1145645,
+        "robust_local": 1145645,
+        "RecoverML_indexed": 1145645,
+        "scenario_exact": 1145645
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0028059549999852607,
+        "RecoverML_previous": 0.0028645449999658013,
+        "scenario_exact": 0.0044515469999169,
+        "robust_local": 0.0511644719999822
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0208805914495593,
+        "scenario_exact": 1.586464144984607,
+        "robust_local": 18.23424538178658
+      }
+    },
+    {
+      "case": "logistic_s29_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1750157,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 1750157,
+        "robust_local": 1750157,
+        "RecoverML_previous": 1750157,
+        "RecoverML_indexed": 1750157
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0031035929998779466,
+        "RecoverML_previous": 0.0031303020000450488,
+        "scenario_exact": 0.004212429000062912,
+        "robust_local": 0.07754488799992032
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0086058320688804,
+        "scenario_exact": 1.3572749391523218,
+        "robust_local": 24.98552097616211
+      }
+    },
+    {
+      "case": "logistic_s29_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 542840,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 542840,
+        "robust_local": 542840,
+        "scenario_exact": 542840,
+        "RecoverML_previous": 542840
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002378063000151087,
+        "RecoverML_previous": 0.00238436599988745,
+        "scenario_exact": 0.002935066999953051,
+        "robust_local": 0.0024998220001180016
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0026504763481718,
+        "scenario_exact": 1.2342259224278647,
+        "robust_local": 1.0512009143404437
+      }
+    },
+    {
+      "case": "logistic_s29_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2509146,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 2509146,
+        "scenario_exact": 2509146,
+        "RecoverML_indexed": 2509146,
+        "robust_local": 2509146
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0026409560000502097,
+        "RecoverML_previous": 0.0026452540000718727,
+        "scenario_exact": 0.0039607680000699474,
+        "robust_local": 0.035006550999924
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0016274409803045,
+        "scenario_exact": 1.4997478185909365,
+        "robust_local": 13.255257186889315
+      }
+    },
+    {
+      "case": "logistic_s29_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1750693,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 1750693,
+        "scenario_exact": 1750693,
+        "RecoverML_previous": 1750693,
+        "robust_local": 1750693
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003141072000062195,
+        "RecoverML_previous": 0.0030478080000193586,
+        "scenario_exact": 0.0038447200001883175,
+        "robust_local": 0.07780029600007765
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9703082259683987,
+        "scenario_exact": 1.22401524069241,
+        "robust_local": 24.76870826219111
+      }
+    },
+    {
+      "case": "logistic_s29_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 553814,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 553814,
+        "robust_local": 553814,
+        "scenario_exact": 553814,
+        "RecoverML_previous": 553814
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00374743799989119,
+        "RecoverML_previous": 0.0037479790000816138,
+        "scenario_exact": 0.004298850999930437,
+        "robust_local": 0.005483419000029244
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0001443653478561,
+        "scenario_exact": 1.1471439954590996,
+        "robust_local": 1.4632447555339032
+      }
+    },
+    {
+      "case": "logistic_s29_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1760425,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 1760425,
+        "robust_local": 1760425,
+        "RecoverML_indexed": 1760425,
+        "RecoverML_previous": 1760425
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005012847999978476,
+        "RecoverML_previous": 0.0044814230000156385,
+        "scenario_exact": 0.00669582000000446,
+        "robust_local": 0.312754213000062
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8939874099583472,
+        "scenario_exact": 1.335731703820505,
+        "robust_local": 62.390523910041736
+      }
+    },
+    {
+      "case": "logistic_s29_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 2969490,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 2969490,
+        "scenario_exact": 2969490,
+        "RecoverML_indexed": 2969490,
+        "robust_local": 2969490
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00493524300009085,
+        "RecoverML_previous": 0.004887073000190867,
+        "scenario_exact": 0.006101596999997128,
+        "robust_local": 0.4495623610000621
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9902395890335904,
+        "scenario_exact": 1.236331625390038,
+        "robust_local": 91.09224429106862
+      }
+    },
+    {
+      "case": "logistic_s29_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 554886,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 554886,
+        "RecoverML_previous": 554886,
+        "scenario_exact": 554886,
+        "robust_local": 554886
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0037960489999022684,
+        "RecoverML_previous": 0.0037879139999859035,
+        "scenario_exact": 0.004009157999917079,
+        "robust_local": 0.005495381000173438
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9978569823738908,
+        "scenario_exact": 1.0561396862949601,
+        "robust_local": 1.4476580782584525
+      }
+    },
+    {
+      "case": "logistic_s29_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2521192,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 2521192,
+        "RecoverML_indexed": 2521192,
+        "scenario_exact": 2521192,
+        "RecoverML_previous": 2521192
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004285986000013509,
+        "RecoverML_previous": 0.004097744000091552,
+        "scenario_exact": 0.00660218400003032,
+        "robust_local": 0.19153810400007387
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.956079651235127,
+        "scenario_exact": 1.5404119378853574,
+        "robust_local": 44.689390959156235
+      }
+    },
+    {
+      "case": "logistic_s29_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 2970562,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 2970562,
+        "RecoverML_previous": 2970562,
+        "robust_local": 2970562,
+        "RecoverML_indexed": 2970562
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004985878000070443,
+        "RecoverML_previous": 0.004854771999816876,
+        "scenario_exact": 0.005938381000078152,
+        "robust_local": 0.45147668599997814
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.97370453102709,
+        "scenario_exact": 1.1910401738659173,
+        "robust_local": 90.55108969645858
+      }
+    },
+    {
+      "case": "forest_s3_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 537419,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 537419,
+        "RecoverML_indexed": 537419,
+        "RecoverML_previous": 537419,
+        "scenario_exact": 537419
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012330490001204453,
+        "RecoverML_previous": 0.0012300040000354784,
+        "scenario_exact": 0.002061429999912434,
+        "robust_local": 0.0009598870001354953
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9975305116952615,
+        "scenario_exact": 1.6718151506639816,
+        "robust_local": 0.7784662248148555
+      }
+    },
+    {
+      "case": "forest_s3_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1107888,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 1107888,
+        "RecoverML_indexed": 1107888,
+        "RecoverML_previous": 1107888,
+        "robust_local": 1107888
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001561765000133164,
+        "RecoverML_previous": 0.0014236160000109521,
+        "scenario_exact": 0.0023448609999832115,
+        "robust_local": 0.002280079999991358
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9115430297705271,
+        "scenario_exact": 1.501417306562304,
+        "robust_local": 1.4599379546839293
+      }
+    },
+    {
+      "case": "forest_s3_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1606378,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 1606378,
+        "scenario_exact": 1606378,
+        "robust_local": 1606378,
+        "RecoverML_indexed": 1606378
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001576483000008011,
+        "RecoverML_previous": 0.0014803520000441495,
+        "scenario_exact": 0.0022726659999534604,
+        "robust_local": 0.004911808000088058
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9390218607093301,
+        "scenario_exact": 1.4416051425495306,
+        "robust_local": 3.1156745743931893
+      }
+    },
+    {
+      "case": "forest_s3_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 537553,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 537553,
+        "RecoverML_previous": 537553,
+        "robust_local": 537553,
+        "RecoverML_indexed": 537553
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012453829999685695,
+        "RecoverML_previous": 0.0012701079999715148,
+        "scenario_exact": 0.0021254900000258203,
+        "robust_local": 0.0009473739999066311
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0198533302635169,
+        "scenario_exact": 1.7066958518620077,
+        "robust_local": 0.7607089545389174
+      }
+    },
+    {
+      "case": "forest_s3_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2503859,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 2503859,
+        "robust_local": 2503859,
+        "RecoverML_previous": 2503859,
+        "scenario_exact": 2503859
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014387349999651633,
+        "RecoverML_previous": 0.0014939979998871422,
+        "scenario_exact": 0.002479964000031032,
+        "robust_local": 0.002199899999823174
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0384108261238636,
+        "scenario_exact": 1.723711454917744,
+        "robust_local": 1.529051562571593
+      }
+    },
+    {
+      "case": "forest_s3_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1606512,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 1606512,
+        "RecoverML_previous": 1606512,
+        "scenario_exact": 1606512,
+        "robust_local": 1606512
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001811221000025398,
+        "RecoverML_previous": 0.0016175289999864617,
+        "scenario_exact": 0.0024613200000658253,
+        "robust_local": 0.004842088000032163
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8930599854814955,
+        "scenario_exact": 1.3589285901782893,
+        "robust_local": 2.6733833143300925
+      }
+    },
+    {
+      "case": "forest_s3_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 546050,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 546050,
+        "scenario_exact": 546050,
+        "RecoverML_previous": 546050,
+        "RecoverML_indexed": 546050
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002311999999847103,
+        "RecoverML_previous": 0.0023864089998824056,
+        "scenario_exact": 0.0029969920001349237,
+        "robust_local": 0.0024891219998153247
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0321838235468095,
+        "scenario_exact": 1.2962768167530798,
+        "robust_local": 1.0766098615830169
+      }
+    },
+    {
+      "case": "forest_s3_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2512356,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 2512356,
+        "scenario_exact": 2512356,
+        "robust_local": 2512356,
+        "RecoverML_indexed": 2512356
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002812398000060057,
+        "RecoverML_previous": 0.0027933820001635468,
+        "scenario_exact": 0.003954455999974016,
+        "robust_local": 0.014301662999969267
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.993238510375806,
+        "scenario_exact": 1.4060797937879246,
+        "robust_local": 5.0852201571981865
+      }
+    },
+    {
+      "case": "forest_s3_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4764603,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 4764603,
+        "scenario_exact": 4764603,
+        "RecoverML_indexed": 4764603,
+        "RecoverML_previous": 4764603
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030111599999145255,
+        "RecoverML_previous": 0.002975111000068864,
+        "scenario_exact": 0.004171042000052694,
+        "robust_local": 0.07660912999995162
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9880282018070495,
+        "scenario_exact": 1.385194410184478,
+        "robust_local": 25.441733419056522
+      }
+    },
+    {
+      "case": "forest_s3_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 546586,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 546586,
+        "scenario_exact": 546586,
+        "RecoverML_indexed": 546586,
+        "robust_local": 546586
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002384144999950877,
+        "RecoverML_previous": 0.002359209000132978,
+        "scenario_exact": 0.0029278339998199954,
+        "robust_local": 0.0024916160000429954
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.989540904677185,
+        "scenario_exact": 1.2280435962914675,
+        "robust_local": 1.0450773757864278
+      }
+    },
+    {
+      "case": "forest_s3_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2512892,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 2512892,
+        "RecoverML_previous": 2512892,
+        "scenario_exact": 2512892,
+        "RecoverML_indexed": 2512892
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0025851810000858677,
+        "RecoverML_previous": 0.0026496319999296247,
+        "scenario_exact": 0.0038748370000121213,
+        "robust_local": 0.010360853000065617
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0249309428785127,
+        "scenario_exact": 1.4988648763407348,
+        "robust_local": 4.007786301895874
+      }
+    },
+    {
+      "case": "forest_s3_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4765139,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 4765139,
+        "RecoverML_previous": 4765139,
+        "robust_local": 4765139,
+        "RecoverML_indexed": 4765139
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003024745000175244,
+        "RecoverML_previous": 0.0031371149998449255,
+        "scenario_exact": 0.003762456000004022,
+        "robust_local": 0.07703897500005041
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0371502389997078,
+        "scenario_exact": 1.2438919643758524,
+        "robust_local": 25.469576772781515
+      }
+    },
+    {
+      "case": "forest_s3_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 557575,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 557575,
+        "RecoverML_indexed": 557575,
+        "RecoverML_previous": 557575,
+        "scenario_exact": 557575
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003746465999938664,
+        "RecoverML_previous": 0.0037012619998222362,
+        "scenario_exact": 0.004287538999960816,
+        "robust_local": 0.005453874000068026
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9879342291863404,
+        "scenario_exact": 1.1444222368576173,
+        "robust_local": 1.4557382878043776
+      }
+    },
+    {
+      "case": "forest_s3_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2523881,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 2523881,
+        "scenario_exact": 2523881,
+        "robust_local": 2523881,
+        "RecoverML_previous": 2523881
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00444001500000013,
+        "RecoverML_previous": 0.004310061000069254,
+        "scenario_exact": 0.0065205710000100225,
+        "robust_local": 0.05470805499999187
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9707311799777991,
+        "scenario_exact": 1.468592110614453,
+        "robust_local": 12.321592382005527
+      }
+    },
+    {
+      "case": "forest_s3_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8944451,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 8944451,
+        "RecoverML_indexed": 8944451,
+        "robust_local": 8944451,
+        "RecoverML_previous": 8944451
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00499057700017147,
+        "RecoverML_previous": 0.005804229999966992,
+        "scenario_exact": 0.006263188999810154,
+        "robust_local": 0.44072278600015125
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1630378611065546,
+        "scenario_exact": 1.2550029785323338,
+        "robust_local": 88.31098808514697
+      }
+    },
+    {
+      "case": "forest_s3_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 558647,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 558647,
+        "robust_local": 558647,
+        "RecoverML_previous": 558647,
+        "RecoverML_indexed": 558647
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0037808600000062142,
+        "RecoverML_previous": 0.004073829999924783,
+        "scenario_exact": 0.004459401999838519,
+        "robust_local": 0.005525908999970852
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.077487661515657,
+        "scenario_exact": 1.1794676343030923,
+        "robust_local": 1.4615481662800975
+      }
+    },
+    {
+      "case": "forest_s3_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2524953,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 2524953,
+        "RecoverML_indexed": 2524953,
+        "robust_local": 2524953,
+        "scenario_exact": 2524953
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004178444999979547,
+        "RecoverML_previous": 0.004068278999966424,
+        "scenario_exact": 0.006015234999949826,
+        "robust_local": 0.030756860000110464
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9736346894565652,
+        "scenario_exact": 1.4395869755325892,
+        "robust_local": 7.360838780996523
+      }
+    },
+    {
+      "case": "forest_s3_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8945523,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 8945523,
+        "RecoverML_previous": 8945523,
+        "scenario_exact": 8945523,
+        "robust_local": 8945523
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005032404000075985,
+        "RecoverML_previous": 0.005014911999978722,
+        "scenario_exact": 0.0062161509999896225,
+        "robust_local": 0.4513873910000257
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9965241264220839,
+        "scenario_exact": 1.2352249540966433,
+        "robust_local": 89.69617522623584
+      }
+    },
+    {
+      "case": "forest_s17_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 530581,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 530581,
+        "scenario_exact": 530581,
+        "robust_local": 530581,
+        "RecoverML_previous": 530581
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012506719999691995,
+        "RecoverML_previous": 0.0012312959997871076,
+        "scenario_exact": 0.0023303840000608034,
+        "robust_local": 0.000960759000008693
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9845075286065658,
+        "scenario_exact": 1.8633054870647092,
+        "robust_local": 0.7681942188138486
+      }
+    },
+    {
+      "case": "forest_s17_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1059660,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 1059660,
+        "RecoverML_previous": 1059660,
+        "RecoverML_indexed": 1059660,
+        "scenario_exact": 1059660
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015425890001097287,
+        "RecoverML_previous": 0.001468329999852358,
+        "scenario_exact": 0.0025999189999765804,
+        "robust_local": 0.002304877000142369
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9518608000886247,
+        "scenario_exact": 1.6854256057781047,
+        "robust_local": 1.4941614389694318
+      }
+    },
+    {
+      "case": "forest_s17_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1534516,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 1534516,
+        "robust_local": 1534516,
+        "RecoverML_indexed": 1534516,
+        "scenario_exact": 1534516
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015034549999199953,
+        "RecoverML_previous": 0.0015823530000034225,
+        "scenario_exact": 0.002367173000038747,
+        "robust_local": 0.004876572000057422
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0524777928754938,
+        "scenario_exact": 1.5744887609969793,
+        "robust_local": 3.2435769612771406
+      }
+    },
+    {
+      "case": "forest_s17_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 530715,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 530715,
+        "RecoverML_indexed": 530715,
+        "scenario_exact": 530715,
+        "RecoverML_previous": 530715
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013459110000439978,
+        "RecoverML_previous": 0.0012313150000409223,
+        "scenario_exact": 0.0021596940000563336,
+        "robust_local": 0.0009469239998907142
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9148561829130386,
+        "scenario_exact": 1.6046335901747837,
+        "robust_local": 0.7035561785732929
+      }
+    },
+    {
+      "case": "forest_s17_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2497021,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 2497021,
+        "scenario_exact": 2497021,
+        "robust_local": 2497021,
+        "RecoverML_indexed": 2497021
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014391749998594605,
+        "RecoverML_previous": 0.0013845429998582404,
+        "scenario_exact": 0.0025153310000405327,
+        "robust_local": 0.0022150280001369538
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.962039362824844,
+        "scenario_exact": 1.7477589593247256,
+        "robust_local": 1.5390956626909567
+      }
+    },
+    {
+      "case": "forest_s17_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1534650,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 1534650,
+        "RecoverML_indexed": 1534650,
+        "scenario_exact": 1534650,
+        "RecoverML_previous": 1534650
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0016510419998212456,
+        "RecoverML_previous": 0.0017100830000345013,
+        "scenario_exact": 0.0026472970000668283,
+        "robust_local": 0.005144923999978346
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0357598414938252,
+        "scenario_exact": 1.6034098468442626,
+        "robust_local": 3.1161678506878534
+      }
+    },
+    {
+      "case": "forest_s17_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 539213,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 539213,
+        "scenario_exact": 539213,
+        "RecoverML_indexed": 539213,
+        "RecoverML_previous": 539213
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002342185999850699,
+        "RecoverML_previous": 0.0022370399999545043,
+        "scenario_exact": 0.0032171539999126253,
+        "robust_local": 0.0025016750000759203
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.955107749810264,
+        "scenario_exact": 1.3735689651110974,
+        "robust_local": 1.068094079733799
+      }
+    },
+    {
+      "case": "forest_s17_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2505519,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 2505519,
+        "robust_local": 2505519,
+        "RecoverML_indexed": 2505519,
+        "scenario_exact": 2505519
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0028747329999987414,
+        "RecoverML_previous": 0.0028147199998329597,
+        "scenario_exact": 0.004530063999936829,
+        "robust_local": 0.01425627800017537
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9791239742383699,
+        "scenario_exact": 1.5758207805520763,
+        "robust_local": 4.959165946952852
+      }
+    },
+    {
+      "case": "forest_s17_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4425231,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 4425231,
+        "RecoverML_previous": 4425231,
+        "scenario_exact": 4425231,
+        "robust_local": 4425231
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0031090120000953902,
+        "RecoverML_previous": 0.0030962180001097295,
+        "scenario_exact": 0.004341650000014852,
+        "robust_local": 0.07644360399990546
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9958848663223981,
+        "scenario_exact": 1.3964725771021926,
+        "robust_local": 24.587748132705833
+      }
+    },
+    {
+      "case": "forest_s17_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 539749,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "scenario_exact": 539749,
+        "RecoverML_previous": 539749,
+        "RecoverML_indexed": 539749,
+        "robust_local": 539749
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002386859999887747,
+        "RecoverML_previous": 0.0025422510000225884,
+        "scenario_exact": 0.0034012399999028275,
+        "robust_local": 0.0025308200001745718
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0651026872720433,
+        "scenario_exact": 1.424985126929433,
+        "robust_local": 1.060313550142696
+      }
+    },
+    {
+      "case": "forest_s17_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2506055,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 2506055,
+        "RecoverML_previous": 2506055,
+        "robust_local": 2506055,
+        "scenario_exact": 2506055
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002636157000097228,
+        "RecoverML_previous": 0.002632099000038579,
+        "scenario_exact": 0.004583093000064764,
+        "robust_local": 0.0103288220000195
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.998460637944364,
+        "scenario_exact": 1.7385508525841702,
+        "robust_local": 3.9181361351537665
+      }
+    },
+    {
+      "case": "forest_s17_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4425767,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 4425767,
+        "scenario_exact": 4425767,
+        "RecoverML_indexed": 4425767,
+        "robust_local": 4425767
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0032054420000804384,
+        "RecoverML_previous": 0.003046164999886969,
+        "scenario_exact": 0.004286868000008326,
+        "robust_local": 0.07808537800019621
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9503104407474936,
+        "scenario_exact": 1.3373718819123073,
+        "robust_local": 24.360252969243152
+      }
+    },
+    {
+      "case": "forest_s17_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 550756,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 550756,
+        "RecoverML_previous": 550756,
+        "scenario_exact": 550756,
+        "robust_local": 550756
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003883212000118874,
+        "RecoverML_previous": 0.0038012779998553015,
+        "scenario_exact": 0.005099722000068141,
+        "robust_local": 0.005493306999824199
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9789004565650641,
+        "scenario_exact": 1.313274165796775,
+        "robust_local": 1.4146296930623505
+      }
+    },
+    {
+      "case": "forest_s17_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2517062,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 2517062,
+        "RecoverML_previous": 2517062,
+        "RecoverML_indexed": 2517062,
+        "robust_local": 2517062
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004381955000098969,
+        "RecoverML_previous": 0.004530854999984513,
+        "scenario_exact": 0.006841161000011198,
+        "robust_local": 0.054685337999899275
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0339802667718359,
+        "scenario_exact": 1.5612120617068606,
+        "robust_local": 12.479666723794328
+      }
+    },
+    {
+      "case": "forest_s17_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8308247,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 8308247,
+        "robust_local": 8308247,
+        "scenario_exact": 8308247,
+        "RecoverML_previous": 8308247
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004950981000092725,
+        "RecoverML_previous": 0.004929471999957968,
+        "scenario_exact": 0.006196332999934384,
+        "robust_local": 0.4410075929999948
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9956556084270262,
+        "scenario_exact": 1.2515364126459656,
+        "robust_local": 89.07479002479214
+      }
+    },
+    {
+      "case": "forest_s17_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 551828,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 551828,
+        "robust_local": 551828,
+        "scenario_exact": 551828,
+        "RecoverML_indexed": 551828
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.003864957000132563,
+        "RecoverML_previous": 0.003764309999951365,
+        "scenario_exact": 0.00406070400003955,
+        "robust_local": 0.005458562000058009
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9739590892789375,
+        "scenario_exact": 1.0506466177761546,
+        "robust_local": 1.4123215342035598
+      }
+    },
+    {
+      "case": "forest_s17_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2518134,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 2518134,
+        "scenario_exact": 2518134,
+        "RecoverML_previous": 2518134,
+        "robust_local": 2518134
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0041185729999142495,
+        "RecoverML_previous": 0.004174126999942018,
+        "scenario_exact": 0.0062947680000888795,
+        "robust_local": 0.030430617000092752
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0134886525087514,
+        "scenario_exact": 1.5283856812104433,
+        "robust_local": 7.388631208121437
+      }
+    },
+    {
+      "case": "forest_s17_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8309319,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 8309319,
+        "RecoverML_indexed": 8309319,
+        "scenario_exact": 8309319,
+        "robust_local": 8309319
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0055121020000115095,
+        "RecoverML_previous": 0.004908171000124639,
+        "scenario_exact": 0.005731133000153932,
+        "robust_local": 0.44423512699995626
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.890435445518677,
+        "scenario_exact": 1.0397363837138653,
+        "robust_local": 80.5926898665933
+      }
+    },
+    {
+      "case": "forest_s29_v2__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 533662,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_indexed": 533662,
+        "robust_local": 533662,
+        "scenario_exact": 533662,
+        "RecoverML_previous": 533662
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0012438500000371278,
+        "RecoverML_previous": 0.001276250000046275,
+        "scenario_exact": 0.002112725999950271,
+        "robust_local": 0.0009790829999474226
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0260481569386826,
+        "scenario_exact": 1.6985376049260026,
+        "robust_local": 0.787139124426738
+      }
+    },
+    {
+      "case": "forest_s29_v2__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 1047888,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "RecoverML_previous": 1047888,
+        "scenario_exact": 1047888,
+        "robust_local": 1047888,
+        "RecoverML_indexed": 1047888
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015002800000729621,
+        "RecoverML_previous": 0.001550412999904438,
+        "scenario_exact": 0.0023866589999670396,
+        "robust_local": 0.0022924630000034085
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0334157622770668,
+        "scenario_exact": 1.5908090488781899,
+        "robust_local": 1.5280234355533104
+      }
+    },
+    {
+      "case": "forest_s29_v2__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1527931,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 1527931,
+        "scenario_exact": 1527931,
+        "RecoverML_indexed": 1527931,
+        "RecoverML_previous": 1527931
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015501330001370661,
+        "RecoverML_previous": 0.0015021930000784778,
+        "scenario_exact": 0.0023636070000065956,
+        "robust_local": 0.004955379999955767
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9690736213896811,
+        "scenario_exact": 1.524776906109089,
+        "robust_local": 3.1967450531777604
+      }
+    },
+    {
+      "case": "forest_s29_v2__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 533796,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "robust_local": 533796,
+        "RecoverML_previous": 533796,
+        "scenario_exact": 533796,
+        "RecoverML_indexed": 533796
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001285897999878216,
+        "RecoverML_previous": 0.0012519249999058957,
+        "scenario_exact": 0.0020379059999413585,
+        "robust_local": 0.00101179500006765
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9735803306517796,
+        "scenario_exact": 1.584811548143292,
+        "robust_local": 0.7868392362096173
+      }
+    },
+    {
+      "case": "forest_s29_v2__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2500102,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 2500102,
+        "robust_local": 2500102,
+        "RecoverML_indexed": 2500102,
+        "RecoverML_previous": 2500102
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014429129998916324,
+        "RecoverML_previous": 0.001402777000066635,
+        "scenario_exact": 0.0022800399999596266,
+        "robust_local": 0.0022037870000986004
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.972184047251628,
+        "scenario_exact": 1.580164569957347,
+        "robust_local": 1.5273180020306922
+      }
+    },
+    {
+      "case": "forest_s29_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 1528065,
+      "nodes": 9,
+      "versions": 2,
+      "sizes": {
+        "scenario_exact": 1528065,
+        "RecoverML_indexed": 1528065,
+        "robust_local": 1528065,
+        "RecoverML_previous": 1528065
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001528773000018191,
+        "RecoverML_previous": 0.0015981930000634748,
+        "scenario_exact": 0.0022598620000735536,
+        "robust_local": 0.004924320999862175
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0454089652580585,
+        "scenario_exact": 1.4782194609969326,
+        "robust_local": 3.2210936481764003
+      }
+    },
+    {
+      "case": "forest_s29_v8__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 542298,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 542298,
+        "robust_local": 542298,
+        "RecoverML_indexed": 542298,
+        "scenario_exact": 542298
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0023794149999503134,
+        "RecoverML_previous": 0.0023870809998243203,
+        "scenario_exact": 0.003102009000031103,
+        "robust_local": 0.0025252990001263242
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0032218002635804,
+        "scenario_exact": 1.303685569812697,
+        "robust_local": 1.0613108685029964
+      }
+    },
+    {
+      "case": "forest_s29_v8__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2508604,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "robust_local": 2508604,
+        "RecoverML_previous": 2508604,
+        "scenario_exact": 2508604,
+        "RecoverML_indexed": 2508604
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002833186000088972,
+        "RecoverML_previous": 0.0027907060000416095,
+        "scenario_exact": 0.004195256000002701,
+        "robust_local": 0.013155204999975467
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.985006279133799,
+        "scenario_exact": 1.4807555874802978,
+        "robust_local": 4.6432549785161825
+      }
+    },
+    {
+      "case": "forest_s29_v8__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4513558,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 4513558,
+        "RecoverML_previous": 4513558,
+        "scenario_exact": 4513558,
+        "robust_local": 4513558
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030891449998762255,
+        "RecoverML_previous": 0.003100527000015063,
+        "scenario_exact": 0.003943785000046773,
+        "robust_local": 0.07724776000009115
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.003684514692348,
+        "scenario_exact": 1.2766590756357474,
+        "robust_local": 25.006194271614405
+      }
+    },
+    {
+      "case": "forest_s29_v8__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 542834,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_indexed": 542834,
+        "RecoverML_previous": 542834,
+        "scenario_exact": 542834,
+        "robust_local": 542834
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0023958980000315933,
+        "RecoverML_previous": 0.0023267479998594354,
+        "scenario_exact": 0.002918485000009241,
+        "robust_local": 0.0025232250000044587
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.971138170251302,
+        "scenario_exact": 1.2181173822803628,
+        "robust_local": 1.0531437481775878
+      }
+    },
+    {
+      "case": "forest_s29_v8__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2509140,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 2509140,
+        "RecoverML_indexed": 2509140,
+        "robust_local": 2509140,
+        "scenario_exact": 2509140
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002643861000024117,
+        "RecoverML_previous": 0.0028796130000046105,
+        "scenario_exact": 0.003947112000105335,
+        "robust_local": 0.010408983000161243
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0891695894672009,
+        "scenario_exact": 1.492934764750995,
+        "robust_local": 3.9370386718765826
+      }
+    },
+    {
+      "case": "forest_s29_v8__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 4514094,
+      "nodes": 21,
+      "versions": 8,
+      "sizes": {
+        "RecoverML_previous": 4514094,
+        "scenario_exact": 4514094,
+        "robust_local": 4514094,
+        "RecoverML_indexed": 4514094
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030991529999937484,
+        "RecoverML_previous": 0.0030974710000464256,
+        "scenario_exact": 0.004096912999784763,
+        "robust_local": 0.07726455200008786
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9994572710842846,
+        "scenario_exact": 1.3219460284126106,
+        "robust_local": 24.93086078688071
+      }
+    },
+    {
+      "case": "forest_s29_v16__model_prediction__intact__RecoverML_exact",
+      "expected_bytes": 553830,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 553830,
+        "scenario_exact": 553830,
+        "robust_local": 553830,
+        "RecoverML_indexed": 553830
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0037717240002166363,
+        "RecoverML_previous": 0.0037796179999531887,
+        "scenario_exact": 0.004493474000128117,
+        "robust_local": 0.005528363000166792
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0020929420435056,
+        "scenario_exact": 1.1913581163070324,
+        "robust_local": 1.465739009495196
+      }
+    },
+    {
+      "case": "forest_s29_v16__model_prediction__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2520136,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 2520136,
+        "RecoverML_indexed": 2520136,
+        "RecoverML_previous": 2520136,
+        "robust_local": 2520136
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004279593999854114,
+        "RecoverML_previous": 0.004334556999992856,
+        "scenario_exact": 0.006508819000146104,
+        "robust_local": 0.05021157900000617
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0128430407512057,
+        "scenario_exact": 1.5208963748355524,
+        "robust_local": 11.732790307145446
+      }
+    },
+    {
+      "case": "forest_s29_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8516628,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 8516628,
+        "robust_local": 8516628,
+        "RecoverML_indexed": 8516628,
+        "RecoverML_previous": 8516628
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0049830519999432,
+        "RecoverML_previous": 0.004909042999997837,
+        "scenario_exact": 0.006158583000114959,
+        "robust_local": 0.4370106589999523
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9851478571874813,
+        "scenario_exact": 1.2359058264262863,
+        "robust_local": 87.69939767936069
+      }
+    },
+    {
+      "case": "forest_s29_v16__investigation_features__intact__RecoverML_exact",
+      "expected_bytes": 554902,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 554902,
+        "RecoverML_indexed": 554902,
+        "RecoverML_previous": 554902,
+        "robust_local": 554902
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0038973789999090513,
+        "RecoverML_previous": 0.0037448529999437596,
+        "scenario_exact": 0.003976948000172342,
+        "robust_local": 0.005465454999921349
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9608644681544055,
+        "scenario_exact": 1.0204160283783403,
+        "robust_local": 1.4023411631378138
+      }
+    },
+    {
+      "case": "forest_s29_v16__investigation_features__legacy_removed__RecoverML_exact",
+      "expected_bytes": 2521208,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 2521208,
+        "RecoverML_indexed": 2521208,
+        "robust_local": 2521208,
+        "RecoverML_previous": 2521208
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004092073000037999,
+        "RecoverML_previous": 0.004020548999960738,
+        "scenario_exact": 0.005932398999902944,
+        "robust_local": 0.0305490099999588
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9825213284131058,
+        "scenario_exact": 1.4497295135858659,
+        "robust_local": 7.4654117850964825
+      }
+    },
+    {
+      "case": "forest_s29_v16__investigation_features__training_prediction_removed__RecoverML_exact",
+      "expected_bytes": 8517700,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 8517700,
+        "scenario_exact": 8517700,
+        "robust_local": 8517700,
+        "RecoverML_indexed": 8517700
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005140345999961937,
+        "RecoverML_previous": 0.00499147699997593,
+        "scenario_exact": 0.0061827689999063296,
+        "robust_local": 0.44450937400006296
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9710391090430276,
+        "scenario_exact": 1.202792380114512,
+        "robust_local": 86.47460190488236
+      }
+    }
+  ],
+  "calls_sha256": "0b88b843f0722d323255d3c2eb6a1ad2c3b4098e74d34b358c8fc2b6cf8368d8",
+  "selections_sha256": "baff7fa08de928878a16f3530efe0afe92920033c7e9f5686cdf3c6feadc774c",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}

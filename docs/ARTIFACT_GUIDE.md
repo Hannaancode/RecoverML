@@ -22,6 +22,7 @@ Use a new output directory for each fresh run. Saved-data audits inspect existin
 
 | Study | Protocol and results | Evidence |
 |---|---|---|
+| Planner efficiency, 26 October | [Protocol](PLANNER_EFFICIENCY_OCT26.md), [results](../results/research/planner_efficiency_oct26/RESULTS.md) | All 230 frozen conditions plus 24 scaling controls; 2,904 paired timing calls, retained sets, original artifact ZIPs and audits |
 | Three-seed separate/shared preprocessing loss | [Protocol](STRONG_BASELINE_FOLLOWUP_OCT16.md), [results](../results/research/strong_baseline_cloud_oct16/RESULTS.md) | Per-seed captures, raw ledgers, planning repetitions and integer flow certificates |
 | Native DVC recovery at equal storage | [Protocol](NATIVE_FRONTIER_PROTOCOL_OCT16.md), [results](../results/research/native_frontier_cloud_oct16/RESULTS.md) | Final revision in `v4/`; earlier revisions are separately labelled |
 | Scientific multi-budget matrix | [Protocol](SCIENTIFIC_PROTOCOL_OCT15.md), [results](../results/research/scientific_complete_oct16/RESULTS.md) | Eight captures, 1,920 method-budget rows and 36,480 actual requests |

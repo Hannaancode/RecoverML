@@ -1,0 +1,47 @@
+{
+  "artifact": {
+    "id": 12633504745,
+    "name": "planner-efficiency-letter",
+    "size_in_bytes": 6863,
+    "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12633504745",
+    "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12633504745/zip",
+    "expired": false,
+    "created_at": "2026-10-26T07:30:31Z",
+    "expires_at": "2027-01-24T07:29:36Z",
+    "updated_at": "2026-10-26T07:30:31Z",
+    "digest": "sha256:f3f575ea3a63def9d8988de51bf24de1289daf1727193a869197fb39f8f2c12b",
+    "workflow_run": {
+      "id": 40286111028,
+      "repository_id": 1403005739,
+      "head_repository_id": 1403005739,
+      "head_branch": "research/scientific-validation-oct15",
+      "head_sha": "296f1266593243fe3de923b6f38aa761aa599e6c"
+    }
+  },
+  "files": {
+    "planner_comparison/calls.json.gz": {
+      "bytes": 972,
+      "sha256": "83d2c10c303cc99d28c35d21eb5839e8b631f4238c4e46b45d8eb393a4e28d90"
+    },
+    "planner_comparison/report.json": {
+      "bytes": 3180,
+      "sha256": "1568e18a1114b21deeb27bf6c0cfa1d1d19ffec2c0e96bba31df5fa686e3f750"
+    },
+    "planner_comparison/progress.json": {
+      "bytes": 46,
+      "sha256": "e8b1ec7481c0195b6eb4bdb903a0a244a9308b4fdc8746cf232310f3263622cc"
+    },
+    "planner_comparison/run_start.json": {
+      "bytes": 4456,
+      "sha256": "535f18d82381ff491a1a0205c529576128d981a7462a5d52400b2c2ad7e81013"
+    },
+    "planner_comparison/selections.json.gz": {
+      "bytes": 1509,
+      "sha256": "1b7d8b828c4a66df6216b08f0ad6d3b224c6c344971623229b277e4cf3dbb4a3"
+    },
+    "audit.json": {
+      "bytes": 1319,
+      "sha256": "13fba66c8129f2e7c07db8f81d4cffc30fea0a0dc48d578a91a57575616ba58c"
+    }
+  }
+}

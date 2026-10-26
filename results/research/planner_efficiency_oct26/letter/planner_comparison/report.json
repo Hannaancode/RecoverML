@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "group": "letter",
+  "conditions": 2,
+  "calls": 24,
+  "all_exact_equal_frozen": true,
+  "all_closures_pass": true,
+  "input_sha256": {
+    "results/research/gigabyte_letter_oct16/manifest.json": "28230fb3baab1578dc307c18dbfddf7a19e6c9eb36311958a792b87bc9f20397",
+    "results/research/gigabyte_letter_oct16/summary.csv": "5575e3fb120e5474d62806bf92f340baebf276ec97f5c63b0d3c77b3ff8cb1de"
+  },
+  "source_changed": [],
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 2,
+      "indexed_faster": 1,
+      "indexed_slower": 1,
+      "median_paired_speedup": 1.0046741303146876,
+      "minimum_paired_speedup": 0.9993424476408996,
+      "maximum_paired_speedup": 1.0100058129884757,
+      "storage_wins": 0,
+      "storage_ties": 2
+    },
+    "scenario_exact": {
+      "cases": 2,
+      "indexed_faster": 2,
+      "indexed_slower": 0,
+      "median_paired_speedup": 2.6371505853531674,
+      "minimum_paired_speedup": 2.338412368336718,
+      "maximum_paired_speedup": 2.935888802369617,
+      "storage_wins": 0,
+      "storage_ties": 2
+    },
+    "robust_local": {
+      "cases": 2,
+      "indexed_faster": 2,
+      "indexed_slower": 0,
+      "median_paired_speedup": 82.66342046851264,
+      "minimum_paired_speedup": 16.827054287864165,
+      "maximum_paired_speedup": 148.4997866491611,
+      "storage_wins": 0,
+      "storage_ties": 2
+    }
+  },
+  "comparisons": [
+    {
+      "case": "preprocessing",
+      "expected_bytes": 4829269,
+      "nodes": 39,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 4829269,
+        "RecoverML_previous": 4829269,
+        "robust_local": 4829269,
+        "RecoverML_indexed": 4829269
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0033218689999898743,
+        "RecoverML_previous": 0.0033551069999759875,
+        "scenario_exact": 0.009752638000009028,
+        "robust_local": 0.05589727000000266
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0100058129884757,
+        "scenario_exact": 2.935888802369617,
+        "robust_local": 16.827054287864165
+      }
+    },
+    {
+      "case": "broad",
+      "expected_bytes": 3669548445,
+      "nodes": 39,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 3669548445,
+        "scenario_exact": 3669548445,
+        "RecoverML_previous": 3669548445,
+        "robust_local": 3669548445
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0034567590000165183,
+        "RecoverML_previous": 0.003454485999981216,
+        "scenario_exact": 0.008083327999997891,
+        "robust_local": 0.5133279740000205
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9993424476408996,
+        "scenario_exact": 2.338412368336718,
+        "robust_local": 148.4997866491611
+      }
+    }
+  ],
+  "calls_sha256": "83d2c10c303cc99d28c35d21eb5839e8b631f4238c4e46b45d8eb393a4e28d90",
+  "selections_sha256": "1b7d8b828c4a66df6216b08f0ad6d3b224c6c344971623229b277e4cf3dbb4a3",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}

@@ -1,0 +1,8 @@
+test_both_scaling_topologies_match_analytic_optimum_without_payloads (test_planner_followup.PlannerFollowupTests.test_both_scaling_topologies_match_analytic_optimum_without_payloads) ... ok
+test_missing_duplicate_and_replaced_timings_are_rejected (test_planner_followup.PlannerFollowupTests.test_missing_duplicate_and_replaced_timings_are_rejected) ... ok
+test_release_requires_all_five_groups_and_original_zip_identity (test_planner_followup.PlannerFollowupTests.test_release_requires_all_five_groups_and_original_zip_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.608s
+
+OK

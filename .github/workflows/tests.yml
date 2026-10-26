@@ -67,6 +67,7 @@ jobs:
         run: |
           PYTHONPATH=src python scripts/audit_cloud_followup.py results/research/strong_baseline_cloud_oct16 --source-commit 00bd37a8addd6cea919edf2189c3246811bb669e --output work/complete_cloud_audit.json
           PYTHONPATH=src python scripts/audit_native_frontier.py results/research/native_frontier_cloud_oct16/v4 --source-commit f00981ea84357199f0bde6916a5536684b1ed567 --output work/complete_native_audit.json
+          PYTHONPATH=src python scripts/audit_planner_efficiency_release.py results/research/planner_efficiency_oct26 --output work/complete_planner_audit.json
       - run: recoverml benchmark --config configs/smoke.json --out work/ci_smoke
       - run: python -m recoverml.audit work/ci_smoke
       - uses: actions/upload-artifact@v4
@@ -78,6 +79,7 @@ jobs:
             work/release_integrity.json
             work/complete_cloud_audit.json
             work/complete_native_audit.json
+            work/complete_planner_audit.json
   neural-and-controls:
     runs-on: ubuntu-latest
     env:

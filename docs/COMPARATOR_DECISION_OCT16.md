@@ -30,3 +30,7 @@ an auditable exact retention/recovery implementation using established optimizat
 and reproducible evidence showing its benefits and failure boundaries.
 The file-export improvement is part of the systems implementation.
 A new general optimization theory, universal dominance and independent human endorsement remain unestablished.
+
+## Planner follow-up on 26 October
+
+The [complete fixed follow-up](../results/research/planner_efficiency_oct26/RESULTS.md) preserves all 230 frozen optima and reports every slower case. Against the previous implementation, 4,096 independent branches improve by a median 7.824x and a wide retained frontier by 1.950x across three seeds; the small frozen groups remain near parity. Revised planning is faster than local search in 212/230 conditions and scenario exact in 217/230, so neither comparison is a universal win. Storage parity with the manual optimum remains unchanged.

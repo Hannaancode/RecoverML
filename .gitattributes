@@ -1,3 +1,4 @@
 # Raw cloud evidence must preserve the runner's original LF/CRLF bytes.
 results/research/strong_baseline_cloud_oct16/** -text whitespace=cr-at-eol
 results/research/native_frontier_cloud_oct16/** -text whitespace=cr-at-eol
+results/research/planner_efficiency_oct26/** -text whitespace=cr-at-eol

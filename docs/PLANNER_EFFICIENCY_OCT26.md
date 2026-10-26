@@ -50,6 +50,6 @@ source identities, progress and audit reports even when a later step fails.
 Individual retained sets are content-addressed once and explicitly linked from timing rows.
 The original capture archives and published runtime measurements are unchanged.
 
-The new measurements are pending at this source checkpoint. No timing improvement is claimed before the complete runs and audits finish.
+The complete five-group run and audit are now published in [the results](../results/research/planner_efficiency_oct26/RESULTS.md). All 230 frozen optima are preserved; the largest independent-branch control improves by 7.824x and the wide-frontier control by 1.950x at the median across three seeds. Small frozen groups remain near parity, and every slower case is retained.
 A proven optimum cannot be beaten on retained bytes under identical assumptions; the comparison tests the cost of finding and checking it.
 Metadata-only evidence does not constitute a new model training or payload-recovery experiment.

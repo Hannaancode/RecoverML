@@ -1,0 +1,1716 @@
+{
+  "status": "PASS",
+  "group": "cloud",
+  "conditions": 72,
+  "calls": 864,
+  "all_exact_equal_frozen": true,
+  "all_closures_pass": true,
+  "input_sha256": {
+    "results/research/strong_baseline_cloud_oct16/seed20261016/separate/summary.csv": "b57e75c22d145a8dd37f303730aedaa5676eea29a9eff3a2d40d419697e6e27c",
+    "results/research/strong_baseline_cloud_oct16/seed20261016/separate/captures.tar.gz": "e3d49abd217e2d7c89cd83db65e1e9788509aed52bd5e8f43071bee06647d7d3",
+    "results/research/strong_baseline_cloud_oct16/seed20261016/shared/summary.csv": "728fbc096c337ff3a197fa0ee76500ab119b11cb9932d49870025f2f07431702",
+    "results/research/strong_baseline_cloud_oct16/seed20261016/shared/captures.tar.gz": "1dd0ee8b9a523517d9491b76edee7cd5ea2b4f5e4ddd3f5ad6b205d9fefafa7a",
+    "results/research/strong_baseline_cloud_oct16/seed20261017/separate/summary.csv": "c34357b448120a28d797c4b5645d6ed53f177c2805075cdee09154e8b332c076",
+    "results/research/strong_baseline_cloud_oct16/seed20261017/separate/captures.tar.gz": "1232bc5301c7b7344f084d22c0bd8f7f39e959c3b82ab039b774de579d7dd3b6",
+    "results/research/strong_baseline_cloud_oct16/seed20261017/shared/summary.csv": "6773c99dc5ce3a678d88792f0e2362eae8db7e87640b66d8fc97f348ec603007",
+    "results/research/strong_baseline_cloud_oct16/seed20261017/shared/captures.tar.gz": "e60450feba6df90ef86b94e81003046bc4cced507afbf7ee9fae820f50090479",
+    "results/research/strong_baseline_cloud_oct16/seed20261018/separate/summary.csv": "3d2774560bb38ecbce29c4c9d30ad6303d9b376fd0af93b9bf20f509bf0970ed",
+    "results/research/strong_baseline_cloud_oct16/seed20261018/separate/captures.tar.gz": "aa9eca3e660f15e299cbbe3bdbcd78d07b0a595d5690672d2238b17e12373c29",
+    "results/research/strong_baseline_cloud_oct16/seed20261018/shared/summary.csv": "9bc2142f5542637f3e06f315bf9fcce4d3ba4dc907ac94fcb08f6dc8f5ab5d41",
+    "results/research/strong_baseline_cloud_oct16/seed20261018/shared/captures.tar.gz": "a3c62aa0f916d02ba2021c57b42d3a22daca5ce39ab29b7dffd563b6f2ad6635"
+  },
+  "source_changed": [],
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 72,
+      "indexed_faster": 30,
+      "indexed_slower": 42,
+      "median_paired_speedup": 0.9954399370788296,
+      "minimum_paired_speedup": 0.2838045551906677,
+      "maximum_paired_speedup": 3.051944076435269,
+      "storage_wins": 0,
+      "storage_ties": 72
+    },
+    "scenario_exact": {
+      "cases": 72,
+      "indexed_faster": 71,
+      "indexed_slower": 1,
+      "median_paired_speedup": 1.61623389794877,
+      "minimum_paired_speedup": 0.4576655107929096,
+      "maximum_paired_speedup": 2.1695992548973595,
+      "storage_wins": 0,
+      "storage_ties": 72
+    },
+    "robust_local": {
+      "cases": 72,
+      "indexed_faster": 72,
+      "indexed_slower": 0,
+      "median_paired_speedup": 10.773150791305795,
+      "minimum_paired_speedup": 2.2328041578586526,
+      "maximum_paired_speedup": 1172.1622829241942,
+      "storage_wins": 15,
+      "storage_ties": 57
+    }
+  },
+  "comparisons": [
+    {
+      "case": "separate/breast_cancer-s20261016-v16-concat0",
+      "expected_bytes": 228623,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 228623,
+        "robust_local": 228623,
+        "RecoverML_previous": 228623,
+        "scenario_exact": 228623
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005476388000005272,
+        "RecoverML_previous": 0.00525795500001891,
+        "scenario_exact": 0.008863765000000967,
+        "robust_local": 0.05316729199998349
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9601136734675937,
+        "scenario_exact": 1.618542185103107,
+        "robust_local": 9.708459663546904
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261016-v16-concat1",
+      "expected_bytes": 226990,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 226990,
+        "RecoverML_previous": 226990,
+        "robust_local": 226990,
+        "scenario_exact": 226990
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0046527639999851544,
+        "RecoverML_previous": 0.005224112000007608,
+        "scenario_exact": 0.007665105000000949,
+        "robust_local": 0.031000791999986177
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.122797545722129,
+        "scenario_exact": 1.6474304306054222,
+        "robust_local": 6.662876518148157
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261016-v4-concat0",
+      "expected_bytes": 169764,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 169764,
+        "robust_local": 169764,
+        "scenario_exact": 169764,
+        "RecoverML_indexed": 169764
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019089399999927537,
+        "RecoverML_previous": 0.0018837620000056177,
+        "scenario_exact": 0.0036847089999980653,
+        "robust_local": 0.006769925999975612
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9868104812161558,
+        "scenario_exact": 1.9302382474106323,
+        "robust_local": 3.5464320512961702
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261016-v4-concat1",
+      "expected_bytes": 169742,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 169742,
+        "scenario_exact": 169742,
+        "RecoverML_indexed": 169742,
+        "robust_local": 169742
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019019869999965522,
+        "RecoverML_previous": 0.0018756769999868084,
+        "scenario_exact": 0.003587475000017548,
+        "robust_local": 0.007460958999985223
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9861670978772245,
+        "scenario_exact": 1.886172197824723,
+        "robust_local": 3.9227181889249234
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261016-v64-concat0",
+      "expected_bytes": 381036,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "scenario_exact": 381036,
+        "RecoverML_indexed": 381036,
+        "RecoverML_previous": 381036,
+        "robust_local": 381036
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.016230426999982228,
+        "RecoverML_previous": 0.01699387700000443,
+        "scenario_exact": 0.03362321599999518,
+        "robust_local": 0.6979563370000221
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0470381956077335,
+        "scenario_exact": 2.071616230431399,
+        "robust_local": 43.00295592967372
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261016-v64-concat1",
+      "expected_bytes": 372838,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "scenario_exact": 372838,
+        "RecoverML_previous": 372838,
+        "RecoverML_indexed": 372838,
+        "robust_local": 372838
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015134716999995135,
+        "RecoverML_previous": 0.014972113999988323,
+        "scenario_exact": 0.02715390599999523,
+        "robust_local": 0.37099037900000553
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9892562906853916,
+        "scenario_exact": 1.794146927227246,
+        "robust_local": 24.512541529526107
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v16-concat0",
+      "expected_bytes": 68073,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 68073,
+        "RecoverML_indexed": 68073,
+        "RecoverML_previous": 68073,
+        "scenario_exact": 68073
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004837531999982048,
+        "RecoverML_previous": 0.004488684999984116,
+        "scenario_exact": 0.009141698999997061,
+        "robust_local": 0.05394140300001027
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9278874020886629,
+        "scenario_exact": 1.8897443985964302,
+        "robust_local": 11.150603861682042
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v16-concat1",
+      "expected_bytes": 66311,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 66311,
+        "robust_local": 66440,
+        "RecoverML_previous": 66311,
+        "RecoverML_indexed": 66311
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004753534000002446,
+        "RecoverML_previous": 0.00418091500000628,
+        "scenario_exact": 0.008603676000006999,
+        "robust_local": 0.054404595999983485
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.8795382551180088,
+        "scenario_exact": 1.8099536050447038,
+        "robust_local": 11.445084015377924
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v4-concat0",
+      "expected_bytes": 41051,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 41051,
+        "robust_local": 41051,
+        "RecoverML_indexed": 41051,
+        "scenario_exact": 41051
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00188908799998444,
+        "RecoverML_previous": 0.0018870849999927941,
+        "scenario_exact": 0.0037910309999915626,
+        "robust_local": 0.006633324999995693
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9989397000078014,
+        "scenario_exact": 2.006804870933905,
+        "robust_local": 3.5113901523117663
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v4-concat1",
+      "expected_bytes": 41023,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 41023,
+        "robust_local": 41023,
+        "RecoverML_previous": 41023,
+        "RecoverML_indexed": 41023
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018694819999893753,
+        "RecoverML_previous": 0.0018502549999936946,
+        "scenario_exact": 0.0036887980000130938,
+        "robust_local": 0.0075155559999871
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9897153329126518,
+        "scenario_exact": 1.9731658288413894,
+        "robust_local": 4.020127500574926
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v64-concat0",
+      "expected_bytes": 138592,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_indexed": 138592,
+        "RecoverML_previous": 138592,
+        "scenario_exact": 138592,
+        "robust_local": 138592
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014624276000006375,
+        "RecoverML_previous": 0.01443118199998139,
+        "scenario_exact": 0.031369858000005024,
+        "robust_local": 0.69455854200001
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9867963378135847,
+        "scenario_exact": 2.145053744882232,
+        "robust_local": 47.493533491826
+      }
+    },
+    {
+      "case": "separate/wine-s20261016-v64-concat1",
+      "expected_bytes": 130396,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_indexed": 130396,
+        "RecoverML_previous": 130396,
+        "scenario_exact": 130396,
+        "robust_local": 130525
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.013440988000013476,
+        "RecoverML_previous": 0.013238446000002568,
+        "scenario_exact": 0.0259093630000109,
+        "robust_local": 0.6721550210000089
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9849310184630248,
+        "scenario_exact": 1.9276382807562153,
+        "robust_local": 50.00785812764173
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v16-concat0",
+      "expected_bytes": 228649,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 228649,
+        "robust_local": 228649,
+        "RecoverML_previous": 228649,
+        "scenario_exact": 228649
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005269956000006459,
+        "RecoverML_previous": 0.005193973000018559,
+        "scenario_exact": 0.007218155999993314,
+        "robust_local": 0.35731206299999485
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9855818530576332,
+        "scenario_exact": 1.3696805058684487,
+        "robust_local": 67.8017165607373
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v16-concat1",
+      "expected_bytes": 227016,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 227016,
+        "scenario_exact": 227016,
+        "RecoverML_previous": 227016,
+        "robust_local": 227016
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004825870000018995,
+        "RecoverML_previous": 0.004725440999976627,
+        "scenario_exact": 0.006017995999997083,
+        "robust_local": 0.02761678000001666
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9791894518414352,
+        "scenario_exact": 1.2470282042353806,
+        "robust_local": 5.7226531174499025
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v4-concat0",
+      "expected_bytes": 169790,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_indexed": 169790,
+        "RecoverML_previous": 169790,
+        "scenario_exact": 169790,
+        "robust_local": 169790
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001880612999997311,
+        "RecoverML_previous": 0.0018882770000061555,
+        "scenario_exact": 0.002970574999977771,
+        "robust_local": 0.013422733999988168
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0040752669522415,
+        "scenario_exact": 1.579578041831051,
+        "robust_local": 7.137424871575045
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v4-concat1",
+      "expected_bytes": 169768,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 169768,
+        "scenario_exact": 169768,
+        "RecoverML_indexed": 169768,
+        "RecoverML_previous": 169768
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001882596000001513,
+        "RecoverML_previous": 0.001858381000005238,
+        "scenario_exact": 0.0029576009999914277,
+        "robust_local": 0.01593711999998959
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9871374421297743,
+        "scenario_exact": 1.5710226729415397,
+        "robust_local": 8.465501892055855
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v64-concat0",
+      "expected_bytes": 381062,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 464163,
+        "scenario_exact": 381062,
+        "RecoverML_previous": 381062,
+        "RecoverML_indexed": 381062
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.016905624999992597,
+        "RecoverML_previous": 0.016618477000008625,
+        "scenario_exact": 0.02393502500001432,
+        "robust_local": 17.38357601300001
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.98301464749253,
+        "scenario_exact": 1.4158024326237453,
+        "robust_local": 1028.271715065703
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261016-v64-concat1",
+      "expected_bytes": 372864,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 372864,
+        "RecoverML_previous": 372864,
+        "scenario_exact": 372864,
+        "RecoverML_indexed": 372864
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014517857000043932,
+        "RecoverML_previous": 0.0145938300000239,
+        "scenario_exact": 0.018882559000019228,
+        "robust_local": 0.32246108100002857
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.005233072620824,
+        "scenario_exact": 1.300643683152554,
+        "robust_local": 22.21134159119027
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v16-concat0",
+      "expected_bytes": 68099,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 68099,
+        "RecoverML_previous": 68099,
+        "robust_local": 86926,
+        "scenario_exact": 68099
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004439762999993491,
+        "RecoverML_previous": 0.004717766999988271,
+        "scenario_exact": 0.006879238000010446,
+        "robust_local": 0.35317711100003635
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0626168558986568,
+        "scenario_exact": 1.5494606356286431,
+        "robust_local": 79.54864054692878
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v16-concat1",
+      "expected_bytes": 66337,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 66337,
+        "scenario_exact": 66337,
+        "robust_local": 66337,
+        "RecoverML_indexed": 66337
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00452197800001386,
+        "RecoverML_previous": 0.004104492000010396,
+        "scenario_exact": 0.006115258999955131,
+        "robust_local": 0.02713530300002276
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9076762425641645,
+        "scenario_exact": 1.3523416080167545,
+        "robust_local": 6.000759623319616
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v4-concat0",
+      "expected_bytes": 41077,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 41077,
+        "RecoverML_previous": 41077,
+        "RecoverML_indexed": 41077,
+        "robust_local": 41077
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001839363999977195,
+        "RecoverML_previous": 0.0018269909999730771,
+        "scenario_exact": 0.0030123439999556467,
+        "robust_local": 0.013145952000002126
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9932732183492385,
+        "scenario_exact": 1.6377095561253754,
+        "robust_local": 7.147009509898592
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v4-concat1",
+      "expected_bytes": 41049,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_indexed": 41049,
+        "RecoverML_previous": 41049,
+        "scenario_exact": 41049,
+        "robust_local": 41049
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018458469999700355,
+        "RecoverML_previous": 0.0018042080000100214,
+        "scenario_exact": 0.0029229770000256394,
+        "robust_local": 0.004296363000037218
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.977441792325859,
+        "scenario_exact": 1.58354240631704,
+        "robust_local": 2.3275834888303106
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v64-concat0",
+      "expected_bytes": 138618,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_indexed": 138618,
+        "RecoverML_previous": 138618,
+        "scenario_exact": 138618,
+        "robust_local": 270411
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.05017357100001618,
+        "RecoverML_previous": 0.014239487999986977,
+        "scenario_exact": 0.022962713000026724,
+        "robust_local": 17.270060242
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.2838045551906677,
+        "scenario_exact": 0.4576655107929096,
+        "robust_local": 344.20632013604194
+      }
+    },
+    {
+      "case": "shared/wine-s20261016-v64-concat1",
+      "expected_bytes": 130422,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 130422,
+        "robust_local": 130422,
+        "scenario_exact": 130422,
+        "RecoverML_indexed": 130422
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.013040929999988293,
+        "RecoverML_previous": 0.013235026000018024,
+        "scenario_exact": 0.019520558000010624,
+        "robust_local": 0.3225038520000112
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.01488360109516,
+        "scenario_exact": 1.4968685515548468,
+        "robust_local": 24.73012676245488
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v16-concat0",
+      "expected_bytes": 228622,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 228622,
+        "RecoverML_previous": 228622,
+        "scenario_exact": 228622,
+        "robust_local": 228622
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005392449999988003,
+        "RecoverML_previous": 0.005135415999973247,
+        "scenario_exact": 0.00879748599999175,
+        "robust_local": 0.053261339000016505
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9523344676324625,
+        "scenario_exact": 1.6314450759879688,
+        "robust_local": 9.87702046382164
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v16-concat1",
+      "expected_bytes": 226986,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 226986,
+        "RecoverML_indexed": 226986,
+        "robust_local": 226986,
+        "scenario_exact": 226986
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005157747999987805,
+        "RecoverML_previous": 0.004649941000025137,
+        "scenario_exact": 0.007687343000043256,
+        "robust_local": 0.03109395299998141
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9015448215066211,
+        "scenario_exact": 1.4904456363632794,
+        "robust_local": 6.028590966455695
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v4-concat0",
+      "expected_bytes": 169762,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_indexed": 169762,
+        "robust_local": 169762,
+        "RecoverML_previous": 169762,
+        "scenario_exact": 169762
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001886143000035645,
+        "RecoverML_previous": 0.0018876070000146683,
+        "scenario_exact": 0.0035881299999687144,
+        "robust_local": 0.006707867999978134
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.00077618716025,
+        "scenario_exact": 1.90236371256098,
+        "robust_local": 3.5563941863641126
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v4-concat1",
+      "expected_bytes": 169742,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 169742,
+        "scenario_exact": 169742,
+        "RecoverML_indexed": 169742,
+        "RecoverML_previous": 169742
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018458370000189461,
+        "RecoverML_previous": 0.0018712849999928949,
+        "scenario_exact": 0.0035141809999572615,
+        "robust_local": 0.00755620600000384
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0137866994613758,
+        "scenario_exact": 1.9038414550803733,
+        "robust_local": 4.093647488877014
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v64-concat0",
+      "expected_bytes": 381019,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 381019,
+        "RecoverML_indexed": 381019,
+        "scenario_exact": 381019,
+        "robust_local": 381019
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.016212133999999878,
+        "RecoverML_previous": 0.016215581999972528,
+        "scenario_exact": 0.032642091000013806,
+        "robust_local": 0.6868001099999788
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0002126802043858,
+        "scenario_exact": 2.013435800617861,
+        "robust_local": 42.36333785545962
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261017-v64-concat1",
+      "expected_bytes": 372827,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 372827,
+        "scenario_exact": 372827,
+        "RecoverML_previous": 372827,
+        "RecoverML_indexed": 372827
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014659399999970901,
+        "RecoverML_previous": 0.014771641999971052,
+        "scenario_exact": 0.02729709999999841,
+        "robust_local": 0.36962871299999733
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.007656657161983,
+        "scenario_exact": 1.8620884893005576,
+        "robust_local": 25.214450318616795
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v16-concat0",
+      "expected_bytes": 68073,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 68073,
+        "RecoverML_previous": 68073,
+        "RecoverML_indexed": 68073,
+        "scenario_exact": 68073
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004768122999962543,
+        "RecoverML_previous": 0.004377377000025717,
+        "scenario_exact": 0.008793248000017684,
+        "robust_local": 0.05282556800000293
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9180503523210506,
+        "scenario_exact": 1.8441739024112342,
+        "robust_local": 11.07890211733588
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v16-concat1",
+      "expected_bytes": 66314,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 66314,
+        "RecoverML_previous": 66314,
+        "RecoverML_indexed": 66314,
+        "robust_local": 66443
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0041520330000253125,
+        "RecoverML_previous": 0.004148135999969327,
+        "scenario_exact": 0.007870328000024074,
+        "robust_local": 0.05383730400001241
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.999061423631276,
+        "scenario_exact": 1.8955359940482392,
+        "robust_local": 12.96649231826534
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v4-concat0",
+      "expected_bytes": 41049,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_indexed": 41049,
+        "scenario_exact": 41049,
+        "RecoverML_previous": 41049,
+        "robust_local": 41049
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019202980000159187,
+        "RecoverML_previous": 0.0018789000000083433,
+        "scenario_exact": 0.003708788000039931,
+        "robust_local": 0.006695433999993838
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9784418876615858,
+        "scenario_exact": 1.931360653403371,
+        "robust_local": 3.48666404898528
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v4-concat1",
+      "expected_bytes": 41028,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 41028,
+        "RecoverML_indexed": 41028,
+        "scenario_exact": 41028,
+        "RecoverML_previous": 41028
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018297180000104163,
+        "RecoverML_previous": 0.0018308199999523822,
+        "scenario_exact": 0.0035732329999973445,
+        "robust_local": 0.0074351989999854595
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.000602278570774,
+        "scenario_exact": 1.9528872755129494,
+        "robust_local": 4.063576463664418
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v64-concat0",
+      "expected_bytes": 138593,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_indexed": 138593,
+        "RecoverML_previous": 138593,
+        "scenario_exact": 138593,
+        "robust_local": 138593
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014765438999972957,
+        "RecoverML_previous": 0.014483759000029295,
+        "scenario_exact": 0.030497630000013487,
+        "robust_local": 0.6902290409999523
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9809230189536404,
+        "scenario_exact": 2.0654739760916923,
+        "robust_local": 46.74625935613675
+      }
+    },
+    {
+      "case": "separate/wine-s20261017-v64-concat1",
+      "expected_bytes": 130402,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "scenario_exact": 130402,
+        "robust_local": 130531,
+        "RecoverML_indexed": 130402,
+        "RecoverML_previous": 130402
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.012950038999974822,
+        "RecoverML_previous": 0.013558556000020872,
+        "scenario_exact": 0.026464981999993142,
+        "robust_local": 0.6647277849999682
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0469895882203315,
+        "scenario_exact": 2.043621799134705,
+        "robust_local": 51.33017630304129
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v16-concat0",
+      "expected_bytes": 228648,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 228648,
+        "RecoverML_previous": 228648,
+        "scenario_exact": 228648,
+        "robust_local": 228648
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00510079000002861,
+        "RecoverML_previous": 0.005137489999981426,
+        "scenario_exact": 0.006516256999987036,
+        "robust_local": 0.3533711169999947
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0071949639080633,
+        "scenario_exact": 1.2774995637833524,
+        "robust_local": 69.27772305819542
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v16-concat1",
+      "expected_bytes": 227012,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 227012,
+        "robust_local": 227012,
+        "RecoverML_indexed": 227012,
+        "RecoverML_previous": 227012
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005115077999960249,
+        "RecoverML_previous": 0.004660480999973515,
+        "scenario_exact": 0.005963845999986006,
+        "robust_local": 0.027221187000009195
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9111260864467234,
+        "scenario_exact": 1.165934517524924,
+        "robust_local": 5.321754037811494
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v4-concat0",
+      "expected_bytes": 169788,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 169788,
+        "RecoverML_indexed": 169788,
+        "scenario_exact": 169788,
+        "RecoverML_previous": 169788
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019080250000342858,
+        "RecoverML_previous": 0.0018810739999821635,
+        "scenario_exact": 0.002899774000013622,
+        "robust_local": 0.013480278000031376
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9858749229954336,
+        "scenario_exact": 1.5197777806692863,
+        "robust_local": 7.065042648701744
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v4-concat1",
+      "expected_bytes": 169768,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 169768,
+        "robust_local": 169768,
+        "RecoverML_indexed": 169768,
+        "scenario_exact": 169768
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018505670000195096,
+        "RecoverML_previous": 0.0018639419999999518,
+        "scenario_exact": 0.0029698260000259324,
+        "robust_local": 0.015785321000009844
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.007227514583531,
+        "scenario_exact": 1.604819495859714,
+        "robust_local": 8.529991618700338
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v64-concat0",
+      "expected_bytes": 381045,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 464146,
+        "scenario_exact": 381045,
+        "RecoverML_previous": 381045,
+        "RecoverML_indexed": 381045
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01662684000001491,
+        "RecoverML_previous": 0.01748969599998418,
+        "scenario_exact": 0.021970704000011665,
+        "robust_local": 17.27194959899998
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0518953691722839,
+        "scenario_exact": 1.3213998570980394,
+        "robust_local": 1038.7992907241842
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261017-v64-concat1",
+      "expected_bytes": 372853,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 372853,
+        "RecoverML_previous": 372853,
+        "RecoverML_indexed": 372853,
+        "scenario_exact": 372853
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014868907999982639,
+        "RecoverML_previous": 0.014793014999952447,
+        "scenario_exact": 0.019621041999982936,
+        "robust_local": 0.32309465200000886
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9948958591962315,
+        "scenario_exact": 1.3196020851030785,
+        "robust_local": 21.729548128240896
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v16-concat0",
+      "expected_bytes": 68099,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 68099,
+        "robust_local": 86926,
+        "scenario_exact": 68099,
+        "RecoverML_previous": 68099
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004816680000033102,
+        "RecoverML_previous": 0.004491876999964006,
+        "scenario_exact": 0.006606744000009712,
+        "robust_local": 0.3509329419999858
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.93256703786283,
+        "scenario_exact": 1.3716385560104278,
+        "robust_local": 72.85784855908511
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v16-concat1",
+      "expected_bytes": 66340,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_previous": 66340,
+        "scenario_exact": 66340,
+        "RecoverML_indexed": 66340,
+        "robust_local": 66340
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004190989999983685,
+        "RecoverML_previous": 0.004209575000004406,
+        "scenario_exact": 0.005879153000023507,
+        "robust_local": 0.027261688999999478
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0044345130913683,
+        "scenario_exact": 1.4028076898409192,
+        "robust_local": 6.50483274837344
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v4-concat0",
+      "expected_bytes": 41075,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 41075,
+        "RecoverML_indexed": 41075,
+        "scenario_exact": 41075,
+        "robust_local": 41075
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018495169999823702,
+        "RecoverML_previous": 0.001869623999994019,
+        "scenario_exact": 0.0029224489999819525,
+        "robust_local": 0.013073464000001422
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0108714869946265,
+        "scenario_exact": 1.5801147002216307,
+        "robust_local": 7.068582770596886
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v4-concat1",
+      "expected_bytes": 41054,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 41054,
+        "scenario_exact": 41054,
+        "RecoverML_previous": 41054,
+        "RecoverML_indexed": 41054
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018417719999774818,
+        "RecoverML_previous": 0.001855889000012212,
+        "scenario_exact": 0.002972483000007742,
+        "robust_local": 0.004255873000033716
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.00766490099475,
+        "scenario_exact": 1.613925610794433,
+        "robust_local": 2.3107491047131514
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v64-concat0",
+      "expected_bytes": 138619,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 270412,
+        "RecoverML_indexed": 138619,
+        "RecoverML_previous": 138619,
+        "scenario_exact": 138619
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01465813499999058,
+        "RecoverML_previous": 0.014848423999978877,
+        "scenario_exact": 0.023019738000016332,
+        "robust_local": 17.18171298499999
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0129818015721932,
+        "scenario_exact": 1.5704411236512097,
+        "robust_local": 1172.1622829241942
+      }
+    },
+    {
+      "case": "shared/wine-s20261017-v64-concat1",
+      "expected_bytes": 130428,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 130428,
+        "robust_local": 130428,
+        "scenario_exact": 130428,
+        "RecoverML_indexed": 130428
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.013115055000014308,
+        "RecoverML_previous": 0.013474464999944757,
+        "scenario_exact": 0.01834417800000665,
+        "robust_local": 0.32355555199995933
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0274043837353375,
+        "scenario_exact": 1.3987114808124432,
+        "robust_local": 24.67054480515761
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v16-concat0",
+      "expected_bytes": 228619,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 228619,
+        "RecoverML_previous": 228619,
+        "robust_local": 228619,
+        "scenario_exact": 228619
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005069241999990481,
+        "RecoverML_previous": 0.0050488839999616175,
+        "scenario_exact": 0.008444974000042293,
+        "robust_local": 0.05306178100005354
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9959840149614277,
+        "scenario_exact": 1.6659244123792376,
+        "robust_local": 10.467399465275712
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v16-concat1",
+      "expected_bytes": 226990,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 226990,
+        "robust_local": 226990,
+        "RecoverML_indexed": 226990,
+        "RecoverML_previous": 226990
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005008126999996421,
+        "RecoverML_previous": 0.0046733460000041305,
+        "scenario_exact": 0.0076521000000298045,
+        "robust_local": 0.030936427000028743
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.933152454002758,
+        "scenario_exact": 1.5279364920329044,
+        "robust_local": 6.177244906139731
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v4-concat0",
+      "expected_bytes": 169765,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 169765,
+        "robust_local": 169765,
+        "RecoverML_previous": 169765,
+        "RecoverML_indexed": 169765
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018562180000003536,
+        "RecoverML_previous": 0.0018895610000413399,
+        "scenario_exact": 0.0036571919999914826,
+        "robust_local": 0.006691299999999956
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0179628686075557,
+        "scenario_exact": 1.9702384094921963,
+        "robust_local": 3.6048028841432855
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v4-concat1",
+      "expected_bytes": 169741,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "RecoverML_previous": 169741,
+        "scenario_exact": 169741,
+        "robust_local": 169741,
+        "RecoverML_indexed": 169741
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018394269999930657,
+        "RecoverML_previous": 0.0018631919999734237,
+        "scenario_exact": 0.003488123000011001,
+        "robust_local": 0.0075063649999833615
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0129197842482727,
+        "scenario_exact": 1.896309557282866,
+        "robust_local": 4.080817015305125
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v64-concat0",
+      "expected_bytes": 381037,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 381037,
+        "RecoverML_indexed": 381037,
+        "RecoverML_previous": 381037,
+        "scenario_exact": 381037
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01663240200002747,
+        "RecoverML_previous": 0.01621564700002409,
+        "scenario_exact": 0.032384816999979193,
+        "robust_local": 0.6899506509999469
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9749431861974783,
+        "scenario_exact": 1.9470920075119462,
+        "robust_local": 41.48232173553811
+      }
+    },
+    {
+      "case": "separate/breast_cancer-s20261018-v64-concat1",
+      "expected_bytes": 372840,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "scenario_exact": 372840,
+        "robust_local": 372840,
+        "RecoverML_indexed": 372840,
+        "RecoverML_previous": 372840
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015099723999981052,
+        "RecoverML_previous": 0.014967384999977185,
+        "scenario_exact": 0.027485415000001012,
+        "robust_local": 0.366872748999981
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9912356676185583,
+        "scenario_exact": 1.8202594299098118,
+        "robust_local": 24.296652640832466
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v16-concat0",
+      "expected_bytes": 68069,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 68069,
+        "RecoverML_previous": 68069,
+        "robust_local": 68069,
+        "RecoverML_indexed": 68069
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00437148700001444,
+        "RecoverML_previous": 0.004381386999966708,
+        "scenario_exact": 0.009220795999965503,
+        "robust_local": 0.05301022499997998
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0022646756017426,
+        "scenario_exact": 2.1093042252979464,
+        "robust_local": 12.126359977692918
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v16-concat1",
+      "expected_bytes": 66312,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 66441,
+        "RecoverML_indexed": 66312,
+        "scenario_exact": 66312,
+        "RecoverML_previous": 66312
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004193102000044746,
+        "RecoverML_previous": 0.004632490000005873,
+        "scenario_exact": 0.008200192999993305,
+        "robust_local": 0.053464781000002404
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1047882927618833,
+        "scenario_exact": 1.95563880866857,
+        "robust_local": 12.750651188411792
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v4-concat0",
+      "expected_bytes": 41053,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 41053,
+        "RecoverML_indexed": 41053,
+        "RecoverML_previous": 41053,
+        "robust_local": 41053
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001859894999995504,
+        "RecoverML_previous": 0.0018457979999766394,
+        "scenario_exact": 0.003741520000005494,
+        "robust_local": 0.006617841000036151
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9924205398590251,
+        "scenario_exact": 2.0116834552566347,
+        "robust_local": 3.558179897280303
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v4-concat1",
+      "expected_bytes": 41026,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 41026,
+        "RecoverML_previous": 41026,
+        "RecoverML_indexed": 41026,
+        "scenario_exact": 41026
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001854263999973682,
+        "RecoverML_previous": 0.001817475999985163,
+        "scenario_exact": 0.003654586999971343,
+        "robust_local": 0.007422295999958806
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9801603223764032,
+        "scenario_exact": 1.9709097518062226,
+        "robust_local": 4.002825919105452
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v64-concat0",
+      "expected_bytes": 138594,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 138594,
+        "RecoverML_previous": 138594,
+        "RecoverML_indexed": 138594,
+        "scenario_exact": 138594
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014752269999974033,
+        "RecoverML_previous": 0.014574154000001727,
+        "scenario_exact": 0.03200651399998833,
+        "robust_local": 0.6851987860000008
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9879261971227059,
+        "scenario_exact": 2.1695992548973595,
+        "robust_local": 46.4470068674995
+      }
+    },
+    {
+      "case": "separate/wine-s20261018-v64-concat1",
+      "expected_bytes": 130402,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "scenario_exact": 130402,
+        "RecoverML_previous": 130402,
+        "RecoverML_indexed": 130402,
+        "robust_local": 130531
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.013415199999997185,
+        "RecoverML_previous": 0.013377389000027051,
+        "scenario_exact": 0.026175445999967906,
+        "robust_local": 0.6619940680000127
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9971814807106758,
+        "scenario_exact": 1.9511782157532798,
+        "robust_local": 49.34656717754127
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v16-concat0",
+      "expected_bytes": 228645,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "robust_local": 228645,
+        "RecoverML_previous": 228645,
+        "scenario_exact": 228645,
+        "RecoverML_indexed": 228645
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.005157048000000941,
+        "RecoverML_previous": 0.005261464999989585,
+        "scenario_exact": 0.006835782000052859,
+        "robust_local": 0.3535018449999825
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0202474361279212,
+        "scenario_exact": 1.3255222755443834,
+        "robust_local": 68.54732494247057
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v16-concat1",
+      "expected_bytes": 227016,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 227016,
+        "scenario_exact": 227016,
+        "RecoverML_previous": 227016,
+        "robust_local": 227016
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004661936000047717,
+        "RecoverML_previous": 0.004649481999990712,
+        "scenario_exact": 0.005925707999949736,
+        "robust_local": 0.027294417999996767
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9973285776430912,
+        "scenario_exact": 1.2710830864879064,
+        "robust_local": 5.854738889533746
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v4-concat0",
+      "expected_bytes": 169791,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 169791,
+        "scenario_exact": 169791,
+        "RecoverML_previous": 169791,
+        "RecoverML_indexed": 169791
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018659570000068015,
+        "RecoverML_previous": 0.0019801610000058645,
+        "scenario_exact": 0.0028658809999910773,
+        "robust_local": 0.013441631000034704
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0612039827277084,
+        "scenario_exact": 1.5358773004847543,
+        "robust_local": 7.203612409067148
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v4-concat1",
+      "expected_bytes": 169767,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "robust_local": 169767,
+        "RecoverML_previous": 169767,
+        "RecoverML_indexed": 169767,
+        "scenario_exact": 169767
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001856940000038776,
+        "RecoverML_previous": 0.0018453179999937674,
+        "scenario_exact": 0.0028609110000274995,
+        "robust_local": 0.015764297999965038
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9937413163350642,
+        "scenario_exact": 1.5406588257928415,
+        "robust_local": 8.48939545684613
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v64-concat0",
+      "expected_bytes": 381063,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 381063,
+        "robust_local": 464164,
+        "scenario_exact": 381063,
+        "RecoverML_indexed": 381063
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01771194700000933,
+        "RecoverML_previous": 0.01696835799998553,
+        "scenario_exact": 0.02290072600004578,
+        "robust_local": 17.206144248999976
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9580176589268582,
+        "scenario_exact": 1.2929536205157859,
+        "robust_local": 971.4428486597725
+      }
+    },
+    {
+      "case": "shared/breast_cancer-s20261018-v64-concat1",
+      "expected_bytes": 372866,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 372866,
+        "scenario_exact": 372866,
+        "robust_local": 372866,
+        "RecoverML_indexed": 372866
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.014774432000024262,
+        "RecoverML_previous": 0.014760395999985576,
+        "scenario_exact": 0.019668434999971396,
+        "robust_local": 0.3224166309999532
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9990499803959527,
+        "scenario_exact": 1.3312481319037575,
+        "robust_local": 21.822607528967865
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v16-concat0",
+      "expected_bytes": 68095,
+      "nodes": 37,
+      "versions": 16,
+      "sizes": {
+        "scenario_exact": 68095,
+        "RecoverML_indexed": 68095,
+        "RecoverML_previous": 68095,
+        "robust_local": 86922
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004381837999972049,
+        "RecoverML_previous": 0.004767443999980969,
+        "scenario_exact": 0.006808750999994118,
+        "robust_local": 0.3506780499999991
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0880009712845111,
+        "scenario_exact": 1.5538573082887932,
+        "robust_local": 80.02989841300294
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v16-concat1",
+      "expected_bytes": 66338,
+      "nodes": 38,
+      "versions": 16,
+      "sizes": {
+        "RecoverML_indexed": 66338,
+        "scenario_exact": 66338,
+        "RecoverML_previous": 66338,
+        "robust_local": 66338
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004174497000008159,
+        "RecoverML_previous": 0.00473416099998758,
+        "scenario_exact": 0.006189504000019497,
+        "robust_local": 0.02735460899998543
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1340674097929229,
+        "scenario_exact": 1.4826945617657405,
+        "robust_local": 6.552791629729753
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v4-concat0",
+      "expected_bytes": 41079,
+      "nodes": 13,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 41079,
+        "RecoverML_indexed": 41079,
+        "RecoverML_previous": 41079,
+        "robust_local": 41079
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018555160000346405,
+        "RecoverML_previous": 0.0018338159999871095,
+        "scenario_exact": 0.003025111000056313,
+        "robust_local": 0.013199395000015102
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9883051398925551,
+        "scenario_exact": 1.630334095744708,
+        "robust_local": 7.113598050228984
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v4-concat1",
+      "expected_bytes": 41052,
+      "nodes": 14,
+      "versions": 4,
+      "sizes": {
+        "scenario_exact": 41052,
+        "RecoverML_previous": 41052,
+        "RecoverML_indexed": 41052,
+        "robust_local": 41052
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019061730000089483,
+        "RecoverML_previous": 0.00185125899997729,
+        "scenario_exact": 0.0029904560000204583,
+        "robust_local": 0.0042561110000178815
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9711914920464194,
+        "scenario_exact": 1.568827173612479,
+        "robust_local": 2.2328041578586526
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v64-concat0",
+      "expected_bytes": 138620,
+      "nodes": 133,
+      "versions": 64,
+      "sizes": {
+        "robust_local": 270413,
+        "RecoverML_previous": 138620,
+        "scenario_exact": 138620,
+        "RecoverML_indexed": 138620
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015928669000004447,
+        "RecoverML_previous": 0.04861340700006167,
+        "scenario_exact": 0.02263212200000453,
+        "robust_local": 17.15087733300004
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 3.051944076435269,
+        "scenario_exact": 1.42084200506635,
+        "robust_local": 1076.730097975873
+      }
+    },
+    {
+      "case": "shared/wine-s20261018-v64-concat1",
+      "expected_bytes": 130428,
+      "nodes": 134,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 130428,
+        "robust_local": 130428,
+        "scenario_exact": 130428,
+        "RecoverML_indexed": 130428
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.013099269999997887,
+        "RecoverML_previous": 0.013146799999958603,
+        "scenario_exact": 0.01885051899989776,
+        "robust_local": 0.32038960499994573
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0036284464676828,
+        "scenario_exact": 1.439051107420551,
+        "robust_local": 24.458584715025907
+      }
+    }
+  ],
+  "calls_sha256": "3f532bccdd7e9934c125168e258bed94ff8ddecf754f726b7adcd57f0e3f576e",
+  "selections_sha256": "80db740fece2a709d9708eb3fe4afd445d42de1668420537f26ef356afef728a",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}

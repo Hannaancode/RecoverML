@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "group": "retinal",
+  "source_commit": "296f1266593243fe3de923b6f38aa761aa599e6c",
+  "conditions": 108,
+  "timing_calls": 1296,
+  "declared_loss_closure_checks": 3024,
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 108,
+      "indexed_faster": 46,
+      "indexed_slower": 62,
+      "median_paired_speedup": 0.9957702373747122,
+      "minimum_paired_speedup": 0.8564795272539276,
+      "maximum_paired_speedup": 1.1630378611065546,
+      "storage_wins": 0,
+      "storage_ties": 108
+    },
+    "scenario_exact": {
+      "cases": 108,
+      "indexed_faster": 108,
+      "indexed_slower": 0,
+      "median_paired_speedup": 1.4250543376965226,
+      "minimum_paired_speedup": 1.0204160283783403,
+      "maximum_paired_speedup": 1.8633054870647092,
+      "storage_wins": 0,
+      "storage_ties": 108
+    },
+    "robust_local": {
+      "cases": 108,
+      "indexed_faster": 96,
+      "indexed_slower": 12,
+      "median_paired_speedup": 3.1736061204212316,
+      "minimum_paired_speedup": 0.7035561785732929,
+      "maximum_paired_speedup": 93.09181881386968,
+      "storage_wins": 0,
+      "storage_ties": 108
+    }
+  },
+  "auditor_sha256": "776ae6d1ebcb0ac4d2eac0235517a0e8ea8703c2aa703ea02d18080fe4fcfcc6",
+  "qualification": "Saved metadata/timing reconciliation, not new model replay or external peer review."
+}

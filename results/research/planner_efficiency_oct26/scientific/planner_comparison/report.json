@@ -1,0 +1,1154 @@
+{
+  "status": "PASS",
+  "group": "scientific",
+  "conditions": 48,
+  "calls": 576,
+  "all_exact_equal_frozen": true,
+  "all_closures_pass": true,
+  "input_sha256": {
+    "results/research/scientific_complete_oct16/planner_records.json.gz": "340773ae334c866a0a00fdbf74595e298a742cd01b7666bca9d2856b3752928f",
+    "results/research/scientific_complete_oct16/captures.tar.gz": "0843f8617208666353b966c963edd4244eb56318862a90520c8efaaeaa802fd7"
+  },
+  "source_changed": [],
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 48,
+      "indexed_faster": 24,
+      "indexed_slower": 24,
+      "median_paired_speedup": 1.0006985586216073,
+      "minimum_paired_speedup": 0.9113242773289254,
+      "maximum_paired_speedup": 1.0844859499353154,
+      "storage_wins": 0,
+      "storage_ties": 48
+    },
+    "scenario_exact": {
+      "cases": 48,
+      "indexed_faster": 36,
+      "indexed_slower": 12,
+      "median_paired_speedup": 2.4485919171189385,
+      "minimum_paired_speedup": 0.8482542412278976,
+      "maximum_paired_speedup": 5.919138541927886,
+      "storage_wins": 0,
+      "storage_ties": 48
+    },
+    "robust_local": {
+      "cases": 48,
+      "indexed_faster": 42,
+      "indexed_slower": 6,
+      "median_paired_speedup": 4.0718159593661625,
+      "minimum_paired_speedup": 0.5039087059440569,
+      "maximum_paired_speedup": 23.43330311699728,
+      "storage_wins": 0,
+      "storage_ties": 48
+    }
+  },
+  "comparisons": [
+    {
+      "case": "diabetes_poly-101-preprocessing-k0",
+      "expected_bytes": 49182,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 49182,
+        "RecoverML_indexed": 49182,
+        "scenario_exact": 49182,
+        "RecoverML_previous": 49182
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013721659999959002,
+        "RecoverML_previous": 0.0014118899999999712,
+        "scenario_exact": 0.002740113000001543,
+        "robust_local": 0.0014883230000037884
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0289498500940772,
+        "scenario_exact": 1.9969252991327069,
+        "robust_local": 1.0846522942619445
+      }
+    },
+    {
+      "case": "diabetes_poly-101-preprocessing-k1",
+      "expected_bytes": 55993,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 55993,
+        "robust_local": 55993,
+        "RecoverML_indexed": 55993,
+        "RecoverML_previous": 55993
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019625130000093804,
+        "RecoverML_previous": 0.0019256839999997055,
+        "scenario_exact": 0.005249313000007305,
+        "robust_local": 0.022115299000006416
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9812337548798409,
+        "scenario_exact": 2.6747914536016903,
+        "robust_local": 11.26886751827922
+      }
+    },
+    {
+      "case": "diabetes_poly-101-preprocessing-k2",
+      "expected_bytes": 55993,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 55993,
+        "scenario_exact": 55993,
+        "RecoverML_indexed": 55993,
+        "robust_local": 55993
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018806000000068934,
+        "RecoverML_previous": 0.001938889000001609,
+        "scenario_exact": 0.006394260999996959,
+        "robust_local": 0.017842048999995086
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0309948952432744,
+        "scenario_exact": 3.400117515672403,
+        "robust_local": 9.487423694528175
+      }
+    },
+    {
+      "case": "diabetes_poly-101-broad-k0",
+      "expected_bytes": 49674,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 49674,
+        "scenario_exact": 49674,
+        "RecoverML_previous": 49674,
+        "robust_local": 49674
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0013621169999993299,
+        "RecoverML_previous": 0.0013969219999978577,
+        "scenario_exact": 0.002673657999991974,
+        "robust_local": 0.0014543900000063559
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.025552136856485,
+        "scenario_exact": 1.9628695625950556,
+        "robust_local": 1.0677423451928663
+      }
+    },
+    {
+      "case": "diabetes_poly-101-broad-k1",
+      "expected_bytes": 56485,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 56485,
+        "RecoverML_previous": 56485,
+        "robust_local": 56485,
+        "scenario_exact": 56485
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017203889999990452,
+        "RecoverML_previous": 0.0016578909999935831,
+        "scenario_exact": 0.0054799350000109825,
+        "robust_local": 0.021039701000006517
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9636721694887047,
+        "scenario_exact": 3.1852883272411203,
+        "robust_local": 12.229618417705643
+      }
+    },
+    {
+      "case": "diabetes_poly-101-broad-k2",
+      "expected_bytes": 56485,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 56485,
+        "RecoverML_indexed": 56485,
+        "RecoverML_previous": 56485,
+        "robust_local": 56485
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001741559000009829,
+        "RecoverML_previous": 0.00175456300000576,
+        "scenario_exact": 0.010308528999999567,
+        "robust_local": 0.03265603399999861
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.007466873069392,
+        "scenario_exact": 5.919138541927886,
+        "robust_local": 18.75103513565392
+      }
+    },
+    {
+      "case": "diabetes_poly-211-preprocessing-k0",
+      "expected_bytes": 49188,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 49188,
+        "scenario_exact": 49188,
+        "RecoverML_indexed": 49188,
+        "RecoverML_previous": 49188
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014664330000044856,
+        "RecoverML_previous": 0.0014406330000014123,
+        "scenario_exact": 0.0031091160000045193,
+        "robust_local": 0.001472704000008207
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9824062879088274,
+        "scenario_exact": 2.120189602931064,
+        "robust_local": 1.0042763631231035
+      }
+    },
+    {
+      "case": "diabetes_poly-211-preprocessing-k1",
+      "expected_bytes": 55997,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 55997,
+        "RecoverML_previous": 55997,
+        "robust_local": 55997,
+        "RecoverML_indexed": 55997
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0020261429999948177,
+        "RecoverML_previous": 0.001869037999995271,
+        "scenario_exact": 0.005192375999996557,
+        "robust_local": 0.022544945999996457
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9224610503799838,
+        "scenario_exact": 2.5626898002805514,
+        "robust_local": 11.127026078640116
+      }
+    },
+    {
+      "case": "diabetes_poly-211-preprocessing-k2",
+      "expected_bytes": 55997,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 55997,
+        "RecoverML_indexed": 55997,
+        "scenario_exact": 55997,
+        "robust_local": 55997
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0020277760000055878,
+        "RecoverML_previous": 0.0020203220000070132,
+        "scenario_exact": 0.0069778270000000475,
+        "robust_local": 0.018089893999999163
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9963240515724844,
+        "scenario_exact": 3.4411231812492207,
+        "robust_local": 8.92105143760914
+      }
+    },
+    {
+      "case": "diabetes_poly-211-broad-k0",
+      "expected_bytes": 49680,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 49680,
+        "RecoverML_indexed": 49680,
+        "robust_local": 49680,
+        "scenario_exact": 49680
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014897670000095786,
+        "RecoverML_previous": 0.0013945769999992308,
+        "scenario_exact": 0.0026792590000042082,
+        "robust_local": 0.0014702299999953539
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9361041021785717,
+        "scenario_exact": 1.798441635495337,
+        "robust_local": 0.9868858687203441
+      }
+    },
+    {
+      "case": "diabetes_poly-211-broad-k1",
+      "expected_bytes": 56489,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 56489,
+        "robust_local": 56489,
+        "RecoverML_indexed": 56489,
+        "RecoverML_previous": 56489
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017454959999980701,
+        "RecoverML_previous": 0.0017483310000017127,
+        "scenario_exact": 0.005523807999992414,
+        "robust_local": 0.021359591000006617
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0016241801778094,
+        "scenario_exact": 3.164606507261272,
+        "robust_local": 12.236975048943242
+      }
+    },
+    {
+      "case": "diabetes_poly-211-broad-k2",
+      "expected_bytes": 56489,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 56489,
+        "robust_local": 56489,
+        "scenario_exact": 56489,
+        "RecoverML_indexed": 56489
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017947289999966642,
+        "RecoverML_previous": 0.0017349969999997938,
+        "scenario_exact": 0.01029446199999029,
+        "robust_local": 0.03351571800000386
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9667180950455576,
+        "scenario_exact": 5.735942306615329,
+        "robust_local": 18.674528577889003
+      }
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k0",
+      "expected_bytes": 944757,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 944757,
+        "robust_local": 944757,
+        "RecoverML_previous": 944757,
+        "scenario_exact": 944757
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001397799999992344,
+        "RecoverML_previous": 0.0014068879999911132,
+        "scenario_exact": 0.002716894000002412,
+        "robust_local": 0.0014400199999897723
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0065016454419937,
+        "scenario_exact": 1.9436929460704628,
+        "robust_local": 1.030204607238274
+      }
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k1",
+      "expected_bytes": 1419460,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 1419460,
+        "RecoverML_indexed": 1419460,
+        "robust_local": 1419460,
+        "RecoverML_previous": 1419460
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017189730000097825,
+        "RecoverML_previous": 0.001750121000000604,
+        "scenario_exact": 0.005254651999990756,
+        "robust_local": 0.011345151000000442
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0181201217184006,
+        "scenario_exact": 3.05685545960341,
+        "robust_local": 6.599958812579301
+      }
+    },
+    {
+      "case": "digits_forest-101-preprocessing-k2",
+      "expected_bytes": 1419460,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 1419460,
+        "scenario_exact": 1419460,
+        "RecoverML_previous": 1419460,
+        "RecoverML_indexed": 1419460
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0016807820000082074,
+        "RecoverML_previous": 0.0017543889999984685,
+        "scenario_exact": 0.006855102000002944,
+        "robust_local": 0.01059673700000019
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0437933057290605,
+        "scenario_exact": 4.078519403449984,
+        "robust_local": 6.304646884574231
+      }
+    },
+    {
+      "case": "digits_forest-101-broad-k0",
+      "expected_bytes": 945249,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 945249,
+        "robust_local": 945249,
+        "RecoverML_previous": 945249,
+        "scenario_exact": 945249
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014340489999966621,
+        "RecoverML_previous": 0.0014542470000122876,
+        "scenario_exact": 0.003160816000004729,
+        "robust_local": 0.0014603279999931829
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0140845954466495,
+        "scenario_exact": 2.204119942911355,
+        "robust_local": 1.0183250363108804
+      }
+    },
+    {
+      "case": "digits_forest-101-broad-k1",
+      "expected_bytes": 29838488,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 29838488,
+        "RecoverML_previous": 29838488,
+        "robust_local": 29838488,
+        "RecoverML_indexed": 29838488
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017983119999911423,
+        "RecoverML_previous": 0.001788262999994572,
+        "scenario_exact": 0.005651897000007011,
+        "robust_local": 0.026569994999988467
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9944119819049088,
+        "scenario_exact": 3.142890110300576,
+        "robust_local": 14.774963966274672
+      }
+    },
+    {
+      "case": "digits_forest-101-broad-k2",
+      "expected_bytes": 29838488,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 29838488,
+        "RecoverML_previous": 29838488,
+        "robust_local": 29838488,
+        "scenario_exact": 29838488
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017738760000014508,
+        "RecoverML_previous": 0.0017565530000069884,
+        "scenario_exact": 0.010387075000011237,
+        "robust_local": 0.04156777400000067
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9902343794073271,
+        "scenario_exact": 5.85558122439378,
+        "robust_local": 23.43330311699728
+      }
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k0",
+      "expected_bytes": 944759,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 944759,
+        "robust_local": 944759,
+        "RecoverML_indexed": 944759,
+        "scenario_exact": 944759
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00141810899999939,
+        "RecoverML_previous": 0.0014177870000082748,
+        "scenario_exact": 0.0033105669999997644,
+        "robust_local": 0.0014489269999984344
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9997729370654052,
+        "scenario_exact": 2.3344940339573252,
+        "robust_local": 1.021731756867108
+      }
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k1",
+      "expected_bytes": 1419462,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 1419462,
+        "RecoverML_previous": 1419462,
+        "RecoverML_indexed": 1419462,
+        "robust_local": 1419462
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017304450000068528,
+        "RecoverML_previous": 0.001844787999999653,
+        "scenario_exact": 0.005269159000008017,
+        "robust_local": 0.011275339999997414
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0660772229064475,
+        "scenario_exact": 3.044973402787809,
+        "robust_local": 6.515861526920973
+      }
+    },
+    {
+      "case": "digits_forest-211-preprocessing-k2",
+      "expected_bytes": 1419462,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 1419462,
+        "RecoverML_indexed": 1419462,
+        "scenario_exact": 1419462,
+        "robust_local": 1419462
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0016920919999989792,
+        "RecoverML_previous": 0.0018350499999968406,
+        "scenario_exact": 0.006841095999988056,
+        "robust_local": 0.010736390000005258
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0844859499353154,
+        "scenario_exact": 4.042981114497429,
+        "robust_local": 6.345039158634244
+      }
+    },
+    {
+      "case": "digits_forest-211-broad-k0",
+      "expected_bytes": 945251,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 945251,
+        "robust_local": 945251,
+        "scenario_exact": 945251,
+        "RecoverML_previous": 945251
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014158049999934974,
+        "RecoverML_previous": 0.0013907480000057149,
+        "scenario_exact": 0.0028722449999918354,
+        "robust_local": 0.001454796999993846
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9823019413069614,
+        "scenario_exact": 2.0287009863681984,
+        "robust_local": 1.0275405158199946
+      }
+    },
+    {
+      "case": "digits_forest-211-broad-k1",
+      "expected_bytes": 29562531,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 29562531,
+        "RecoverML_indexed": 29562531,
+        "scenario_exact": 29562531,
+        "RecoverML_previous": 29562531
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001817467999998712,
+        "RecoverML_previous": 0.0017318369999941297,
+        "scenario_exact": 0.005660573000000113,
+        "robust_local": 0.026692335000007006
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9528844524334718,
+        "scenario_exact": 3.114537917588714,
+        "robust_local": 14.686550189618702
+      }
+    },
+    {
+      "case": "digits_forest-211-broad-k2",
+      "expected_bytes": 29562531,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 29562531,
+        "scenario_exact": 29562531,
+        "robust_local": 29562531,
+        "RecoverML_indexed": 29562531
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00178051900000753,
+        "RecoverML_previous": 0.0017733850000070106,
+        "scenario_exact": 0.01041028699999913,
+        "robust_local": 0.041495457999999985
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9959933030759631,
+        "scenario_exact": 5.846771081889665,
+        "robust_local": 23.30525987075931
+      }
+    },
+    {
+      "case": "digits_pca-101-preprocessing-k0",
+      "expected_bytes": 944829,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 944829,
+        "scenario_exact": 944829,
+        "RecoverML_previous": 944829,
+        "robust_local": 944829
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014383369999961815,
+        "RecoverML_previous": 0.001401276999999368,
+        "scenario_exact": 0.002954759999994394,
+        "robust_local": 0.0014822690000073635
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9742341328931176,
+        "scenario_exact": 2.054289085243749,
+        "robust_local": 1.0305436069650566
+      }
+    },
+    {
+      "case": "digits_pca-101-preprocessing-k1",
+      "expected_bytes": 961205,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 961205,
+        "robust_local": 961205,
+        "RecoverML_indexed": 961205,
+        "scenario_exact": 961205
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019673580000016955,
+        "RecoverML_previous": 0.0020117520000013656,
+        "scenario_exact": 0.005113998000012998,
+        "robust_local": 0.008501739999999813
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0225652880663467,
+        "scenario_exact": 2.5994242024118592,
+        "robust_local": 4.321399562251754
+      }
+    },
+    {
+      "case": "digits_pca-101-preprocessing-k2",
+      "expected_bytes": 961205,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 961205,
+        "RecoverML_indexed": 961205,
+        "RecoverML_previous": 961205,
+        "scenario_exact": 961205
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0019439349999998967,
+        "RecoverML_previous": 0.001979220999999143,
+        "scenario_exact": 0.006411791000004996,
+        "robust_local": 0.010114964000010218
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.018151841496371,
+        "scenario_exact": 3.298356683739599,
+        "robust_local": 5.2033447620474735
+      }
+    },
+    {
+      "case": "digits_pca-101-broad-k0",
+      "expected_bytes": 945321,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 945321,
+        "RecoverML_previous": 945321,
+        "robust_local": 945321,
+        "scenario_exact": 945321
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014467119999892475,
+        "RecoverML_previous": 0.0014406509999957962,
+        "scenario_exact": 0.0027627300000006016,
+        "robust_local": 0.001488581000003819
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9958104999519626,
+        "scenario_exact": 1.9096613562486073,
+        "robust_local": 1.028940798178824
+      }
+    },
+    {
+      "case": "digits_pca-101-broad-k1",
+      "expected_bytes": 961697,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 961697,
+        "RecoverML_previous": 961697,
+        "RecoverML_indexed": 961697,
+        "scenario_exact": 961697
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0017215780000015002,
+        "RecoverML_previous": 0.001788894000000596,
+        "scenario_exact": 0.005587886999990133,
+        "robust_local": 0.019787870000001817
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0391013360992283,
+        "scenario_exact": 3.245793684622633,
+        "robust_local": 11.49403047668161
+      }
+    },
+    {
+      "case": "digits_pca-101-broad-k2",
+      "expected_bytes": 961697,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 961697,
+        "scenario_exact": 961697,
+        "RecoverML_indexed": 961697,
+        "RecoverML_previous": 961697
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018163050000055136,
+        "RecoverML_previous": 0.0018070480000034195,
+        "scenario_exact": 0.010604190999998764,
+        "robust_local": 0.02962532400000839
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9949033890221818,
+        "scenario_exact": 5.8383316678457495,
+        "robust_local": 16.3107649871131
+      }
+    },
+    {
+      "case": "digits_pca-211-preprocessing-k0",
+      "expected_bytes": 944830,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 944830,
+        "RecoverML_previous": 944830,
+        "scenario_exact": 944830,
+        "robust_local": 944830
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0015595139999931007,
+        "RecoverML_previous": 0.0014524130000097557,
+        "scenario_exact": 0.0031302579999987756,
+        "robust_local": 0.0014794639999990977
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.931324117652154,
+        "scenario_exact": 2.0072009613332256,
+        "robust_local": 0.9486699061410432
+      }
+    },
+    {
+      "case": "digits_pca-211-preprocessing-k1",
+      "expected_bytes": 961206,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 961206,
+        "RecoverML_previous": 961206,
+        "RecoverML_indexed": 961206,
+        "robust_local": 961206
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0020139460000052622,
+        "RecoverML_previous": 0.0019619490000053474,
+        "scenario_exact": 0.005298875000008252,
+        "robust_local": 0.008488305000000196
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9741815321762456,
+        "scenario_exact": 2.63109090312968,
+        "robust_local": 4.214762957883686
+      }
+    },
+    {
+      "case": "digits_pca-211-preprocessing-k2",
+      "expected_bytes": 961206,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 961206,
+        "scenario_exact": 961206,
+        "RecoverML_previous": 961206,
+        "robust_local": 961206
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00199955899999793,
+        "RecoverML_previous": 0.0020315289999928154,
+        "scenario_exact": 0.007003311000005397,
+        "robust_local": 0.010098683999999025
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0159885254673247,
+        "scenario_exact": 3.502427785332989,
+        "robust_local": 5.050455625470155
+      }
+    },
+    {
+      "case": "digits_pca-211-broad-k0",
+      "expected_bytes": 945322,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 945322,
+        "scenario_exact": 945322,
+        "RecoverML_previous": 945322,
+        "robust_local": 945322
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0014676819999976942,
+        "RecoverML_previous": 0.0015560069999907,
+        "scenario_exact": 0.003068061999996985,
+        "robust_local": 0.001504420999992817
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0601799299801622,
+        "scenario_exact": 2.090413318417617,
+        "robust_local": 1.0250319892150892
+      }
+    },
+    {
+      "case": "digits_pca-211-broad-k1",
+      "expected_bytes": 961698,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 961698,
+        "RecoverML_indexed": 961698,
+        "scenario_exact": 961698,
+        "RecoverML_previous": 961698
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.001803401000003646,
+        "RecoverML_previous": 0.001816435999998589,
+        "scenario_exact": 0.005740973000001759,
+        "robust_local": 0.01996630400000754
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0072280097409931,
+        "scenario_exact": 3.1834145594851906,
+        "robust_local": 11.071472179491513
+      }
+    },
+    {
+      "case": "digits_pca-211-broad-k2",
+      "expected_bytes": 961698,
+      "nodes": 13,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_indexed": 961698,
+        "RecoverML_previous": 961698,
+        "scenario_exact": 961698,
+        "robust_local": 961698
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0018596860000030802,
+        "RecoverML_previous": 0.001694777000011527,
+        "scenario_exact": 0.01042600699999241,
+        "robust_local": 0.029316834999988828
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9113242773289254,
+        "scenario_exact": 5.606326551888405,
+        "robust_local": 15.764400549307933
+      }
+    },
+    {
+      "case": "iris_union-101-preprocessing-k0",
+      "expected_bytes": 16946,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 16946,
+        "scenario_exact": 16946,
+        "robust_local": 16946,
+        "RecoverML_indexed": 16946
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.002947294999998462,
+        "RecoverML_previous": 0.0029205759999939573,
+        "scenario_exact": 0.002600575999991861,
+        "robust_local": 0.0015382640000041192
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9909343991678747,
+        "scenario_exact": 0.8823602659364664,
+        "robust_local": 0.5219240015013502
+      }
+    },
+    {
+      "case": "iris_union-101-preprocessing-k1",
+      "expected_bytes": 22029,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 22029,
+        "RecoverML_indexed": 22029,
+        "robust_local": 22029,
+        "scenario_exact": 22029
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.006283791000001315,
+        "RecoverML_previous": 0.0065662310000078605,
+        "scenario_exact": 0.005585843000005752,
+        "robust_local": 0.010526855999998475
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0449473892442454,
+        "scenario_exact": 0.8889288329297685,
+        "robust_local": 1.6752396761757784
+      }
+    },
+    {
+      "case": "iris_union-101-preprocessing-k2",
+      "expected_bytes": 22029,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 22029,
+        "RecoverML_indexed": 22029,
+        "robust_local": 22029,
+        "RecoverML_previous": 22029
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.010739143999998646,
+        "RecoverML_previous": 0.011205097999990699,
+        "scenario_exact": 0.01069788700000629,
+        "robust_local": 0.015041500999998902
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0433883743426955,
+        "scenario_exact": 0.9961582599141644,
+        "robust_local": 1.4006238299813094
+      }
+    },
+    {
+      "case": "iris_union-101-broad-k0",
+      "expected_bytes": 17438,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 17438,
+        "robust_local": 17438,
+        "RecoverML_indexed": 17438,
+        "RecoverML_previous": 17438
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0029311060000054567,
+        "RecoverML_previous": 0.002967623999992952,
+        "scenario_exact": 0.0025534579999941798,
+        "robust_local": 0.0015722269999969285
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0124587783544599,
+        "scenario_exact": 0.8711585319635067,
+        "robust_local": 0.5363937708134751
+      }
+    },
+    {
+      "case": "iris_union-101-broad-k1",
+      "expected_bytes": 29167,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 29167,
+        "RecoverML_indexed": 29167,
+        "RecoverML_previous": 29167,
+        "scenario_exact": 29167
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.00720214300000066,
+        "RecoverML_previous": 0.0066434959999952525,
+        "scenario_exact": 0.0061696770000025936,
+        "robust_local": 0.027369754999995166
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9224332257766394,
+        "scenario_exact": 0.8566446125829531,
+        "robust_local": 3.8002237667306322
+      }
+    },
+    {
+      "case": "iris_union-101-broad-k2",
+      "expected_bytes": 29167,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 29167,
+        "RecoverML_indexed": 29167,
+        "robust_local": 29167,
+        "scenario_exact": 29167
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015400022999997987,
+        "RecoverML_previous": 0.01533062299999699,
+        "scenario_exact": 0.01467098599999872,
+        "robust_local": 0.051061603999997374
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9954935132239084,
+        "scenario_exact": 0.9526600057675653,
+        "robust_local": 3.3156836194338184
+      }
+    },
+    {
+      "case": "iris_union-211-preprocessing-k0",
+      "expected_bytes": 16942,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 16942,
+        "scenario_exact": 16942,
+        "RecoverML_previous": 16942,
+        "RecoverML_indexed": 16942
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0030283680000025015,
+        "RecoverML_previous": 0.0030393790000005083,
+        "scenario_exact": 0.0025688260000009677,
+        "robust_local": 0.0015260210000036523
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0036359517727031,
+        "scenario_exact": 0.8482542412278976,
+        "robust_local": 0.5039087059440569
+      }
+    },
+    {
+      "case": "iris_union-211-preprocessing-k1",
+      "expected_bytes": 22025,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 22025,
+        "RecoverML_indexed": 22025,
+        "robust_local": 22025,
+        "RecoverML_previous": 22025
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.006146695000012414,
+        "RecoverML_previous": 0.006435965999997961,
+        "scenario_exact": 0.005808109000000172,
+        "robust_local": 0.010775573000003646
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0470612255830105,
+        "scenario_exact": 0.9449157636727448,
+        "robust_local": 1.7530677868320916
+      }
+    },
+    {
+      "case": "iris_union-211-preprocessing-k2",
+      "expected_bytes": 22025,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 22025,
+        "RecoverML_previous": 22025,
+        "scenario_exact": 22025,
+        "RecoverML_indexed": 22025
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.010917358000000377,
+        "RecoverML_previous": 0.010821499000002177,
+        "scenario_exact": 0.01025266199999919,
+        "robust_local": 0.015273116000003029
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9912195789495777,
+        "scenario_exact": 0.9391156724913515,
+        "robust_local": 1.3989754664088603
+      }
+    },
+    {
+      "case": "iris_union-211-broad-k0",
+      "expected_bytes": 17434,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "robust_local": 17434,
+        "RecoverML_previous": 17434,
+        "scenario_exact": 17434,
+        "RecoverML_indexed": 17434
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0029127309999950057,
+        "RecoverML_previous": 0.002958305999996469,
+        "scenario_exact": 0.0025659309999923607,
+        "robust_local": 0.0015638320000022077
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0156468276684463,
+        "scenario_exact": 0.8809364819465857,
+        "robust_local": 0.5368954428008934
+      }
+    },
+    {
+      "case": "iris_union-211-broad-k1",
+      "expected_bytes": 29731,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "scenario_exact": 29731,
+        "RecoverML_previous": 29731,
+        "robust_local": 29731,
+        "RecoverML_indexed": 29731
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.007017245999989541,
+        "RecoverML_previous": 0.006444903000002,
+        "scenario_exact": 0.006270315999998388,
+        "robust_local": 0.02756983999999818
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9184376605881576,
+        "scenario_exact": 0.8935579570685899,
+        "robust_local": 3.92886896084864
+      }
+    },
+    {
+      "case": "iris_union-211-broad-k2",
+      "expected_bytes": 29731,
+      "nodes": 14,
+      "versions": 3,
+      "sizes": {
+        "RecoverML_previous": 29731,
+        "robust_local": 29731,
+        "scenario_exact": 29731,
+        "RecoverML_indexed": 29731
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015018036999990159,
+        "RecoverML_previous": 0.015122371999993334,
+        "scenario_exact": 0.01485474100000772,
+        "robust_local": 0.05137156499999662
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0069473127548723,
+        "scenario_exact": 0.9891266748122578,
+        "robust_local": 3.42065777305185
+      }
+    }
+  ],
+  "calls_sha256": "d4683534b3edcd6736db0e437a75194c7e61016e4fa27152f629552ec50f2960",
+  "selections_sha256": "6b270d205f79123ae79b62aa7d55b46636bbcd44fa533509c53488dea4ed05d3",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}

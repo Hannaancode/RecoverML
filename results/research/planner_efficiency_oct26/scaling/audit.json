@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "group": "scaling",
+  "source_commit": "296f1266593243fe3de923b6f38aa761aa599e6c",
+  "conditions": 24,
+  "timing_calls": 144,
+  "declared_loss_closure_checks": 144,
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 24,
+      "indexed_faster": 22,
+      "indexed_slower": 2,
+      "median_paired_speedup": 1.4424141115664137,
+      "minimum_paired_speedup": 0.9310053853539044,
+      "maximum_paired_speedup": 7.902656603624541,
+      "storage_wins": 0,
+      "storage_ties": 24
+    }
+  },
+  "auditor_sha256": "776ae6d1ebcb0ac4d2eac0235517a0e8ea8703c2aa703ea02d18080fe4fcfcc6",
+  "qualification": "Saved metadata/timing reconciliation, not new model replay or external peer review."
+}

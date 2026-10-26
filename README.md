@@ -17,10 +17,11 @@ The contribution is a checked retention and recovery system using established op
 
 ## Results
 
-The current evidence includes the complete three-seed cloud studies published on 16 October 2026. Planning time, retained storage and recovery time are separate measurements.
+The evidence includes the complete three-seed cloud studies published on 16 October 2026 and the planner-efficiency follow-up on 26 October. Planning time, retained storage and recovery time are separate measurements.
 
 | Evaluation | Measured result | Scope |
 |---|---|---|
+| Planner scaling update (26 October) | **7.82x faster** than previous RecoverML at 4,096 independent branches; **1.95x** for a wide retained frontier | Same exact optimum and checks; synthetic metadata controls. All 230 frozen conditions retain their minima; small-history timings are mostly flat and slower cases are retained. |
 | Shared preprocessing loss | Less storage than strong local search in **9/36** cases, ties in 27, maximum reduction **48.74%** | All protected results remain recoverable; the manual optimal frontier matches every minimum |
 | Separate preprocessing loss | Six storage wins and 30 ties against local search | Each winning difference is 129 serialized bytes |
 | Cloud planning | Median paired speedups **11.92x / 16.88x** over local search and **2.28x / 1.73x** over scenario exact | Separate / shared loss respectively; exact minima agree across all 72 history-contract pairs |
@@ -31,7 +32,7 @@ The current evidence includes the complete three-seed cloud studies published on
 
 The shared-loss grid uses 36 constructed histories rather than 36 independent production workflows. The largest local-search storage gap is 131,793 bytes. Native DVC results concern the tested cold command integrations and do not establish universal speed superiority.
 
-Detailed evidence: [cloud storage and planning](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native DVC protocols and results](results/research/native_frontier_cloud_oct16/RESULTS.md), [scientific matrix](results/research/scientific_complete_oct16/RESULTS.md), [retinal study](results/research/eyeai_complete_oct15/RESULTS.md) and [Letter study](results/research/gigabyte_letter_oct16/RESULTS.md).
+Detailed evidence: [planner efficiency](results/research/planner_efficiency_oct26/RESULTS.md), [cloud storage and planning](results/research/strong_baseline_cloud_oct16/RESULTS.md), [native DVC protocols and results](results/research/native_frontier_cloud_oct16/RESULTS.md), [scientific matrix](results/research/scientific_complete_oct16/RESULTS.md), [retinal study](results/research/eyeai_complete_oct15/RESULTS.md) and [Letter study](results/research/gigabyte_letter_oct16/RESULTS.md).
 
 ### Earlier concurrency control
 

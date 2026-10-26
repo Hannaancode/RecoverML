@@ -1,0 +1,435 @@
+{
+  "status": "PASS",
+  "group": "scaling",
+  "conditions": 24,
+  "calls": 144,
+  "all_exact_equal_frozen": true,
+  "all_closures_pass": true,
+  "input_sha256": {},
+  "source_changed": [],
+  "summary": {
+    "RecoverML_previous": {
+      "cases": 24,
+      "indexed_faster": 22,
+      "indexed_slower": 2,
+      "median_paired_speedup": 1.4424141115664137,
+      "minimum_paired_speedup": 0.9310053853539044,
+      "maximum_paired_speedup": 7.902656603624541,
+      "storage_wins": 0,
+      "storage_ties": 24
+    }
+  },
+  "comparisons": [
+    {
+      "case": "independent_branches-w64-s101",
+      "expected_bytes": 78606,
+      "nodes": 193,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 78606,
+        "RecoverML_indexed": 78606
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01905994299998781,
+        "RecoverML_previous": 0.02092122000000529
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0976538597213366
+      }
+    },
+    {
+      "case": "independent_branches-w64-s211",
+      "expected_bytes": 78640,
+      "nodes": 193,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_previous": 78640,
+        "RecoverML_indexed": 78640
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0193554789999979,
+        "RecoverML_previous": 0.02128715199999931
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.0997998034562524
+      }
+    },
+    {
+      "case": "independent_branches-w64-s307",
+      "expected_bytes": 78617,
+      "nodes": 193,
+      "versions": 64,
+      "sizes": {
+        "RecoverML_indexed": 78617,
+        "RecoverML_previous": 78617
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.019461127999989003,
+        "RecoverML_previous": 0.02144585099999574
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.101983965164191
+      }
+    },
+    {
+      "case": "independent_branches-w256-s101",
+      "expected_bytes": 312840,
+      "nodes": 769,
+      "versions": 256,
+      "sizes": {
+        "RecoverML_previous": 312840,
+        "RecoverML_indexed": 312840
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.07740739300000143,
+        "RecoverML_previous": 0.11142182700000092
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.439420999490305
+      }
+    },
+    {
+      "case": "independent_branches-w256-s211",
+      "expected_bytes": 312899,
+      "nodes": 769,
+      "versions": 256,
+      "sizes": {
+        "RecoverML_indexed": 312899,
+        "RecoverML_previous": 312899
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.07945234700000015,
+        "RecoverML_previous": 0.11553032300000154
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.45408320033644
+      }
+    },
+    {
+      "case": "independent_branches-w256-s307",
+      "expected_bytes": 312844,
+      "nodes": 769,
+      "versions": 256,
+      "sizes": {
+        "RecoverML_indexed": 312844,
+        "RecoverML_previous": 312844
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.07847697599999037,
+        "RecoverML_previous": 0.11343118800000696
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.4454072236425224
+      }
+    },
+    {
+      "case": "independent_branches-w1024-s101",
+      "expected_bytes": 1250059,
+      "nodes": 3073,
+      "versions": 1024,
+      "sizes": {
+        "RecoverML_indexed": 1250059,
+        "RecoverML_previous": 1250059
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.3838002570000043,
+        "RecoverML_previous": 0.8809609070000022
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 2.2953629939856772
+      }
+    },
+    {
+      "case": "independent_branches-w1024-s211",
+      "expected_bytes": 1250122,
+      "nodes": 3073,
+      "versions": 1024,
+      "sizes": {
+        "RecoverML_previous": 1250122,
+        "RecoverML_indexed": 1250122
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.3171651960000048,
+        "RecoverML_previous": 0.8841805830000027
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 2.7877604294261507
+      }
+    },
+    {
+      "case": "independent_branches-w1024-s307",
+      "expected_bytes": 1250044,
+      "nodes": 3073,
+      "versions": 1024,
+      "sizes": {
+        "RecoverML_indexed": 1250044,
+        "RecoverML_previous": 1250044
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.37899212499999635,
+        "RecoverML_previous": 0.8858847059999988
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 2.3374752338191915
+      }
+    },
+    {
+      "case": "independent_branches-w4096-s101",
+      "expected_bytes": 5001991,
+      "nodes": 12289,
+      "versions": 4096,
+      "sizes": {
+        "RecoverML_indexed": 5001991,
+        "RecoverML_previous": 5001991
+      },
+      "median_s": {
+        "RecoverML_indexed": 1.4216341240000077,
+        "RecoverML_previous": 10.71969973600001
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 7.54040688460567
+      }
+    },
+    {
+      "case": "independent_branches-w4096-s211",
+      "expected_bytes": 5002009,
+      "nodes": 12289,
+      "versions": 4096,
+      "sizes": {
+        "RecoverML_indexed": 5002009,
+        "RecoverML_previous": 5002009
+      },
+      "median_s": {
+        "RecoverML_indexed": 1.3830102179999813,
+        "RecoverML_previous": 10.821161060000009
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 7.82435365925847
+      }
+    },
+    {
+      "case": "independent_branches-w4096-s307",
+      "expected_bytes": 5001780,
+      "nodes": 12289,
+      "versions": 4096,
+      "sizes": {
+        "RecoverML_previous": 5001780,
+        "RecoverML_indexed": 5001780
+      },
+      "median_s": {
+        "RecoverML_indexed": 1.3730981040000074,
+        "RecoverML_previous": 10.851122798999995
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 7.902656603624541
+      }
+    },
+    {
+      "case": "wide_frontier-w64-s101",
+      "expected_bytes": 22893,
+      "nodes": 66,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 22893,
+        "RecoverML_indexed": 22893
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0047121169999968515,
+        "RecoverML_previous": 0.00463455999999951
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.983540943487313
+      }
+    },
+    {
+      "case": "wide_frontier-w64-s211",
+      "expected_bytes": 22927,
+      "nodes": 66,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 22927,
+        "RecoverML_indexed": 22927
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.0038727410000092277,
+        "RecoverML_previous": 0.004514959000005092
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1658303511632546
+      }
+    },
+    {
+      "case": "wide_frontier-w64-s307",
+      "expected_bytes": 22904,
+      "nodes": 66,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 22904,
+        "RecoverML_indexed": 22904
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.004311322000006612,
+        "RecoverML_previous": 0.004013864000000922
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 0.9310053853539044
+      }
+    },
+    {
+      "case": "wide_frontier-w256-s101",
+      "expected_bytes": 88780,
+      "nodes": 258,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 88780,
+        "RecoverML_indexed": 88780
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.01631113900000969,
+        "RecoverML_previous": 0.08975091399997837
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 5.502430823495836
+      }
+    },
+    {
+      "case": "wide_frontier-w256-s211",
+      "expected_bytes": 88839,
+      "nodes": 258,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 88839,
+        "RecoverML_indexed": 88839
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.015796792999992704,
+        "RecoverML_previous": 0.017469865999999
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1059121936969782
+      }
+    },
+    {
+      "case": "wide_frontier-w256-s307",
+      "expected_bytes": 88784,
+      "nodes": 258,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_indexed": 88784,
+        "RecoverML_previous": 88784
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.016900167000017063,
+        "RecoverML_previous": 0.01918849800000544
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.1354028631779831
+      }
+    },
+    {
+      "case": "wide_frontier-w1024-s101",
+      "expected_bytes": 352439,
+      "nodes": 1026,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 352439,
+        "RecoverML_indexed": 352439
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.16476517300000637,
+        "RecoverML_previous": 0.2001599419999991
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.2148194812989475
+      }
+    },
+    {
+      "case": "wide_frontier-w1024-s211",
+      "expected_bytes": 352502,
+      "nodes": 1026,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 352502,
+        "RecoverML_indexed": 352502
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.16804361199999107,
+        "RecoverML_previous": 0.21410613599999806
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.2741105326872493
+      }
+    },
+    {
+      "case": "wide_frontier-w1024-s307",
+      "expected_bytes": 352424,
+      "nodes": 1026,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 352424,
+        "RecoverML_indexed": 352424
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.1665698800000257,
+        "RecoverML_previous": 0.2070713789999843
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.2431501961816407
+      }
+    },
+    {
+      "case": "wide_frontier-w4096-s101",
+      "expected_bytes": 1407156,
+      "nodes": 4098,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_indexed": 1407156,
+        "RecoverML_previous": 1407156
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.7183934630000124,
+        "RecoverML_previous": 1.4248987499999828
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.9834517202447848
+      }
+    },
+    {
+      "case": "wide_frontier-w4096-s211",
+      "expected_bytes": 1407174,
+      "nodes": 4098,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_indexed": 1407174,
+        "RecoverML_previous": 1407174
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.7224959099999921,
+        "RecoverML_previous": 1.3318988239999783
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.8434690156238984
+      }
+    },
+    {
+      "case": "wide_frontier-w4096-s307",
+      "expected_bytes": 1406945,
+      "nodes": 4098,
+      "versions": 1,
+      "sizes": {
+        "RecoverML_previous": 1406945,
+        "RecoverML_indexed": 1406945
+      },
+      "median_s": {
+        "RecoverML_indexed": 0.6959695360000069,
+        "RecoverML_previous": 1.3570269530000019
+      },
+      "paired_speedup": {
+        "RecoverML_previous": 1.9498367138299404
+      }
+    }
+  ],
+  "calls_sha256": "d8b395d788ef4f1e8c1040b6b87b9b53e2ee3c9e267aa28e016415b9f01952ab",
+  "selections_sha256": "5e6cb490bcb971ab2bc24524b876f947ac048526e384363a0bef78e9f362c725",
+  "qualification": "Metadata-only engineering follow-up on previously observed constructed histories and synthetic stress topologies; not new payload execution, independent confirmation or a storage win below an optimum."
+}
