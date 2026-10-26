@@ -1,0 +1,230 @@
+{
+  "run_id": 40337905283,
+  "source_commit": "5174f3a669df73fa963a0003c6db2af49a9538be",
+  "qualification": "All 24 benchmark stages completed; initial audits failed on numeric-versus-lexical target ordering. Original timing artifacts retained unchanged.",
+  "jobs": [
+    {
+      "id": 121624324536,
+      "name": "acceptance",
+      "status": "completed",
+      "conclusion": "success",
+      "failed_steps": []
+    },
+    {
+      "id": 121625150791,
+      "name": "Census wine - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150806,
+      "name": "Census wine - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150871,
+      "name": "Census iris - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150872,
+      "name": "Census iris - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150881,
+      "name": "Census digits - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150899,
+      "name": "Census iris - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150917,
+      "name": "Census breast_cancer - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150943,
+      "name": "Census diabetes - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150950,
+      "name": "Census diabetes - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150952,
+      "name": "Census digits - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150995,
+      "name": "Census wine - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625150996,
+      "name": "Census digits - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151017,
+      "name": "Census linnerud - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151019,
+      "name": "Census breast_cancer - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151057,
+      "name": "Census linnerud - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151065,
+      "name": "Census linnerud - robust_forest",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151085,
+      "name": "Census wine - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151109,
+      "name": "Census diabetes - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151115,
+      "name": "Census breast_cancer - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151134,
+      "name": "Census breast_cancer - standard_linear",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151158,
+      "name": "Census iris - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151216,
+      "name": "Census linnerud - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151242,
+      "name": "Census diabetes - pca_neighbors",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    },
+    {
+      "id": 121625151250,
+      "name": "Census digits - minmax_tree",
+      "status": "completed",
+      "conclusion": "failure",
+      "failed_steps": [
+        "Run python scripts/audit_recovery_census.py work/census --output work/census_audit.json"
+      ]
+    }
+  ]
+}

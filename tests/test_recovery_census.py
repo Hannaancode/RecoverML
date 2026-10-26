@@ -9,10 +9,16 @@ from recoverml.broad_workflows import capture,execute,capabilities
 from recoverml.component_retention import optimize
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from broad_recovery_worker import recover
-from audit_recovery_census import trial_grid
+from audit_recovery_census import trial_grid,requested_targets
 
 
 class CensusRecoveryTests(unittest.TestCase):
+    def test_sixteen_version_request_order_survives_canonical_json_sorting(self):
+        graph=Graph(env={});graph.targets={str(i):['target'+str(i)] for i in range(16)}
+        graph.targets=json.loads(json.dumps(graph.targets,sort_keys=True))
+        self.assertEqual(requested_targets(graph,16,'all'),['target'+str(i) for i in range(16)])
+        self.assertEqual(requested_targets(graph,16,'latest'),['target15'])
+
     def test_missing_duplicate_and_relabelled_trials_cannot_pass(self):
         rows=[dict(case='fixed',method=m,repetition=r) for m in ('ours','native','direct') for r in range(3)]
         trial_grid(rows,['fixed'],['ours','native','direct'],3)

@@ -44,6 +44,14 @@ def trial_grid(trials,cases,methods,repetitions):
             'Missing/duplicate/replaced trial')
 
 
+def requested_targets(graph,versions,request):
+    if request=='latest':return list(graph.targets[str(versions-1)])
+    # Canonical JSON sorts string keys lexically. The frozen capture builder
+    # requests versions in numeric order; do not infer that order from JSON.
+    return list(dict.fromkeys(t for version in sorted(graph.targets,key=int)
+                              for t in graph.targets[version]))
+
+
 def block(directory,smoke=False):
     start=json.loads((directory/'run_start.json').read_bytes())
     report=json.loads((directory/'report.json').read_bytes())
@@ -111,8 +119,7 @@ def block(directory,smoke=False):
         parts=case.split('/');versions=int(parts[2][1:]);loss,request,interface=parts[3:]
         history=f'{dataset}-{recipe}-v{versions}';g=graphs[history]
         key=f'{history}-{loss}-{request}';retention=retentions[key]
-        ids=(list(g.targets[str(versions-1)]) if request=='latest' else
-             list(dict.fromkeys(t for ts in g.targets.values() for t in ts)))
+        ids=requested_targets(g,versions,request)
         require(retention['targets']==ids,'Requested target set differs')
         targets={g.nodes[t].blob for t in ids};selected=set(retention['selected'])
         current=[r for r in trials if r['case']==case]

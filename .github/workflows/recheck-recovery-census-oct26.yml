@@ -1,0 +1,55 @@
+name: Recheck original recovery census artifacts
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/recheck-recovery-census-oct26.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - uses: actions/download-artifact@v4
+        with:
+          run-id: 40337905283
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: recovery-census-*
+          path: work/original_artifacts
+      - name: Reconcile every original block without rerunning any timing
+        run: |
+          python - <<'PY'
+          import itertools,json,shutil,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          from audit_recovery_census import complete
+          config=json.loads(Path('configs/recovery_census_oct26.json').read_bytes())
+          for dataset,recipe in itertools.product(config['datasets'],config['recipes']):
+              source=Path('work/original_artifacts')/('recovery-census-'+dataset+'-'+recipe)/'census'
+              destination=Path('work/census_blocks')/dataset/recipe
+              shutil.copytree(source,destination)
+          result=complete(Path('work/census_blocks'))
+          Path('work/complete_recovery_census_audit.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps({k:v for k,v in result.items() if k!='blocks'},indent=2))
+          assert result['unexpected_failures']==0
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovery-census-corrected-audit
+          path: work/complete_recovery_census_audit.json
+          retention-days: 90

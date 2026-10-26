@@ -1,0 +1,8 @@
+test_sixteen_version_request_order_survives_canonical_json_sorting (test_recovery_census.CensusRecoveryTests.test_sixteen_version_request_order_survives_canonical_json_sorting) ... ok
+test_all_catalogue_members_preserve_bytes_and_existing_output_is_refused (test_census_transport.CensusTransportTests.test_all_catalogue_members_preserve_bytes_and_existing_output_is_refused) ... ok
+test_missing_groups_corrupt_parts_and_traversal_are_rejected (test_census_transport.CensusTransportTests.test_missing_groups_corrupt_parts_and_traversal_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.598s
+
+OK
