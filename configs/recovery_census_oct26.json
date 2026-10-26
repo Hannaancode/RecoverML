@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "purpose": "Held-out full-catalogue recovery census, exploratory engineering follow-up; success criteria fixed before full execution",
+  "datasets": [
+    "iris",
+    "wine",
+    "breast_cancer",
+    "digits",
+    "diabetes",
+    "linnerud"
+  ],
+  "recipes": [
+    "standard_linear",
+    "pca_neighbors",
+    "minmax_tree",
+    "robust_forest"
+  ],
+  "versions": [
+    1,
+    4,
+    16
+  ],
+  "losses": [
+    "intact",
+    "preprocessing",
+    "broad"
+  ],
+  "requests": [
+    "latest",
+    "all"
+  ],
+  "interfaces": [
+    "cli",
+    "warm_api"
+  ],
+  "methods": [
+    "RecoverML",
+    "DVC_native",
+    "direct_control"
+  ],
+  "repetitions": 3,
+  "seed_base": 2026102601,
+  "expected_captures": 72,
+  "expected_comparisons": 864,
+  "expected_trials": 7776,
+  "success": {
+    "exact_required": true,
+    "minimum_case_speedup": 1.1,
+    "minimum_win_fraction_each_interface": 0.9,
+    "minimum_win_fraction_each_dataset": 0.9,
+    "failures_and_missing_cases": "Count as nonwins; any unexpected recovery failure fails the exactness gate",
+    "direct_control": "Report every outcome; DVC wins alone do not establish superiority over all recovery engines",
+    "minimum_win_fraction_each_stratum": 0.9
+  },
+  "scope": "Census of this finite authored catalogue, not an estimate that recovery is faster in 90% of production deployments. Repeated trials and related histories are not independent populations.",
+  "dvc_strengthening": [
+    "Optimal identical paid payloads; selection free",
+    "Empty requested-output directory before each trial",
+    "Retained cache objects hard-linked to paid payloads; all other cache removed",
+    "checkout when all requested files retained, otherwise one exact-request batch repro",
+    "Warm API imports excluded equally, per-request Repo construction included",
+    "Both custom workers share the selective retained-file fast path"
+  ],
+  "timing": "Median elapsed time including requested-output SHA256 verification. Setup and cache preparation excluded; all raw repetitions and failures retained. No OS cache flush."
+}

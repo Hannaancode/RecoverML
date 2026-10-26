@@ -8,6 +8,7 @@ being mistaken for recovery paths. Existing logical recovery is unchanged.
 """
 from pathlib import Path
 import heapq
+import os
 import time
 from .core import DiskRestorer, RestoreError, digest, pack, unpack
 
@@ -75,8 +76,15 @@ class WitnessRestorer:
         DiskRestorer(graph, store, verify_environment=verify_environment)
         self.graph, self.store = graph, store
         self.replay_execute = replay_execute
-        retained = {b for b in graph.candidates if
-                    (store / 'blobs' / (b + '.pkl')).is_file()}
+        candidates = graph.candidates
+        # Enumerate the actual store once instead of issuing one filesystem
+        # query per captured candidate, most of which may have been evicted.
+        try:
+            with os.scandir(store / 'blobs') as files:
+                retained = {entry.name[:-4] for entry in files if entry.name.endswith('.pkl')
+                            and entry.name[:-4] in candidates and entry.is_file()}
+        except FileNotFoundError:
+            retained = set()
         self.plan = {s['blob']: s for s in certificate(graph, retained)['steps']}
         self.memo, self.trace = {}, []
 

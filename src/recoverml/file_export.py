@@ -20,7 +20,7 @@ def fingerprint(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
-def export_retained_targets(store, output):
+def export_retained_targets(store, output, *, target_ids=None):
     store, output = Path(store), Path(output)
     started = time.perf_counter()
     manifest = json.loads((store / 'manifest.json').read_bytes())
@@ -29,16 +29,19 @@ def export_retained_targets(store, output):
     nodes = {n['id']: n for n in manifest['nodes']}
     if len(nodes) != len(manifest['nodes']):
         raise ValueError('Duplicate manifest node')
+    protected = {node for requested in manifest['targets'].values() for node in requested}
+    requested = protected if target_ids is None else set(target_ids)
+    if not requested <= protected or (target_ids is not None and not requested):
+        raise ValueError('Request must contain declared protected target nodes')
     targets = {}
-    for requested in manifest['targets'].values():
-        for node_id in requested:
-            node = nodes[node_id]
-            blob, size = node['blob'], node['size']
-            if re.fullmatch(r'[0-9a-f]{64}', blob) is None or type(size) is not int or size < 0:
-                raise ValueError('Invalid target content identity')
-            if blob in targets and targets[blob] != size:
-                raise ValueError('Conflicting physical target sizes')
-            targets[blob] = size
+    for node_id in sorted(requested):
+        node = nodes[node_id]
+        blob, size = node['blob'], node['size']
+        if re.fullmatch(r'[0-9a-f]{64}', blob) is None or type(size) is not int or size < 0:
+            raise ValueError('Invalid target content identity')
+        if blob in targets and targets[blob] != size:
+            raise ValueError('Conflicting physical target sizes')
+        targets[blob] = size
     if not targets or not all((store / 'blobs' / (blob + '.pkl')).is_file() for blob in targets):
         return None
     # Verify all sources before materializing output. No pickle is interpreted.

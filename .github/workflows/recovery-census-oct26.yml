@@ -1,0 +1,77 @@
+name: Broad native recovery census
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/recovery-census-oct26.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      DVC_NO_ANALYTICS: 'true'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/benchmark_recovery_census.py --dataset iris --recipe standard_linear --output work/acceptance --smoke
+      - run: python scripts/audit_recovery_census.py work/acceptance --output work/acceptance_audit.json --smoke
+      - name: Require every integration to recover exactly before full runs
+        run: python -c "import json; d=json.load(open('work/acceptance_audit.json')); assert d['unexpected_failures']==0"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovery-census-acceptance
+          path: |
+            work/acceptance/*.json
+            work/acceptance/*.jsonl
+            work/acceptance/*.tar.gz
+            work/acceptance_audit.json
+          retention-days: 90
+  census:
+    needs: acceptance
+    name: Census ${{ matrix.dataset }} - ${{ matrix.recipe }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        dataset: [iris, wine, breast_cancer, digits, diabetes, linnerud]
+        recipe: [standard_linear, pca_neighbors, minmax_tree, robust_forest]
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      DVC_NO_ANALYTICS: 'true'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/benchmark_recovery_census.py --dataset ${{ matrix.dataset }} --recipe ${{ matrix.recipe }} --output work/census
+      - run: python scripts/audit_recovery_census.py work/census --output work/census_audit.json
+      - run: python -c "import json; d=json.load(open('work/census_audit.json')); assert d['unexpected_failures']==0"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovery-census-${{ matrix.dataset }}-${{ matrix.recipe }}
+          path: |
+            work/census/*.json
+            work/census/*.jsonl
+            work/census/*.tar.gz
+            work/census_audit.json
+          retention-days: 90

@@ -38,6 +38,20 @@ class FileExportTests(unittest.TestCase):
             self.assertIsNone(export_retained_targets(store, output))
             self.assertFalse(output.exists())
 
+    def test_requested_retained_subset_does_not_need_or_export_other_versions(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            store,output,blob,raw=self.fixture(temporary)
+            manifest=json.loads((store/'manifest.json').read_bytes())
+            manifest['nodes'].append(dict(id='missing',blob='a'*64,size=12))
+            manifest['targets']['1']=['missing']
+            (store/'manifest.json').write_text(json.dumps(manifest))
+            self.assertIsNone(export_retained_targets(store,output))
+            receipt=export_retained_targets(store,output,target_ids=['target'])
+            self.assertEqual(receipt['target_sha256'],{blob:blob})
+            self.assertEqual(list(output.iterdir()),[output/(blob+'.pkl')])
+            for invalid in ([],['unknown']):
+                with self.assertRaises(ValueError):export_retained_targets(store,output,target_ids=invalid)
+
     def test_corrupt_retention_or_existing_output_fails_closed(self):
         for corrupt_source in (True, False):
             with self.subTest(source=corrupt_source), tempfile.TemporaryDirectory() as temporary:
@@ -52,7 +66,7 @@ class FileExportTests(unittest.TestCase):
 
     def test_import_does_not_load_numerical_or_model_libraries(self):
         result = subprocess.run([sys.executable, '-c',
-            "import sys; import recoverml.file_export; assert not ({'numpy','scipy','sklearn','torch'} & set(sys.modules))"],
+            "import sys; import recoverml.file_export, recoverml.file_recovery; assert not ({'numpy','scipy','sklearn','torch'} & set(sys.modules))"],
             capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
 

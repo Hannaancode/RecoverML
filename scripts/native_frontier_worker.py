@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path, PurePosixPath
 import shutil
+import stat
 import time
 
 from recoverml.core import RestoreError, digest
@@ -27,7 +28,15 @@ def reset_selected_cache(cache, blobs, layout):
         if digest(source.read_bytes()) != blob:
             raise RestoreError('Retained native cache source hash mismatch')
     if cache.exists():
-        shutil.rmtree(cache)
+        def remove_readonly(function, path, error):
+            # DVC protects cache files. Windows refuses to unlink them until
+            # the write bit is restored; only touch this checked workspace.
+            target = Path(path)
+            if not isinstance(error, PermissionError) or not target.resolve().is_relative_to(cache.resolve()):
+                raise error
+            target.chmod(target.stat().st_mode | stat.S_IWUSR)
+            function(path)
+        shutil.rmtree(cache, onexc=remove_readonly)
     for relative, blob in layout.items():
         destination = cache / relative
         destination.parent.mkdir(parents=True, exist_ok=True)

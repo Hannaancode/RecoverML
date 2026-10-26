@@ -1,0 +1,21 @@
+test_classification_regression_families_and_loss_modes_restore_exact_requested_files (test_recovery_census.CensusRecoveryTests.test_classification_regression_families_and_loss_modes_restore_exact_requested_files) ... ok
+test_missing_duplicate_and_relabelled_trials_cannot_pass (test_recovery_census.CensusRecoveryTests.test_missing_duplicate_and_relabelled_trials_cannot_pass) ... ok
+test_sparse_store_enumeration_ignores_unknown_files_and_fails_on_corruption (test_recovery_census.CensusRecoveryTests.test_sparse_store_enumeration_ignores_unknown_files_and_fails_on_corruption) ... ok
+test_corrupt_retention_or_existing_output_fails_closed (test_file_export.FileExportTests.test_corrupt_retention_or_existing_output_fails_closed) ... ok
+test_export_is_exact_without_deserializing_values_or_asserting_runtime_compatibility (test_file_export.FileExportTests.test_export_is_exact_without_deserializing_values_or_asserting_runtime_compatibility) ... ok
+test_import_does_not_load_numerical_or_model_libraries (test_file_export.FileExportTests.test_import_does_not_load_numerical_or_model_libraries) ... ok
+test_missing_target_returns_fallback_without_creating_output (test_file_export.FileExportTests.test_missing_target_returns_fallback_without_creating_output) ... ok
+test_requested_retained_subset_does_not_need_or_export_other_versions (test_file_export.FileExportTests.test_requested_retained_subset_does_not_need_or_export_other_versions) ... ok
+test_corruption_fails_closed (test_witness.WitnessTests.test_corruption_fails_closed) ... ok
+test_fixed_point_against_independent_path_oracle (test_witness.WitnessTests.test_fixed_point_against_independent_path_oracle) ... ok
+test_mismatched_contract_fails_hash_check (test_witness.WitnessTests.test_mismatched_contract_fails_hash_check) ... ok
+test_opaque_artifact_recovers_without_replaying_opaque_event (test_witness.WitnessTests.test_opaque_artifact_recovers_without_replaying_opaque_event) ... ok
+test_self_supporting_alias_cycle_is_not_recoverable (test_witness.WitnessTests.test_self_supporting_alias_cycle_is_not_recoverable) ... ok
+test_both_backends_restore_all_exact_target_files_from_features (test_native_frontier.NativeFrontierTests.test_both_backends_restore_all_exact_target_files_from_features) ... ok
+test_missing_retired_view_cannot_be_silently_recomputed (test_native_frontier.NativeFrontierTests.test_missing_retired_view_cannot_be_silently_recomputed) ... ok
+test_retained_native_cache_is_a_hard_link_and_extra_objects_are_removed (test_native_frontier.NativeFrontierTests.test_retained_native_cache_is_a_hard_link_and_extra_objects_are_removed) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 14.479s
+
+OK

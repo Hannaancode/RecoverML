@@ -25,6 +25,7 @@ class NativeFrontierTests(unittest.TestCase):
             cache = store / '.dvc/cache'
             cache.mkdir(parents=True)
             (cache / 'unpaid').write_bytes(b'hidden downstream output')
+            (cache / 'unpaid').chmod(0o400)
             hashes = worker.reset_selected_cache(cache, blobs, {'files/md5/aa/object': blob})
             self.assertEqual(hashes, [blob])
             self.assertFalse((cache / 'unpaid').exists())
