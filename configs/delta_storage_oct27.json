@@ -4,6 +4,7 @@
   "primary_conditions": 216,
   "transfer_conditions": {"scientific": 48, "cloud": 72, "retinal": 108, "letter": 2},
   "minimum_overlap_bytes": 128,
+  "local_plan_normalization": "Implementation correction after the first run: canonicalize every local-search plan by retaining a cheaper delta only when its base is decoded, otherwise its full file, in canonical acyclic order. Remove unusable deltas and duplicate representations. This preserves the entire storage-decoded closure and cannot increase bytes. The full grid and success gate are unchanged; rerun all blocks and retain the failed first attempt.",
   "base_rule": "For each non-root artifact, consider candidates preceding it in (canonical size, SHA) order. Choose the greatest equal-prefix plus nonoverlapping equal-suffix total; break ties by base SHA. Keep the single delta only if its complete file, including its 89-byte header, is smaller than the saved adaptive full encoding.",
   "solver_time_limit_s": 120,
   "methods": ["flat_exact", "delta_exact", "delta_local", "delta_snapshots", "delta_flat_choice", "solid_archive_control"],

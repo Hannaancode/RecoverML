@@ -46,11 +46,15 @@ class DeltaStoreTests(unittest.TestCase):
                     if after==stored:break
                     stored=after
                 feasible=True
+                normalized=rep.normalize(paid)
+                self.assertLessEqual(sum(len(rep.physical[b][1]) for b in normalized),sum(len(rep.physical[b][1]) for b in paid))
+                self.assertEqual(set(rep.files(normalized)),stored)
                 for fault in faults:
                     expected=certificate(restricted(g,caps,fault),stored)
                     actual=certificate(restricted(rep.cost_graph,caps,fault),paid)
                     self.assertEqual(set(actual['available'])&g.candidates,set(expected['available']))
                     self.assertEqual(actual['complete'],expected['complete']);feasible &= actual['complete']
+                    self.assertEqual(set(certificate(restricted(rep.cost_graph,caps,fault),normalized)['available'])&g.candidates,set(expected['available']))
                 if feasible:
                     cost=sum(len(rep.physical[b][1]) for b in paid)
                     best=cost if best is None else min(best,cost)

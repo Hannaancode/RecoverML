@@ -143,6 +143,7 @@ def run(originals,key,output):
                     require(rep.size(selected,caps,k)==rep.size(other,caps,k),'Independent delta objectives disagree')
                     local,local_diag=select(rep.cost_graph,caps,k,retained_bytes(rep.cost_graph,set(rep.full_tokens.values()),caps,k),True)
                     require(local_diag['robust_certified'],'Delta local search failed')
+                    normalized=rep.normalize(local);local_diag['normalization_removed']=sorted(local-normalized);local=normalized
                     targets={g.nodes[t].blob for ts in g.targets.values() for t in ts}
                     for method,chosen in [('delta_exact',selected),('delta_local',local),('delta_snapshots',rep.choices(g.roots|targets)),
                                           ('delta_flat_choice',rep.choices(flat_selected))]:

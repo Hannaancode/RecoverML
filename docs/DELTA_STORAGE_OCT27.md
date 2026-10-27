@@ -57,3 +57,18 @@ The primary substantial-improvement gate is at least 10% fewer complete-store
 bytes in at least 90% of conditions within every primary dataset/recipe/loss
 stratum. Passing an overall or selected-subgroup comparison does not pass this
 gate. Neither this gate nor any finite benchmark demonstrates universal dominance.
+
+## First-run correction
+
+The first cloud attempt exposed a representation boundary in two PCA-neighbor
+blocks: the heuristic can retain both a full file and its delta. The on-disk
+format correctly rejected that ambiguous choice. The correction canonicalizes
+heuristic selections in acyclic base order while preserving every decoded
+canonical value, dropping unusable deltas and duplicate copies. This can only
+strengthen the comparator. Exhaustive subset tests check closure equality and
+nonincreasing bytes. All 446 conditions are rerun, with the first attempt kept
+as failure evidence. The grid, encoding candidates and success gate are unchanged.
+
+The neural CI job also needed full Git history because the new audit integration
+test authenticates inputs against the pinned preceding release commit. No
+runtime environment check was weakened.

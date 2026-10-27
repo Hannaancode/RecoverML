@@ -78,6 +78,9 @@ def audit(originals,directory,preflight=False):
         optimum=rep.size(other,caps,k)
         for method in ('delta_exact','delta_local','delta_snapshots','delta_flat_choice'):
             result=row['methods'][method];selected=set(result['physical_selected']);mapping=rep.files(selected)
+            if method=='delta_local':
+                initial=selected|set(row['local_diagnostic']['normalization_removed'])
+                require(rep.normalize(initial)==selected,'Local representation normalization differs')
             canonical_set=set(mapping);new_header=delta_metadata(g,caps,k)
             expected={'metadata.rml':dict(bytes=len(new_header),sha256=digest(new_header))}
             expected.update({'blobs/'+b+'.pkl':dict(bytes=len(data),sha256=digest(data)) for b,data in mapping.items()})

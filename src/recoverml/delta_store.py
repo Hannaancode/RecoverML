@@ -139,6 +139,24 @@ class DeltaRepresentation:
                 raise ValueError('Selected delta is missing its retained base')
         return files
 
+    def normalize(self,tokens):
+        """Remove duplicate/unusable representations, preserving decoded values.
+
+        A heuristic may pay for both versions of a file or an unusable delta.
+        In canonical acyclic order, retain the cheaper delta when its base is
+        decoded, otherwise retain the full file. This preserves the entire
+        storage-decoded closure, not just the currently protected ML targets.
+        """
+        tokens=set(tokens)
+        if not self.cost_graph.roots<=tokens<=self.physical.keys():raise ValueError('Invalid physical selection')
+        result=set();available=set();sizes=self.graph.sizes()
+        for blob in sorted(self.graph.candidates,key=lambda b:(sizes[b],b)):
+            if self.delta_tokens.get(blob) in tokens and self.bases[blob] in available:
+                result.add(self.delta_tokens[blob]);available.add(blob)
+            elif self.full_tokens[blob] in tokens:
+                result.add(self.full_tokens[blob]);available.add(blob)
+        return result
+
     def size(self,tokens,caps,k):
         return len(metadata(self.graph,caps,k))+sum(map(len,self.files(tokens).values()))
 
