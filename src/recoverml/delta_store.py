@@ -203,6 +203,9 @@ class DeltaStore(EncodedStore):
 
 
 def open_store(path):
+    if (Path(path)/'archive.rml').exists() or (Path(path)/'archive.rml').is_symlink():
+        from .solid_store import SolidStore
+        return SolidStore(path)
     if (Path(path)/'metadata.rml').is_symlink():raise RestoreError('Metadata must be a regular retained file')
     record=parse_metadata((Path(path)/'metadata.rml').read_bytes())
     return DeltaStore(path) if record['format']==FORMAT else EncodedStore(path)

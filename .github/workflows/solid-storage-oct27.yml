@@ -1,0 +1,127 @@
+name: Executable joint compression on every saved condition
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/solid-storage-oct27.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: src:tests
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: |
+          mkdir -p work/solid_acceptance
+          python -m unittest test_solid_store test_encoded_store test_delta_store -v 2>&1 | tee work/solid_acceptance/tests.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: solid-storage-acceptance
+          path: work/solid_acceptance
+          retention-days: 90
+  census:
+    needs: acceptance
+    name: Solid ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - block: primary/iris/standard_linear
+            name: primary-iris-standard_linear
+          - block: primary/iris/pca_neighbors
+            name: primary-iris-pca_neighbors
+          - block: primary/iris/minmax_tree
+            name: primary-iris-minmax_tree
+          - block: primary/iris/robust_forest
+            name: primary-iris-robust_forest
+          - block: primary/wine/standard_linear
+            name: primary-wine-standard_linear
+          - block: primary/wine/pca_neighbors
+            name: primary-wine-pca_neighbors
+          - block: primary/wine/minmax_tree
+            name: primary-wine-minmax_tree
+          - block: primary/wine/robust_forest
+            name: primary-wine-robust_forest
+          - block: primary/breast_cancer/standard_linear
+            name: primary-breast_cancer-standard_linear
+          - block: primary/breast_cancer/pca_neighbors
+            name: primary-breast_cancer-pca_neighbors
+          - block: primary/breast_cancer/minmax_tree
+            name: primary-breast_cancer-minmax_tree
+          - block: primary/breast_cancer/robust_forest
+            name: primary-breast_cancer-robust_forest
+          - block: primary/digits/standard_linear
+            name: primary-digits-standard_linear
+          - block: primary/digits/pca_neighbors
+            name: primary-digits-pca_neighbors
+          - block: primary/digits/minmax_tree
+            name: primary-digits-minmax_tree
+          - block: primary/digits/robust_forest
+            name: primary-digits-robust_forest
+          - block: primary/diabetes/standard_linear
+            name: primary-diabetes-standard_linear
+          - block: primary/diabetes/pca_neighbors
+            name: primary-diabetes-pca_neighbors
+          - block: primary/diabetes/minmax_tree
+            name: primary-diabetes-minmax_tree
+          - block: primary/diabetes/robust_forest
+            name: primary-diabetes-robust_forest
+          - block: primary/linnerud/standard_linear
+            name: primary-linnerud-standard_linear
+          - block: primary/linnerud/pca_neighbors
+            name: primary-linnerud-pca_neighbors
+          - block: primary/linnerud/minmax_tree
+            name: primary-linnerud-minmax_tree
+          - block: primary/linnerud/robust_forest
+            name: primary-linnerud-robust_forest
+          - block: transfer/scientific
+            name: transfer-scientific
+          - block: transfer/cloud
+            name: transfer-cloud
+          - block: transfer/retinal
+            name: transfer-retinal
+          - block: transfer/letter
+            name: transfer-letter
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/materialize_encoded_storage.py results/research/encoded_storage_oct26 --output work/originals
+      - run: python scripts/materialize_delta_storage.py results/research/delta_storage_oct27 --output work/delta_originals
+      - run: |
+          mkdir -p work/solid
+          git rev-parse HEAD > work/solid/commit.txt
+          python -m pip freeze > work/solid/packages.txt
+          uname -a > work/solid/platform.txt
+          git archive --format=tar.gz -o work/solid/source_snapshot.tar.gz HEAD src/recoverml scripts/benchmark_solid_storage.py scripts/benchmark_delta_storage.py scripts/audit_encoded_storage.py configs/delta_storage_oct27.json requirements.txt docs/SOLID_STORAGE_OCT27.md
+          python scripts/benchmark_solid_storage.py --originals work/originals --final work/delta_originals --block ${{ matrix.block }} --output work/solid/result.json 2>&1 | tee work/solid/execution.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: solid-storage-${{ matrix.name }}
+          path: work/solid
+          retention-days: 90

@@ -22,6 +22,7 @@ Use a new output directory for each fresh run. Saved-data audits inspect existin
 
 | Study | Protocol and results | Evidence |
 |---|---|---|
+| Executable joint compression, 27 October | [Implementation and evaluation scope](SOLID_STORAGE_OCT27.md) | Follow-up in progress: real solid stores, guarded replay, equal-format local controls; final source-pinned aggregate results pending. |
 | Coupled delta storage, 27 October | [Protocol and proof boundary](DELTA_STORAGE_OCT27.md), [complete results](../results/research/delta_storage_oct27/RESULTS.md) | 446 conditions, 56 original artifacts across both attempts, stronger local controls and all archive losses; 201 smaller stores, 243 ties, two unmeasured Letter objectives. The primary gate fails. |
 | Lossless storage, 26 October | [Fresh protocol](ENCODED_STORAGE_OCT26.md), [frozen transfer](ENCODED_TRANSFER_OCT26.md), [results](../results/research/encoded_storage_oct26/RESULTS.md) | 216 fresh conditions, 4,536 requests and all 230 older transfer conditions; 28 original artifacts, stronger gzip controls and explicit unavailable objectives |
 | Broad recovery census, 26 October | [Protocol](RECOVERY_CENSUS_OCT26.md), [results](../results/research/recovery_census_oct26/RESULTS.md) | All 864 fixed configurations, 7,776 method trials and 54,540 target hash checks; 24 original execution artifacts and separate corrected audit artifact |

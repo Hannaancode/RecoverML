@@ -1,0 +1,17 @@
+test_export_without_capture_or_ml_imports_and_request_validation (test_solid_store.SolidStoreTests.test_export_without_capture_or_ml_imports_and_request_validation) ... ok
+test_malformed_corrupt_trailing_duplicate_and_missing_members_fail_closed (test_solid_store.SolidStoreTests.test_malformed_corrupt_trailing_duplicate_and_missing_members_fail_closed) ... ok
+test_matches_published_control_bytes_and_cli_selects_smallest_store (test_solid_store.SolidStoreTests.test_matches_published_control_bytes_and_cli_selects_smallest_store) ... ok
+test_strict_replay_all_recipe_families_and_loss_contracts (test_solid_store.SolidStoreTests.test_strict_replay_all_recipe_families_and_loss_contracts) ... ok
+test_all_recipe_families_preserve_strict_runtime_and_canonical_output_hashes (test_encoded_store.EncodedStoreTests.test_all_recipe_families_preserve_strict_runtime_and_canonical_output_hashes) ... ok
+test_encoded_costs_change_optimum_without_changing_targets_and_replay_has_no_archive (test_encoded_store.EncodedStoreTests.test_encoded_costs_change_optimum_without_changing_targets_and_replay_has_no_archive) ... ok
+test_encoding_modes_roundtrip_and_corruption_size_and_trailing_are_rejected (test_encoded_store.EncodedStoreTests.test_encoding_modes_roundtrip_and_corruption_size_and_trailing_are_rejected) ... ok
+test_retained_export_avoids_model_imports_and_rejects_invalid_requests_and_outputs (test_encoded_store.EncodedStoreTests.test_retained_export_avoids_model_imports_and_rejects_invalid_requests_and_outputs) ... ok
+test_all_recipe_families_replay_with_strict_environment_and_original_hashes (test_delta_store.DeltaStoreTests.test_all_recipe_families_replay_with_strict_environment_and_original_hashes) ... ok
+test_exhaustive_physical_closure_and_optima_match_original_semantics (test_delta_store.DeltaStoreTests.test_exhaustive_physical_closure_and_optima_match_original_semantics) ... ok
+test_export_has_no_archive_or_ml_imports_and_counts_actual_bytes (test_delta_store.DeltaStoreTests.test_export_has_no_archive_or_ml_imports_and_counts_actual_bytes) ... ok
+test_missing_corrupt_cyclic_oversized_nested_and_trailing_deltas_fail_closed (test_delta_store.DeltaStoreTests.test_missing_corrupt_cyclic_oversized_nested_and_trailing_deltas_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 37.820s
+
+OK

@@ -153,6 +153,14 @@ class EncodedStore:
         self.path=Path(path).resolve()
         if (self.path/'metadata.rml').is_symlink():raise RestoreError('Encoded metadata must be a regular retained file')
         record=parse_metadata((self.path/'metadata.rml').read_bytes())
+        self._load_metadata(record)
+        files=list((self.path/'blobs').glob('*.pkl'))
+        if any(p.is_symlink() for p in files):raise RestoreError('Encoded retained files cannot be symlinks')
+        self.retained={p.stem for p in files if p.is_file() and p.stem in self.sizes}
+        if not self.graph.roots<=self.retained:raise RestoreError('Missing encoded mandatory root')
+
+    def _load_metadata(self,record):
+        """Validate the shared canonical graph independently of its byte layout."""
         if record['schema']!=1 or record['format']!=self.FORMAT or record['graph']['schema']!=1:
             raise RestoreError('Unsupported encoded store schema or policy')
         m=record['graph'];self.graph=Graph(env=m['environment'])
@@ -171,10 +179,6 @@ class EncodedStore:
         validate(self.graph,self.contract['capabilities'],self.contract['maximum_lost_groups'])
         self.protected={n for ts in self.graph.targets.values() for n in ts}
         if not self.protected<=self.graph.nodes.keys():raise RestoreError('Unknown protected target')
-        files=list((self.path/'blobs').glob('*.pkl'))
-        if any(p.is_symlink() for p in files):raise RestoreError('Encoded retained files cannot be symlinks')
-        self.retained={p.stem for p in files if p.is_file() and p.stem in sizes}
-        if not self.graph.roots<=self.retained:raise RestoreError('Missing encoded mandatory root')
 
     def load(self,blob):
         if blob not in self.retained:raise RestoreError('Encoded artifact is not retained')
