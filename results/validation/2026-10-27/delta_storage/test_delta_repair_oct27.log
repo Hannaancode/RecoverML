@@ -1,0 +1,10 @@
+test_all_recipe_families_replay_with_strict_environment_and_original_hashes (test_delta_store.DeltaStoreTests.test_all_recipe_families_replay_with_strict_environment_and_original_hashes) ... ok
+test_exhaustive_physical_closure_and_optima_match_original_semantics (test_delta_store.DeltaStoreTests.test_exhaustive_physical_closure_and_optima_match_original_semantics) ... ok
+test_export_has_no_archive_or_ml_imports_and_counts_actual_bytes (test_delta_store.DeltaStoreTests.test_export_has_no_archive_or_ml_imports_and_counts_actual_bytes) ... ok
+test_missing_corrupt_cyclic_oversized_nested_and_trailing_deltas_fail_closed (test_delta_store.DeltaStoreTests.test_missing_corrupt_cyclic_oversized_nested_and_trailing_deltas_fail_closed) ... ok
+test_complete_roundtrip_audit_rejects_missing_rows_and_forged_byte_counts (test_delta_audit.DeltaAuditTests.test_complete_roundtrip_audit_rejects_missing_rows_and_forged_byte_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 19.877s
+
+OK

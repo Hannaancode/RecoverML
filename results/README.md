@@ -9,6 +9,7 @@ The separate reports and source and configs remain available for future work
 
 | Evidence | Folder |
 |---|---|
+| Lossless delta storage, 27 October: all 446 conditions, both original attempts and stronger controls | [research/delta_storage_oct27](research/delta_storage_oct27/RESULTS.md) |
 | Lossless storage and deterministic time travel: all fresh and frozen conditions | [research/encoded_storage_oct26](research/encoded_storage_oct26/RESULTS.md) |
 | Complete fixed recovery census, 26 October: 864 configurations and original artifacts | [research/recovery_census_oct26](research/recovery_census_oct26/RESULTS.md) |
 | Latest throughput and latency experiment | [milestone2/performance](milestone2/performance) |

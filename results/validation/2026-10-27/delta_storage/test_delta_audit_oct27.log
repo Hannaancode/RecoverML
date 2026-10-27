@@ -1,0 +1,6 @@
+test_complete_roundtrip_audit_rejects_missing_rows_and_forged_byte_counts (test_delta_audit.DeltaAuditTests.test_complete_roundtrip_audit_rejects_missing_rows_and_forged_byte_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 14.443s
+
+OK

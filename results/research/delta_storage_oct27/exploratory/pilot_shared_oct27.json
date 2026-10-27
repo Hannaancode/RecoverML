@@ -1,0 +1,770 @@
+[
+  {
+    "case": "diabetes_poly-101-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 16129,
+    "shared": 16558,
+    "solid": 16429,
+    "tarxz": 16384
+  },
+  {
+    "case": "diabetes_poly-101-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 21768,
+    "shared": 22437,
+    "solid": 21245,
+    "tarxz": 21312
+  },
+  {
+    "case": "diabetes_poly-101-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 21766,
+    "shared": 22445,
+    "solid": 21329,
+    "tarxz": 21308
+  },
+  {
+    "case": "diabetes_poly-101-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 21766,
+    "shared": 22445,
+    "solid": 21329,
+    "tarxz": 21308
+  },
+  {
+    "case": "diabetes_poly-101-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 21769,
+    "shared": 22453,
+    "solid": 21353,
+    "tarxz": 21312
+  },
+  {
+    "case": "diabetes_poly-101-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 21769,
+    "shared": 22453,
+    "solid": 21353,
+    "tarxz": 21312
+  },
+  {
+    "case": "diabetes_poly-101-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 16183,
+    "shared": 16618,
+    "solid": 16473,
+    "tarxz": 16436
+  },
+  {
+    "case": "diabetes_poly-101-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 21822,
+    "shared": 22497,
+    "solid": 21385,
+    "tarxz": 21368
+  },
+  {
+    "case": "diabetes_poly-101-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 21820,
+    "shared": 22493,
+    "solid": 21389,
+    "tarxz": 21360
+  },
+  {
+    "case": "diabetes_poly-101-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 21820,
+    "shared": 22493,
+    "solid": 21389,
+    "tarxz": 21360
+  },
+  {
+    "case": "diabetes_poly-101-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 21822,
+    "shared": 22501,
+    "solid": 21385,
+    "tarxz": 21368
+  },
+  {
+    "case": "diabetes_poly-101-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 21822,
+    "shared": 22501,
+    "solid": 21385,
+    "tarxz": 21368
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 16133,
+    "shared": 16562,
+    "solid": 16333,
+    "tarxz": 16384
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 21765,
+    "shared": 22442,
+    "solid": 21365,
+    "tarxz": 21264
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 21763,
+    "shared": 22442,
+    "solid": 21257,
+    "tarxz": 21260
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 21763,
+    "shared": 22442,
+    "solid": 21257,
+    "tarxz": 21260
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 21765,
+    "shared": 22442,
+    "solid": 21365,
+    "tarxz": 21264
+  },
+  {
+    "case": "diabetes_poly-211-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 21765,
+    "shared": 22442,
+    "solid": 21365,
+    "tarxz": 21264
+  },
+  {
+    "case": "diabetes_poly-211-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 16182,
+    "shared": 16622,
+    "solid": 16477,
+    "tarxz": 16444
+  },
+  {
+    "case": "diabetes_poly-211-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 21814,
+    "shared": 22498,
+    "solid": 21389,
+    "tarxz": 21324
+  },
+  {
+    "case": "diabetes_poly-211-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 21812,
+    "shared": 22494,
+    "solid": 21385,
+    "tarxz": 21312
+  },
+  {
+    "case": "diabetes_poly-211-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 21812,
+    "shared": 22494,
+    "solid": 21385,
+    "tarxz": 21312
+  },
+  {
+    "case": "diabetes_poly-211-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 21814,
+    "shared": 22494,
+    "solid": 21421,
+    "tarxz": 21328
+  },
+  {
+    "case": "diabetes_poly-211-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 21814,
+    "shared": 22494,
+    "solid": 21421,
+    "tarxz": 21328
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 50676,
+    "shared": 51113,
+    "solid": 51137,
+    "tarxz": 50976
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 2244638,
+    "shared": 2198638,
+    "solid": 1576537,
+    "tarxz": 1576016
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 86344,
+    "shared": 86863,
+    "solid": 87141,
+    "tarxz": 87444
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 2244636,
+    "shared": 2198638,
+    "solid": 1576441,
+    "tarxz": 1576560
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 86346,
+    "shared": 86867,
+    "solid": 87033,
+    "tarxz": 86908
+  },
+  {
+    "case": "digits_forest-101-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 2244638,
+    "shared": 2198638,
+    "solid": 1576257,
+    "tarxz": 1576404
+  },
+  {
+    "case": "digits_forest-101-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 50728,
+    "shared": 51177,
+    "solid": 51097,
+    "tarxz": 51100
+  },
+  {
+    "case": "digits_forest-101-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 2244690,
+    "shared": 2198706,
+    "solid": 1576245,
+    "tarxz": 1576620
+  },
+  {
+    "case": "digits_forest-101-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 2244687,
+    "shared": 2198694,
+    "solid": 1576141,
+    "tarxz": 1576460
+  },
+  {
+    "case": "digits_forest-101-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 2244687,
+    "shared": 2198694,
+    "solid": 1576141,
+    "tarxz": 1576460
+  },
+  {
+    "case": "digits_forest-101-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 2244690,
+    "shared": 2198706,
+    "solid": 1576161,
+    "tarxz": 1576516
+  },
+  {
+    "case": "digits_forest-101-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 2244690,
+    "shared": 2198706,
+    "solid": 1576161,
+    "tarxz": 1576516
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 50677,
+    "shared": 51113,
+    "solid": 51021,
+    "tarxz": 50984
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 2225684,
+    "shared": 2186771,
+    "solid": 1849217,
+    "tarxz": 1848568
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 86313,
+    "shared": 86823,
+    "solid": 86841,
+    "tarxz": 87128
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 2225682,
+    "shared": 2186767,
+    "solid": 1848725,
+    "tarxz": 1848976
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 86314,
+    "shared": 86819,
+    "solid": 86485,
+    "tarxz": 86476
+  },
+  {
+    "case": "digits_forest-211-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 2225683,
+    "shared": 2186767,
+    "solid": 1849225,
+    "tarxz": 1849300
+  },
+  {
+    "case": "digits_forest-211-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 50726,
+    "shared": 51165,
+    "solid": 51085,
+    "tarxz": 51048
+  },
+  {
+    "case": "digits_forest-211-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 2225733,
+    "shared": 2186823,
+    "solid": 1848805,
+    "tarxz": 1849268
+  },
+  {
+    "case": "digits_forest-211-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 2225732,
+    "shared": 2186831,
+    "solid": 1848681,
+    "tarxz": 1849152
+  },
+  {
+    "case": "digits_forest-211-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 2225732,
+    "shared": 2186831,
+    "solid": 1848681,
+    "tarxz": 1849152
+  },
+  {
+    "case": "digits_forest-211-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 2225733,
+    "shared": 2186823,
+    "solid": 1849181,
+    "tarxz": 1849076
+  },
+  {
+    "case": "digits_forest-211-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 2225733,
+    "shared": 2186823,
+    "solid": 1849181,
+    "tarxz": 1849076
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 50685,
+    "shared": 51129,
+    "solid": 51257,
+    "tarxz": 51000
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 55457,
+    "shared": 56141,
+    "solid": 54397,
+    "tarxz": 54548
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 55455,
+    "shared": 56125,
+    "solid": 54417,
+    "tarxz": 54628
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 55455,
+    "shared": 56125,
+    "solid": 54417,
+    "tarxz": 54628
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 55457,
+    "shared": 56137,
+    "solid": 54361,
+    "tarxz": 54752
+  },
+  {
+    "case": "digits_pca-101-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 55457,
+    "shared": 56137,
+    "solid": 54361,
+    "tarxz": 54752
+  },
+  {
+    "case": "digits_pca-101-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 50732,
+    "shared": 51173,
+    "solid": 51145,
+    "tarxz": 51068
+  },
+  {
+    "case": "digits_pca-101-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 55504,
+    "shared": 56189,
+    "solid": 54497,
+    "tarxz": 54640
+  },
+  {
+    "case": "digits_pca-101-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 55501,
+    "shared": 56177,
+    "solid": 54525,
+    "tarxz": 54624
+  },
+  {
+    "case": "digits_pca-101-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 55501,
+    "shared": 56177,
+    "solid": 54525,
+    "tarxz": 54624
+  },
+  {
+    "case": "digits_pca-101-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 55503,
+    "shared": 56173,
+    "solid": 54537,
+    "tarxz": 54584
+  },
+  {
+    "case": "digits_pca-101-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 55503,
+    "shared": 56173,
+    "solid": 54537,
+    "tarxz": 54584
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 50682,
+    "shared": 51113,
+    "solid": 51089,
+    "tarxz": 50992
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 55452,
+    "shared": 56131,
+    "solid": 54565,
+    "tarxz": 54444
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 55450,
+    "shared": 56135,
+    "solid": 54657,
+    "tarxz": 54572
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 55450,
+    "shared": 56135,
+    "solid": 54657,
+    "tarxz": 54572
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 55452,
+    "shared": 56139,
+    "solid": 54541,
+    "tarxz": 54548
+  },
+  {
+    "case": "digits_pca-211-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 55452,
+    "shared": 56139,
+    "solid": 54541,
+    "tarxz": 54548
+  },
+  {
+    "case": "digits_pca-211-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 50729,
+    "shared": 51161,
+    "solid": 51245,
+    "tarxz": 51004
+  },
+  {
+    "case": "digits_pca-211-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 55499,
+    "shared": 56175,
+    "solid": 54513,
+    "tarxz": 54640
+  },
+  {
+    "case": "digits_pca-211-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 55498,
+    "shared": 56167,
+    "solid": 54541,
+    "tarxz": 54572
+  },
+  {
+    "case": "digits_pca-211-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 55498,
+    "shared": 56167,
+    "solid": 54541,
+    "tarxz": 54572
+  },
+  {
+    "case": "digits_pca-211-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 55499,
+    "shared": 56175,
+    "solid": 54557,
+    "tarxz": 54588
+  },
+  {
+    "case": "digits_pca-211-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 55499,
+    "shared": 56175,
+    "solid": 54557,
+    "tarxz": 54588
+  },
+  {
+    "case": "iris_union-101-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 3746,
+    "shared": 4186,
+    "solid": 3945,
+    "tarxz": 3928
+  },
+  {
+    "case": "iris_union-101-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 7774,
+    "shared": 8422,
+    "solid": 6209,
+    "tarxz": 6208
+  },
+  {
+    "case": "iris_union-101-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 6808,
+    "shared": 7326,
+    "solid": 6853,
+    "tarxz": 6788
+  },
+  {
+    "case": "iris_union-101-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 7772,
+    "shared": 8418,
+    "solid": 6205,
+    "tarxz": 6204
+  },
+  {
+    "case": "iris_union-101-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 6808,
+    "shared": 7330,
+    "solid": 6849,
+    "tarxz": 6792
+  },
+  {
+    "case": "iris_union-101-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 7772,
+    "shared": 8418,
+    "solid": 6209,
+    "tarxz": 6208
+  },
+  {
+    "case": "iris_union-101-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 3798,
+    "shared": 4230,
+    "solid": 4001,
+    "tarxz": 3956
+  },
+  {
+    "case": "iris_union-101-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 7826,
+    "shared": 8466,
+    "solid": 6253,
+    "tarxz": 6264
+  },
+  {
+    "case": "iris_union-101-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 7825,
+    "shared": 8466,
+    "solid": 6253,
+    "tarxz": 6248
+  },
+  {
+    "case": "iris_union-101-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 7825,
+    "shared": 8466,
+    "solid": 6253,
+    "tarxz": 6248
+  },
+  {
+    "case": "iris_union-101-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 7825,
+    "shared": 8466,
+    "solid": 6241,
+    "tarxz": 6244
+  },
+  {
+    "case": "iris_union-101-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 7825,
+    "shared": 8466,
+    "solid": 6241,
+    "tarxz": 6244
+  },
+  {
+    "case": "iris_union-211-preprocessing-k0",
+    "method": "adaptive_exact",
+    "flat": 3737,
+    "shared": 4166,
+    "solid": 3937,
+    "tarxz": 3896
+  },
+  {
+    "case": "iris_union-211-preprocessing-k0",
+    "method": "adaptive_snapshots",
+    "flat": 7954,
+    "shared": 8591,
+    "solid": 6277,
+    "tarxz": 6260
+  },
+  {
+    "case": "iris_union-211-preprocessing-k1",
+    "method": "adaptive_exact",
+    "flat": 6815,
+    "shared": 7326,
+    "solid": 6861,
+    "tarxz": 6776
+  },
+  {
+    "case": "iris_union-211-preprocessing-k1",
+    "method": "adaptive_snapshots",
+    "flat": 7952,
+    "shared": 8587,
+    "solid": 6285,
+    "tarxz": 6252
+  },
+  {
+    "case": "iris_union-211-preprocessing-k2",
+    "method": "adaptive_exact",
+    "flat": 6816,
+    "shared": 7326,
+    "solid": 6841,
+    "tarxz": 6784
+  },
+  {
+    "case": "iris_union-211-preprocessing-k2",
+    "method": "adaptive_snapshots",
+    "flat": 7953,
+    "shared": 8587,
+    "solid": 6269,
+    "tarxz": 6244
+  },
+  {
+    "case": "iris_union-211-broad-k0",
+    "method": "adaptive_exact",
+    "flat": 3787,
+    "shared": 4218,
+    "solid": 3985,
+    "tarxz": 3940
+  },
+  {
+    "case": "iris_union-211-broad-k0",
+    "method": "adaptive_snapshots",
+    "flat": 8004,
+    "shared": 8643,
+    "solid": 6317,
+    "tarxz": 6288
+  },
+  {
+    "case": "iris_union-211-broad-k1",
+    "method": "adaptive_exact",
+    "flat": 8003,
+    "shared": 8655,
+    "solid": 6337,
+    "tarxz": 6300
+  },
+  {
+    "case": "iris_union-211-broad-k1",
+    "method": "adaptive_snapshots",
+    "flat": 8003,
+    "shared": 8655,
+    "solid": 6337,
+    "tarxz": 6300
+  },
+  {
+    "case": "iris_union-211-broad-k2",
+    "method": "adaptive_exact",
+    "flat": 8003,
+    "shared": 8643,
+    "solid": 6329,
+    "tarxz": 6304
+  },
+  {
+    "case": "iris_union-211-broad-k2",
+    "method": "adaptive_snapshots",
+    "flat": 8003,
+    "shared": 8643,
+    "solid": 6329,
+    "tarxz": 6304
+  }
+]

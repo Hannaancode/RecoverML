@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "preflight": true,
+  "block": "primary/breast_cancer/pca_neighbors",
+  "source_commit": "bb6d79ae6e33656f98e80c055b6c6239b59becc8",
+  "conditions": 9,
+  "complete": 9,
+  "uncertified": 0,
+  "selected_payloads_verified": 345,
+  "conditions_sha256": "9e980ce7a83a51ecece13a9ec194316ec7b330243056217adb928436b7bda79b",
+  "encoding_inventory_sha256": "14805d97d69bb8d9bc63950324a7caf3a5d60d6a92928488287a9ac1a23b4e45"
+}

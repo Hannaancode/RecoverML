@@ -72,3 +72,31 @@ as failure evidence. The grid, encoding candidates and success gate are unchange
 The neural CI job also needed full Git history because the new audit integration
 test authenticates inputs against the pinned preceding release commit. No
 runtime environment check was weakened.
+
+## Completed result and stronger control
+
+The [complete result](../results/research/delta_storage_oct27/RESULTS.md) reports
+201 smaller stores, 243 ties and two unmeasured conditions. The primary gate
+fails. All final jobs and their audits passed. A post-hoc local control also
+retains its previous best flat plan and its delta conversion; this removes
+14 apparent wins caused by the expanded graph changing heuristic behavior.
+The raw new-graph and strengthened controls are both preserved. Neither the
+oracle ties nor solid-archive losses are omitted.
+
+For a complete raw capture containing `manifest.json` and canonical `blobs/`,
+the optional CLI creates a new store and chooses the smaller certified flat or
+delta representation:
+
+```bash
+PYTHONPATH=src python -m recoverml.delta_store create \
+  --capture path/to/full_capture --contract path/to/capability_contract.json \
+  --output work/new_selected_store
+PYTHONPATH=src python -m recoverml.delta_store recover \
+  --store work/new_selected_store --output work/new_recovered_targets \
+  --operators census
+```
+
+Choose the matching operator family and declared loss group for an actual
+capture. Omitted `--target` requests all protected outputs; `--disable` can be
+repeated for declared groups. The returned hashes identify the original files,
+not a promise that an unsupported future runtime can execute the models.

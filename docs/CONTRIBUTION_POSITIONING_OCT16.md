@@ -98,3 +98,22 @@ The strengthened gzip comparison has 9.80% median savings, but the same-codec lo
 This is standard lossless coding integrated with checked retention selection and recovery, not a new compression or general optimization algorithm.
 Full denominators, expected adapter blocks and the two incomplete Letter objectives remain explicit.
 No external novelty certification, full native-system dominance or human peer endorsement follows from these automated checks.
+
+## Delta storage evidence added on 27 October
+
+The [full delta follow-up](../results/research/delta_storage_oct27/RESULTS.md)
+adds exact byte-range sharing while charging retained base dependencies and
+keeping storage decoding separate from ML replay. It lowers the old flat-format
+minimum in 201/444 measurable conditions, with up to 39.53% less storage, and
+ties the other 243. The two incomplete Letter objectives remain reported.
+This extends the checked implementation using standard delta/compression and
+optimization methods; it is not a new general codec or optimization theory.
+
+The complete primary gate fails in all 72 strata. A stronger control retaining
+local search's previous best plans leaves 22 wins and 422 ties. The largest
+local gap uses RecoverML's preexisting flat optimum, so it is not a new 74%
+delta-format gain. The same-format exact reference ties all measured optima,
+and solid archives win 213 comparisons. Only one measured condition benefits
+from changing the old exact retained set after enabling deltas. These boundaries
+must accompany any new headline. The transfer checks canonical bytes and
+conditional reachability; it does not add a full model-replay or latency census.

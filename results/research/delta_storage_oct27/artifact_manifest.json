@@ -1,0 +1,3631 @@
+{
+  "schema": 1,
+  "source_release_commit": "0d254723a82b56406d3b63aac186275f4bb14e0f",
+  "qualification": "Final full-grid rerun after a representation-normalization correction; all first-attempt originals, including two failed blocks, are retained separately.",
+  "first": {
+    "source_commit": "bb6d79ae6e33656f98e80c055b6c6239b59becc8",
+    "workflow_run_id": 40466699997,
+    "artifacts": [
+      {
+        "block": "primary/breast_cancer/minmax_tree",
+        "artifact": {
+          "id": 12716104518,
+          "name": "delta-storage-primary-breast_cancer-minmax_tree",
+          "size_in_bytes": 199069,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716104518",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716104518/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:06Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:06Z",
+          "digest": "sha256:61f8eec442642264666ca480aba532874c3e3c16bad3480088e35ed68f064eea",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-breast_cancer-minmax_tree.zip.part000",
+            "bytes": 199069,
+            "sha256": "61f8eec442642264666ca480aba532874c3e3c16bad3480088e35ed68f064eea"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 769450,
+            "sha256": "a103501c54b7061fe392c96e59416b3f722de699e6028594df8794801969a7eb"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16255,
+            "sha256": "33dfae1dae7417cfce74b80f58ca5c23d241489a0406ae9556d83c674d86c172"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "bfb9d2088b6326af7c181c6ebfbd0cf183b266fc1c79d19d56d43679fd6bbd3b"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 23409,
+            "sha256": "0131e014036ac1b101c0e710f028b50b9109d74e91adffa8df62f2707c8a2ebc"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "b7d755202fd0c28c050a02abeac6f038fb10ad23a334dc8191921ab33e3fbd28"
+          },
+          "delta/run_start.json": {
+            "bytes": 9549,
+            "sha256": "f496075de497b516f0f9979b7e69ec92a6ff74444a06db3415130ea9e5793c62"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122690,
+            "sha256": "fe376212123a46166263d0672df127867d7ec7938eb2bd2c083fa786b779c764"
+          },
+          "delta_audit.json": {
+            "bytes": 439,
+            "sha256": "e843c39deb4da3102ef506074671ce90e9d49bbfd7ac6a4454ab0de9cfa53a26"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/pca_neighbors",
+        "artifact": {
+          "id": 12716822220,
+          "name": "delta-storage-primary-breast_cancer-pca_neighbors",
+          "size_in_bytes": 137948,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716822220",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716822220/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:42Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:42Z",
+          "digest": "sha256:0d4d0606d4bb12b06f9b4bdf94521642c56d3839a11e0ff7706aa1238da8adbc",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-breast_cancer-pca_neighbors.zip.part000",
+            "bytes": 137948,
+            "sha256": "0d4d0606d4bb12b06f9b4bdf94521642c56d3839a11e0ff7706aa1238da8adbc"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 148978,
+            "sha256": "9285be775c42eec28b2439883cfd74d1f63ab5cbd84f6b80cd01390ab9a2717c"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 4161,
+            "sha256": "71dd8f5fb5cc8e9c736c4156edf73900cbaa2548cafb7560a84679ed9d1aaeb6"
+          },
+          "delta/failure.txt": {
+            "bytes": 1266,
+            "sha256": "48ca79e977f26fec3e6c9bfce2e4c3699783feaa4a59c4d4b1b68cc78d169a84"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "3c3ee74a8fa7be06328de514b99ffec286d0159103bceeb0ddf35ac3e9db1b19"
+          },
+          "delta/run_start.json": {
+            "bytes": 9551,
+            "sha256": "d36946528c5703714803339caf08a8a991bf0da750ac736f911e6607b5ebe82f"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122682,
+            "sha256": "4bc328d5af0392f518cbae3ab96466c649f09247265d1d04d05659183ac4c982"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/robust_forest",
+        "artifact": {
+          "id": 12716403949,
+          "name": "delta-storage-primary-breast_cancer-robust_forest",
+          "size_in_bytes": 332522,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716403949",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716403949/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:55Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:55Z",
+          "digest": "sha256:0ad2dc438f7e4ff5293966197c4a974e149108f5ee5c0dd8da41bb6149e19f50",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-breast_cancer-robust_forest.zip.part000",
+            "bytes": 332522,
+            "sha256": "0ad2dc438f7e4ff5293966197c4a974e149108f5ee5c0dd8da41bb6149e19f50"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 866046,
+            "sha256": "f11363bd605f31a480e754875dfe33f025c704ffbb3fbad060f14da411fa6eb7"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "446d9c7af2cfc484ed428a26d7150c0275157e417c312000f1e2d7ece2a3bf15"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18385,
+            "sha256": "6867744a359f1360e89e27b8b7d329592273a6fa90b62b8fe7f47dcddf79485c"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 152763,
+            "sha256": "87e25d18592ce590fd23699a527ce536ac3c12e0e96af614485d404b68c7a9a4"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "5de79488e4375b93ab6f609ca8ed2f2da6a88db4b9ec8e66759e4e54b8c50423"
+          },
+          "delta/run_start.json": {
+            "bytes": 9551,
+            "sha256": "a8b0e8917954bf53675613aaf4413bc518bfebca638342232b4e1a07adb7d1b4"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122670,
+            "sha256": "4abfdf2e3909fa241757aa84512d875cbb4f1f1fd9e5eae327da8e20a8c76df2"
+          },
+          "delta_audit.json": {
+            "bytes": 441,
+            "sha256": "e4e3c723b0277161e2dbfc79e53db4edbc823ff46ddf40c88a8cc406ca57f729"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/standard_linear",
+        "artifact": {
+          "id": 12717290112,
+          "name": "delta-storage-primary-breast_cancer-standard_linear",
+          "size_in_bytes": 187085,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717290112",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717290112/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:09Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:09Z",
+          "digest": "sha256:68a22603f135a6907811f0be8a73b4d658c2f22354b967043565da982dc02359",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-breast_cancer-standard_linear.zip.part000",
+            "bytes": 187085,
+            "sha256": "68a22603f135a6907811f0be8a73b4d658c2f22354b967043565da982dc02359"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 742104,
+            "sha256": "2cf40dff7eba8ce2f6450adc92fa2b086eaffbd16b72b0a7d9cb73aa683cfbe9"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "818fa41292f7679870100ab7867b987563a75d8b63e085223fa469fc1146005e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15664,
+            "sha256": "7832023a5631660fa5b90095e835da20a00655e292f2e5275d505b9df6a5ac4c"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 15403,
+            "sha256": "3b71270bc6940c987ee743057c06403466a411150e0f6f5b256dc20a27619f36"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "96c5ecde28b0706331d2ffecfc4cf370830fc7ed9bda587f59b11180d81fc459"
+          },
+          "delta/run_start.json": {
+            "bytes": 9553,
+            "sha256": "2268b5edc2182eeb399e67e813ca53d5b1352e8d797e8372a42802270d18c1ab"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122696,
+            "sha256": "580dd8569eb23ae10e2381a5b9fbbc81fca9ff1489404012cec835a6fb593964"
+          },
+          "delta_audit.json": {
+            "bytes": 443,
+            "sha256": "c363818d11e851789506c452f2fdc5da0641c298f1eb3636587a2762e1c26694"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/minmax_tree",
+        "artifact": {
+          "id": 12716584524,
+          "name": "delta-storage-primary-diabetes-minmax_tree",
+          "size_in_bytes": 231443,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716584524",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716584524/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:53Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:53Z",
+          "digest": "sha256:3827f075eae3a518f031dd30bdb5907c3285d849faa1d1d73e58f52ff2774dd3",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-diabetes-minmax_tree.zip.part000",
+            "bytes": 231443,
+            "sha256": "3827f075eae3a518f031dd30bdb5907c3285d849faa1d1d73e58f52ff2774dd3"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 807796,
+            "sha256": "7f6cfbc7aaab18ef4bc310c4f2ee7bd6ec0f463c9fb02d038afae42acc91339b"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 17254,
+            "sha256": "a743386bb74ece41863f29250909a3752ba3ed43406d9b634d85187740d61e64"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "ba0095a07d49a7cc7111ec674a788c281a722f235316247ac6ced8769c709915"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 55127,
+            "sha256": "d277c7e415b9be7b9b3c7e1a74072bce451552ffd4f9abc137620528af51b682"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "cb9dc4cadfbe409286eb92a772e77cbc6c72aa61d42fb3ff9b6eaf55c0166eef"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "61ae765bcd413561c897dadc6c42068968a462417b61734dc2a3ea31676c70d9"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122705,
+            "sha256": "c8812c2c8d04fdde81a91d39b2ee28fc82366941b5c19b6ba0667fa5a2a50f87"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "5c1fc12983c436128f2529811664dbeebba5c09351da826eb676b660e0e9581a"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/pca_neighbors",
+        "artifact": {
+          "id": 12717520054,
+          "name": "delta-storage-primary-diabetes-pca_neighbors",
+          "size_in_bytes": 526387,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717520054",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717520054/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:14Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:14Z",
+          "digest": "sha256:dc2b1598587e00bfa19aa9ea958d3006a8410b18736fc967c8566e0c2d8d61ef",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-diabetes-pca_neighbors.zip.part000",
+            "bytes": 526387,
+            "sha256": "dc2b1598587e00bfa19aa9ea958d3006a8410b18736fc967c8566e0c2d8d61ef"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 873918,
+            "sha256": "3338ba4080bb71187bd9a72eaaad0a1b4bfc935a9b59efa78d464eec0d7539c2"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "63b6c78bb791f55272153bc633e7e9b4749e5a37474fe565554920dbb8f1f9e6"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18384,
+            "sha256": "8402dd270dfe313347607351d23afbd9d227333763b74c83749b971513b56e4e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 346185,
+            "sha256": "cfd81f38dc48a65e4a56249880fec18df229d4f2a47081ab25a68bf3c8323175"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "e5fae8821825c496fed485a1f7238aa64664c4bc93f82b76b6e56aea1d068971"
+          },
+          "delta/run_start.json": {
+            "bytes": 9546,
+            "sha256": "db6e207bc1724dcacd34b250ce1f25b8ff9c4be0c147336ce7cd8ff830145e05"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122674,
+            "sha256": "19f743303d3fbd0dbc1a04f08131f95ca7a506827e686f75fcaeadccf1980b8a"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "9259ce63bc777e657436cc3c9692c0aa334c9b5c83d0913058867bd10a46b1be"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/robust_forest",
+        "artifact": {
+          "id": 12716589463,
+          "name": "delta-storage-primary-diabetes-robust_forest",
+          "size_in_bytes": 573924,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716589463",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716589463/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:25:05Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:25:05Z",
+          "digest": "sha256:b8349aea2fc0fb2bbc306627b3da05a1578847842ed466515605fb9f46dec725",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-diabetes-robust_forest.zip.part000",
+            "bytes": 573924,
+            "sha256": "b8349aea2fc0fb2bbc306627b3da05a1578847842ed466515605fb9f46dec725"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877490,
+            "sha256": "864e92079afbaa20e1176b93d7062ef66f5b23caf45219e6c5b0769cfc67e478"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "4cb6cdf1646f0d60f92c6e60be1b68aa95eecdca630e341fe513a39e5f203a21"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18960,
+            "sha256": "c1b56032e3efe4372ea66c4d0f38460235a79df4a2f579038e120ccdec0dbe45"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 392410,
+            "sha256": "142aa594bb1fcc778ee942329de2346a4b1500efd8a9583bf77a6429721e7bd5"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "b36ec5c60a0f66ec33b0895b47db5bd98e28e7881aa788a0abc1dd89306a56c6"
+          },
+          "delta/run_start.json": {
+            "bytes": 9546,
+            "sha256": "afe38d8b866cf3e3fd8b6c29d1dd7d8813bd2b906cc44885dc6ea67c19c331e2"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122687,
+            "sha256": "01a98711df445389a794913245b47658adfe4c446c19d193b0ab7040a3031340"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "9f519d7366c63455c3968bacf55d2c57b38baaba309c443982221427cde13b1a"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/standard_linear",
+        "artifact": {
+          "id": 12716469959,
+          "name": "delta-storage-primary-diabetes-standard_linear",
+          "size_in_bytes": 229191,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716469959",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716469959/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:44Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:44Z",
+          "digest": "sha256:a167bb81f78213b5965c302077a37eb12510afa777f47784c7e97b81f46e62a0",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-diabetes-standard_linear.zip.part000",
+            "bytes": 229191,
+            "sha256": "a167bb81f78213b5965c302077a37eb12510afa777f47784c7e97b81f46e62a0"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 865822,
+            "sha256": "cb1d3f7026270f94be8f4411bb2e29ad7cff844e54d0cb956496fec90f8d36d2"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18958,
+            "sha256": "55238f183e93316fc9bf72569977c89d462b3d3a5b9eeb8b09f4aff758f90fcc"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "ba679063b2bfcc98a4d0955d8a26c04a336aeed828cf1886342eb6c792f3cb7e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 49648,
+            "sha256": "7d50ab183a3df2071c8e2c251e5865a59f4a9251758df76740979ea341b8a6e2"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "2e3b3ce168a5741d0ad82f346c30072f7069f0a72cef149a4edc5f1fb8986287"
+          },
+          "delta/run_start.json": {
+            "bytes": 9548,
+            "sha256": "4adac0601c38cb998be0281714fe1788c43a4847777b0d16de9b06d04531f367"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122686,
+            "sha256": "e62044610c79b238d9e318a9e0e9d7579046d4f9512fc0a188e032cde3f42efc"
+          },
+          "delta_audit.json": {
+            "bytes": 438,
+            "sha256": "82a533842178da3b8372686e4f0ff91e5d3ba3656b37b77807580e1c1a4a9a07"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/minmax_tree",
+        "artifact": {
+          "id": 12716961813,
+          "name": "delta-storage-primary-digits-minmax_tree",
+          "size_in_bytes": 224597,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716961813",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716961813/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:25:51Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:25:51Z",
+          "digest": "sha256:c0edd0efe88a4c5130b225304c1a71c472d086aa46db7632edafb52b90127d16",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-digits-minmax_tree.zip.part000",
+            "bytes": 224597,
+            "sha256": "c0edd0efe88a4c5130b225304c1a71c472d086aa46db7632edafb52b90127d16"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 787772,
+            "sha256": "d67a99f7816469a1fd73f1d38589c5063155b22f58d34deaacdd954867017652"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "b1446a851a7635640191e95d3f9d5ff5a71cd555644127d7b2df96091ce48376"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16681,
+            "sha256": "b6471270bf439828769f120a0f604d1634c8e01d4f46a3a641e014099136104f"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 47439,
+            "sha256": "8d7636e859cf720cd6e3cb6424e40c11393db9ee021deb3cea0558ca93769c45"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "0faa5d76c21681993dc0177dfbdf1fa9e5e88bcaf9710dfe6cbf996d7a2c4ef9"
+          },
+          "delta/run_start.json": {
+            "bytes": 9542,
+            "sha256": "5a57208e7d82b53ded3d3e3e3945daa883736db922453dae761832130d5192b2"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122708,
+            "sha256": "997f2a88b964c746d1a64b7906c21e3c691705bf7b749f487aca159025cee14e"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "c2b7052029da4081c89077313bde337a9a68f7ea4b37dd96c8caf92367478660"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/pca_neighbors",
+        "artifact": {
+          "id": 12716564696,
+          "name": "delta-storage-primary-digits-pca_neighbors",
+          "size_in_bytes": 137932,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716564696",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716564696/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:05Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:05Z",
+          "digest": "sha256:b116569d10a5a8219e6e0c76aaed69b34af48a1c2f24181453651ae160903240",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-digits-pca_neighbors.zip.part000",
+            "bytes": 137932,
+            "sha256": "b116569d10a5a8219e6e0c76aaed69b34af48a1c2f24181453651ae160903240"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 148815,
+            "sha256": "0082349e1b9c8f6be93a00463ba4439fac2c09bfda6cf9569f19c6814b156f06"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 4161,
+            "sha256": "3cff5563ad9ddf1f46f231484d3eb604050cb8fc6b4c3c48ca1f3822554d11ce"
+          },
+          "delta/failure.txt": {
+            "bytes": 1266,
+            "sha256": "48ca79e977f26fec3e6c9bfce2e4c3699783feaa4a59c4d4b1b68cc78d169a84"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "5cd28ec215ae536d7450a774fe47b1b82c4390e488485ce16462f291ad002b86"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "659ba3626b5b87332beafaf656e2277c6f76aefec6a11af9634d4c21a032863e"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122675,
+            "sha256": "f9c11dc3e7fd56f70758519dca132fb6a69d35469a514f5268f92b1f42dc026d"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/robust_forest",
+        "artifact": {
+          "id": 12717315197,
+          "name": "delta-storage-primary-digits-robust_forest",
+          "size_in_bytes": 918925,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717315197",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717315197/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:27:07Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:27:07Z",
+          "digest": "sha256:9dcb3e4852ec84465f108b779a77ee320babd64820cb6bd5bc9ca5b4a441b6e6",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-digits-robust_forest.zip.part000",
+            "bytes": 918925,
+            "sha256": "9dcb3e4852ec84465f108b779a77ee320babd64820cb6bd5bc9ca5b4a441b6e6"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 872659,
+            "sha256": "814f23eebcbd84dbfd00662d8768abfa1fc2b9878f07a07846a3d1328f6199fd"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18385,
+            "sha256": "1f74010ed33bdc6d7ce42c2d8a1871cb0cba3cb2d36da336e5b57f4ad8b2a92d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "d25bb9bcd591d02c0873c7fc96e4ee20d1fc49a197e230a106737df77c1aec19"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 737883,
+            "sha256": "861374520640035f6e78d221322a6d10165a3baba0a3c1451ecd05d69e6b68ce"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "184ec918542e5fdbef7ef43b7ba67e6f1f4298a66e901480d25c49a36adf9fef"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "c3ed42eff0a90f2904c8d79e8fac356b761501ef03768e7e8beef306d7a3c339"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122699,
+            "sha256": "08f7255156dbd4fe08fe81da4de3c56e26699a4b0e0286dda961444f716bf21d"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "882bc4c67bd3f9bc8f39f00a158e72203e6af1f5299bfa0390b7a48579df1b8d"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/standard_linear",
+        "artifact": {
+          "id": 12716663137,
+          "name": "delta-storage-primary-digits-standard_linear",
+          "size_in_bytes": 349319,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716663137",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716663137/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:25:31Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:25:31Z",
+          "digest": "sha256:765b5fb50e4dc1457a8de79ec3039b4fc013987df9576aeed021850237f19cd0",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-digits-standard_linear.zip.part000",
+            "bytes": 349319,
+            "sha256": "765b5fb50e4dc1457a8de79ec3039b4fc013987df9576aeed021850237f19cd0"
+          }
+        ],
+        "files": {
+          "delta/encoding_inventory.json": {
+            "bytes": 16121,
+            "sha256": "500d73387622936efc3d97337bc2bc08fda0e658521a1ab61b890ff1d8f19901"
+          },
+          "delta/conditions.json": {
+            "bytes": 778649,
+            "sha256": "a0ab4f9bbb5377207704c7165773514c4c97236aec171b7b0f8d50f1e183449a"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "8338fed2be8638da6ea7ffcb10c44d90656b2950051e7897645ef17e7936b68f"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 175046,
+            "sha256": "9fbb2af232c14a5f4a661a81fab7a66b11539ade14b52b2507180c285562aab9"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "7240e4e6e6dd330ad3f97eab98f419604bbd1dfee4b4da00808f3960ba91b01f"
+          },
+          "delta/run_start.json": {
+            "bytes": 9546,
+            "sha256": "85dcca868dda0ad919af3ef958c71ce2da3f7520092fda47ee97f89e1851ca69"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122676,
+            "sha256": "25dff812910978335657acedfe0f3e1a4c07634b804db4368e4f912c54f7726b"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "288c43761a7d8f8724a1182ca9fd68a407be5d0a53c3df8e6da0c9ce35b69878"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/minmax_tree",
+        "artifact": {
+          "id": 12716957036,
+          "name": "delta-storage-primary-iris-minmax_tree",
+          "size_in_bytes": 182405,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716957036",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716957036/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:04Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:04Z",
+          "digest": "sha256:6fc506d33ae46afd7c6e30137c874c852e88c4e176624ff88fdbca4bc621afa6",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-iris-minmax_tree.zip.part000",
+            "bytes": 182405,
+            "sha256": "6fc506d33ae46afd7c6e30137c874c852e88c4e176624ff88fdbca4bc621afa6"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 671159,
+            "sha256": "ed77ac5a115ea2f950ec0d2552499f747a1b19ea829f121cc74a0d3d732967e6"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12984,
+            "sha256": "ab10b9d067f1945944d8698f925fe7a974f56b61ab7eed304e0721c177b86193"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "6d67edfdbf1d1efd5f43d7b903570ed2fac50b1283fb57d0b82b0d2025a9d09d"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 14975,
+            "sha256": "d3eda0518fe339b211ae09d377e9822640bf4531b262c37bb21e9a1ce7e9a1c1"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "601bd9c245a4e90e68b40b8a12eae4b1d1cf2390612704e7567995f2687bf772"
+          },
+          "delta/run_start.json": {
+            "bytes": 9540,
+            "sha256": "893c48c9fe023656dbf3f4917508f44af6c7811c5d45316a4f2079eee95177e7"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122712,
+            "sha256": "3573d3ce8fa18eac6f8cb9c5aec8f3a521a66a6eee9310992bef7fd6715dd9c7"
+          },
+          "delta_audit.json": {
+            "bytes": 430,
+            "sha256": "a863182d3a2909e3bcfd40ac03986c1b0df4559eed7cb4f1967f86510dbd9b5a"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/pca_neighbors",
+        "artifact": {
+          "id": 12716802252,
+          "name": "delta-storage-primary-iris-pca_neighbors",
+          "size_in_bytes": 227084,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716802252",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716802252/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:49Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:49Z",
+          "digest": "sha256:9e897f00263801e4ee4626e3f67e4adc91be2f322a4b88cd8f8ef911411fadf5",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-iris-pca_neighbors.zip.part000",
+            "bytes": 227084,
+            "sha256": "9e897f00263801e4ee4626e3f67e4adc91be2f322a4b88cd8f8ef911411fadf5"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 656839,
+            "sha256": "9a01b9572f3fcae900c174b25e4120793328627badd5af9c71b3ce13c1269a9c"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "2120078905da7cf83f91472e3f343a42edb46262530c5fc4e75757fdec3da1ee"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12852,
+            "sha256": "76a11dfa6f01592c6e89c52f9bcc8ab0929b939233723644e1fe8e9e155e218e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 60464,
+            "sha256": "f09405a30e11182799faa216c7adc5779dca7a4f7d9efbe711a1432cdcad2ec7"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "619ac131334da02ff2372f316c83bf7b0e027bce6f0c4cb396d88694998b3175"
+          },
+          "delta/run_start.json": {
+            "bytes": 9542,
+            "sha256": "14f73fb033d9e4d0e2189405cf4a671b3e517916c1fedaa5700ec20aceb0f827"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122701,
+            "sha256": "82081c7076932a3a301473da52d1e3f8e37befc31d17f647175a115675b63fae"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "214d44109fe0ca55848d7910792f51b89b66b49e728ed7270ce43505403d6135"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/robust_forest",
+        "artifact": {
+          "id": 12716857220,
+          "name": "delta-storage-primary-iris-robust_forest",
+          "size_in_bytes": 245231,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716857220",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716857220/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:15Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:15Z",
+          "digest": "sha256:4febaecf6a04e476fa6fbc32e42958fdf0436fe0486705235f9c972941675270",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-iris-robust_forest.zip.part000",
+            "bytes": 245231,
+            "sha256": "4febaecf6a04e476fa6fbc32e42958fdf0436fe0486705235f9c972941675270"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 660041,
+            "sha256": "bf5fefab309ef02de6f443a15b3162ecf85f4ec8def013a10119183fb50880a8"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12851,
+            "sha256": "6a73a21d9ef16a071ce2993ce29aebef3194038aab42bd7fada7919ef625195c"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "9ca57d3786fda042d6bee1d866120dbfb6b6fced0a41f0b6313a21c96bf6a24a"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 76765,
+            "sha256": "75504c1c16633d37d528b846d691e0c0671767cff998c9b253335b9c1a7aa507"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "a8f5a024c6ca6a282c20e549174deb9b7f77816be679c30d702fa15628d0deaa"
+          },
+          "delta/run_start.json": {
+            "bytes": 9542,
+            "sha256": "65f06870bd45626e5b37eec83c571119c52df7b4b5fe9cba117b2ac57ee46fbe"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122682,
+            "sha256": "66b367f7050094052f177a6ef0e261f3a399f640506de69c71715077ae111daa"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "2eef1fc3cdae0cac90942bae4822293c0c518c2e62fd317294e5b3c8261d2fd5"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/standard_linear",
+        "artifact": {
+          "id": 12717026396,
+          "name": "delta-storage-primary-iris-standard_linear",
+          "size_in_bytes": 181838,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717026396",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717026396/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:45Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:45Z",
+          "digest": "sha256:f94e5319d1a916c4d84b4f64f3ab8651ecd188ead0490c184d3398b821a78a0f",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-iris-standard_linear.zip.part000",
+            "bytes": 181838,
+            "sha256": "f94e5319d1a916c4d84b4f64f3ab8651ecd188ead0490c184d3398b821a78a0f"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 671174,
+            "sha256": "7585fc623decc3178eb48078827400679f01591c84858de4e8971466f949dcf6"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12984,
+            "sha256": "9fa03255a12fb8251d9245e22b945d08763f8c74c255e4b74a0249408c3c5544"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "b78b19a777450ffbe8d0d4552fafd1946f1859b31977dfab01d09c017f990709"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15507,
+            "sha256": "63a55f0ad15f26d7a225f3121cf31b96afb1363a973f9f5946eaa1325b7a5997"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "234be34b0e5cb4b595a93c4597fdf939487eff0a65bcf9336e1dc9e5f3d41d5c"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "b9f8284354da10139673762d7ba45aed64d05d9bc156e6c3d0288b6a172ff597"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122727,
+            "sha256": "da35522d210c1e9613cfc4d4592e840abcfcb3387cf1c38c148d30c38d585e66"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "919e19a38c06ff60219038b0007e7959d221b932ad779562d1aca16dbd3e3770"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/minmax_tree",
+        "artifact": {
+          "id": 12716737700,
+          "name": "delta-storage-primary-linnerud-minmax_tree",
+          "size_in_bytes": 188186,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716737700",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716737700/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:49Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:49Z",
+          "digest": "sha256:c89bd0af9cdf0e26a1c79d0d163b92c85d64a81f14d30be517313b3b4cbcdead",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-linnerud-minmax_tree.zip.part000",
+            "bytes": 188186,
+            "sha256": "c89bd0af9cdf0e26a1c79d0d163b92c85d64a81f14d30be517313b3b4cbcdead"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 732298,
+            "sha256": "035bc1d9d06751a11b16f7c73db3bb8316c66bc21485d7130d215bc5084cee07"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 14120,
+            "sha256": "7b6a211161e46033ba8addd60071d67b9568c7275c17819a9ee2b37a2b97dbeb"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "7ae242242dd23a689a91459d8c478931168a6dab78f7416bd6efdd338d973c35"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15837,
+            "sha256": "8967184ce304570142a3c92aeaa93140902a2b23e0b967aa5661793e35017f1f"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "ecc939c35cecf8affb85600db5eb46b3c86b387a0569c904fcda57acaa046b1e"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "609e161f8090c726de0417754e6c887e1d1efcb089451d43322342942cd68b33"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122701,
+            "sha256": "8550569662b01c512ca885cf77a4678f2149764a014df92f284f431915aad74f"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "545bfef27b4c8b3e8a85c565d0194c573dd40c465059fe70d098cf86958dae59"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/pca_neighbors",
+        "artifact": {
+          "id": 12717046438,
+          "name": "delta-storage-primary-linnerud-pca_neighbors",
+          "size_in_bytes": 196721,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717046438",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717046438/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:46Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:46Z",
+          "digest": "sha256:511eb12d9d9d266ecddea58fb81660dde737bdebc7c5bae33288a332cb1ffb69",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-linnerud-pca_neighbors.zip.part000",
+            "bytes": 196721,
+            "sha256": "511eb12d9d9d266ecddea58fb81660dde737bdebc7c5bae33288a332cb1ffb69"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877053,
+            "sha256": "5812aaf5916a0e5f9e343b2246d3f0c0d10ad86e9102ed3c81a10c6a18fd659b"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18380,
+            "sha256": "1ed78d74cddd0abfc0aa95c63c7ca50acf996f495f81fca8a4121a3b6fd3e15d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "7455c8934ab15c119f52c4a38d0e42201da71714646cbb80c66f30cceb186a15"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15736,
+            "sha256": "5031dc3808a34756278e0343a262d89c5f15703c1e530ff18154448e09261c35"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "c22de9250b3f5892ed42a6b68c22d3371b259beeb0801eeeba5f81a5cba5df4f"
+          },
+          "delta/run_start.json": {
+            "bytes": 9546,
+            "sha256": "bc4e27460154918c4f0dd68ea410cab81563bd04617fa38e4f36dd8a5d4a7053"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122688,
+            "sha256": "7299339ee242a1b8abcddaebb5ca9cfb0ffa8b9cca337c5e8cdcf4a59ea6230c"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "e0d8a2db39240cf98bb7c78ccda66f2d3c6a304dd972ee564ddac6ef384e5a93"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/robust_forest",
+        "artifact": {
+          "id": 12717470092,
+          "name": "delta-storage-primary-linnerud-robust_forest",
+          "size_in_bytes": 247126,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717470092",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717470092/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:18Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:18Z",
+          "digest": "sha256:37728088077b474fb4189b536baa905fcef8c6427aeb0992c60089aa8a6added",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-linnerud-robust_forest.zip.part000",
+            "bytes": 247126,
+            "sha256": "37728088077b474fb4189b536baa905fcef8c6427aeb0992c60089aa8a6added"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877188,
+            "sha256": "1fbfb630a05dc2cc53d45fca235e921e01731713edcf848a4d92799cf55ed1d1"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "c105c592397619b7a0e72737b5d12a864dcff25e43d3edb643f0e75d584c2b56"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18381,
+            "sha256": "408988497ebdb160b98f6274e2aff25ca81ab491eef5ce73b690c4f18f6a5449"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 65798,
+            "sha256": "c02948e40c01a3fb8a1648383b2dcecfd760bb4e65a28c9953fa1c6751a0ad7c"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "117ba6f02ca7d189d0530161d7056ed28fcbfcaf43013a0a2a191eb099dc3e1b"
+          },
+          "delta/run_start.json": {
+            "bytes": 9546,
+            "sha256": "1e5b8706ec6daa39e070bc02775c51e11db6544bc8e8594dd3b1ab31fc5af7e6"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122690,
+            "sha256": "777d798a36c1c1c5ccb6439a4a048a23c47fb987f37a74ecc938deaeb7eb3047"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "8b088fb7a6f9cef65b80d70e50b998505e31648ab67ce09a394ce92ed93033fc"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/standard_linear",
+        "artifact": {
+          "id": 12716872027,
+          "name": "delta-storage-primary-linnerud-standard_linear",
+          "size_in_bytes": 189586,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716872027",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716872027/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:37Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:37Z",
+          "digest": "sha256:525fdedf0e86e65e231ab4ac02774a3482e3248022494b772faeec3796489183",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-linnerud-standard_linear.zip.part000",
+            "bytes": 189586,
+            "sha256": "525fdedf0e86e65e231ab4ac02774a3482e3248022494b772faeec3796489183"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877075,
+            "sha256": "6cebe32acc98ccbcd564a492898031eb9d98991a29766b6f7699449fe7a43a20"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18380,
+            "sha256": "592fb31a0828e2a5510e172c145b2d3c77ba12a357990c6db61535cbb41a6c97"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "4d7cf962ae121f8d7e0f89862ca2021677fd45d46e2d9c36e718ddbe9947ca54"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 8589,
+            "sha256": "5975590a46d97867453ee3adaef496a7c6c35d32d0048b66525c41e7ecfe2516"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "91fd59315827d72dc2f6715aeb1e9df2c6163f0a2b8866adc4f6d58acba52d82"
+          },
+          "delta/run_start.json": {
+            "bytes": 9548,
+            "sha256": "45c84217345e0dc7bc0b3f294d3f03fd9124d625d3e7d0e6e63b8eea248744b5"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122689,
+            "sha256": "2844f21fa23952e94ad947c6139bde9f7958b2368841bf611bf881f98fcabf75"
+          },
+          "delta_audit.json": {
+            "bytes": 438,
+            "sha256": "3d0a6b54cdc39f3c230645a7c4394555abd64eac2b0e97fa3ceb6163ec636fd4"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/minmax_tree",
+        "artifact": {
+          "id": 12716044545,
+          "name": "delta-storage-primary-wine-minmax_tree",
+          "size_in_bytes": 213461,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716044545",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716044545/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:44Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:44Z",
+          "digest": "sha256:cac2e6e209ea90592ad83529c5964fab2fee5e8887345321edfe64d934d56933",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-wine-minmax_tree.zip.part000",
+            "bytes": 213461,
+            "sha256": "cac2e6e209ea90592ad83529c5964fab2fee5e8887345321edfe64d934d56933"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 764403,
+            "sha256": "6a09fb1ec7e29313e071802cc85b210909d44dacddec55c07b7cb121c86d0076"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 15976,
+            "sha256": "a119338608a81eb8e8b914646c09c95c25e82ccb1f607facd3a5ba2b34c933e7"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "fcf3488167e97db36d8c82a6907fd46d17df2172dc9079a961796b87d270e062"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 39826,
+            "sha256": "de46471ada23e074d2d37c08d3fae668ef75b3690127341af731fe80afa35faf"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "7836fafaaa4eb7e1fe551160444ca8e3078ac0242f48455aa3c135fcd2893652"
+          },
+          "delta/run_start.json": {
+            "bytes": 9540,
+            "sha256": "7b444c790e2d4ae7d302546cc9ad74e8545debf3230bf4c87dd47f1b5c17d26b"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122697,
+            "sha256": "faeca0ff230ced78668c8742b90e18f0c0a3b6492e3a69ae060e153a35ee9365"
+          },
+          "delta_audit.json": {
+            "bytes": 430,
+            "sha256": "aafb91d41e5a5112fcc43691525280537e50cbe8f95ea5561fc6095101041164"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/pca_neighbors",
+        "artifact": {
+          "id": 12716154347,
+          "name": "delta-storage-primary-wine-pca_neighbors",
+          "size_in_bytes": 283820,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716154347",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716154347/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:41Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:41Z",
+          "digest": "sha256:1e4999868d1c23ab4d035b831eca9a3c1d6ce60b5908030a507fe5fd2ada66a2",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-wine-pca_neighbors.zip.part000",
+            "bytes": 283820,
+            "sha256": "1e4999868d1c23ab4d035b831eca9a3c1d6ce60b5908030a507fe5fd2ada66a2"
+          }
+        ],
+        "files": {
+          "delta/encoding_inventory.json": {
+            "bytes": 13697,
+            "sha256": "194da256c33b237f5773bd47348f816415ad3778a6661efe274fc1399370a900"
+          },
+          "delta/conditions.json": {
+            "bytes": 714047,
+            "sha256": "27648d34ba250851427367ed79fd6ddce0d5529b8f8335c0d55ad30fc44e1192"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "81119e59366b4d97bd2d30449abdf5c2b7f47bdf66f472be52ed4d7ff2edb6fd"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 113318,
+            "sha256": "ffa07e4f40b54b8e9f1d9389675e6f90509c05307b8b78ddda7db229fe4e6d99"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "4c58e5513f1eaf1dd094108bdd3eb58d1fb31738f8a067c3e332fcdfdb824650"
+          },
+          "delta/run_start.json": {
+            "bytes": 9542,
+            "sha256": "7c1aa6aafdf4922d614741ed98c709370c9224608c73ec8185206c6812f778a7"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122708,
+            "sha256": "1924a849c4e5ea926675635739ff23e20282cb07faae6909ae680c8dcc3fe28b"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "eaa95f4389244c6e816e770bec126e28039c429eb1797ae9a98f678b72406ad8"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/robust_forest",
+        "artifact": {
+          "id": 12716941846,
+          "name": "delta-storage-primary-wine-robust_forest",
+          "size_in_bytes": 286554,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716941846",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716941846/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:26:18Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:26:18Z",
+          "digest": "sha256:8217bf2d85c64620b9ffd24946756098c570a4a484082c6cd7755c623d2ba297",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-wine-robust_forest.zip.part000",
+            "bytes": 286554,
+            "sha256": "8217bf2d85c64620b9ffd24946756098c570a4a484082c6cd7755c623d2ba297"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 729260,
+            "sha256": "4bf833b1369208032b7cc191c6db15e8f4d9b4e7b04d2e6052ab65d30e00ef80"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 14691,
+            "sha256": "67628745cbbb43b904aa48677bc718617768741b769a7f70ae285fcab54e9e0f"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "f616841c7aa169eb1a25f35367593b7ca5dee56e288b90ca8ce5b2a8263b339f"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 114761,
+            "sha256": "d52858301d0a6bec1ebab2d75595e6c2199c56fb61b4f19ae859d2a10bfd2aa7"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "aaf262dcac7b2199e0359f4eab32805e4fa1edffd1e8920f9642fa7bb40567dc"
+          },
+          "delta/run_start.json": {
+            "bytes": 9542,
+            "sha256": "9a4d6661ef87db050d54f70047eec9156481d5e4bcb2e4ac4e7c1779744dd5e9"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122723,
+            "sha256": "0cda70e9c2284098aac00d5a8495ea49f1430abb4579e8e73d29b6e997bf724a"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "b97ab2aacfcbee01e4ad78bf048e51bdcd5221f8c4f4312865f262d9141e75f3"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/standard_linear",
+        "artifact": {
+          "id": 12716544604,
+          "name": "delta-storage-primary-wine-standard_linear",
+          "size_in_bytes": 196796,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716544604",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716544604/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:56Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:56Z",
+          "digest": "sha256:5447c441074065080c58b4a8eba27631a9e4ffe0ee829c6e1bf1ac97443448e9",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-primary-wine-standard_linear.zip.part000",
+            "bytes": 196796,
+            "sha256": "5447c441074065080c58b4a8eba27631a9e4ffe0ee829c6e1bf1ac97443448e9"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 679156,
+            "sha256": "871084aa8cba497a82e8a4764f5bc584f7e976e3fa06df65620ef582288de66c"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "a0b1e51614690b2508b8c851def01bc22bc6d2164e50fc7b9d3b919a4bc896dc"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 13128,
+            "sha256": "424bc03f9e03f52d81bd4377bdd21ac8268fff626a3920ab55cd29cc9d3d994b"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 28130,
+            "sha256": "29bb50cbdf71640ed09bc4c3e3e9707421fa8a75260475300fa45550990b177f"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "26f05e6514462c386505e30e2014634595b6e07c2abe905aa45bac1008f1c7ff"
+          },
+          "delta/run_start.json": {
+            "bytes": 9544,
+            "sha256": "071ff27366fd2ad124442b66a5009414d874c97c5af8995a94dc57c1378b2d55"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122713,
+            "sha256": "9ba9e05cd4cc3af6392e1d18695a766100f2cdedf5678d756f6be3a1765b3bc9"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "548d98f52c856c7605c2d936fc6a411bc2b753db13c88414bf1de65fb7a9ecd3"
+          }
+        }
+      },
+      {
+        "block": "transfer/cloud",
+        "artifact": {
+          "id": 12719012019,
+          "name": "delta-storage-transfer-cloud",
+          "size_in_bytes": 4999250,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12719012019",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12719012019/zip",
+          "expired": false,
+          "created_at": "2026-10-27T08:19:51Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T08:19:51Z",
+          "digest": "sha256:55a80fd47b40f524fda424d0e27eaa9b1206e73fad8ea8395a668fda2f265a49",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-transfer-cloud.zip.part000",
+            "bytes": 2097152,
+            "sha256": "8c84615166e05572d0fbc5cfcf0e4c6d38e7506bb1ad34b22cefff6da67a49e6"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-cloud.zip.part001",
+            "bytes": 2097152,
+            "sha256": "32082e61a822b616009097c3dbec28c6aaf443c0e1856b1f0ea96afe198507af"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-cloud.zip.part002",
+            "bytes": 804946,
+            "sha256": "ab19de3b01d1311cfad1485bcec8db2d352beade2f2b01738abf4d75d2d0c106"
+          }
+        ],
+        "files": {
+          "delta/encoding_inventory.json": {
+            "bytes": 880971,
+            "sha256": "e5659f8033a80705179a83d5ddb50140bfba39044cc297cdfc45b3cc92bb798a"
+          },
+          "delta/input_members.json": {
+            "bytes": 1054,
+            "sha256": "cf2a5f7052af317057422d4dcf57d98820a6f6e135ba0621d7afe80b8070efa8"
+          },
+          "delta/conditions.json": {
+            "bytes": 28496471,
+            "sha256": "df570d8995040bd00212a54760a157910977fc3687681615b3ed22404a9ecb45"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 1441069,
+            "sha256": "0d272b2906cbbef44a3303c2a80009bd19034b53d5e979ed82631fc7f3cfaf09"
+          },
+          "delta/report.json": {
+            "bytes": 1285,
+            "sha256": "feeee03afee42b39ebe6feb96dec95eed53732c2fa58adaa64f10b9fc1554ce3"
+          },
+          "delta/run_start.json": {
+            "bytes": 9530,
+            "sha256": "107cd6be7fe0ddee1e4b5f3752707e5121d08f91d257777a5d2a2ba12582731b"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122692,
+            "sha256": "d241fa02b4c2df8b79b0cb0b98495125286ca15c4b9a08d7355a4df9d2fb4f43"
+          },
+          "delta_audit.json": {
+            "bytes": 423,
+            "sha256": "a15d4235d42bcc91557da830816432f089845d5673c07784bdc7b581a52e7500"
+          }
+        }
+      },
+      {
+        "block": "transfer/letter",
+        "artifact": {
+          "id": 12717230007,
+          "name": "delta-storage-transfer-letter",
+          "size_in_bytes": 132664,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717230007",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717230007/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:24:43Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:24:43Z",
+          "digest": "sha256:0b6444b2efbc100a86edfcfaa25fb8ad070d94c67c4348aa83b1bb43db815c50",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-transfer-letter.zip.part000",
+            "bytes": 132664,
+            "sha256": "0b6444b2efbc100a86edfcfaa25fb8ad070d94c67c4348aa83b1bb43db815c50"
+          }
+        ],
+        "files": {
+          "delta/input_members.json": {
+            "bytes": 1046,
+            "sha256": "629dd59ceba0892c8e82ffc3275577b3d63deb5f35ab40830686c511639eef12"
+          },
+          "delta/conditions.json": {
+            "bytes": 9677,
+            "sha256": "4d7dcb896fde6d1c7cf3cda3467642403ac420f66e59784a5e932220aea1b0bf"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 57,
+            "sha256": "62f9893336c91cd1523a03cf1185620a67f43d3091092293c7a3d0cdcf3dec83"
+          },
+          "delta/report.json": {
+            "bytes": 1182,
+            "sha256": "b88e56f3d02a410539c2c21a7146ed44fbf2531715809d6d0042d3196e0809fb"
+          },
+          "delta/run_start.json": {
+            "bytes": 9531,
+            "sha256": "078bf509489d5a0f5bbe4bfd9510f459aa82d7b4e2e426cfdf2b9183546e81f3"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122684,
+            "sha256": "b2ca06be24ff91e4960ffb18982cc5e1102a23748bfe97b2b40f863296e7ea19"
+          },
+          "delta_audit.json": {
+            "bytes": 419,
+            "sha256": "c5a19db1e89dcf6572f4ef067c5c1db241519ffe5709a00f4ba144e9b312764b"
+          }
+        }
+      },
+      {
+        "block": "transfer/retinal",
+        "artifact": {
+          "id": 12717794104,
+          "name": "delta-storage-transfer-retinal",
+          "size_in_bytes": 17996025,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717794104",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717794104/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:51:23Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:51:23Z",
+          "digest": "sha256:9b34d130d920b32953072d69219181b9fb8cd41f3a37f65cbe839b8137335269",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part000",
+            "bytes": 2097152,
+            "sha256": "ecb6751d9f50b4a00809f86288bf62c60279aa8ff7545b87d11b23b89651dd95"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part001",
+            "bytes": 2097152,
+            "sha256": "bd04649069a749441291727f697da56b40afe2f2507074740bf4d4da14ccc72b"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part002",
+            "bytes": 2097152,
+            "sha256": "227460a3658fe651997c007339684f001a4e8b3def4f76547e7e1d1b2d45ed38"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part003",
+            "bytes": 2097152,
+            "sha256": "5467aafbfc7bb069a21ed35b1e53c24d57314f5fb873c1b41744b35d9090ed3e"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part004",
+            "bytes": 2097152,
+            "sha256": "5e42283c340ede675a196461936af01d1aa1ed881b5c59cf224f5284e627efc6"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part005",
+            "bytes": 2097152,
+            "sha256": "83af0a7fa395f6b47f39e47d79004ac0afa8ce0f9e2b8eaaf85773a7e97fc1b1"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part006",
+            "bytes": 2097152,
+            "sha256": "10bb90872aa29977c6855c2d929a711ba70571a97f5d265b487e94c1e02984d2"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part007",
+            "bytes": 2097152,
+            "sha256": "a8b81dd2d6c394681709ea131f74f944151f9f536c69efd646465c4a1f18ac9d"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-retinal.zip.part008",
+            "bytes": 1218809,
+            "sha256": "0c680c5e42a19c563804dd5b11e7e2ecfb1fbd542c943b50cfd8a60a0a2360a5"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 12639912,
+            "sha256": "d194e99073e278e69a4c32db9d1a1fed74de4ed587efce67c3ac157d598fa303"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 272975,
+            "sha256": "7d71c68ca7feaa57de3d8f8e82ef3d148c9efe8b5f3c1d0605b37c4c4f79ec73"
+          },
+          "delta/input_members.json": {
+            "bytes": 1054,
+            "sha256": "261483ca2a1d077df7d09805a17a1d41f88ed6f1c92450e1f1b8fbe3e88abd93"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 17145271,
+            "sha256": "54d1813ab59b9f96631f21f9811ce3034da1ffd218356644f706985fc4481bc2"
+          },
+          "delta/report.json": {
+            "bytes": 1287,
+            "sha256": "6b1c8a632a35f5540fdc85c7544cb1cda35a70a0cfcaf0cd8664bfda1794abc7"
+          },
+          "delta/run_start.json": {
+            "bytes": 9532,
+            "sha256": "01fe084daed3b658b1337cfe55d9a433e2e1b165949eaff171c5f1211450d97f"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122694,
+            "sha256": "66f7d678efa15e5c1b2900817ed9aaac70e9edccf438bc4f32350bd141388152"
+          },
+          "delta_audit.json": {
+            "bytes": 427,
+            "sha256": "7369b34e2c719e70656202cd183262dcc50b99fc329ea3ec07f466a012de11f1"
+          }
+        }
+      },
+      {
+        "block": "transfer/scientific",
+        "artifact": {
+          "id": 12717316824,
+          "name": "delta-storage-transfer-scientific",
+          "size_in_bytes": 2308221,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717316824",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717316824/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:39:10Z",
+          "expires_at": "2027-01-25T07:22:10Z",
+          "updated_at": "2026-10-27T07:39:10Z",
+          "digest": "sha256:ebceb8f7d6fe8fe721f7c8566a930c6f2b58b6f96977f164030f3af937a82290",
+          "workflow_run": {
+            "id": 40466699997,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "bb6d79ae6e33656f98e80c055b6c6239b59becc8"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/first/delta-storage-transfer-scientific.zip.part000",
+            "bytes": 2097152,
+            "sha256": "cbb740bac9fe1f7b513cd0e556c3a9dc2a9e6ee7106f7968f14452414048c548"
+          },
+          {
+            "path": "artifacts/first/delta-storage-transfer-scientific.zip.part001",
+            "bytes": 211069,
+            "sha256": "5b65a9832dc0987f4be2fef482a7ee0c916401e3ad3b21c11b9d473f71c7c3ff"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 6456930,
+            "sha256": "316b80a3497fbac665f4be9876063de89bc95ed8da657cd4466c94eec8add450"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 23767,
+            "sha256": "fdbe63d6cc682d787f2fe13be2cf2715fb5bb38a9391831d572af2ca11440795"
+          },
+          "delta/input_members.json": {
+            "bytes": 1051,
+            "sha256": "efedabda5d0ffb5786a1b9ef6aaf1f159481f155b8226ab9b093ca42f663e468"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 1974376,
+            "sha256": "6484c93c0a877cd21246517c7e8b9f0f133939c1b71af03b65eed66d40962cf3"
+          },
+          "delta/report.json": {
+            "bytes": 1284,
+            "sha256": "250c950d9968d63ccaa46ac08949366dc61a65e6a33ec806ae0943a00a33f746"
+          },
+          "delta/run_start.json": {
+            "bytes": 9535,
+            "sha256": "68e2570cf1f9fd948f3f249a293372df93f32a352bfa1571276e2191d116c1e8"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 122671,
+            "sha256": "2065f726da4671af2e2112d0892d64fb4c7e90bebef6d7256f0796bf145d14b7"
+          },
+          "delta_audit.json": {
+            "bytes": 428,
+            "sha256": "93b971d6d975a7c414c9ad2759334ff2c2ab5ed0a08c25b5c9c0a00bdb7f5531"
+          }
+        }
+      }
+    ]
+  },
+  "final": {
+    "source_commit": "f16aa4709937d30144421024d11b442f03835479",
+    "workflow_run_id": 40467717174,
+    "artifacts": [
+      {
+        "block": "primary/breast_cancer/minmax_tree",
+        "artifact": {
+          "id": 12716874253,
+          "name": "delta-storage-primary-breast_cancer-minmax_tree",
+          "size_in_bytes": 200003,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716874253",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716874253/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:01Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:01Z",
+          "digest": "sha256:22a4324e8e9912fd31bc0238d2f449122555dedcabd21d44e1822ce93cef06b4",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-breast_cancer-minmax_tree.zip.part000",
+            "bytes": 200003,
+            "sha256": "22a4324e8e9912fd31bc0238d2f449122555dedcabd21d44e1822ce93cef06b4"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 769762,
+            "sha256": "b0ab4e80841eb897745120d71a599c38e880cda732682a1683f28cbca932e23d"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16255,
+            "sha256": "33dfae1dae7417cfce74b80f58ca5c23d241489a0406ae9556d83c674d86c172"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "bfb9d2088b6326af7c181c6ebfbd0cf183b266fc1c79d19d56d43679fd6bbd3b"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 23425,
+            "sha256": "9cef698f99c42dc1a6189bd2f8ae79e7d6fb6c82d7e1d6ceb20e310b15ccceb0"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "221c9b1339620a49e1d0ec7339c8d21aa60b499e4053847c8e3026e169cac157"
+          },
+          "delta/run_start.json": {
+            "bytes": 10012,
+            "sha256": "6bc5a7c639b37d67830e53cd7374a0e27cf3619b2d6e7659cb95af27f342f252"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123243,
+            "sha256": "29bfc009b4977a8780bbde5cd1585ed2375b691ec6eb69d9f23bf8670deacd78"
+          },
+          "delta_audit.json": {
+            "bytes": 439,
+            "sha256": "8b64bc14e8c97a356df6d4b0f9301d70e8bada7587991530f0c45e0ced713ec3"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/pca_neighbors",
+        "artifact": {
+          "id": 12716804232,
+          "name": "delta-storage-primary-breast_cancer-pca_neighbors",
+          "size_in_bytes": 626142,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716804232",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716804232/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:37Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:37Z",
+          "digest": "sha256:09ee6687d2fef1cfd3b3eaa6b5c68e94f2b64085b4d3adfab4245a565989dc97",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-breast_cancer-pca_neighbors.zip.part000",
+            "bytes": 626142,
+            "sha256": "09ee6687d2fef1cfd3b3eaa6b5c68e94f2b64085b4d3adfab4245a565989dc97"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 801167,
+            "sha256": "94d8ae0eec5611670d491dd3d49f1f96aaeb5c7f0bde2e356742a5c523b62fb3"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16255,
+            "sha256": "2ce68fc38eab0532f5ed81e34b87c7672a07e539345631bf87c1215ef9721eb4"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "3c3ee74a8fa7be06328de514b99ffec286d0159103bceeb0ddf35ac3e9db1b19"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 449241,
+            "sha256": "c5454ccfd7cb771624f5b6d11d9c259785bdfcf87a7c51e99fd249827ebf85cb"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "49554130bf9c8e4e25ed748ef76a11f389150eb0581a3385b2700c0ae53fc260"
+          },
+          "delta/run_start.json": {
+            "bytes": 10014,
+            "sha256": "53ff069332bb91aea30f0076af8befda5ebf6cbb6ad8d5dce4f6dcd2d46c85d5"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123215,
+            "sha256": "cc8240b83b3e2b3d8791c9ba1e84b73ff4046dbce94f5346256237458ea8cb6a"
+          },
+          "delta_audit.json": {
+            "bytes": 441,
+            "sha256": "26f43b790f17c05b2f1d009f5ab1050a665129b15d568c05300de712405bc76a"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/robust_forest",
+        "artifact": {
+          "id": 12716878884,
+          "name": "delta-storage-primary-breast_cancer-robust_forest",
+          "size_in_bytes": 333413,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716878884",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716878884/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:26Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:26Z",
+          "digest": "sha256:b84606326b15e86ec7ad636b28c2451e16cb8647bd0f13f313f81020966d8fb4",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-breast_cancer-robust_forest.zip.part000",
+            "bytes": 333413,
+            "sha256": "b84606326b15e86ec7ad636b28c2451e16cb8647bd0f13f313f81020966d8fb4"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 866357,
+            "sha256": "e1829e14883da60c6f7351c58e9f87d8bfff0277785770bd7a2f86074a29eacb"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18385,
+            "sha256": "6867744a359f1360e89e27b8b7d329592273a6fa90b62b8fe7f47dcddf79485c"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 152746,
+            "sha256": "e8dc978bc4309ca0907212aa38910a8b2dad45c1d3b60c7c7301e3d97c4f7dd7"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "446d9c7af2cfc484ed428a26d7150c0275157e417c312000f1e2d7ece2a3bf15"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "82f07310972b267a222846657d007e9667ab394cf6196e989142addc934c44b8"
+          },
+          "delta/run_start.json": {
+            "bytes": 10014,
+            "sha256": "85bf5d056f9b2e0147dca5a7a9a9b14aa8043b1d19b42cb873fe6aadce4f4141"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123206,
+            "sha256": "9df3557f17877c948ead743996c7af66f1e66e6616be6319b991274626fa0bf5"
+          },
+          "delta_audit.json": {
+            "bytes": 441,
+            "sha256": "7e1aaf83f9c4534e225dd347b29fd6756fafe964be3ffaa36eafbb7d460b0acf"
+          }
+        }
+      },
+      {
+        "block": "primary/breast_cancer/standard_linear",
+        "artifact": {
+          "id": 12717048250,
+          "name": "delta-storage-primary-breast_cancer-standard_linear",
+          "size_in_bytes": 188047,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717048250",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717048250/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:12Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:12Z",
+          "digest": "sha256:1c119a1b117ef9c305ef0817493af0ffb8a38fe448b9dd8b528668657bb53005",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-breast_cancer-standard_linear.zip.part000",
+            "bytes": 188047,
+            "sha256": "1c119a1b117ef9c305ef0817493af0ffb8a38fe448b9dd8b528668657bb53005"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 742420,
+            "sha256": "95b47a22006966fbdaece2e4edf35cc7c98e490e6240d4b002d8d63fecad9a27"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 15403,
+            "sha256": "3b71270bc6940c987ee743057c06403466a411150e0f6f5b256dc20a27619f36"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "818fa41292f7679870100ab7867b987563a75d8b63e085223fa469fc1146005e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15677,
+            "sha256": "a8c74b65598e0682c8023eca844f20ebaf9bcc04ea929a0466ba9173f140ae5b"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "db824d4500aba727220f0ca4585d9b192326ac0338d00c75aaf2d3143105df0a"
+          },
+          "delta/run_start.json": {
+            "bytes": 10016,
+            "sha256": "2a745a217a6e1f28d412a7d139f87157fb061e2f029cd4b856d49e6a17deac1b"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123249,
+            "sha256": "24ea628b08e641b3f0c66932d6f439c13d383f1f2b36a42c5ad44165658a9ee2"
+          },
+          "delta_audit.json": {
+            "bytes": 443,
+            "sha256": "f9f5d4d55713502e952fe3d3b14d9926803a5e714aaa26d4dcacfdf10b710f85"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/minmax_tree",
+        "artifact": {
+          "id": 12717670734,
+          "name": "delta-storage-primary-diabetes-minmax_tree",
+          "size_in_bytes": 232303,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717670734",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717670734/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:34:58Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:34:58Z",
+          "digest": "sha256:3c655b8498920581c0eace1c0fde779e76b0a118ffb28a801db6e79c834dcd24",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-diabetes-minmax_tree.zip.part000",
+            "bytes": 232303,
+            "sha256": "3c655b8498920581c0eace1c0fde779e76b0a118ffb28a801db6e79c834dcd24"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 808116,
+            "sha256": "544b1d3a31d69ae8c94908fdd4a77ddfe416a97eed68bb7025fb1d4e3fb3bc3e"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "ba0095a07d49a7cc7111ec674a788c281a722f235316247ac6ced8769c709915"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 17254,
+            "sha256": "a743386bb74ece41863f29250909a3752ba3ed43406d9b634d85187740d61e64"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 55097,
+            "sha256": "67b152a70e5a21c47b1b275a3cc32fbc0c8dc363e17761ea49dd3e802a0fb757"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "fbb18f14d884974e97f66a78173d7bd9837f1ac4777dc24dba3c525b33f16283"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "637e348c3a9462f71387669c91ea133d72f95a87c12b4db4cc36a3288ab24d31"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123198,
+            "sha256": "33557dc1678a986f4586256dd5f281bfc03a484ef4131bd14dc5c3d75c984b41"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "4a2374bb49b8db31bffb4dcaef8b3eaa300a256d29032a0af3f334bd81343cef"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/pca_neighbors",
+        "artifact": {
+          "id": 12717196883,
+          "name": "delta-storage-primary-diabetes-pca_neighbors",
+          "size_in_bytes": 527389,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717196883",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717196883/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:34Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:34Z",
+          "digest": "sha256:12318cfd81bd08b505cd651a844d5fd9c13e7977ba99ce5b1d1747f4a3ad71a3",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-diabetes-pca_neighbors.zip.part000",
+            "bytes": 527389,
+            "sha256": "12318cfd81bd08b505cd651a844d5fd9c13e7977ba99ce5b1d1747f4a3ad71a3"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 874219,
+            "sha256": "905164f1829bdb3d25e3a5c3cc5ecbde6c0d5e3cf5bf7ce578ac158174b0bb60"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "63b6c78bb791f55272153bc633e7e9b4749e5a37474fe565554920dbb8f1f9e6"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18384,
+            "sha256": "8402dd270dfe313347607351d23afbd9d227333763b74c83749b971513b56e4e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 346268,
+            "sha256": "f4e3459e12f7abe5ec90957806b11b3b7ab0e6675a392486aee1019a50de927e"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "1fd1eee04ff78d7214b263cae39c61abc478b788f131971d1c78825a87bc40a3"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123214,
+            "sha256": "c61d013096d254e6ce7eaf18ea2e6f8cbbb34d54b7de139dfbf3df9bb7b1b12c"
+          },
+          "delta/run_start.json": {
+            "bytes": 10009,
+            "sha256": "da8804281fe8d931df237c48be86ae56cca5df02b6b82e6364dbded2eb12733e"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "7682ec4ef7976acadba47f1b87c52d62c58b67de5061923b411c0efe2b6b53ee"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/robust_forest",
+        "artifact": {
+          "id": 12717581060,
+          "name": "delta-storage-primary-diabetes-robust_forest",
+          "size_in_bytes": 574928,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717581060",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717581060/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:23Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:23Z",
+          "digest": "sha256:8a560e86ccf4d38781b918371db1b83dd63a54c16b33d02e6f4b75f58b735db9",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-diabetes-robust_forest.zip.part000",
+            "bytes": 574928,
+            "sha256": "8a560e86ccf4d38781b918371db1b83dd63a54c16b33d02e6f4b75f58b735db9"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877793,
+            "sha256": "d3e64f78f647b41811bc2ec76d3a88699b51be5d686729cb122a8dad567b3de7"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18960,
+            "sha256": "c1b56032e3efe4372ea66c4d0f38460235a79df4a2f579038e120ccdec0dbe45"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "4cb6cdf1646f0d60f92c6e60be1b68aa95eecdca630e341fe513a39e5f203a21"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 392478,
+            "sha256": "68300a3498dac07831b65894bc735c83cf94dce70ad92b1440fca3d39a6efa01"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "a9c6ccee4df974da2197e0e3bc47b3caceec6897f1cafb0838410d2b33400d73"
+          },
+          "delta/run_start.json": {
+            "bytes": 10009,
+            "sha256": "58dee3e8cfad9afa1e31f815d223a4aa69c16538dddddbb0f8fd27bf95d97254"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123206,
+            "sha256": "0ab378352dc96abee3705afe19b522dd1bf77a6f2892421801af6390cd2b2341"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "5d2555789d1341cd87d9198c2eee8d126d9d1ed3d7accaed3c0528d4c1248b8f"
+          }
+        }
+      },
+      {
+        "block": "primary/diabetes/standard_linear",
+        "artifact": {
+          "id": 12717256421,
+          "name": "delta-storage-primary-diabetes-standard_linear",
+          "size_in_bytes": 230141,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717256421",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717256421/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:13Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:13Z",
+          "digest": "sha256:d8a4b508ab02dd1573ade80b794e0db89ee531860bd6595df0305d3fa390a82d",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-diabetes-standard_linear.zip.part000",
+            "bytes": 230141,
+            "sha256": "d8a4b508ab02dd1573ade80b794e0db89ee531860bd6595df0305d3fa390a82d"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 866123,
+            "sha256": "8624dbb0613f346d5ea01df536cb6e0e5fdfe8475f2d89955fbb8a0872fc37b2"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "ba679063b2bfcc98a4d0955d8a26c04a336aeed828cf1886342eb6c792f3cb7e"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18958,
+            "sha256": "55238f183e93316fc9bf72569977c89d462b3d3a5b9eeb8b09f4aff758f90fcc"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 49701,
+            "sha256": "ae45fd1289b8a680b831e229426b2aa61e3ef5d2e557fff1ae537668ac0e8a4f"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "23a680a45a6f32ea4bc8555514d21280cd58824a7c20ea470a03b4c03335aa8c"
+          },
+          "delta/run_start.json": {
+            "bytes": 10011,
+            "sha256": "b1c3f9cdcfccce546efdd9b70da32276805146bc092bfe86842f983e1d512a30"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123222,
+            "sha256": "50870f412bd2e3bbc9ce2387b2668b921a3ad9c41d54147d07e62287b313afef"
+          },
+          "delta_audit.json": {
+            "bytes": 438,
+            "sha256": "14585d4a5931af6137b4f4eb78ef358f3c2d04a6d7faa5d55112bf2a2938e1b1"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/minmax_tree",
+        "artifact": {
+          "id": 12717401392,
+          "name": "delta-storage-primary-digits-minmax_tree",
+          "size_in_bytes": 225470,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717401392",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717401392/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:34Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:34Z",
+          "digest": "sha256:7cc9e71f86cfe6b185ecdfbed258fd268e136bcbe5add7cc793ff9115971dda9",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-digits-minmax_tree.zip.part000",
+            "bytes": 225470,
+            "sha256": "7cc9e71f86cfe6b185ecdfbed258fd268e136bcbe5add7cc793ff9115971dda9"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 788094,
+            "sha256": "110761433684a0a5d695943a08363c599d76d1f40265033784260f9325ce44c8"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16681,
+            "sha256": "b6471270bf439828769f120a0f604d1634c8e01d4f46a3a641e014099136104f"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "b1446a851a7635640191e95d3f9d5ff5a71cd555644127d7b2df96091ce48376"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 47418,
+            "sha256": "d9cc2c688a9d7891092c6af1b70186aec94232298611f0e790ee770fec8a3ce6"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "59e7234d922de517149aa30552d6b8090c04df03a9b77aed4542c8bde7269c1c"
+          },
+          "delta/run_start.json": {
+            "bytes": 10005,
+            "sha256": "529209a38798dc14e19f41e9ae327de8f204017b64dcd29af411b62e2bb640a4"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123232,
+            "sha256": "8719f0a03e4e9c57eef20e30b449c0fa6e8977ec525d06659112ff313e19a52b"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "f99f39df08b8cff69ac2a7e49cb753fffbf7fe8f9d8516066913305d529e379c"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/pca_neighbors",
+        "artifact": {
+          "id": 12717700936,
+          "name": "delta-storage-primary-digits-pca_neighbors",
+          "size_in_bytes": 1754632,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717700936",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717700936/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:38Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:38Z",
+          "digest": "sha256:e23f6276617bf0899737c5dd1ee119bfadcd3fc0a89f0afc562abbf604f58ee5",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-digits-pca_neighbors.zip.part000",
+            "bytes": 1754632,
+            "sha256": "e23f6276617bf0899737c5dd1ee119bfadcd3fc0a89f0afc562abbf604f58ee5"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 844620,
+            "sha256": "543a42755002225ae6d21ca92852c89c49f21330abf8e6bda06dca6c97119bc8"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 17534,
+            "sha256": "6360a46d5fa2709422aad06c15f04045364383377538df39f9912849c6d45434"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 1574160,
+            "sha256": "a2bb11e0b927ce34a76ab6c6ecdefd89926cb9055d72e86f186b4b152db7082d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "5cd28ec215ae536d7450a774fe47b1b82c4390e488485ce16462f291ad002b86"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "287d4bf69b4f72369cb0275dfa4b2fc8a0b36ab314682e9728bf7b30365cca76"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "8b69f6c69f4e82ac58c91893ede44e982d8e74dabc2662fc2853b3ab1ad73770"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123181,
+            "sha256": "5988e32708278082df48cf6bc73e0bbdaf29a3be443e3770f943b21d1cbb7e0f"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "3a8d735c27348966175d53ccef1f4679fcf616a4428eaf8b64fc083d53b59bd9"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/robust_forest",
+        "artifact": {
+          "id": 12716834345,
+          "name": "delta-storage-primary-digits-robust_forest",
+          "size_in_bytes": 919908,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716834345",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716834345/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:37:21Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:37:21Z",
+          "digest": "sha256:2b9b94d1da33975f54a4f581a86f58f103dd64766120edce72be6ef52da2d746",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-digits-robust_forest.zip.part000",
+            "bytes": 919908,
+            "sha256": "2b9b94d1da33975f54a4f581a86f58f103dd64766120edce72be6ef52da2d746"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 872975,
+            "sha256": "9dc96fafee931391e4b4ac3f97c2f9a822b1b1e2bec4ce70bf8cf558b8e772be"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18385,
+            "sha256": "1f74010ed33bdc6d7ce42c2d8a1871cb0cba3cb2d36da336e5b57f4ad8b2a92d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1285,
+            "sha256": "d25bb9bcd591d02c0873c7fc96e4ee20d1fc49a197e230a106737df77c1aec19"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 737941,
+            "sha256": "f8355d7c7e47de5ffd5965429e9baef7bd0c385a389df13c3718872b686ed810"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "accd15fd1eea207391cc9162b1da7a6264ff6d3f254145138256561f2b46a86f"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "2a38197781f0bb42d11a6773219e70fd244d1ff123273fc9d8affbd27c25c02f"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123209,
+            "sha256": "d27a192e7e897f7b18672544e2c753e59c73980880860938de2e3643bcb57d74"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "598842ef8162d7039e2cdf67ae3c56185c08eb399766a4852764824f62aa4bf6"
+          }
+        }
+      },
+      {
+        "block": "primary/digits/standard_linear",
+        "artifact": {
+          "id": 12717357262,
+          "name": "delta-storage-primary-digits-standard_linear",
+          "size_in_bytes": 350216,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717357262",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717357262/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:37:13Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:37:13Z",
+          "digest": "sha256:f186405516cb39233c4be09303f6325d6844cfff3df73537e5edc1a17c2e7ced",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-digits-standard_linear.zip.part000",
+            "bytes": 350216,
+            "sha256": "f186405516cb39233c4be09303f6325d6844cfff3df73537e5edc1a17c2e7ced"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 778955,
+            "sha256": "d9c6450ccdca4155009a13643416f9268dc7beedcdd034f3057274aade13c6af"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "8338fed2be8638da6ea7ffcb10c44d90656b2950051e7897645ef17e7936b68f"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 16121,
+            "sha256": "500d73387622936efc3d97337bc2bc08fda0e658521a1ab61b890ff1d8f19901"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 175030,
+            "sha256": "9ef584e261beb93d699a262f754a2124d5f23de22d9ec99e72291bbec28cc518"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "d437c3c0ed27f5b00699aa470df13575f8107189d7854c4874c60e85ca9728e3"
+          },
+          "delta/run_start.json": {
+            "bytes": 10009,
+            "sha256": "b3ed40d64d61bae30501cdd4310783c46a23d1e4fd3bf287a5209a207b0755d6"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123235,
+            "sha256": "9203c1cfe8591316c70be13a50b9f7b94cc5a6ce2d06f7caba5ba4d89166c282"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "46cb8b711f50203b9ac1c131febd95d04888aeae26003871d4de065ac8695983"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/minmax_tree",
+        "artifact": {
+          "id": 12717128126,
+          "name": "delta-storage-primary-iris-minmax_tree",
+          "size_in_bytes": 183275,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717128126",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717128126/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:08Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:08Z",
+          "digest": "sha256:3aa7718d8210eab4a5e39c2f240393b2d69fcc455cbf2163551f9a36b889ac41",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-iris-minmax_tree.zip.part000",
+            "bytes": 183275,
+            "sha256": "3aa7718d8210eab4a5e39c2f240393b2d69fcc455cbf2163551f9a36b889ac41"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 671472,
+            "sha256": "8f0c2d458f9b4cabb71e30c89ce3af52fe2548a7163b54312e6e0f109eebba0b"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12984,
+            "sha256": "ab10b9d067f1945944d8698f925fe7a974f56b61ab7eed304e0721c177b86193"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "6d67edfdbf1d1efd5f43d7b903570ed2fac50b1283fb57d0b82b0d2025a9d09d"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 14991,
+            "sha256": "e44839fa035ac20f9b1d04ab3514633bf2b0d5a09e9270480f109475ba3320da"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "f308ae13d76f8fc77de559958548778f6b1c5bf1b54024cb63abd96152197132"
+          },
+          "delta/run_start.json": {
+            "bytes": 10003,
+            "sha256": "f0274f79c64ebec9ee1dd715d55850f2f31fd35ae903cf5eb39a95b80d6170fb"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123202,
+            "sha256": "910c8d8a0098b8319b4ab60367876785e84bb545fb7dba3b97f132f30235b052"
+          },
+          "delta_audit.json": {
+            "bytes": 430,
+            "sha256": "84bd5149c6f391491788ec312937af16c5f58bc3653e8b196523b3d7cf2c49d7"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/pca_neighbors",
+        "artifact": {
+          "id": 12717785618,
+          "name": "delta-storage-primary-iris-pca_neighbors",
+          "size_in_bytes": 227924,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717785618",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717785618/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:03Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:03Z",
+          "digest": "sha256:3bbc11c14a314320ec908c6ee42422d9661eac96f6c4ba29f7ef3d8017b21c7f",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-iris-pca_neighbors.zip.part000",
+            "bytes": 227924,
+            "sha256": "3bbc11c14a314320ec908c6ee42422d9661eac96f6c4ba29f7ef3d8017b21c7f"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 657146,
+            "sha256": "5f0414dbddbb778331055cf39bc9fc04bc29b2f3d98cfc4a5a0bfa7cce996df8"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12852,
+            "sha256": "76a11dfa6f01592c6e89c52f9bcc8ab0929b939233723644e1fe8e9e155e218e"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "2120078905da7cf83f91472e3f343a42edb46262530c5fc4e75757fdec3da1ee"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 60453,
+            "sha256": "e935a5818f8e5ec7a88f7e34580ab3fcd54134bf80d14e5902075234df61fdf2"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "2ac3c96773eb6817053d1c30843dff0820e3983961f90319b15b14221a8015b6"
+          },
+          "delta/run_start.json": {
+            "bytes": 10005,
+            "sha256": "5acf5a921781fd06b7c8c73614053e07ec6a168da8cbf422dad3a4f9251fabe2"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123197,
+            "sha256": "c971548f491fbdb72ac2cf30b358005be7f8b5f2358d6b8bbc3ab130afe0a7f2"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "5be22c26faed82b341c190df03f3e8f97c0aef1775fe1a186b26b1425495290c"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/robust_forest",
+        "artifact": {
+          "id": 12717242709,
+          "name": "delta-storage-primary-iris-robust_forest",
+          "size_in_bytes": 246107,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717242709",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717242709/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:17Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:17Z",
+          "digest": "sha256:e91762b733a4589443900ec7a7cb0e2f85eeb2aa84e49335c06d3689f188aa07",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-iris-robust_forest.zip.part000",
+            "bytes": 246107,
+            "sha256": "e91762b733a4589443900ec7a7cb0e2f85eeb2aa84e49335c06d3689f188aa07"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 660369,
+            "sha256": "32b35f1a6a87ba31d0969fa79a78ed6182ff1e1ad05fa526c0efda530ca8131d"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12851,
+            "sha256": "6a73a21d9ef16a071ce2993ce29aebef3194038aab42bd7fada7919ef625195c"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "9ca57d3786fda042d6bee1d866120dbfb6b6fced0a41f0b6313a21c96bf6a24a"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 76734,
+            "sha256": "45e18845b7456440c9d9d26b928e7837730e9618b859397039034d5ab68126b1"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "208b7bbd904aaaded324a582d3b5f66906c33c16f7e3289c90856ae6310de4c1"
+          },
+          "delta/run_start.json": {
+            "bytes": 10005,
+            "sha256": "ecd372d66e24175eb4ffc918b01a07c1e7ac54f56ace64be2f2aa76c2db2b309"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123190,
+            "sha256": "d495f94af30af3944a4045151f2075f1a25ebbcd24929b427033a73e693951e0"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "605e0fe741cb7ae679ee94034dfe4bd357184c4f72fdd56770edfcc3a92c4912"
+          }
+        }
+      },
+      {
+        "block": "primary/iris/standard_linear",
+        "artifact": {
+          "id": 12717316302,
+          "name": "delta-storage-primary-iris-standard_linear",
+          "size_in_bytes": 182770,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717316302",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717316302/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:09Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:09Z",
+          "digest": "sha256:0a8e138e2aa3b6d2ac1a997a68ad2ed50ce98402c8ad7906370ac302ce05b521",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-iris-standard_linear.zip.part000",
+            "bytes": 182770,
+            "sha256": "0a8e138e2aa3b6d2ac1a997a68ad2ed50ce98402c8ad7906370ac302ce05b521"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 671504,
+            "sha256": "1e75d7164fe4dcf0530970fcc4c8e5a158bf04b357f6a208824202f38d3b27e6"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 12984,
+            "sha256": "9fa03255a12fb8251d9245e22b945d08763f8c74c255e4b74a0249408c3c5544"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "b78b19a777450ffbe8d0d4552fafd1946f1859b31977dfab01d09c017f990709"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15487,
+            "sha256": "a94cff2b4423643253fc933d657e062b6a90439dd2cd2df148b486b0699ab940"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "034f42c9a5c1f87f63a68addf035884eaacf0ab5f88ae6699e98871205de32a8"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123237,
+            "sha256": "1c05389c16d229c5e72a8291a262e4591cb06493c8425ee6d030f6fc1e185c42"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "f311bb5e254fb1cf1e9820366dc6532cb868755f78712985d76938dbf5856db9"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "b3deca998eb5451034dd315710b536a1b2a6d8959fbfb885919007acbe05cee6"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/minmax_tree",
+        "artifact": {
+          "id": 12717366047,
+          "name": "delta-storage-primary-linnerud-minmax_tree",
+          "size_in_bytes": 189060,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717366047",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717366047/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:34:53Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:34:53Z",
+          "digest": "sha256:bf7387fd31c4093a2db58e00a6f5eaccec9384357d97af8a695f4f1693517184",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-linnerud-minmax_tree.zip.part000",
+            "bytes": 189060,
+            "sha256": "bf7387fd31c4093a2db58e00a6f5eaccec9384357d97af8a695f4f1693517184"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 732617,
+            "sha256": "c2bfb363246c0c3725a0205451be29c072038ea77351ec0828217fbf131a7176"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 14120,
+            "sha256": "7b6a211161e46033ba8addd60071d67b9568c7275c17819a9ee2b37a2b97dbeb"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "7ae242242dd23a689a91459d8c478931168a6dab78f7416bd6efdd338d973c35"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15829,
+            "sha256": "f895b059ee3c62c2361bffbb9c6bf1558b1fb35d5c3edd5136cf9a5460799554"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "8a95a9d87b4bcbc5274b08832c908732eec7290ffadabc8cc01ab4b6dfe7da31"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "81233e60fd32eb88ad58ec2039c835a177220425a54cc8ca9952bfed8495f2be"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123186,
+            "sha256": "450107465d4d35cff9277bc1790ad671fda0e7cdf657b350412a2b0a68333f60"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "a6b8f3d553aa3bbbb140952b001e2532e2fb4e2c043eb3a93bda8a995e048a19"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/pca_neighbors",
+        "artifact": {
+          "id": 12717326377,
+          "name": "delta-storage-primary-linnerud-pca_neighbors",
+          "size_in_bytes": 197485,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717326377",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717326377/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:07Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:07Z",
+          "digest": "sha256:5db481e7fe2becab560574f4f75bb2bf9437db6426f096f629d0f4429bfa8463",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-linnerud-pca_neighbors.zip.part000",
+            "bytes": 197485,
+            "sha256": "5db481e7fe2becab560574f4f75bb2bf9437db6426f096f629d0f4429bfa8463"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877363,
+            "sha256": "12e72ee62fd1d67cb6b7347f3c9d232e7c66704c4c089c84def3a3d3ec4c4d0a"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18380,
+            "sha256": "1ed78d74cddd0abfc0aa95c63c7ca50acf996f495f81fca8a4121a3b6fd3e15d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "7455c8934ab15c119f52c4a38d0e42201da71714646cbb80c66f30cceb186a15"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 15751,
+            "sha256": "a6aa47ff6a96643bad25bc5bce86cf52d470e50eb737deb4b2b9a1ac17c3e0ee"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "10a27a5b083297828b32fb88ab25d70471051a68162a4de23afab11ed981ece8"
+          },
+          "delta/run_start.json": {
+            "bytes": 10009,
+            "sha256": "36d421e867966703eae249aba453b871be7d7cff55117ff2575a735b01d679f9"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123218,
+            "sha256": "98c87e3d42a1dc98008c25b150ca494c51e645f588dd9113345524fdeb62b616"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "c598e09bb7155b42a81ef8d790fd44672bc61fb71764cc5c8824e02ec6bfb64a"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/robust_forest",
+        "artifact": {
+          "id": 12717222818,
+          "name": "delta-storage-primary-linnerud-robust_forest",
+          "size_in_bytes": 248022,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717222818",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717222818/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:07Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:07Z",
+          "digest": "sha256:8f97e378fb2d817c781df781fd79d07903604c3e5f12bcb4c39f3b5c04fed09b",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-linnerud-robust_forest.zip.part000",
+            "bytes": 248022,
+            "sha256": "8f97e378fb2d817c781df781fd79d07903604c3e5f12bcb4c39f3b5c04fed09b"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877510,
+            "sha256": "03f6fffb9007172fe63d6182a4bc35ec84711722af50b32ddb118f330d6a0d0f"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "c105c592397619b7a0e72737b5d12a864dcff25e43d3edb643f0e75d584c2b56"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18381,
+            "sha256": "408988497ebdb160b98f6274e2aff25ca81ab491eef5ce73b690c4f18f6a5449"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 65789,
+            "sha256": "ce3e7a3c67ac90a5c34f3fdca01f81965f52e2181b6d606e59fe645368bc656b"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "8a767229ea7f614ce2572a9e328ba82186c63396c1823932b3abd792429e7a5b"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123184,
+            "sha256": "60f3d3019d13659789d5e658d6395549578e0344fd8fb727bf4f55858a589153"
+          },
+          "delta/run_start.json": {
+            "bytes": 10009,
+            "sha256": "c5539c0645d76e61c28d21c06bea4a79221162935c1994dffa0f273ac8450a9d"
+          },
+          "delta_audit.json": {
+            "bytes": 436,
+            "sha256": "cfe1689713da8b81412d8f485797406a7614009063ea6239cb36e52aa15aa21b"
+          }
+        }
+      },
+      {
+        "block": "primary/linnerud/standard_linear",
+        "artifact": {
+          "id": 12717341379,
+          "name": "delta-storage-primary-linnerud-standard_linear",
+          "size_in_bytes": 190600,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717341379",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717341379/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:13Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:13Z",
+          "digest": "sha256:3417ae8526d97543043afeb4f2cbaecf1f94c0e50b7a1eda3ce56a5fbf7bba6f",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-linnerud-standard_linear.zip.part000",
+            "bytes": 190600,
+            "sha256": "3417ae8526d97543043afeb4f2cbaecf1f94c0e50b7a1eda3ce56a5fbf7bba6f"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 877384,
+            "sha256": "f9691b4b22752ced743228fb0b52d044d093cd26c0360f18c6532c028387b620"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 18380,
+            "sha256": "592fb31a0828e2a5510e172c145b2d3c77ba12a357990c6db61535cbb41a6c97"
+          },
+          "delta/input_members.json": {
+            "bytes": 1283,
+            "sha256": "4d7cf962ae121f8d7e0f89862ca2021677fd45d46e2d9c36e718ddbe9947ca54"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 8620,
+            "sha256": "9565fd1eff9db87c569bfa0495fe79a8c4d9d5159235376e1b40543a501c9a3f"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "eef4e864f923bd1aa7ee2e7ee2c9f9db33045a0382bbe87f048367339403c5ac"
+          },
+          "delta/run_start.json": {
+            "bytes": 10011,
+            "sha256": "5d38883f956a8bad3fd7c06c3cad7a740f2534c4a226daa2833f9fcbc029022c"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123192,
+            "sha256": "8fcc1024a89e4582c2f2be4de56c906794a27a6e9b1c976400d0bb0bc566e206"
+          },
+          "delta_audit.json": {
+            "bytes": 438,
+            "sha256": "1eff81256c4d4a31679d91624a7e320b08552b564766586631aaa251d9787f3e"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/minmax_tree",
+        "artifact": {
+          "id": 12717376225,
+          "name": "delta-storage-primary-wine-minmax_tree",
+          "size_in_bytes": 214354,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717376225",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717376225/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:36:14Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:36:14Z",
+          "digest": "sha256:832ae71334122a109abd1c09f2391ebd76e7387e5c681322c0ce9fb054214fd9",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-wine-minmax_tree.zip.part000",
+            "bytes": 214354,
+            "sha256": "832ae71334122a109abd1c09f2391ebd76e7387e5c681322c0ce9fb054214fd9"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 764713,
+            "sha256": "a22b81437c2cc4493c07193f32ad75b473a7dc8766e6b9fa67e9a8bdabbf7132"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "fcf3488167e97db36d8c82a6907fd46d17df2172dc9079a961796b87d270e062"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 15976,
+            "sha256": "a119338608a81eb8e8b914646c09c95c25e82ccb1f607facd3a5ba2b34c933e7"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 39828,
+            "sha256": "48031cce29b7a44b0b2509389639516218dc52d787c4896ec9891eef52749e0d"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "9aa525b6fc72cd38518f8e7aeb849afc7caa4d56b434c92e9dc2331f881d1d7e"
+          },
+          "delta/run_start.json": {
+            "bytes": 10003,
+            "sha256": "fb04c8979c4e980160a68dc67d9b571a05df8ac504a362858278da2e302e2fdc"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123223,
+            "sha256": "3d4089669ed9f2ce970c6eeb8edaef0fb93efec83c1a0d720c33af6a7d79fc75"
+          },
+          "delta_audit.json": {
+            "bytes": 430,
+            "sha256": "2ad6a122b3ca34f126ed97279843565a770615e8c160a09bce9cd59c5fccebeb"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/pca_neighbors",
+        "artifact": {
+          "id": 12717590978,
+          "name": "delta-storage-primary-wine-pca_neighbors",
+          "size_in_bytes": 284774,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717590978",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717590978/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:13Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:13Z",
+          "digest": "sha256:a0d08389eea9239c60391466d612fdded6cca0c00744fddd32ed0865610b1775",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-wine-pca_neighbors.zip.part000",
+            "bytes": 284774,
+            "sha256": "a0d08389eea9239c60391466d612fdded6cca0c00744fddd32ed0865610b1775"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 714357,
+            "sha256": "b18c196b151e6707d9da5715e9360c43d60f54ba0ff428a0221c657e7aaf77ca"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "81119e59366b4d97bd2d30449abdf5c2b7f47bdf66f472be52ed4d7ff2edb6fd"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 13697,
+            "sha256": "194da256c33b237f5773bd47348f816415ad3778a6661efe274fc1399370a900"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 113325,
+            "sha256": "549e5b2905179e85352afd92f950aa75099a54365a1918768e19641a8cce5b30"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "207defb4bd76ad1f222d20a51e929c53756802e1b138e8757b5df85e8552bf82"
+          },
+          "delta/run_start.json": {
+            "bytes": 10005,
+            "sha256": "0e0e68c6da6786307919d7f82b78e6a327a52024b19e8eaafd194d664eadc8f4"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123243,
+            "sha256": "7928af6845b112c6daa49eafb3a7396747568b6a8ab85195ce642f409b7d806a"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "4bb2ecebcd6743e0bbd464482431e9c10f06139c7a30244c5cf0e8934c38c1a6"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/robust_forest",
+        "artifact": {
+          "id": 12716639965,
+          "name": "delta-storage-primary-wine-robust_forest",
+          "size_in_bytes": 287527,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716639965",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12716639965/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:15Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:15Z",
+          "digest": "sha256:edebda2b42703646bd1322065106857c61c52e92a404f4ef982d0e103766538c",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-wine-robust_forest.zip.part000",
+            "bytes": 287527,
+            "sha256": "edebda2b42703646bd1322065106857c61c52e92a404f4ef982d0e103766538c"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 729579,
+            "sha256": "9dc2b11612483ed6a9bfbd07de39756e1c1450dea544329cbdd4fdbd93210c70"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 14691,
+            "sha256": "67628745cbbb43b904aa48677bc718617768741b769a7f70ae285fcab54e9e0f"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "f616841c7aa169eb1a25f35367593b7ca5dee56e288b90ca8ce5b2a8263b339f"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 114748,
+            "sha256": "5e70955a9e33653c8bfe35f88ec042ddf3e29f906ef7c7de7d75be02b6c7f3b1"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "a9a407e8851a9fdbfbe5a4d546907c00ba40048df90662802883e4e75b9343f4"
+          },
+          "delta/run_start.json": {
+            "bytes": 10005,
+            "sha256": "a28a043a49339b1633fc798848a7bfae95577d8bf29aacc75a25431584774fb0"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123240,
+            "sha256": "7b22fe27f27af215c362a4b4125b872845a5205fb77b7db823636f22d99f166c"
+          },
+          "delta_audit.json": {
+            "bytes": 432,
+            "sha256": "ffc833f3f3887360dfae167ed9c9247a3af196a33ae1be42871967bbf45a4535"
+          }
+        }
+      },
+      {
+        "block": "primary/wine/standard_linear",
+        "artifact": {
+          "id": 12717013612,
+          "name": "delta-storage-primary-wine-standard_linear",
+          "size_in_bytes": 197734,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717013612",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717013612/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:35:08Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:35:08Z",
+          "digest": "sha256:e2850953d1a6a8fff8993a9de397be0b95ea2c25c5d7234b47b05eacfaacee41",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-primary-wine-standard_linear.zip.part000",
+            "bytes": 197734,
+            "sha256": "e2850953d1a6a8fff8993a9de397be0b95ea2c25c5d7234b47b05eacfaacee41"
+          }
+        ],
+        "files": {
+          "delta/encoding_inventory.json": {
+            "bytes": 13128,
+            "sha256": "424bc03f9e03f52d81bd4377bdd21ac8268fff626a3920ab55cd29cc9d3d994b"
+          },
+          "delta/input_members.json": {
+            "bytes": 1284,
+            "sha256": "a0b1e51614690b2508b8c851def01bc22bc6d2164e50fc7b9d3b919a4bc896dc"
+          },
+          "delta/conditions.json": {
+            "bytes": 679470,
+            "sha256": "1870643168ebb05389f3d2b263584a133df3ba652c6dc05e0640f71fd970bf0e"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 28160,
+            "sha256": "688ce112f82f8728c9eb3448b295bf3ad083c4579ee8fe35b6996fa91b90d020"
+          },
+          "delta/report.json": {
+            "bytes": 1282,
+            "sha256": "6fd040632d94c84fee580972efcc3c975d934ba120c21a9fcd058266068aba64"
+          },
+          "delta/run_start.json": {
+            "bytes": 10007,
+            "sha256": "5ae21c73c46ada5e2aff4e9d10cecbc88d0314fbfbbdbba843e7b81ec169ece3"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123236,
+            "sha256": "f848254ae34099923864f835e5b4dee6abb439343bccb76a96541c1b9bc1d911"
+          },
+          "delta_audit.json": {
+            "bytes": 434,
+            "sha256": "bbc3a31e4aea4f6c64807264873debf1efc0a626f8028b16d2c828d2cd3998fd"
+          }
+        }
+      },
+      {
+        "block": "transfer/cloud",
+        "artifact": {
+          "id": 12719455625,
+          "name": "delta-storage-transfer-cloud",
+          "size_in_bytes": 5000762,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12719455625",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12719455625/zip",
+          "expired": false,
+          "created_at": "2026-10-27T08:11:04Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T08:11:04Z",
+          "digest": "sha256:d62992695f9ebe1bfdf895373016236528fd018bbdec70c37d7e948d1007521d",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-transfer-cloud.zip.part000",
+            "bytes": 2097152,
+            "sha256": "2cac795aea900c81977a688f6c87c942c2be368b99ae0fbcda614418d5f43843"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-cloud.zip.part001",
+            "bytes": 2097152,
+            "sha256": "78298980aad174f5f285949254adb74945237e9061df77e15a85919903a8da7d"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-cloud.zip.part002",
+            "bytes": 806458,
+            "sha256": "5cdcef1df9ae0b8db1e17d6bb896ce396bcacb6039f7c630dce5ea085a7d92dd"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 28499040,
+            "sha256": "8885dce9981e65142bff8f88592c8ca305c37856a9bb86fdca98d9181a25b32d"
+          },
+          "delta/input_members.json": {
+            "bytes": 1054,
+            "sha256": "cf2a5f7052af317057422d4dcf57d98820a6f6e135ba0621d7afe80b8070efa8"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 880971,
+            "sha256": "e5659f8033a80705179a83d5ddb50140bfba39044cc297cdfc45b3cc92bb798a"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 1440799,
+            "sha256": "8f77c4f710eb9e6b782969832d7ff60eda93070d3f246ff5445bb8809ddaba5b"
+          },
+          "delta/report.json": {
+            "bytes": 1285,
+            "sha256": "43f46a61b84a830ca08b0acf8d64fda25a9500472eb454803e1ec6287afe3d76"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123214,
+            "sha256": "2628a1b848851403ed32cc53214299d0183ad0f2f51efda64e25d8611315eeff"
+          },
+          "delta/run_start.json": {
+            "bytes": 9993,
+            "sha256": "1473dcf4927aa1abfb32b564563cb17fe9306059a165887990e10c5c8552f8ce"
+          },
+          "delta_audit.json": {
+            "bytes": 423,
+            "sha256": "f77a13ac0e5ee6878d8423ef39d50e57b21fb889cfad5228ab5ad6c000b359b4"
+          }
+        }
+      },
+      {
+        "block": "transfer/letter",
+        "artifact": {
+          "id": 12717731253,
+          "name": "delta-storage-transfer-letter",
+          "size_in_bytes": 133457,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717731253",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717731253/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:34:55Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:34:55Z",
+          "digest": "sha256:c51b56cf6ba41c403e11774ff9798d2e33a7991e30985d06f26eaca1dea295ff",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-transfer-letter.zip.part000",
+            "bytes": 133457,
+            "sha256": "c51b56cf6ba41c403e11774ff9798d2e33a7991e30985d06f26eaca1dea295ff"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 9677,
+            "sha256": "4d7dcb896fde6d1c7cf3cda3467642403ac420f66e59784a5e932220aea1b0bf"
+          },
+          "delta/input_members.json": {
+            "bytes": 1046,
+            "sha256": "629dd59ceba0892c8e82ffc3275577b3d63deb5f35ab40830686c511639eef12"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 57,
+            "sha256": "135f441ad01170c35bb4f1c1f57eeb678fc7496c37dc2fa604b7732a6d82af82"
+          },
+          "delta/report.json": {
+            "bytes": 1182,
+            "sha256": "36fd5c172789d5a45cec88c71fe321176b1ef7396613bffffac3a8bd1093022d"
+          },
+          "delta/run_start.json": {
+            "bytes": 9994,
+            "sha256": "95fb2a25a4184225955b2f0d5916eefc4b29c9f489d0ff3468f88f2d000ab6e3"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123223,
+            "sha256": "0cab5c4e3c47cd46a30eedc46548df815a5284ac0897fa65cfae121eab258fe6"
+          },
+          "delta_audit.json": {
+            "bytes": 419,
+            "sha256": "c23ae5b9c5aec633762498d6ef4bed424466e555fb66959b8bb28e3fe4e38ca8"
+          }
+        }
+      },
+      {
+        "block": "transfer/retinal",
+        "artifact": {
+          "id": 12718268308,
+          "name": "delta-storage-transfer-retinal",
+          "size_in_bytes": 17998155,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12718268308",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12718268308/zip",
+          "expired": false,
+          "created_at": "2026-10-27T08:00:56Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T08:00:56Z",
+          "digest": "sha256:0742d9f93183cd67ba9e9ca83e69467d4e7c35f7e9f07d892b008e5b2369b358",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part000",
+            "bytes": 2097152,
+            "sha256": "a3856fb0c27f227bee7b4b70794280e32b9a2558c310b848813f603bf4ad3d96"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part001",
+            "bytes": 2097152,
+            "sha256": "c5051a6a44a58ee6f188dcf67c56662c8e480f9fa7d06f920725f6527d6f4b5d"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part002",
+            "bytes": 2097152,
+            "sha256": "b07f63118e21f178c3c626abf2614f4f3f93fea38744adc7e628378c836aff61"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part003",
+            "bytes": 2097152,
+            "sha256": "b49880312c216f065d7a63ce6c6485c2060016aa6ce2544332e1c4868140b6dd"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part004",
+            "bytes": 2097152,
+            "sha256": "f7265a01810972ae5e32009c5cd254f4fda016b7193759566609f167275aa7fc"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part005",
+            "bytes": 2097152,
+            "sha256": "920222c2052d76eb94ad64f7a574b58b1511f424587e7131ab0bed1b260da584"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part006",
+            "bytes": 2097152,
+            "sha256": "1f2c2f7109497e15129b21abc08e2811b049607ad0da3b58c91ebb84ebfad4fd"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part007",
+            "bytes": 2097152,
+            "sha256": "479c754d45007b704b9b717659ce3f20403cd524b6fb8b1d98cd754ff6e398fe"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-retinal.zip.part008",
+            "bytes": 1220939,
+            "sha256": "0317f9db1b94a483d27f53660f0fecd0538b4630cba1115d21ced0f76a82fad6"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 12643714,
+            "sha256": "a2c99a3b06b81875e8332b9f4a2c5ecacb8f5c6e2729c9071fba8f58b356a5bd"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 272975,
+            "sha256": "7d71c68ca7feaa57de3d8f8e82ef3d148c9efe8b5f3c1d0605b37c4c4f79ec73"
+          },
+          "delta/input_members.json": {
+            "bytes": 1054,
+            "sha256": "261483ca2a1d077df7d09805a17a1d41f88ed6f1c92450e1f1b8fbe3e88abd93"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 17145327,
+            "sha256": "ad4d415c8fd047e3719d222131878e8f7cc8bff976e193c18f9ea11cd8c0d190"
+          },
+          "delta/report.json": {
+            "bytes": 1287,
+            "sha256": "710260ba4a63cd25a80673fa2b310eec541132da76d72005f22657f7be0c9795"
+          },
+          "delta/run_start.json": {
+            "bytes": 9995,
+            "sha256": "fba3fdb09af1ac5876e117964f41c1026c46e4696d6ee1f6fa6abcd192866688"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123194,
+            "sha256": "7274e2cd8e2866e66b84c3020209d3550e7c3578dbb9f0a0d004c5f8936e36b7"
+          },
+          "delta_audit.json": {
+            "bytes": 427,
+            "sha256": "133713b5da178fe6b5bf0222f365c61bcfb4c7bde1a8fa2c1c4ffac08ff7a96c"
+          }
+        }
+      },
+      {
+        "block": "transfer/scientific",
+        "artifact": {
+          "id": 12717877696,
+          "name": "delta-storage-transfer-scientific",
+          "size_in_bytes": 2309767,
+          "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717877696",
+          "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12717877696/zip",
+          "expired": false,
+          "created_at": "2026-10-27T07:52:12Z",
+          "expires_at": "2027-01-25T07:32:19Z",
+          "updated_at": "2026-10-27T07:52:12Z",
+          "digest": "sha256:7eba33420aba00c427cce0027b467cb3cbb405303eb3ad93dd6e776fba978677",
+          "workflow_run": {
+            "id": 40467717174,
+            "repository_id": 1403005739,
+            "head_repository_id": 1403005739,
+            "head_branch": "research/scientific-validation-oct15",
+            "head_sha": "f16aa4709937d30144421024d11b442f03835479"
+          }
+        },
+        "parts": [
+          {
+            "path": "artifacts/final/delta-storage-transfer-scientific.zip.part000",
+            "bytes": 2097152,
+            "sha256": "ec0a5a797249805aff8156175295a02547834e7bef4c4771129cce6cdacdf153"
+          },
+          {
+            "path": "artifacts/final/delta-storage-transfer-scientific.zip.part001",
+            "bytes": 212615,
+            "sha256": "88a8e657847cbffd1c930ee66f3fc6912e9f03471f711ecd3816d371d155c6bb"
+          }
+        ],
+        "files": {
+          "delta/conditions.json": {
+            "bytes": 6458570,
+            "sha256": "f133369fd1e4f60d4e19139b6f43969f11b2221d97573797c6082bf01f23b46b"
+          },
+          "delta/encoding_inventory.json": {
+            "bytes": 23767,
+            "sha256": "fdbe63d6cc682d787f2fe13be2cf2715fb5bb38a9391831d572af2ca11440795"
+          },
+          "delta/input_members.json": {
+            "bytes": 1051,
+            "sha256": "efedabda5d0ffb5786a1b9ef6aaf1f159481f155b8226ab9b093ca42f663e468"
+          },
+          "delta/objects.tar.gz": {
+            "bytes": 1974344,
+            "sha256": "653bd96eaa1751a098111e9c81001130ee4a334726a80ecace2d27332677b387"
+          },
+          "delta/report.json": {
+            "bytes": 1284,
+            "sha256": "10194aace83bf01d6d7d49633b464b5747c66964d186990fb573393874f0c9e1"
+          },
+          "delta/run_start.json": {
+            "bytes": 9998,
+            "sha256": "0b463c5b4c43763bef84c420bcc5037582316abc8629d8a61fd9497d880b0835"
+          },
+          "delta/source_snapshot.tar.gz": {
+            "bytes": 123220,
+            "sha256": "adf0defc5514fb63256fb340d23b41d2ca286dc0b379b6a1daf29ee71352d087"
+          },
+          "delta_audit.json": {
+            "bytes": 428,
+            "sha256": "93df04c57a8fad7b9519b329fdbe5fb65dbe16a29459c4f8e0bfccad8d8982dd"
+          }
+        }
+      }
+    ]
+  }
+}

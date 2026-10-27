@@ -11,8 +11,10 @@ The optional lossless encoded store preserves those canonical identities while s
 The experimental [delta store](docs/DELTA_STORAGE_OCT27.md) additionally charges
 and retains the bases needed to reconstruct unchanged byte ranges across
 artifacts. It falls back to the original flat format when that complete store is
-smaller. Its full 446-condition evaluation is pending; no new aggregate result
-is claimed from the exploratory pilots.
+smaller. Its [446-condition evaluation](results/research/delta_storage_oct27/RESULTS.md)
+finds 201 smaller stores and 243 ties among 444 measurable conditions, with up
+to 39.53% less storage. The broad success gate fails, solid archives win some
+comparisons, and the same-format exact reference still ties.
 
 ## Method
 
@@ -29,6 +31,7 @@ The evidence includes the complete three-seed cloud studies published on 16 Octo
 
 | Evaluation | Measured result | Scope |
 |---|---|---|
+| Coupled delta storage (27 October) | **201 storage wins, 243 ties**, maximum **39.53%** reduction versus the previous flat optimum | All 446 conditions retained, including two unmeasured Letter cases; 22,869 selected-file decode checks. Stronger local control: 22 wins/422 ties. The 90% primary gate fails, and the same-format oracle ties. Byte-level transfer, not a new replay/timing census. |
 | Lossless encoded storage (26 October) | **71.83% median reduction** versus the raw exact frontier, at least **35.96% in all 216 conditions**; **9.80% median** versus strengthened gzip | Original hashes preserved; adaptive exact completes **504/504** requests. Same-codec manual optima still tie, and local search ties in 213/216 conditions. All 230 older transfer conditions remain visible, including Letter gaps. |
 | Complete recovery census (26 October) | At least **1.10x faster than native DVC in 864/864 configurations**; median paired speedups **1.70x CLI / 48.32x warm API** | Six datasets, four recipe families, 72 captures; **7,776/7,776** exact method trials and **54,540** file-hash checks. Every fixed stratum passes the 90% gate. Finite authored catalogue; direct executor remains near parity. |
 | Planner scaling update (26 October) | **7.82x faster** than previous RecoverML at 4,096 independent branches; **1.95x** for a wide retained frontier | Same exact optimum and checks; synthetic metadata controls. All 230 frozen conditions retain their minima; small-history timings are mostly flat and slower cases are retained. |

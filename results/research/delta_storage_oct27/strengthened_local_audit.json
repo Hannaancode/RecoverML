@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "blocks": 28,
+  "conditions": 446,
+  "complete": 444,
+  "converted_payloads_verified": 4801,
+  "proof_sha256": "43dc25162217e88b4b79ddf15d20fe06e20101dbcbca23d0a9977eaa7fb9d8f0",
+  "auditor_sha256": "7ca0081412d5a80107d999c24328b802d03a7fdadb86070295399bad335afe3c",
+  "qualification": "Post-hoc stronger byte control; previous plans and their delta conversions verified. No new model replay or timing data."
+}

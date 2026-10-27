@@ -784,3 +784,33 @@ The fresh source is 8cc20b57cb1566e6a7f0bedefa08cd7bb3e34509, run 40351032954.
 The frozen-transfer source is 8d868f92a75c910f3e33001e9715d5704a71680e, run 40353106464.
 All 28 original artifact ZIPs are preserved as checked parts, with 97458348 original bytes.
 Their source snapshots, actual encoded files, store inventories, traces and independent audits remain available after Actions artifact expiry.
+
+LOSSLESS DELTA STORAGE FOLLOW-UP (27 OCTOBER)
+
+Read docs/DELTA_STORAGE_OCT27.md and results/research/delta_storage_oct27/RESULTS.md.
+All 446 conditions are retained: 444 complete and the two original Letter availability gaps.
+The flat/delta choice is smaller in 201 conditions and ties in 243; maximum saving is 39.53%.
+The primary success gate fails. A stronger local control retains its previous best plans;
+solid archives still win some comparisons, and the same-format exact oracle still ties.
+These are byte-level transfer results, not new end-to-end replay or timing measurements.
+
+    PYTHONPATH=src python scripts/audit_delta_storage_release.py results/research/delta_storage_oct27 --output work/new_delta_audit.json --workers 2
+    PYTHONPATH=src python scripts/materialize_delta_storage.py results/research/delta_storage_oct27 --output work/new_delta_originals
+    PYTHONPATH=src python scripts/materialize_delta_storage.py results/research/delta_storage_oct27 --attempt first --output work/new_delta_first_attempt
+
+The full audit restores 56 original ZIPs across both attempts and rechecks all final objectives,
+selected-file bytes, fault-set certificates, solid controls and the stronger local control.
+Recomputing the solid compression controls can take substantial CPU time.
+The first-attempt source is bb6d79ae6e33656f98e80c055b6c6239b59becc8, run 40466699997.
+The complete corrected source is f16aa4709937d30144421024d11b442f03835479, run 40467717174.
+The two first-attempt heuristic representation failures are preserved; the entire grid was rerun.
+
+With a complete raw capture and its contract, choose the smaller certified flat/delta store:
+
+    PYTHONPATH=src python -m recoverml.delta_store create --capture FULL_CAPTURE --contract CONTRACT_JSON --output NEW_STORE
+    PYTHONPATH=src python -m recoverml.delta_store recover --store NEW_STORE --output NEW_OUTPUT --operators census
+
+Use the matching supported operator family and optionally repeat --disable for declared groups.
+Retained delta bases are paid, present files; a capture archive or ML replay is never a hidden source.
+Original target identities and strict replay environment checks remain unchanged.
+This does not assert portable model execution under arbitrary future libraries.

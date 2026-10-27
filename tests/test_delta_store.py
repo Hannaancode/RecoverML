@@ -8,10 +8,10 @@ import unittest
 
 import numpy as np
 from threadpoolctl import threadpool_limits
-from recoverml.core import Graph,Node,RestoreError,digest
+from recoverml.core import Graph,Node,RestoreError,digest,write_store
 from recoverml.encoded_store import Representation,EncodedStore
 from recoverml.delta_store import DeltaRepresentation,DeltaStore,descriptor,DELTA,HEADER,open_store
-from recoverml.capability_retention import restricted
+from recoverml.capability_retention import restricted,contract
 from recoverml.component_retention import optimize
 from recoverml.scenario_retention import optimize as reference
 from recoverml.witness import certificate
@@ -71,6 +71,16 @@ class DeltaStoreTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             store=Path(tmp)/'store';size=rep.write(selected,caps,1,store)
             expected={g.nodes[t].blob:g.archive[g.nodes[t].blob] for ts in g.targets.values() for t in ts}
+            capture=Path(tmp)/'capture';write_store(g,g.candidates,capture)
+            declared=Path(tmp)/'contract.json';declared.write_bytes(contract(caps,1))
+            cli_store=Path(tmp)/'cli_store'
+            created=subprocess.run([sys.executable,'-m','recoverml.delta_store','create','--capture',str(capture),
+                '--contract',str(declared),'--output',str(cli_store)],capture_output=True,text=True)
+            self.assertEqual(created.returncode,0,created.stderr);self.assertEqual(json.loads(created.stdout)['format'],'delta')
+            recovered=subprocess.run([sys.executable,'-m','recoverml.delta_store','recover','--store',str(cli_store),
+                '--output',str(Path(tmp)/'cli_out'),'--disable','fit'],capture_output=True,text=True)
+            self.assertEqual(recovered.returncode,0,recovered.stderr)
+            self.assertEqual(json.loads(recovered.stdout)['target_sha256'],{b:b for b in expected})
             g.archive.clear();rep.full.clear();rep.deltas.clear();rep.physical.clear()
             self.assertEqual(size,sum(p.stat().st_size for p in store.rglob('*') if p.is_file()))
             code='''

@@ -63,3 +63,20 @@ Same-codec snapshots tie all 72 broad-loss conditions. The supplied manual optim
 These facts rule out an all-baseline storage-dominance claim even though the encoded store is materially smaller than the old raw representation.
 All 230 older conditions also remain reported: 228 complete byte-level objectives, one selected-only Letter measurement and one unavailable Letter selected store.
 That transfer is not counted as new model replay, and standard compression is not claimed as a new optimization invention.
+
+## Delta storage follow-up on 27 October
+
+The [complete 446-condition follow-up](../results/research/delta_storage_oct27/RESULTS.md)
+has 444 measurable encoded objectives and the same two Letter availability gaps.
+The automatic flat/delta choice reduces storage in 201 comparisons and ties 243,
+with no regression by construction. The largest reduction is 39.53%; the median
+is zero, and the primary 10%-gain/90%-frequency gate fails in every stratum.
+
+Adding representation nodes can worsen a heuristic, so the final local control
+takes the best of its previous flat plan, that plan converted to deltas, and its
+new delta-graph plan. This disclosed post-hoc strengthening leaves 22 wins and
+422 ties. It avoids treating a heuristic regression as an implementation advance.
+The largest local gap remains about 74%, but RecoverML uses its preexisting flat
+optimum there. Same-format exact reference results tie in all 444 cases.
+Adaptive solid archives win 213 comparisons, including a nearly tenfold storage
+difference in one PCA-neighbor case. No all-baseline dominance follows.

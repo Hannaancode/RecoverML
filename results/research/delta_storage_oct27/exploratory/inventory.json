@@ -1,0 +1,42 @@
+{
+  "pilot_shared_oct27.py": {
+    "bytes": 2789,
+    "sha256": "57e3a17a9e76374ff1fe2d5807035572f66f207214fedf317465cd03b72f6e8d"
+  },
+  "pilot_shared_oct27.json": {
+    "bytes": 16789,
+    "sha256": "67e5270b4c7ad7c8ef6a2a6fe299ef2715bf21ce0bcad7780ea9276fa993d08e"
+  },
+  "pilot_shared_oct27.log": {
+    "bytes": 13136,
+    "sha256": "f86799d4dec69cedf94cb8a7b7779f37f031a37018a452cd1f362628945701e3"
+  },
+  "pilot_structured_oct27.py": {
+    "bytes": 1441,
+    "sha256": "f4ef942b4dd3d07847e83dcc99b8ba251007410f26b0e2664d938fb7f7515806"
+  },
+  "pilot_structured_oct27.json": {
+    "bytes": 7686,
+    "sha256": "1ece336d0c1b0e3268f1eb82259b542174bfee28f4c4588894a8ec2fc56ae648"
+  },
+  "pilot_structured_oct27.log": {
+    "bytes": 6275,
+    "sha256": "aaa51dfca2eede39bdd672c614387901c9af09ab95df12561862191defefef31"
+  },
+  "pilot_delta_oct27.py": {
+    "bytes": 1655,
+    "sha256": "b24081c24bd1a1749f1e4ab9a58f48b2ae2bf2a2c735c4f728a517c67969835d"
+  },
+  "pilot_delta_oct27.json": {
+    "bytes": 7634,
+    "sha256": "13ff63db96284876d4b412236d06a6820e1488d73313264c0a4eabbd3cea659b"
+  },
+  "pilot_delta_oct27_v2.log": {
+    "bytes": 6425,
+    "sha256": "51a07ef11a07d3481fb88145b4e28fd0a65c195bd4f2ccfafe663a762a1def0f"
+  },
+  "pilot_delta_oct27.log": {
+    "bytes": 5703,
+    "sha256": "981c98facb6df20f15ac057c17af3b49d98ae8038ac847d839856246a6e4efc9"
+  }
+}

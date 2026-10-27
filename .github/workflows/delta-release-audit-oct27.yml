@@ -1,0 +1,32 @@
+name: Audit every published delta-storage artifact
+on:
+  push:
+    branches: ['research/scientific-validation-oct15']
+    paths: ['.github/workflows/delta-release-audit-oct27.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-published-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e '.[paper]'
+      - run: python scripts/audit_delta_storage_release.py results/research/delta_storage_oct27 --output work/complete_delta_release_audit.json --workers 2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complete-delta-release-audit
+          path: work/complete_delta_release_audit.json
+          retention-days: 90

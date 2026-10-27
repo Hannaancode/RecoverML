@@ -1,0 +1,1040 @@
+{
+  "status": "PASS",
+  "source_commit": "f16aa4709937d30144421024d11b442f03835479",
+  "conditions": 446,
+  "statuses": {
+    "COMPLETE": 444,
+    "SELECTED_ONLY": 1,
+    "UNAVAILABLE": 1
+  },
+  "selected_payloads_verified": 22869,
+  "groups": {
+    "primary": {
+      "conditions": 216,
+      "statuses": {
+        "COMPLETE": 216
+      },
+      "production_vs_flat": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 74,
+        "ties": 142,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 7,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.2883174909106838
+      },
+      "production_vs_solid": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 123,
+        "ties": 0,
+        "losses": 93,
+        "unmeasured": 0,
+        "at_least_10_percent": 1,
+        "median_saving": 0.001141683705578711,
+        "min_saving": -8.790509962850388,
+        "max_saving": 0.11261227333496526
+      },
+      "same_format_local": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 5,
+        "ties": 211,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.01378271301824674
+      },
+      "strong_local_control": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 3,
+        "ties": 213,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.012151991358583913
+      },
+      "same_format_snapshots": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 114,
+        "ties": 102,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 104,
+        "median_saving": 0.07189536568103233,
+        "min_saving": 0.0,
+        "max_saving": 0.9614678696514969
+      },
+      "selection_gain": {
+        "denominator": 216,
+        "measured": 216,
+        "wins": 1,
+        "ties": 215,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 1,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.11138242808790666
+      }
+    },
+    "scientific": {
+      "conditions": 48,
+      "statuses": {
+        "COMPLETE": 48
+      },
+      "production_vs_flat": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 24,
+        "ties": 24,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 4,
+        "median_saving": 0.0018790100824931377,
+        "min_saving": 0.0,
+        "max_saving": 0.39525154286544184
+      },
+      "production_vs_solid": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 24,
+        "ties": 0,
+        "losses": 24,
+        "unmeasured": 0,
+        "at_least_10_percent": 4,
+        "median_saving": -0.0030905110561899596,
+        "min_saving": -0.27422978177150203,
+        "max_saving": 0.2717425171856439
+      },
+      "same_format_local": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 4,
+        "ties": 44,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.05533980582524267
+      },
+      "strong_local_control": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 4,
+        "ties": 44,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.05536284168169836
+      },
+      "same_format_snapshots": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 24,
+        "ties": 24,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 20,
+        "median_saving": 0.03885727789998,
+        "min_saving": 0.0,
+        "max_saving": 0.9626652581142784
+      },
+      "selection_gain": {
+        "denominator": 48,
+        "measured": 48,
+        "wins": 0,
+        "ties": 48,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.0
+      }
+    },
+    "cloud": {
+      "conditions": 72,
+      "statuses": {
+        "COMPLETE": 72
+      },
+      "production_vs_flat": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 56,
+        "ties": 16,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0023979974666694104,
+        "min_saving": 0.0,
+        "max_saving": 0.02157693083282919
+      },
+      "production_vs_solid": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 4,
+        "ties": 0,
+        "losses": 68,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": -0.008811166612107901,
+        "min_saving": -0.051509897413668515,
+        "max_saving": 0.00023827629911277182
+      },
+      "same_format_local": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 17,
+        "ties": 55,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 9,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.7401487125013736
+      },
+      "strong_local_control": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 15,
+        "ties": 57,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 9,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.7401633639793415
+      },
+      "same_format_snapshots": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 36,
+        "ties": 36,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 36,
+        "median_saving": 0.08869146400808553,
+        "min_saving": 0.0,
+        "max_saving": 0.7425657085991921
+      },
+      "selection_gain": {
+        "denominator": 72,
+        "measured": 72,
+        "wins": 0,
+        "ties": 72,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.0
+      }
+    },
+    "retinal": {
+      "conditions": 108,
+      "statuses": {
+        "COMPLETE": 108
+      },
+      "production_vs_flat": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 47,
+        "ties": 61,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.001881863612864798
+      },
+      "production_vs_solid": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 80,
+        "ties": 0,
+        "losses": 28,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.014575404860075136,
+        "min_saving": -0.08637961078594314,
+        "max_saving": 0.0612434743637883
+      },
+      "same_format_local": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 10,
+        "ties": 98,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 5,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.2556607649886591
+      },
+      "strong_local_control": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 0,
+        "ties": 108,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.0
+      },
+      "same_format_snapshots": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 90,
+        "ties": 18,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 90,
+        "median_saving": 0.6099054385094687,
+        "min_saving": 0.0,
+        "max_saving": 0.9709711992461952
+      },
+      "selection_gain": {
+        "denominator": 108,
+        "measured": 108,
+        "wins": 0,
+        "ties": 108,
+        "losses": 0,
+        "unmeasured": 0,
+        "at_least_10_percent": 0,
+        "median_saving": 0.0,
+        "min_saving": 0.0,
+        "max_saving": 0.0
+      }
+    },
+    "letter": {
+      "conditions": 2,
+      "statuses": {
+        "SELECTED_ONLY": 1,
+        "UNAVAILABLE": 1
+      },
+      "production_vs_flat": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      },
+      "production_vs_solid": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      },
+      "same_format_local": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      },
+      "strong_local_control": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      },
+      "same_format_snapshots": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      },
+      "selection_gain": {
+        "denominator": 2,
+        "measured": 0,
+        "wins": 0,
+        "ties": 0,
+        "losses": 0,
+        "unmeasured": 2,
+        "at_least_10_percent": 0,
+        "median_saving": null,
+        "min_saving": null,
+        "max_saving": null
+      }
+    }
+  },
+  "overall_vs_flat": {
+    "denominator": 446,
+    "measured": 444,
+    "wins": 201,
+    "ties": 243,
+    "losses": 0,
+    "unmeasured": 2,
+    "at_least_10_percent": 11,
+    "median_saving": 0.0,
+    "min_saving": 0.0,
+    "max_saving": 0.39525154286544184
+  },
+  "overall_vs_solid": {
+    "denominator": 446,
+    "measured": 444,
+    "wins": 231,
+    "ties": 0,
+    "losses": 213,
+    "unmeasured": 2,
+    "at_least_10_percent": 5,
+    "median_saving": 0.0004524050259784307,
+    "min_saving": -8.790509962850388,
+    "max_saving": 0.2717425171856439
+  },
+  "same_format_local": {
+    "denominator": 446,
+    "measured": 444,
+    "wins": 36,
+    "ties": 408,
+    "losses": 0,
+    "unmeasured": 2,
+    "at_least_10_percent": 14,
+    "median_saving": 0.0,
+    "min_saving": 0.0,
+    "max_saving": 0.7401487125013736
+  },
+  "strong_local_control": {
+    "denominator": 446,
+    "measured": 444,
+    "wins": 22,
+    "ties": 422,
+    "losses": 0,
+    "unmeasured": 2,
+    "at_least_10_percent": 9,
+    "median_saving": 0.0,
+    "min_saving": 0.0,
+    "max_saving": 0.7401633639793415
+  },
+  "same_format_oracle": {
+    "denominator": 446,
+    "ties": 444,
+    "wins": 0,
+    "losses": 0,
+    "unmeasured": 2
+  },
+  "primary_gate_passed": false,
+  "primary_gate_strata_passed": 0,
+  "primary_strata": [
+    {
+      "dataset": "breast_cancer",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "breast_cancer",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 1,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "diabetes",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 1,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 1,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "digits",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 1,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "iris",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 1,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 2,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "linnerud",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "minmax_tree",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "minmax_tree",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "minmax_tree",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "pca_neighbors",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "pca_neighbors",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "pca_neighbors",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "robust_forest",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "robust_forest",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "robust_forest",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "standard_linear",
+      "loss": "broad",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "standard_linear",
+      "loss": "intact",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    },
+    {
+      "dataset": "wine",
+      "recipe": "standard_linear",
+      "loss": "preprocessing",
+      "conditions": 3,
+      "substantial_wins": 0,
+      "passed": false
+    }
+  ],
+  "qualification": "Fixed-catalogue byte-level follow-up using original saved canonical payloads. Decode and hash every selected payload and verify every allowed fault-set certificate. No new timing measurements or full model-replay census is claimed. Report all controls, ties, losses, timeouts and missing data. Equal-format independently coded exact optimization remains an oracle control that can tie; absolute supremacy is not a possible success criterion. The eight scientific histories informed exploratory pilots and are not held-out validation."
+}
