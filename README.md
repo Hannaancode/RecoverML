@@ -8,6 +8,12 @@ Time travel here means exact recovery of protected historical artifacts, includi
 
 The optional lossless encoded store preserves those canonical identities while selecting by actual encoded file lengths. It supports verified retained-file export and replay without a plaintext mirror.
 
+The experimental [delta store](docs/DELTA_STORAGE_OCT27.md) additionally charges
+and retains the bases needed to reconstruct unchanged byte ranges across
+artifacts. It falls back to the original flat format when that complete store is
+smaller. Its full 446-condition evaluation is pending; no new aggregate result
+is claimed from the exploratory pilots.
+
 ## Method
 
 1. **Capture:** record operations, inputs, parameters, implementation identities and output files, counting identical physical contents once.

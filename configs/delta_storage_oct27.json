@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "source_release_commit": "0d254723a82b56406d3b63aac186275f4bb14e0f",
+  "primary_conditions": 216,
+  "transfer_conditions": {"scientific": 48, "cloud": 72, "retinal": 108, "letter": 2},
+  "minimum_overlap_bytes": 128,
+  "base_rule": "For each non-root artifact, consider candidates preceding it in (canonical size, SHA) order. Choose the greatest equal-prefix plus nonoverlapping equal-suffix total; break ties by base SHA. Keep the single delta only if its complete file, including its 89-byte header, is smaller than the saved adaptive full encoding.",
+  "solver_time_limit_s": 120,
+  "methods": ["flat_exact", "delta_exact", "delta_local", "delta_snapshots", "delta_flat_choice", "solid_archive_control"],
+  "production_choice": "Minimum actual complete-store bytes of certified delta and saved certified flat optimum; retain the flat format on ties. Include mandatory roots and all metadata. No regression in available storage bytes by construction, not a claim of strict improvement.",
+  "solid_archive_control": "Apply the previous adaptive raw/zlib9/XZ6/gzip9 and reversible byte shuffle to a canonical length-indexed concatenation of the original flat-optimum canonical files. Evaluate metadata inside and outside the packed stream and keep the smaller actual standalone container. This byte-only control has no per-file random-access claim.",
+  "primary_success_gate": {"minimum_saving_over_flat_exact": 0.1, "minimum_fraction_each_primary_dataset_recipe_loss": 0.9},
+  "unavailable_rule": "Keep both Letter conditions. Do not infer a new optimum from its selected-only payload set or fill missing payloads with a surrogate. Count unavailable and uncertified conditions as nonwins in the full denominator.",
+  "qualification": "Fixed-catalogue byte-level follow-up using original saved canonical payloads. Decode and hash every selected payload and verify every allowed fault-set certificate. No new timing measurements or full model-replay census is claimed. Report all controls, ties, losses, timeouts and missing data. Equal-format independently coded exact optimization remains an oracle control that can tie; absolute supremacy is not a possible success criterion. The eight scientific histories informed exploratory pilots and are not held-out validation."
+}

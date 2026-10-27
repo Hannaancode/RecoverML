@@ -148,11 +148,12 @@ def parse_metadata(encoded):
 
 
 class EncodedStore:
+    FORMAT='lossless-per-file-v1'
     def __init__(self,path):
         self.path=Path(path).resolve()
         if (self.path/'metadata.rml').is_symlink():raise RestoreError('Encoded metadata must be a regular retained file')
         record=parse_metadata((self.path/'metadata.rml').read_bytes())
-        if record['schema']!=1 or record['format']!='lossless-per-file-v1' or record['graph']['schema']!=1:
+        if record['schema']!=1 or record['format']!=self.FORMAT or record['graph']['schema']!=1:
             raise RestoreError('Unsupported encoded store schema or policy')
         m=record['graph'];self.graph=Graph(env=m['environment'])
         self.graph.nodes={n['id']:Node(**n) for n in m['nodes']}
