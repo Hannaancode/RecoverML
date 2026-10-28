@@ -1,0 +1,784 @@
+{
+  "conditions": 446,
+  "statuses": {
+    "COMPLETE": 444,
+    "SELECTED_ONLY": 1,
+    "UNAVAILABLE": 1
+  },
+  "comparisons": {
+    "previous_flat": {
+      "wins": 244,
+      "ties": 200,
+      "losses": 0,
+      "unmeasured": 2,
+      "at_least_ten_percent": 52,
+      "median_saving": 0.0009412604915528533,
+      "maximum": {
+        "case": "digits/pca_neighbors/v16/broad",
+        "block": "primary/digits/pca_neighbors",
+        "production_bytes": 148050,
+        "comparison_bytes": 1457715,
+        "saving": 0.8984369372613988
+      }
+    },
+    "previous_delta": {
+      "wins": 214,
+      "ties": 230,
+      "losses": 0,
+      "unmeasured": 2,
+      "at_least_ten_percent": 47,
+      "median_saving": 0.0,
+      "maximum": {
+        "case": "digits/pca_neighbors/v16/broad",
+        "block": "primary/digits/pca_neighbors",
+        "production_bytes": 148050,
+        "comparison_bytes": 1449485,
+        "saving": 0.8978602745112919
+      }
+    },
+    "solid_control": {
+      "wins": 233,
+      "ties": 211,
+      "losses": 0,
+      "unmeasured": 2,
+      "at_least_ten_percent": 5,
+      "median_saving": 0.0005584420436978155,
+      "maximum": {
+        "case": "digits/minmax_tree/v16/preprocessing",
+        "block": "primary/digits/minmax_tree",
+        "production_bytes": 68070,
+        "comparison_bytes": 106214,
+        "saving": 0.3591240326134031
+      }
+    },
+    "equal_format_local": {
+      "wins": 20,
+      "ties": 424,
+      "losses": 0,
+      "unmeasured": 2,
+      "at_least_ten_percent": 9,
+      "median_saving": 0.0,
+      "maximum": {
+        "case": "shared/wine-s20261016-v64-concat0",
+        "block": "transfer/cloud",
+        "production_bytes": 35242,
+        "comparison_bytes": 118126,
+        "saving": 0.701657552105379
+      }
+    }
+  },
+  "groups": {
+    "primary": {
+      "conditions": 216,
+      "comparisons": {
+        "previous_flat": {
+          "wins": 98,
+          "ties": 118,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 44,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "digits/pca_neighbors/v16/broad",
+            "block": "primary/digits/pca_neighbors",
+            "production_bytes": 148050,
+            "comparison_bytes": 1457715,
+            "saving": 0.8984369372613988
+          }
+        },
+        "previous_delta": {
+          "wins": 94,
+          "ties": 122,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 43,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "digits/pca_neighbors/v16/broad",
+            "block": "primary/digits/pca_neighbors",
+            "production_bytes": 148050,
+            "comparison_bytes": 1449485,
+            "saving": 0.8978602745112919
+          }
+        },
+        "solid_control": {
+          "wins": 123,
+          "ties": 93,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 1,
+          "median_saving": 0.001141683705578711,
+          "maximum": {
+            "case": "digits/minmax_tree/v16/preprocessing",
+            "block": "primary/digits/minmax_tree",
+            "production_bytes": 68070,
+            "comparison_bytes": 106214,
+            "saving": 0.3591240326134031
+          }
+        },
+        "equal_format_local": {
+          "wins": 3,
+          "ties": 213,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "digits/robust_forest/v4/preprocessing",
+            "block": "primary/digits/robust_forest",
+            "production_bytes": 113401,
+            "comparison_bytes": 114506,
+            "saving": 0.009650149337152691
+          }
+        }
+      }
+    },
+    "scientific": {
+      "conditions": 48,
+      "comparisons": {
+        "previous_flat": {
+          "wins": 28,
+          "ties": 20,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 8,
+          "median_saving": 0.013986068899220438,
+          "maximum": {
+            "case": "digits_forest-101-broad-k1",
+            "block": "transfer/scientific",
+            "production_bytes": 1357471,
+            "comparison_bytes": 2244687,
+            "saving": 0.39525154286544184
+          }
+        },
+        "previous_delta": {
+          "wins": 24,
+          "ties": 24,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 4,
+          "median_saving": 0.0033744131455398785,
+          "maximum": {
+            "case": "iris_union-211-broad-k1",
+            "block": "transfer/scientific",
+            "production_bytes": 6232,
+            "comparison_bytes": 7941,
+            "saving": 0.21521218990051627
+          }
+        },
+        "solid_control": {
+          "wins": 24,
+          "ties": 24,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 4,
+          "median_saving": 0.00030683015503607525,
+          "maximum": {
+            "case": "digits_forest-211-broad-k1",
+            "block": "transfer/scientific",
+            "production_bytes": 1346283,
+            "comparison_bytes": 1848636,
+            "saving": 0.2717425171856439
+          }
+        },
+        "equal_format_local": {
+          "wins": 4,
+          "ties": 44,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "iris_union-101-preprocessing-k1",
+            "block": "transfer/scientific",
+            "production_bytes": 6746,
+            "comparison_bytes": 6990,
+            "saving": 0.03490701001430618
+          }
+        }
+      }
+    },
+    "cloud": {
+      "conditions": 72,
+      "comparisons": {
+        "previous_flat": {
+          "wins": 70,
+          "ties": 2,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.01234215138982947,
+          "maximum": {
+            "case": "separate/wine-s20261017-v4-concat0",
+            "block": "transfer/cloud",
+            "production_bytes": 13842,
+            "comparison_bytes": 14872,
+            "saving": 0.06925766541151157
+          }
+        },
+        "previous_delta": {
+          "wins": 68,
+          "ties": 4,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.008734208049542724,
+          "maximum": {
+            "case": "separate/wine-s20261017-v4-concat0",
+            "block": "transfer/cloud",
+            "production_bytes": 13842,
+            "comparison_bytes": 14555,
+            "saving": 0.04898660254208176
+          }
+        },
+        "solid_control": {
+          "wins": 6,
+          "ties": 66,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "separate/wine-s20261017-v16-concat1",
+            "block": "transfer/cloud",
+            "production_bytes": 21541,
+            "comparison_bytes": 21565,
+            "saving": 0.0011129144447020733
+          }
+        },
+        "equal_format_local": {
+          "wins": 13,
+          "ties": 59,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 9,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "shared/wine-s20261016-v64-concat0",
+            "block": "transfer/cloud",
+            "production_bytes": 35242,
+            "comparison_bytes": 118126,
+            "saving": 0.701657552105379
+          }
+        }
+      }
+    },
+    "retinal": {
+      "conditions": 108,
+      "comparisons": {
+        "previous_flat": {
+          "wins": 48,
+          "ties": 60,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "forest_s29_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+            "block": "transfer/retinal",
+            "production_bytes": 2187588,
+            "comparison_bytes": 2378448,
+            "saving": 0.08024560553772886
+          }
+        },
+        "previous_delta": {
+          "wins": 28,
+          "ties": 80,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "forest_s29_v16__model_prediction__training_prediction_removed__RecoverML_exact",
+            "block": "transfer/retinal",
+            "production_bytes": 2187588,
+            "comparison_bytes": 2376551,
+            "saving": 0.07951144326378856
+          }
+        },
+        "solid_control": {
+          "wins": 80,
+          "ties": 28,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.014575404860075136,
+          "maximum": {
+            "case": "logistic_s17_v2__investigation_features__training_prediction_removed__RecoverML_exact",
+            "block": "transfer/retinal",
+            "production_bytes": 387514,
+            "comparison_bytes": 412795,
+            "saving": 0.0612434743637883
+          }
+        },
+        "equal_format_local": {
+          "wins": 0,
+          "ties": 108,
+          "losses": 0,
+          "unmeasured": 0,
+          "at_least_ten_percent": 0,
+          "median_saving": 0.0,
+          "maximum": {
+            "case": "logistic_s3_v2__model_prediction__intact__RecoverML_exact",
+            "block": "transfer/retinal",
+            "production_bytes": 157127,
+            "comparison_bytes": 157127,
+            "saving": 0.0
+          }
+        }
+      }
+    },
+    "letter": {
+      "conditions": 2,
+      "comparisons": {
+        "previous_flat": {
+          "wins": 0,
+          "ties": 0,
+          "losses": 0,
+          "unmeasured": 2,
+          "at_least_ten_percent": 0,
+          "median_saving": null,
+          "maximum": null
+        },
+        "previous_delta": {
+          "wins": 0,
+          "ties": 0,
+          "losses": 0,
+          "unmeasured": 2,
+          "at_least_ten_percent": 0,
+          "median_saving": null,
+          "maximum": null
+        },
+        "solid_control": {
+          "wins": 0,
+          "ties": 0,
+          "losses": 0,
+          "unmeasured": 2,
+          "at_least_ten_percent": 0,
+          "median_saving": null,
+          "maximum": null
+        },
+        "equal_format_local": {
+          "wins": 0,
+          "ties": 0,
+          "losses": 0,
+          "unmeasured": 2,
+          "at_least_ten_percent": 0,
+          "median_saving": null,
+          "maximum": null
+        }
+      }
+    }
+  },
+  "formats": {
+    "flat": 200,
+    "solid-delta-local": 192,
+    "delta": 30,
+    "solid-flat": 22
+  },
+  "original_three_candidate_vs_equal_format_local": {
+    "wins": 20,
+    "ties": 421,
+    "losses": 3,
+    "unmeasured": 2,
+    "at_least_ten_percent": 9,
+    "median_saving": 0.0,
+    "maximum": {
+      "case": "shared/wine-s20261016-v64-concat0",
+      "block": "transfer/cloud",
+      "production_bytes": 35242,
+      "comparison_bytes": 118126,
+      "saving": 0.701657552105379
+    }
+  },
+  "corrected_cases": [
+    {
+      "case": "digits/minmax_tree/v16/preprocessing",
+      "block": "primary/digits/minmax_tree",
+      "before": 94253,
+      "after": 68070,
+      "selected_format": "solid-delta-local"
+    },
+    {
+      "case": "separate/wine-s20261017-v16-concat1",
+      "block": "transfer/cloud",
+      "before": 21565,
+      "after": 21541,
+      "selected_format": "solid-delta-local"
+    },
+    {
+      "case": "separate/wine-s20261017-v64-concat1",
+      "block": "transfer/cloud",
+      "before": 35113,
+      "after": 35089,
+      "selected_format": "solid-delta-local"
+    }
+  ],
+  "selected_file_hash_checks": 5061,
+  "recorded_retained_target_exports_reconciled": 3531,
+  "primary_strata": {
+    "breast_cancer/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "breast_cancer/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "breast_cancer/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "breast_cancer/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "breast_cancer/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "breast_cancer/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "diabetes/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "diabetes/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "diabetes/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "diabetes/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "diabetes/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "diabetes/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "digits/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "digits/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "digits/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "digits/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "digits/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "iris/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "iris/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "iris/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "iris/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "iris/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "linnerud/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "linnerud/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "linnerud/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "linnerud/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "linnerud/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/minmax_tree/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "wine/minmax_tree/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/minmax_tree/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    },
+    "wine/pca_neighbors/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "wine/pca_neighbors/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/pca_neighbors/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/robust_forest/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "wine/robust_forest/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/robust_forest/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/standard_linear/broad": {
+      "conditions": 3,
+      "at_least_ten_percent": 2,
+      "passed": false
+    },
+    "wine/standard_linear/intact": {
+      "conditions": 3,
+      "at_least_ten_percent": 0,
+      "passed": false
+    },
+    "wine/standard_linear/preprocessing": {
+      "conditions": 3,
+      "at_least_ten_percent": 1,
+      "passed": false
+    }
+  },
+  "primary_strata_passed": 0,
+  "primary_gate_passed": false,
+  "qualification": "Post-hoc five-candidate storage choice on the entire reused catalogue; all three original equal-format local losses preserved. Repeated artifacts/conditions are not independent production samples. No new full-grid ML replay, timing, memory benchmark, or joint-compression optimum."
+}

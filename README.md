@@ -16,6 +16,14 @@ finds 201 smaller stores and 243 ties among 444 measurable conditions, with up
 to 39.53% less storage. The broad success gate fails, solid archives win some
 comparisons, and the same-format exact reference still ties.
 
+The [executable joint-compression follow-up](results/research/solid_storage_oct27/RESULTS.md)
+adds solid stores and includes both local-search plans in its automatic choice.
+It lowers the previous flat optimum in 244/444 measurable conditions, by up to
+89.84%, with a 0.094% median reduction. Equal-format local search still ties in
+424/444 cases. The original three losses and their correction are preserved;
+the broad success gate still fails. Solid recovery decodes the whole archive
+in memory and uses temporary retained files when replay is required.
+
 ## Method
 
 1. **Capture:** record operations, inputs, parameters, implementation identities and output files, counting identical physical contents once.
@@ -31,6 +39,7 @@ The evidence includes the complete three-seed cloud studies published on 16 Octo
 
 | Evaluation | Measured result | Scope |
 |---|---|---|
+| Executable joint compression (27-28 October) | **244 smaller stores, 200 ties**, maximum **89.84%** reduction versus the previous flat optimum | All 446 conditions; equal-format local control: 20 wins/424 ties. Median flat saving is 0.094%; no broad superiority. All three original candidate-selection losses are preserved and corrected by including local plans. No new timing claim. |
 | Coupled delta storage (27 October) | **201 storage wins, 243 ties**, maximum **39.53%** reduction versus the previous flat optimum | All 446 conditions retained, including two unmeasured Letter cases; 22,869 selected-file decode checks. Stronger local control: 22 wins/422 ties. The 90% primary gate fails, and the same-format oracle ties. Byte-level transfer, not a new replay/timing census. |
 | Lossless encoded storage (26 October) | **71.83% median reduction** versus the raw exact frontier, at least **35.96% in all 216 conditions**; **9.80% median** versus strengthened gzip | Original hashes preserved; adaptive exact completes **504/504** requests. Same-codec manual optima still tie, and local search ties in 213/216 conditions. All 230 older transfer conditions remain visible, including Letter gaps. |
 | Complete recovery census (26 October) | At least **1.10x faster than native DVC in 864/864 configurations**; median paired speedups **1.70x CLI / 48.32x warm API** | Six datasets, four recipe families, 72 captures; **7,776/7,776** exact method trials and **54,540** file-hash checks. Every fixed stratum passes the 90% gate. Finite authored catalogue; direct executor remains near parity. |

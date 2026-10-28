@@ -117,3 +117,20 @@ and solid archives win 213 comparisons. Only one measured condition benefits
 from changing the old exact retained set after enabling deltas. These boundaries
 must accompany any new headline. The transfer checks canonical bytes and
 conditional reachability; it does not add a full model-replay or latency census.
+
+## Executable joint-compression follow-up, 27-28 October
+
+The [solid-store follow-up](../results/research/solid_storage_oct27/RESULTS.md)
+makes the earlier archive control executable with canonical-hash checks and
+guarded replay. A five-candidate choice includes flat/delta optima and joint
+compression of the flat-optimum and two local-search plans. This closes the
+three storage losses revealed by offering local search the same encodings;
+the original losses and the post-hoc correction remain published.
+
+The 89.84% maximum reduction over the previous flat optimum is a specific
+encoding benefit. The complete grid has a 0.094% median saving, 20 wins and
+424 ties against equal-format local search, and a failed broad gate in all
+72 primary strata. Established joint compression and heuristic fallback
+strengthen the system, not a claim of a new optimizer or global compression
+optimum. Whole-archive decoding and temporary replay files introduce costs;
+no new speed or memory superiority is claimed.

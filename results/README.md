@@ -114,3 +114,12 @@ Full generated capture archives and working policy stores are excluded from the 
 The complete small replay example is kept in examples/captured_history and fresh histories can be regenerated
 
 Moving the experiment folders changes their paths and does not change their timestamps or measured values
+
+## Joint-compression follow-up
+
+The [complete solid-store results](research/solid_storage_oct27/RESULTS.md)
+preserve all 28 original cloud data artifacts, the 446-condition denominator,
+the three initial equal-format local losses and their disclosed correction.
+The corrected choice has 244 storage wins/200 ties against the previous flat
+optimum and 20 wins/424 ties against the equal-format local control. The broad
+success gate remains unmet; no new speed claim is made.

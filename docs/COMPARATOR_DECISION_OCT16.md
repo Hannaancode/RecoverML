@@ -80,3 +80,14 @@ The largest local gap remains about 74%, but RecoverML uses its preexisting flat
 optimum there. Same-format exact reference results tie in all 444 cases.
 Adaptive solid archives win 213 comparisons, including a nearly tenfold storage
 difference in one PCA-neighbor case. No all-baseline dominance follows.
+
+## Joint-compression control update, 28 October 2026
+
+The complete [solid-store comparison](../results/research/solid_storage_oct27/RESULTS.md)
+offers joint compression to both prior flat local search and fresh delta-graph
+local search. The initial three-candidate production choice lost three cases;
+the corrected five-candidate choice includes those heuristic plans and leaves
+20 strict wins, 424 ties and two unmeasured objectives. Including a comparator
+as a fallback is a disclosed engineering choice, not independent proof that
+a new algorithm beats that comparator. A global joint-compression optimum and
+new latency/memory advantages are not established.

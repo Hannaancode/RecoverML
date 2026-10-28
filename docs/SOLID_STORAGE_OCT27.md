@@ -57,8 +57,8 @@ and unavailable condition must remain in the final report.
 The initial three-candidate production choice lost three comparisons against
 this broader local control. Those original results are preserved. A disclosed
 post-hoc correction includes both local selections in the five-candidate
-production choice. The complete independent audit is checking that its online
-selectors reproduce the saved plans across the measurable grid. Joint compression changes the
+production choice. The complete independent audit reproduced both online
+selectors across all 444 measurable conditions. Joint compression changes the
 selection objective; this is not a global joint-compression optimum. The exact
 reference cannot be strictly beaten under identical candidate rules.
 
@@ -71,8 +71,10 @@ for the existing flat/delta stores. A nine-condition PCA pilot reproduced
 the original solid-control inventories. All 29 source-pinned cloud jobs and
 three CI jobs passed. The follow-up tests also reject forged source inventories,
 altered result totals and damaged original ZIPs. The [original data artifacts](../results/research/solid_storage_oct27/artifact_manifest.json)
-preserve all original losses and the full denominator. Independent full-grid
-verification and final aggregate publication remain pending. No overall
+preserve all original losses and the full denominator. The
+[full audit](../results/research/solid_storage_oct27/audit_results.json.gz)
+passed on all 446 records; its [complete report](../results/research/solid_storage_oct27/RESULTS.md)
+keeps the failed broad gate and all ties visible. No overall
 superiority claim is justified. Recomputing both heuristic candidates adds
 planning and compression work; earlier planning speedups do not automatically
 apply to this choice.

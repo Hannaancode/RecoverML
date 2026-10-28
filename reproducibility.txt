@@ -814,3 +814,16 @@ Use the matching supported operator family and optionally repeat --disable for d
 Retained delta bases are paid, present files; a capture archive or ML replay is never a hidden source.
 Original target identities and strict replay environment checks remain unchanged.
 This does not assert portable model execution under arbitrary future libraries.
+EXECUTABLE JOINT-COMPRESSION FOLLOW-UP (27-28 OCTOBER 2026)
+See docs/SOLID_STORAGE_OCT27.md and results/research/solid_storage_oct27/RESULTS.md.
+Rebuild and independently check all original solid-study artifacts and all 446 conditions:
+  PYTHONPATH=src OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/audit_solid_storage_release.py results/research/solid_storage_oct27 --output work/new_solid_release_audit.json --workers 2
+Use a fresh output path. This verifies saved canonical bytes and loss certificates;
+it is not a fresh full-grid ML-replay or timing experiment. The original three
+losses and the post-hoc five-candidate correction are both retained.
+To create a store from a supported complete capture:
+  PYTHONPATH=src python -m recoverml.solid_store create --capture CAPTURE --contract CONTRACT_JSON --output NEW_STORE
+To recover protected targets, select the appropriate supported operator family:
+  PYTHONPATH=src python -m recoverml.solid_store recover --store STORE --output NEW_OUTPUT --operators census
+The solid format decodes the whole retained archive in memory and uses temporary
+retained files for replay. No new latency or memory advantage is asserted.
