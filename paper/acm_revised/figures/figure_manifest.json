@@ -1,0 +1,13 @@
+{
+  "source_commit": "27de00d96c4390e3ec5e7fd4f320d79aa8c5f51f",
+  "figures_sha256": {
+    "earlier_performance.pdf": "12402f1fa50ed5eb6c7303691157a5c49e02c43ccf41b6ec8ca62433fa5f0598",
+    "letter_storage.pdf": "f90815a1f52497c0ee1e50de9eec0f75a3f151c0a3ad75ecfefa13bf9ef6c73c",
+    "methodology.pdf": "e65ba1752d40898c09a7fe340b1d00fa1410f41c8ddfb59a1d1e01cadf83a55a",
+    "native_recovery.pdf": "0d3632508df690af09dd2067f37b074ab48bcc5f84f188320385294f31f1aa4e",
+    "planner_timing.pdf": "c6c91545ce8170cd5882fb7170da370c30683104252f4e10c29944e98f1b37a2",
+    "retinal_storage.pdf": "faef7141719fedce57dc6032a416a0cc5374a96d9d9b043c80ec4616c65b3570",
+    "shared_storage.pdf": "0c5501281f49bcc82f154f74bb2a32b742cd1f10ae2fdec54baeda132cefbb32"
+  },
+  "measurements": "All values read from recorded evidence; no timing or payload experiment rerun"
+}
