@@ -26,8 +26,9 @@ Run from this directory with Tectonic 0.17.0:
 tectonic RecoverML_paper_revised.tex --outdir ../../output/pdf
 ```
 
-The build completed locally and produced a 13-page PDF. The title page, new
-storage results, DVC census, figures and references were rendered and inspected.
+The build completed locally and produced a 13-page PDF. The title page,
+published-rule comparison, new storage results, DVC census, figures and
+references were rendered and inspected.
 The PDF was also checked for text extraction and unresolved citation markers.
 Some TeX underfull box warnings remain in the narrow two-column layout;
 the final inspected pages have no clipped content.
@@ -50,6 +51,8 @@ contains the real commit dates; a paper revision cannot create earlier work.
 The actual course screenshots were not included in this source package, so
 this crosswalk uses the saved rubric audit rather than claiming a grade.
 
+The 56-case published-rule comparison is recorded in
+`results/research/paper_oct14/extension_analysis/measured_extensions.md`.
 The main new storage record is `results/research/solid_storage_oct27/RESULTS.md`
 at source commit `efae825be13ffe487b915a4580cdc16b4c5e95c6`. The broad DVC
 recovery record is `results/research/recovery_census_oct26/RESULTS.md`.

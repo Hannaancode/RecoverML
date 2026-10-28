@@ -59,7 +59,7 @@
   title = {{ExoFlow}: A Universal Workflow System for Exactly-Once {DAGs}},
   booktitle = {Proceedings of the USENIX Symposium on Operating Systems Design and Implementation},
   year = {2023}, pages = {269--286}, publisher = {USENIX Association},
-  address = {Boston, MA, USA}, url = {https://www.usenix.org/conference/osdi23/presentation/zhuang}
+  address = {Boston, MA, USA}, note = {\href{https://www.usenix.org/conference/osdi23/presentation/zhuang}{USENIX paper}}
 }
 @misc{derivaml,
   author = {Li, Zhiwei and Kesselman, Carl and Nguyen, Tran Huy and Xu, Benjamin Yixing and Bolo, Kyle and Yu, Kimberley},
@@ -162,7 +162,7 @@
 \begin{document}
 
 \begin{abstract}
-Machine learning experiments leave related versions of data, models and predictions, and recovering an old result may require a processing step that no longer works. RecoverML selects one shared set of files under a declared recovery contract and checks restored bytes against captured hashes. Its exact planners certify the minimum for the stated physical retention model. In a 36-history shared preprocessing study, RecoverML stores less than strong local search in nine cases and ties in 27, while a manual best frontier ties every minimum. We later added exact delta encoding and joint compression. Across 446 related storage conditions, the final five-candidate choice improves on the previous flat optimum in 244 of 444 measurable cases and ties in 200, with a largest reduction of 89.84\%. Against local search with the same offered formats, it wins 20, ties 424 and loses none; two Letter conditions remain unmeasured. The median saving against that local control is zero, and an equal-format exact reference still matches the certified minimum. A separate native DVC recovery census gives both methods the same optimal retained payloads and finds a median paired elapsed-time advantage for RecoverML in all 864 tested configurations. The advantage concerns the measured DVC integration because a direct executor is near parity. These results support a checked historical recovery system with specific storage and orchestration gains rather than a new general optimization or compression algorithm.
+Machine learning experiments leave related versions of data, models and predictions, and recovering an old result may require a processing step that no longer works. RecoverML selects one shared set of files under a declared recovery contract and checks restored bytes against captured hashes. Its exact planners certify the minimum for the stated physical retention model. In a 56-case decision-rule study at a common robust storage limit, RecoverML restores all 3,344 requests; the tested HYPPO rank and frequency components restore 2,240 and 2,291, and the best tested HELIX rule setting restores 1,940. We later added exact delta encoding and joint compression. Across 446 related storage conditions, the final five-candidate choice improves on the previous flat optimum in 244 of 444 measurable cases and ties in 200, with a largest reduction of 89.84\%. Against local search with the same offered formats, it wins 20, ties 424 and loses none; two Letter conditions remain unmeasured. The median saving against that local control is zero, and an equal-format exact reference still matches the certified minimum. A separate native DVC recovery census uses the same optimal retained payloads for both methods and finds an elapsed-time advantage for RecoverML in all 864 tested configurations, while a direct executor is near parity. These results support a checked historical recovery system with specific coverage, storage and orchestration gains under the measured contracts.
 \end{abstract}
 
 \keywords{historical machine learning recovery, data provenance, artifact retention, materialization, capability loss, reproducibility}
@@ -188,6 +188,8 @@ Our evaluation separates storage selection from recovery execution and keeps str
 A separate native DVC experiment gives both systems the same optimal retained payloads and uses one batched downstream DVC stage. With three paired repetitions per history, RecoverML has a lower median elapsed time in all 36 histories and the median DVC to RecoverML elapsed time ratio is 2.19 for the 18 histories needing recomputation and 9.91 for the 18 histories whose targets are all retained. The timing includes subprocess startup and final hash verification and excludes setup and retention planning, so it measures these command line integrations rather than an inherent difference between all deployments of the two systems. Earlier mixed outcomes remain in the artifact as separate development revisions rather than additional trials.
 
 The later storage study changes how retained artifacts are represented. It offers full files, exact prefix and suffix deltas, and joint archive compression, then chooses the smallest complete store from five computed candidates. Across 446 related conditions this choice reduces bytes against the earlier flat optimum in 244 of 444 measurable comparisons, but it improves on local search with the same offered formats in only 20 and ties in 424. A broader native DVC census also measures recovery at equal optimal retained payloads over 864 configurations. We report these complete grids, including the two unmeasured Letter cases and the direct executor control, because the advantages depend on the comparator and objective.
+
+A separate published decision-rule study tests 28 histories under two loss bounds, producing 56 cases. At the same robust byte limit and with the same exact recovery executor, RecoverML restores all 3,344 requests per policy, while the tested HYPPO components and HELIX rule settings recover fewer. The adapters are disclosed and the result concerns their retention decisions under this contract rather than the complete native HYPPO or HELIX systems~\cite{artifact}.
 
 The larger Letter experiment shows another boundary: selective retention saves 3.6647 decimal GB of uncompressed canonical bytes under preprocessing loss, but the saving is 290.61 MB with the measured gzip representation and zero under broader training and prediction loss. Strong robust heuristics match the storage saving and loading snapshots is faster in that descriptive recovery run. These controls help distinguish the value of retaining fewer bytes from the separate questions of optimization difficulty and recovery speed.
 
@@ -331,6 +333,7 @@ Study & Data and model family & Captures; versions & Main comparison or control\
 \midrule
 Shared-loss study & Wine and Breast Cancer; logistic regression & 36; 4/16/64 & Three seeds, two capture boundaries, two failure groupings, nine policies\\
 Native recovery & Fresh captures of the same recipe grid & 36; 4/16/64 & RecoverML versus native batched DVC at identical paid payloads; three paired repetitions\\
+Published rules & Public tabular data; original HYPPO components and HELIX rule adapter & 28; varied & Two loss bounds give 56 cases; 3,344 requests per policy at the common robust byte limit\\
 Encoded storage & Six public datasets plus scientific, cloud and retinal transfers & 446 conditions & Previous flat and delta choices, flat joint archive and equal-format local search; two Letter cases unmeasured\\
 Recovery census & Six public datasets and four deterministic recipes & 72 captures & Three loss contracts, two request sizes and two interfaces; 864 paired configurations at equal paid payloads\\
 Scientific matrix & Iris, Digits and Diabetes; four recipes & 8; 3 each & Two seeds, two loss scopes, three bounds, five budgets, eight policies\\
@@ -358,6 +361,8 @@ The large study uses all 20,000 UCI Letter observations with 16 features and 26 
 The exact comparators solve the same complete preservation obligation. The robust greedy policy adds the best grounded coverage gain per byte, and the stronger local policy also reverse-deletes from a full store and tries exchanges that add one artifact followed by pruning. These are our implementations and the local policy allows at most two exchange passes, so a gap against it is not a claim against every local-search algorithm. Target snapshots keep protected outputs directly. A manual frontier control chooses the smallest feasible workflow-specific frontier, which tests whether expert knowledge can match automatic selection.
 
 The HYPPO rank and frequency methods use a pinned released component and HELIX uses a documented rule adapter. They share the executor and byte accounting with the retention methods but preserve their reuse-oriented selection criteria. In the new cloud grid these adapters receive the exact minimum total byte budget, whereas robust heuristics and snapshots receive the full candidate allowance when comparing complete store sizes. The scientific matrix instead gives all methods the same fixed budget at each point. Comparisons must therefore report their budget and objective rather than collapse every method into one universal ranking.
+
+The separate 56-case published-rule matrix gives the HYPPO rank and frequency functions and all six tested HELIX settings the same robust byte limit as RecoverML. The HYPPO functions execute the pinned released component through a disclosed physical-artifact adapter. The HELIX rows use a documented reimplementation of its streaming rule at read speeds of 50, 200 and 800 MiB/s, each with both recorded tie orders. A HELIX snapshot-budget control is reported outside the common-limit comparison. All policies use the same grounded recovery executor; the study compares retention decisions, not native full-system runtime~\cite{artifact}.
 
 The native DVC study uses DVC 3.67.1 and gives it the certified optimal retained payloads without charging selection time. One downstream batch stage avoids a separate Python startup for every model, and correctly retained target cache objects can let DVC skip that stage. Before each trial both methods have the same paid physical payloads and no unpaid downstream cache objects, with distinct-inode byte checks and hard links used for common retained files. DVC configuration is recorded separately from the common payload objective. Both authored workers can use the exact file-export helper.
 
@@ -412,6 +417,33 @@ Both standardized views can be required together to replace many models and pred
 \subsection{Coverage and the meaning of a complete contract}
 
 At the cloud grid's exact minimum budget RecoverML is complete in 36/36 histories per loss grouping, compared with 18/36 for HYPPO rank and 21/36 for frequency and 15/36 for the HELIX rule. The robust full store controls remain feasible but can retain more bytes. Across physically unique cloud requests there are 16,110 exact results and 3,542 expected blocks out of 19,652, with zero unexpected outcomes. RecoverML's attributed requests are all exact, and the blocks belong to deficient adapter stores.
+
+\subsection{Published decision rules at one robust storage limit}
+
+The 56-case matrix gives each policy 3,344 historical recovery requests and the same robust byte limit. RecoverML restores all 3,344. Table~\ref{tab:published} reports every common-limit HYPPO and HELIX setting, including both tie orders for each HELIX read speed. The best HELIX common-limit setting restores 1,940 requests and the two HYPPO components restore 2,240 and 2,291. A separate HELIX control with the larger target-snapshot budget restores 2,437 of 3,344; it is not part of the common-limit ranking~\cite{artifact}.
+
+\begin{table}[t]
+\caption{Exact recovery in the 56-case published-rule comparison. All listed policies receive the same robust byte limit and use the same executor. The HYPPO rows use released ranking components through an adapter and the HELIX rows use a reimplemented streaming rule, so these are decision-rule results.}
+\label{tab:published}
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Policy & Exact & Requested\\
+\midrule
+RecoverML & 3,344 & 3,344\\
+HYPPO rank & 2,240 & 3,344\\
+HYPPO frequency & 2,291 & 3,344\\
+HELIX 50 MiB/s, capture order & 1,940 & 3,344\\
+HELIX 50 MiB/s, reverse order & 1,940 & 3,344\\
+HELIX 200 MiB/s, capture order & 1,681 & 3,344\\
+HELIX 200 MiB/s, reverse order & 1,681 & 3,344\\
+HELIX 800 MiB/s, capture order & 1,673 & 3,344\\
+HELIX 800 MiB/s, reverse order & 1,673 & 3,344\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the lossless subset every tested method restores all 320 no-outage requests. With one disabled group RecoverML restores 960/960, while HYPPO rank and frequency restore 729/960 and 818/960, and the HELIX 50 MiB/s capture setting restores 722/960. With two disabled groups the respective counts are 480/480, 278/480, 350/480 and 271/480. The distinction appears when the declared losses occur, although the rounded-import cases can also reflect the difference between protecting old targets and selecting files for future reuse. The original HELIX and HYPPO objectives differ from this preservation contract, and their complete deployed systems were not timed here. The 28 related histories and repeated requests do not estimate how often this difference would arise in independent production workflows.
 
 The separate scientific matrix shows why complete coverage and the number of partially recovered requests should not be confused. Table~\ref{tab:scientific} reports both quantities across its fixed budgets. RecoverML and local search are complete in 128 of 240 conditions each, but local search returns more individual targets across the whole grid. The exact complete-preservation policy does not optimize partial coverage below its feasibility threshold. At full budget strong local search matches all 48 exact storage minima, so this older study does not establish a storage-choice advantage over that baseline.
 
@@ -550,7 +582,7 @@ The supplied script regenerates the original figures from pinned recorded inputs
 \FloatBarrier
 \section{Conclusion}
 
-RecoverML selects files under an explicit historical preservation contract and checks their recovery and byte identities. General exact formulations and a guarded DAG specialization support different recorded graph shapes. Shared preprocessing loss exposes storage choices missed by the tested local heuristic, while a stored shared intermediate removes that gap and manual frontiers still match the optimum. The later flat, delta and joint archive choice reduces storage against the previous flat optimum in 244 of 444 measurable conditions and against equal-format local search in 20, with 424 local ties and no measured losses after the disclosed correction. The broader native DVC census finds a consistent elapsed-time advantage at equal retained payloads, while a direct executor is near parity. These results establish selective storage and orchestration benefits within the tested contracts, and independently collected workflows remain needed to judge how often those benefits arise in practice.
+RecoverML protects captured historical artifacts under a declared capability-loss contract and checks their recovered bytes. It restores all 3,344 requests per policy in the 56-case decision-rule comparison, where the tested HYPPO components and HELIX rule settings leave some requests unrecovered at the same robust byte limit. The later five-candidate storage choice improves on the old flat optimum in 244 of 444 measurable conditions and on equal-format local search in 20, with 424 local ties. The native DVC census favors RecoverML at equal retained payloads, while a direct executor is near parity. Manual frontiers and equal-format exact controls still match the relevant minima, and independent workflows are needed to learn how often these measured gains arise in practice.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
