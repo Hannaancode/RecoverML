@@ -10,9 +10,10 @@ compression algorithm or establish a globally optimal joint-compression plan.
 ## Storage and recovery
 
 `python -m recoverml.solid_store create --capture CAPTURE --contract CONTRACT
---output STORE` compares three complete persistent stores: the adaptive flat
+--output STORE` compares five complete persistent stores: the adaptive flat
 optimum, the single-base delta optimum, and joint compression of the flat
-optimum's retained set. All metadata and retained roots count. It writes the
+optimum, flat local-search and delta-graph local-search retained sets.
+All metadata and retained roots count. It writes the
 smallest actual byte count, with the same canonical artifact hashes.
 
 Use `python -m recoverml.solid_store recover --store STORE --output OUTPUT`
@@ -53,11 +54,13 @@ its earlier flat and delta options. Comparing only against its previous
 per-file representation would overstate any advantage. Every win, tie, loss,
 and unavailable condition must remain in the final report.
 
-The three-candidate production choice is not guaranteed to beat this broader
-local control: joint compression changes the selection objective. The exact
-reference still cannot be strictly beaten under identical candidate rules.
-Broad superiority remains unestablished until the complete results say
-otherwise; successful unit tests alone do not establish it.
+The initial three-candidate production choice lost three comparisons against
+this broader local control. Those original results are preserved. A disclosed
+post-hoc correction includes both local selections in the five-candidate
+production choice. The complete independent audit is checking that its online
+selectors reproduce the saved plans across the measurable grid. Joint compression changes the
+selection objective; this is not a global joint-compression optimum. The exact
+reference cannot be strictly beaten under identical candidate rules.
 
 ## Validation status
 
@@ -65,5 +68,11 @@ The initial 12 targeted tests passed, including exact exports without ML
 imports, malformed archives, physical byte accounting, CLI selection, strict
 replay for four recipe families under three loss contracts, and regressions
 for the existing flat/delta stores. A nine-condition PCA pilot reproduced
-the original solid-control inventories. The complete source-pinned cloud
-follow-up is required before publishing final aggregate performance claims.
+the original solid-control inventories. All 29 source-pinned cloud jobs and
+three CI jobs passed. The follow-up tests also reject forged source inventories,
+altered result totals and damaged original ZIPs. The [original data artifacts](../results/research/solid_storage_oct27/artifact_manifest.json)
+preserve all original losses and the full denominator. Independent full-grid
+verification and final aggregate publication remain pending. No overall
+superiority claim is justified. Recomputing both heuristic candidates adds
+planning and compression work; earlier planning speedups do not automatically
+apply to this choice.

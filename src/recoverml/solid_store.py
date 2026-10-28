@@ -83,6 +83,7 @@ class SolidRepresentation:
         return files
 
     def write(self,selected,capabilities,k,destination):
+        selected=set(selected)
         files=self.files(selected,capabilities,k);destination=Path(destination)
         destination.mkdir(parents=True,exist_ok=False)
         for name,raw in files.items():(destination/name).write_bytes(raw)
@@ -141,6 +142,20 @@ class SolidStore(EncodedStore):
         return result
 
 
+def local_selections(flat,coupled,capabilities,k):
+    """Offer both deterministic local searches the identical encoding choices."""
+    from .robust_heuristics import select
+    from .capability_retention import retained_bytes
+    result={}
+    for name,representation,full in [('solid-flat-local',flat,flat.cost_graph.candidates),
+                                    ('solid-delta-local',coupled,set(coupled.full_tokens.values()))]:
+        view=representation.cost_graph
+        chosen,diagnostic=select(view,capabilities,k,retained_bytes(view,full,capabilities,k),True)
+        if not diagnostic['robust_certified']:raise RestoreError('Local candidate has no complete loss certificate')
+        result[name]=set(coupled.files(coupled.normalize(chosen))) if representation is coupled else set(chosen)
+    return result
+
+
 def main():
     import argparse,importlib
     from .core import Graph
@@ -168,12 +183,15 @@ def main():
         solid=SolidRepresentation(graph,payloads);flat_selected=options[0][3]
         solid_files=solid.files(flat_selected,caps,k)
         options.append((sum(map(len,solid_files.values())),'solid-flat',solid,flat_selected))
+        for candidate,selection in local_selections(flat,coupled,caps,k).items():
+            candidate_files=solid.files(selection,caps,k)
+            options.append((sum(map(len,candidate_files.values())),candidate,solid,selection))
         size,name,representation,selected=min(options,key=lambda option:(option[0],option[1]))
         actual=representation.write(selected,caps,k,args.output)
         if actual!=size:raise RestoreError('Portfolio store byte accounting differs')
         result=dict(status='PASS',format=name,store_bytes=size,
             candidate_bytes={option[1]:option[0] for option in options},
-            qualification='Smallest of the flat optimum, the single-base delta optimum, and joint compression of the flat-optimum selection. This is not a globally optimal joint-compression selector.')
+            qualification='Smallest of flat and single-base delta optima, and joint compression of the flat-optimum and two local-search selections. The local-search fallback is an established heuristic, and no globally optimal joint-compression selector or new speed advantage is claimed.')
     else:
         def execute(op,values,parameters):return importlib.import_module('recoverml.'+families[args.operators]).execute(op,values,parameters)
         result=open_store(args.store).recover(args.output,target_ids=args.target,disabled=args.disable,replay_execute=execute)

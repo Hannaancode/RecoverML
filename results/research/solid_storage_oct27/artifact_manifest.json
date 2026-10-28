@@ -1,0 +1,1456 @@
+{
+  "schema": 1,
+  "source_commit": "3b73162b8bf6e3a97d22a46d343471a0a62a445e",
+  "workflow_run_id": 40547990185,
+  "baseline_commit": "6965f41cec4444eb41e135d1f04297bab24de340",
+  "acceptance_artifact": {
+    "id": 12754335511,
+    "name": "solid-storage-acceptance",
+    "size_in_bytes": 679,
+    "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754335511",
+    "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754335511/zip",
+    "expired": false,
+    "created_at": "2026-10-27T17:11:33Z",
+    "expires_at": "2027-01-25T17:10:06Z",
+    "updated_at": "2026-10-27T17:11:33Z",
+    "digest": "sha256:787a515cc3776ad3a506650081eee40b96dec25ca6d2dddac0629d6dbb4b42f2",
+    "workflow_run": {
+      "id": 40547990185,
+      "repository_id": 1403005739,
+      "head_repository_id": 1403005739,
+      "head_branch": "research/scientific-validation-oct15",
+      "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+    }
+  },
+  "artifacts": [
+    {
+      "block": "primary/breast_cancer/minmax_tree",
+      "path": "artifacts/solid-storage-primary-breast_cancer-minmax_tree.zip",
+      "bytes": 139345,
+      "sha256": "9a5220ea88d5c4947b607cf8b84124b87ff204a26caa43a6d29f633f6dda4953",
+      "artifact": {
+        "id": 12753373016,
+        "name": "solid-storage-primary-breast_cancer-minmax_tree",
+        "size_in_bytes": 139345,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753373016",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753373016/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:46Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:46Z",
+        "digest": "sha256:9a5220ea88d5c4947b607cf8b84124b87ff204a26caa43a6d29f633f6dda4953",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 814,
+          "sha256": "5488fbcf434096b47f13a4e62672f5c2630c1348821f43ff27394c2347009989"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 152487,
+          "sha256": "e535460d302b835ff4e381fc872cf596916020c7dcd17b933af6a5d258c6aab8"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/breast_cancer/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-breast_cancer-pca_neighbors.zip",
+      "bytes": 138767,
+      "sha256": "4305bc326ac269429bd3eac5a6f6bf950a2180150a8ca44ea0eb87eea252c90f",
+      "artifact": {
+        "id": 12754775595,
+        "name": "solid-storage-primary-breast_cancer-pca_neighbors",
+        "size_in_bytes": 138767,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754775595",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754775595/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:40Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:40Z",
+        "digest": "sha256:4305bc326ac269429bd3eac5a6f6bf950a2180150a8ca44ea0eb87eea252c90f",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 852,
+          "sha256": "0d7e7c05be28794cdffb739bf5b215744c3866948dcd301619d5e628341bd907"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 128,
+          "sha256": "a64b6d81308dc728b286592ae78f6594e185e6db8c474be3c8886f7694f38bb7"
+        },
+        "result.json": {
+          "bytes": 114583,
+          "sha256": "289fee5fb18947ffe789f6e2927f4ceec7e08f43835966e7a39833b5a0d2cfbe"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/breast_cancer/robust_forest",
+      "path": "artifacts/solid-storage-primary-breast_cancer-robust_forest.zip",
+      "bytes": 139056,
+      "sha256": "6150f3f7f4a30c08facee8154fdb61f5c263d65043274d3024ec041e2f10078b",
+      "artifact": {
+        "id": 12754076642,
+        "name": "solid-storage-primary-breast_cancer-robust_forest",
+        "size_in_bytes": 139056,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754076642",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754076642/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:39Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:39Z",
+        "digest": "sha256:6150f3f7f4a30c08facee8154fdb61f5c263d65043274d3024ec041e2f10078b",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 852,
+          "sha256": "02433d179b24b6f6dd7a21c6bfc6d8d36aece358b80041bb2a78de3cd611ca05"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 127013,
+          "sha256": "39417e8c7d93a0a91a72fbd3b9772a5b641d7b7bf238803698dc35d3fb148b0a"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/breast_cancer/standard_linear",
+      "path": "artifacts/solid-storage-primary-breast_cancer-standard_linear.zip",
+      "bytes": 139140,
+      "sha256": "ce9311d3987b9b686ac2fd38cca32acdce19bd978d4a6973d2788ae10c5ed95d",
+      "artifact": {
+        "id": 12753512557,
+        "name": "solid-storage-primary-breast_cancer-standard_linear",
+        "size_in_bytes": 139140,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753512557",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753512557/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:54Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:54Z",
+        "digest": "sha256:ce9311d3987b9b686ac2fd38cca32acdce19bd978d4a6973d2788ae10c5ed95d",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 890,
+          "sha256": "dd9ce8f942303b7732f9a5a0a5d54343c3456b661da048c058cca8beaa072b1b"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 147991,
+          "sha256": "25bd14f16fc7d6355b1925c8e82c8bbc2eef8127063eeace7088ceb9ae87871b"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/diabetes/minmax_tree",
+      "path": "artifacts/solid-storage-primary-diabetes-minmax_tree.zip",
+      "bytes": 138729,
+      "sha256": "590ed886b976a7ed2a440f0d596323b88fb7cbb1fdf56250ba8bec3b7f37a055",
+      "artifact": {
+        "id": 12754221170,
+        "name": "solid-storage-primary-diabetes-minmax_tree",
+        "size_in_bytes": 138729,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754221170",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754221170/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:50Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:50Z",
+        "digest": "sha256:590ed886b976a7ed2a440f0d596323b88fb7cbb1fdf56250ba8bec3b7f37a055",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "ed1bcb75e47c0cfc3dfc2be0e80f19a1ad8be05410e417ee2b8f1cfda8b52984"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 121822,
+          "sha256": "ced8109c6a9a6a8dc8f6ecb890703c483fe7204bd6a6c3ece5dda0d4cd8696ff"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/diabetes/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-diabetes-pca_neighbors.zip",
+      "bytes": 139006,
+      "sha256": "4737f1135a29dee36760c6e574f149542fdf694c34f22b7c9ef5152566cf2a90",
+      "artifact": {
+        "id": 12754086725,
+        "name": "solid-storage-primary-diabetes-pca_neighbors",
+        "size_in_bytes": 139006,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754086725",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754086725/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:37Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:37Z",
+        "digest": "sha256:4737f1135a29dee36760c6e574f149542fdf694c34f22b7c9ef5152566cf2a90",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 757,
+          "sha256": "7a7ae5aee033d29eba94097b4bcfe41e772295179a572fad582f49e5be48cfff"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 118024,
+          "sha256": "beac3cc12f50108b7344662476dc6ef560ea8da88e1ea7e2bc87e61b4565430f"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/diabetes/robust_forest",
+      "path": "artifacts/solid-storage-primary-diabetes-robust_forest.zip",
+      "bytes": 138989,
+      "sha256": "90759ec2fda222f54021146aeb59e33881e00d0b8d110d2b84f0f20fba518494",
+      "artifact": {
+        "id": 12753392849,
+        "name": "solid-storage-primary-diabetes-robust_forest",
+        "size_in_bytes": 138989,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753392849",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753392849/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:53Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:53Z",
+        "digest": "sha256:90759ec2fda222f54021146aeb59e33881e00d0b8d110d2b84f0f20fba518494",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 757,
+          "sha256": "170b065550ef8bd144901df2ee5d570d045b899b4e9f045cd1831448206b3bcd"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 114408,
+          "sha256": "da6243140e10e1267dfc90f6c07eeb05c986f65966ca4257e2d3445087737327"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/diabetes/standard_linear",
+      "path": "artifacts/solid-storage-primary-diabetes-standard_linear.zip",
+      "bytes": 138977,
+      "sha256": "9bd1101fd06d156885f00fe218585a739e3652b94769d534f410d386abdb61f8",
+      "artifact": {
+        "id": 12754830064,
+        "name": "solid-storage-primary-diabetes-standard_linear",
+        "size_in_bytes": 138977,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754830064",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754830064/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:56Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:56Z",
+        "digest": "sha256:9bd1101fd06d156885f00fe218585a739e3652b94769d534f410d386abdb61f8",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "execution.log": {
+          "bytes": 795,
+          "sha256": "adb6e7705ad5517c52b9f8c9fb1762f2fedee0c7aae275a7ae9ada72b2841a98"
+        },
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 126887,
+          "sha256": "2117bfad1687b44de4ba47d7a4aee5e65de6aaa2bb78f5906a2d36046241af1d"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/digits/minmax_tree",
+      "path": "artifacts/solid-storage-primary-digits-minmax_tree.zip",
+      "bytes": 139047,
+      "sha256": "c8cecfd62bb997c4a1e41e1d92c6bad886f679dcb79dece493385d16764b336f",
+      "artifact": {
+        "id": 12752234637,
+        "name": "solid-storage-primary-digits-minmax_tree",
+        "size_in_bytes": 139047,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752234637",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752234637/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:36Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:36Z",
+        "digest": "sha256:c8cecfd62bb997c4a1e41e1d92c6bad886f679dcb79dece493385d16764b336f",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 681,
+          "sha256": "e701f0be6a47d955c484c001a3439a9873eb4f08860a181e497abbf93696fe8b"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 132634,
+          "sha256": "319e6c29188d9e70bea9031b9149a4c0d8f91b04b956fad93dea1f12c1382c1a"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/digits/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-digits-pca_neighbors.zip",
+      "bytes": 138913,
+      "sha256": "2f9eec2dd8455d5e226c4022661ac2aaaa6de7874fd2809df806f7cc9f220e4f",
+      "artifact": {
+        "id": 12754350838,
+        "name": "solid-storage-primary-digits-pca_neighbors",
+        "size_in_bytes": 138913,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754350838",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754350838/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:25Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:25Z",
+        "digest": "sha256:2f9eec2dd8455d5e226c4022661ac2aaaa6de7874fd2809df806f7cc9f220e4f",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "14b3e381db7c0535f6b124d68352a215fa39aff94bf94f7258d5de518619d846"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 117719,
+          "sha256": "1fff4d9cc27495ec1287f86d08c641cd8324c655a25ef240afab99105a0af13d"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/digits/robust_forest",
+      "path": "artifacts/solid-storage-primary-digits-robust_forest.zip",
+      "bytes": 139003,
+      "sha256": "417f7e8ba3c5fe088a110f8eb13420ed9ac15dd7f8f94b2b4d830ac158774b33",
+      "artifact": {
+        "id": 12754091708,
+        "name": "solid-storage-primary-digits-robust_forest",
+        "size_in_bytes": 139003,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754091708",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754091708/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:37Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:37Z",
+        "digest": "sha256:417f7e8ba3c5fe088a110f8eb13420ed9ac15dd7f8f94b2b4d830ac158774b33",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "b13db1c9a5a32f6810d309d9eb5af2ee2c85b915ba198940301ab7b04901eb6b"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 120699,
+          "sha256": "1592bd2114ec2ddb2b366a550cf0fb049874c80441c55e0b23caee5a7b251629"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/digits/standard_linear",
+      "path": "artifacts/solid-storage-primary-digits-standard_linear.zip",
+      "bytes": 138600,
+      "sha256": "43ae02447759dc419eca7638fa6da7072bef2a454a81841cb43215dcac3b4faf",
+      "artifact": {
+        "id": 12753328160,
+        "name": "solid-storage-primary-digits-standard_linear",
+        "size_in_bytes": 138600,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753328160",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753328160/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:40Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:40Z",
+        "digest": "sha256:43ae02447759dc419eca7638fa6da7072bef2a454a81841cb43215dcac3b4faf",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 757,
+          "sha256": "ec6991a1947a6a586e9960d749ed086f234ed2dae1c242f91295d247a87d75ff"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 118656,
+          "sha256": "bc71c7adfc8b93980e7a333d45d212fd69f68b0343de131840471e068de437b9"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/iris/minmax_tree",
+      "path": "artifacts/solid-storage-primary-iris-minmax_tree.zip",
+      "bytes": 137844,
+      "sha256": "92503b65573d0d2698b5a1a2886d9444a26de932d4558659487123cd3736bc78",
+      "artifact": {
+        "id": 12752769832,
+        "name": "solid-storage-primary-iris-minmax_tree",
+        "size_in_bytes": 137844,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752769832",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752769832/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:17Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:17Z",
+        "digest": "sha256:92503b65573d0d2698b5a1a2886d9444a26de932d4558659487123cd3736bc78",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 643,
+          "sha256": "3a8a9b42b40d2b38dd6b3de68dbdff36b5c2f1b9781b8376c1f1d1cb32062adc"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 101117,
+          "sha256": "0200f8edbfb3301248f49880a0f548fb99b0086ba051796d8317ae28986f95b6"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/iris/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-iris-pca_neighbors.zip",
+      "bytes": 137824,
+      "sha256": "e49d2dc0a06fd80c35af37b6cc3d23f2cb94a1af5ac34eb9c8908e60bc25e854",
+      "artifact": {
+        "id": 12754815612,
+        "name": "solid-storage-primary-iris-pca_neighbors",
+        "size_in_bytes": 137824,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754815612",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754815612/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:15:08Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:15:08Z",
+        "digest": "sha256:e49d2dc0a06fd80c35af37b6cc3d23f2cb94a1af5ac34eb9c8908e60bc25e854",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "execution.log": {
+          "bytes": 681,
+          "sha256": "154e107f780ce33f1d4439a7212283a26eace3b6e1dca737078ffeb6ac0a9c87"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 100029,
+          "sha256": "9c5680aebd0b92c7fb2ec4adcd8d748f4f48035e4189bd2ed26bfe8336ac5a37"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/iris/robust_forest",
+      "path": "artifacts/solid-storage-primary-iris-robust_forest.zip",
+      "bytes": 137893,
+      "sha256": "8cbd50e9afb4a84a4fa9687f80d34c71059d88b97a75c38cbfa3101f6b831dae",
+      "artifact": {
+        "id": 12754690542,
+        "name": "solid-storage-primary-iris-robust_forest",
+        "size_in_bytes": 137893,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754690542",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754690542/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:40Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:40Z",
+        "digest": "sha256:8cbd50e9afb4a84a4fa9687f80d34c71059d88b97a75c38cbfa3101f6b831dae",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 681,
+          "sha256": "d707d86aef71d89adbcfabac740536be66c69fa9449fa9730f1a8b233b44f02e"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 97220,
+          "sha256": "1b5039d6ade91c3173e8416172501f1f50f8a70bb1e0360b15971b247c7336a2"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/iris/standard_linear",
+      "path": "artifacts/solid-storage-primary-iris-standard_linear.zip",
+      "bytes": 137874,
+      "sha256": "9793cd108faf736aff0f19d929a330096ab0106678ba1609a358c06e5c37eb28",
+      "artifact": {
+        "id": 12753462891,
+        "name": "solid-storage-primary-iris-standard_linear",
+        "size_in_bytes": 137874,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753462891",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753462891/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:37Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:37Z",
+        "digest": "sha256:9793cd108faf736aff0f19d929a330096ab0106678ba1609a358c06e5c37eb28",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "870fb39742a2936e8244b89b0bf6c05ef277abfe2be25258f17b04303f348a97"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 128,
+          "sha256": "a64b6d81308dc728b286592ae78f6594e185e6db8c474be3c8886f7694f38bb7"
+        },
+        "result.json": {
+          "bytes": 101145,
+          "sha256": "8073f7ba064d25f1f43e197e0db3ddfa2d1232a627f3d845a58d64664881bf4c"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/linnerud/minmax_tree",
+      "path": "artifacts/solid-storage-primary-linnerud-minmax_tree.zip",
+      "bytes": 138301,
+      "sha256": "4bd1b2d3454b4d4b2d0c12565840d66a622b2e061425aece46de941903e8a84c",
+      "artifact": {
+        "id": 12754685918,
+        "name": "solid-storage-primary-linnerud-minmax_tree",
+        "size_in_bytes": 138301,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754685918",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754685918/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:35Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:35Z",
+        "digest": "sha256:4bd1b2d3454b4d4b2d0c12565840d66a622b2e061425aece46de941903e8a84c",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "c98ad925502fdccc4aeb38b1b90c94bb2343290a2b11e4ed4b696800656fd2de"
+        },
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 102829,
+          "sha256": "5cf02b89391d38d7bc15a5d18caf6bbe30487e1029d8dd553140898d30dea593"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/linnerud/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-linnerud-pca_neighbors.zip",
+      "bytes": 138945,
+      "sha256": "d2fc1f3107a9db796b6f3c64190fa534df4ba5b86d894dd9fe08150741261db6",
+      "artifact": {
+        "id": 12754295930,
+        "name": "solid-storage-primary-linnerud-pca_neighbors",
+        "size_in_bytes": 138945,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754295930",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754295930/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:28Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:28Z",
+        "digest": "sha256:d2fc1f3107a9db796b6f3c64190fa534df4ba5b86d894dd9fe08150741261db6",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 757,
+          "sha256": "2647b66fb89531579cc253589fb9ba58405944e4e78779ee20d3fc8a385549b2"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 114189,
+          "sha256": "035ad0cafdb00426697764da2f7debfa5621246573914cb8f4cf304cd713a649"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/linnerud/robust_forest",
+      "path": "artifacts/solid-storage-primary-linnerud-robust_forest.zip",
+      "bytes": 138942,
+      "sha256": "78fdd0f133976474e7f0cfd2751de9a4ac59fe22657081c7bd9843c5eb41f56e",
+      "artifact": {
+        "id": 12754175925,
+        "name": "solid-storage-primary-linnerud-robust_forest",
+        "size_in_bytes": 138942,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754175925",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754175925/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:04Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:04Z",
+        "digest": "sha256:78fdd0f133976474e7f0cfd2751de9a4ac59fe22657081c7bd9843c5eb41f56e",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "execution.log": {
+          "bytes": 757,
+          "sha256": "d9dba5ec76edb0735e463fcb995cf50ba57b7cb1e9e84f4cd598dd24290fdfb8"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 114244,
+          "sha256": "b3acba08dd955c7241f117e676b09160c8609a270b1e5cb5cf308194eacfb871"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/linnerud/standard_linear",
+      "path": "artifacts/solid-storage-primary-linnerud-standard_linear.zip",
+      "bytes": 138945,
+      "sha256": "9c8655710ebdaa1f525cad43bfa838739156be8534ce09361c36c40be05d715a",
+      "artifact": {
+        "id": 12753437683,
+        "name": "solid-storage-primary-linnerud-standard_linear",
+        "size_in_bytes": 138945,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753437683",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753437683/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:39Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:39Z",
+        "digest": "sha256:9c8655710ebdaa1f525cad43bfa838739156be8534ce09361c36c40be05d715a",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 795,
+          "sha256": "6c3b32ca4bcd96d04864d693182e71b22bb0d730b56622ac29d48ddf382d1f6a"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 114208,
+          "sha256": "9c9e6446d7aee96b40281ad16bc0111b3b843c40f52c4b7c06a1a1a55a00194a"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/wine/minmax_tree",
+      "path": "artifacts/solid-storage-primary-wine-minmax_tree.zip",
+      "bytes": 138544,
+      "sha256": "15264a3e50fe3926ccfad84d5a37e9ab688e0f264c0ba2a75a0f03917cb18572",
+      "artifact": {
+        "id": 12753402792,
+        "name": "solid-storage-primary-wine-minmax_tree",
+        "size_in_bytes": 138544,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753402792",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753402792/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:39Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:39Z",
+        "digest": "sha256:15264a3e50fe3926ccfad84d5a37e9ab688e0f264c0ba2a75a0f03917cb18572",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 643,
+          "sha256": "4c9d24edf6e82ed83b864c3ce76ac75217a62318f0320a3dc8dc47cd6899ce2d"
+        },
+        "platform.txt": {
+          "bytes": 128,
+          "sha256": "a64b6d81308dc728b286592ae78f6594e185e6db8c474be3c8886f7694f38bb7"
+        },
+        "result.json": {
+          "bytes": 118744,
+          "sha256": "55831f02881792c618ec5ddfc0e42637db06bdcaf5caca12ce290ac03afa0193"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/wine/pca_neighbors",
+      "path": "artifacts/solid-storage-primary-wine-pca_neighbors.zip",
+      "bytes": 138305,
+      "sha256": "2613ce6cac59311cd6ee93010593648f9f2177c44834ab076245211d008eac8a",
+      "artifact": {
+        "id": 12753922417,
+        "name": "solid-storage-primary-wine-pca_neighbors",
+        "size_in_bytes": 138305,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753922417",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753922417/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:16:01Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:16:01Z",
+        "digest": "sha256:2613ce6cac59311cd6ee93010593648f9f2177c44834ab076245211d008eac8a",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 681,
+          "sha256": "ad30236b32c696a24990e8b9bec7938efedf7f186b959c7ca32ac28439aceaeb"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 128,
+          "sha256": "a64b6d81308dc728b286592ae78f6594e185e6db8c474be3c8886f7694f38bb7"
+        },
+        "result.json": {
+          "bytes": 105820,
+          "sha256": "e0c3960aafb58b5936814e85da4cd75dc0bd9e4452d21e3c347fd470249d6d87"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/wine/robust_forest",
+      "path": "artifacts/solid-storage-primary-wine-robust_forest.zip",
+      "bytes": 138321,
+      "sha256": "030f62d58cb51d49c5826867138a897f4149a0b3cc65fb3a7bdce7216f627045",
+      "artifact": {
+        "id": 12752874708,
+        "name": "solid-storage-primary-wine-robust_forest",
+        "size_in_bytes": 138321,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752874708",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12752874708/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:14:10Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:14:10Z",
+        "digest": "sha256:030f62d58cb51d49c5826867138a897f4149a0b3cc65fb3a7bdce7216f627045",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 681,
+          "sha256": "4cd8cd4212291a53d4fe8b88497db92cc9e3eb055488f8cc52793de7ab6b8e6a"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 128,
+          "sha256": "a64b6d81308dc728b286592ae78f6594e185e6db8c474be3c8886f7694f38bb7"
+        },
+        "result.json": {
+          "bytes": 105811,
+          "sha256": "0c2c75dacccddf4a9be0d010c68216088d82c0885589875355f6035f281bb3f7"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "primary/wine/standard_linear",
+      "path": "artifacts/solid-storage-primary-wine-standard_linear.zip",
+      "bytes": 138006,
+      "sha256": "db4f23054d03e1ed0dfbcb57e7c374d388cc4b079746ee7fccf20ba8614ad145",
+      "artifact": {
+        "id": 12754350786,
+        "name": "solid-storage-primary-wine-standard_linear",
+        "size_in_bytes": 138006,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754350786",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754350786/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:04Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:04Z",
+        "digest": "sha256:db4f23054d03e1ed0dfbcb57e7c374d388cc4b079746ee7fccf20ba8614ad145",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 719,
+          "sha256": "600a926c8f68a4a951d7c8dd04152b5f413aff420ffdc38219ba5f46f691a56d"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 109723,
+          "sha256": "d6b3c1e031648f884ee6b365a93682fb9a6cb3f71231a129befada1efe9e3a61"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "transfer/cloud",
+      "path": "artifacts/solid-storage-transfer-cloud.zip",
+      "bytes": 237410,
+      "sha256": "bd5fc404ac23de816b4bb78a5bcb273b297c44421ce51fc066a45f378ec9c4c0",
+      "artifact": {
+        "id": 12754720395,
+        "name": "solid-storage-transfer-cloud",
+        "size_in_bytes": 237410,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754720395",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754720395/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:13:08Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:13:08Z",
+        "digest": "sha256:bd5fc404ac23de816b4bb78a5bcb273b297c44421ce51fc066a45f378ec9c4c0",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 4612,
+          "sha256": "4e064f0efdb4056071918211eac9ad8729223311e4ad843e0eaae2db0ebaba66"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 1812896,
+          "sha256": "543d367261c9731f3c01825cc213a426216b296cb46af5cdc5d9b66b293420bc"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "transfer/letter",
+      "path": "artifacts/solid-storage-transfer-letter.zip",
+      "bytes": 132861,
+      "sha256": "89de34cb4a39b87df3f3df76c1faeb63ae4fa732e4e4073866d0d24adf6ec115",
+      "artifact": {
+        "id": 12753627153,
+        "name": "solid-storage-transfer-letter",
+        "size_in_bytes": 132861,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753627153",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12753627153/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:12:56Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:12:56Z",
+        "digest": "sha256:89de34cb4a39b87df3f3df76c1faeb63ae4fa732e4e4073866d0d24adf6ec115",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "execution.log": {
+          "bytes": 64,
+          "sha256": "c44a57308ce2f2046118f6de56c8e41fa528ba97e464bf3248964cf6b0f132d8"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 9888,
+          "sha256": "73ae2975465f6eff4b8a21c501ed9e28bb9c66bc70186cf6f09fa86545ff6981"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "transfer/retinal",
+      "path": "artifacts/solid-storage-transfer-retinal.zip",
+      "bytes": 193227,
+      "sha256": "13e8ed225b060b4f39db8f19d069f9977835f8a48c584a86584c38cc09c32991",
+      "artifact": {
+        "id": 12754189941,
+        "name": "solid-storage-transfer-retinal",
+        "size_in_bytes": 193227,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754189941",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12754189941/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:30:19Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:30:19Z",
+        "digest": "sha256:13e8ed225b060b4f39db8f19d069f9977835f8a48c584a86584c38cc09c32991",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "execution.log": {
+          "bytes": 10507,
+          "sha256": "10ebaa3cee0ef67083bbcb135029a6ecc57c68fbacc94beb83c752dbc3cfb043"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 1595576,
+          "sha256": "bf224023d5c0e39ed26bf8106d20389af86400d134373545ddeefb79424f620d"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    },
+    {
+      "block": "transfer/scientific",
+      "path": "artifacts/solid-storage-transfer-scientific.zip",
+      "bytes": 151314,
+      "sha256": "d4e70e5d9886555d28a1d40249e4ab53fc582c510ccc772da06c4a957348a72d",
+      "artifact": {
+        "id": 12755155313,
+        "name": "solid-storage-transfer-scientific",
+        "size_in_bytes": 151314,
+        "url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12755155313",
+        "archive_download_url": "https://api.github.com/repos/Hannaancode/RecoverML/actions/artifacts/12755155313/zip",
+        "expired": false,
+        "created_at": "2026-10-27T17:19:08Z",
+        "expires_at": "2027-01-25T17:10:06Z",
+        "updated_at": "2026-10-27T17:19:08Z",
+        "digest": "sha256:d4e70e5d9886555d28a1d40249e4ab53fc582c510ccc772da06c4a957348a72d",
+        "workflow_run": {
+          "id": 40547990185,
+          "repository_id": 1403005739,
+          "head_repository_id": 1403005739,
+          "head_branch": "research/scientific-validation-oct15",
+          "head_sha": "3b73162b8bf6e3a97d22a46d343471a0a62a445e"
+        }
+      },
+      "files": {
+        "commit.txt": {
+          "bytes": 41,
+          "sha256": "935b516dc4991da1bb4f64f4ccc2fae00885862432e31aa4fedb5316224797c2"
+        },
+        "execution.log": {
+          "bytes": 2877,
+          "sha256": "369eb35f05bf1cb429c3a976a78d3451b5dcdb3342a0c98d47cb70252633658a"
+        },
+        "packages.txt": {
+          "bytes": 1906,
+          "sha256": "ca37bc657982b0a5f2bdbc90c185f3e9b6ca0ee7a85f45169dc53f3fea5438a5"
+        },
+        "platform.txt": {
+          "bytes": 113,
+          "sha256": "40e1b96798b16f24a59a712a1088b111fc257a3b3f4b48594a8c7995e6a0c523"
+        },
+        "result.json": {
+          "bytes": 541205,
+          "sha256": "1807d2c1bd088aa0a89b2d635d1576b2467ce03047dddd6721c5d07339032109"
+        },
+        "source_snapshot.tar.gz": {
+          "bytes": 126537,
+          "sha256": "1284bb1390dd3e35e381d939d5fda513bb1118654abd52ce55833e0f8053fc90"
+        }
+      }
+    }
+  ],
+  "qualification": "Original three-candidate production comparison and all equal-format local candidates, including three production losses. The later five-candidate choice is a disclosed post-hoc correction, independently rebuilt and selector-checked."
+}

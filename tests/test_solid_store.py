@@ -30,7 +30,7 @@ class SolidStoreTests(unittest.TestCase):
         from benchmark_delta_storage import solid_control
         graph,caps=self.fixture();selected=graph.candidates;rep=SolidRepresentation(graph)
         with tempfile.TemporaryDirectory() as temporary:
-            base=Path(temporary);store=base/'store';size=rep.write(selected,caps,1,store)
+            base=Path(temporary);store=base/'store';size=rep.write(iter(selected),caps,1,store)
             control=solid_control(selected,graph.archive,metadata(graph,caps,1,'adaptive'),{})
             self.assertEqual(size,control['bytes'])
             self.assertEqual({p.name:dict(bytes=p.stat().st_size,sha256=digest(p.read_bytes())) for p in store.iterdir()},control['inventory'])
@@ -42,6 +42,7 @@ class SolidStoreTests(unittest.TestCase):
                 '--contract',str(declared),'--output',str(base/'auto')],capture_output=True,text=True)
             self.assertEqual(created.returncode,0,created.stderr);receipt=json.loads(created.stdout)
             self.assertEqual(receipt['store_bytes'],min(receipt['candidate_bytes'].values()))
+            self.assertEqual(set(receipt['candidate_bytes']),{'flat','delta','solid-flat','solid-flat-local','solid-delta-local'})
             recovered=subprocess.run([sys.executable,'-m','recoverml.solid_store','recover','--store',str(base/'auto'),
                 '--output',str(base/'out'),'--disable','fit'],capture_output=True,text=True)
             self.assertEqual(recovered.returncode,0,recovered.stderr)

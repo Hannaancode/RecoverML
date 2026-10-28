@@ -1,0 +1,9 @@
+test_export_without_capture_or_ml_imports_and_request_validation (test_solid_store.SolidStoreTests.test_export_without_capture_or_ml_imports_and_request_validation) ... ok
+test_malformed_corrupt_trailing_duplicate_and_missing_members_fail_closed (test_solid_store.SolidStoreTests.test_malformed_corrupt_trailing_duplicate_and_missing_members_fail_closed) ... ok
+test_matches_published_control_bytes_and_cli_selects_smallest_store (test_solid_store.SolidStoreTests.test_matches_published_control_bytes_and_cli_selects_smallest_store) ... ok
+test_strict_replay_all_recipe_families_and_loss_contracts (test_solid_store.SolidStoreTests.test_strict_replay_all_recipe_families_and_loss_contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 17.014s
+
+OK

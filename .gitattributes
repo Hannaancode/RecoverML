@@ -7,3 +7,5 @@ results/research/encoded_storage_oct26/** -text whitespace=cr-at-eol
 results/research/delta_storage_oct27/** -text whitespace=cr-at-eol
 results/validation/2026-10-27/delta_storage/** -text whitespace=cr-at-eol
 results/validation/2026-10-27/solid_storage/** -text whitespace=cr-at-eol
+results/research/solid_storage_oct27/** -text whitespace=cr-at-eol
+results/validation/2026-10-28/** -text whitespace=cr-at-eol
