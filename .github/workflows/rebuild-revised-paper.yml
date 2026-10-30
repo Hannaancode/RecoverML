@@ -1,0 +1,44 @@
+name: Rebuild revised paper from saved evidence
+on:
+  push:
+    paths:
+      - '.github/workflows/rebuild-revised-paper.yml'
+      - 'paper/acm_revised/**'
+      - 'scripts/rebuild_revised_paper.py'
+      - 'scripts/audit_runtime_scaling_release.py'
+      - 'results/research/runtime_scaling_oct30/**'
+  workflow_dispatch:
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      PYTHONPATH: src
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - name: Install paper build tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+          mkdir -p work/tools
+          curl --fail --location --silent --show-error \
+            https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-unknown-linux-gnu.tar.gz \
+            -o work/tools/tectonic.tar.gz
+          tar -xzf work/tools/tectonic.tar.gz -C work/tools
+          work/tools/tectonic --version
+      - run: python scripts/rebuild_revised_paper.py --tectonic work/tools/tectonic
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: clean-rebuilt-revised-paper
+          path: |
+            output/pdf/RecoverML_paper_revised.pdf
+            paper/acm_revised/figures/*.pdf

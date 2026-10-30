@@ -1,10 +1,11 @@
 """Rebuild the Letter storage figure from the recorded byte totals.
 
-Source: results/research/gigabyte_letter_oct16/RESULTS.md and the paper table.
+Source: results/research/gigabyte_letter_oct16/analysis.json.
 Run from this directory with ``python make_letter_storage.py``.
 """
 
 from pathlib import Path
+import json
 
 import matplotlib
 
@@ -13,18 +14,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-SNAPSHOT = np.array([3669545821, 291175536], dtype=float) / 1_000_000
-RECOVER_PRE = np.array([4829269, 568375], dtype=float) / 1_000_000
-RECOVER_BROAD = SNAPSHOT.copy()
+ROOT = Path(__file__).resolve().parents[3]
+SCOPES = json.loads((ROOT / "results/research/gigabyte_letter_oct16/analysis.json").read_bytes())["scopes"]
+SNAPSHOT_PRE = np.array([SCOPES["preprocessing"]["snapshot_bytes"],
+                         SCOPES["preprocessing"]["gzip_snapshot_bytes"]], dtype=float) / 1_000_000
+SNAPSHOT_BROAD = np.array([SCOPES["broad"]["snapshot_bytes"],
+                           SCOPES["broad"]["gzip_snapshot_bytes"]], dtype=float) / 1_000_000
+RECOVER_PRE = np.array([SCOPES["preprocessing"]["exact_bytes"],
+                        SCOPES["preprocessing"]["gzip_exact_bytes"]], dtype=float) / 1_000_000
+RECOVER_BROAD = np.array([SCOPES["broad"]["exact_bytes"],
+                          SCOPES["broad"]["gzip_exact_bytes"]], dtype=float) / 1_000_000
 
 
-def make_panel(ax, recovered, title):
+def make_panel(ax, snapshots, recovered, title):
     centers = np.array([0.0, 1.45])
     width = 0.34
     offset = 0.23
     bars_a = ax.bar(
         centers - offset,
-        SNAPSHOT,
+        snapshots,
         width=width,
         color="#96999c",
         label="Target snapshots",
@@ -64,8 +72,8 @@ def make_panel(ax, recovered, title):
 def main():
     plt.rcParams.update({"font.family": "DejaVu Serif", "pdf.fonttype": 42})
     fig, axes = plt.subplots(1, 2, figsize=(10.2, 3.4), sharey=True)
-    handles = make_panel(axes[0], RECOVER_PRE, "(a) Preprocessing loss")
-    make_panel(axes[1], RECOVER_BROAD, "(b) Broad loss")
+    handles = make_panel(axes[0], SNAPSHOT_PRE, RECOVER_PRE, "(a) Preprocessing loss")
+    make_panel(axes[1], SNAPSHOT_BROAD, RECOVER_BROAD, "(b) Broad loss")
     axes[0].set_ylabel("Measured store size (decimal MB, log)", fontsize=9)
     fig.legend(
         [handles[0][0], handles[1][0]],

@@ -54,6 +54,16 @@ loss of power or disk hardware. The original `write_store` remains available
 for legacy benchmark staging and older artifacts, so the publication guarantee
 applies when callers explicitly use `publish_store`.
 
+The [complete Linux run](https://github.com/Hannaancode/RecoverML/actions/runs/41026299655)
+passed all 252 trials and 32,256 exact requests. The original Action ZIP is
+permanently retained at `results/research/runtime_scaling_oct30/evidence.zip`
+and `scripts/audit_runtime_scaling_release.py` rechecks its digest and every
+trial. The measured four-process to one-process throughput ratio has a median
+of 2.50 for root replay and 1.97 for retained-target export across the six
+fixed dataset/version cases in each mode. The eight-thread ratio is 0.70 and
+0.48, respectively. Full per-request tails and the runner's CPU description
+are saved in the archive.
+
 ## Reproduction
 
 On Linux with Python 3.12, from the repository root:

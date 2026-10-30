@@ -1,0 +1,77 @@
+name: Synchronized multi-runner recovery capacity
+on:
+  push:
+    paths:
+      - '.github/workflows/multi-runner-capacity-oct30.yml'
+      - 'scripts/benchmark_multi_runner_replica.py'
+      - 'scripts/audit_multi_runner_replica.py'
+  workflow_dispatch:
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      start_ns: ${{ steps.clock.outputs.start_ns }}
+    steps:
+      - id: clock
+        run: echo "start_ns=$(($(date +%s%N)+360000000000))" >> "$GITHUB_OUTPUT"
+  replica:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {scenario: 1, replica: 0}
+          - {scenario: 2, replica: 0}
+          - {scenario: 2, replica: 1}
+          - {scenario: 4, replica: 0}
+          - {scenario: 4, replica: 1}
+          - {scenario: 4, replica: 2}
+          - {scenario: 4, replica: 3}
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - run: >-
+          python scripts/benchmark_multi_runner_replica.py
+          --scenario ${{ matrix.scenario }}
+          --replica ${{ matrix.replica }}
+          --start-epoch-ns ${{ needs.prepare.outputs.start_ns }}
+          --output work/replica-s${{ matrix.scenario }}-r${{ matrix.replica }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: multi-runner-s${{ matrix.scenario }}-r${{ matrix.replica }}
+          path: work/replica-s${{ matrix.scenario }}-r${{ matrix.replica }}
+  audit:
+    needs: replica
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: multi-runner-*
+          path: work/multi_runner_download
+      - run: python scripts/audit_multi_runner_replica.py --input work/multi_runner_download --output work/multi_runner_summary.json
+      - run: tar -czf work/multi_runner_evidence.tar.gz -C work multi_runner_download multi_runner_summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: multi-runner-complete-audit
+          path: |
+            work/multi_runner_summary.json
+            work/multi_runner_evidence.tar.gz

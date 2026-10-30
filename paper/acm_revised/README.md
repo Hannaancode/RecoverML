@@ -9,16 +9,16 @@ sections, figures, methods and references while matching the uploaded title,
 author affiliation and email and adding the audited October 26-27 evidence.
 The 30 October pass applies the author's writing rules throughout the prose,
 shortens captions, adds a concise limitations section, uses the author-supplied
-architecture diagram and redraws the Letter storage bars.
+architecture diagram and adds the audited final runtime and crash checks.
 The compiled result is `../../output/pdf/RecoverML_paper_revised.pdf`.
 
-The source folder contains the unmodified `acmart.cls` and
-`ACM-Reference-Format.bst` supplied in the author's package, five used original
-vector figures, the original methodology figure retained for reference, the
-author-supplied `methodology_user.png`, and vector redraws of that diagram and
-the Letter chart. `figures/make_methodology.py` follows the supplied diagram's
-layout and arrow directions. `figures/make_letter_storage.py` records the Letter figure values and layout;
-the byte values agree with `results/research/gigabyte_letter_oct16/analysis.json`.
+The source folder contains the supplied `acmart.cls` and
+`ACM-Reference-Format.bst`, seven used vector figures, the author-supplied
+`methodology_user.png`, and scripts that rebuild all used figures. The four
+historical charts read saved research ledgers, the Letter chart reads
+`results/research/gigabyte_letter_oct16/analysis.json`, and the runtime chart
+reads `results/research/runtime_scaling_oct30/evidence.zip`. The architecture
+redraw follows the supplied image's layout and arrow directions.
 The locally licensed Libertine/Biolinum fonts are also included. The
 manuscript generates `references.bib` from its `filecontents` block.
 The original 17 October source ZIP in Downloads also contains older plot inputs
@@ -28,19 +28,30 @@ repository's `results/research/` folders.
 
 ## Build
 
-Run from this directory with Tectonic 0.17.0 or upload this folder to Overleaf
-and select XeLaTeX:
+From the repository root, install the pinned Python package and run the single
+rebuild command with Tectonic 0.17.0 and `pdfinfo` on the path:
+
+```sh
+python -m pip install -e .
+python scripts/rebuild_revised_paper.py
+```
+
+This audits the permanent runtime archive, regenerates all seven used vector
+figures from the saved ledgers or supplied architecture image, compiles the
+paper and checks its 10–12 page range. To compile the packaged TeX directly,
+run from this directory or upload it to Overleaf and select XeLaTeX:
 
 ```sh
 tectonic RecoverML_paper_revised.tex --outdir ../../output/pdf
 ```
 
-The build completed locally and produced a 12-page PDF. The title page,
+The one-command build completed locally and produced a 12-page PDF. The title page,
 published-rule comparison, new storage results, DVC census, figures and
 references were rendered and inspected.
 The PDF was also checked for text extraction and unresolved citation markers.
 Some TeX underfull box warnings remain in the narrow two-column layout;
 the final inspected pages have no clipped content.
+The clean Linux rebuild is run in `.github/workflows/rebuild-revised-paper.yml`.
 
 ## Evidence and rubric crosswalk
 

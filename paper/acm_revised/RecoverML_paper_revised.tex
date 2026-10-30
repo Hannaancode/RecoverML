@@ -2,7 +2,7 @@
 % Build: tectonic RecoverML_paper_revised.tex
 % The official acmart class is used in its double-column sigconf format.
 % nonacm suppresses publication metadata because this is not an accepted paper.
-% Evidence cutoff: efae825be13ffe487b915a4580cdc16b4c5e95c6.
+% Latest audited runtime source: 9adf5f0b4cc808b9d5bd046d5eeb90679d5bfc43.
 \begin{filecontents*}[overwrite]{references.bib}
 @article{helix,
   author = {Xin, Doris and Macke, Stephen and Ma, Litian and Liu, Jialin and Song, Shuchen and Parameswaran, Aditya},
@@ -147,6 +147,9 @@
 \fi
 \emergencystretch=2em
 \usepackage{placeins}
+\renewcommand{\dbltopfraction}{.95}
+\renewcommand{\dblfloatpagefraction}{.9}
+\setcounter{dbltopnumber}{5}
 \setcopyright{none}
 \settopmatter{printacmref=false,printccs=false,printfolios=true}
 \acmDOI{}
@@ -163,7 +166,7 @@
 \raggedbottom
 
 \begin{abstract}
-Machine learning experiments leave many versions of data and models, and an old result may depend on a processing step that is no longer available. RecoverML chooses which files to keep for a defined set of possible losses and checks that recovered files match their original hashes. Its exact planners find and certify the smallest store under the stated physical file model. In a 56-case decision-rule study with the same robust storage limit, RecoverML restores all 3,344 requests while the tested HYPPO rank and frequency components restore 2,240 and 2,291 and the best tested HELIX rule setting restores 1,940. A later five-candidate storage choice uses exact deltas and joint compression and reduces storage against the earlier flat optimum in 244 of 444 measurable conditions, with 200 ties and a largest reduction of 89.84\%. Against local search with the same formats it wins 20 and ties 424, with two Letter conditions unmeasured. The median saving against that control is zero and an equal-format exact reference matches the certified minimum. At the same optimal stored files, RecoverML is faster than the tested native DVC integration in all 864 census configurations while a direct executor is near parity. The results show gains in recovery coverage, storage and command execution for the measured histories.
+Machine learning experiments leave many versions of data and models, and an old result may depend on a processing step that is no longer available. RecoverML chooses which files to keep for a defined set of possible losses and checks that recovered files match their original hashes. Its exact planners find and certify the smallest store under the stated physical file model. In a 56-case decision-rule study with the same robust storage limit, RecoverML restores all 3,344 requests while the tested HYPPO rank and frequency components restore 2,240 and 2,291 and the best tested HELIX rule setting restores 1,940. A later five-candidate storage choice uses exact deltas and joint compression and reduces storage against the earlier flat optimum in 244 of 444 measurable conditions, with 200 ties and a largest reduction of 89.84\%. Against local search with the same formats it wins 20 and ties 424, with two Letter conditions unmeasured. The median saving against that control is zero and an equal-format exact reference matches the certified minimum. At the same optimal stored files, RecoverML is faster than the tested native DVC integration in all 864 census configurations while a direct executor is near parity. A final-file-API study recovers 32,256 of 32,256 requests exactly and measures higher throughput with four process replicas in all 12 fixed cases. The results show gains in recovery coverage, storage and command execution for the measured histories.
 \end{abstract}
 
 \keywords{historical machine learning recovery, data provenance, artifact retention, materialization, capability loss, reproducibility}
@@ -225,7 +228,7 @@ DVC records dependencies and reruns stages, while frozen stages can preserve cho
 
 CHEX uses execution history and ordered checkpoints to share work across program versions~\cite{chex}. RecoverML instead chooses persistent files so old outputs remain available after specified producers fail. Checkmate uses mixed integer optimization to trade neural training computation for activation memory~\cite{checkmate}; RecoverML uses established optimization methods for a different file recovery objective.
 
-ExoFlow separates execution from recovery and uses task annotations for recovery with exactly-once workflow semantics~\cite{exoflow}. RecoverML checks the bytes of immutable output files in a supported replay environment, and its storage and recovery costs are measured separately because keeping fewer files can make later recovery slower. Distributed side effects and general crash consistency are outside the current implementation.
+ExoFlow separates execution from recovery and uses task annotations for recovery with exactly-once workflow semantics~\cite{exoflow}. RecoverML checks the bytes of immutable output files in a supported replay environment, and its storage and recovery costs are measured separately because keeping fewer files can make later recovery slower. RecoverML also has a single-host atomic publication path for process crashes; it does not coordinate distributed side effects.
 
 \subsection{Optimization foundations and the remaining distinction}
 
@@ -317,12 +320,16 @@ An optional decomposition removes mandatory roots from the live dependency graph
 
 For an actual recovery request, the executor finds a grounded path from stored files through surviving producers and follows dependency order. Each request has its own memo and trace, and every loaded or recovered file must match its recorded hash. Missing or corrupt files and source mismatches produce explicit errors. The general restorer checks its supported runtime before loading values and never uses a producer declared unavailable.
 
-When every requested target is already stored, direct export checks its size and SHA-256 identity and writes the output without loading a model. If a target is absent the executor uses ordinary replay, while a corrupt stored target causes an error. Exporting the same bytes does not mean an incompatible environment can run the model, and the current executor does not claim distributed crash consistency or exactly-once external side effects.
+When every requested target is already stored, direct export checks its size and SHA-256 identity and writes the output without loading a model. If a target is absent the executor uses ordinary replay, while a corrupt stored target causes an error. Exporting the same bytes does not mean an incompatible environment can run the model.
+
+\subsection{Publication and concurrent recovery}
+
+The durable publisher writes selected blobs, the manifest and contract to a sibling directory, flushes files and POSIX directories, then atomically renames it to the final path on the same filesystem. One publisher owns each destination and readers use only the final path: a process stopped before rename exposes no store, while one stopped after rename leaves a complete store. Published files are read-only; each request owns its restorer, memo, trace and output directory, and success requires exact target hashes. The legacy staging writer remains separate from this guarantee.
 
 \section{Experimental Setup}
 \label{sec:experiments}
 
-The experiments ask which files remain necessary under different loss requirements and whether other selection methods choose the same stores. We then measure planning and actual recovery separately. Table~\ref{tab:workloads} lists the fixed studies; one captured history can appear under several contracts or policies, and the concurrency row concerns an earlier prototype. Protocols and source snapshots are saved with the artifact~\cite{artifact}.
+The experiments ask which files remain necessary under different loss requirements and whether other selection methods choose the same stores. We then measure planning and actual recovery separately. Table~\ref{tab:workloads} lists the fixed studies; one captured history can appear under several contracts or policies. Protocols and source snapshots are saved with the artifact~\cite{artifact}.
 
 \begin{table*}[t]
 \caption{Workloads and comparison design.}
@@ -340,7 +347,7 @@ Recovery census & Six public datasets and four deterministic recipes & 72 captur
 Scientific matrix & Iris, Digits and Diabetes; four recipes & 8; 3 each & Two seeds, two loss scopes, three bounds, five budgets, eight policies\\
 Retinal histories & 20 STARE images; logistic regression and forest & 18; 2/8/16 & Two target modes, three availability contracts, five retention policies\\
 Large payload & UCI Letter; trained random forests & 1; 16 & Preprocessing versus broad loss and canonical versus compressed representation\\
-Earlier concurrency & Synthetic logistic regression histories & 2; 5 each & 2,000/10,000 rows; 1/2/4 threads; three repeats; 100 requests per trial\\
+Final runtime scaling & Breast Cancer linear and Digits PCA-neighbor histories & 6; 1/4/16 & Root replay or retained target export; 1/2/4/8 threads or 1/2/4 process replicas; three repeats\\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -381,7 +388,7 @@ Each cloud planner has three timed calls per case and the earlier 48-condition r
 
 Every actual request records whether its expected target identities were recovered, whether a deficient store was correctly blocked and whether an unexpected outcome occurred. When methods select identical stores they share explicitly attributed execution evidence, so method totals must not be summed as new physical requests. Ratios are computed within a history from method medians and then summarized across histories. These descriptive ratios and repeated requests do not establish population significance.
 
-The older concurrency control uses a Linux Xeon Platinum 8573C host with a CPU quota of eight cores and Python 3.12.14. It randomizes 54 trials across three policies and two data sizes and three worker counts and three repeats. All five versions are warmed before a timed trial and each request has a fresh restorer and memo. Service latency includes environment validation and disk recovery, while response latency also includes queue wait. Throughput excludes capture and planning, and its resource sampler records CPU and RSS for the whole benchmark process. This is not a concurrency evaluation of the newer native DVC integration.
+The final file API runs on a four-vCPU AMD EPYC 9V74 Linux runner. Breast Cancer and Digits have 1, 4 and 16 versions; root-only replay and retained-target export use different measured byte totals. Each condition has three bursts of 128 requests, using 1/2/4/8 threads or 1/2/4 same-host process replicas, for 252 trials. Requests have private outputs; warmup and planning are excluded. Throughput covers submission through completion, service P99 covers execution, and response P99 also includes queue wait. The artifact retains every request, source hash, machine record and independent audit.
 
 \section{Results}
 \label{sec:results}
@@ -556,18 +563,20 @@ For Letter, preprocessing loss reduces the canonical store from 3,669,545,821 to
 
 The actual Letter replay ledger contains 48 exact requests across three unique stores under all preprocessing groups disabled, a stronger stress than its $k=1$ selection contract. The broad-loss entries are structural checks and are not additional actual runtime requests. In the descriptive preprocessing replay, mean frontier recovery is 6.65 s per version compared with 2.12 s for snapshot loading. The evaluation includes all 16 trained forests and their held-out accuracy ranges from 95.0\% to 95.64\%, but improving predictive accuracy is not the retention objective.
 
-\subsection{Earlier concurrency and latency control}
+\subsection{Concurrency, tail latency and process crashes}
 
-Figure~\ref{fig:performance} uses the earlier prototype's saved records. Its throughput points are three trial medians with observed minimum and maximum whiskers, and the service latency curve pools 300 exact one worker requests per method at 10,000 rows with warm page caches. Each request has a fresh memo. All 5,400 requests are exact across 54 trials, and the audit reconciles 2,129 resource samples and 39,600 operation records. RecoverML V2 and target snapshots choose the same stored files in this control.
+The final file API recovers all 32,256 requests exactly across 252 audited trials. Figure~\ref{fig:performance} compares each dataset, version count and mode with its one-worker result; points are medians of six fixed-case ratios and shading shows their range. The modes use different storage: at 16 versions, root-only and target-file stores cost 172,570 and 205,679 bytes for Breast Cancer and 975,357 and 3,117,275 for Digits.
 
 \begin{figure*}[t]
-\centering\includegraphics[width=\textwidth]{figures/earlier_performance.pdf}
-\caption{Earlier prototype throughput and service latency.}
-\Description{Two throughput plots compare one, two and four worker threads at two data sizes. A third plot shows empirical service latency distributions for the three earlier policies.}
+\centering\includegraphics[width=\textwidth]{figures/runtime_scaling.pdf}
+\caption{Final file API throughput and service P99 relative to one worker.}
+\Description{Four vector panels show the median and range of fixed-case throughput and service-P99 ratios. Four same-host process replicas increase throughput in both retention modes, while eight threads reduce it. Tail latency increases with concurrency.}
 \label{fig:performance}
 \end{figure*}
 
-At 10,000 rows the V2 policy's median throughput falls from 817.49 exact requests/s with one worker to 412.20 with four, while median per-trial service P99 rises from 1.96 ms to 24.53 ms. Full replay instead rises from 32.45 to 40.06 requests/s. The retained file workload therefore does not scale monotonically with more threads in this host and cache setting, which is consistent with overhead and contention but does not isolate their causes. Response time also includes queued work and must not be read from the service CDF. Three short trials provide descriptive tail samples rather than stable production P99 guarantees.
+Four process replicas increase throughput in all six fixed cases per mode: median ratios are 2.50 for replay and 1.97 for export. Eight threads reduce throughput in all 12 cases, with median ratios of 0.70 and 0.48. Median service-P99 ratios at four processes are 1.59 and 3.09; at eight threads they are 11.75 and 22.38. The saved raw requests expose each tail sample and its queue wait. The earlier prototype separately records 5,400 exact requests across 54 trials.
+
+Process-crash tests kill a child just before or after publication: the final path is absent before rename and verifies completely after it. A separate 32-reader test recovers exact bytes into private outputs from one immutable store.
 
 \section{Discussion and Reproducibility}
 \label{sec:discussion}
@@ -578,7 +587,7 @@ RecoverML first protects complete recovery and then minimizes stored bytes, whil
 
 The datasets are public, but the histories and loss cases were built for these experiments; related seeds, versions and requests do not estimate a production win rate. The favorable shared loss pilot informed a later full grid, and the five-candidate store was corrected after the stronger local control exposed three losses. The retinal study adapts public images rather than the private EyeAI workflow, and Letter's byte saving changes with compression. Annotation effort, deployment cost and how often capabilities disappear remain unmeasured.
 
-Fresh capture and replay passed on three runners, but exact replay across arbitrary software changes was not tested. Six original nonforest scientific captures lack a closed global source guard after an interruption, although their snapshots, request guards and raw reconciliation remain. One original Letter archive container is unavailable; four recovered frontier files match their hashes in a separately identified replacement archive. The joint archive decodes into memory, so its compression time, random access cost and peak memory need measurement. Larger neural states, distributed scale out and crash consistency remain future work.
+Fresh capture and replay passed on three runners, but exact replay across arbitrary software changes was not tested. Six original nonforest scientific captures lack a closed global source guard after an interruption, although their snapshots, request guards and raw reconciliation remain. One original Letter archive container is unavailable; four recovered frontier files match their hashes in a separately identified replacement archive. The joint archive decodes into memory, so its compression time, random access cost and peak memory need measurement. Larger neural states, networked scale out, power-loss recovery and distributed crash consistency remain future work.
 
 \FloatBarrier
 \section{Conclusion}
