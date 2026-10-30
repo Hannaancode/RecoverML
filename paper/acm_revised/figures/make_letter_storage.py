@@ -1,9 +1,10 @@
-"""Rebuild the Letter storage figure from the recorded byte totals.
+"""Rebuild the Letter storage figure from the per-policy measured rows.
 
-Source: results/research/gigabyte_letter_oct16/analysis.json.
+Source: results/research/gigabyte_letter_oct16/summary.csv.
 Run from this directory with ``python make_letter_storage.py``.
 """
 
+import csv
 from pathlib import Path
 import json
 
@@ -15,7 +16,21 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
-SCOPES = json.loads((ROOT / "results/research/gigabyte_letter_oct16/analysis.json").read_bytes())["scopes"]
+STUDY = ROOT / "results/research/gigabyte_letter_oct16"
+with (STUDY / "summary.csv").open(newline="", encoding="utf-8") as stream:
+    measured = [row for row in csv.DictReader(stream) if row["policy"] == "RecoverML_exact"]
+if sorted(row["scope"] for row in measured) != ["broad", "preprocessing"]:
+    raise ValueError("Letter measured scope rows differ")
+SCOPES = {row["scope"]: {
+    "snapshot_bytes": int(row["baseline_bytes"]),
+    "gzip_snapshot_bytes": int(row["gzip_baseline_bytes"]),
+    "exact_bytes": int(row["retained_bytes"]),
+    "gzip_exact_bytes": int(row["gzip_retained_bytes"]),
+} for row in measured}
+HEADLINE = json.loads((STUDY / "analysis.json").read_bytes())["scopes"]
+if any(SCOPES[scope][metric] != HEADLINE[scope][metric]
+       for scope in SCOPES for metric in SCOPES[scope]):
+    raise ValueError("Letter measured rows differ from archived analysis")
 SNAPSHOT_PRE = np.array([SCOPES["preprocessing"]["snapshot_bytes"],
                          SCOPES["preprocessing"]["gzip_snapshot_bytes"]], dtype=float) / 1_000_000
 SNAPSHOT_BROAD = np.array([SCOPES["broad"]["snapshot_bytes"],

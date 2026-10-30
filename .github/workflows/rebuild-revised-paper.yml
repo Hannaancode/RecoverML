@@ -6,7 +6,10 @@ on:
       - 'paper/acm_revised/**'
       - 'scripts/rebuild_revised_paper.py'
       - 'scripts/audit_runtime_scaling_release.py'
+      - 'scripts/audit_multi_runner_release.py'
+      - 'scripts/audit_multi_runner_replica.py'
       - 'results/research/runtime_scaling_oct30/**'
+      - 'results/research/multi_runner_oct30/**'
   workflow_dispatch:
 jobs:
   rebuild:

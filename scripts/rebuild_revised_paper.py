@@ -32,6 +32,9 @@ def main():
     audit = json.loads(command([sys.executable, str(ROOT / "scripts/audit_runtime_scaling_release.py")]).stdout)
     if audit["full"]["exact"] != 32256:
         raise ValueError("Runtime evidence audit differs")
+    runner_audit = json.loads(command([sys.executable, str(ROOT / "scripts/audit_multi_runner_release.py")]).stdout)
+    if runner_audit["exact"] != 2688:
+        raise ValueError("Independent-runner evidence audit differs")
     command([sys.executable, str(FIGURES / "make_evidence_figures.py")])
     for script in ("make_methodology.py", "make_letter_storage.py", "make_runtime_scaling.py"):
         command([sys.executable, str(FIGURES / script)])
@@ -54,7 +57,7 @@ def main():
         pages = int(match.group(1))
     else:
         pages = "pdfinfo unavailable"
-    print(json.dumps(dict(status="PASS", pages=pages, audited_requests=audit["full"]["exact"],
+    print(json.dumps(dict(status="PASS", pages=pages, audited_requests=audit["full"]["exact"] + runner_audit["exact"],
                           primary_vector_figures=len(USED), pdf=str(pdf)), indent=2))
 
 

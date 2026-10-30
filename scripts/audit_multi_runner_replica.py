@@ -1,7 +1,7 @@
 """Audit synchronized independent-runner capacity and exact recoveries."""
 
 import argparse
-from collections import defaultdict
+from collections import Counter, defaultdict
 import json
 from pathlib import Path
 import statistics
@@ -19,6 +19,8 @@ def audit(directory):
     commits = set()
     starts = set()
     target_fingerprints = set()
+    workload_shapes = set()
+    cpu_architectures = set()
     for path in directory.iterdir():
         if not path.is_dir() or not (path / "RUN_COMPLETE").is_file():
             continue
@@ -43,6 +45,11 @@ def audit(directory):
             raise ValueError("Replica request matrix differs")
         nodes = {node["id"]: node["blob"] for node in config["manifest"]["nodes"]}
         target_fingerprints.add(tuple(tuple(nodes[node] for node in config["manifest"]["targets"][str(i)]) for i in range(16)))
+        workload_shapes.add((len(nodes), tuple(sorted(Counter(node["op"] for node in config["manifest"]["nodes"]).items())),
+                             tuple(len(config["manifest"]["targets"][str(i)]) for i in range(16)), len(config["selected"])))
+        cpu_architectures.add(tuple(sorted(thread.get("architecture", "unknown")
+                                           for thread in config["manifest"]["environment"]["threads"]
+                                           if thread["user_api"] == "blas")))
         by_repeat = defaultdict(list)
         for row in rows:
             by_repeat[row["repeat"]].append(row)
@@ -65,12 +72,13 @@ def audit(directory):
             if summary["scheduled_ns"] != config["start_epoch_ns"] + repeat * config["interval_s"] * 1_000_000_000:
                 raise ValueError("Replica schedule differs")
         replicas[identity] = summaries
-    if set(replicas) != EXPECTED or len(commits) != 1 or len(starts) != 1 or len(target_fingerprints) != 1:
+    if set(replicas) != EXPECTED or len(commits) != 1 or len(starts) != 1 or len(workload_shapes) != 1:
         raise ValueError("Multi-runner matrix or source differs")
     scenarios = {}
     for count in (1, 2, 4):
         rates = []
         skews = []
+        efficiencies = []
         for repeat in range(3):
             group = [replicas[(count, replica)][repeat] for replica in range(count)]
             began = min(item["began_ns"] for item in group)
@@ -80,15 +88,19 @@ def audit(directory):
                 raise ValueError("Replicas did not start within five seconds")
             rates.append(count * 128 / ((ended - began) / 1e9))
             skews.append(skew)
+            efficiencies.append(rates[-1] / sum(item["throughput_rps"] for item in group))
         scenarios[count] = dict(repeat_throughput_rps=rates,
                                 median_throughput_rps=statistics.median(rates),
+                                median_efficiency_vs_sum_of_replica_rates=statistics.median(efficiencies),
                                 maximum_start_skew_s=max(skews))
     baseline = scenarios[1]["median_throughput_rps"]
     for count in (1, 2, 4):
         scenarios[count]["capacity_ratio_to_one"] = scenarios[count]["median_throughput_rps"] / baseline
     return dict(status="PASS", source_commit=commits.pop(), replicas=7, trials=21,
                 requests=7 * 3 * 128, exact=7 * 3 * 128, scenarios=scenarios,
-                scope="Independent stateless GitHub runners with synchronized starts; no network request path or shared distributed store")
+                distinct_target_hash_sets=len(target_fingerprints),
+                cpu_blas_architectures=[list(item) for item in sorted(cpu_architectures)],
+                scope="Independent stateless GitHub runners with synchronized starts; runner CPU types and byte-level output identities may differ, and there is no network request path or shared distributed store")
 
 
 if __name__ == "__main__":

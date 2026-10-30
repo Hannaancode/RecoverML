@@ -9,14 +9,14 @@ sections, figures, methods and references while matching the uploaded title,
 author affiliation and email and adding the audited October 26-27 evidence.
 The 30 October pass applies the author's writing rules throughout the prose,
 shortens captions, adds a concise limitations section, uses the author-supplied
-architecture diagram and adds the audited final runtime and crash checks.
+architecture diagram and adds the audited final runtime, independent-runner capacity and crash checks.
 The compiled result is `../../output/pdf/RecoverML_paper_revised.pdf`.
 
 The source folder contains the supplied `acmart.cls` and
 `ACM-Reference-Format.bst`, seven used vector figures, the author-supplied
 `methodology_user.png`, and scripts that rebuild all used figures. The four
-historical charts read saved research ledgers, the Letter chart reads
-`results/research/gigabyte_letter_oct16/analysis.json`, and the runtime chart
+historical charts read saved research ledgers, the Letter chart reads the
+measured rows in `results/research/gigabyte_letter_oct16/summary.csv`, and the runtime chart
 reads `results/research/runtime_scaling_oct30/evidence.zip`. The architecture
 redraw follows the supplied image's layout and arrow directions.
 The locally licensed Libertine/Biolinum fonts are also included. The
@@ -36,7 +36,7 @@ python -m pip install -e .
 python scripts/rebuild_revised_paper.py
 ```
 
-This audits the permanent runtime archive, regenerates all seven used vector
+This audits the permanent runtime and independent-runner archives, regenerates all seven used vector
 figures from the saved ledgers or supplied architecture image, compiles the
 paper and checks its 10–12 page range. To compile the packaged TeX directly,
 run from this directory or upload it to Overleaf and select XeLaTeX:
@@ -73,7 +73,9 @@ this crosswalk uses the saved rubric audit rather than claiming a grade.
 
 The 56-case published-rule comparison is recorded in
 `results/research/paper_oct14/extension_analysis/measured_extensions.md`.
-The main new storage record is `results/research/solid_storage_oct27/RESULTS.md`
+The independent-runner capacity study is in
+`results/research/multi_runner_oct30/RESULTS.md`, with every request retained
+in its archived GitHub artifact. The main new storage record is `results/research/solid_storage_oct27/RESULTS.md`
 at source commit `efae825be13ffe487b915a4580cdc16b4c5e95c6`. The broad DVC
 recovery record is `results/research/recovery_census_oct26/RESULTS.md`.
 Their conditions are related authored workloads, not independent production

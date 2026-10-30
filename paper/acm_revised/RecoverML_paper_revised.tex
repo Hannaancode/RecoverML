@@ -576,6 +576,8 @@ The final file API recovers all 32,256 requests exactly across 252 audited trial
 
 Four process replicas increase throughput in all six fixed cases per mode: median ratios are 2.50 for replay and 1.97 for export. Eight threads reduce throughput in all 12 cases, with median ratios of 0.70 and 0.48. Median service-P99 ratios at four processes are 1.59 and 3.09; at eight threads they are 11.75 and 22.38. The saved raw requests expose each tail sample and its queue wait. The earlier prototype separately records 5,400 exact requests across 54 trials.
 
+We also ran root-only replay on independent Linux runners, with one, two or four replicas each capturing the same declared 16-version Digits history. Across three synchronized rounds per configuration, all 2,688 requests matched their own runner's recorded target hashes. Median aggregate throughput was 35.2, 73.3 and 141.1 requests/s, or 2.08 and 4.00 times the one-runner rate. The four-runner rate was 80\% of the sum of its individual rates. The runners used two CPU variants and produced two target hash sets, so these ratios describe heterogeneous provisioned capacity rather than equal-hardware speedup. Each replica used its own immutable store; no networked shared store was tested.
+
 Process-crash tests kill a child just before or after publication: the final path is absent before rename and verifies completely after it. A separate 32-reader test recovers exact bytes into private outputs from one immutable store.
 
 \section{Discussion and Reproducibility}

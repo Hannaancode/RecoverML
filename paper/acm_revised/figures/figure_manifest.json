@@ -2,20 +2,20 @@
   "original_figure_source_commit": "27de00d96c4390e3ec5e7fd4f320d79aa8c5f51f",
   "revision_date": "2026-10-30",
   "methodology_source": "Author-supplied image: ChatGPT Image Oct 17, 2026, 07_22_00 PM.png",
-  "letter_values_source": "results/research/gigabyte_letter_oct16/analysis.json",
+  "letter_values_source": "results/research/gigabyte_letter_oct16/summary.csv",
   "runtime_source_commit": "9adf5f0b4cc808b9d5bd046d5eeb90679d5bfc43",
   "runtime_artifact_sha256": "dd905bf76b5dceb5949805af440d453612c57b0fc164462ed673a020b80ffe03",
   "figures_sha256": {
     "earlier_performance.pdf": "12402f1fa50ed5eb6c7303691157a5c49e02c43ccf41b6ec8ca62433fa5f0598",
-    "letter_storage.pdf": "d84f40cff52da798503c88a4b4365c293d1d880ad32b4a5433682a3898766114",
+    "letter_storage.pdf": "bfaf20d5e3cdde26688d4b34b5f18dc186be74006ea881cded6de6898de6bbc5",
     "methodology.pdf": "e65ba1752d40898c09a7fe340b1d00fa1410f41c8ddfb59a1d1e01cadf83a55a",
-    "methodology_rebuilt.pdf": "1f2c8425ff17cbd2729f3c58612a3e9af0c1a40778e9057c604b9b98f6d027cf",
+    "methodology_rebuilt.pdf": "99368a70e815d5b4088ee63d397f6076664dd4a9f5b7809cee573a75b1725c7e",
     "methodology_user.png": "11b69b8450012198829b4c43b26921ed40560e823dcc47c3c3c97026ce2cf715",
-    "native_recovery.pdf": "e3a6b8fc59f28f8b917ecc02610b366c315fd9c7fc2bfd69ce276e43dcbc1dd4",
-    "planner_timing.pdf": "11989b6c3f5a4b3fab1dc28299f991bc0b6862959ebc4c960a4ac198695ca9f2",
-    "retinal_storage.pdf": "2215e2472217572cb6697e89ed324aa2d437adb20f3c8535597ecbe49c9922d8",
-    "shared_storage.pdf": "537b295a995118197302d8546d4770c4b649cd2966c21d2447c2b08d446084eb",
-    "runtime_scaling.pdf": "0d670ee24e3351bbb1d105654163b836d9a3870e543e73607f5cc013df984c34"
+    "native_recovery.pdf": "271d840408b21d40592355c85f0e6c0ea059b262a84973faee89c8f6613f0128",
+    "planner_timing.pdf": "513e2710c57f1e153d88f24ac94cf191c7beb13f4b0eed9366afd35d27f0a05f",
+    "retinal_storage.pdf": "ab1b3aeb340b9e9bc862c8425d6832878bb92b80561df9d9008b06898623cee5",
+    "shared_storage.pdf": "9f394e564ea57c7b1f60fd77d039757956dfd2c3ea4980a1368c359f30af74bd",
+    "runtime_scaling.pdf": "1635d20ff21c0288d3d692251baabc20b01c2fe7925abffc731c25b070a5402e"
   },
   "measurements": "All seven used vector figures regenerate from saved ledgers or the author-supplied architecture image; the runtime chart uses the 32,256-request audited Action artifact."
 }
