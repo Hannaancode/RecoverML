@@ -1,4 +1,8 @@
-"""Regenerate the four historical scientific charts from saved raw ledgers."""
+"""Regenerate four historical charts from saved ledgers.
+
+Run scripts/audit_paper_figure_sources.py first to reconcile summarized plot
+inputs with their retained planner, store and trial records.
+"""
 
 import argparse
 from collections import defaultdict
@@ -189,7 +193,7 @@ def main():
     planner_timing(args.output)
     native_recovery(args.output)
     retinal_storage(args.output)
-    print("Regenerated four historical vector charts from saved ledgers")
+    print("Regenerated four historical vector charts from saved plot ledgers")
 
 
 if __name__ == "__main__":

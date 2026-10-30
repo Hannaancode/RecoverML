@@ -34,16 +34,17 @@ def build():
     legends = {"threads": "Threads", "processes": "Process replicas"}
     modes = (("root_replay", "Mandatory roots: replay"),
              ("target_files", "Protected target files: direct export"))
-    metrics = (("throughput_rps", "Throughput / one worker"),
-               ("service_p99_ms", "Service P99 / one worker"))
+    metrics = (("throughput_rps", "Throughput ratio"),
+               ("service_p99_ms", "Service P99 ratio"))
     for col, (mode, title) in enumerate(modes):
         for row_index, (metric, ylabel) in enumerate(metrics):
             ax = panels[row_index, col]
             for axis, counts, x in (("threads", [1, 2, 4, 8], [0, 1, 2, 3]),
                                     ("processes", [1, 2, 4], [5, 6, 7])):
                 medians, low, high = [], [], []
-                for count in counts:
+                for count, position in zip(counts, x):
                     ratios = []
+                    raw_p99_ratios = []
                     for dataset in ("breast_cancer", "digits"):
                         for versions in (1, 4, 16):
                             key = (dataset, versions, mode, axis, count)
@@ -51,6 +52,12 @@ def build():
                             measured = statistics.median(item[metric] for item in values[key])
                             baseline = statistics.median(item[metric] for item in values[reference])
                             ratios.append(measured / baseline)
+                            if metric == "service_p99_ms":
+                                raw_p99_ratios.extend(item[metric] / baseline for item in values[key])
+                    if raw_p99_ratios:
+                        jitter = [((index * 37) % 53 - 26) / 150 for index in range(len(raw_p99_ratios))]
+                        ax.scatter([position + offset for offset in jitter], raw_p99_ratios,
+                                   s=4, color=colors[axis], alpha=.36, linewidths=0, zorder=3)
                     medians.append(statistics.median(ratios))
                     low.append(min(ratios))
                     high.append(max(ratios))
@@ -69,11 +76,11 @@ def build():
                 ax.set_xlabel("Worker count (T = threads, P = processes)")
             if metric == "service_p99_ms":
                 ax.set_yscale("log")
-                ax.set_ylim(.8, 32)
+                ax.set_ylim(.6, 32)
             else:
                 ax.set_ylim(.25, 3.2)
     panels[0, 0].legend(loc="upper left", frameon=False, fontsize=7)
-    fig.tight_layout(pad=.8, w_pad=1.1, h_pad=.8)
+    fig.tight_layout(pad=1.3, w_pad=1.1, h_pad=.8)
     fig.savefig(OUT)
     plt.close(fig)
     print(OUT)

@@ -13,6 +13,8 @@ This guide maps the executable system, fixed protocols and saved evidence. Detai
 | Automated storage and concurrency experiment | `bash run_benchmarks.sh` |
 | Archived October 14 paper matrix | `bash scripts/run_paper_benchmarks.sh results/runs/paper_reproduction_01` |
 | Committed-byte and raw-ledger checks | `python scripts/verify_release.py` |
+| Rebuild the 12-page revised ACM paper after source audits | `python scripts/rebuild_revised_paper.py --tectonic PATH_TO_TECTONIC` |
+| Audit figure inputs and the paired recovery ablation | `python scripts/audit_paper_figure_sources.py` and `python scripts/audit_retained_file_ablation_release.py` |
 | Retinal transport-part reconstruction | `python scripts/materialize_evidence.py` |
 | Experiment inventory | [Results index](../results/README.md) |
 
@@ -22,6 +24,7 @@ Use a new output directory for each fresh run. Saved-data audits inspect existin
 
 | Study | Protocol and results | Evidence |
 |---|---|---|
+| Same-store recovery ablation, 30 October | [Final results](../results/research/retained_file_ablation_oct30/RESULTS.md) | [Successful CI run](https://github.com/Hannaancode/RecoverML/actions/runs/41044852911), archived 3,456 exact requests, 54 trial summaries, paired arm order, independent audit. Internal component comparison only. |
 | Executable joint compression, 27-28 October | [Implementation scope](SOLID_STORAGE_OCT27.md), [complete results](../results/research/solid_storage_oct27/RESULTS.md) | 28 original data artifacts, all 446 conditions and independent reconstruction; 244 smaller stores/200 ties versus prior flat, 20 wins/424 ties versus equal-format local control. Original three losses and post-hoc correction preserved; broad gate fails. |
 | Coupled delta storage, 27 October | [Protocol and proof boundary](DELTA_STORAGE_OCT27.md), [complete results](../results/research/delta_storage_oct27/RESULTS.md) | 446 conditions, 56 original artifacts across both attempts, stronger local controls and all archive losses; 201 smaller stores, 243 ties, two unmeasured Letter objectives. The primary gate fails. |
 | Lossless storage, 26 October | [Fresh protocol](ENCODED_STORAGE_OCT26.md), [frozen transfer](ENCODED_TRANSFER_OCT26.md), [results](../results/research/encoded_storage_oct26/RESULTS.md) | 216 fresh conditions, 4,536 requests and all 230 older transfer conditions; 28 original artifacts, stronger gzip controls and explicit unavailable objectives |
@@ -58,3 +61,5 @@ Use a fresh output path. The 100% DVC win rate applies to the fixed authored cat
 ## Manuscript checkpoints
 
 The repository retains dated drafts in `paper/` and `output/pdf/`. Result populations and implementation revisions are identified in their corresponding reports. Published-component adapters, manual retention controls, native DVC execution and the separately coded exact formulation are different comparator types and are labelled accordingly.
+
+The current ACM source is `paper/acm_revised/RecoverML_paper_revised.tex`; its compiled PDF is `output/pdf/RecoverML_paper_revised.pdf`. The paper build gates on six measured-figure source audits, runtime and multi-runner audits, and the same-store ablation audit. The methodology figure is an illustration. The original Letter frontier archive remains absent; the recovered four payloads match their recorded hashes and sizes, and the published figure uses the archived byte ledgers.

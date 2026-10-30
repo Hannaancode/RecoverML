@@ -390,6 +390,8 @@ Every actual request records whether its expected target identities were recover
 
 The final file API runs on a four-vCPU AMD EPYC 9V74 Linux runner. Breast Cancer and Digits have 1, 4 and 16 versions; root-only replay and retained-target export use different measured byte totals. Each condition has three bursts of 128 requests, using 1/2/4/8 threads or 1/2/4 same-host process replicas, for 252 trials. Requests have private outputs; warmup and planning are excluded. Throughput covers submission through completion, service P99 covers execution, and response P99 also includes queue wait. The artifact retains every request, source hash, machine record and independent audit.
 
+A separate ablation holds the physical retained store and target request fixed while timing direct file export, export after graph and contract setup, and that same export followed by object conversion. It covers two workloads, three history lengths, three repeats and 64 paired requests per repeat. Arm order rotates within each request; outputs and hashes are checked before timings are summarized.
+
 \section{Results}
 \label{sec:results}
 
@@ -570,20 +572,22 @@ The final file API recovers all 32,256 requests exactly across 252 audited trial
 \begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/runtime_scaling.pdf}
 \caption{Final file API throughput and service P99 relative to one worker.}
-\Description{Four vector panels show the median and range of fixed-case throughput and service-P99 ratios. Four same-host process replicas increase throughput in both retention modes, while eight threads reduce it. Tail latency increases with concurrency.}
+\Description{Four vector panels show median and range of fixed-case throughput and service-P99 ratios. Small P99 dots show all 18 trial ratios at each worker count. Four same-host process replicas increase throughput in both retention modes, while eight threads reduce it. Tail latency increases with concurrency.}
 \label{fig:performance}
 \end{figure*}
 
-Four process replicas increase throughput in all six fixed cases per mode: median ratios are 2.50 for replay and 1.97 for export. Eight threads reduce throughput in all 12 cases, with median ratios of 0.70 and 0.48. Median service-P99 ratios at four processes are 1.59 and 3.09; at eight threads they are 11.75 and 22.38. The saved raw requests expose each tail sample and its queue wait. The earlier prototype separately records 5,400 exact requests across 54 trials.
+Four process replicas increase throughput in all six fixed cases per mode: median ratios are 2.50 for replay and 1.97 for export. Eight threads reduce throughput in all 12 cases, with median ratios of 0.70 and 0.48. Median service-P99 ratios at four processes are 1.59 and 3.09; at eight threads they are 11.75 and 22.38. Figure~\ref{fig:performance} also shows the 18 trial P99 ratios at each worker count, while the saved raw requests expose each service time and queue wait. The earlier prototype separately records 5,400 exact requests across 54 trials.
 
 We also ran root-only replay on independent Linux runners, with one, two or four replicas each capturing the same declared 16-version Digits history. Across three synchronized rounds per configuration, all 2,688 requests matched their own runner's recorded target hashes. Median aggregate throughput was 36.4, 71.4 and 144.7 requests/s, or 1.96 and 3.97 times the one-runner rate. The four-runner rate was 82\% of the sum of its individual rates. The runners used two CPU variants and produced two target hash sets, so these ratios describe heterogeneous provisioned capacity rather than equal-hardware speedup. Each replica used its own immutable store; no networked shared store was tested.
 
-Process-crash tests kill a child just before or after publication: the final path is absent before rename and verifies completely after it. A separate 32-reader test recovers exact bytes into private outputs from one immutable store.
+The same-store ablation recovered all 3,456 requests exactly. Across 18 matched workload, length and repeat groups, graph and contract setup made median request time 3.28 times direct export; adding object conversion and its source reread made it another 1.32 times the setup-plus-export path. Both added costs appeared in all 18 groups. This decomposition identifies why direct retained-file export is the measured fast path; it compares internal paths rather than another system.
+
+Process-crash tests kill a child just before or after publication: the final path is absent before rename and verifies completely after it. A separate 32-reader test recovers exact bytes into private outputs from one immutable store. The artifact maps the single-filesystem publication states and reader rules to these tests~\cite{artifact}.
 
 \section{Discussion and Reproducibility}
 \label{sec:discussion}
 
-RecoverML first protects complete recovery and then minimizes stored bytes, while recovery time is measured separately. The manual frontier ties and faster snapshot loads show how the preferred choice depends on that objective. The repository provides source hashes, captured file identities, raw timings, solver records and analysis scripts~\cite{artifact}. Its script rebuilds the original figures from recorded inputs, and later storage and recovery ledgers are linked in the same artifact. Fresh runs write to a new output directory, and none of these studies required a GPU.
+RecoverML first protects complete recovery and then minimizes stored bytes, while recovery time is measured separately. The manual frontier ties and faster snapshot loads show how the preferred choice depends on that objective. The repository provides source hashes, captured file identities, raw timings, solver records and analysis scripts~\cite{artifact}. Its paper build audits the six measured figures against saved calls, trials, manifests and file ledgers before regenerating all seven vector figures. Fresh runs write to a new output directory, and none of these studies required a GPU.
 
 \section{Limitations}
 

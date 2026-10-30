@@ -1,6 +1,6 @@
-"""Rebuild the Letter storage figure from the per-policy measured rows.
+"""Rebuild the Letter storage figure from physical blob and selected-set ledgers.
 
-Source: results/research/gigabyte_letter_oct16/summary.csv.
+Source: results/research/gigabyte_letter_oct16/{manifest,blob_inventory,planner_records}.
 Run from this directory with ``python make_letter_storage.py``.
 """
 
@@ -14,19 +14,39 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+from recoverml.capability_retention import contract
+from recoverml.core import Graph
+
 
 ROOT = Path(__file__).resolve().parents[3]
 STUDY = ROOT / "results/research/gigabyte_letter_oct16"
+GRAPH = Graph.read(STUDY / "manifest.json")
+INVENTORY = json.loads((STUDY / "blob_inventory.json").read_bytes())
+PLANS = {(row["scope"], row["policy"]): row for row in
+         json.loads((STUDY / "planner_records.json").read_bytes())}
+TARGET_BLOBS = {GRAPH.nodes[node].blob for targets in GRAPH.targets.values() for node in targets}
+SNAPSHOTS = GRAPH.roots | TARGET_BLOBS
 with (STUDY / "summary.csv").open(newline="", encoding="utf-8") as stream:
     measured = [row for row in csv.DictReader(stream) if row["policy"] == "RecoverML_exact"]
 if sorted(row["scope"] for row in measured) != ["broad", "preprocessing"]:
     raise ValueError("Letter measured scope rows differ")
-SCOPES = {row["scope"]: {
-    "snapshot_bytes": int(row["baseline_bytes"]),
-    "gzip_snapshot_bytes": int(row["gzip_baseline_bytes"]),
-    "exact_bytes": int(row["retained_bytes"]),
-    "gzip_exact_bytes": int(row["gzip_retained_bytes"]),
-} for row in measured}
+SCOPES = {}
+for row in measured:
+    plan = PLANS[(row["scope"], "RecoverML_exact")]
+    selected = set(plan["selected"])
+    overhead = GRAPH.metadata_bytes() + len(contract(plan["capabilities"], 1))
+    values = {
+        "snapshot_bytes": overhead + sum(INVENTORY[blob]["bytes"] for blob in SNAPSHOTS),
+        "gzip_snapshot_bytes": overhead + sum(INVENTORY[blob]["gzip_bytes"] for blob in SNAPSHOTS),
+        "exact_bytes": overhead + sum(INVENTORY[blob]["bytes"] for blob in selected),
+        "gzip_exact_bytes": overhead + sum(INVENTORY[blob]["gzip_bytes"] for blob in selected),
+    }
+    if values != {"snapshot_bytes": int(row["baseline_bytes"]),
+                  "gzip_snapshot_bytes": int(row["gzip_baseline_bytes"]),
+                  "exact_bytes": int(row["retained_bytes"]),
+                  "gzip_exact_bytes": int(row["gzip_retained_bytes"])}:
+        raise ValueError("Letter physical ledger and measured summary differ")
+    SCOPES[row["scope"]] = values
 HEADLINE = json.loads((STUDY / "analysis.json").read_bytes())["scopes"]
 if any(SCOPES[scope][metric] != HEADLINE[scope][metric]
        for scope in SCOPES for metric in SCOPES[scope]):

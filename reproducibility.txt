@@ -827,3 +827,18 @@ To recover protected targets, select the appropriate supported operator family:
   PYTHONPATH=src python -m recoverml.solid_store recover --store STORE --output NEW_OUTPUT --operators census
 The solid format decodes the whole retained archive in memory and uses temporary
 retained files for replay. No new latency or memory advantage is asserted.
+
+REVISED ACM PAPER AND OCTOBER 30 EVIDENCE
+Install the pinned dependencies in requirements.txt and this package, then install
+Tectonic 0.17.0. From the repository root, the single paper command audits the
+saved runtime, independent-runner, figure-source and internal-ablation evidence,
+regenerates all seven vector figures, compiles the manuscript and checks 10–12 pages:
+  python scripts/rebuild_revised_paper.py --tectonic PATH_TO_TECTONIC
+The result is output/pdf/RecoverML_paper_revised.pdf. The independent same-store
+ablation audit can also be run alone:
+  python scripts/audit_retained_file_ablation_release.py
+Its source, full logs and observed ratios are identified in
+results/research/retained_file_ablation_oct30/RESULTS.md. The original Letter
+frontier archive is unavailable; four reconstructed frontier payloads have
+matching hashes and sizes, and Figure 6 recomputes its values from retained
+blob-size and selected-set ledgers. See docs/PAPER_FIGURE_SOURCE_AUDIT_OCT30.md.
