@@ -1,0 +1,10 @@
+{
+  "workloads": [
+    ["breast_cancer", "standard_linear"],
+    ["digits", "pca_neighbors"]
+  ],
+  "versions": [1, 4, 16],
+  "requests": 64,
+  "repeats": 3,
+  "seed": 20261047
+}

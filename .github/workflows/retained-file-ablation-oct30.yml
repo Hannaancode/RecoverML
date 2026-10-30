@@ -1,0 +1,50 @@
+name: Retained file recovery ablation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/benchmark_retained_file_ablation.py
+      - configs/retained_file_ablation_oct30.json
+      - .github/workflows/retained-file-ablation-oct30.yml
+
+jobs:
+  ablation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned benchmark environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install -e .
+      - name: Record environment
+        run: |
+          mkdir -p retained-file-ablation-environment
+          python -m pip freeze > retained-file-ablation-environment/pip-freeze.txt
+          lscpu > retained-file-ablation-environment/lscpu.txt
+          git rev-parse HEAD > retained-file-ablation-environment/source-commit.txt
+      - name: Smoke and audit
+        run: |
+          python scripts/benchmark_retained_file_ablation.py --output retained-file-ablation-smoke --smoke
+          python scripts/benchmark_retained_file_ablation.py --output retained-file-ablation-smoke --audit-only
+      - name: Full controlled ablation and audit
+        run: |
+          python scripts/benchmark_retained_file_ablation.py --output retained-file-ablation-full
+          python scripts/benchmark_retained_file_ablation.py --output retained-file-ablation-full --audit-only
+      - name: Retain raw evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retained-file-ablation-oct30-${{ github.run_id }}
+          path: |
+            retained-file-ablation-environment/
+            retained-file-ablation-smoke/
+            retained-file-ablation-full/
+          retention-days: 90
