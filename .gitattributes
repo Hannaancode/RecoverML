@@ -9,3 +9,7 @@ results/validation/2026-10-27/delta_storage/** -text whitespace=cr-at-eol
 results/validation/2026-10-27/solid_storage/** -text whitespace=cr-at-eol
 results/research/solid_storage_oct27/** -text whitespace=cr-at-eol
 results/validation/2026-10-28/** -text whitespace=cr-at-eol
+
+# Preserve original Milestone 2 evidence bytes on every platform.
+results/milestone2/performance/** -text whitespace=cr-at-eol
+run_benchmarks.sh text eol=lf

@@ -1,0 +1,23 @@
+name: Audit Milestone 2 evidence on Linux and Windows
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.gitattributes'
+      - '.github/workflows/milestone2-evidence.yml'
+      - 'scripts/audit_milestone2_release.py'
+      - 'src/recoverml/performance.py'
+      - 'results/milestone2/performance/**'
+jobs:
+  audit:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - run: python scripts/audit_milestone2_release.py

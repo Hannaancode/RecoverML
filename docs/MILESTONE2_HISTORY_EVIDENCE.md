@@ -5,8 +5,9 @@ historical [rubric audit](https://github.com/Hannaancode/RecoverML/blob/5c08783/
 records four category weights: implementation and authenticity 35%, benchmark
 harness 25%, authentic traces 25%, and preliminary plots and analysis 15%.
 Its note says the excellent implementation level also asks for sustained
-development in course Weeks 4–7. The actual course calendar and full rubric
-screenshots are not in this repository, so the date-to-week mapping is open.
+development in course Weeks 4–7. The exact rubric screenshots supplied on 30 October confirm maxima of 3.5,
+2.5, 2.5 and 1.5 points. The Satisfactory implementation band is 2.63 points.
+The course calendar is still unavailable, so the date-to-week mapping is open.
 
 ## Genuine repository history visible from `main`
 
@@ -27,7 +28,8 @@ and publication of raw execution logs (`127bbd6`, Oct 14). Subsequent work on
 of `main`.
 These commits establish a visible development sequence from Oct 3–30, but
 cannot establish which dates were Weeks 4–7 or whether the rubric requires an
-earlier start.
+earlier start. No commits are dated October 19–25; this gap must be assessed
+against the actual course dates.
 
 ## Category evidence
 
@@ -36,13 +38,15 @@ earlier start.
 | Implementation and authenticity (35%) | `src/recoverml/`, `tests/`, historical code commits, and `docs/ARCHITECTURE_CRASH_CONCURRENCY.md` | Instructor must assess authenticity and map actual course weeks to commit dates. |
 | Benchmark harness (25%) | `run_benchmarks.sh`, `Makefile`, `results/milestone2/performance/config.json` and `provenance.json` | Rerun on submission machine if required. |
 | Authentic traces (25%) | `results/milestone2/performance/{requests.csv,resources.csv,operations.jsonl.gz,audit.json,HASHES.json}`; its audit reports 5,400/5,400 exact requests, 54 trials, 2,129 resource samples and 39,600 operation records. `results/milestone2/storage/audit.json` reports 140 requests across 28 selections. | Verify hashes and selected runs on the grading environment. |
-| Preliminary plots and analysis (15%) | 16 PNG plots under `results/milestone2/`, including throughput vs concurrency, latency CDF and storage/planning plots; companion README and summary files. | Check that the submitted report actually cites and explains the figures. |
+| Preliminary plots and analysis (15%) | 16 PNG plots under `results/milestone2/`, including throughput vs concurrency, latency CDF and storage/planning plots; companion README and summary files. | Submit the performance report with the preliminary report; the dated submission supplement now links it explicitly. |
 
 Under a **conservative provisional band assignment** of Satisfactory for
 implementation (because the course-week mapping is unverified) and Excellent
 for the other three categories, the weighted rubric score is
-`0.75 × 35 + 25 + 25 + 15 = 91.25%`. If the instructor verifies the calendar
+`2.63 + 2.5 + 2.5 + 1.5 = 9.13/10 = 91.3%`. If the instructor verifies the calendar
 requirement and judges implementation Excellent, the same category assignment
 would be 100%. The evidence cannot justify a definitive 95%+ claim before that
-check. Any additional rubric descriptors in the screenshots may change this
-assessment.
+check. The screenshots explicitly require automated variation in thread counts, data
+scales, or batch sizes; varying batch sizes is not an additional requirement
+when the thread and scale sweeps are present. See the [submission guide](MILESTONE_SUBMISSION_GUIDE.md)
+for the exact evidence and a saved-data audit command.

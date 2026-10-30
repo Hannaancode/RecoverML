@@ -2,6 +2,8 @@
 
 Author: Abdul Hannaan. Experiment date: 3 October 2026.
 
+Submission supplement added 30 October 2026: submit the [performance report](PERFORMANCE_REPORT.md) with this dated report. It contains the throughput and latency CDF figures, two comparison policies, resource traces, and analysis of concurrency dips and tail spikes, originally committed on 7 October. The [submission guide](../MILESTONE_SUBMISSION_GUIDE.md) maps each rubric criterion to its evidence. The results below retain their original cutoff.
+
 ## Main finding
 
 The prototype works within its stated scope. The coverage-constrained planner produced **775 exact restorations out of 775 admitted version requests**, with **zero unexpected hash mismatches**. It blocked 325 of its 1,100 requests because of required-input budgets or a heuristic inability to fit all protected targets.
