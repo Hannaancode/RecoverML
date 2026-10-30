@@ -1,0 +1,10 @@
+{
+  "workloads": [["breast_cancer", "standard_linear"], ["digits", "pca_neighbors"]],
+  "versions": [1, 4, 16],
+  "modes": ["root_replay", "target_files"],
+  "threads": [1, 2, 4, 8],
+  "processes": [1, 2, 4],
+  "requests": 128,
+  "repeats": 3,
+  "seed": 20261030
+}

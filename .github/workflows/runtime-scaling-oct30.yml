@@ -1,0 +1,47 @@
+name: Runtime scaling and publication crash checks
+on:
+  push:
+    paths:
+      - '.github/workflows/runtime-scaling-oct30.yml'
+      - 'src/recoverml/store_publish.py'
+      - 'src/recoverml/file_recovery.py'
+      - 'src/recoverml/file_export.py'
+      - 'src/recoverml/broad_workflows.py'
+      - 'scripts/benchmark_runtime_scaling.py'
+      - 'configs/runtime_scaling_oct30.json'
+      - 'tests/test_store_publication.py'
+  workflow_dispatch:
+jobs:
+  runtime-scaling:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      PYTHONPATH: src
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -p test_store_publication.py -v
+      - run: python scripts/benchmark_runtime_scaling.py --smoke --output work/runtime_scaling_smoke
+      - run: python scripts/benchmark_runtime_scaling.py --audit-only --output work/runtime_scaling_smoke
+      - run: python scripts/benchmark_runtime_scaling.py --output work/runtime_scaling_full
+      - run: python scripts/benchmark_runtime_scaling.py --audit-only --output work/runtime_scaling_full
+      - run: |
+          mkdir -p work/runtime_scaling_metadata
+          python -m pip freeze > work/runtime_scaling_metadata/packages.txt
+          lscpu > work/runtime_scaling_metadata/lscpu.txt
+          git rev-parse HEAD > work/runtime_scaling_metadata/commit.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-scaling-crash-evidence
+          path: |
+            work/runtime_scaling_smoke
+            work/runtime_scaling_full
+            work/runtime_scaling_metadata
