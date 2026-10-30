@@ -52,26 +52,25 @@ def run_arm(arm, store, output, target_ids):
     view = restricted(graph, retained_contract["capabilities"], ())
     view.targets = {"request": list(target_ids)}
     restorer = WitnessRestorer(view, store)
-    if arm == "certified_export":
-        receipt = export_retained_targets(store, output, target_ids=target_ids)
-        if receipt is None:
-            raise ValueError("The certified arm could not export retained files")
-        return receipt["target_sha256"]
-    if arm != "certified_deserialize":
+    if arm not in ("certified_export", "certified_deserialize"):
         raise ValueError("Unknown arm")
-    output.mkdir(parents=True, exist_ok=False)
-    hashes = {}
+    receipt = export_retained_targets(store, output, target_ids=target_ids)
+    if receipt is None:
+        raise ValueError("The certified arm could not export retained files")
+    if arm == "certified_export":
+        return receipt["target_sha256"]
+    # This is deliberately additive: the output is first exported exactly as
+    # in the preceding arm, then each object is loaded and repacked in memory.
+    # It measures conversion plus the source reread; it is not a pure CPU cost.
     for target in target_ids:
         expected = graph.nodes[target].blob
         data = pack(restorer.get(target))
         if digest(data) != expected:
             raise ValueError("Deserialized target did not roundtrip exactly")
         destination = output / (expected + ".pkl")
-        destination.write_bytes(data)
-        if digest(destination.read_bytes()) != expected:
-            raise ValueError("Written target did not match capture")
-        hashes[expected] = expected
-    return hashes
+        if destination.read_bytes() != data:
+            raise ValueError("Repacked object differed from the exported target file")
+    return receipt["target_sha256"]
 
 
 def protocol(config, smoke):
@@ -99,7 +98,7 @@ def run(config, output, *, smoke=False):
                       platform=platform.platform(), cpu_count=os.cpu_count(),
                       source_sha256={str(path.relative_to(ROOT)): digest(path.read_bytes())
                                      for path in sources},
-                      comparison="Three internal paths, same physically retained files, targets and fresh output per request",
+                      comparison="Three internal paths, same physically retained files, targets and fresh output per request; third arm adds object conversion and source reread after identical export",
                       cache="Warmed once per arm and case, then Latin-square arm order; OS caches not flushed")
     write_json(output / "provenance.json", provenance)
     captures = {}
@@ -184,6 +183,15 @@ def audit(output):
                 for repeat in range(cfg["repeats"]) for arm in ARMS]
     if len(summaries) != len(expected) or len(requests) != len(expected) * cfg["requests"]:
         raise ValueError("Ablation matrix differs")
+    expected_sequence = [(f"{dataset}-{recipe}-v{versions}", repeat, request_id,
+                          ARMS[(repeat + request_id + offset) % len(ARMS)])
+                         for dataset, recipe in cfg["workloads"] for versions in cfg["versions"]
+                         for repeat in range(cfg["repeats"]) for request_id in range(cfg["requests"])
+                         for offset in range(len(ARMS))]
+    actual_sequence = [(row["case"], row["repeat"], row["request_id"], row["arm"])
+                       for row in requests]
+    if actual_sequence != expected_sequence:
+        raise ValueError("Ablation paired requests or balanced arm order differs")
     by_group = defaultdict(list)
     for row in requests:
         key = (row["dataset"], row["recipe"], row["versions"], row["repeat"], row["arm"])
