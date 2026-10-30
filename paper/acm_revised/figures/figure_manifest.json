@@ -1,13 +1,18 @@
 {
-  "source_commit": "27de00d96c4390e3ec5e7fd4f320d79aa8c5f51f",
+  "original_figure_source_commit": "27de00d96c4390e3ec5e7fd4f320d79aa8c5f51f",
+  "revision_date": "2026-10-30",
+  "methodology_source": "Author-supplied image: ChatGPT Image Oct 17, 2026, 07_22_00 PM.png",
+  "letter_values_source": "results/research/gigabyte_letter_oct16/analysis.json",
   "figures_sha256": {
     "earlier_performance.pdf": "12402f1fa50ed5eb6c7303691157a5c49e02c43ccf41b6ec8ca62433fa5f0598",
-    "letter_storage.pdf": "f90815a1f52497c0ee1e50de9eec0f75a3f151c0a3ad75ecfefa13bf9ef6c73c",
+    "letter_storage.pdf": "5c431e51fea7578bddc0db0585b726ab4270a7e532be188e806ac9ddedd5cd52",
     "methodology.pdf": "e65ba1752d40898c09a7fe340b1d00fa1410f41c8ddfb59a1d1e01cadf83a55a",
+    "methodology_rebuilt.pdf": "aa27a05bf05955156fb8d5e3fe1eff28480bfe99a375b9ee67d7343cb5bccb02",
+    "methodology_user.png": "11b69b8450012198829b4c43b26921ed40560e823dcc47c3c3c97026ce2cf715",
     "native_recovery.pdf": "0d3632508df690af09dd2067f37b074ab48bcc5f84f188320385294f31f1aa4e",
     "planner_timing.pdf": "c6c91545ce8170cd5882fb7170da370c30683104252f4e10c29944e98f1b37a2",
     "retinal_storage.pdf": "faef7141719fedce57dc6032a416a0cc5374a96d9d9b043c80ec4616c65b3570",
     "shared_storage.pdf": "0c5501281f49bcc82f154f74bb2a32b742cd1f10ae2fdec54baeda132cefbb32"
   },
-  "measurements": "All values read from recorded evidence; no timing or payload experiment rerun"
+  "measurements": "Letter bars use recorded byte totals. No timing or payload experiment rerun."
 }

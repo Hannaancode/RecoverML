@@ -1,4 +1,4 @@
-# RecoverML paper revision, 28 October 2026
+# RecoverML paper revision, 30 October 2026
 
 `RecoverML_paper_revised.tex` is the editable ACM two-column manuscript. It was
 revised from the author's 17 October LaTeX package and checked against the
@@ -7,11 +7,19 @@ Pipelines under Declared Capability Loss*. The later PDF did not contain its
 exact TeX source, so this revision preserves the packaged manuscript's
 sections, figures, methods and references while matching the uploaded title,
 author affiliation and email and adding the audited October 26-27 evidence.
+The 30 October pass applies the author's writing rules throughout the prose,
+shortens captions, adds a concise limitations section, uses the author-supplied
+architecture diagram and redraws the Letter storage bars.
 The compiled result is `../../output/pdf/RecoverML_paper_revised.pdf`.
 
 The source folder contains the unmodified `acmart.cls` and
-`ACM-Reference-Format.bst` supplied in the author's package, plus its seven
-original vector figures and locally licensed Libertine/Biolinum fonts. The
+`ACM-Reference-Format.bst` supplied in the author's package, five used original
+vector figures, the original methodology figure retained for reference, the
+author-supplied `methodology_user.png`, and vector redraws of that diagram and
+the Letter chart. `figures/make_methodology.py` follows the supplied diagram's
+layout and arrow directions. `figures/make_letter_storage.py` records the Letter figure values and layout;
+the byte values agree with `results/research/gigabyte_letter_oct16/analysis.json`.
+The locally licensed Libertine/Biolinum fonts are also included. The
 manuscript generates `references.bib` from its `filecontents` block.
 The original 17 October source ZIP in Downloads also contains older plot inputs
 and audit receipts. Those receipts describe the earlier cutoff and are not
@@ -20,13 +28,14 @@ repository's `results/research/` folders.
 
 ## Build
 
-Run from this directory with Tectonic 0.17.0:
+Run from this directory with Tectonic 0.17.0 or upload this folder to Overleaf
+and select XeLaTeX:
 
 ```sh
 tectonic RecoverML_paper_revised.tex --outdir ../../output/pdf
 ```
 
-The build completed locally and produced a 13-page PDF. The title page,
+The build completed locally and produced a 12-page PDF. The title page,
 published-rule comparison, new storage results, DVC census, figures and
 references were rendered and inspected.
 The PDF was also checked for text extraction and unresolved citation markers.
