@@ -5,6 +5,7 @@ import io
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import tarfile
 import zipfile
 
 from audit_multi_runner_replica import audit
@@ -24,24 +25,29 @@ def main():
     if sha(archive.read_bytes()) != expected:
         raise ValueError("Multi-runner release archive hash differs")
     with zipfile.ZipFile(archive) as bundle, TemporaryDirectory() as temporary:
-        index = json.loads(bundle.read("artifact_index.json"))
-        if index["run_id"] != 41037831235 or len(index["artifacts"]) != 7:
-            raise ValueError("Runner index differs")
-        for item in index["artifacts"]:
-            data = bundle.read("artifacts/" + item["name"] + ".zip")
-            if sha(data) != item["sha256"]:
-                raise ValueError("GitHub artifact ZIP hash differs")
-            dest = Path(temporary) / item["name"]
-            dest.mkdir()
-            with zipfile.ZipFile(io.BytesIO(data)) as member_archive:
-                for member in member_archive.infolist():
-                    if Path(member.filename).name != member.filename or member.is_dir():
-                        raise ValueError("Unexpected artifact member path")
-                    (dest / member.filename).write_bytes(member_archive.read(member))
-        result = audit(temporary)
-        if json.loads(json.dumps(result)) != json.loads(bundle.read("audit_summary.json")):
+        if set(bundle.namelist()) != {"multi_runner_summary.json", "multi_runner_evidence.tar.gz"}:
+            raise ValueError("Action audit artifact members differ")
+        with tarfile.open(fileobj=io.BytesIO(bundle.read("multi_runner_evidence.tar.gz")), mode="r:gz") as raw:
+            for member in raw.getmembers():
+                if member.name == "multi_runner_summary.json" and member.isfile():
+                    if raw.extractfile(member).read() != bundle.read("multi_runner_summary.json"):
+                        raise ValueError("Duplicate audit summaries differ")
+                    continue
+                parts = Path(member.name).parts
+                if not parts or parts[0] != "multi_runner_download" or ".." in parts:
+                    raise ValueError("Unsafe runner evidence path")
+                dest = Path(temporary).joinpath(*parts)
+                if member.isdir():
+                    dest.mkdir(parents=True, exist_ok=True)
+                elif member.isfile():
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    dest.write_bytes(raw.extractfile(member).read())
+                else:
+                    raise ValueError("Unexpected runner evidence type")
+        result = audit(Path(temporary) / "multi_runner_download")
+        if json.loads(json.dumps(result)) != json.loads(bundle.read("multi_runner_summary.json")):
             raise ValueError("Saved multi-runner summary differs from raw requests")
-        if result["source_commit"] != index["source_commit"]:
+        if result["source_commit"] != "2812e626d634818e6935362741b9c09aecd44f03":
             raise ValueError("Source commit differs")
         print(json.dumps(result, indent=2))
 

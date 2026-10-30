@@ -7,15 +7,15 @@
   "runtime_artifact_sha256": "dd905bf76b5dceb5949805af440d453612c57b0fc164462ed673a020b80ffe03",
   "figures_sha256": {
     "earlier_performance.pdf": "12402f1fa50ed5eb6c7303691157a5c49e02c43ccf41b6ec8ca62433fa5f0598",
-    "letter_storage.pdf": "bfaf20d5e3cdde26688d4b34b5f18dc186be74006ea881cded6de6898de6bbc5",
+    "letter_storage.pdf": "9250fd8ab2ad1c8add554912e7b1c50510a722d1ace411b1c442fcf67a004523",
     "methodology.pdf": "e65ba1752d40898c09a7fe340b1d00fa1410f41c8ddfb59a1d1e01cadf83a55a",
-    "methodology_rebuilt.pdf": "99368a70e815d5b4088ee63d397f6076664dd4a9f5b7809cee573a75b1725c7e",
+    "methodology_rebuilt.pdf": "5f22e0ac43088e25ba58310d0101dff695684a098a50512017d7f2d9de843b70",
     "methodology_user.png": "11b69b8450012198829b4c43b26921ed40560e823dcc47c3c3c97026ce2cf715",
-    "native_recovery.pdf": "271d840408b21d40592355c85f0e6c0ea059b262a84973faee89c8f6613f0128",
-    "planner_timing.pdf": "513e2710c57f1e153d88f24ac94cf191c7beb13f4b0eed9366afd35d27f0a05f",
-    "retinal_storage.pdf": "ab1b3aeb340b9e9bc862c8425d6832878bb92b80561df9d9008b06898623cee5",
-    "shared_storage.pdf": "9f394e564ea57c7b1f60fd77d039757956dfd2c3ea4980a1368c359f30af74bd",
-    "runtime_scaling.pdf": "1635d20ff21c0288d3d692251baabc20b01c2fe7925abffc731c25b070a5402e"
+    "native_recovery.pdf": "406e2fd03807279786320f819b376be92bdd6dee0d66bc128f2de7ece4e7b8e3",
+    "planner_timing.pdf": "1034d30b667537576c6da5bbc1729c6cd17363d87bffcdb1bdd5c616141a48ab",
+    "retinal_storage.pdf": "968357309ff0279aebbc302f602e5d23a9d92ba23e1f4e07d46194f9e517c9b3",
+    "shared_storage.pdf": "d647347ee5b050ed2474948f5d81c6f6a36efbbce69ee71529fbb85f77114a14",
+    "runtime_scaling.pdf": "60a1332beef63a769a5b532b16bb18df58e74b3773a41ba1092bf88043d4e462"
   },
   "measurements": "All seven used vector figures regenerate from saved ledgers or the author-supplied architecture image; the runtime chart uses the 32,256-request audited Action artifact."
 }
