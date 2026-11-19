@@ -1,0 +1,72 @@
+Responses to Group 2 technical peer review comments
+RecoverML
+19 November 2026
+
+Scope
+These responses cover Reviewer 1 W2, E1 and the technical part of V1, and Reviewer 2 M1, M2, M3, M5, M6 and M7. The separate presentation requests in Group 1 and the experimental requests M4 and M8 remain outside this revision. No new models, benchmarks or algorithm changes were needed. The checks below reanalyze saved records and inspect the implementation.
+
+Reviewer 1 W2
+Effect of the failure bound on eligible DAGs
+
+We agree that this implication of Equation 5 should be explicit. For a fixed graph, target set, loss grouping and payload costs, all positive k values give the same feasible retained payload sets and minimum payload cost on the eligible single-producer DAG subclass, while k = 0 leaves all producers available. We clarified this after Equation 5 and in the description of the scientific k sweep. Dependence on k is possible on general histories with alternative producers, although fallback eligibility does not itself imply a change in the selected store. Rechecking the saved 48-condition timing grid confirms equal minimum bytes in all 12 eligible k = 1/k = 2 pairs and also in its four fallback pairs. This clarification follows the existing theorem and records, so a new experiment is unnecessary.
+
+Reviewer 1 E1
+Hardware boundary and storage versus recovery time
+
+We clarified that the independent runners each capture their own Digits history before issuing recovery requests. The two target hash sets therefore identify distinct fresh captures across the CPU/BLAS variants. All 2,688 recoveries match the target hashes of their own captures; these records are not a controlled test that replays one common frozen capture across CPUs. The revised description states the capture identity used for verification, and the Limitations section identifies byte portable replay across hardware as untested without attributing the hash difference to the CPU alone.
+
+The storage and recovery trade-off is already visible in Letter: the canonical frontier stores 4,829,269 bytes instead of 3,669,545,821 snapshot bytes, while mean recovery takes 6.65 s per version instead of 2.12 s for snapshot loading. We now explain in the Discussion that complete recovery is a constraint and stored bytes are the optimization objective. Extra checkpoints or targets can be preferable for frequent access. Similarly, the scientific matrix's 2,324 individual local-search recoveries versus 1,734 exact-policy recoveries concern partial success across fixed budgets; both complete 128 conditions. A complete-history requirement and a count of individually recovered targets are different objectives, so the higher partial count does not invalidate the complete-recovery optimum.
+
+Reviewer 1 V1
+Baseline objectives and DVC overhead
+Technical portion only
+
+We agree that the original baseline goals should be clear. The introduction now states that HYPPO and HELIX were designed for iterative reuse and that the comparison asks whether their adapted file selections satisfy the stated robust recovery requirement under the common budget and executor. This is a controlled test of policy choices under that requirement, rather than an evaluation of their complete deployed systems.
+
+We also clarify that CLI and warm API overhead have different meanings. CLI timing includes process startup, while the warm API path keeps imports warm but constructs a DVC repository and invokes native checkout or reproduction for each request. The direct executor's median time ratio of 0.9929 relative to RecoverML places the recovery cores near parity and helps identify the cost of surrounding orchestration. The warm API difference cannot be attributed solely to CLI startup. Absolute-byte table presentation is part of the separate Group 1 work.
+
+Reviewer 2 M1
+Scope of certified minimum storage
+
+We agree and have separated the guarantees in Section 3.2. The flat planner certifies the minimum within its declared file inventory. The delta extension certifies its declared full-file and single-base-delta inventory with bases and metadata charged. The joint compression selector measures five complete stores and chooses the smallest: the flat optimum, the delta optimum, joint compression of the flat optimum, and joint compression of each of two local-search selections. Its minimum is over those offered candidates, not over every possible jointly compressed retained set. Section 4.2 now names those five candidates precisely. This clarification keeps the certified exact subproblems distinct from the later representation selector without changing the methods or results.
+
+Reviewer 2 M2
+Practical significance of storage gains
+
+We agree that the median zero saving against strong local search needs a workload explanation. A reanalysis of the saved complete catalogue places nine of the 20 wins in shared preprocessing loss histories with two standardized views and no stored concatenation: Wine at 16 or 64 versions and Breast Cancer at 64 versions across three seeds. These cases benefit from retaining combinations of shared views across many model versions, which a one-file local exchange can miss; the existing concatenation controls support that explanation. The remaining eleven wins comprise three primary preprocessing cases, four separate-loss cloud cases and four Iris feature-union cases. Section 5.6 now gives this breakdown while preserving all 424 ties and the zero median saving. Certification remains valuable when a heuristic matches the byte minimum because a matching heuristic outcome alone does not certify optimality. That certification claim refers to the exact inventories described in Section 3.2.
+
+Reviewer 2 M3
+Defining failure groups and the loss bound
+
+We added practical guidance in Section 3.2. Groups should follow a shared dependency that actually becomes unavailable, such as an entry point, package or external service that disables its associated producers together. The bound k states how many such groups may fail at once, and an ungrouped producer is assumed to remain available. The revised text gives a small model example: if two alternative producers of one optional target use only roots and belong to different groups, one loss leaves a producer available, while losing both groups requires the target to be stored. An omitted dependency or underestimated joint loss can therefore invalidate a chosen store. The appropriate response is to revise the contract or retain the relevant output. RecoverML checks the supplied contract and does not infer real-world outage assumptions automatically.
+
+Reviewer 2 M5
+Meaning of the DVC performance comparison
+
+We agree with the interpretation and have expanded Section 5.7. All methods receive the same retained payloads and requested targets, while the measured paths include their command or API orchestration. In the warm API case, DVC imports are already loaded but per-request repository construction, checkout/reproduction and associated stage/cache handling remain inside the timed call. The direct executor remains near parity with RecoverML, with the median direct-to-RecoverML ratio of 0.9929 and faster direct cases retained in the results. The DVC comparison therefore measures the practical cost of these authored native request paths, and the data support an orchestration advantage rather than a general claim that the underlying recovery algorithm is faster. The comparison remains useful because it holds paid storage and exact target verification constant.
+
+Reviewer 2 M6
+Minimum storage and recovery latency
+
+We agree that these objectives should be distinguished. Section 5.8 already reports the Letter storage amounts and the mean per-version recovery times of 6.65 s for frontier replay and 2.12 s for snapshot loading. We added an explicit discussion of this choice in Section 6. Minimum storage is useful for archival histories, while frequently accessed results can justify additional checkpoints or retained targets. A workload weighted objective or recovery time constraint could model that preference, but it would extend the present byte-minimization problem. The observed slower frontier recovery is therefore a measured trade-off of the chosen objective, and no new experiment is required to establish it. The comparison table requested by the reviewer remains in the separate Group 1 presentation work; canonical timing results will not be attached to compressed representations whose timing has not been measured.
+
+Reviewer 2 M7
+Fair interpretation of HYPPO and HELIX comparisons
+
+We agree and have strengthened the introduction's statement of the comparison scope. HYPPO uses pinned released ranking components through a physical-file adapter, while HELIX uses the documented rule reimplementation with its tested speed and tie settings. The common budget, byte accounting and grounded executor make their file choices comparable under the same recovery requirement. Their original reuse objectives differ from this requirement, so these outcomes describe transfer of the selection rules to the declared recovery task rather than performance of the complete original systems. Sections 4.2 and 5.3 already give the adapter details and measured counts. This explanation addresses the requested interpretation without adding native-system deployments or changing the benchmark.
+
+Evidence checked
+- src/recoverml/dag_retention.py
+- src/recoverml/capability_retention.py
+- src/recoverml/solid_store.py
+- docs/DELTA_STORAGE_OCT27.md
+- results/research/strong_baseline_cloud_oct16/seed20261016/dag_timing/report.json
+- results/research/solid_storage_oct27/all_conditions.csv
+- scripts/benchmark_recovery_census.py
+- docs/RECOVERY_CENSUS_OCT26.md
+- scripts/benchmark_multi_runner_replica.py
+- results/research/multi_runner_oct30/evidence.zip
+- results/research/gigabyte_letter_oct16/RESULTS.md
+- The scientific and native comparison results already reported in the manuscript.
+
+The artifact citation now points to commit 233526bf70100c103d4b1635906f5ef434b5aa41, which contains the previously reported October 30 runtime, independent-runner and ablation evidence. This is an evidence-reference correction, not a new experimental result.

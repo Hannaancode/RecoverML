@@ -1,0 +1,415 @@
+{
+  "kind": "Reanalysis of saved evidence and source inspection; no fresh benchmark or model execution",
+  "source_commit": "233526bf70100c103d4b1635906f5ef434b5aa41",
+  "inputs_sha256": {
+    "results/research/solid_storage_oct27/all_conditions.csv": "126dfb10d568a8745b72ca664885a08ff954f942c01b2f95c37fbb2b83461345",
+    "results/research/strong_baseline_cloud_oct16/seed20261016/dag_timing/report.json": "d5fdfd770647ee7af2f438f5a2ccf6370741202fd32ab2866ee31bd329cd4f1d",
+    "results/research/multi_runner_oct30/evidence.zip": "a51629bd46332da174da8ade275838c9dc80d887d6ceb575a7b7475ca727982c",
+    "src/recoverml/dag_retention.py": "f106e1a199cab4dd7aca7a1c0aab98f0187dbce7fcc2b66a1fb77f216a21e3e3",
+    "src/recoverml/solid_store.py": "51ce18daa9e3fdfa69728f2412a9d8849d1919b820858f906de98e58e91a7817",
+    "scripts/benchmark_recovery_census.py": "b8a5a495ead691c52fb52b3ea39ce6c31143fac7ef650d3d8f3fce45057cf3cd",
+    "scripts/benchmark_multi_runner_replica.py": "3ddc761c0fb50f5359409d7df6fbcd6a90119b0579d8d24a0fb2474623098644"
+  },
+  "encoded_local_wins": 20,
+  "win_groups": {
+    "primary": 3,
+    "separate_cloud": 4,
+    "shared_cloud": 9,
+    "scientific": 4
+  },
+  "wins": [
+    {
+      "block": "primary/breast_cancer/pca_neighbors",
+      "case": "breast_cancer/pca_neighbors/v4/preprocessing",
+      "status": "COMPLETE",
+      "production_format": "flat",
+      "production_bytes": "94254",
+      "previous_flat_bytes": "94254",
+      "previous_delta_bytes": "94254",
+      "three_candidate_bytes": "94254",
+      "equal_format_local_bytes": "94655",
+      "solid_control_bytes": "95919"
+    },
+    {
+      "block": "primary/digits/pca_neighbors",
+      "case": "digits/pca_neighbors/v4/preprocessing",
+      "status": "COMPLETE",
+      "production_format": "flat",
+      "production_bytes": "156116",
+      "previous_flat_bytes": "156116",
+      "previous_delta_bytes": "156116",
+      "three_candidate_bytes": "156116",
+      "equal_format_local_bytes": "157090",
+      "solid_control_bytes": "157773"
+    },
+    {
+      "block": "primary/digits/robust_forest",
+      "case": "digits/robust_forest/v4/preprocessing",
+      "status": "COMPLETE",
+      "production_format": "flat",
+      "production_bytes": "113401",
+      "previous_flat_bytes": "113401",
+      "previous_delta_bytes": "113401",
+      "three_candidate_bytes": "113401",
+      "equal_format_local_bytes": "114506",
+      "solid_control_bytes": "113614"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "separate/wine-s20261016-v16-concat1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "21544",
+      "previous_flat_bytes": "21662",
+      "previous_delta_bytes": "21640",
+      "three_candidate_bytes": "21544",
+      "equal_format_local_bytes": "21576",
+      "solid_control_bytes": "21544"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "separate/wine-s20261016-v64-concat1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "35043",
+      "previous_flat_bytes": "35161",
+      "previous_delta_bytes": "35142",
+      "three_candidate_bytes": "35043",
+      "equal_format_local_bytes": "35075",
+      "solid_control_bytes": "35043"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/breast_cancer-s20261016-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "197584",
+      "previous_flat_bytes": "197810",
+      "previous_delta_bytes": "197781",
+      "three_candidate_bytes": "197584",
+      "equal_format_local_bytes": "221744",
+      "solid_control_bytes": "197584"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261016-v16-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "21503",
+      "previous_flat_bytes": "21730",
+      "previous_delta_bytes": "21730",
+      "three_candidate_bytes": "21503",
+      "equal_format_local_bytes": "34151",
+      "solid_control_bytes": "21503"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261016-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "35242",
+      "previous_flat_bytes": "35469",
+      "previous_delta_bytes": "35469",
+      "three_candidate_bytes": "35242",
+      "equal_format_local_bytes": "118126",
+      "solid_control_bytes": "35242"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/breast_cancer-s20261017-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "197655",
+      "previous_flat_bytes": "197856",
+      "previous_delta_bytes": "197828",
+      "three_candidate_bytes": "197655",
+      "equal_format_local_bytes": "227251",
+      "solid_control_bytes": "197655"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261017-v16-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "21468",
+      "previous_flat_bytes": "21735",
+      "previous_delta_bytes": "21735",
+      "three_candidate_bytes": "21468",
+      "equal_format_local_bytes": "34064",
+      "solid_control_bytes": "21468"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261017-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "35301",
+      "previous_flat_bytes": "35568",
+      "previous_delta_bytes": "35568",
+      "three_candidate_bytes": "35301",
+      "equal_format_local_bytes": "118305",
+      "solid_control_bytes": "35301"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "separate/wine-s20261018-v16-concat1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "21537",
+      "previous_flat_bytes": "21667",
+      "previous_delta_bytes": "21643",
+      "three_candidate_bytes": "21537",
+      "equal_format_local_bytes": "21553",
+      "solid_control_bytes": "21537"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "separate/wine-s20261018-v64-concat1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "35075",
+      "previous_flat_bytes": "35205",
+      "previous_delta_bytes": "35182",
+      "three_candidate_bytes": "35075",
+      "equal_format_local_bytes": "35091",
+      "solid_control_bytes": "35075"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/breast_cancer-s20261018-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "delta",
+      "production_bytes": "197677",
+      "previous_flat_bytes": "197765",
+      "previous_delta_bytes": "197677",
+      "three_candidate_bytes": "197677",
+      "equal_format_local_bytes": "225247",
+      "solid_control_bytes": "197707"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261018-v16-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "21474",
+      "previous_flat_bytes": "21761",
+      "previous_delta_bytes": "21761",
+      "three_candidate_bytes": "21474",
+      "equal_format_local_bytes": "34158",
+      "solid_control_bytes": "21474"
+    },
+    {
+      "block": "transfer/cloud",
+      "case": "shared/wine-s20261018-v64-concat0",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "35291",
+      "previous_flat_bytes": "35578",
+      "previous_delta_bytes": "35578",
+      "three_candidate_bytes": "35291",
+      "equal_format_local_bytes": "118139",
+      "solid_control_bytes": "35291"
+    },
+    {
+      "block": "transfer/scientific",
+      "case": "iris_union-101-preprocessing-k1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "6746",
+      "previous_flat_bytes": "6808",
+      "previous_delta_bytes": "6808",
+      "three_candidate_bytes": "6746",
+      "equal_format_local_bytes": "6990",
+      "solid_control_bytes": "6746"
+    },
+    {
+      "block": "transfer/scientific",
+      "case": "iris_union-101-preprocessing-k2",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "6746",
+      "previous_flat_bytes": "6808",
+      "previous_delta_bytes": "6808",
+      "three_candidate_bytes": "6746",
+      "equal_format_local_bytes": "6990",
+      "solid_control_bytes": "6746"
+    },
+    {
+      "block": "transfer/scientific",
+      "case": "iris_union-211-preprocessing-k1",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "6769",
+      "previous_flat_bytes": "6815",
+      "previous_delta_bytes": "6815",
+      "three_candidate_bytes": "6769",
+      "equal_format_local_bytes": "6997",
+      "solid_control_bytes": "6769"
+    },
+    {
+      "block": "transfer/scientific",
+      "case": "iris_union-211-preprocessing-k2",
+      "status": "COMPLETE",
+      "production_format": "solid-flat",
+      "production_bytes": "6770",
+      "previous_flat_bytes": "6816",
+      "previous_delta_bytes": "6816",
+      "three_candidate_bytes": "6770",
+      "equal_format_local_bytes": "6998",
+      "solid_control_bytes": "6770"
+    }
+  ],
+  "k_pairs": [
+    {
+      "case": "diabetes_poly-101-preprocessing",
+      "eligible": true,
+      "k1_bytes": 55993,
+      "k2_bytes": 55993
+    },
+    {
+      "case": "diabetes_poly-101-broad",
+      "eligible": true,
+      "k1_bytes": 56485,
+      "k2_bytes": 56485
+    },
+    {
+      "case": "diabetes_poly-211-preprocessing",
+      "eligible": true,
+      "k1_bytes": 55997,
+      "k2_bytes": 55997
+    },
+    {
+      "case": "diabetes_poly-211-broad",
+      "eligible": true,
+      "k1_bytes": 56489,
+      "k2_bytes": 56489
+    },
+    {
+      "case": "digits_forest-101-preprocessing",
+      "eligible": true,
+      "k1_bytes": 1419460,
+      "k2_bytes": 1419460
+    },
+    {
+      "case": "digits_forest-101-broad",
+      "eligible": true,
+      "k1_bytes": 29838488,
+      "k2_bytes": 29838488
+    },
+    {
+      "case": "digits_forest-211-preprocessing",
+      "eligible": true,
+      "k1_bytes": 1419462,
+      "k2_bytes": 1419462
+    },
+    {
+      "case": "digits_forest-211-broad",
+      "eligible": true,
+      "k1_bytes": 29562531,
+      "k2_bytes": 29562531
+    },
+    {
+      "case": "digits_pca-101-preprocessing",
+      "eligible": true,
+      "k1_bytes": 961205,
+      "k2_bytes": 961205
+    },
+    {
+      "case": "digits_pca-101-broad",
+      "eligible": true,
+      "k1_bytes": 961697,
+      "k2_bytes": 961697
+    },
+    {
+      "case": "digits_pca-211-preprocessing",
+      "eligible": true,
+      "k1_bytes": 961206,
+      "k2_bytes": 961206
+    },
+    {
+      "case": "digits_pca-211-broad",
+      "eligible": true,
+      "k1_bytes": 961698,
+      "k2_bytes": 961698
+    },
+    {
+      "case": "iris_union-101-preprocessing",
+      "eligible": false,
+      "k1_bytes": 22029,
+      "k2_bytes": 22029
+    },
+    {
+      "case": "iris_union-101-broad",
+      "eligible": false,
+      "k1_bytes": 29167,
+      "k2_bytes": 29167
+    },
+    {
+      "case": "iris_union-211-preprocessing",
+      "eligible": false,
+      "k1_bytes": 22025,
+      "k2_bytes": 22025
+    },
+    {
+      "case": "iris_union-211-broad",
+      "eligible": false,
+      "k1_bytes": 29731,
+      "k2_bytes": 29731
+    }
+  ],
+  "multi_runner_summary": {
+    "cpu_blas_architectures": [
+      [
+        "Haswell",
+        "Haswell"
+      ],
+      [
+        "SkylakeX",
+        "SkylakeX"
+      ]
+    ],
+    "distinct_target_hash_sets": 2,
+    "exact": 2688,
+    "replicas": 7,
+    "requests": 2688,
+    "scenarios": {
+      "1": {
+        "capacity_ratio_to_one": 1.0,
+        "maximum_start_skew_s": 0.0,
+        "median_efficiency_vs_sum_of_replica_rates": 1.0,
+        "median_throughput_rps": 36.42583322551097,
+        "repeat_throughput_rps": [
+          35.16841239139778,
+          36.72101565752952,
+          36.42583322551097
+        ]
+      },
+      "2": {
+        "capacity_ratio_to_one": 1.9591021205311487,
+        "maximum_start_skew_s": 8.0068e-05,
+        "median_efficiency_vs_sum_of_replica_rates": 0.830069542336264,
+        "median_throughput_rps": 71.36192711421252,
+        "repeat_throughput_rps": [
+          69.39258320165575,
+          71.36192711421252,
+          75.52889586548514
+        ]
+      },
+      "4": {
+        "capacity_ratio_to_one": 3.9722632261312434,
+        "maximum_start_skew_s": 4.198e-05,
+        "median_efficiency_vs_sum_of_replica_rates": 0.8212521350790557,
+        "median_throughput_rps": 144.69299780288685,
+        "repeat_throughput_rps": [
+          144.69299780288685,
+          141.2949675608335,
+          149.05577099257664
+        ]
+      }
+    },
+    "scope": "Independent stateless GitHub runners with synchronized starts; runner CPU types and byte-level output identities may differ, and there is no network request path or shared distributed store",
+    "source_commit": "2812e626d634818e6935362741b9c09aecd44f03",
+    "status": "PASS",
+    "trials": 21
+  }
+}
