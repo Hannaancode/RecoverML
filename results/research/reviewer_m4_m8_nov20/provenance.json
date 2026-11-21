@@ -1,0 +1,141 @@
+{
+  "host": "Windows-10-10.0.19045-SP0",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "source_commit": "3acf0c3f8a3e7435a18048b4d6999a5f8087b1d7",
+  "benchmark_sha256": "7bf79af26692581fa56da2690e6c558ead4f0a4be64b21472a6f45942d40d49d",
+  "m4_saved_solver_rows": [
+    {
+      "groups": 6,
+      "k": 1,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 7,
+      "median_ms": 25.58406600019225,
+      "retained_bytes": 38532,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 6,
+      "k": 1,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 7,
+      "median_ms": 10.41337599963299,
+      "retained_bytes": 38532,
+      "expanded_variables": 535,
+      "master_variables": null
+    },
+    {
+      "groups": 6,
+      "k": 2,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 22,
+      "median_ms": 34.02648800010866,
+      "retained_bytes": 46157,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 6,
+      "k": 2,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 22,
+      "median_ms": 30.999436999991303,
+      "retained_bytes": 46157,
+      "expanded_variables": 1821,
+      "master_variables": null
+    },
+    {
+      "groups": 12,
+      "k": 1,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 13,
+      "median_ms": 25.935321000361,
+      "retained_bytes": 38542,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 12,
+      "k": 1,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 13,
+      "median_ms": 17.83564600009413,
+      "retained_bytes": 38542,
+      "expanded_variables": 1003,
+      "master_variables": null
+    },
+    {
+      "groups": 12,
+      "k": 2,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 79,
+      "median_ms": 27.065897999818844,
+      "retained_bytes": 46185,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 12,
+      "k": 2,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 79,
+      "median_ms": 132.28467899989482,
+      "retained_bytes": 46185,
+      "expanded_variables": 6915,
+      "master_variables": null
+    },
+    {
+      "groups": 24,
+      "k": 1,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 25,
+      "median_ms": 26.993269999820768,
+      "retained_bytes": 38572,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 24,
+      "k": 1,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 25,
+      "median_ms": 34.57205500035343,
+      "retained_bytes": 38572,
+      "expanded_variables": 1939,
+      "master_variables": null
+    },
+    {
+      "groups": 24,
+      "k": 2,
+      "policy": "counterexample",
+      "trials": 5,
+      "scenarios": 301,
+      "median_ms": 29.861071000141237,
+      "retained_bytes": 46243,
+      "expanded_variables": null,
+      "master_variables": 17
+    },
+    {
+      "groups": 24,
+      "k": 2,
+      "policy": "expanded_exact",
+      "trials": 5,
+      "scenarios": 301,
+      "median_ms": 680.0987149999855,
+      "retained_bytes": 46243,
+      "expanded_variables": 27255,
+      "master_variables": null
+    }
+  ]
+}

@@ -130,6 +130,27 @@
   year = {1991}, howpublished = {UCI Machine Learning Repository},
   doi = {10.24432/C5ZP40}, note = {Dataset}
 }
+@book{ahuja1993flow,
+  author = {Ahuja, Ravindra K. and Magnanti, Thomas L. and Orlin, James B.},
+  title = {Network Flows: Theory, Algorithms, and Applications},
+  publisher = {Prentice Hall},
+  year = {1993}
+}
+@article{bhattacherjee2015versioning,
+  author = {Bhattacherjee, Souvik and Chavan, Amit and Huang, Silu and Deshpande, Amol and Parameswaran, Aditya},
+  title = {Principles of Dataset Versioning: Exploring the Recreation/Storage Tradeoff},
+  journal = {Proceedings of the VLDB Endowment},
+  volume = {8}, number = {11}, pages = {1346--1357}, year = {2015},
+  url = {https://www.vldb.org/pvldb/vol8/p1346-bhattacherjee.pdf}
+}
+@inproceedings{vartak2018mistique,
+  author = {Vartak, Manasi and da Trindade, Joana M. F. and Madden, Samuel and Zaharia, Matei},
+  title = {{MISTIQUE}: A System to Store and Query Model Intermediates for Model Diagnosis},
+  booktitle = {Proceedings of the 2018 International Conference on Management of Data},
+  publisher = {ACM},
+  year = {2018},
+  doi = {10.1145/3183713.3196934}
+}
 \end{filecontents*}
 
 \documentclass[sigconf,nonacm]{acmart}
@@ -147,6 +168,13 @@
 \fi
 \emergencystretch=2em
 \usepackage{placeins}
+% Reviewer changes in the compiled PDF. Yellow is Reviewer 1. Green is Reviewer 2.
+\usepackage{soul}
+\definecolor{ReviewerOneHighlight}{RGB}{255,241,151}
+\definecolor{ReviewerTwoHighlight}{RGB}{203,240,190}
+\DeclareRobustCommand{\reviewone}[1]{{\sethlcolor{ReviewerOneHighlight}\hl{#1}}}
+\DeclareRobustCommand{\reviewtwo}[1]{{\sethlcolor{ReviewerTwoHighlight}\hl{#1}}}
+\newcommand{\reviewonecell}[1]{{\setlength{\fboxsep}{1pt}\colorbox{ReviewerOneHighlight}{#1}}}
 \renewcommand{\dbltopfraction}{.95}
 \renewcommand{\dblfloatpagefraction}{.9}
 \setcounter{dbltopnumber}{5}
@@ -166,7 +194,7 @@
 \raggedbottom
 
 \begin{abstract}
-Machine learning experiments produce many versions of data and models and recovering an old result can become difficult when a processing step is no longer available. RecoverML chooses which files to keep for a stated set of possible losses and checks recovered files against their original hashes while its exact planners find and certify the smallest store within the stated physical file model. In a study of file selection rules across 56 cases under the same robust storage limit, RecoverML restores all 3,344 requests, the tested HYPPO rank and frequency components restore 2,240 and 2,291 and the best tested HELIX rule setting restores 1,940. A later choice among five storage candidates uses exact deltas and joint compression to reduce storage against the earlier flat optimum in 244 of 444 measurable conditions with 200 ties and a largest reduction of 89.84\%. It wins 20 comparisons against local search with the same formats and ties 424 while two Letter conditions remain unmeasured. The median saving against that control is zero and an exact reference using the same formats matches the certified minimum. With the same optimal stored files, RecoverML is faster than the tested native DVC integration in all 864 census configurations and is close in time to a direct executor. The final file API recovers 32,256 of 32,256 requests exactly and gives higher throughput with four process replicas in all 12 fixed cases, showing recovery coverage, storage and execution gains for the measured histories.
+Machine learning experiments produce many versions of data and models and recovering an old result can become difficult when a processing step is no longer available. RecoverML chooses which files to keep for a stated set of possible losses and checks recovered files against their original hashes while its exact planners find and certify the smallest store within the stated physical file model. \reviewone{Against strong local search, median planning was 6.27 times faster on eligible DAGs in the timing study and 16.88 times faster in the separate shared loss cloud study.} In a study of file selection rules across 56 cases under the same robust storage limit, RecoverML restores all 3,344 requests, the tested HYPPO rank and frequency components restore 2,240 and 2,291 and the best tested HELIX rule setting restores 1,940. A later choice among five storage candidates uses exact deltas and joint compression to reduce storage against the earlier flat optimum in 244 of 444 measurable conditions with 200 ties and a largest reduction of 89.84\%. It wins 20 comparisons against local search with the same formats and ties 424 while two Letter conditions remain unmeasured. The median saving against that control is zero and an exact reference using the same formats matches the certified minimum. With the same optimal stored files, RecoverML is faster than the tested native DVC integration in all 864 census configurations and is close in time to a direct executor. \reviewtwo{The final file API recovers all 32,256 requests exactly. Four process replicas raise throughput in all 12 fixed cases.}
 \end{abstract}
 
 \keywords{historical machine learning recovery, data provenance, artifact retention, materialization, capability loss, reproducibility}
@@ -177,25 +205,18 @@ Machine learning experiments produce many versions of data and models and recove
 
 As researchers change data, features and model settings, one ML project can produce many related datasets, fitted transformers, models and predictions. HELIX and HYPPO reuse shared work to reduce repeated execution and systems for collaborative workloads also organize these files for later use~\cite{helix,hyppo,collab}.
 
-Someone investigating an error or checking a reported result may need an older version of these files. In EyeAI, Li et al. recorded more than 70 datasets, 130 executions and 142 trained models and those records helped them trace poor diagnosis performance to an earlier optic nerve extraction step~\cite{derivaml}.
+DVC records file dependencies and can freeze stages so they do not run again~\cite{dvc} while Kishu uses checkpoints to restore older notebook states~\cite{kishu} and loading an old model may also require compatible software~\cite{persistence}. RecoverML focuses on finding which files need to be kept from an earlier experiment so that all protected results can still be recovered exactly even when some processing steps are no longer available
 
-An image pipeline, for example, may extract features from raw images and use them to train a model and make predictions. If the old feature extractor disappears, the images alone cannot recover the earlier features and storing those features may be enough only while training and prediction can still run. If those steps may also disappear, the old models or predictions may need to stay, so the choice depends on which outputs matter and which processing steps may fail.
+The recovery requirements specify which results must be protected and which original source files must remain stored along with the groups of processing steps that may fail together. For every allowed failure the required results must either already be stored or be recovered using the stored files and available processing steps while the planner counts each unique physical file only once along with the required metadata and hashes are used to check that the recovered files contain the same bytes as the originals
 
-DVC records dependencies and can freeze stages to keep them from rerunning~\cite{dvc} and Kishu uses checkpoints to restore earlier notebook states~\cite{kishu}. An old model may also need compatible software before it can be loaded~\cite{persistence}. RecoverML asks which files must stay from a recorded history so every protected output can be recovered exactly under a stated set of possible processing losses.
+RecoverML uses exact optimization to choose which files should be kept and applies the minimum cut method when the recorded graph meets the required conditions. Minimum cut is an existing method~\cite{flow} and RecoverML uses a matching integer flow and cut to prove that the selected files have the minimum storage cost while a separate checker verifies this proof and the executor checks the recovered file hashes. When all requested results are already stored the system can return the verified files directly without loading the models or starting numerical libraries
 
-The recovery contract names the protected targets, mandatory source files and groups of processing steps that may become unavailable together. Under every allowed loss, each target must already be stored or be recoverable from stored files and surviving steps, so the planner counts each distinct physical file once along with the required metadata. Hashes record the exact bytes expected at recovery.
+% Reviewer 1 W1. Separate planning from storage gains.
+\reviewone{In the 48-condition study, RecoverML planned faster than strong local search in all 36 eligible DAG cases, with a median speedup of 6.27 times. The separate shared loss cloud study gave a median speedup of 16.88 times.}
 
-RecoverML uses exact optimization for a general recorded history and takes a minimum cut route when the graph passes its eligibility checks. Minimum cut is an established method~\cite{flow} and a matching integer flow and cut certify the store chosen here. A separate checker verifies that certificate and the executor checks recovered hashes while direct export returns verified bytes without loading a model or starting numerical libraries when all requested targets are already stored.
-
-We measure storage, planning and recovery separately using strong local search, published decision rules, manually chosen frontiers and native DVC as comparisons~\cite{artifact}. Under shared preprocessing loss, RecoverML uses less storage than local search in nine of 36 histories and ties in 27 with a largest reduction of 48.74\%. All 18 histories with an explicit concatenation file tie and the manual best frontier matches every exact minimum.
-
-Both methods receive the same optimal stored files in the native DVC comparison, where RecoverML has a lower median elapsed time in all 36 histories. The median paired ratios of DVC time to RecoverML time are 2.19 for the 18 histories that need recomputation and 9.91 for the 18 whose targets are already stored. Each history has three paired repetitions and the timing includes command startup and hash checking but excludes setup and planning.
-
-The later storage study allows full files, exact prefix and suffix deltas and a jointly compressed archive, then chooses the smallest complete store from five candidates. It saves bytes against the earlier flat optimum in 244 of 444 measurable conditions and against local search with the same formats in 20 with 424 local ties and two Letter conditions left unmeasured. A broader native DVC census also compares recovery using the same optimal stored files across 864 configurations, where a direct executor control gives similar times to RecoverML and helps identify the cost of native orchestration~\cite{artifact}.
+We measure storage, planning and recovery separately using strong local search, published decision rules, manually chosen frontiers and native DVC as comparisons~\cite{artifact}. Under shared preprocessing loss, RecoverML uses less storage than local search in nine of 36 histories and ties in 27 with a largest reduction of \reviewone{48.7\%}. All 18 histories with an explicit concatenation file tie and the manual best frontier matches every exact minimum.
 
 A separate study combines 28 histories with two loss bounds to give 56 cases, where every policy receives the same robust byte limit and uses one recovery executor. RecoverML restores all 3,344 requests per policy while the tested HYPPO components and HELIX rule settings recover fewer. HYPPO and HELIX were designed for iterative reuse, so this study tests how their adapted file selection rules meet the stated recovery requirement~\cite{artifact}.
-
-Selective retention in the larger Letter experiment saves 3.6647 decimal GB of canonical bytes under preprocessing loss, or 290.61 MB with measured gzip. Broader training and prediction loss removes the saving and strong robust heuristics match the storage choice while snapshot loading is faster in the measured recovery run.
 
 \paragraph{Novelty and contributions.}
 RecoverML combines stated recovery requirements with checked file selection and exact recovery of old results. It builds on established provenance and optimization methods through three systems contributions:
@@ -222,19 +243,20 @@ Li et al. link datasets, features, executions and assets across scientific workf
 
 Kishu records notebook variable dependencies and uses incremental checkpoints and checkout operations to restore earlier states~\cite{kishu}. RecoverML protects selected immutable files after stated producer losses.
 
-DVC records dependencies and reruns stages and frozen stages let it preserve chosen intermediate outputs without rerunning their producers~\cite{dvc}. A person can select the same optimal file frontier in DVC, as the native controls confirm while RecoverML automates that choice and checks it against the recovery requirements. The separate latency experiment measures two authored integrations with the same paid stored files.
-
 \subsection{Replay and checkpoint tradeoffs}
 
-CHEX uses execution history and ordered checkpoints to share work across program versions~\cite{chex} while RecoverML chooses persistent files that keep old outputs available after specified producers fail. Checkmate uses mixed integer optimization to trade neural training computation for activation memory~\cite{checkmate} and RecoverML applies established optimization methods to a different file recovery objective.
+% Reviewer 1 V2. Related work on dataset recreation and ML intermediates.
+\reviewone{Bhattacherjee et al. study which data should be kept so that older versions of a dataset can be created again}~\cite{bhattacherjee2015versioning}. \reviewone{MISTIQUE looks at whether intermediate model results should be loaded from storage or computed again when answering diagnostic queries}~\cite{vartak2018mistique}. \reviewone{RecoverML instead chooses which files need to be kept based on the older results that must be protected and the processing steps that may become unavailable.}
 
-ExoFlow separates execution from recovery and uses task annotations to support exactly-once workflow semantics~\cite{exoflow}. RecoverML checks immutable output bytes in a supported replay environment and measures storage and recovery separately because keeping fewer files can make later recovery slower. Its atomic publication path handles process crashes on one host.
+CHEX uses earlier execution records and checkpoints to reuse work across different program versions~\cite{chex} while RecoverML focuses on keeping the files needed to recover older results when some processing steps can no longer run. Checkmate uses mixed integer optimization to decide which activations should be stored or computed again during neural network training to reduce memory use~\cite{checkmate} while RecoverML uses existing optimization methods for a different purpose which is selecting files for recovering older results.
+
+ExoFlow separates normal execution from recovery and uses task information to support exactly-once workflow operations~\cite{exoflow} while RecoverML checks whether recovered files have the same bytes as the originals within a supported software environment. RecoverML also measures storage use and recovery time separately because keeping fewer files may require more processing later and its atomic publication method can handle process crashes on one machine.
 
 \subsection{Optimization foundations and the remaining distinction}
 
-Implicit hitting set methods combine candidate choices with an oracle and learned constraints~\cite{hittingset} while minimum cost source location studies paid sources under connectivity requirements~\cite{sourceplacement}. Vertex splitting represents vertex costs in a flow network~\cite{flow} and RecoverML uses these established methods to solve its file selection problem.
+Implicit hitting set methods use possible solutions and an oracle to find missing constraints~\cite{hittingset} while minimum cost source location looks at how to choose sources based on their cost and connection requirements~\cite{sourceplacement}. Vertex splitting is also an existing method for handling vertex costs in flow networks~\cite{flow,ahuja1993flow} and RecoverML uses these methods rather than introducing new optimization algorithms.
 
-RecoverML applies these methods to recorded ML files and checks that the chosen store protects every target under every allowed loss. Eligible DAGs use a flow and cut certificate and other supported histories use the general route. Local search misses a smaller store in some shared loss cases while the manual frontier and concatenation controls show which histories have simpler optimal choices.
+RecoverML applies these methods to recorded ML files and checks whether the selected files can recover every protected result under all allowed processing failures. For suitable directed acyclic graphs (DAGs) it uses a flow and cut certificate to verify the solution while other supported histories use general exact optimization and the shared loss experiments show that local search sometimes misses a smaller storage choice although the manually selected frontier and stored concatenation cases also show that some histories have simpler optimal solutions.
 
 \section{Methodology}
 \label{sec:method}
@@ -253,13 +275,13 @@ RecoverML records an experiment and its dependencies, then chooses files accordi
 
 Each logical node records an operation with its inputs, parameters, output hash and size, along with whether it can run again. The environment record keeps package versions and implementation hashes for supported operators and arrays and supported models use recorded serialization so exact recovery requires the same bytes rather than similar model accuracy.
 
-Several logical nodes can refer to one physical file, so the planner pays for it only once. Let $B$ contain the captured physical blobs and let $w_b$ be the nonnegative size of blob $b$ with $\beta(p)$ giving the physical output of producer $p$ and $D(p)$ listing its physical inputs. Several producers may supply one blob, but each needs all its inputs while a node that cannot run again stays in the history without adding a recovery path.
+Several logical nodes may point to the same physical file so RecoverML counts its storage only once. Let $B$ represent the captured physical files and $w_b$ their nonnegative sizes while $\beta(p)$ gives the output file of producer $p$ and $D(p)$ gives the input files it needs. More than one producer may create the same file but each producer needs all its inputs to run while operations that cannot run again remain in the recorded history without providing a recovery path
 
-Mandatory roots $R\subseteq B$ must remain stored and the protected targets are $T\subseteq B$, which can include models, probability arrays or older features needed for investigation. Every method receives the same manifest and roots, and recovery uses only selected files and surviving producers to reconstruct the original targets.
+Mandatory source files $R\subseteq B$ must remain stored while the protected results are $T\subseteq B$ which may include models and probability arrays or older features needed for investigation. Every method uses the same manifest and mandatory files while recovery uses only the selected stored files and available processing steps to recreate the original results
 
 \subsection{Recovery contract and byte objective}
 
-The capability map puts replayable producers into loss groups, and producers that use the same entry point may share a group while ungrouped producers remain available. Groups should follow the dependency that becomes unavailable: producers belong together when losing one entry point, package or external service disables them together. The bound $k$ states how many groups may fail at once. A relevant producer left ungrouped is assumed available, so its output should be retained or the contract revised when that assumption is unsafe. For example, if two alternative producers of one optional target use only roots and belong to different groups, allowing one group loss leaves another producer available, while allowing both groups to fail requires the target to be stored. For the group set $G$ and loss bound $k$, the allowed losses are
+RecoverML places processing operations into groups that may become unavailable together while operations outside these groups are assumed to remain available. Operations that depend on the same entry point or software package or external service should be placed in one group because losing that dependency would affect all of them. The value $k$ defines how many groups may fail at the same time while any producer left outside these groups is assumed to remain available so if this assumption is not safe then its output should be stored or the recovery requirements should be changed. For example if two different producers can create the same optional result using only mandatory source files and each belongs to a different group then losing one group still allows recovery through the other producer but if both groups can fail together then the result must be stored. For the group set $G$ and loss bound $k$, the allowed losses are
 \begin{equation}
   \mathcal{F}_k=\{F\subseteq G: |F|\leq k\}.
   \label{eq:faults}
@@ -290,9 +312,9 @@ The second formulation starts with a storage master that has one selection varia
   \sum_{b\in B\setminus C}x_b\geq 1.
   \label{eq:cut}
 \end{equation}
-The master adds this constraint and searches again for a cheapest store. Once it proves a minimum and the oracle finds no failing loss, the selected store is feasible and optimal within the recorded model while timeouts and invalid solutions remain unknown. The master and oracle design follows established hitting set and abduction methods~\cite{hittingset}.
+The master adds the new constraint and searches again for the set of files that uses the least storage and when it proves the minimum and the oracle finds no failure that prevents recovery then the selected files are considered valid and optimal within the recorded model while timeouts or invalid results are marked as unknown. The method follows existing hitting set and abduction approaches~\cite{hittingset}
 
-RecoverML checks binary values, the objective, roots and learned constraints before accepting a solver result. It first tries the DAG route below and otherwise uses the scenario formulation for at most 64 allowed scenarios, moving to the master and oracle route above that number.
+RecoverML checks the binary values and storage objective along with mandatory source files and added constraints before accepting a solution. It first tries the DAG method and if that cannot be used then it applies the scenario method for up to 64 possible failure cases or the master and oracle method when there are more than 64
 
 \subsection{Guarded DAG specialization and its certificate}
 
@@ -310,28 +332,28 @@ After the reduction, an unstored blob without a surviving producer becomes a fai
 \begin{equation}
   M=1+\sum_{b\in B\setminus R}w_b.
 \end{equation}
-Keeping every optional blob costs less than cutting an $M$ edge, as required by the standard vertex splitting construction~\cite{flow}. Roots and fixed metadata are then added to the selected file cost.
+Keeping every optional blob costs less than cutting an $M$ edge, as required by the standard vertex splitting construction~\cite{flow,ahuja1993flow}. Roots and fixed metadata are then added to the selected file cost.
 
-NetworkX finds an integer maximum flow and a cut and the checker verifies edge capacities and flow conservation before removing the chosen stored vertices and checking that no failure source can reach a target. The total weight of the stored optional blobs must equal the feasible flow value because the cut gives an upper bound and the flow gives a matching lower bound. A separate grounded recovery check then confirms that the store protects the targets.
+NetworkX calculates an integer maximum flow and its matching cut while a separate checker verifies the edge capacities and flow conservation before removing the selected stored vertices and checking whether any failure source can still reach a protected result. The total weight of the stored optional files must match the valid flow value because the cut gives an upper bound and the flow gives a lower bound so when both are equal the solution is proven optimal while another recovery check confirms that all protected results can be recovered
 
-The reduction does not cover every AND/OR history. Two producers in different groups may each recover a target after one group is lost, even though disabling both would prevent recovery and an unsupported physical cycle also breaks the cut argument. The guard sends these histories to a general exact route.
+The method does not work for every AND/OR dependency structure because two producers from different groups may each recover the same result when one group fails but losing both groups would prevent recovery while a physical cycle without a valid recovery path can also make the cut method incorrect. RecoverML checks these conditions and uses general exact optimization when the specialized method cannot be applied
 
 \subsection{Components and recovery execution}
 
-An optional decomposition removes mandatory roots from the live dependency graph and solves the components containing targets separately, then combines their selected files and pays for global roots and metadata once. Solver projections are not saved as capture manifests and shared loss labels remain safe because each component is checked against every allowed loss relevant to it. For one optional target whose producers depend only on roots, a direct rule allows it to be omitted when an ungrouped producer exists or the number of distinct producer groups exceeds $k$.
+RecoverML can divide the dependency graph into smaller parts by removing mandatory source files and solving the parts containing protected results separately before combining their selected files while mandatory sources and global metadata are counted only once. Internal solver results are not saved as experiment manifests and shared failure groups do not cause a problem because each part is checked against every allowed failure that applies to it. For an optional target whose producers only need mandatory source files the target does not need to be stored if an ungrouped producer is available or if its producers belong to more than $k$ different groups
 
-For a recovery request, the executor finds a grounded path from stored files through surviving producers and follows dependency order. Each request has its own memo and trace and every loaded or recovered file must match its recorded hash with explicit errors for missing or corrupt files and source mismatches. The general restorer checks its supported runtime before loading values and never uses a producer declared unavailable.
+When a recovery request is made the executor finds a valid path using stored files and processing steps that are still available and follows the dependencies in order while each request keeps its own memo and execution record. Every loaded or recovered file must match its recorded hash and missing or damaged files and incorrect source contents produce errors while the system checks the supported software environment before loading values and never uses processing steps that have been declared unavailable
 
-When all requested targets are stored, direct export checks their sizes and SHA-256 identities and writes the outputs without loading a model. A missing target sends the request to ordinary replay while a corrupt stored target causes an error.
+When all requested results are already stored RecoverML checks their file sizes and SHA-256 hashes before returning the files directly without loading a model while a missing target is recovered through normal replay and a damaged stored target causes an error rather than being ignored
 
 \subsection{Publication and concurrent recovery}
 
-The durable publisher writes selected blobs, the manifest and the contract to a sibling directory, flushes files and POSIX directories, then atomically renames that directory to the final path on the same filesystem. One publisher owns each destination and readers use only the final path, so stopping the process before rename exposes no store and stopping it after rename leaves a complete store. Published files are read only and each request owns its restorer, memo, trace and output directory with success requiring exact target hashes.
+RecoverML first writes the selected files and manifest and recovery requirements into a separate directory beside the final location and then flushes the files and POSIX directories before renaming the directory to its final path on the same filesystem. Only one publisher can use each destination and readers access only the final path so stopping the process before the rename does not expose an incomplete store while stopping it afterward leaves a complete store. Published files remain read only and each recovery request uses its own restorer and memo and execution record along with a separate output directory while recovery is considered successful only when the resulting files match their expected hashes
 
 \section{Experimental Setup}
 \label{sec:experiments}
 
-The experiments examine which files remain necessary under different loss requirements and whether other methods choose the same stores, then measure planning and actual recovery separately. Table~\ref{tab:workloads} lists the fixed studies, where one captured history may appear under several contracts or policies and the artifact saves their protocols and source snapshots~\cite{artifact}.
+The experiments look at how different processing failures change which files need to be kept and whether other methods can find the same storage choices while planning time and actual recovery time are measured separately. Table~\ref{tab:workloads} gives an overview of the studies where the same recorded history may be tested under different recovery requirements or file selection methods while the complete experiment steps and original source snapshots are saved in the research artifact~\cite{artifact}
 
 \begin{table*}[t]
 \caption{Workloads and comparison design.}
@@ -356,15 +378,15 @@ Final runtime scaling & Breast Cancer linear and Digits PCA and neighbor histori
 
 \subsection{Histories and declared processing changes}
 
-The shared loss grid uses Wine and Breast Cancer from scikit-learn~\cite{datasets} with a stratified split assigning 75\% to training and 25\% to testing under seeds 20261016, 20261017 and 20261018. Two disjoint feature views are standardized using training data only and logistic regression versions cover regularization from $10^{-3}$ to $10^3$. One capture boundary lets later steps consume both views directly and the other also stores their concatenated matrix.
+The shared loss experiment uses the Wine and Breast Cancer datasets from scikit-learn~\cite{datasets} where 75\% of the data is used for training and 25\% for testing with stratified sampling and three fixed seeds 20261016 and 20261017 and 20261018. The features are divided into two separate groups and each group is standardized using only the training data while logistic regression models use regularization values from $10^{-3}$ to $10^3$. In one setup the later processing steps use both feature groups directly while the other setup also stores their combined matrix as an intermediate file
 
-We test each history with separate preprocessing groups and then one group covering both standardization steps, keeping $k=1$ and the captured bytes the same. The shared loss study followed a favorable pilot, so its complete grid keeps small histories and explicit concatenation controls.
+Each recorded history is tested with the two preprocessing steps in separate failure groups and then with both steps in one shared group while keeping $k=1$ and using the same recorded files. The shared loss experiment was carried out after an earlier pilot gave good results so the full experiment also includes smaller histories and cases where the combined feature matrix is stored for comparison
 
-The scientific matrix adapts Iris feature union, Digits PCA, Diabetes polynomial features and Digits forests with two seeds and three versions giving eight captures. We test them under preprocessing and broad loss with $k\in\{0,1,2\}$ and set five budgets from fixed roots and metadata plus 0, 10, 25, 50 or 100\% of optional target snapshot bytes. The budgets therefore do not depend on a later optimum and eight methods give 1,920 method and budget rows. For eligible DAGs the positive bounds check the same payload requirement, while $k=0$ is a distinct contract.
+The scientific experiment uses Iris feature union and Digits PCA along with Diabetes polynomial features and Digits random forests where two seeds and three versions are used to create eight recorded histories. These histories are tested under preprocessing loss and broader processing loss with $k\in\{0,1,2\}$ while five storage budgets are set using the fixed cost of mandatory source files and metadata plus 0 or 10 or 25 or 50 or 100\% of the optional storage needed for target snapshots. The budgets are fixed before finding the optimal solution and eight methods produce 1,920 method and budget results while for eligible DAGs all positive values of $k$ give the same required stored files and $k=0$ represents a different recovery requirement
 
-The retinal study uses all 20 STARE fundus images and Hoover vessel annotations~\cite{stare}. Images become $64\times64$ RGB with 15 training images, five test images and 6,000 sampled training pixels. Three seeds, two model families and three history lengths give 18 captures and an aligned extractor replaces a legacy feature shift of three pixels so the feature bytes change. We protect models and predictions and sometimes investigation features under contracts for intact processing, loss of the old extractor or loss of training and prediction. Model settings also change between versions.
+The retinal experiment uses all 20 STARE retinal images and their Hoover vessel annotations~\cite{stare} where each image is resized to $64\times64$ RGB and the data is divided into 15 training images and five testing images with 6,000 training pixels sampled. Three seeds and two model families along with three history lengths are used to create 18 recorded histories while an older feature extraction method that shifts features by three pixels is replaced with an aligned version so the two methods produce different feature files. The protected results include models and predictions and sometimes features needed for investigation while the experiments test normal processing and loss of the older extractor or loss of training and prediction operations. Model settings also change between versions
 
-The large study uses all 20,000 UCI Letter observations with 16 features and 26 classes~\cite{letter}. Seed 20261015 gives a stratified split of 15,000 training and 5,000 test observations and MinMax scaling and chi-squared selection fitted on training data keep 12 features. Sixteen trained forests combine 64/128/192/256 trees with two feature sampling settings and two model seeds, without padding or duplicated payload added to meet a storage target.
+The larger experiment uses all 20,000 observations from the UCI Letter dataset with 16 features and 26 classes~\cite{letter} where a stratified split using seed 20261015 gives 15,000 training and 5,000 testing observations. MinMax scaling and chi squared feature selection are fitted using only training data and 12 features are kept while 16 random forest models are trained using 64 or 128 or 192 or 256 trees combined with two feature sampling settings and two model seeds. All models are actually trained and no extra padding or duplicate files are added to increase the storage size
 
 \subsection{Comparators and budget fairness}
 
@@ -372,45 +394,41 @@ The exact comparators solve the same complete recovery problem while robust gree
 
 HYPPO rank and frequency use a pinned released component and HELIX uses a documented rule adapter with the same executor and byte accounting even though their rules were designed for reuse. In the cloud grid they receive the exact minimum total byte budget while robust heuristics and snapshots can use the full candidate allowance to compare complete stores. The scientific matrix gives every method the same fixed budget at each point, so it answers a different comparison question.
 
-The separate matrix of 56 cases gives RecoverML, both HYPPO functions and six HELIX settings the same robust byte limit. HYPPO uses its pinned released component through a physical file adapter and HELIX uses a documented streaming rule reimplementation at 50, 200 and 800 MiB/s with both recorded tie orders. We report a HELIX control with the larger snapshot budget separately and all policies use the same grounded recovery executor so the results compare file selection decisions~\cite{artifact}.
-
 The native DVC study uses DVC 3.67.1 with certified optimal retained payloads and excludes selection time. A single downstream batch stage avoids starting Python separately for every model and DVC can skip that stage when the correct target cache objects are retained. Before each trial both methods have the same paid physical payloads and no unpaid downstream cache objects with hard links for common retained files and byte checks based on distinct inodes. We record DVC configuration separately from the common payload objective and both authored workers can use the exact file export helper.
 
 The encoded storage study keeps the earlier flat optimum as a candidate and adds exact prefix and suffix deltas with their bases and headers charged. The five candidates are the flat optimum, the delta optimum and joint compression of the flat optimum, flat local search selection and delta local search selection. We compare the smallest complete store with the earlier flat and delta implementation, a joint archive of the flat optimum and local search using all offered formats. The first choice among three candidates lost three conditions to the stronger local control, so we disclosed that result and added the two compressed local plans. Every row in the later table uses this final choice and the artifact keeps the original losses~\cite{artifact}.
-
-The later storage catalogue contains 216 primary, 48 scientific transfer, 72 cloud conditions across three seeds and 108 retinal conditions, plus two Letter conditions without complete paired storage values. Byte totals include metadata, mandatory roots and delta bases and saved file and export checks verify exact identities. The joint archive is decoded into memory and uses a temporary retained store for replay.
 
 The broader native DVC census uses 72 captures from six datasets, four recipes and three history lengths. Three loss contracts, two request sizes and command line or warm API access give 864 configurations, each measured in three paired repetitions with randomized order and the same certified optimal retained payloads. The elapsed call includes the requested file inventory and hash checks but excludes capture, planning and setup and OS caches are not flushed. A separately coded direct executor measures the cost of DVC orchestration~\cite{artifact}.
 
 \subsection{Machines, repetitions and recorded outcomes}
 
-Each of three Linux GitHub runners handles one fixed seed block in the shared loss study, exposing four virtual CPUs on AMD EPYC 7763 hosts. The native study also uses runners with four CPUs with EPYC 9V74 for one block and EPYC 7763 for two. The environment uses Python 3.12.15, NumPy 2.3.5, SciPy 1.17.0 and scikit-learn 1.8.0 with one BLAS thread for numerical execution.
-
 Each cloud planner has three timed calls per case and the earlier replanning study with 48 conditions has five. General solver calls use a 30 s limit with a requested relative MIP gap of zero and allow 120 s in Letter while the polynomial flow route has no hard interruption deadline. The native recovery comparison uses three paired trials with deterministically randomized method order and its main elapsed time includes cold subprocess and CLI startup and the final common SHA-256 check. Setup and planning are excluded, worker timings and CPU are logged separately and OS page caches are not flushed.
 
-Each actual request records whether the expected target identities were recovered, a deficient store was correctly blocked or an unexpected outcome occurred. Methods selecting identical stores share explicitly attributed execution evidence, so adding their totals would overcount physical requests. We calculate ratios from method medians within each history before summarizing across histories.
+Each recovery request records whether the expected files were recovered correctly or whether an incomplete store was blocked or an unexpected result occurred. When different methods select the same stored files they share the same recorded recovery evidence so their totals cannot be counted as separate physical requests. The time ratios are calculated using the median results of each method within a history before combining the results across histories
 
-The final file API runs on a Linux runner with four vCPUs and an AMD EPYC 9V74 processor. Breast Cancer and Digits histories have 1, 4 and 16 versions and replay from roots and export of retained targets use different measured byte totals. Each condition has three bursts of 128 requests with 1/2/4/8 threads or 1/2/4 process replicas on the same host, giving 252 trials. Each request writes to a private output directory and timings exclude warmup and planning. Throughput covers submission through completion. Service P99 measures execution and response P99 also includes queue wait with every request, source hash, machine record and independent audit saved in the artifact.
+The final file API is tested on a Linux runner with four virtual CPUs and an AMD EPYC 9V74 processor while the Breast Cancer and Digits experiments use histories with 1 or 4 or 16 versions. Recovering results from original source files and directly exporting stored targets use different amounts of storage and each condition is tested with three groups of 128 requests using 1 or 2 or 4 or 8 threads or 1 or 2 or 4 process replicas on the same machine which gives 252 trials. Every request saves its results in a separate folder and the timing does not include warmup or planning while throughput measures the time from submitting a request until it finishes. Service P99 measures execution time while response P99 also includes time spent waiting in the queue and the research artifact keeps every request and source hash along with machine details and independent audit results
 
-A separate ablation keeps the physical retained store and target request fixed while timing direct export, export after graph and contract setup and the same export followed by object conversion. It uses two workloads, three history lengths, three repeats and 64 paired requests per repeat, rotating arm order within each request and checking outputs and hashes before summarizing timings.
+Another experiment compares three recovery methods while keeping the stored files and requested results the same where the first method directly exports the files and the second adds graph and recovery requirement setup while the third also converts the files into objects. The experiment uses two workloads and three history lengths with three repetitions and 64 paired requests in each repetition while the order of the methods changes between requests and all outputs and hashes are checked before comparing their times
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Storage choices under shared preprocessing loss}
 
-The two exact formulations agree on all 72 history and contract minima and 216 repeated planning calls include checked flow proofs. RecoverML uses fewer bytes than strong local search in six of 36 separate loss cases and ties in 30 with each win saving 129 serialized bytes. Under shared loss it wins nine of 36 and ties 27 with no losses, as Table~\ref{tab:cloud} records and Figure~\ref{fig:shared} shows for all shared loss cases. The median saving over the full grid is zero and the manual best frontier matches every exact minimum. W and B in the figure mean Wine and Breast Cancer and each version count has three seed points with reductions based on the full paid store size.
+Both exact optimization methods find the same minimum storage in all 72 combinations of histories and recovery requirements while the 216 repeated planning runs include verified flow proofs. RecoverML uses less storage than strong local search in six of the 36 cases where preprocessing failures are separate and matches it in the other 30 with each improvement saving only 129 bytes. When both preprocessing steps belong to one shared failure group RecoverML uses less storage in nine of the 36 cases and matches local search in the other 27 without using more storage in any case. Table~\ref{tab:cloud} shows these results while Figure~\ref{fig:shared} compares all shared loss cases and the median storage saving across the full experiment is zero while the manually selected best frontier matches every exact minimum. In the figure W represents Wine and B represents Breast Cancer while each version count includes three seed points and the storage reductions are calculated using the total stored bytes
 
 \begin{table}[t]
 \centering\small
 \caption{Storage choices against strong local search.}
 \label{tab:cloud}
-\begin{tabular}{lrrrr}
+% Reviewer 1 V1 and V2. Absolute savings and rounded displayed percentages.
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
 \toprule
-Loss grouping & Wins & Ties & Losses & Max. reduction\\
+Loss grouping & Wins & Ties & Losses & Max. reduction & \reviewonecell{Bytes saved}\\
 \midrule
-Separate & 6 & 30 & 0 & 0.1942\%\\
-Shared & 9 & 27 & 0 & 48.7380\%\\
+Separate & 6 & 30 & 0 & \reviewonecell{0.19\%} & \reviewonecell{129}\\
+Shared & 9 & 27 & 0 & \reviewonecell{48.7\%} & \reviewonecell{131,793}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -422,7 +440,7 @@ Shared & 9 & 27 & 0 & 48.7380\%\\
 \label{fig:shared}
 \end{figure*}
 
-The nine shared loss wins occur across all three seeds in fused Wine histories with 16 or 64 versions and fused Breast Cancer histories with 64 versions. In the largest case RecoverML stores 138,618 bytes and local search stores 270,411, saving 131,793 bytes or 48.7380\%. The difference is about 132 KB in absolute size while the separate Letter study measures a larger byte saving.
+The nine shared loss wins occur across all three seeds in fused Wine histories with 16 or 64 versions and fused Breast Cancer histories with 64 versions. In the largest case RecoverML stores 138,618 bytes and local search stores 270,411, saving 131,793 bytes \reviewone{or 48.7\%}. The difference is about 132 KB in absolute size while the separate Letter study measures a larger byte saving.
 
 Replacing many models and predictions may require both standardized views together, so an exchange of one file can miss the useful joint choice. Recording their concatenation gives local search that choice as a single file and closes the gap in all 18 concatenation controls while the manual frontier also reaches every minimum.
 
@@ -494,22 +512,24 @@ Figure~\ref{fig:planning} gives one point per condition and a black median bar f
 
 A separate finite guard validation enumerates 2,275 DAG specifications with four artifacts, comparing 18,200 closures for fixed stores and 127,400 minimum cut optima against exhaustive search without disagreement.
 
-The component study records 154 rows, including 110 under the same contract and all 99 certified objective comparisons under that contract agree. All 1,452 enumerated fault certificate checks and six indexed versus reference chain comparisons also agree, although decomposition is slower than the route without decomposition in six of eight settings from public recipes. A separate annotation study covers 5,760 conditions and changes selected sets in 298/4,608 cost profile comparisons and 312/2,880 access weight comparisons, showing that adapter outcomes depend on the stated annotations.
+% Reviewer 2 M4. General exact solvers and per-solve limits.
+\reviewtwo{In two further studies, the general exact solvers matched known storage minima in all 168 runs on controlled graphs with alternative producers. The first study varied the number of loss groups from 6 to 24, and the second varied the base width from 18 to 28 and the group count from 10 to 40. Both used loss bounds of one and two. At six groups and a bound of one, scenario expansion took 10.41 ms at the median and the counterexample solver took 25.58 ms. At width 28 with 40 groups and a bound of two, the 821 allowed scenarios raised the expansion time to 24.91 s at the median. The counterexample solver took 45.65 ms and component decomposition took 56.46 ms on that case. The component planner also matched the checked reference minimum in all ten runs on a mixed graph with 264 physical artifacts. The studies used limits of 30 s and 60 s per MILP solve, respectively. A counterexample run can call the solver more than once, so a full planning run can exceed that limit.}
 
 \subsection{Native recovery at identical retained storage}
 
-The final native comparison completes 216 subprocess commands for full histories and 12,096 exact target hash checks with lower median elapsed time for RecoverML in all 36 histories. Figure~\ref{fig:native} places the median of three trials for each history against an equality line and shows paired ratios separately for histories needing replay and those with stored targets. Timing includes startup and verification but excludes setup and planning and OS caches are not flushed.
+The final native comparison completes 216 subprocess commands for full histories and 12,096 exact target hash checks while RecoverML shows lower median recovery time in all 36 histories. Figure~\ref{fig:native} compares the median time from three trials for each history against an equality line and also shows the time ratios separately for cases that need replay and cases where the targets are already stored. The timing includes command startup and final hash verification but does not include setup or planning while the operating system caches are not cleared between runs
 
-For the 18 histories needing downstream computation, the median paired ratio of DVC time to RecoverML time is 2.1856 and ranges from 1.7215 to 2.5109. For the 18 histories with retained targets, it is 9.9067 and ranges from 8.9527 to 11.3402. The medians of absolute times across histories are 1.663 s for RecoverML and 4.146 s for DVC with recomputation and 0.0633 s versus 0.6056 s with retained targets.
+For the 18 histories where some processing needs to be repeated the median ratio of DVC recovery time to RecoverML time is \reviewone{2.19} with values ranging from \reviewone{1.72} to \reviewone{2.51} while for the other 18 histories where the requested files are already stored the median ratio is \reviewone{9.91} with values from \reviewone{8.95} to \reviewone{11.34}. The median recovery times across histories are 1.663 seconds for RecoverML and 4.146 seconds for DVC when recomputation is needed while for stored targets the times are \reviewone{0.063 s versus 0.606 s}
 
 \begin{figure*}[t]
-\centering\includegraphics[width=\textwidth]{figures/native_recovery.pdf}
+\centering
+\includegraphics[width=\textwidth]{figures/native_recovery.pdf}
 \caption{Native DVC and RecoverML recovery times.}
-\Description{A scatter plot with logarithmic axes compares DVC and RecoverML elapsed time for every history and places every point below equality. The second panel shows paired time ratios for targets that need replay and targets that are already retained.}
+\Description{The first plot compares recovery times for both methods using logarithmic axes with all points below the equality line while the second plot shows time ratios for histories needing replay and histories with stored targets.}
 \label{fig:native}
 \end{figure*}
 
-Direct export avoids numerical startup when replay is unnecessary and both workers can use the same helper. DVC still pays for its native command and stage handling, so the large ratio for retained targets describes these cold command integrations. An earlier revision with corrected paid cache accounting gave mixed results with RecoverML winning all 18 recomputation cases and DVC winning all 18 retained target cases. We added the export improvement after that result and tested it on a fresh full grid.
+When the requested files are already stored RecoverML can export them directly without starting numerical libraries and both systems have access to the same export helper. DVC still needs to run its native commands and handle processing stages which adds extra time so the larger difference for stored targets mainly reflects how these two command based implementations work. An earlier version with corrected cache storage accounting had different results where RecoverML was faster in all 18 recomputation cases but DVC was faster in all 18 stored target cases and the direct export improvement was added after these results and tested again using a fresh complete experiment
 
 \subsection{Complete encoded storage comparison}
 \label{sec:encoded}
@@ -517,26 +537,30 @@ Direct export avoids numerical startup when replay is unnecessary and both worke
 Table~\ref{tab:encoded} compares the final choice among five candidates with four storage controls using total paid bytes. There are 446 conditions, but one Letter case has only the selected store and another lacks its original archive, leaving 444 measured pairs. Smaller, equal and larger count each comparison and the 10\% column uses all 446 conditions. Because the final choice includes the old plan and both local plans, it cannot use more bytes than those candidates. The earlier choice among three candidates had 20 wins, 421 ties and three losses against the stronger local control using the same formats and adding both local candidates corrected those losses~\cite{artifact}.
 
 \begin{table*}[t]
-\caption{Storage outcomes for the choice among five candidates.}
+\caption{Storage outcomes for the choice among five candidates. \reviewone{The final selector includes the local search candidates, so its store is never larger than the local control. The last row shows the earlier selector before those candidates were added.}}
 \label{tab:encoded}
 \centering\small
 \begin{tabular}{lrrrrrr}
 \toprule
-Comparator & Smaller & Equal & Larger & Unmeasured & Median saving & 10\%+\\
+\reviewonecell{Comparison} & Smaller & Equal & Larger & Unmeasured & Median saving & 10\%+\\
 \midrule
 Previous flat optimum & 244 & 200 & 0 & 2 & 0.094\% & 52\\
 Previous flat or delta choice & 214 & 230 & 0 & 2 & 0\% & 47\\
 Joint archive of flat optimum & 233 & 211 & 0 & 2 & 0.056\% & 5\\
 Local search with all offered formats & 20 & 424 & 0 & 2 & 0\% & 9\\
+\reviewonecell{Earlier selector vs.\ same local control} & \reviewonecell{20} & \reviewonecell{421} & \reviewonecell{3} & \reviewonecell{2} & \reviewonecell{0\%} & \reviewonecell{9}\\
 \bottomrule
 \end{tabular}
 \end{table*}
 
 The largest reduction against the previous flat optimum is 89.84\%, from 1,457,715 to 148,050 bytes in \path{digits/pca_neighbors/v16/broad}. Against the local control using the same formats, the largest gap is 70.17\%, from 118,126 to 35,242 bytes in \path{shared/wine-s20261016-v64-concat0}. Most of that local gap existed before joint compression, so it does not show a new 70\% compression gain. Nine of the twenty wins against local search are shared preprocessing loss cases with two standardized views and no stored concatenation: Wine histories with 16 or 64 versions and Breast Cancer histories with 64 versions across three seeds. The remaining eleven wins span three primary preprocessing cases, four separate loss cloud cases and four Iris feature union cases. The median saving against local search is zero and only nine of 446 conditions reach 10\% savings. The inherited broad improvement test requires at least 10\% saving in 90\% of histories per stratum and passes in zero of 72 strata.
 
-The exact reference using the same formats ties the measured flat and delta optima within their declared candidate inventories, and the manual best frontier ties all 36 minima in the earlier shared loss study. Joint compression adds further storage choices, and the corrected selector reduces bytes in the reported conditions while matching the retained candidates in the remaining measured comparisons.
-
 The independent release audit rebuilds archive controls from saved canonical payloads and reproduces both local selectors. It reconciles 8,592 saved file and export checks, comprising 5,061 selected file checks and 3,531 retained target export checks including repeated artifacts. All 29 cloud jobs and the final audit passed~\cite{artifact}.
+
+% Reviewer 2 M8. Encoding and retained-file access with identical retained files.
+\reviewtwo{We measured per-file, single-base delta and joint formats on the same retained files from two 16-version Wine and Digits histories. Each result is the median of three runs per format and history. Timed phases started in fresh processes, with the operating system cache left in its normal state. Joint compression saved 33.9\% on Wine and 83.8\% on Digits against per-file storage, and delta saved less than 1\% in each history. On Digits, per-file, delta and joint encoding took 3.62, 5.40 and 5.37 s, and writing and checking the complete stores took 3.72, 5.57 and 5.49 s.}
+
+\reviewtwo{Opening the store and exporting one retained model took 15.73, 16.10 and 17.92 ms on Wine and 21.71, 30.19 and 53.54 ms on Digits in the same format order. On Digits, opening alone took 10.78, 12.60 and 48.25 ms because the joint format decodes and checks the archive on open. The peak working set during the single Digits export was 22.77, 23.09 and 35.69 MiB. Exporting all protected Digits files took 209.75, 336.34 and 198.15 ms. All 504 exported file hash checks passed. The supplementary archive includes the protocol, benchmark script and raw runs.}
 
 \subsection{Broader native DVC recovery census}
 
@@ -555,8 +579,6 @@ The retinal study completes 10,920 exact requests across 540 method rows with no
 \label{fig:retinal}
 \end{figure*}
 
-The largest retinal saving against snapshots is 12,316,663 bytes in an intact forest history that protects investigation features. A separate native control removes the legacy module before reproduction and confirms it is still absent afterward while recovering all 32 protected targets exactly. A manually retained DVC frontier matches the common objective of 2,523,881 bytes.
-
 Under preprocessing loss, the Letter canonical store falls from 3,669,545,821 to 4,829,269 bytes, saving 3,664,716,552 bytes or 99.8684\%, which is more than 3.66 GB. With gzip it falls from 291,175,536 to 568,375 bytes and saves 290,607,161. Figure~\ref{fig:letter} plots decimal MB on a logarithmic axis with each RecoverML bar beside its target snapshot control. Strong robust heuristics match the preprocessing optimum and broad loss gives no canonical or gzip saving while native pickle and native gzip controls have different byte identities and are recorded separately.
 
 \begin{figure*}[t]
@@ -568,16 +590,17 @@ Under preprocessing loss, the Letter canonical store falls from 3,669,545,821 to
 
 The Letter replay ledger contains 48 exact requests across three unique stores with all preprocessing groups disabled, which is a stronger stress than the $k=1$ selection contract. Broad loss is checked structurally. In the descriptive preprocessing replay, mean frontier recovery takes 6.65 s per version and snapshot loading takes 2.12 s. All 16 trained forests are included and their accuracy on held out data ranges from 95.0\% to 95.64\%.
 
-\subsection{Concurrency, tail latency and process crashes}
-
-The final file API recovers all 32,256 requests exactly across 252 audited trials and Figure~\ref{fig:performance} compares each dataset, version count and mode with its result with one worker. Points give the medians of six ratios for fixed cases and shading shows their range. Storage differs between modes: at 16 versions, stores containing only roots and stores containing target files cost 172,570 and 205,679 bytes for Breast Cancer and 975,357 and 3,117,275 bytes for Digits.
-
-\begin{figure*}[t]
+% Reviewer 2 MC5. Queue Figure 7 before its first callout.
+\begin{figure*}[!t]
 \centering\includegraphics[width=\textwidth]{figures/runtime_scaling.pdf}
-\caption{Final file API throughput and service P99 relative to one worker.}
+\caption{\reviewtwo{Final file API throughput and service P99 relative to one worker.}}
 \Description{Four vector panels show the median and range of throughput and service P99 ratios across fixed cases with small dots for all 18 trial P99 ratios at each worker count. Four process replicas on the same host raise throughput in both retention modes and eight threads lower it while tail latency grows with concurrency.}
 \label{fig:performance}
 \end{figure*}
+
+\subsection{Concurrency, tail latency and process crashes}
+
+The final file API recovers all 32,256 requests exactly across 252 audited trials and Figure~\ref{fig:performance} compares each dataset, version count and mode with its result with one worker. Points give the medians of six ratios for fixed cases and shading shows their range. Storage differs between modes: at 16 versions, stores containing only roots and stores containing target files cost 172,570 and 205,679 bytes for Breast Cancer and 975,357 and 3,117,275 bytes for Digits.
 
 Four process replicas raise throughput in all six fixed cases per mode, giving median ratios of 2.50 for replay and 1.97 for export. Eight threads lower throughput in all 12 cases with median ratios of 0.70 and 0.48 while the median service P99 ratios at four processes are 1.59 and 3.09 and those at eight threads are 11.75 and 22.38. Figure~\ref{fig:performance} includes all 18 trial P99 ratios at each worker count and the saved requests give individual service times and queue waits. The earlier prototype has a separate record of 5,400 exact requests across 54 trials.
 
@@ -590,15 +613,15 @@ The process crash tests kill a child just before or after publication, leaving t
 \section{Discussion and Reproducibility}
 \label{sec:discussion}
 
-RecoverML first protects complete recovery and then minimizes stored bytes with recovery time measured separately. The Letter measurements show this choice directly: the frontier uses fewer bytes but takes longer to recover than stored snapshots. For frequently requested targets, keeping extra checkpoints or outputs can be preferable because complete recovery is a constraint and minimum storage is the objective. A recovery time constraint or workload weighted objective would be a separate extension. The repository keeps source hashes, captured file identities, raw timings, solver records and analysis scripts~\cite{artifact} and its paper build checks the six measured figures against saved calls, trials, manifests and file ledgers before regenerating all seven vector figures. Fresh runs use new output directories and none of the studies required a GPU.
+RecoverML first makes sure that all protected results can be recovered and then tries to reduce the storage needed while recovery time is measured separately. The Letter experiment shows this difference because keeping fewer files saves storage but takes longer to recover the results compared with loading stored snapshots so keeping extra checkpoints or outputs may be better when the same results are requested often. Complete recovery is a requirement while minimum storage is the main goal and adding a recovery time limit or considering how often files are requested would be a possible future improvement. The repository keeps source hashes and recorded file identities along with timing results and solver records and analysis scripts~\cite{artifact} while the paper build checks the figures using saved experiment calls and trials and manifests and file records. \reviewtwo{The build creates seven vector figures where six show the experimental results and one shows the system architecture}. New experiments save their results in separate output folders and none of the studies used a GPU
 
 \section{Limitations}
 
-The evaluation uses public datasets and histories built for this project, so its win rates do not estimate production performance. Seeds and requests reuse captures, retinal histories are not strict nested prefixes, and requests for the latest version and all versions coincide for histories with one version. The shared loss grid followed a favorable pilot and the choice among five storage candidates was corrected after the stronger local control exposed three losses.
+The experiments use public datasets and histories created for this project so the results cannot tell us how often RecoverML would perform better in real systems. Some experiments use the same recorded histories with different seeds and requests while the retinal histories are not exact versions built one after another and requests for the latest version and all versions are the same when a history has only one version. The shared loss experiment was carried out after an earlier pilot gave good results and the final method using five storage choices was updated after stronger local search found three cases where the earlier method used more storage
 
-The recovery guarantee assumes complete recorded dependencies, intact stored files and a supported replay environment. Certificates apply to the stated file model and the exhaustive guard checks cover finite graphs, while general exact optimization grows with the allowed loss scenarios. Six original scientific captures without forests lack a completed global source guard after an interruption, although their snapshots, request guards and raw reconciliation remain available. One original Letter archive container is missing, while all four frontier payloads have matching hashes in a documented replacement. The runner study checks exactness within each capture, while byte portable replay across CPU and BLAS variants remains untested.
+The recovery method assumes that all dependencies have been recorded and stored files are not damaged and the required software environment is supported. The certificates only prove results for the defined file model while the graph checks cover a limited set of graphs and general exact optimization becomes harder as the number of possible failure cases increases. Six original scientific histories without random forests are missing a completed global source check after an interruption but their saved snapshots and request checks and original records are still available. One original Letter archive is also missing although all four retained files in a documented replacement have hashes that match the originals. The runner experiment checks whether recovered files match the hashes from each runner's own capture but recovering identical bytes across different CPU and BLAS versions has not been tested
 
-HELIX and HYPPO comparisons cover adapted selection components and native DVC timings cover authored integrations. Exact certificates cover the declared flat and delta inventories rather than every possible jointly compressed retained set. Compression time, random access cost, peak memory, annotation effort, deployment cost and capability loss frequency remain unmeasured. Crash tests cover processes and publication on one filesystem, while larger neural states, software migration, networked shared storage, recovery from power loss and distributed crash consistency need further study.
+The HELIX and HYPPO experiments use adapted file selection methods rather than their complete systems while the native DVC results only cover the implementations used in these experiments. The exact optimization proofs cover the defined flat and delta storage choices but do not prove the best possible result across every combination of jointly compressed files. \reviewtwo{The compression experiment measures the time needed to create and export stored files for two histories but does not include optimization or model replay while the effort needed to record dependencies and deployment costs and how often processing steps become unavailable have not been measured}. The crash tests only cover processes and file publication on one filesystem while larger neural network states and software changes and shared network storage and recovery after power failures or crashes across distributed systems still need further testing
 
 \FloatBarrier
 \section{Conclusion}

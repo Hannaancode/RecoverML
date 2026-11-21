@@ -1,5 +1,12 @@
 # RecoverML: Exact Artifact Time Travel for ML Pipelines under Declared Capability Loss
 
+## Final paper
+
+- [12-page ACM paper](output/pdf/RecoverML_paper_revised.pdf)
+- [LaTeX source and build instructions](paper/acm_revised/README.md)
+- [Measurement records and reproducibility guide](docs/ARTIFACT_GUIDE.md)
+- [Additional solver-scaling and compression measurements](results/research/reviewer_m4_m8_nov20)
+
 ## Abstract
 
 RecoverML selects the files needed to recover protected outputs from earlier machine learning pipeline versions when declared processing capabilities become unavailable. It records dependencies and physical file identities and minimizes retained bytes while preserving every required result under the specified losses. General exact formulations support alternative producers and cyclic histories, while an eligibility-checked minimum-cut route accelerates single-producer physical DAGs. Selected stores are checked and recovered files are verified against their original SHA-256 hashes. Experiments demonstrate specific storage and planning advantages over tested heuristics and faster native recovery at identical retained storage.
@@ -117,9 +124,9 @@ The complete guide also covers fresh scientific and retinal and Letter studies, 
 | [results/milestone2](results/milestone2) and [results/archive](results/archive) | Earlier prototype and storage evidence |
 | [results/validation](results/validation) | Dated audit receipts and validation logs |
 | [docs](docs) | Technical design, literature comparisons, experiment protocols and reports |
-| [paper](paper) and [output/pdf](output/pdf) | Dated manuscript checkpoints and PDFs |
+| [paper](paper) and [output/pdf](output/pdf) | Final manuscript and dated paper checkpoints |
 
-The [artifact guide](docs/ARTIFACT_GUIDE.md) maps the main studies to their commands and evidence. The [results index](results/README.md) includes the earlier experiments. Repository manuscript files are dated checkpoints and should be read with the later result reports. `CHECKSUMS.json` and `CHECKSUMS_GITHUB.json` cover tracked regular files except the checksum manifests themselves; frozen source snapshots retain their original identities.
+The [artifact guide](docs/ARTIFACT_GUIDE.md) maps the main studies to their commands and evidence. The [results index](results/README.md) includes the earlier experiments. The final manuscript is linked at the top of this page. `CHECKSUMS.json` and `CHECKSUMS_GITHUB.json` cover tracked regular files except the checksum manifests themselves; frozen source snapshots retain their original identities.
 
 ## Conclusion
 
