@@ -1,6 +1,6 @@
 """Vector redraw of the author supplied RecoverML architecture image.
 
-The layout, text, and arrow directions follow methodology_user.png. Run from
+The layout, text, and arrow directions follow architecture_sketch.png. Run from
 this directory with ``python make_methodology.py``.
 """
 

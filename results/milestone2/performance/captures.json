@@ -68,7 +68,7 @@
             "internal_api": "openblas",
             "num_threads": 1,
             "prefix": "libscipy_openblas",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
             "version": "0.3.30",
             "threading_layer": "pthreads",
             "architecture": "SkylakeX"
@@ -78,7 +78,7 @@
             "internal_api": "openblas",
             "num_threads": 1,
             "prefix": "libscipy_openblas",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
             "version": "0.3.30",
             "threading_layer": "pthreads",
             "architecture": "SkylakeX"
@@ -88,7 +88,7 @@
             "internal_api": "openmp",
             "num_threads": 1,
             "prefix": "libgomp",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
             "version": null
           }
         ],
@@ -488,7 +488,7 @@
             "internal_api": "openblas",
             "num_threads": 1,
             "prefix": "libscipy_openblas",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
             "version": "0.3.30",
             "threading_layer": "pthreads",
             "architecture": "SkylakeX"
@@ -498,7 +498,7 @@
             "internal_api": "openblas",
             "num_threads": 1,
             "prefix": "libscipy_openblas",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
             "version": "0.3.30",
             "threading_layer": "pthreads",
             "architecture": "SkylakeX"
@@ -508,7 +508,7 @@
             "internal_api": "openmp",
             "num_threads": 1,
             "prefix": "libgomp",
-            "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+            "filepath": "/opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
             "version": null
           }
         ],

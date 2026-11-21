@@ -63,3 +63,12 @@ Use a fresh output path. The 100% DVC win rate applies to the fixed authored cat
 The repository retains dated drafts in `paper/` and `output/pdf/`. Result populations and implementation revisions are identified in their corresponding reports. Published-component adapters, manual retention controls, native DVC execution and the separately coded exact formulation are different comparator types and are labelled accordingly.
 
 The current ACM source is `paper/acm_revised/RecoverML_paper_revised.tex`; its compiled PDF is `output/pdf/RecoverML_paper_revised.pdf`. The paper build gates on six measured-figure source audits, runtime and multi-runner audits, and the same-store ablation audit. The methodology figure is an illustration. The original Letter frontier archive remains absent; the recovered four payloads match their recorded hashes and sizes, and the published figure uses the archived byte ledgers.
+
+## Public path labels
+
+The current checkout uses neutral directory labels in some historical
+environment metadata and diagnostic paths. These substitutions preserve
+metadata byte lengths and do not change measurements or retained artifact
+payloads. The original records are available at commit
+[f819c98](https://github.com/Hannaancode/RecoverML/tree/f819c98b4be2630dbbcbc80f26f1c14e0fdec634).
+The methodology sketch now uses the filename architecture_sketch.png.

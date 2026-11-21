@@ -24,7 +24,7 @@ test_simple_target_baseline_is_safe (test_core.CoreTests.test_simple_target_base
 test_unsafe_eviction_is_refused (test_core.CoreTests.test_unsafe_eviction_is_refused) ... ok
 test_wrong_replay_config_rejected_by_hash (test_core.CoreTests.test_wrong_replay_config_rejected_by_hash) ... ok
 test_exact_producer_order_and_rounds_match_scan_with_aliases (test_indexed_certificate.IndexTests.test_exact_producer_order_and_rounds_match_scan_with_aliases) ... ok
-test_canonical_roundtrip_and_exact_predictions (test_neural_checkpoint.NeuralCheckpointTests.test_canonical_roundtrip_and_exact_predictions) ... /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:606: ConvergenceWarning: lbfgs failed to converge after 60 iteration(s) (status=1):
+test_canonical_roundtrip_and_exact_predictions (test_neural_checkpoint.NeuralCheckpointTests.test_canonical_roundtrip_and_exact_predictions) ... /opt/local/runtimes/local-primary-runtime/dependencies/python/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:606: ConvergenceWarning: lbfgs failed to converge after 60 iteration(s) (status=1):
 STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
 
 Increase the number of iterations to improve the convergence (max_iter=60).

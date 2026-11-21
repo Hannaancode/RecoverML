@@ -7,7 +7,7 @@ run for the reference list.
 The main paper uses seven vector figures: four charts rebuilt from saved study
 ledgers, a chart rebuilt from the audited final runtime run, a vector redraw
 of the supplied architecture diagram, and a Letter storage chart rebuilt from
-its measured case rows. The original `methodology_user.png` remains in `figures/` so
+its measured case rows. The original `architecture_sketch.png` remains in `figures/` so
 the redraw can be checked against it. Keep the `figures/` and `fonts/`
 folders intact. The ZIP also contains a locally compiled PDF in `reference/`
 for comparison; Overleaf generates its own PDF.

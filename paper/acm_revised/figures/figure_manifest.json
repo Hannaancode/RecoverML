@@ -1,7 +1,7 @@
 {
   "original_figure_source_commit": "27de00d96c4390e3ec5e7fd4f320d79aa8c5f51f",
   "revision_date": "2026-10-30",
-  "methodology_source": "Author-supplied image: ChatGPT Image Oct 17, 2026, 07_22_00 PM.png",
+  "methodology_source": "Author-supplied architecture sketch: architecture_sketch.png",
   "letter_values_source": "results/research/gigabyte_letter_oct16/summary.csv",
   "runtime_source_commit": "9adf5f0b4cc808b9d5bd046d5eeb90679d5bfc43",
   "runtime_artifact_sha256": "dd905bf76b5dceb5949805af440d453612c57b0fc164462ed673a020b80ffe03",
@@ -10,7 +10,7 @@
     "letter_storage.pdf": "de1bed19fbf9ed1fb34940a4de48e9523af18e7c353f99c1adda442904c255d4",
     "methodology.pdf": "e65ba1752d40898c09a7fe340b1d00fa1410f41c8ddfb59a1d1e01cadf83a55a",
     "methodology_rebuilt.pdf": "61db0a15e68a513edee9126ccbb15f5b6dfe1a547925f4fd837963af47a72394",
-    "methodology_user.png": "11b69b8450012198829b4c43b26921ed40560e823dcc47c3c3c97026ce2cf715",
+    "architecture_sketch.png": "11b69b8450012198829b4c43b26921ed40560e823dcc47c3c3c97026ce2cf715",
     "native_recovery.pdf": "94fec1a529111db80e7842030c5ae4086fd75d68c9cdc5d33d71a54ae956af33",
     "planner_timing.pdf": "32482d92c63eb7b3beb759755a942935eb250b2df55c71102ec4fbaf871dbfa2",
     "retinal_storage.pdf": "c893f8faf92d70a2d2844a8c4285f4db7f0187c6f6dd2c65d33a981160885760",
